@@ -1,0 +1,693 @@
+{
+  "stages": {
+    "screen": {
+      "conditions": {
+        "static_no_memory": {
+          "metrics": {
+            "classification": {
+              "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+              "total": 12,
+              "correct": 2,
+              "format_compliant_count": 12,
+              "format_compliance_rate": 1.0,
+              "missing_count": 0,
+              "primary_metric_name": "accuracy",
+              "primary_score": 0.16666666666666666,
+              "mean_example_score": 0.16666666666666666,
+              "has_reference": false,
+              "reference_correct": 0,
+              "forget_count": 0,
+              "recovered_count": 0,
+              "behavior_comparable_count": 0,
+              "behavior_change_count": 0,
+              "task_primary_scores": {
+                "classification": 0.16666666666666666
+              },
+              "forget_rate": 0.0,
+              "macro_f1": 0.024844720496894408,
+              "macro_f1_classes": 23,
+              "class_support": {
+                "barretts": 0,
+                "barretts-short-segment": 0,
+                "bbps-0-1": 1,
+                "bbps-2-3": 3,
+                "cecum": 2,
+                "dyed-lifted-polyps": 0,
+                "dyed-resection-margins": 2,
+                "esophagitis-a": 0,
+                "esophagitis-b-d": 0,
+                "hemorrhoids": 0,
+                "ileum": 0,
+                "impacted-stool": 0,
+                "polyps": 0,
+                "pylorus": 0,
+                "retroflex-rectum": 0,
+                "retroflex-stomach": 1,
+                "ulcerative-colitis-grade-0-1": 0,
+                "ulcerative-colitis-grade-1": 0,
+                "ulcerative-colitis-grade-1-2": 0,
+                "ulcerative-colitis-grade-2": 0,
+                "ulcerative-colitis-grade-2-3": 0,
+                "ulcerative-colitis-grade-3": 1,
+                "z-line": 2
+              }
+            },
+            "polyp_localization": {
+              "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+              "total": 12,
+              "correct": 8,
+              "format_compliant_count": 12,
+              "format_compliance_rate": 1.0,
+              "missing_count": 0,
+              "primary_metric_name": "localization_accuracy_iou50",
+              "primary_score": 0.6666666666666666,
+              "mean_example_score": 0.6666666666666666,
+              "has_reference": false,
+              "reference_correct": 0,
+              "forget_count": 0,
+              "recovered_count": 0,
+              "behavior_comparable_count": 0,
+              "behavior_change_count": 0,
+              "task_primary_scores": {
+                "polyp_localization": 0.6666666666666666
+              },
+              "forget_rate": 0.0,
+              "mean_iou": 0.5838548394766067
+            },
+            "visual_qa": {
+              "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+              "total": 12,
+              "correct": 2,
+              "format_compliant_count": 12,
+              "format_compliance_rate": 1.0,
+              "missing_count": 0,
+              "primary_metric_name": "normalized_exact_match",
+              "primary_score": 0.16666666666666666,
+              "mean_example_score": 0.16666666666666666,
+              "has_reference": false,
+              "reference_correct": 0,
+              "forget_count": 0,
+              "recovered_count": 0,
+              "behavior_comparable_count": 0,
+              "behavior_change_count": 0,
+              "task_primary_scores": {
+                "visual_qa": 0.16666666666666666
+              },
+              "forget_rate": 0.0,
+              "answer_f1_diagnostic": 0.16666666666666666
+            }
+          }
+        },
+        "raw_only": {
+          "metrics": {
+            "classification": {
+              "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+              "total": 12,
+              "correct": 2,
+              "format_compliant_count": 12,
+              "format_compliance_rate": 1.0,
+              "missing_count": 0,
+              "primary_metric_name": "accuracy",
+              "primary_score": 0.16666666666666666,
+              "mean_example_score": 0.16666666666666666,
+              "has_reference": false,
+              "reference_correct": 0,
+              "forget_count": 0,
+              "recovered_count": 0,
+              "behavior_comparable_count": 0,
+              "behavior_change_count": 0,
+              "task_primary_scores": {
+                "classification": 0.16666666666666666
+              },
+              "forget_rate": 0.0,
+              "macro_f1": 0.024844720496894408,
+              "macro_f1_classes": 23,
+              "class_support": {
+                "barretts": 0,
+                "barretts-short-segment": 0,
+                "bbps-0-1": 1,
+                "bbps-2-3": 3,
+                "cecum": 2,
+                "dyed-lifted-polyps": 0,
+                "dyed-resection-margins": 2,
+                "esophagitis-a": 0,
+                "esophagitis-b-d": 0,
+                "hemorrhoids": 0,
+                "ileum": 0,
+                "impacted-stool": 0,
+                "polyps": 0,
+                "pylorus": 0,
+                "retroflex-rectum": 0,
+                "retroflex-stomach": 1,
+                "ulcerative-colitis-grade-0-1": 0,
+                "ulcerative-colitis-grade-1": 0,
+                "ulcerative-colitis-grade-1-2": 0,
+                "ulcerative-colitis-grade-2": 0,
+                "ulcerative-colitis-grade-2-3": 0,
+                "ulcerative-colitis-grade-3": 1,
+                "z-line": 2
+              }
+            },
+            "polyp_localization": {
+              "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+              "total": 12,
+              "correct": 8,
+              "format_compliant_count": 12,
+              "format_compliance_rate": 1.0,
+              "missing_count": 0,
+              "primary_metric_name": "localization_accuracy_iou50",
+              "primary_score": 0.6666666666666666,
+              "mean_example_score": 0.6666666666666666,
+              "has_reference": false,
+              "reference_correct": 0,
+              "forget_count": 0,
+              "recovered_count": 0,
+              "behavior_comparable_count": 0,
+              "behavior_change_count": 0,
+              "task_primary_scores": {
+                "polyp_localization": 0.6666666666666666
+              },
+              "forget_rate": 0.0,
+              "mean_iou": 0.5838548394766067
+            },
+            "visual_qa": {
+              "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+              "total": 12,
+              "correct": 4,
+              "format_compliant_count": 12,
+              "format_compliance_rate": 1.0,
+              "missing_count": 0,
+              "primary_metric_name": "normalized_exact_match",
+              "primary_score": 0.3333333333333333,
+              "mean_example_score": 0.3333333333333333,
+              "has_reference": false,
+              "reference_correct": 0,
+              "forget_count": 0,
+              "recovered_count": 0,
+              "behavior_comparable_count": 0,
+              "behavior_change_count": 0,
+              "task_primary_scores": {
+                "visual_qa": 0.3333333333333333
+              },
+              "forget_rate": 0.0,
+              "answer_f1_diagnostic": 0.4166666666666667
+            }
+          }
+        },
+        "raw_semantic": {
+          "metrics": {
+            "classification": {
+              "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+              "total": 12,
+              "correct": 2,
+              "format_compliant_count": 12,
+              "format_compliance_rate": 1.0,
+              "missing_count": 0,
+              "primary_metric_name": "accuracy",
+              "primary_score": 0.16666666666666666,
+              "mean_example_score": 0.16666666666666666,
+              "has_reference": false,
+              "reference_correct": 0,
+              "forget_count": 0,
+              "recovered_count": 0,
+              "behavior_comparable_count": 0,
+              "behavior_change_count": 0,
+              "task_primary_scores": {
+                "classification": 0.16666666666666666
+              },
+              "forget_rate": 0.0,
+              "macro_f1": 0.02898550724637681,
+              "macro_f1_classes": 23,
+              "class_support": {
+                "barretts": 0,
+                "barretts-short-segment": 0,
+                "bbps-0-1": 1,
+                "bbps-2-3": 3,
+                "cecum": 2,
+                "dyed-lifted-polyps": 0,
+                "dyed-resection-margins": 2,
+                "esophagitis-a": 0,
+                "esophagitis-b-d": 0,
+                "hemorrhoids": 0,
+                "ileum": 0,
+                "impacted-stool": 0,
+                "polyps": 0,
+                "pylorus": 0,
+                "retroflex-rectum": 0,
+                "retroflex-stomach": 1,
+                "ulcerative-colitis-grade-0-1": 0,
+                "ulcerative-colitis-grade-1": 0,
+                "ulcerative-colitis-grade-1-2": 0,
+                "ulcerative-colitis-grade-2": 0,
+                "ulcerative-colitis-grade-2-3": 0,
+                "ulcerative-colitis-grade-3": 1,
+                "z-line": 2
+              }
+            },
+            "polyp_localization": {
+              "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+              "total": 12,
+              "correct": 8,
+              "format_compliant_count": 12,
+              "format_compliance_rate": 1.0,
+              "missing_count": 0,
+              "primary_metric_name": "localization_accuracy_iou50",
+              "primary_score": 0.6666666666666666,
+              "mean_example_score": 0.6666666666666666,
+              "has_reference": false,
+              "reference_correct": 0,
+              "forget_count": 0,
+              "recovered_count": 0,
+              "behavior_comparable_count": 0,
+              "behavior_change_count": 0,
+              "task_primary_scores": {
+                "polyp_localization": 0.6666666666666666
+              },
+              "forget_rate": 0.0,
+              "mean_iou": 0.5838548394766067
+            },
+            "visual_qa": {
+              "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+              "total": 12,
+              "correct": 4,
+              "format_compliant_count": 12,
+              "format_compliance_rate": 1.0,
+              "missing_count": 0,
+              "primary_metric_name": "normalized_exact_match",
+              "primary_score": 0.3333333333333333,
+              "mean_example_score": 0.3333333333333333,
+              "has_reference": false,
+              "reference_correct": 0,
+              "forget_count": 0,
+              "recovered_count": 0,
+              "behavior_comparable_count": 0,
+              "behavior_change_count": 0,
+              "task_primary_scores": {
+                "visual_qa": 0.3333333333333333
+              },
+              "forget_rate": 0.0,
+              "answer_f1_diagnostic": 0.4351851851851852
+            }
+          }
+        }
+      },
+      "paired_changes_vs_static": {
+        "raw_only": {
+          "classification": {
+            "successful_to_failed": 0,
+            "failed_to_successful": 0,
+            "answer_changed": 0,
+            "total": 12
+          },
+          "polyp_localization": {
+            "successful_to_failed": 0,
+            "failed_to_successful": 0,
+            "answer_changed": 0,
+            "total": 12
+          },
+          "visual_qa": {
+            "successful_to_failed": 1,
+            "failed_to_successful": 3,
+            "answer_changed": 10,
+            "total": 12
+          }
+        },
+        "raw_semantic": {
+          "classification": {
+            "successful_to_failed": 0,
+            "failed_to_successful": 0,
+            "answer_changed": 2,
+            "total": 12
+          },
+          "polyp_localization": {
+            "successful_to_failed": 0,
+            "failed_to_successful": 0,
+            "answer_changed": 0,
+            "total": 12
+          },
+          "visual_qa": {
+            "successful_to_failed": 1,
+            "failed_to_successful": 3,
+            "answer_changed": 10,
+            "total": 12
+          }
+        }
+      },
+      "gate": {
+        "retains_raw_vqa_accuracy": true,
+        "reduces_vqa_losses_of_static_successes": false,
+        "no_task_accuracy_or_format_loss_vs_raw": true,
+        "vqa_gain_at_least_5pp_vs_static": true,
+        "passed": false
+      }
+    },
+    "confirmation": {
+      "conditions": {
+        "static_no_memory": {
+          "metrics": {
+            "classification": {
+              "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+              "total": 50,
+              "correct": 3,
+              "format_compliant_count": 50,
+              "format_compliance_rate": 1.0,
+              "missing_count": 0,
+              "primary_metric_name": "accuracy",
+              "primary_score": 0.06,
+              "mean_example_score": 0.06,
+              "has_reference": false,
+              "reference_correct": 0,
+              "forget_count": 0,
+              "recovered_count": 0,
+              "behavior_comparable_count": 0,
+              "behavior_change_count": 0,
+              "task_primary_scores": {
+                "classification": 0.06
+              },
+              "forget_rate": 0.0,
+              "macro_f1": 0.021739130434782608,
+              "macro_f1_classes": 23,
+              "class_support": {
+                "barretts": 0,
+                "barretts-short-segment": 0,
+                "bbps-0-1": 2,
+                "bbps-2-3": 4,
+                "cecum": 1,
+                "dyed-lifted-polyps": 7,
+                "dyed-resection-margins": 3,
+                "esophagitis-a": 4,
+                "esophagitis-b-d": 1,
+                "hemorrhoids": 0,
+                "ileum": 0,
+                "impacted-stool": 0,
+                "polyps": 1,
+                "pylorus": 9,
+                "retroflex-rectum": 1,
+                "retroflex-stomach": 4,
+                "ulcerative-colitis-grade-0-1": 0,
+                "ulcerative-colitis-grade-1": 1,
+                "ulcerative-colitis-grade-1-2": 0,
+                "ulcerative-colitis-grade-2": 4,
+                "ulcerative-colitis-grade-2-3": 0,
+                "ulcerative-colitis-grade-3": 0,
+                "z-line": 8
+              }
+            },
+            "polyp_localization": {
+              "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+              "total": 50,
+              "correct": 32,
+              "format_compliant_count": 48,
+              "format_compliance_rate": 0.96,
+              "missing_count": 0,
+              "primary_metric_name": "localization_accuracy_iou50",
+              "primary_score": 0.64,
+              "mean_example_score": 0.64,
+              "has_reference": false,
+              "reference_correct": 0,
+              "forget_count": 0,
+              "recovered_count": 0,
+              "behavior_comparable_count": 0,
+              "behavior_change_count": 0,
+              "task_primary_scores": {
+                "polyp_localization": 0.64
+              },
+              "forget_rate": 0.0,
+              "mean_iou": 0.5983683355912581
+            },
+            "visual_qa": {
+              "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+              "total": 50,
+              "correct": 3,
+              "format_compliant_count": 50,
+              "format_compliance_rate": 1.0,
+              "missing_count": 0,
+              "primary_metric_name": "normalized_exact_match",
+              "primary_score": 0.06,
+              "mean_example_score": 0.06,
+              "has_reference": false,
+              "reference_correct": 0,
+              "forget_count": 0,
+              "recovered_count": 0,
+              "behavior_comparable_count": 0,
+              "behavior_change_count": 0,
+              "task_primary_scores": {
+                "visual_qa": 0.06
+              },
+              "forget_rate": 0.0,
+              "answer_f1_diagnostic": 0.08556380127808699
+            }
+          }
+        },
+        "raw_only": {
+          "metrics": {
+            "classification": {
+              "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+              "total": 50,
+              "correct": 4,
+              "format_compliant_count": 50,
+              "format_compliance_rate": 1.0,
+              "missing_count": 0,
+              "primary_metric_name": "accuracy",
+              "primary_score": 0.08,
+              "mean_example_score": 0.08,
+              "has_reference": false,
+              "reference_correct": 0,
+              "forget_count": 0,
+              "recovered_count": 0,
+              "behavior_comparable_count": 0,
+              "behavior_change_count": 0,
+              "task_primary_scores": {
+                "classification": 0.08
+              },
+              "forget_rate": 0.0,
+              "macro_f1": 0.0391304347826087,
+              "macro_f1_classes": 23,
+              "class_support": {
+                "barretts": 0,
+                "barretts-short-segment": 0,
+                "bbps-0-1": 2,
+                "bbps-2-3": 4,
+                "cecum": 1,
+                "dyed-lifted-polyps": 7,
+                "dyed-resection-margins": 3,
+                "esophagitis-a": 4,
+                "esophagitis-b-d": 1,
+                "hemorrhoids": 0,
+                "ileum": 0,
+                "impacted-stool": 0,
+                "polyps": 1,
+                "pylorus": 9,
+                "retroflex-rectum": 1,
+                "retroflex-stomach": 4,
+                "ulcerative-colitis-grade-0-1": 0,
+                "ulcerative-colitis-grade-1": 1,
+                "ulcerative-colitis-grade-1-2": 0,
+                "ulcerative-colitis-grade-2": 4,
+                "ulcerative-colitis-grade-2-3": 0,
+                "ulcerative-colitis-grade-3": 0,
+                "z-line": 8
+              }
+            },
+            "polyp_localization": {
+              "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+              "total": 50,
+              "correct": 32,
+              "format_compliant_count": 48,
+              "format_compliance_rate": 0.96,
+              "missing_count": 0,
+              "primary_metric_name": "localization_accuracy_iou50",
+              "primary_score": 0.64,
+              "mean_example_score": 0.64,
+              "has_reference": false,
+              "reference_correct": 0,
+              "forget_count": 0,
+              "recovered_count": 0,
+              "behavior_comparable_count": 0,
+              "behavior_change_count": 0,
+              "task_primary_scores": {
+                "polyp_localization": 0.64
+              },
+              "forget_rate": 0.0,
+              "mean_iou": 0.5928879239773499
+            },
+            "visual_qa": {
+              "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+              "total": 50,
+              "correct": 6,
+              "format_compliant_count": 50,
+              "format_compliance_rate": 1.0,
+              "missing_count": 0,
+              "primary_metric_name": "normalized_exact_match",
+              "primary_score": 0.12,
+              "mean_example_score": 0.12,
+              "has_reference": false,
+              "reference_correct": 0,
+              "forget_count": 0,
+              "recovered_count": 0,
+              "behavior_comparable_count": 0,
+              "behavior_change_count": 0,
+              "task_primary_scores": {
+                "visual_qa": 0.12
+              },
+              "forget_rate": 0.0,
+              "answer_f1_diagnostic": 0.21173160173160174
+            }
+          }
+        },
+        "raw_semantic": {
+          "metrics": {
+            "classification": {
+              "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+              "total": 50,
+              "correct": 3,
+              "format_compliant_count": 50,
+              "format_compliance_rate": 1.0,
+              "missing_count": 0,
+              "primary_metric_name": "accuracy",
+              "primary_score": 0.06,
+              "mean_example_score": 0.06,
+              "has_reference": false,
+              "reference_correct": 0,
+              "forget_count": 0,
+              "recovered_count": 0,
+              "behavior_comparable_count": 0,
+              "behavior_change_count": 0,
+              "task_primary_scores": {
+                "classification": 0.06
+              },
+              "forget_rate": 0.0,
+              "macro_f1": 0.023715415019762844,
+              "macro_f1_classes": 23,
+              "class_support": {
+                "barretts": 0,
+                "barretts-short-segment": 0,
+                "bbps-0-1": 2,
+                "bbps-2-3": 4,
+                "cecum": 1,
+                "dyed-lifted-polyps": 7,
+                "dyed-resection-margins": 3,
+                "esophagitis-a": 4,
+                "esophagitis-b-d": 1,
+                "hemorrhoids": 0,
+                "ileum": 0,
+                "impacted-stool": 0,
+                "polyps": 1,
+                "pylorus": 9,
+                "retroflex-rectum": 1,
+                "retroflex-stomach": 4,
+                "ulcerative-colitis-grade-0-1": 0,
+                "ulcerative-colitis-grade-1": 1,
+                "ulcerative-colitis-grade-1-2": 0,
+                "ulcerative-colitis-grade-2": 4,
+                "ulcerative-colitis-grade-2-3": 0,
+                "ulcerative-colitis-grade-3": 0,
+                "z-line": 8
+              }
+            },
+            "polyp_localization": {
+              "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+              "total": 50,
+              "correct": 32,
+              "format_compliant_count": 48,
+              "format_compliance_rate": 0.96,
+              "missing_count": 0,
+              "primary_metric_name": "localization_accuracy_iou50",
+              "primary_score": 0.64,
+              "mean_example_score": 0.64,
+              "has_reference": false,
+              "reference_correct": 0,
+              "forget_count": 0,
+              "recovered_count": 0,
+              "behavior_comparable_count": 0,
+              "behavior_change_count": 0,
+              "task_primary_scores": {
+                "polyp_localization": 0.64
+              },
+              "forget_rate": 0.0,
+              "mean_iou": 0.592665164948984
+            },
+            "visual_qa": {
+              "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+              "total": 50,
+              "correct": 7,
+              "format_compliant_count": 50,
+              "format_compliance_rate": 1.0,
+              "missing_count": 0,
+              "primary_metric_name": "normalized_exact_match",
+              "primary_score": 0.14,
+              "mean_example_score": 0.14,
+              "has_reference": false,
+              "reference_correct": 0,
+              "forget_count": 0,
+              "recovered_count": 0,
+              "behavior_comparable_count": 0,
+              "behavior_change_count": 0,
+              "task_primary_scores": {
+                "visual_qa": 0.14
+              },
+              "forget_rate": 0.0,
+              "answer_f1_diagnostic": 0.24586493506493506
+            }
+          }
+        }
+      },
+      "paired_changes_vs_static": {
+        "raw_only": {
+          "classification": {
+            "successful_to_failed": 0,
+            "failed_to_successful": 1,
+            "answer_changed": 12,
+            "total": 50
+          },
+          "polyp_localization": {
+            "successful_to_failed": 1,
+            "failed_to_successful": 1,
+            "answer_changed": 8,
+            "total": 50
+          },
+          "visual_qa": {
+            "successful_to_failed": 1,
+            "failed_to_successful": 4,
+            "answer_changed": 33,
+            "total": 50
+          }
+        },
+        "raw_semantic": {
+          "classification": {
+            "successful_to_failed": 0,
+            "failed_to_successful": 0,
+            "answer_changed": 14,
+            "total": 50
+          },
+          "polyp_localization": {
+            "successful_to_failed": 1,
+            "failed_to_successful": 1,
+            "answer_changed": 7,
+            "total": 50
+          },
+          "visual_qa": {
+            "successful_to_failed": 0,
+            "failed_to_successful": 4,
+            "answer_changed": 32,
+            "total": 50
+          }
+        }
+      },
+      "gate": {
+        "retains_raw_vqa_accuracy": true,
+        "reduces_vqa_losses_of_static_successes": true,
+        "no_task_accuracy_or_format_loss_vs_raw": false,
+        "vqa_gain_at_least_5pp_vs_static": true,
+        "passed": false
+      }
+    }
+  },
+  "model_calls": 1794,
+  "new_answer_slots": 486,
+  "reused_screen_answer_slots": 72,
+  "parameters_frozen": true,
+  "test_used": false,
+  "policy_count": 1,
+  "coordinate_semantic_gate_previously_failed": true
+}

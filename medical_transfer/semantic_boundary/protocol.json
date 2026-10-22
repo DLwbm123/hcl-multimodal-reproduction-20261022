@@ -1,0 +1,32 @@
+{
+  "name": "final_context_historical_memory_boundary_v1",
+  "tasks": [
+    "classification",
+    "polyp_localization",
+    "visual_qa"
+  ],
+  "screen_per_task": 12,
+  "confirmation_per_task": 50,
+  "confirmation_seed": 20261023,
+  "conditions": [
+    "static_no_memory",
+    "raw_only",
+    "raw_semantic"
+  ],
+  "single_change": "append fixed historical-memory evidence boundary to final context only when selected_memory nonempty",
+  "fixed_model": "Qwen2.5-VL-7B BF16 eval temperature0 answer512",
+  "memory_pool": "same prior accepted raw10; abstract/anchor/skills empty",
+  "retriever_unchanged": true,
+  "candidate_search": false,
+  "memory_learning": false,
+  "screen_reuse": "existing static/raw outputs; only raw_semantic generates anew",
+  "confirmation_policy_frozen_before_outputs": true,
+  "confirmation_runs_regardless_screen_score": true,
+  "screen_success": "VQA raw_semantic >= raw accuracy; fewer losses of Static successes; no task accuracy or format loss vs raw",
+  "confirmation_success": "VQA raw_semantic >= raw and >= Static + 5pp; fewer losses of Static successes than raw; no task accuracy or format loss vs raw; additionally report paired bootstrap interval",
+  "test_used": false,
+  "coordinate_semantic_gate": "prior 0/4 failed; localization exploratory",
+  "candidate_policies": 1,
+  "no_threshold_relaxation": true,
+  "confirmation_not_for_further_tuning": true
+}

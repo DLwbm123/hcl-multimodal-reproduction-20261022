@@ -1,0 +1,209 @@
+{
+  "new_predictions": 486,
+  "reused_screen_predictions": 72,
+  "readonly_checks_passed": 486,
+  "semantic_invariance_checks_passed": 186,
+  "confirmation_groups": 150,
+  "all_conditions_same_ids": true,
+  "test_read": false,
+  "calls": 1794,
+  "call_seconds": 3977.2490407030564,
+  "calls_by_condition_phase": {
+    "static_no_memory": {
+      "structure_task": 150,
+      "plan_workflow": 150,
+      "final_answer": 150
+    },
+    "raw_only": {
+      "structure_task": 150,
+      "plan_workflow": 150,
+      "select_memory": 150,
+      "final_answer": 150
+    },
+    "raw_semantic": {
+      "structure_task": 186,
+      "plan_workflow": 186,
+      "select_memory": 186,
+      "final_answer": 186
+    }
+  },
+  "confirmation_memory_use": {
+    "static_no_memory": {
+      "examples_with_memory": 0,
+      "selected_records": 0
+    },
+    "raw_only": {
+      "examples_with_memory": 102,
+      "selected_records": 188
+    },
+    "raw_semantic": {
+      "examples_with_memory": 102,
+      "selected_records": 188
+    }
+  },
+  "paired_confirmation": {
+    "raw_only_vs_static_no_memory": {
+      "classification": {
+        "n": 50,
+        "left_correct": 3,
+        "right_correct": 4,
+        "success_to_failure": 0,
+        "failure_to_success": 1,
+        "delta_pp": 2.0,
+        "paired_bootstrap_95_percentile_pp": [
+          0.0,
+          6.0
+        ]
+      },
+      "polyp_localization": {
+        "n": 50,
+        "left_correct": 32,
+        "right_correct": 32,
+        "success_to_failure": 1,
+        "failure_to_success": 1,
+        "delta_pp": 0.0,
+        "paired_bootstrap_95_percentile_pp": [
+          -6.0,
+          6.0
+        ]
+      },
+      "visual_qa": {
+        "n": 50,
+        "left_correct": 3,
+        "right_correct": 6,
+        "success_to_failure": 1,
+        "failure_to_success": 4,
+        "delta_pp": 6.0,
+        "paired_bootstrap_95_percentile_pp": [
+          -2.0,
+          14.000000000000002
+        ]
+      },
+      "all": {
+        "n": 150,
+        "left_correct": 38,
+        "right_correct": 42,
+        "success_to_failure": 2,
+        "failure_to_success": 6,
+        "delta_pp": 2.666666666666667,
+        "paired_bootstrap_95_percentile_pp": [
+          -0.6666666666666667,
+          6.666666666666667
+        ]
+      }
+    },
+    "raw_semantic_vs_static_no_memory": {
+      "classification": {
+        "n": 50,
+        "left_correct": 3,
+        "right_correct": 3,
+        "success_to_failure": 0,
+        "failure_to_success": 0,
+        "delta_pp": 0.0,
+        "paired_bootstrap_95_percentile_pp": [
+          0.0,
+          0.0
+        ]
+      },
+      "polyp_localization": {
+        "n": 50,
+        "left_correct": 32,
+        "right_correct": 32,
+        "success_to_failure": 1,
+        "failure_to_success": 1,
+        "delta_pp": 0.0,
+        "paired_bootstrap_95_percentile_pp": [
+          -6.0,
+          6.0
+        ]
+      },
+      "visual_qa": {
+        "n": 50,
+        "left_correct": 3,
+        "right_correct": 7,
+        "success_to_failure": 0,
+        "failure_to_success": 4,
+        "delta_pp": 8.0,
+        "paired_bootstrap_95_percentile_pp": [
+          2.0,
+          16.0
+        ]
+      },
+      "all": {
+        "n": 150,
+        "left_correct": 38,
+        "right_correct": 42,
+        "success_to_failure": 1,
+        "failure_to_success": 5,
+        "delta_pp": 2.666666666666667,
+        "paired_bootstrap_95_percentile_pp": [
+          0.0,
+          6.0
+        ]
+      }
+    },
+    "raw_semantic_vs_raw_only": {
+      "classification": {
+        "n": 50,
+        "left_correct": 4,
+        "right_correct": 3,
+        "success_to_failure": 1,
+        "failure_to_success": 0,
+        "delta_pp": -2.0,
+        "paired_bootstrap_95_percentile_pp": [
+          -6.0,
+          0.0
+        ]
+      },
+      "polyp_localization": {
+        "n": 50,
+        "left_correct": 32,
+        "right_correct": 32,
+        "success_to_failure": 0,
+        "failure_to_success": 0,
+        "delta_pp": 0.0,
+        "paired_bootstrap_95_percentile_pp": [
+          0.0,
+          0.0
+        ]
+      },
+      "visual_qa": {
+        "n": 50,
+        "left_correct": 6,
+        "right_correct": 7,
+        "success_to_failure": 0,
+        "failure_to_success": 1,
+        "delta_pp": 2.0,
+        "paired_bootstrap_95_percentile_pp": [
+          0.0,
+          6.0
+        ]
+      },
+      "all": {
+        "n": 150,
+        "left_correct": 42,
+        "right_correct": 42,
+        "success_to_failure": 1,
+        "failure_to_success": 1,
+        "delta_pp": 0.0,
+        "paired_bootstrap_95_percentile_pp": [
+          -2.0,
+          2.0
+        ]
+      }
+    }
+  },
+  "bootstrap": {
+    "seed": 20261023,
+    "resamples": 20000,
+    "unit": "content group (one case each); pooled all is descriptive",
+    "interval": "percentile paired bootstrap; small samples, not multiplicity adjusted"
+  },
+  "exit": {
+    "exit_code": 0,
+    "ended": 1792688285.709934,
+    "elapsed_seconds": 4240.274551153183,
+    "calls": 1794,
+    "peak_allocated_bytes": 18230874112
+  }
+}
