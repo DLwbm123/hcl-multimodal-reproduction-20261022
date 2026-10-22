@@ -1,0 +1,40 @@
+{
+  "model_calls": 12,
+  "medical_unique_cases": 4,
+  "medical_calls": 8,
+  "synthetic_calls": 4,
+  "test_cases_loaded": 0,
+  "retention_anchors_loaded": 0,
+  "learning_state_unchanged": true,
+  "all_parameters_frozen": true,
+  "medical_variants": {
+    "initial": {
+      "total": 4,
+      "format_valid": 4,
+      "iou_at_least_0_5": 3,
+      "mean_iou": 0.66730805852852
+    },
+    "fixed_rewrite": {
+      "total": 4,
+      "format_valid": 4,
+      "iou_at_least_0_5": 3,
+      "mean_iou": 0.6674751895192708
+    }
+  },
+  "synthetic": {
+    "total": 4,
+    "format_valid": 4,
+    "semantic_pass": 0,
+    "ious": [
+      0.8535458361586501,
+      0.5406509918471741,
+      0.4764160351017153,
+      0.5866826473496657
+    ]
+  },
+  "acceptance_passed": false,
+  "elapsed_seconds": 17.696494579315186,
+  "peak_allocated_bytes": 17087991808,
+  "comparison_started": false,
+  "limits": "fixed tiny development sample; compatibility evidence, not proof of universal frame compliance or medical performance"
+}

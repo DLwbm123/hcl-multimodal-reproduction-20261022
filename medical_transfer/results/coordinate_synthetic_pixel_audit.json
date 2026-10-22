@@ -1,0 +1,91 @@
+{
+  "controls": [
+    {
+      "control": 0,
+      "actual_input_size": [
+        616,
+        560
+      ],
+      "raster_bbox": [
+        99,
+        82,
+        443,
+        410
+      ],
+      "expected_input_bbox": [
+        98.40255591054313,
+        82.05128205128206,
+        442.8115015974441,
+        410.2564102564102
+      ],
+      "max_pixel_edge_error": 0.5974440894568716,
+      "joint_and_image_only_tensors_equal": true
+    },
+    {
+      "control": 1,
+      "actual_input_size": [
+        308,
+        168
+      ],
+      "raster_bbox": [
+        39,
+        29,
+        235,
+        126
+      ],
+      "expected_input_bbox": [
+        39.11111111111111,
+        29.13294797687861,
+        234.66666666666666,
+        126.24277456647398
+      ],
+      "max_pixel_edge_error": 0.3333333333333428,
+      "joint_and_image_only_tensors_equal": true
+    },
+    {
+      "control": 2,
+      "actual_input_size": [
+        196,
+        112
+      ],
+      "raster_bbox": [
+        30,
+        23,
+        157,
+        89
+      ],
+      "expected_input_bbox": [
+        29.4,
+        22.400000000000002,
+        156.8,
+        89.60000000000001
+      ],
+      "max_pixel_edge_error": 0.6000000000000085,
+      "joint_and_image_only_tensors_equal": true
+    },
+    {
+      "control": 3,
+      "actual_input_size": [
+        112,
+        224
+      ],
+      "raster_bbox": [
+        20,
+        40,
+        89,
+        177
+      ],
+      "expected_input_bbox": [
+        19.82300884955752,
+        39.47136563876652,
+        89.20353982300885,
+        177.62114537444933
+      ],
+      "max_pixel_edge_error": 0.6211453744493269,
+      "joint_and_image_only_tensors_equal": true
+    }
+  ],
+  "passed": true,
+  "model_calls": 0,
+  "claim": "CPU supplied raster and combined processor tensors only; no alternative model scoring rule"
+}

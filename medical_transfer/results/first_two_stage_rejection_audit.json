@@ -1,0 +1,643 @@
+{
+  "created_epoch": 1792676182.2178416,
+  "scope": "read-only completed stages 1 and 2; no model calls or alternate scoring",
+  "prompt_candidates": [
+    {
+      "stage": 1,
+      "task": "classification",
+      "component": "task_interface_structuring",
+      "candidate_name": "Candidate 1",
+      "baseline_correct": 3,
+      "baseline_total": 24,
+      "candidate_correct": 3,
+      "candidate_total": 24,
+      "format_rate": 1.0,
+      "primary_delta": 0.0,
+      "behavior_change_count": 0,
+      "historical_anchor_total": 0,
+      "historical_forget_count": 0,
+      "reasons": [
+        "no_behavior_change",
+        "primary_score_delta_below_minimum"
+      ],
+      "artifact_validation_errors": []
+    },
+    {
+      "stage": 1,
+      "task": "classification",
+      "component": "task_interface_structuring",
+      "candidate_name": "Candidate 2",
+      "baseline_correct": 3,
+      "baseline_total": 24,
+      "candidate_correct": 3,
+      "candidate_total": 24,
+      "format_rate": 1.0,
+      "primary_delta": 0.0,
+      "behavior_change_count": 0,
+      "historical_anchor_total": 0,
+      "historical_forget_count": 0,
+      "reasons": [
+        "no_behavior_change",
+        "primary_score_delta_below_minimum"
+      ],
+      "artifact_validation_errors": []
+    },
+    {
+      "stage": 1,
+      "task": "classification",
+      "component": "task_interface_structuring",
+      "candidate_name": "Candidate 3",
+      "baseline_correct": 3,
+      "baseline_total": 24,
+      "candidate_correct": 3,
+      "candidate_total": 24,
+      "format_rate": 1.0,
+      "primary_delta": 0.0,
+      "behavior_change_count": 0,
+      "historical_anchor_total": 0,
+      "historical_forget_count": 0,
+      "reasons": [
+        "no_behavior_change",
+        "primary_score_delta_below_minimum"
+      ],
+      "artifact_validation_errors": []
+    },
+    {
+      "stage": 1,
+      "task": "classification",
+      "component": "router_workflow",
+      "candidate_name": "enhanced_rationale",
+      "baseline_correct": 3,
+      "baseline_total": 24,
+      "candidate_correct": 3,
+      "candidate_total": 24,
+      "format_rate": 1.0,
+      "primary_delta": 0.0,
+      "behavior_change_count": 3,
+      "historical_anchor_total": 0,
+      "historical_forget_count": 0,
+      "reasons": [
+        "primary_score_delta_below_minimum"
+      ],
+      "artifact_validation_errors": []
+    },
+    {
+      "stage": 1,
+      "task": "classification",
+      "component": "router_workflow",
+      "candidate_name": "memory_selection_optimization",
+      "baseline_correct": 3,
+      "baseline_total": 24,
+      "candidate_correct": 3,
+      "candidate_total": 24,
+      "format_rate": 1.0,
+      "primary_delta": 0.0,
+      "behavior_change_count": 1,
+      "historical_anchor_total": 0,
+      "historical_forget_count": 0,
+      "reasons": [
+        "primary_score_delta_below_minimum"
+      ],
+      "artifact_validation_errors": []
+    },
+    {
+      "stage": 1,
+      "task": "classification",
+      "component": "router_workflow",
+      "candidate_name": "tool_usage_expansion",
+      "baseline_correct": 3,
+      "baseline_total": 24,
+      "candidate_correct": 3,
+      "candidate_total": 24,
+      "format_rate": 1.0,
+      "primary_delta": 0.0,
+      "behavior_change_count": 1,
+      "historical_anchor_total": 0,
+      "historical_forget_count": 0,
+      "reasons": [
+        "primary_score_delta_below_minimum"
+      ],
+      "artifact_validation_errors": []
+    },
+    {
+      "stage": 1,
+      "task": "classification",
+      "component": "memory_selector",
+      "candidate_name": "memory_selector_prompt_1",
+      "baseline_correct": 3,
+      "baseline_total": 24,
+      "candidate_correct": 3,
+      "candidate_total": 24,
+      "format_rate": 1.0,
+      "primary_delta": 0.0,
+      "behavior_change_count": 0,
+      "historical_anchor_total": 0,
+      "historical_forget_count": 0,
+      "reasons": [
+        "no_behavior_change",
+        "primary_score_delta_below_minimum"
+      ],
+      "artifact_validation_errors": []
+    },
+    {
+      "stage": 1,
+      "task": "classification",
+      "component": "memory_selector",
+      "candidate_name": "memory_selector_prompt_2",
+      "baseline_correct": 3,
+      "baseline_total": 24,
+      "candidate_correct": 3,
+      "candidate_total": 24,
+      "format_rate": 1.0,
+      "primary_delta": 0.0,
+      "behavior_change_count": 0,
+      "historical_anchor_total": 0,
+      "historical_forget_count": 0,
+      "reasons": [
+        "no_behavior_change",
+        "primary_score_delta_below_minimum"
+      ],
+      "artifact_validation_errors": []
+    },
+    {
+      "stage": 1,
+      "task": "classification",
+      "component": "memory_selector",
+      "candidate_name": "memory_selector_prompt_3",
+      "baseline_correct": 3,
+      "baseline_total": 24,
+      "candidate_correct": 3,
+      "candidate_total": 24,
+      "format_rate": 1.0,
+      "primary_delta": 0.0,
+      "behavior_change_count": 0,
+      "historical_anchor_total": 0,
+      "historical_forget_count": 0,
+      "reasons": [
+        "no_behavior_change",
+        "primary_score_delta_below_minimum"
+      ],
+      "artifact_validation_errors": []
+    },
+    {
+      "stage": 1,
+      "task": "classification",
+      "component": "router_context",
+      "candidate_name": "enhanced_reasoning",
+      "baseline_correct": 3,
+      "baseline_total": 24,
+      "candidate_correct": 3,
+      "candidate_total": 24,
+      "format_rate": 1.0,
+      "primary_delta": 0.0,
+      "behavior_change_count": 2,
+      "historical_anchor_total": 0,
+      "historical_forget_count": 0,
+      "reasons": [
+        "primary_score_delta_below_minimum"
+      ],
+      "artifact_validation_errors": []
+    },
+    {
+      "stage": 1,
+      "task": "classification",
+      "component": "router_context",
+      "candidate_name": "memory_optimization",
+      "baseline_correct": 3,
+      "baseline_total": 24,
+      "candidate_correct": 3,
+      "candidate_total": 24,
+      "format_rate": 1.0,
+      "primary_delta": 0.0,
+      "behavior_change_count": 0,
+      "historical_anchor_total": 0,
+      "historical_forget_count": 0,
+      "reasons": [
+        "no_behavior_change",
+        "primary_score_delta_below_minimum"
+      ],
+      "artifact_validation_errors": []
+    },
+    {
+      "stage": 1,
+      "task": "classification",
+      "component": "router_context",
+      "candidate_name": "skill_expansion",
+      "baseline_correct": 3,
+      "baseline_total": 24,
+      "candidate_correct": 3,
+      "candidate_total": 24,
+      "format_rate": 1.0,
+      "primary_delta": 0.0,
+      "behavior_change_count": 0,
+      "historical_anchor_total": 0,
+      "historical_forget_count": 0,
+      "reasons": [
+        "no_behavior_change",
+        "primary_score_delta_below_minimum"
+      ],
+      "artifact_validation_errors": []
+    },
+    {
+      "stage": 2,
+      "task": "polyp_localization",
+      "component": "task_interface_structuring",
+      "candidate_name": "Candidate 1",
+      "baseline_correct": 10,
+      "baseline_total": 24,
+      "candidate_correct": 10,
+      "candidate_total": 24,
+      "format_rate": 0.625,
+      "primary_delta": 0.0,
+      "behavior_change_count": 0,
+      "historical_anchor_total": 24,
+      "historical_forget_count": 0,
+      "reasons": [
+        "no_behavior_change",
+        "primary_score_delta_below_minimum",
+        "format_compliance_below_minimum"
+      ],
+      "artifact_validation_errors": []
+    },
+    {
+      "stage": 2,
+      "task": "polyp_localization",
+      "component": "task_interface_structuring",
+      "candidate_name": "Candidate 2",
+      "baseline_correct": 10,
+      "baseline_total": 24,
+      "candidate_correct": 10,
+      "candidate_total": 24,
+      "format_rate": 0.625,
+      "primary_delta": 0.0,
+      "behavior_change_count": 0,
+      "historical_anchor_total": 24,
+      "historical_forget_count": 0,
+      "reasons": [
+        "no_behavior_change",
+        "primary_score_delta_below_minimum",
+        "format_compliance_below_minimum"
+      ],
+      "artifact_validation_errors": []
+    },
+    {
+      "stage": 2,
+      "task": "polyp_localization",
+      "component": "task_interface_structuring",
+      "candidate_name": "Candidate 3",
+      "baseline_correct": 10,
+      "baseline_total": 24,
+      "candidate_correct": 10,
+      "candidate_total": 24,
+      "format_rate": 0.625,
+      "primary_delta": 0.0,
+      "behavior_change_count": 0,
+      "historical_anchor_total": 24,
+      "historical_forget_count": 0,
+      "reasons": [
+        "no_behavior_change",
+        "primary_score_delta_below_minimum",
+        "format_compliance_below_minimum"
+      ],
+      "artifact_validation_errors": []
+    },
+    {
+      "stage": 2,
+      "task": "polyp_localization",
+      "component": "router_workflow",
+      "candidate_name": "enhanced_rationale",
+      "baseline_correct": 10,
+      "baseline_total": 24,
+      "candidate_correct": 0,
+      "candidate_total": 0,
+      "format_rate": 0.0,
+      "primary_delta": null,
+      "behavior_change_count": 0,
+      "historical_anchor_total": 0,
+      "historical_forget_count": 0,
+      "reasons": [
+        "invalid_artifact",
+        "invalid_candidate_evaluation",
+        "primary_score_delta_below_minimum",
+        "correct_gain_below_minimum",
+        "format_compliance_below_minimum"
+      ],
+      "artifact_validation_errors": [
+        "prompt_not_renderable:KeyError:'historical_anchor_metrics'"
+      ]
+    },
+    {
+      "stage": 2,
+      "task": "polyp_localization",
+      "component": "router_workflow",
+      "candidate_name": "optimized_skill_selection",
+      "baseline_correct": 10,
+      "baseline_total": 24,
+      "candidate_correct": 0,
+      "candidate_total": 0,
+      "format_rate": 0.0,
+      "primary_delta": null,
+      "behavior_change_count": 0,
+      "historical_anchor_total": 0,
+      "historical_forget_count": 0,
+      "reasons": [
+        "invalid_artifact",
+        "invalid_candidate_evaluation",
+        "primary_score_delta_below_minimum",
+        "correct_gain_below_minimum",
+        "format_compliance_below_minimum"
+      ],
+      "artifact_validation_errors": [
+        "prompt_not_renderable:KeyError:'skill_selection_rationale'"
+      ]
+    },
+    {
+      "stage": 2,
+      "task": "polyp_localization",
+      "component": "router_workflow",
+      "candidate_name": "enhanced_memory_selection",
+      "baseline_correct": 10,
+      "baseline_total": 24,
+      "candidate_correct": 0,
+      "candidate_total": 0,
+      "format_rate": 0.0,
+      "primary_delta": null,
+      "behavior_change_count": 0,
+      "historical_anchor_total": 0,
+      "historical_forget_count": 0,
+      "reasons": [
+        "invalid_artifact",
+        "invalid_candidate_evaluation",
+        "primary_score_delta_below_minimum",
+        "correct_gain_below_minimum",
+        "format_compliance_below_minimum"
+      ],
+      "artifact_validation_errors": [
+        "prompt_not_renderable:KeyError:'memory_selection_rationale'"
+      ]
+    },
+    {
+      "stage": 2,
+      "task": "polyp_localization",
+      "component": "memory_selector",
+      "candidate_name": "memory_selector_prompt_1",
+      "baseline_correct": 10,
+      "baseline_total": 24,
+      "candidate_correct": 10,
+      "candidate_total": 24,
+      "format_rate": 0.625,
+      "primary_delta": 0.0,
+      "behavior_change_count": 0,
+      "historical_anchor_total": 24,
+      "historical_forget_count": 0,
+      "reasons": [
+        "no_behavior_change",
+        "primary_score_delta_below_minimum",
+        "format_compliance_below_minimum"
+      ],
+      "artifact_validation_errors": []
+    },
+    {
+      "stage": 2,
+      "task": "polyp_localization",
+      "component": "memory_selector",
+      "candidate_name": "memory_selector_prompt_2",
+      "baseline_correct": 10,
+      "baseline_total": 24,
+      "candidate_correct": 10,
+      "candidate_total": 24,
+      "format_rate": 0.625,
+      "primary_delta": 0.0,
+      "behavior_change_count": 0,
+      "historical_anchor_total": 24,
+      "historical_forget_count": 0,
+      "reasons": [
+        "no_behavior_change",
+        "primary_score_delta_below_minimum",
+        "format_compliance_below_minimum"
+      ],
+      "artifact_validation_errors": []
+    },
+    {
+      "stage": 2,
+      "task": "polyp_localization",
+      "component": "memory_selector",
+      "candidate_name": "memory_selector_prompt_3",
+      "baseline_correct": 10,
+      "baseline_total": 24,
+      "candidate_correct": 10,
+      "candidate_total": 24,
+      "format_rate": 0.625,
+      "primary_delta": 0.0,
+      "behavior_change_count": 0,
+      "historical_anchor_total": 24,
+      "historical_forget_count": 0,
+      "reasons": [
+        "no_behavior_change",
+        "primary_score_delta_below_minimum",
+        "format_compliance_below_minimum"
+      ],
+      "artifact_validation_errors": []
+    },
+    {
+      "stage": 2,
+      "task": "polyp_localization",
+      "component": "router_context",
+      "candidate_name": "enhanced_reasoning",
+      "baseline_correct": 10,
+      "baseline_total": 24,
+      "candidate_correct": 0,
+      "candidate_total": 0,
+      "format_rate": 0.0,
+      "primary_delta": null,
+      "behavior_change_count": 0,
+      "historical_anchor_total": 0,
+      "historical_forget_count": 0,
+      "reasons": [
+        "invalid_artifact",
+        "invalid_candidate_evaluation",
+        "primary_score_delta_below_minimum",
+        "correct_gain_below_minimum",
+        "format_compliance_below_minimum"
+      ],
+      "artifact_validation_errors": [
+        "missing_memory_safety_fields"
+      ]
+    },
+    {
+      "stage": 2,
+      "task": "polyp_localization",
+      "component": "router_context",
+      "candidate_name": "enhanced_skill_selection",
+      "baseline_correct": 10,
+      "baseline_total": 24,
+      "candidate_correct": 10,
+      "candidate_total": 24,
+      "format_rate": 0.625,
+      "primary_delta": 0.0,
+      "behavior_change_count": 0,
+      "historical_anchor_total": 24,
+      "historical_forget_count": 0,
+      "reasons": [
+        "no_behavior_change",
+        "primary_score_delta_below_minimum",
+        "format_compliance_below_minimum"
+      ],
+      "artifact_validation_errors": []
+    },
+    {
+      "stage": 2,
+      "task": "polyp_localization",
+      "component": "router_context",
+      "candidate_name": "enhanced_tool_usage",
+      "baseline_correct": 10,
+      "baseline_total": 24,
+      "candidate_correct": 10,
+      "candidate_total": 24,
+      "format_rate": 0.625,
+      "primary_delta": 0.0,
+      "behavior_change_count": 0,
+      "historical_anchor_total": 24,
+      "historical_forget_count": 0,
+      "reasons": [
+        "no_behavior_change",
+        "primary_score_delta_below_minimum",
+        "format_compliance_below_minimum"
+      ],
+      "artifact_validation_errors": []
+    }
+  ],
+  "memory_gates": [
+    {
+      "stage": 1,
+      "accepted": false,
+      "rejection_reasons": [
+        "current_task_primary_score_delta_below_minimum",
+        "current_task_correct_gain_below_minimum"
+      ],
+      "stable_current_task_metrics": {
+        "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+        "primary_metric_name": "accuracy",
+        "primary_score": 0.125,
+        "primary_score_delta": null,
+        "mean_example_score": 0.125,
+        "correct": 3,
+        "total": 24,
+        "format_compliance_rate": 1.0,
+        "average_output_chars": 0.0,
+        "max_output_chars": 0,
+        "forget_count": 0,
+        "forget_rate": 0.0,
+        "recovered_count": 0,
+        "behavior_comparable_count": 0,
+        "behavior_change_count": 0
+      },
+      "candidate_current_task_metrics": {
+        "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+        "primary_metric_name": "accuracy",
+        "primary_score": 0.08333333333333333,
+        "primary_score_delta": -0.04166666666666667,
+        "mean_example_score": 0.08333333333333333,
+        "correct": 2,
+        "total": 24,
+        "format_compliance_rate": 1.0,
+        "average_output_chars": 0.0,
+        "max_output_chars": 0,
+        "forget_count": 2,
+        "forget_rate": 0.6666666666666666,
+        "recovered_count": 1,
+        "behavior_comparable_count": 24,
+        "behavior_change_count": 18
+      },
+      "candidate_historical_anchor_metrics": {
+        "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+        "primary_metric_name": "empty",
+        "primary_score": null,
+        "primary_score_delta": null,
+        "mean_example_score": null,
+        "correct": 0,
+        "total": 0,
+        "format_compliance_rate": 0.0,
+        "average_output_chars": 0.0,
+        "max_output_chars": 0,
+        "forget_count": 0,
+        "forget_rate": 0.0,
+        "recovered_count": 0,
+        "behavior_comparable_count": 0,
+        "behavior_change_count": 0
+      }
+    },
+    {
+      "stage": 2,
+      "accepted": false,
+      "rejection_reasons": [
+        "current_task_primary_score_delta_below_minimum",
+        "current_task_correct_gain_below_minimum"
+      ],
+      "stable_current_task_metrics": {
+        "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+        "primary_metric_name": "localization_accuracy_iou50",
+        "primary_score": 0.4166666666666667,
+        "primary_score_delta": null,
+        "mean_example_score": 0.4166666666666667,
+        "correct": 10,
+        "total": 24,
+        "format_compliance_rate": 0.625,
+        "average_output_chars": 0.0,
+        "max_output_chars": 0,
+        "forget_count": 0,
+        "forget_rate": 0.0,
+        "recovered_count": 0,
+        "behavior_comparable_count": 0,
+        "behavior_change_count": 0
+      },
+      "candidate_current_task_metrics": {
+        "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+        "primary_metric_name": "localization_accuracy_iou50",
+        "primary_score": 0.08333333333333333,
+        "primary_score_delta": -0.33333333333333337,
+        "mean_example_score": 0.08333333333333333,
+        "correct": 2,
+        "total": 24,
+        "format_compliance_rate": 1.0,
+        "average_output_chars": 0.0,
+        "max_output_chars": 0,
+        "forget_count": 9,
+        "forget_rate": 0.9,
+        "recovered_count": 1,
+        "behavior_comparable_count": 24,
+        "behavior_change_count": 24
+      },
+      "candidate_historical_anchor_metrics": {
+        "evaluation_schema_version": null,
+        "primary_metric_name": "historical_tasks_reported_separately",
+        "primary_score": null,
+        "primary_score_delta": null,
+        "mean_example_score": 0.0,
+        "correct": 2,
+        "total": 24,
+        "format_compliance_rate": 1.0,
+        "average_output_chars": 0.0,
+        "max_output_chars": 0,
+        "forget_count": 0,
+        "forget_rate": 0.0,
+        "recovered_count": 0,
+        "behavior_comparable_count": 0,
+        "behavior_change_count": 0
+      }
+    }
+  ],
+  "localization_validation_geometry": {
+    "baseline_and_each_of_8_executable_prompt_candidates": {
+      "total": 24,
+      "valid_original_frame_boxes": 15,
+      "original_frame_out_of_bounds": 9,
+      "other_syntax_schema_numeric_errors": 0
+    }
+  },
+  "positive_gain_executable_prompt_candidates": 0,
+  "executable_prompt_candidates": 20,
+  "invalid_artifact_candidates": 4,
+  "historical_forgetting_rejections": 0,
+  "original_run_unchanged": true
+}

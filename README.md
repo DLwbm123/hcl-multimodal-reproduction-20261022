@@ -62,3 +62,7 @@ For an individual audited arm, set `RUN_CONFIG` to its generated runtime config 
 Scores are official-code task-native primary metrics: detection micro-F1@IoU0.5 (COCO AP is separately retained), caption BLEU4/METEOR/ROUGE-L/CIDEr composite, grounding Acc@IoU0.5 and VQA consensus. Final mean is unweighted on the 0–100 scale. Average forgetting follows Appendix C.2 Eq.11; BWT is separately reported. Table 2 does not fully specify all metric implementation details, so complete metric equivalence to the paper remains unverified.
 
 The public release contains aggregate receipts rather than raw model outputs. Calls include strict failures and recovery replay: 15,887 for the native comparison, 19,619 known including pilot/preflight/smoke/mistaken auxiliary calls. Some auxiliary timing was not instrumented and no token cost was measured. See REPORT.md for limitations and negative results.
+
+## Medical transfer pilot (2026-10-22)
+
+Completed small medical transfer: Static 30.00%, HCL 30.67% descriptive final mean, with localization regression and unresolved coordinate confound. See [medical transfer code and validation](medical_transfer/README.md) and the [Chinese final report](medical_transfer/REPORT.zh-CN.md). Isolated interface/template repairs were not deployed into this run; no follow-up paired experiment was started.

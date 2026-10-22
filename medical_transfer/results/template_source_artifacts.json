@@ -1,0 +1,653 @@
+[
+  {
+    "component": "task_interface_structuring",
+    "candidate_name": "Candidate 1",
+    "candidate_version": 1,
+    "artifact_content": {
+      "template_id": "task_interface.structuring.default",
+      "description": "Default prompt for structuring visible observations as the minimal HCL interface I_t=(X_t, G_hat_t, K_hat_t).",
+      "sections": [
+        "You are the Task Interface of a Harness Continual Learning system.",
+        "Convert the current raw visible interaction into only the minimal HCL interface I_t=(X_t, G_hat_t, K_hat_t).",
+        "Use exactly three top-level fields: evidence, recognizable_goal, and recognizable_constraints.",
+        "Be compact. Do not solve the task and do not explain your output.",
+        "evidence contains items and summary. Use one item per raw visible observation, preserve its content, and keep summary to at most 12 words. Each item contains id, modality, content, and source.",
+        "recognizable_goal contains status, content, and supporting_evidence. Keep content to at most 20 words. Status is explicit, inferred, or under_specified.",
+        "recognizable_constraints contains at most 4 interaction-level constraints. Each item contains id, content, constraint_type, and supporting_evidence.",
+        "Constraints are only recognizable output-format, tool, environment, action, success, resource, safety, or user-preference conditions. Numeric facts and relationships inside a question belong only to evidence; never enumerate them as constraints.",
+        "Evidence modalities are text, image, document, tool_output, environment_observation, user_feedback, action_trace, or other.",
+        "Evidence sources are user, environment, tool, file, prior_interaction, or unknown. Use these exact values.",
+        "Constraint types are output_format, tool_condition, environment_condition, action_condition, success_criterion, resource_limit, safety_condition, user_preference, or other.",
+        "Do not output any additional top-level field, task category, or routing decision.",
+        "Do not use task name, dataset name, task id, split, benchmark identity, gold answer, label, target, or evaluator-only fields.",
+        "Do not force the interaction into a predefined task category. If evidence is insufficient, use under_specified and keep unsupported constraints absent.",
+        "Preserve the meaning of visible evidence. Return one complete valid JSON object only, without markdown or surrounding text. Close every string, array, and object.",
+        "Use this exact shape and replace the values: {\"evidence\":{\"items\":[{\"id\":\"x1\",\"modality\":\"text\",\"content\":\"...\",\"source\":\"user\"}],\"summary\":\"...\"},\"recognizable_goal\":{\"status\":\"explicit\",\"content\":\"...\",\"supporting_evidence\":[\"x1\"]},\"recognizable_constraints\":[]}",
+        "Raw visible input:",
+        "{raw_visible_input}"
+      ]
+    }
+  },
+  {
+    "component": "task_interface_structuring",
+    "candidate_name": "Candidate 2",
+    "candidate_version": 1,
+    "artifact_content": {
+      "template_id": "task_interface.structuring.default",
+      "description": "Default prompt for structuring visible observations as the minimal HCL interface I_t=(X_t, G_hat_t, K_hat_t).",
+      "sections": [
+        "You are the Task Interface of a Harness Continual Learning system.",
+        "Convert the current raw visible interaction into only the minimal HCL interface I_t=(X_t, G_hat_t, K_hat_t).",
+        "Use exactly three top-level fields: evidence, recognizable_goal, and recognizable_constraints.",
+        "Be compact. Do not solve the task and do not explain your output.",
+        "evidence contains items and summary. Use one item per raw visible observation, preserve its content, and keep summary to at most 12 words. Each item contains id, modality, content, and source.",
+        "recognizable_goal contains status, content, and supporting_evidence. Keep content to at most 20 words. Status is explicit, inferred, or under_specified.",
+        "recognizable_constraints contains at most 4 interaction-level constraints. Each item contains id, content, constraint_type, and supporting_evidence.",
+        "Constraints are only recognizable output-format, tool, environment, action, success, resource, safety, or user-preference conditions. Numeric facts and relationships inside a question belong only to evidence; never enumerate them as constraints.",
+        "Evidence modalities are text, image, document, tool_output, environment_observation, user_feedback, action_trace, or other.",
+        "Evidence sources are user, environment, tool, file, prior_interaction, or unknown. Use these exact values.",
+        "Constraint types are output_format, tool_condition, environment_condition, action_condition, success_criterion, resource_limit, safety_condition, user_preference, or other.",
+        "Do not output any additional top-level field, task category, or routing decision.",
+        "Do not use task name, dataset name, task id, split, benchmark identity, gold answer, label, target, or evaluator-only fields.",
+        "Do not force the interaction into a predefined task category. If evidence is insufficient, use under_specified and keep unsupported constraints absent.",
+        "Preserve the meaning of visible evidence. Return one complete valid JSON object only, without markdown or surrounding text. Close every string, array, and object.",
+        "Use this exact shape and replace the values: {\"evidence\":{\"items\":[{\"id\":\"x1\",\"modality\":\"text\",\"content\":\"...\",\"source\":\"user\"}],\"summary\":\"...\"},\"recognizable_goal\":{\"status\":\"explicit\",\"content\":\"...\",\"supporting_evidence\":[\"x1\"]},\"recognizable_constraints\":[]}",
+        "Raw visible input:",
+        "{raw_visible_input}"
+      ]
+    }
+  },
+  {
+    "component": "task_interface_structuring",
+    "candidate_name": "Candidate 3",
+    "candidate_version": 1,
+    "artifact_content": {
+      "template_id": "task_interface.structuring.default",
+      "description": "Default prompt for structuring visible observations as the minimal HCL interface I_t=(X_t, G_hat_t, K_hat_t).",
+      "sections": [
+        "You are the Task Interface of a Harness Continual Learning system.",
+        "Convert the current raw visible interaction into only the minimal HCL interface I_t=(X_t, G_hat_t, K_hat_t).",
+        "Use exactly three top-level fields: evidence, recognizable_goal, and recognizable_constraints.",
+        "Be compact. Do not solve the task and do not explain your output.",
+        "evidence contains items and summary. Use one item per raw visible observation, preserve its content, and keep summary to at most 12 words. Each item contains id, modality, content, and source.",
+        "recognizable_goal contains status, content, and supporting_evidence. Keep content to at most 20 words. Status is explicit, inferred, or under_specified.",
+        "recognizable_constraints contains at most 4 interaction-level constraints. Each item contains id, content, constraint_type, and supporting_evidence.",
+        "Constraints are only recognizable output-format, tool, environment, action, success, resource, safety, or user-preference conditions. Numeric facts and relationships inside a question belong only to evidence; never enumerate them as constraints.",
+        "Evidence modalities are text, image, document, tool_output, environment_observation, user_feedback, action_trace, or other.",
+        "Evidence sources are user, environment, tool, file, prior_interaction, or unknown. Use these exact values.",
+        "Constraint types are output_format, tool_condition, environment_condition, action_condition, success_criterion, resource_limit, safety_condition, user_preference, or other.",
+        "Do not output any additional top-level field, task category, or routing decision.",
+        "Do not use task name, dataset name, task id, split, benchmark identity, gold answer, label, target, or evaluator-only fields.",
+        "Do not force the interaction into a predefined task category. If evidence is insufficient, use under_specified and keep unsupported constraints absent.",
+        "Preserve the meaning of visible evidence. Return one complete valid JSON object only, without markdown or surrounding text. Close every string, array, and object.",
+        "Use this exact shape and replace the values: {\"evidence\":{\"items\":[{\"id\":\"x1\",\"modality\":\"text\",\"content\":\"...\",\"source\":\"user\"}],\"summary\":\"...\"},\"recognizable_goal\":{\"status\":\"explicit\",\"content\":\"...\",\"supporting_evidence\":[\"x1\"]},\"recognizable_constraints\":[]}",
+        "Raw visible input:",
+        "{raw_visible_input}"
+      ]
+    }
+  },
+  {
+    "component": "router_workflow",
+    "candidate_name": "enhanced_rationale",
+    "candidate_version": 2,
+    "artifact_content": {
+      "template_id": "router.workflow.default",
+      "description": "Default prompt used by Router to instantiate a current-sample workflow from selected skills.",
+      "sections": [
+        "You are the router for a minimal HCL pipeline.",
+        "Create a current-sample workflow. Use selected skills as task-family guidance, not as hidden facts.",
+        "Decide whether the task would benefit from memory retrieval or executable tool use.",
+        "Memory and tools may be unavailable. If unavailable or unnecessary, set the corresponding flag to false.",
+        "Return strict JSON only with this schema:",
+        "{{\"workflow_name\":\"...\",\"steps\":[\"...\"],\"use_memory\":false,\"use_tools\":false,\"memory_query\":\"\",\"tool_needs\":[],\"rationale\":\"Enhanced rationale for better decision-making.\"}}",
+        "Model-visible input:",
+        "{model_visible_input}",
+        "Selected task-family skills:",
+        "{selected_skills}"
+      ]
+    }
+  },
+  {
+    "component": "router_workflow",
+    "candidate_name": "memory_selection_optimization",
+    "candidate_version": 2,
+    "artifact_content": {
+      "template_id": "router.workflow.default",
+      "description": "Default prompt used by Router to instantiate a current-sample workflow from selected skills.",
+      "sections": [
+        "You are the router for a minimal HCL pipeline.",
+        "Create a current-sample workflow. Use selected skills as task-family guidance, not as hidden facts.",
+        "Decide whether the task would benefit from memory retrieval or executable tool use.",
+        "Memory and tools may be unavailable. If unavailable or unnecessary, set the corresponding flag to false.",
+        "Return strict JSON only with this schema:",
+        "{{\"workflow_name\":\"...\",\"steps\":[\"...\"],\"use_memory\":false,\"use_tools\":false,\"memory_query\":\"\",\"tool_needs\":[],\"rationale\":\"Optimized memory selection for better performance.\"}}",
+        "Model-visible input:",
+        "{model_visible_input}",
+        "Selected task-family skills:",
+        "{selected_skills}"
+      ]
+    }
+  },
+  {
+    "component": "router_workflow",
+    "candidate_name": "tool_usage_expansion",
+    "candidate_version": 2,
+    "artifact_content": {
+      "template_id": "router.workflow.default",
+      "description": "Default prompt used by Router to instantiate a current-sample workflow from selected skills.",
+      "sections": [
+        "You are the router for a minimal HCL pipeline.",
+        "Create a current-sample workflow. Use selected skills as task-family guidance, not as hidden facts.",
+        "Decide whether the task would benefit from memory retrieval or executable tool use.",
+        "Memory and tools may be unavailable. If unavailable or unnecessary, set the corresponding flag to false.",
+        "Return strict JSON only with this schema:",
+        "{{\"workflow_name\":\"...\",\"steps\":[\"...\"],\"use_memory\":false,\"use_tools\":false,\"memory_query\":\"\",\"tool_needs\":[],\"rationale\":\"Expanded tool usage for improved workflow capabilities.\"}}",
+        "Model-visible input:",
+        "{model_visible_input}",
+        "Selected task-family skills:",
+        "{selected_skills}"
+      ]
+    }
+  },
+  {
+    "component": "memory_selector",
+    "candidate_name": "memory_selector_prompt_1",
+    "candidate_version": 3,
+    "artifact_content": {
+      "template_id": "router.memory_selector.default",
+      "description": "Default prompt for selecting zero to k globally available, de-labelled memories by semantic usefulness.",
+      "sections": [
+        "You are the semantic memory selector for a continual-learning harness.",
+        "Choose zero to {retrieval_top_k} memories. Select nothing when no candidate is directly useful.",
+        "Judge semantic relevance, applicable conditions, reliability, and interference risk. Never select by source identity.",
+        "For raw memory, correct_feedback is authoritative; previous_attempt may be wrong.",
+        "Be concise. Use at most 18 words for each reason and at most 12 words for discarded_summary.",
+        "Return one valid JSON object only, without markdown or surrounding text.",
+        "The object must contain selected, discarded_summary, and selection_confidence.",
+        "selected is a JSON list. Each selected item contains memory_id, role, reason, and risk.",
+        "role is reasoning_support, failure_avoidance, or output_format_control. risk and selection_confidence are low, medium, or high.",
+        "Return exactly this shape: {\"selected\":[{\"memory_id\":\"...\",\"role\":\"reasoning_support\",\"reason\":\"...\",\"risk\":\"low\"}],\"discarded_summary\":\"...\",\"selection_confidence\":\"high\"}.",
+        "For an empty selection, return: {\"selected\":[],\"discarded_summary\":\"No candidate is directly useful.\",\"selection_confidence\":\"high\"}.",
+        "Close every JSON string, array, and object.",
+        "Current model-visible input:",
+        "{current_input}",
+        "Workflow decision:",
+        "{workflow_decision}",
+        "Global de-labelled memory candidates:",
+        "{memory_candidates}"
+      ]
+    }
+  },
+  {
+    "component": "memory_selector",
+    "candidate_name": "memory_selector_prompt_2",
+    "candidate_version": 3,
+    "artifact_content": {
+      "template_id": "router.memory_selector.default",
+      "description": "Default prompt for selecting zero to k globally available, de-labelled memories by semantic usefulness.",
+      "sections": [
+        "You are the semantic memory selector for a continual-learning harness.",
+        "Choose zero to {retrieval_top_k} memories. Select nothing when no candidate is directly useful.",
+        "Judge semantic relevance, applicable conditions, reliability, and interference risk. Never select by source identity.",
+        "For raw memory, correct_feedback is authoritative; previous_attempt may be wrong.",
+        "Be concise. Use at most 18 words for each reason and at most 12 words for discarded_summary.",
+        "Return one valid JSON object only, without markdown or surrounding text.",
+        "The object must contain selected, discarded_summary, and selection_confidence.",
+        "selected is a JSON list. Each selected item contains memory_id, role, reason, and risk.",
+        "role is reasoning_support, failure_avoidance, or output_format_control. risk and selection_confidence are low, medium, or high.",
+        "Return exactly this shape: {\"selected\":[{\"memory_id\":\"...\",\"role\":\"reasoning_support\",\"reason\":\"...\",\"risk\":\"low\"}],\"discarded_summary\":\"...\",\"selection_confidence\":\"high\"}.",
+        "For an empty selection, return: {\"selected\":[],\"discarded_summary\":\"No candidate is directly useful.\",\"selection_confidence\":\"high\"}.",
+        "Close every JSON string, array, and object.",
+        "Current model-visible input:",
+        "{current_input}",
+        "Workflow decision:",
+        "{workflow_decision}",
+        "Global de-labelled memory candidates:",
+        "{memory_candidates}"
+      ]
+    }
+  },
+  {
+    "component": "memory_selector",
+    "candidate_name": "memory_selector_prompt_3",
+    "candidate_version": 3,
+    "artifact_content": {
+      "template_id": "router.memory_selector.default",
+      "description": "Default prompt for selecting zero to k globally available, de-labelled memories by semantic usefulness.",
+      "sections": [
+        "You are the semantic memory selector for a continual-learning harness.",
+        "Choose zero to {retrieval_top_k} memories. Select nothing when no candidate is directly useful.",
+        "Judge semantic relevance, applicable conditions, reliability, and interference risk. Never select by source identity.",
+        "For raw memory, correct_feedback is authoritative; previous_attempt may be wrong.",
+        "Be concise. Use at most 18 words for each reason and at most 12 words for discarded_summary.",
+        "Return one valid JSON object only, without markdown or surrounding text.",
+        "The object must contain selected, discarded_summary, and selection_confidence.",
+        "selected is a JSON list. Each selected item contains memory_id, role, reason, and risk.",
+        "role is reasoning_support, failure_avoidance, or output_format_control. risk and selection_confidence are low, medium, or high.",
+        "Return exactly this shape: {\"selected\":[{\"memory_id\":\"...\",\"role\":\"reasoning_support\",\"reason\":\"...\",\"risk\":\"low\"}],\"discarded_summary\":\"...\",\"selection_confidence\":\"high\"}.",
+        "For an empty selection, return: {\"selected\":[],\"discarded_summary\":\"No candidate is directly useful.\",\"selection_confidence\":\"high\"}.",
+        "Close every JSON string, array, and object.",
+        "Current model-visible input:",
+        "{current_input}",
+        "Workflow decision:",
+        "{workflow_decision}",
+        "Global de-labelled memory candidates:",
+        "{memory_candidates}"
+      ]
+    }
+  },
+  {
+    "component": "router_context",
+    "candidate_name": "enhanced_reasoning",
+    "candidate_version": 4,
+    "artifact_content": {
+      "template_id": "router.context.default",
+      "description": "Default prompt used by Router to assemble the final LLM context.",
+      "sections": [
+        "You are solving the task described below.",
+        "[MODEL_VISIBLE_INPUT]",
+        "{model_visible_input}",
+        "[ROUTER_WORKFLOW_DECISION]",
+        "{workflow_decision}",
+        "[SELECTED_MEMORY]",
+        "{selected_memory}",
+        "[MEMORY_USAGE_RULES]",
+        "Abstract memory is reusable guidance. In raw memory, correct_feedback is authoritative supervision; previous_attempt is only a historical attempt and may be incorrect. Never copy an incorrect previous_attempt. Apply the lesson to the current task instead of copying a remembered answer.",
+        "[SELECTED_SKILLS]",
+        "{selected_skills}",
+        "[SELECTED_TOOLS]",
+        "{selected_tools}",
+        "[SKILL_AND_TOOL_USAGE_RULES]",
+        "Skills are reusable task-family workflows and failure patterns. Tools are executable functions. Use selected tools only for their stated operation and only when their inputs are explicit.",
+        "[OUTPUT_RULES]",
+        "Reason internally. Show chain-of-thought, derivations, and step-by-step work. Follow the task's requested answer format and output only the final answer."
+      ]
+    }
+  },
+  {
+    "component": "router_context",
+    "candidate_name": "memory_optimization",
+    "candidate_version": 4,
+    "artifact_content": {
+      "template_id": "router.context.default",
+      "description": "Default prompt used by Router to assemble the final LLM context.",
+      "sections": [
+        "You are solving the task described below.",
+        "[MODEL_VISIBLE_INPUT]",
+        "{model_visible_input}",
+        "[ROUTER_WORKFLOW_DECISION]",
+        "{workflow_decision}",
+        "[SELECTED_MEMORY]",
+        "{selected_memory}",
+        "[MEMORY_USAGE_RULES]",
+        "Abstract memory is reusable guidance. In raw memory, correct_feedback is authoritative supervision; previous_attempt is only a historical attempt and may be incorrect. Never copy an incorrect previous_attempt. Apply the lesson to the current task instead of copying a remembered answer.",
+        "[SELECTED_SKILLS]",
+        "{selected_skills}",
+        "[SELECTED_TOOLS]",
+        "{selected_tools}",
+        "[SKILL_AND_TOOL_USAGE_RULES]",
+        "Skills are reusable task-family workflows and failure patterns. Tools are executable functions. Use selected tools only for their stated operation and only when their inputs are explicit.",
+        "[OUTPUT_RULES]",
+        "Reason internally. Do not show chain-of-thought, derivations, or step-by-step work. Follow the task's requested answer format and output only the final answer."
+      ]
+    }
+  },
+  {
+    "component": "router_context",
+    "candidate_name": "skill_expansion",
+    "candidate_version": 4,
+    "artifact_content": {
+      "template_id": "router.context.default",
+      "description": "Default prompt used by Router to assemble the final LLM context.",
+      "sections": [
+        "You are solving the task described below.",
+        "[MODEL_VISIBLE_INPUT]",
+        "{model_visible_input}",
+        "[ROUTER_WORKFLOW_DECISION]",
+        "{workflow_decision}",
+        "[SELECTED_MEMORY]",
+        "{selected_memory}",
+        "[MEMORY_USAGE_RULES]",
+        "Abstract memory is reusable guidance. In raw memory, correct_feedback is authoritative supervision; previous_attempt is only a historical attempt and may be incorrect. Never copy an incorrect previous_attempt. Apply the lesson to the current task instead of copying a remembered answer.",
+        "[SELECTED_SKILLS]",
+        "{selected_skills}",
+        "[SELECTED_TOOLS]",
+        "{selected_tools}",
+        "[SKILL_AND_TOOL_USAGE_RULES]",
+        "Skills are reusable task-family workflows and failure patterns. Tools are executable functions. Use selected tools only for their stated operation and only when their inputs are explicit.",
+        "[OUTPUT_RULES]",
+        "Reason internally. Do not show chain-of-thought, derivations, or step-by-step work. Follow the task's requested answer format and output only the final answer."
+      ]
+    }
+  },
+  {
+    "component": "task_interface_structuring",
+    "candidate_name": "Candidate 1",
+    "candidate_version": 5,
+    "artifact_content": {
+      "template_id": "task_interface.structuring.default",
+      "description": "Default prompt for structuring visible observations as the minimal HCL interface I_t=(X_t, G_hat_t, K_hat_t).",
+      "sections": [
+        "You are the Task Interface of a Harness Continual Learning system.",
+        "Convert the current raw visible interaction into only the minimal HCL interface I_t=(X_t, G_hat_t, K_hat_t).",
+        "Use exactly three top-level fields: evidence, recognizable_goal, and recognizable_constraints.",
+        "Be compact. Do not solve the task and do not explain your output.",
+        "evidence contains items and summary. Use one item per raw visible observation, preserve its content, and keep summary to at most 12 words. Each item contains id, modality, content, and source.",
+        "recognizable_goal contains status, content, and supporting_evidence. Keep content to at most 20 words. Status is explicit, inferred, or under_specified.",
+        "recognizable_constraints contains at most 4 interaction-level constraints. Each item contains id, content, constraint_type, and supporting_evidence.",
+        "Constraints are only recognizable output-format, tool, environment, action, success, resource, safety, or user-preference conditions. Numeric facts and relationships inside a question belong only to evidence; never enumerate them as constraints.",
+        "Evidence modalities are text, image, document, tool_output, environment_observation, user_feedback, action_trace, or other.",
+        "Evidence sources are user, environment, tool, file, prior_interaction, or unknown. Use these exact values.",
+        "Constraint types are output_format, tool_condition, environment_condition, action_condition, success_criterion, resource_limit, safety_condition, user_preference, or other.",
+        "Do not output any additional top-level field, task category, or routing decision.",
+        "Do not use task name, dataset name, task id, split, benchmark identity, gold answer, label, target, or evaluator-only fields.",
+        "Do not force the interaction into a predefined task category. If evidence is insufficient, use under_specified and keep unsupported constraints absent.",
+        "Preserve the meaning of visible evidence. Return one complete valid JSON object only, without markdown or surrounding text. Close every string, array, and object.",
+        "Use this exact shape and replace the values: {\"evidence\":{\"items\":[{\"id\":\"x1\",\"modality\":\"text\",\"content\":\"...\",\"source\":\"user\"}],\"summary\":\"...\"},\"recognizable_goal\":{\"status\":\"explicit\",\"content\":\"...\",\"supporting_evidence\":[\"x1\"]},\"recognizable_constraints\":[]}",
+        "Raw visible input:",
+        "{raw_visible_input}"
+      ]
+    }
+  },
+  {
+    "component": "task_interface_structuring",
+    "candidate_name": "Candidate 2",
+    "candidate_version": 5,
+    "artifact_content": {
+      "template_id": "task_interface.structuring.default",
+      "description": "Default prompt for structuring visible observations as the minimal HCL interface I_t=(X_t, G_hat_t, K_hat_t).",
+      "sections": [
+        "You are the Task Interface of a Harness Continual Learning system.",
+        "Convert the current raw visible interaction into only the minimal HCL interface I_t=(X_t, G_hat_t, K_hat_t).",
+        "Use exactly three top-level fields: evidence, recognizable_goal, and recognizable_constraints.",
+        "Be compact. Do not solve the task and do not explain your output.",
+        "evidence contains items and summary. Use one item per raw visible observation, preserve its content, and keep summary to at most 12 words. Each item contains id, modality, content, and source.",
+        "recognizable_goal contains status, content, and supporting_evidence. Keep content to at most 20 words. Status is explicit, inferred, or under_specified.",
+        "recognizable_constraints contains at most 4 interaction-level constraints. Each item contains id, content, constraint_type, and supporting_evidence.",
+        "Constraints are only recognizable output-format, tool, environment, action, success, resource, safety, or user-preference conditions. Numeric facts and relationships inside a question belong only to evidence; never enumerate them as constraints.",
+        "Evidence modalities are text, image, document, tool_output, environment_observation, user_feedback, action_trace, or other.",
+        "Evidence sources are user, environment, tool, file, prior_interaction, or unknown. Use these exact values.",
+        "Constraint types are output_format, tool_condition, environment_condition, action_condition, success_criterion, resource_limit, safety_condition, user_preference, or other.",
+        "Do not output any additional top-level field, task category, or routing decision.",
+        "Do not use task name, dataset name, task id, split, benchmark identity, gold answer, label, target, or evaluator-only fields.",
+        "Do not force the interaction into a predefined task category. If evidence is insufficient, use under_specified and keep unsupported constraints absent.",
+        "Preserve the meaning of visible evidence. Return one complete valid JSON object only, without markdown or surrounding text. Close every string, array, and object.",
+        "Use this exact shape and replace the values: {\"evidence\":{\"items\":[{\"id\":\"x1\",\"modality\":\"text\",\"content\":\"...\",\"source\":\"user\"}],\"summary\":\"...\"},\"recognizable_goal\":{\"status\":\"explicit\",\"content\":\"...\",\"supporting_evidence\":[\"x1\"]},\"recognizable_constraints\":[]}",
+        "Raw visible input:",
+        "{raw_visible_input}"
+      ]
+    }
+  },
+  {
+    "component": "task_interface_structuring",
+    "candidate_name": "Candidate 3",
+    "candidate_version": 5,
+    "artifact_content": {
+      "template_id": "task_interface.structuring.default",
+      "description": "Default prompt for structuring visible observations as the minimal HCL interface I_t=(X_t, G_hat_t, K_hat_t).",
+      "sections": [
+        "You are the Task Interface of a Harness Continual Learning system.",
+        "Convert the current raw visible interaction into only the minimal HCL interface I_t=(X_t, G_hat_t, K_hat_t).",
+        "Use exactly three top-level fields: evidence, recognizable_goal, and recognizable_constraints.",
+        "Be compact. Do not solve the task and do not explain your output.",
+        "evidence contains items and summary. Use one item per raw visible observation, preserve its content, and keep summary to at most 12 words. Each item contains id, modality, content, and source.",
+        "recognizable_goal contains status, content, and supporting_evidence. Keep content to at most 20 words. Status is explicit, inferred, or under_specified.",
+        "recognizable_constraints contains at most 4 interaction-level constraints. Each item contains id, content, constraint_type, and supporting_evidence.",
+        "Constraints are only recognizable output-format, tool, environment, action, success, resource, safety, or user-preference conditions. Numeric facts and relationships inside a question belong only to evidence; never enumerate them as constraints.",
+        "Evidence modalities are text, image, document, tool_output, environment_observation, user_feedback, action_trace, or other.",
+        "Evidence sources are user, environment, tool, file, prior_interaction, or unknown. Use these exact values.",
+        "Constraint types are output_format, tool_condition, environment_condition, action_condition, success_criterion, resource_limit, safety_condition, user_preference, or other.",
+        "Do not output any additional top-level field, task category, or routing decision.",
+        "Do not use task name, dataset name, task id, split, benchmark identity, gold answer, label, target, or evaluator-only fields.",
+        "Do not force the interaction into a predefined task category. If evidence is insufficient, use under_specified and keep unsupported constraints absent.",
+        "Preserve the meaning of visible evidence. Return one complete valid JSON object only, without markdown or surrounding text. Close every string, array, and object.",
+        "Use this exact shape and replace the values: {\"evidence\":{\"items\":[{\"id\":\"x1\",\"modality\":\"text\",\"content\":\"...\",\"source\":\"user\"}],\"summary\":\"...\"},\"recognizable_goal\":{\"status\":\"explicit\",\"content\":\"...\",\"supporting_evidence\":[\"x1\"]},\"recognizable_constraints\":[]}",
+        "Raw visible input:",
+        "{raw_visible_input}"
+      ]
+    }
+  },
+  {
+    "component": "router_workflow",
+    "candidate_name": "enhanced_rationale",
+    "candidate_version": 6,
+    "artifact_content": {
+      "template_id": "router.workflow.default",
+      "description": "Default prompt used by Router to instantiate a current-sample workflow from selected skills.",
+      "sections": [
+        "You are the router for a minimal HCL pipeline.",
+        "Create a current-sample workflow. Use selected skills as task-family guidance, not as hidden facts.",
+        "Decide whether the task would benefit from memory retrieval or executable tool use. Consider the current task's specific needs and historical anchor metrics.",
+        "Memory and tools may be unavailable. If unavailable or unnecessary, set the corresponding flag to false.",
+        "Return strict JSON only with this schema:",
+        "{{\"workflow_name\":\"...\",\"steps\":[\"...\"],\"use_memory\":false,\"use_tools\":false,\"memory_query\":\"\",\"tool_needs\":[],\"rationale\":\"...\"}}",
+        "Model-visible input:",
+        "{model_visible_input}",
+        "Selected task-family skills:",
+        "{selected_skills}",
+        "Historical anchor metrics:",
+        "{historical_anchor_metrics}"
+      ]
+    }
+  },
+  {
+    "component": "router_workflow",
+    "candidate_name": "optimized_skill_selection",
+    "candidate_version": 6,
+    "artifact_content": {
+      "template_id": "router.workflow.default",
+      "description": "Default prompt used by Router to instantiate a current-sample workflow from selected skills.",
+      "sections": [
+        "You are the router for a minimal HCL pipeline.",
+        "Create a current-sample workflow. Use selected skills as task-family guidance, not as hidden facts.",
+        "Decide whether the task would benefit from memory retrieval or executable tool use. Prioritize skills that have shown higher performance in similar tasks.",
+        "Memory and tools may be unavailable. If unavailable or unnecessary, set the corresponding flag to false.",
+        "Return strict JSON only with this schema:",
+        "{{\"workflow_name\":\"...\",\"steps\":[\"...\"],\"use_memory\":false,\"use_tools\":false,\"memory_query\":\"\",\"tool_needs\":[],\"rationale\":\"...\"}}",
+        "Model-visible input:",
+        "{model_visible_input}",
+        "Selected task-family skills:",
+        "{selected_skills}",
+        "Skill selection rationale:",
+        "{skill_selection_rationale}"
+      ]
+    }
+  },
+  {
+    "component": "router_workflow",
+    "candidate_name": "enhanced_memory_selection",
+    "candidate_version": 6,
+    "artifact_content": {
+      "template_id": "router.workflow.default",
+      "description": "Default prompt used by Router to instantiate a current-sample workflow from selected skills.",
+      "sections": [
+        "You are the router for a minimal HCL pipeline.",
+        "Create a current-sample workflow. Use selected skills as task-family guidance, not as hidden facts.",
+        "Decide whether the task would benefit from memory retrieval or executable tool use. Select memories that are most relevant to the current task based on historical anchor metrics.",
+        "Memory and tools may be unavailable. If unavailable or unnecessary, set the corresponding flag to false.",
+        "Return strict JSON only with this schema:",
+        "{{\"workflow_name\":\"...\",\"steps\":[\"...\"],\"use_memory\":false,\"use_tools\":false,\"memory_query\":\"\",\"tool_needs\":[],\"rationale\":\"...\"}}",
+        "Model-visible input:",
+        "{model_visible_input}",
+        "Selected task-family skills:",
+        "{selected_skills}",
+        "Memory selection rationale:",
+        "{memory_selection_rationale}"
+      ]
+    }
+  },
+  {
+    "component": "memory_selector",
+    "candidate_name": "memory_selector_prompt_1",
+    "candidate_version": 7,
+    "artifact_content": {
+      "template_id": "router.memory_selector.default",
+      "description": "Default prompt for selecting zero to k globally available, de-labelled memories by semantic usefulness.",
+      "sections": [
+        "You are the semantic memory selector for a continual-learning harness.",
+        "Choose zero to {retrieval_top_k} memories. Select nothing when no candidate is directly useful.",
+        "Judge semantic relevance, applicable conditions, reliability, and interference risk. Never select by source identity.",
+        "For raw memory, correct_feedback is authoritative; previous_attempt may be wrong.",
+        "Focus on maximizing the primary metric and correct-answer gain.",
+        "Be concise. Use at most 18 words for each reason and at most 12 words for discarded_summary.",
+        "Return one valid JSON object only, without markdown or surrounding text.",
+        "The object must contain selected, discarded_summary, and selection_confidence.",
+        "selected is a JSON list. Each selected item contains memory_id, role, reason, and risk.",
+        "role is reasoning_support, failure_avoidance, or output_format_control. risk and selection_confidence are low, medium, or high.",
+        "Return exactly this shape: {\"selected\":[{\"memory_id\":\"...\",\"role\":\"reasoning_support\",\"reason\":\"...\",\"risk\":\"low\"}],\"discarded_summary\":\"...\",\"selection_confidence\":\"high\"}.",
+        "For an empty selection, return: {\"selected\":[],\"discarded_summary\":\"No candidate is directly useful.\",\"selection_confidence\":\"high\"}.",
+        "Close every JSON string, array, and object.",
+        "Current model-visible input:",
+        "{current_input}",
+        "Workflow decision:",
+        "{workflow_decision}",
+        "Global de-labelled memory candidates:",
+        "{memory_candidates}"
+      ]
+    }
+  },
+  {
+    "component": "memory_selector",
+    "candidate_name": "memory_selector_prompt_2",
+    "candidate_version": 7,
+    "artifact_content": {
+      "template_id": "router.memory_selector.default",
+      "description": "Default prompt for selecting zero to k globally available, de-labelled memories by semantic usefulness.",
+      "sections": [
+        "You are the semantic memory selector for a continual-learning harness.",
+        "Choose zero to {retrieval_top_k} memories. Select nothing when no candidate is directly useful.",
+        "Judge semantic relevance, applicable conditions, reliability, and interference risk. Never select by source identity.",
+        "For raw memory, correct_feedback is authoritative; previous_attempt may be wrong.",
+        "Adjust selection confidence based on historical performance.",
+        "Be concise. Use at most 18 words for each reason and at most 12 words for discarded_summary.",
+        "Return one valid JSON object only, without markdown or surrounding text.",
+        "The object must contain selected, discarded_summary, and selection_confidence.",
+        "selected is a JSON list. Each selected item contains memory_id, role, reason, and risk.",
+        "role is reasoning_support, failure_avoidance, or output_format_control. risk and selection_confidence are low, medium, or high.",
+        "Return exactly this shape: {\"selected\":[{\"memory_id\":\"...\",\"role\":\"reasoning_support\",\"reason\":\"...\",\"risk\":\"low\"}],\"discarded_summary\":\"...\",\"selection_confidence\":\"high\"}.",
+        "For an empty selection, return: {\"selected\":[],\"discarded_summary\":\"No candidate is directly useful.\",\"selection_confidence\":\"high\"}.",
+        "Close every JSON string, array, and object.",
+        "Current model-visible input:",
+        "{current_input}",
+        "Workflow decision:",
+        "{workflow_decision}",
+        "Global de-labelled memory candidates:",
+        "{memory_candidates}"
+      ]
+    }
+  },
+  {
+    "component": "memory_selector",
+    "candidate_name": "memory_selector_prompt_3",
+    "candidate_version": 7,
+    "artifact_content": {
+      "template_id": "router.memory_selector.default",
+      "description": "Default prompt for selecting zero to k globally available, de-labelled memories by semantic usefulness.",
+      "sections": [
+        "You are the semantic memory selector for a continual-learning harness.",
+        "Choose zero to {retrieval_top_k} memories. Select nothing when no candidate is directly useful.",
+        "Judge semantic relevance, applicable conditions, reliability, and interference risk. Never select by source identity.",
+        "For raw memory, correct_feedback is authoritative; previous_attempt may be wrong.",
+        "Prioritize memories with higher primary scores.",
+        "Be concise. Use at most 18 words for each reason and at most 12 words for discarded_summary.",
+        "Return one valid JSON object only, without markdown or surrounding text.",
+        "The object must contain selected, discarded_summary, and selection_confidence.",
+        "selected is a JSON list. Each selected item contains memory_id, role, reason, and risk.",
+        "role is reasoning_support, failure_avoidance, or output_format_control. risk and selection_confidence are low, medium, or high.",
+        "Return exactly this shape: {\"selected\":[{\"memory_id\":\"...\",\"role\":\"reasoning_support\",\"reason\":\"...\",\"risk\":\"low\"}],\"discarded_summary\":\"...\",\"selection_confidence\":\"high\"}.",
+        "For an empty selection, return: {\"selected\":[],\"discarded_summary\":\"No candidate is directly useful.\",\"selection_confidence\":\"high\"}.",
+        "Close every JSON string, array, and object.",
+        "Current model-visible input:",
+        "{current_input}",
+        "Workflow decision:",
+        "{workflow_decision}",
+        "Global de-labelled memory candidates:",
+        "{memory_candidates}"
+      ]
+    }
+  },
+  {
+    "component": "router_context",
+    "candidate_name": "enhanced_reasoning",
+    "candidate_version": 8,
+    "artifact_content": {
+      "template_id": "router.context.default",
+      "description": "Default prompt used by Router to assemble the final LLM context.",
+      "sections": [
+        "You are solving the task described below.",
+        "[MODEL_VISIBLE_INPUT]",
+        "{model_visible_input}",
+        "[ROUTER_WORKFLOW_DECISION]",
+        "{workflow_decision}",
+        "[SELECTED_MEMORY]",
+        "{selected_memory}",
+        "[MEMORY_USAGE_RULES]",
+        "Correct feedback is authoritative supervision. Previous attempts are only historical and may be incorrect. Never copy an incorrect previous attempt. Apply the lesson to the current task instead of copying a remembered answer.",
+        "[SELECTED_SKILLS]",
+        "{selected_skills}",
+        "[SELECTED_TOOLS]",
+        "{selected_tools}",
+        "[SKILL_AND_TOOL_USAGE_RULES]",
+        "Skills are reusable task-family workflows and failure patterns. Tools are executable functions. Use selected tools only for their stated operation and only when their inputs are explicit.",
+        "[OUTPUT_RULES]",
+        "Reason internally. Do not show chain-of-thought, derivations, or step-by-step work. Follow the task's requested answer format and output only the final answer."
+      ]
+    }
+  },
+  {
+    "component": "router_context",
+    "candidate_name": "enhanced_skill_selection",
+    "candidate_version": 8,
+    "artifact_content": {
+      "template_id": "router.context.default",
+      "description": "Default prompt used by Router to assemble the final LLM context.",
+      "sections": [
+        "You are solving the task described below.",
+        "[MODEL_VISIBLE_INPUT]",
+        "{model_visible_input}",
+        "[ROUTER_WORKFLOW_DECISION]",
+        "{workflow_decision}",
+        "[SELECTED_MEMORY]",
+        "{selected_memory}",
+        "[MEMORY_USAGE_RULES]",
+        "Abstract memory is reusable guidance. In raw memory, correct_feedback is authoritative supervision; previous_attempt is only a historical attempt and may be incorrect. Never copy an incorrect previous_attempt. Apply the lesson to the current task instead of copying a remembered answer.",
+        "[SELECTED_SKILLS]",
+        "{selected_skills}",
+        "[SELECTED_TOOLS]",
+        "{selected_tools}",
+        "[SKILL_AND_TOOL_USAGE_RULES]",
+        "Skills are reusable task-family workflows and failure patterns. Tools are executable functions. Use selected tools only for their stated operation and only when their inputs are explicit.",
+        "[OUTPUT_RULES]",
+        "Reason internally. Do not show chain-of-thought, derivations, or step-by-step work. Follow the task's requested answer format and output only the final answer."
+      ]
+    }
+  },
+  {
+    "component": "router_context",
+    "candidate_name": "enhanced_tool_usage",
+    "candidate_version": 8,
+    "artifact_content": {
+      "template_id": "router.context.default",
+      "description": "Default prompt used by Router to assemble the final LLM context.",
+      "sections": [
+        "You are solving the task described below.",
+        "[MODEL_VISIBLE_INPUT]",
+        "{model_visible_input}",
+        "[ROUTER_WORKFLOW_DECISION]",
+        "{workflow_decision}",
+        "[SELECTED_MEMORY]",
+        "{selected_memory}",
+        "[MEMORY_USAGE_RULES]",
+        "Abstract memory is reusable guidance. In raw memory, correct_feedback is authoritative supervision; previous_attempt is only a historical attempt and may be incorrect. Never copy an incorrect previous_attempt. Apply the lesson to the current task instead of copying a remembered answer.",
+        "[SELECTED_SKILLS]",
+        "{selected_skills}",
+        "[SELECTED_TOOLS]",
+        "{selected_tools}",
+        "[SKILL_AND_TOOL_USAGE_RULES]",
+        "Skills are reusable task-family workflows and failure patterns. Tools are executable functions. Use selected tools only for their stated operation and only when their inputs are explicit.",
+        "[OUTPUT_RULES]",
+        "Reason internally. Do not show chain-of-thought, derivations, or step-by-step work. Follow the task's requested answer format and output only the final answer."
+      ]
+    }
+  }
+]

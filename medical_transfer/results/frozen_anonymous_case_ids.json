@@ -1,0 +1,1837 @@
+{
+  "seed": 20261022,
+  "protocol": "medical_hcl_pilot_24_24_24_50_v1",
+  "selection_frozen_before_inference": true,
+  "cases": [
+    {
+      "task": "classification",
+      "role": "h_search",
+      "case_id": "c_3687026493abd0d78cbf9ea1"
+    },
+    {
+      "task": "classification",
+      "role": "h_search",
+      "case_id": "c_2050d10a5e3cc85daf2dc0f4"
+    },
+    {
+      "task": "classification",
+      "role": "h_search",
+      "case_id": "c_867a6e88e3598c2ede0ac983"
+    },
+    {
+      "task": "classification",
+      "role": "h_search",
+      "case_id": "c_ad28bb7287d58af2e2a244e0"
+    },
+    {
+      "task": "classification",
+      "role": "h_search",
+      "case_id": "c_2b76b1ef890184f8e27f7038"
+    },
+    {
+      "task": "classification",
+      "role": "h_search",
+      "case_id": "c_24dfdf0d7f7d1845a2ca3c4b"
+    },
+    {
+      "task": "classification",
+      "role": "h_search",
+      "case_id": "c_c779f2d6a60aeeb2aa08ecc7"
+    },
+    {
+      "task": "classification",
+      "role": "h_search",
+      "case_id": "c_ca1dc48322122f41ce4a04e0"
+    },
+    {
+      "task": "classification",
+      "role": "h_search",
+      "case_id": "c_d7c2799ffc595f39a5451cec"
+    },
+    {
+      "task": "classification",
+      "role": "h_search",
+      "case_id": "c_88c3a4d00747ae2ee2d451c2"
+    },
+    {
+      "task": "classification",
+      "role": "h_search",
+      "case_id": "c_80e75bfd98cf590992315a02"
+    },
+    {
+      "task": "classification",
+      "role": "h_search",
+      "case_id": "c_3b46c86ca29dcc09af047b9c"
+    },
+    {
+      "task": "classification",
+      "role": "h_search",
+      "case_id": "c_e60aada8c13e3d9b38409ef4"
+    },
+    {
+      "task": "classification",
+      "role": "h_search",
+      "case_id": "c_bd6790044da7bc521946fbef"
+    },
+    {
+      "task": "classification",
+      "role": "h_search",
+      "case_id": "c_8c4faa61b29490378d298e2d"
+    },
+    {
+      "task": "classification",
+      "role": "h_search",
+      "case_id": "c_1b6159ce31a22143e050f9fe"
+    },
+    {
+      "task": "classification",
+      "role": "h_search",
+      "case_id": "c_fa814a145b33358ca2040201"
+    },
+    {
+      "task": "classification",
+      "role": "h_search",
+      "case_id": "c_153299ef440aa0c695cd299f"
+    },
+    {
+      "task": "classification",
+      "role": "h_search",
+      "case_id": "c_f7f69c2772644b977b74a88d"
+    },
+    {
+      "task": "classification",
+      "role": "h_search",
+      "case_id": "c_b5fbc3f6910e8863d2635357"
+    },
+    {
+      "task": "classification",
+      "role": "h_search",
+      "case_id": "c_091fe288324b90fd677cebd8"
+    },
+    {
+      "task": "classification",
+      "role": "h_search",
+      "case_id": "c_d6d14bb2e8470de480c9e226"
+    },
+    {
+      "task": "classification",
+      "role": "h_search",
+      "case_id": "c_f2149a7f64ac4825dd4edf2b"
+    },
+    {
+      "task": "classification",
+      "role": "h_search",
+      "case_id": "c_108cfb33ab60f186780e550b"
+    },
+    {
+      "task": "classification",
+      "role": "validation",
+      "case_id": "c_a7feaed723dc1841fee55227"
+    },
+    {
+      "task": "classification",
+      "role": "validation",
+      "case_id": "c_a49045c8fde313e3f6b84f60"
+    },
+    {
+      "task": "classification",
+      "role": "validation",
+      "case_id": "c_42d813abbc7663ee42f36833"
+    },
+    {
+      "task": "classification",
+      "role": "validation",
+      "case_id": "c_990457a116641b399cff4455"
+    },
+    {
+      "task": "classification",
+      "role": "validation",
+      "case_id": "c_37af0c3beb92aa5e0654fb7b"
+    },
+    {
+      "task": "classification",
+      "role": "validation",
+      "case_id": "c_a81f6a0cb44636b60fd23929"
+    },
+    {
+      "task": "classification",
+      "role": "validation",
+      "case_id": "c_fbe253197939f39bc371ffec"
+    },
+    {
+      "task": "classification",
+      "role": "validation",
+      "case_id": "c_53e539650b8e0a06712a8013"
+    },
+    {
+      "task": "classification",
+      "role": "validation",
+      "case_id": "c_ddddf8f81deb4d8d96f4178e"
+    },
+    {
+      "task": "classification",
+      "role": "validation",
+      "case_id": "c_7c0037da412f56e0fd4398fb"
+    },
+    {
+      "task": "classification",
+      "role": "validation",
+      "case_id": "c_10c21f4f8468d753734c9637"
+    },
+    {
+      "task": "classification",
+      "role": "validation",
+      "case_id": "c_ee3a972f98865de88e3acf97"
+    },
+    {
+      "task": "classification",
+      "role": "validation",
+      "case_id": "c_27291c03479576d61af07865"
+    },
+    {
+      "task": "classification",
+      "role": "validation",
+      "case_id": "c_083ee11bb990eff648ed644d"
+    },
+    {
+      "task": "classification",
+      "role": "validation",
+      "case_id": "c_d92dc16ab8f7d90cfb93512a"
+    },
+    {
+      "task": "classification",
+      "role": "validation",
+      "case_id": "c_740e5a16da7045cd57e28160"
+    },
+    {
+      "task": "classification",
+      "role": "validation",
+      "case_id": "c_73e7a25332dbd6ea7f50b10a"
+    },
+    {
+      "task": "classification",
+      "role": "validation",
+      "case_id": "c_decc6718195bae93a7f0af2c"
+    },
+    {
+      "task": "classification",
+      "role": "validation",
+      "case_id": "c_6428d574c49d678a811bf904"
+    },
+    {
+      "task": "classification",
+      "role": "validation",
+      "case_id": "c_29d648975d2de992715f885e"
+    },
+    {
+      "task": "classification",
+      "role": "validation",
+      "case_id": "c_a6c7b239a3bc93a1ac4fe361"
+    },
+    {
+      "task": "classification",
+      "role": "validation",
+      "case_id": "c_49c697b5cb85f973eeb81719"
+    },
+    {
+      "task": "classification",
+      "role": "validation",
+      "case_id": "c_4ab075f84208c40279481963"
+    },
+    {
+      "task": "classification",
+      "role": "validation",
+      "case_id": "c_b0ab167335c6beb05de91bcb"
+    },
+    {
+      "task": "classification",
+      "role": "retention_anchor",
+      "case_id": "c_825a9ea5e4ca69039b68d869"
+    },
+    {
+      "task": "classification",
+      "role": "retention_anchor",
+      "case_id": "c_b3f14076ce65277e86c3d281"
+    },
+    {
+      "task": "classification",
+      "role": "retention_anchor",
+      "case_id": "c_693ac6fab63d953da9a50762"
+    },
+    {
+      "task": "classification",
+      "role": "retention_anchor",
+      "case_id": "c_87c4ba16a60772623931390c"
+    },
+    {
+      "task": "classification",
+      "role": "retention_anchor",
+      "case_id": "c_9f4342a5d0b6ccc11c1af7cb"
+    },
+    {
+      "task": "classification",
+      "role": "retention_anchor",
+      "case_id": "c_9b3841a1b3305dd7c1f18d79"
+    },
+    {
+      "task": "classification",
+      "role": "retention_anchor",
+      "case_id": "c_f5450e99ad2997144ab24002"
+    },
+    {
+      "task": "classification",
+      "role": "retention_anchor",
+      "case_id": "c_b26fce00caf88fb7f2356803"
+    },
+    {
+      "task": "classification",
+      "role": "retention_anchor",
+      "case_id": "c_87c3cba84e6e6644d416ed60"
+    },
+    {
+      "task": "classification",
+      "role": "retention_anchor",
+      "case_id": "c_1b1c924e9f54d3b916046e5d"
+    },
+    {
+      "task": "classification",
+      "role": "retention_anchor",
+      "case_id": "c_bc1aa235e0dbf2d2fbb56746"
+    },
+    {
+      "task": "classification",
+      "role": "retention_anchor",
+      "case_id": "c_be08baf1860d353c92e47731"
+    },
+    {
+      "task": "classification",
+      "role": "retention_anchor",
+      "case_id": "c_85f7c4eba45010834fccbd8e"
+    },
+    {
+      "task": "classification",
+      "role": "retention_anchor",
+      "case_id": "c_f7aaa81379d661b3024303ef"
+    },
+    {
+      "task": "classification",
+      "role": "retention_anchor",
+      "case_id": "c_9884b849e0cc03ea67c8c1a7"
+    },
+    {
+      "task": "classification",
+      "role": "retention_anchor",
+      "case_id": "c_6ffebb3ad82520802109127f"
+    },
+    {
+      "task": "classification",
+      "role": "retention_anchor",
+      "case_id": "c_21c9ffcd9e43ebd017ce584a"
+    },
+    {
+      "task": "classification",
+      "role": "retention_anchor",
+      "case_id": "c_90cde52a4d1957f967679057"
+    },
+    {
+      "task": "classification",
+      "role": "retention_anchor",
+      "case_id": "c_83fe1e9b8347f79783376f41"
+    },
+    {
+      "task": "classification",
+      "role": "retention_anchor",
+      "case_id": "c_307d4ac6fc3fe5227c03a875"
+    },
+    {
+      "task": "classification",
+      "role": "retention_anchor",
+      "case_id": "c_d21581ba48e8555a67cbe90c"
+    },
+    {
+      "task": "classification",
+      "role": "retention_anchor",
+      "case_id": "c_563939db82491f388d7c94e0"
+    },
+    {
+      "task": "classification",
+      "role": "retention_anchor",
+      "case_id": "c_532fb39df2ab293a02aee397"
+    },
+    {
+      "task": "classification",
+      "role": "retention_anchor",
+      "case_id": "c_e34346550f3488e623d3b286"
+    },
+    {
+      "task": "classification",
+      "role": "test",
+      "case_id": "c_447ee0e3bfc3a96de9725fa1"
+    },
+    {
+      "task": "classification",
+      "role": "test",
+      "case_id": "c_29a044bcaa77d3ed9d30641c"
+    },
+    {
+      "task": "classification",
+      "role": "test",
+      "case_id": "c_a9cf3a493916482d22007df1"
+    },
+    {
+      "task": "classification",
+      "role": "test",
+      "case_id": "c_0ae58572f71dd8292af1752b"
+    },
+    {
+      "task": "classification",
+      "role": "test",
+      "case_id": "c_db82f9992189f43d21a62766"
+    },
+    {
+      "task": "classification",
+      "role": "test",
+      "case_id": "c_12e453dba7cbc9740c519d20"
+    },
+    {
+      "task": "classification",
+      "role": "test",
+      "case_id": "c_135ae64ce1515ce2313972fe"
+    },
+    {
+      "task": "classification",
+      "role": "test",
+      "case_id": "c_872bea52676f5aaa293d64b9"
+    },
+    {
+      "task": "classification",
+      "role": "test",
+      "case_id": "c_c52528d33e63b31535d49d16"
+    },
+    {
+      "task": "classification",
+      "role": "test",
+      "case_id": "c_2ed17814807c0f0c8d881dcf"
+    },
+    {
+      "task": "classification",
+      "role": "test",
+      "case_id": "c_cb836f878bd2ae456d5046a7"
+    },
+    {
+      "task": "classification",
+      "role": "test",
+      "case_id": "c_455a504c1cb12504e9c960f6"
+    },
+    {
+      "task": "classification",
+      "role": "test",
+      "case_id": "c_eb60f133178ed1231b5350c4"
+    },
+    {
+      "task": "classification",
+      "role": "test",
+      "case_id": "c_b09ac7dd2006df06e8e3c5b0"
+    },
+    {
+      "task": "classification",
+      "role": "test",
+      "case_id": "c_8c0d49537221a13321aa8541"
+    },
+    {
+      "task": "classification",
+      "role": "test",
+      "case_id": "c_87385c6c2cf1db0706a44c66"
+    },
+    {
+      "task": "classification",
+      "role": "test",
+      "case_id": "c_750f3934d5e205153a2a7fae"
+    },
+    {
+      "task": "classification",
+      "role": "test",
+      "case_id": "c_fa93d5d9128b836bcf2807f5"
+    },
+    {
+      "task": "classification",
+      "role": "test",
+      "case_id": "c_d40a3062fdd142a778e828d9"
+    },
+    {
+      "task": "classification",
+      "role": "test",
+      "case_id": "c_dc585fda63f749c5d2338449"
+    },
+    {
+      "task": "classification",
+      "role": "test",
+      "case_id": "c_4b1569167d9c1600013f47aa"
+    },
+    {
+      "task": "classification",
+      "role": "test",
+      "case_id": "c_601c3c4c20e0c4c7ec9874f5"
+    },
+    {
+      "task": "classification",
+      "role": "test",
+      "case_id": "c_70d2db835b6f9cd3cc5866bd"
+    },
+    {
+      "task": "classification",
+      "role": "test",
+      "case_id": "c_660993a8815d550e2dfcd5b4"
+    },
+    {
+      "task": "classification",
+      "role": "test",
+      "case_id": "c_0bb27faf73db5dc1c269b7d0"
+    },
+    {
+      "task": "classification",
+      "role": "test",
+      "case_id": "c_0105fca9dada05dc4017876d"
+    },
+    {
+      "task": "classification",
+      "role": "test",
+      "case_id": "c_e789ae85e5aff20b9858d1e8"
+    },
+    {
+      "task": "classification",
+      "role": "test",
+      "case_id": "c_9fe5321767b3fffb8ddee139"
+    },
+    {
+      "task": "classification",
+      "role": "test",
+      "case_id": "c_b14868f6bcb905589828f210"
+    },
+    {
+      "task": "classification",
+      "role": "test",
+      "case_id": "c_2078b8f3ce1e57de651710a7"
+    },
+    {
+      "task": "classification",
+      "role": "test",
+      "case_id": "c_aab94b3bad5913244b248137"
+    },
+    {
+      "task": "classification",
+      "role": "test",
+      "case_id": "c_81e25fe9096bf37d5f215fcb"
+    },
+    {
+      "task": "classification",
+      "role": "test",
+      "case_id": "c_9ae23333ab360c3fe1f8e7f0"
+    },
+    {
+      "task": "classification",
+      "role": "test",
+      "case_id": "c_21efc7909c0bddcbc7d51271"
+    },
+    {
+      "task": "classification",
+      "role": "test",
+      "case_id": "c_73d98af81355eb1c3d56353c"
+    },
+    {
+      "task": "classification",
+      "role": "test",
+      "case_id": "c_0ea88d2fa6d8efc1fee86170"
+    },
+    {
+      "task": "classification",
+      "role": "test",
+      "case_id": "c_67b944a1843ab323be0ff2a4"
+    },
+    {
+      "task": "classification",
+      "role": "test",
+      "case_id": "c_3095183dc0844dc199d8a80b"
+    },
+    {
+      "task": "classification",
+      "role": "test",
+      "case_id": "c_a0735d6ede3917070fcc2d4d"
+    },
+    {
+      "task": "classification",
+      "role": "test",
+      "case_id": "c_18b90ea09f9dab5d5e5f8f09"
+    },
+    {
+      "task": "classification",
+      "role": "test",
+      "case_id": "c_315d67f44c79a12f5f1069f4"
+    },
+    {
+      "task": "classification",
+      "role": "test",
+      "case_id": "c_a0e7680517f6a9ab176356fa"
+    },
+    {
+      "task": "classification",
+      "role": "test",
+      "case_id": "c_66232c8df32ef3d3cc776ddb"
+    },
+    {
+      "task": "classification",
+      "role": "test",
+      "case_id": "c_ef4c1ba2c122d879001e7e18"
+    },
+    {
+      "task": "classification",
+      "role": "test",
+      "case_id": "c_2cf95340adb9ebc345753df5"
+    },
+    {
+      "task": "classification",
+      "role": "test",
+      "case_id": "c_1fe3785ebaf79b96e4569441"
+    },
+    {
+      "task": "classification",
+      "role": "test",
+      "case_id": "c_82930a86f376e36be9fb5449"
+    },
+    {
+      "task": "classification",
+      "role": "test",
+      "case_id": "c_361b667cdfa82119f8c32430"
+    },
+    {
+      "task": "classification",
+      "role": "test",
+      "case_id": "c_fde2bcc76ffab7b0833a6544"
+    },
+    {
+      "task": "classification",
+      "role": "test",
+      "case_id": "c_00ae06c9103bf4aebbbc8751"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "h_search",
+      "case_id": "c_f4ef4c239cba9e5d7166751d"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "h_search",
+      "case_id": "c_d20f69e170993516b9ba3191"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "h_search",
+      "case_id": "c_59dd45f125c81aa10852a03f"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "h_search",
+      "case_id": "c_631f845b8c673b81f220b552"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "h_search",
+      "case_id": "c_571cf96ef60c6353a21f8af2"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "h_search",
+      "case_id": "c_328f44751377f36ffdeeb68a"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "h_search",
+      "case_id": "c_4745e1f70eadb75be3f72426"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "h_search",
+      "case_id": "c_d00878d42fb2788de0f27275"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "h_search",
+      "case_id": "c_fffdbb57e90586f0375c37ce"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "h_search",
+      "case_id": "c_09d960e579d10f0b912435c0"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "h_search",
+      "case_id": "c_3ca3fa52f74cc0e6c496a579"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "h_search",
+      "case_id": "c_6ef6723886b118b5de87d6ca"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "h_search",
+      "case_id": "c_d3f4f95b805a5831683730fe"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "h_search",
+      "case_id": "c_2a084f08e2fd1495cfed8722"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "h_search",
+      "case_id": "c_67d03a8c29e36043ee6baf20"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "h_search",
+      "case_id": "c_46dd0547991c0d4e556e70d1"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "h_search",
+      "case_id": "c_8c65f4373355c4054e5e46a1"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "h_search",
+      "case_id": "c_435b32849daf06e665e89caa"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "h_search",
+      "case_id": "c_49281d51d6b9a235f24aaabb"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "h_search",
+      "case_id": "c_5dbfb77f69c49c4d49f352df"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "h_search",
+      "case_id": "c_176cdd5fe18bd0c62edb3dd2"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "h_search",
+      "case_id": "c_333240bf21928ab3902ac7df"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "h_search",
+      "case_id": "c_63717f94d2cfd367cdff43a5"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "h_search",
+      "case_id": "c_26e8c8f52a2f4054181edcdb"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "validation",
+      "case_id": "c_51b4ad803db0c73ccb184d8c"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "validation",
+      "case_id": "c_9cdf3a11e33350be9d05887a"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "validation",
+      "case_id": "c_8f812e26f204437e799c624d"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "validation",
+      "case_id": "c_9abf10ab3761c59f59cfa89f"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "validation",
+      "case_id": "c_937c0bab1f5dd6eb9cba5a9e"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "validation",
+      "case_id": "c_fed814bbe7a4a20b5b0d728d"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "validation",
+      "case_id": "c_3026578e165ad361636482c1"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "validation",
+      "case_id": "c_bb4cb4adacc523efac9c770f"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "validation",
+      "case_id": "c_d25079f18beddf5357498fb2"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "validation",
+      "case_id": "c_ba699fe838a68e138476956d"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "validation",
+      "case_id": "c_47300aabb5a845cfafd3947b"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "validation",
+      "case_id": "c_24de6c08a8cda1c710e4559f"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "validation",
+      "case_id": "c_64f76f619b5588a40a6ed930"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "validation",
+      "case_id": "c_3d046ba3454349268dbafe97"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "validation",
+      "case_id": "c_5c2d436429ba5b2a1a51b8b0"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "validation",
+      "case_id": "c_f0a1870d9f46ed6b053627bb"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "validation",
+      "case_id": "c_4c3e0f79fc13392823b8fbe3"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "validation",
+      "case_id": "c_457211ed3eb59b136a6da3a3"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "validation",
+      "case_id": "c_f6d25771486e01b12296bd92"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "validation",
+      "case_id": "c_7a69b72eb2c366b9ec274486"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "validation",
+      "case_id": "c_9aa3b6b5eb8344c4762dc744"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "validation",
+      "case_id": "c_a787f5ce5ff6eea9555c57e6"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "validation",
+      "case_id": "c_4b4e02d30fa4984e1c610de8"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "validation",
+      "case_id": "c_535a0289cfa761450cf6a9a6"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "retention_anchor",
+      "case_id": "c_f62a217922b1e89fc8aed218"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "retention_anchor",
+      "case_id": "c_6d7f7dc790b3634b4c4b1b2c"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "retention_anchor",
+      "case_id": "c_8ecbf3ce1c0edc5a1c97b138"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "retention_anchor",
+      "case_id": "c_a0da6eeffc5280a624322548"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "retention_anchor",
+      "case_id": "c_039f8a2ebab004974c099766"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "retention_anchor",
+      "case_id": "c_c4500e6cfcbfc4c19ddd4039"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "retention_anchor",
+      "case_id": "c_474cdc93c74ce89f4232b0bd"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "retention_anchor",
+      "case_id": "c_179e74a78c177a2b0fb48da7"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "retention_anchor",
+      "case_id": "c_c6bfadc5ff6a7d1a47b2cd50"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "retention_anchor",
+      "case_id": "c_e201cbbb69e5a8661baed62d"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "retention_anchor",
+      "case_id": "c_f16ece20cdac63268f635157"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "retention_anchor",
+      "case_id": "c_8e9ff044595fd6704227b727"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "retention_anchor",
+      "case_id": "c_6ae8fb86aa95dc11f078c3f0"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "retention_anchor",
+      "case_id": "c_2994f2e3c0578a920e76aa42"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "retention_anchor",
+      "case_id": "c_01d8ab2f270903b6e50ec0fb"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "retention_anchor",
+      "case_id": "c_d817eb49fea77149c19d4131"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "retention_anchor",
+      "case_id": "c_3ff6585d62c9c9b551a68dd2"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "retention_anchor",
+      "case_id": "c_832f0171fcb541ebea342bc9"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "retention_anchor",
+      "case_id": "c_f98b507e3aea414b3ffe73c4"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "retention_anchor",
+      "case_id": "c_915337c2c2fec2d657aebc0d"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "retention_anchor",
+      "case_id": "c_7771a40fc3c63ccea087d2d9"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "retention_anchor",
+      "case_id": "c_07f915b531fdd3c390bcb700"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "retention_anchor",
+      "case_id": "c_99586b0d408ae78d5c1b471f"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "retention_anchor",
+      "case_id": "c_558891e3b3a25f8da0143330"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "test",
+      "case_id": "c_ac2fb5c6183f85f59a779b3d"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "test",
+      "case_id": "c_893413026e3d1b04b44a91d4"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "test",
+      "case_id": "c_5a7bea29665588fc1de93765"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "test",
+      "case_id": "c_eb4b2b409d7815ff8a9d06d7"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "test",
+      "case_id": "c_33b59dbf92834f1e934390ae"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "test",
+      "case_id": "c_87215dacf5973df8effae6b5"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "test",
+      "case_id": "c_797bda4a0fb7fd0c631ca4ee"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "test",
+      "case_id": "c_86235b8d8996952ab75b7334"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "test",
+      "case_id": "c_09348bc9b78bb9ac2b20f024"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "test",
+      "case_id": "c_74ba754441c20cdff1835dec"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "test",
+      "case_id": "c_1bc141447f8f019032eeb269"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "test",
+      "case_id": "c_21007f71f1082ec87085b2de"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "test",
+      "case_id": "c_8b5b202aae4f5fb07464f2fe"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "test",
+      "case_id": "c_f8ec1f3a8c2d737757a34b14"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "test",
+      "case_id": "c_6d46e3639051bf46ca361d05"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "test",
+      "case_id": "c_6fc13eface1c653baa4cd86f"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "test",
+      "case_id": "c_782fff870ad47de014817bc7"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "test",
+      "case_id": "c_ceb0dc0e671b71f7cb88dc7c"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "test",
+      "case_id": "c_6b148150c80148ba91793d32"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "test",
+      "case_id": "c_0b082c61d4ad63f8f3f958ff"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "test",
+      "case_id": "c_f8c79bade77e3700977c2dde"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "test",
+      "case_id": "c_6f957790993251a80eb8e063"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "test",
+      "case_id": "c_bd7de700115e2456c6a71cb8"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "test",
+      "case_id": "c_bd5e65db0c017394a5d64d0b"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "test",
+      "case_id": "c_93cf23790e165ec641186bb0"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "test",
+      "case_id": "c_bebfe37979aaaee6b3927978"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "test",
+      "case_id": "c_12719c06a7b8a59e03daf718"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "test",
+      "case_id": "c_a015d99346b2338aa0e18b61"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "test",
+      "case_id": "c_8bc1d233483302b4bd2265b0"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "test",
+      "case_id": "c_1db78b2c51017e8338a498f9"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "test",
+      "case_id": "c_f2f2cf429fb5cee5447a7810"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "test",
+      "case_id": "c_cc0b90196ce8809d1e2a8dea"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "test",
+      "case_id": "c_b58717688701bcda80ca10b0"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "test",
+      "case_id": "c_fbcc05db9cb88dddbcbfb70d"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "test",
+      "case_id": "c_94d96e178f562140b09cbc46"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "test",
+      "case_id": "c_54d6b372441e4a7456e8485a"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "test",
+      "case_id": "c_be303c9af8cd5cf8020fb7f4"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "test",
+      "case_id": "c_2906f1adae57b01a33f244cf"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "test",
+      "case_id": "c_bfdb7b9932117168f0c16353"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "test",
+      "case_id": "c_a9064d532c3d41d1e328af41"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "test",
+      "case_id": "c_3b7a57cc32a5cad3a276a722"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "test",
+      "case_id": "c_2adc2adfd0751075c35953f2"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "test",
+      "case_id": "c_17c334952a1794694c35c2e4"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "test",
+      "case_id": "c_75f184a7972d28f55e1d0bd6"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "test",
+      "case_id": "c_78f81e05ecd16bf6dd6fb679"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "test",
+      "case_id": "c_5637697fc04c38e20324a1ba"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "test",
+      "case_id": "c_a11bc387f501097d9d31ace5"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "test",
+      "case_id": "c_8cf96670232f6985c4e562de"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "test",
+      "case_id": "c_32000bc024d61854e530f8a8"
+    },
+    {
+      "task": "polyp_localization",
+      "role": "test",
+      "case_id": "c_3ef7ee5d27f266338586afe1"
+    },
+    {
+      "task": "visual_qa",
+      "role": "h_search",
+      "case_id": "c_51aa373149f9189f9a59aeb3"
+    },
+    {
+      "task": "visual_qa",
+      "role": "h_search",
+      "case_id": "c_16aa15eb2b59aa1078261ecf"
+    },
+    {
+      "task": "visual_qa",
+      "role": "h_search",
+      "case_id": "c_ba6faeb157d41ba979d6d8c0"
+    },
+    {
+      "task": "visual_qa",
+      "role": "h_search",
+      "case_id": "c_c2d4b93dd0ab901a915f43bf"
+    },
+    {
+      "task": "visual_qa",
+      "role": "h_search",
+      "case_id": "c_b64e8d25ed4ae62a0a7a03ee"
+    },
+    {
+      "task": "visual_qa",
+      "role": "h_search",
+      "case_id": "c_c87b052e859f8f4c72711790"
+    },
+    {
+      "task": "visual_qa",
+      "role": "h_search",
+      "case_id": "c_d274b0ed0b7f94188ead8bf9"
+    },
+    {
+      "task": "visual_qa",
+      "role": "h_search",
+      "case_id": "c_8dd90021abc4b37d84569536"
+    },
+    {
+      "task": "visual_qa",
+      "role": "h_search",
+      "case_id": "c_589612b5f304585b1cd82dd0"
+    },
+    {
+      "task": "visual_qa",
+      "role": "h_search",
+      "case_id": "c_a92cda00b274cbf32b012b1a"
+    },
+    {
+      "task": "visual_qa",
+      "role": "h_search",
+      "case_id": "c_1c6d4184492f63a518c07726"
+    },
+    {
+      "task": "visual_qa",
+      "role": "h_search",
+      "case_id": "c_66e91843d620f7ad5a3cfcaa"
+    },
+    {
+      "task": "visual_qa",
+      "role": "h_search",
+      "case_id": "c_a122f774ebbed1ce3c3a23fe"
+    },
+    {
+      "task": "visual_qa",
+      "role": "h_search",
+      "case_id": "c_5c35de40c83242a09124ecc3"
+    },
+    {
+      "task": "visual_qa",
+      "role": "h_search",
+      "case_id": "c_96b7415aff693378ae626795"
+    },
+    {
+      "task": "visual_qa",
+      "role": "h_search",
+      "case_id": "c_d8127f1c0dd595635294fb61"
+    },
+    {
+      "task": "visual_qa",
+      "role": "h_search",
+      "case_id": "c_8f4e5fbbf2509bd5a229a874"
+    },
+    {
+      "task": "visual_qa",
+      "role": "h_search",
+      "case_id": "c_0efa0e1699119e5a6b20f9e5"
+    },
+    {
+      "task": "visual_qa",
+      "role": "h_search",
+      "case_id": "c_f8f764804637f595e3d278a4"
+    },
+    {
+      "task": "visual_qa",
+      "role": "h_search",
+      "case_id": "c_9f8d9a529879581507329fab"
+    },
+    {
+      "task": "visual_qa",
+      "role": "h_search",
+      "case_id": "c_48a15bd4bd18454f7eb174ae"
+    },
+    {
+      "task": "visual_qa",
+      "role": "h_search",
+      "case_id": "c_078fed6e957394c0d17f959b"
+    },
+    {
+      "task": "visual_qa",
+      "role": "h_search",
+      "case_id": "c_492d277b0e099342bfd2713c"
+    },
+    {
+      "task": "visual_qa",
+      "role": "h_search",
+      "case_id": "c_588994737363cc412c81c2d8"
+    },
+    {
+      "task": "visual_qa",
+      "role": "validation",
+      "case_id": "c_0b27337356c669ccf926b363"
+    },
+    {
+      "task": "visual_qa",
+      "role": "validation",
+      "case_id": "c_53dc5bf74d50af6bf9b9f261"
+    },
+    {
+      "task": "visual_qa",
+      "role": "validation",
+      "case_id": "c_06930c6af499354b7bf4dba8"
+    },
+    {
+      "task": "visual_qa",
+      "role": "validation",
+      "case_id": "c_d56dc99d0e1b76024c1bb9d8"
+    },
+    {
+      "task": "visual_qa",
+      "role": "validation",
+      "case_id": "c_77aefbb33595803b0e7ac27a"
+    },
+    {
+      "task": "visual_qa",
+      "role": "validation",
+      "case_id": "c_2e6c50f866988fcc6c1380f7"
+    },
+    {
+      "task": "visual_qa",
+      "role": "validation",
+      "case_id": "c_69be663d7139439dd75a61ef"
+    },
+    {
+      "task": "visual_qa",
+      "role": "validation",
+      "case_id": "c_40ffb03d6dece9cf8c63017d"
+    },
+    {
+      "task": "visual_qa",
+      "role": "validation",
+      "case_id": "c_600a7c76d9fa94490d0c9475"
+    },
+    {
+      "task": "visual_qa",
+      "role": "validation",
+      "case_id": "c_7eeb407f1e20d8d32640dda3"
+    },
+    {
+      "task": "visual_qa",
+      "role": "validation",
+      "case_id": "c_32bb33ea1a63ca6f4619a810"
+    },
+    {
+      "task": "visual_qa",
+      "role": "validation",
+      "case_id": "c_92b476adb13a95d00182d264"
+    },
+    {
+      "task": "visual_qa",
+      "role": "validation",
+      "case_id": "c_30a04092e9f00929c8872bd5"
+    },
+    {
+      "task": "visual_qa",
+      "role": "validation",
+      "case_id": "c_34f7b72a02d592dde1aa7ed2"
+    },
+    {
+      "task": "visual_qa",
+      "role": "validation",
+      "case_id": "c_fb660d4ec0d2d4ae3db40cfa"
+    },
+    {
+      "task": "visual_qa",
+      "role": "validation",
+      "case_id": "c_ede766d70ed8d4c6f10a12d4"
+    },
+    {
+      "task": "visual_qa",
+      "role": "validation",
+      "case_id": "c_5e0ce75f6215efcab14cc047"
+    },
+    {
+      "task": "visual_qa",
+      "role": "validation",
+      "case_id": "c_72eb362f3a95aa6a63940ac6"
+    },
+    {
+      "task": "visual_qa",
+      "role": "validation",
+      "case_id": "c_bb54f9d775f9f62ce0dbb1a0"
+    },
+    {
+      "task": "visual_qa",
+      "role": "validation",
+      "case_id": "c_eb5db8c0a0678eb211070c62"
+    },
+    {
+      "task": "visual_qa",
+      "role": "validation",
+      "case_id": "c_5e9a7ff61eb559d94e44cd5a"
+    },
+    {
+      "task": "visual_qa",
+      "role": "validation",
+      "case_id": "c_0dada7950ab9d08ebed5a9c9"
+    },
+    {
+      "task": "visual_qa",
+      "role": "validation",
+      "case_id": "c_c243f6b330c8e07142f01006"
+    },
+    {
+      "task": "visual_qa",
+      "role": "validation",
+      "case_id": "c_229f662df94ba3cbca47ba67"
+    },
+    {
+      "task": "visual_qa",
+      "role": "retention_anchor",
+      "case_id": "c_1fc59e686fb99ff12ec377cd"
+    },
+    {
+      "task": "visual_qa",
+      "role": "retention_anchor",
+      "case_id": "c_6b75e54101461b8270541f52"
+    },
+    {
+      "task": "visual_qa",
+      "role": "retention_anchor",
+      "case_id": "c_a2bf454de671a397ff24969c"
+    },
+    {
+      "task": "visual_qa",
+      "role": "retention_anchor",
+      "case_id": "c_a90888b7950ea97379f7d6a3"
+    },
+    {
+      "task": "visual_qa",
+      "role": "retention_anchor",
+      "case_id": "c_83ad030e55b9796d28017ea3"
+    },
+    {
+      "task": "visual_qa",
+      "role": "retention_anchor",
+      "case_id": "c_2ae68e052c079cb2ec889860"
+    },
+    {
+      "task": "visual_qa",
+      "role": "retention_anchor",
+      "case_id": "c_b7e9008a8fb268fbdf769a13"
+    },
+    {
+      "task": "visual_qa",
+      "role": "retention_anchor",
+      "case_id": "c_44d6e8695e9dee30f96e7861"
+    },
+    {
+      "task": "visual_qa",
+      "role": "retention_anchor",
+      "case_id": "c_1681eb267429433fe7822178"
+    },
+    {
+      "task": "visual_qa",
+      "role": "retention_anchor",
+      "case_id": "c_6650960a2e8607e04a559325"
+    },
+    {
+      "task": "visual_qa",
+      "role": "retention_anchor",
+      "case_id": "c_a1289c2d147457293d3230ac"
+    },
+    {
+      "task": "visual_qa",
+      "role": "retention_anchor",
+      "case_id": "c_f21ca1f9cd10c7ed8326298d"
+    },
+    {
+      "task": "visual_qa",
+      "role": "retention_anchor",
+      "case_id": "c_f3c3b8244a3efe4c0bdfae3c"
+    },
+    {
+      "task": "visual_qa",
+      "role": "retention_anchor",
+      "case_id": "c_7071ad5041fc2bd3ca816935"
+    },
+    {
+      "task": "visual_qa",
+      "role": "retention_anchor",
+      "case_id": "c_9e66289dbe41244121005143"
+    },
+    {
+      "task": "visual_qa",
+      "role": "retention_anchor",
+      "case_id": "c_c709b023e135f4a1a95e813a"
+    },
+    {
+      "task": "visual_qa",
+      "role": "retention_anchor",
+      "case_id": "c_ace7a3c4aa13d52097831afe"
+    },
+    {
+      "task": "visual_qa",
+      "role": "retention_anchor",
+      "case_id": "c_da431e1f78664b54182188a0"
+    },
+    {
+      "task": "visual_qa",
+      "role": "retention_anchor",
+      "case_id": "c_849305f627f03cf5df105388"
+    },
+    {
+      "task": "visual_qa",
+      "role": "retention_anchor",
+      "case_id": "c_3c78561f4c5f0d34c1cb3d7c"
+    },
+    {
+      "task": "visual_qa",
+      "role": "retention_anchor",
+      "case_id": "c_a3d83035370b6d106fb4c921"
+    },
+    {
+      "task": "visual_qa",
+      "role": "retention_anchor",
+      "case_id": "c_df1f5228aeb0054f5fadb487"
+    },
+    {
+      "task": "visual_qa",
+      "role": "retention_anchor",
+      "case_id": "c_5188b9a34134462aac48b6ae"
+    },
+    {
+      "task": "visual_qa",
+      "role": "retention_anchor",
+      "case_id": "c_3f4732ceac76a768e80183b3"
+    },
+    {
+      "task": "visual_qa",
+      "role": "test",
+      "case_id": "c_f3524a2bdd647fd4dd63aeb7"
+    },
+    {
+      "task": "visual_qa",
+      "role": "test",
+      "case_id": "c_1e7518f9c1eb506174337718"
+    },
+    {
+      "task": "visual_qa",
+      "role": "test",
+      "case_id": "c_8de3808d7860c049ac1c7463"
+    },
+    {
+      "task": "visual_qa",
+      "role": "test",
+      "case_id": "c_f5fcf18f5fd80c2b1fecf2bd"
+    },
+    {
+      "task": "visual_qa",
+      "role": "test",
+      "case_id": "c_7779a272ab9bf1a7efe46167"
+    },
+    {
+      "task": "visual_qa",
+      "role": "test",
+      "case_id": "c_850db8da26b78d44090e3182"
+    },
+    {
+      "task": "visual_qa",
+      "role": "test",
+      "case_id": "c_d1a1bee0551214c04c7a3014"
+    },
+    {
+      "task": "visual_qa",
+      "role": "test",
+      "case_id": "c_fe615bc28bc546fef3dccdf6"
+    },
+    {
+      "task": "visual_qa",
+      "role": "test",
+      "case_id": "c_b142a7149d48a36a14f959dc"
+    },
+    {
+      "task": "visual_qa",
+      "role": "test",
+      "case_id": "c_388d21e78cf22dee259a80fe"
+    },
+    {
+      "task": "visual_qa",
+      "role": "test",
+      "case_id": "c_c51f4cc066b65b51be7953c2"
+    },
+    {
+      "task": "visual_qa",
+      "role": "test",
+      "case_id": "c_96a0304725f37810b5ac231e"
+    },
+    {
+      "task": "visual_qa",
+      "role": "test",
+      "case_id": "c_e3815fcd8fdeb36faad2a85e"
+    },
+    {
+      "task": "visual_qa",
+      "role": "test",
+      "case_id": "c_48b251de249494169670e45a"
+    },
+    {
+      "task": "visual_qa",
+      "role": "test",
+      "case_id": "c_9555b66f8d680d44e940e9d2"
+    },
+    {
+      "task": "visual_qa",
+      "role": "test",
+      "case_id": "c_d8eb0954f1847c3036105b34"
+    },
+    {
+      "task": "visual_qa",
+      "role": "test",
+      "case_id": "c_66fa09a26823f979cd87c3dc"
+    },
+    {
+      "task": "visual_qa",
+      "role": "test",
+      "case_id": "c_9c3f5f64e02173411ce8beab"
+    },
+    {
+      "task": "visual_qa",
+      "role": "test",
+      "case_id": "c_4206ef4778d8fa913a7249be"
+    },
+    {
+      "task": "visual_qa",
+      "role": "test",
+      "case_id": "c_44abd09c8814aaf73122cae1"
+    },
+    {
+      "task": "visual_qa",
+      "role": "test",
+      "case_id": "c_1bc0cc283afba6cca8af7b63"
+    },
+    {
+      "task": "visual_qa",
+      "role": "test",
+      "case_id": "c_e240f50f2db7833bbc858ad1"
+    },
+    {
+      "task": "visual_qa",
+      "role": "test",
+      "case_id": "c_a8cd4a9ed651c9c11a4cdfd0"
+    },
+    {
+      "task": "visual_qa",
+      "role": "test",
+      "case_id": "c_f8cea15cd4a1567dfa84914a"
+    },
+    {
+      "task": "visual_qa",
+      "role": "test",
+      "case_id": "c_7d7f7964c09ee22f37e9093d"
+    },
+    {
+      "task": "visual_qa",
+      "role": "test",
+      "case_id": "c_613d180269976db2a0eb4874"
+    },
+    {
+      "task": "visual_qa",
+      "role": "test",
+      "case_id": "c_40672cd1e89f9e554d04fe2b"
+    },
+    {
+      "task": "visual_qa",
+      "role": "test",
+      "case_id": "c_30ffc6942abc072a7327f083"
+    },
+    {
+      "task": "visual_qa",
+      "role": "test",
+      "case_id": "c_00e1e06c99599d96b48fc644"
+    },
+    {
+      "task": "visual_qa",
+      "role": "test",
+      "case_id": "c_11b53ca49bb70ac12e31912c"
+    },
+    {
+      "task": "visual_qa",
+      "role": "test",
+      "case_id": "c_ef2213d703bb609bf2707316"
+    },
+    {
+      "task": "visual_qa",
+      "role": "test",
+      "case_id": "c_bc92a4a8d4f1cdf4e7369e27"
+    },
+    {
+      "task": "visual_qa",
+      "role": "test",
+      "case_id": "c_0e8bd3e96ade43d9078e614c"
+    },
+    {
+      "task": "visual_qa",
+      "role": "test",
+      "case_id": "c_f53491ac7141a68ac088e7b1"
+    },
+    {
+      "task": "visual_qa",
+      "role": "test",
+      "case_id": "c_99cfdbb944d14ecd79c98f03"
+    },
+    {
+      "task": "visual_qa",
+      "role": "test",
+      "case_id": "c_1eead6547397236992d1666d"
+    },
+    {
+      "task": "visual_qa",
+      "role": "test",
+      "case_id": "c_f2b3d9b804e4a751ae844ae4"
+    },
+    {
+      "task": "visual_qa",
+      "role": "test",
+      "case_id": "c_fff2edd62c20afd3d7c840a2"
+    },
+    {
+      "task": "visual_qa",
+      "role": "test",
+      "case_id": "c_39fb7b23d28eb2b2c3fc7182"
+    },
+    {
+      "task": "visual_qa",
+      "role": "test",
+      "case_id": "c_60c3af195a861fb340e2f928"
+    },
+    {
+      "task": "visual_qa",
+      "role": "test",
+      "case_id": "c_3be5eb4833111572940a4001"
+    },
+    {
+      "task": "visual_qa",
+      "role": "test",
+      "case_id": "c_56c1e77feac4e2e79deebcd9"
+    },
+    {
+      "task": "visual_qa",
+      "role": "test",
+      "case_id": "c_7d0fc69aa006bfd69e218ef7"
+    },
+    {
+      "task": "visual_qa",
+      "role": "test",
+      "case_id": "c_57d6a0a4f180811d4f441ca5"
+    },
+    {
+      "task": "visual_qa",
+      "role": "test",
+      "case_id": "c_fc1b9f7e6817e2ec4e9d2524"
+    },
+    {
+      "task": "visual_qa",
+      "role": "test",
+      "case_id": "c_30512531bf6b037c907b7447"
+    },
+    {
+      "task": "visual_qa",
+      "role": "test",
+      "case_id": "c_4baba040c6b59da4623c20cb"
+    },
+    {
+      "task": "visual_qa",
+      "role": "test",
+      "case_id": "c_1d05ef41aac614026847e9ee"
+    },
+    {
+      "task": "visual_qa",
+      "role": "test",
+      "case_id": "c_2466032a0cf1a06c9848a6d1"
+    },
+    {
+      "task": "visual_qa",
+      "role": "test",
+      "case_id": "c_6ddcbcec6642949855d9d905"
+    }
+  ]
+}
