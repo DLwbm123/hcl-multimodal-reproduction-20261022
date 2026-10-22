@@ -1,0 +1,43 @@
+{
+  "name": "learning_confirmation_v1",
+  "tasks": [
+    "classification",
+    "polyp_localization",
+    "visual_qa"
+  ],
+  "arms": [
+    "direct",
+    "static_no_memory",
+    "hcl_contract",
+    "hcl_semantic"
+  ],
+  "hypothesis": "the fixed semantic boundary reduces interference during genuine gated HCL learning; matched HCL control isolates boundary contribution",
+  "model": "Qwen2.5-VL-7B BF16 temperature0 answer512 max2048 SDPA frozen",
+  "H_per_task": 24,
+  "validation_per_task": 24,
+  "anchors_per_task": 24,
+  "confirmation_per_task": 50,
+  "batchsize": 24,
+  "candidates_per_component": 3,
+  "components": [
+    "task_interface_structuring",
+    "router_workflow",
+    "memory_selector",
+    "router_context"
+  ],
+  "B": 0,
+  "strict_improvement": true,
+  "format_threshold": 1.0,
+  "template_contract": "same opt-in structural contract in both HCL arms; no extra retries",
+  "semantic_policy": "same unchanged final-context boundary as prior failed cross-task confirmation; no task-specific exception",
+  "learning_memory": "fresh empty full raw/abstract/skills; original capacities10/2, independent retention anchors24",
+  "coordinate_interface": "common dev_v2 in all arms; prior synthetic precision 0/4 failure retained",
+  "confirmation_role": "new validation content groups, frozen before labels; report only after stages, never gate/candidate/checkpoint selection",
+  "selection_data": "same original pilot H24/validation24/anchor24; no prior semantic confirmation data reused",
+  "final_gate": "HCL semantic VQA >= Static +5pp; no task accuracy/format below Static or HCL control; pooled paired95% interval lower>0 vs Static; report Direct and control and exact paired counts regardless; semantic contribution also compared to control",
+  "failure_policy": "only existing memory-selector schema exhaustion becomes whole-example failure; other exceptions fatal, no automatic restart",
+  "test_used": false,
+  "patient_independence": "not established",
+  "max_new_model_calls": 24600,
+  "stages": 3
+}

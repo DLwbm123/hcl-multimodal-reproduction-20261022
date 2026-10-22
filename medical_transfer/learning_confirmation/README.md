@@ -1,0 +1,1 @@
+See REPORT.zh-CN.md and protocol.json. Environment paths are required; reuse sibling coordinate_interface, template_contract, semantic_boundary and development_diagnostic runtime helpers. Campaign guard is required. Raw medical data, labels, IDs and per-case logs are deliberately excluded.
