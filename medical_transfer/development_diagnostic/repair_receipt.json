@@ -1,0 +1,10 @@
+{
+  "time": 1792681893.9086292,
+  "cause": "coordinate installer checked tool default before existing runtime protocol disabled it",
+  "repair": "install unchanged runtime protocol before coordinate boundary",
+  "direct_saved_outputs_reused": 36,
+  "extra_direct_calls": 0,
+  "original_clock_preserved": 1792680588.9928484,
+  "scientific_settings_changed": false,
+  "construction_check_arms": 4
+}

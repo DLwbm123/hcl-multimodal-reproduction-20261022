@@ -22,3 +22,7 @@ PYTHONPATH="$PWD:$PWD/medical_transfer/src:$PWD/medical_transfer/coordinate_inte
 ```
 
 The published code provides no automatic experiment launcher. Do not hot-patch an existing run. The opt-in candidate repair and coordinate boundary require fresh pipeline state and separately declared future protocols/budgets. Performance gates and failure denominators remain unchanged.
+
+## Completed development ablation
+
+A separate five-condition read-only development diagnostic is complete: [report and code](development_diagnostic/README.md). The shared coordinate interface was used there; the original pilot remained unchanged. It shows a small raw-memory benefit with one VQA regression, not established continual-learning superiority.

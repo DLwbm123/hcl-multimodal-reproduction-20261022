@@ -1,0 +1,161 @@
+{
+  "sample_membership_matched": true,
+  "conditions": 5,
+  "examples_per_condition": 36,
+  "checks_passed": 180,
+  "model_calls": 576,
+  "cost": {
+    "full_memory": {
+      "calls": 144,
+      "seconds": 323.08941467967816,
+      "by_phase": {
+        "structure_task": 36,
+        "plan_workflow": 36,
+        "select_memory": 36,
+        "final_answer": 36
+      }
+    },
+    "direct": {
+      "calls": 36,
+      "seconds": 33.33584367693402,
+      "by_phase": {
+        "final_answer": 36
+      }
+    },
+    "abstract_only": {
+      "calls": 144,
+      "seconds": 295.86770782154053,
+      "by_phase": {
+        "structure_task": 36,
+        "plan_workflow": 36,
+        "select_memory": 36,
+        "final_answer": 36
+      }
+    },
+    "static_no_memory": {
+      "calls": 108,
+      "seconds": 254.77771068550646,
+      "by_phase": {
+        "structure_task": 36,
+        "plan_workflow": 36,
+        "final_answer": 36
+      }
+    },
+    "raw_only": {
+      "calls": 144,
+      "seconds": 305.8722556536086,
+      "by_phase": {
+        "structure_task": 36,
+        "plan_workflow": 36,
+        "select_memory": 36,
+        "final_answer": 36
+      }
+    }
+  },
+  "memory_usage": {
+    "raw_only": {
+      "classification": {
+        "selected_records": {
+          "raw": 24
+        },
+        "selected_roles": {
+          "reasoning_support": 24
+        },
+        "examples_with_memory": 12,
+        "final_prompt_changed_vs_static": 12,
+        "selection_schema_failures": 0
+      },
+      "polyp_localization": {
+        "selected_records": {
+          "raw": 2
+        },
+        "selected_roles": {
+          "reasoning_support": 2
+        },
+        "examples_with_memory": 1,
+        "final_prompt_changed_vs_static": 1,
+        "selection_schema_failures": 0
+      },
+      "visual_qa": {
+        "selected_records": {
+          "raw": 20
+        },
+        "selected_roles": {
+          "reasoning_support": 20
+        },
+        "examples_with_memory": 11,
+        "final_prompt_changed_vs_static": 11,
+        "selection_schema_failures": 0
+      }
+    },
+    "abstract_only": {
+      "classification": {
+        "selected_records": {
+          "abstract": 14
+        },
+        "selected_roles": {
+          "reasoning_support": 7,
+          "failure_avoidance": 7
+        },
+        "examples_with_memory": 7,
+        "final_prompt_changed_vs_static": 7,
+        "selection_schema_failures": 0
+      },
+      "polyp_localization": {
+        "selected_records": {},
+        "selected_roles": {},
+        "examples_with_memory": 0,
+        "final_prompt_changed_vs_static": 0,
+        "selection_schema_failures": 0
+      },
+      "visual_qa": {
+        "selected_records": {
+          "abstract": 14
+        },
+        "selected_roles": {
+          "reasoning_support": 7,
+          "failure_avoidance": 7
+        },
+        "examples_with_memory": 7,
+        "final_prompt_changed_vs_static": 7,
+        "selection_schema_failures": 0
+      }
+    },
+    "full_memory": {
+      "classification": {
+        "selected_records": {
+          "raw": 24
+        },
+        "selected_roles": {
+          "reasoning_support": 24
+        },
+        "examples_with_memory": 12,
+        "final_prompt_changed_vs_static": 12,
+        "selection_schema_failures": 0
+      },
+      "polyp_localization": {
+        "selected_records": {
+          "raw": 24
+        },
+        "selected_roles": {
+          "reasoning_support": 24
+        },
+        "examples_with_memory": 12,
+        "final_prompt_changed_vs_static": 12,
+        "selection_schema_failures": 0
+      },
+      "visual_qa": {
+        "selected_records": {
+          "raw": 23
+        },
+        "selected_roles": {
+          "reasoning_support": 23
+        },
+        "examples_with_memory": 12,
+        "final_prompt_changed_vs_static": 12,
+        "selection_schema_failures": 0
+      }
+    }
+  },
+  "scope": "validation diagnostic; no test; original fixed outputs unchanged"
+}

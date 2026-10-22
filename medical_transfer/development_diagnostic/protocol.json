@@ -1,0 +1,37 @@
+{
+  "name": "fixed_development_direct_static_memory_ablation_v1",
+  "tasks": [
+    "classification",
+    "polyp_localization",
+    "visual_qa"
+  ],
+  "examples_per_task": 12,
+  "seed": 20261022,
+  "membership_frozen_before_answer_join": true,
+  "cross_task_unique_content_groups": true,
+  "exclude_prior_pilot_validation_and_first4_development_groups": true,
+  "test_inputs_or_answers_used": false,
+  "conditions": [
+    "direct",
+    "static_no_memory",
+    "raw_only",
+    "abstract_only",
+    "full_memory"
+  ],
+  "static_no_memory_reused_for_requested_no_memory_arm": true,
+  "model": "Qwen2.5-VL-7B BF16 frozen",
+  "harness_initial_versions": 0,
+  "memory_source": "complete prior accepted VQA state, selected before this diagnostic",
+  "memory_counts": {
+    "raw": 10,
+    "abstract": 2
+  },
+  "new_memory_learning": false,
+  "candidate_search": false,
+  "conditions_sequential_no_performance_based_branch": true,
+  "coordinate_contract": "shared input pixels explicit frame; previous semantic precision gate failed; localization exploratory",
+  "template_repair": "not exercised, no candidate generation",
+  "role_error_policy": "prior fail-closed invalid memory selector, no new retry",
+  "same_harness_configuration_except_memory_pool": true,
+  "priors_and_traces_private": true
+}
