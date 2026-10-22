@@ -1,0 +1,17 @@
+{
+  "name": "memory_selector_fail_closed_v1",
+  "scope": "Versioned engineering failure-accounting protocol; strict native_v1 remains failed and immutable",
+  "trigger": "Only exhausted Memory Selector schema ValueError after existing configured two attempts",
+  "result": "Whole sample is failed: empty answer, format-invalid, score zero. No final answering with an empty selection; invalid role is never accepted or mapped. Training failure may enter ordinary adaptation experience as an observed failure.",
+  "unchanged": [
+    "model and generation settings",
+    "data and held-out split",
+    "candidate counts",
+    "all retention/current-improvement/format gates",
+    "original retry counts",
+    "original 24h clock and storage guards"
+  ],
+  "prefix_reuse": "Latest committed checkpoint of each schema-failed arm, selected by chronology not performance; original completed stages and calls retained and counted. Successful original arms can be reused because they never exercised the exception path; no output is selected by score.",
+  "preserve": "Original failure traceback, logs, uncommitted-memory quarantine and original metrics remain separate. Final report must show strict run failure and recovery protocol separately.",
+  "stop": "One recovery dispatch per eligible arm only; unrelated errors remain fatal. No parameter search or further recovery protocols."
+}

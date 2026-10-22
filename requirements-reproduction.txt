@@ -1,0 +1,7 @@
+-e .
+torch==2.7.1
+transformers==4.51.3
+Pillow==12.3.0
+accelerate==1.14.0
+pycocotools==2.0.11
+pycocoevalcap==1.2

@@ -1,0 +1,3889 @@
+{
+  "tasks": [
+    "coco_detection",
+    "coco_caption",
+    "refcoco_grounding",
+    "vqav2"
+  ],
+  "profiles": {
+    "local_20_10_50": {
+      "raw_zero_shot": {
+        "cost": {
+          "calls": 200,
+          "model_seconds": 162.9402240284253,
+          "peak_allocated_bytes": 16850290176,
+          "phase_counts": {
+            "final_answer": 200
+          },
+          "scope_note": "legacy scope wrapper did not classify all router calls reliably"
+        },
+        "exit": {
+          "exit_code": 0,
+          "started": 1792600755.7069805,
+          "ended": 1792600919.3577843,
+          "peak_allocated_bytes": 16850290176
+        },
+        "failed": false,
+        "completed_stages": null,
+        "R": null,
+        "memory": {},
+        "memory_gates": {
+          "records": 0,
+          "accepted": 0,
+          "reasons": {},
+          "rejection_reasons": {},
+          "components": {}
+        },
+        "prompt_gates": {
+          "records": 0,
+          "accepted": 0,
+          "reasons": {},
+          "rejection_reasons": {},
+          "components": {}
+        },
+        "test_read_only": {
+          "checks": 0,
+          "all_passed": null
+        },
+        "failure_events": {
+          "count": 0,
+          "scope_counts": {},
+          "note": "execution events, not distinct samples; repeated stage/final evaluations retained"
+        },
+        "stage_metrics": [],
+        "metrics": {
+          "per_task_metrics": {
+            "coco_detection": {
+              "evaluation_schema_version": "task_native_metrics_v4",
+              "mean_example_score": 0.013333333333333332,
+              "correct": 1,
+              "total": 50,
+              "forget_count": 0,
+              "forget_rate": 0.0,
+              "reference_correct": 0,
+              "recovered_count": 0,
+              "behavior_comparable_count": 0,
+              "behavior_change_count": 0,
+              "reference_mean_example_score": null,
+              "mean_example_score_delta": null,
+              "has_reference": false,
+              "format_compliant_count": 44,
+              "format_compliance_rate": 0.88,
+              "average_output_chars": 118.9,
+              "max_output_chars": 342,
+              "detection_metric_definition": "label_matched_f1_at_iou_0.5",
+              "detection_image_count": 50,
+              "detection_matched_count": 1,
+              "detection_predicted_count": 73,
+              "detection_gold_count": 148,
+              "detection_false_positive_count": 72,
+              "detection_false_negative_count": 147,
+              "detection_micro_precision_iou50": 0.0136986301369863,
+              "detection_micro_recall_iou50": 0.006756756756756757,
+              "detection_micro_f1_iou50": 0.00904977375565611,
+              "detection_mean_image_f1_iou50": 0.013333333333333332,
+              "detection_metric_source": "pycocotools.COCOeval",
+              "detection_coco_metric_definition": "AP@[IoU=0.50:0.95|area=all|maxDets=100]",
+              "detection_predictions_without_confidence": 73,
+              "detection_coco_ap": 9.000900090009001e-06,
+              "detection_coco_ap50": 2.2502250225022505e-05,
+              "detection_coco_ap75": 0.0,
+              "detection_coco_ap_small": 0.0,
+              "detection_coco_ap_medium": 0.0,
+              "detection_coco_ap_large": 4.632042151583579e-05,
+              "detection_coco_ar_max100": 0.00030052592036063113,
+              "primary_metric_name": "detection_micro_f1_iou50",
+              "primary_score": 0.00904977375565611
+            },
+            "coco_caption": {
+              "evaluation_schema_version": "task_native_metrics_v4",
+              "mean_example_score": 0.5973552518042131,
+              "correct": 29,
+              "total": 50,
+              "forget_count": 0,
+              "forget_rate": 0.0,
+              "reference_correct": 0,
+              "recovered_count": 0,
+              "behavior_comparable_count": 0,
+              "behavior_change_count": 0,
+              "reference_mean_example_score": null,
+              "mean_example_score_delta": null,
+              "has_reference": false,
+              "format_compliant_count": 50,
+              "format_compliance_rate": 1.0,
+              "average_output_chars": 82.34,
+              "max_output_chars": 132,
+              "caption_metric_source": "pycocoevalcap",
+              "caption_anchor_criterion_available": true,
+              "caption_anchor_metric_definition": "sentence_level_cider_at_least_0.5",
+              "caption_count": 50,
+              "caption_primary_score": 0.3543204023339289,
+              "caption_Bleu_1": 0.5571616294342219,
+              "caption_Bleu_2": 0.38484575601836163,
+              "caption_Bleu_3": 0.25267841659767787,
+              "caption_Bleu_4": 0.16186730815585243,
+              "caption_METEOR": 0.2609908867979096,
+              "caption_ROUGE_L": 0.46203865597891985,
+              "caption_CIDEr": 0.709530422056591,
+              "primary_metric_name": "caption_composite_score",
+              "primary_score": 0.3543204023339289
+            },
+            "refcoco_grounding": {
+              "evaluation_schema_version": "task_native_metrics_v4",
+              "mean_example_score": 0.0,
+              "correct": 0,
+              "total": 50,
+              "forget_count": 0,
+              "forget_rate": 0.0,
+              "reference_correct": 0,
+              "recovered_count": 0,
+              "behavior_comparable_count": 0,
+              "behavior_change_count": 0,
+              "reference_mean_example_score": null,
+              "mean_example_score_delta": null,
+              "has_reference": false,
+              "format_compliant_count": 0,
+              "format_compliance_rate": 0.0,
+              "average_output_chars": 81.52,
+              "max_output_chars": 115,
+              "grounding_metric_definition": "accuracy_at_iou_0.5",
+              "grounding_count": 50,
+              "grounding_mean_iou": 0.0,
+              "grounding_accuracy_iou50": 0.0,
+              "grounding_accuracy_iou75": 0.0,
+              "primary_metric_name": "grounding_accuracy_iou50",
+              "primary_score": 0.0
+            },
+            "vqav2": {
+              "evaluation_schema_version": "task_native_metrics_v4",
+              "mean_example_score": 0.6533333333333334,
+              "correct": 31,
+              "total": 50,
+              "forget_count": 0,
+              "forget_rate": 0.0,
+              "reference_correct": 0,
+              "recovered_count": 0,
+              "behavior_comparable_count": 0,
+              "behavior_change_count": 0,
+              "reference_mean_example_score": null,
+              "mean_example_score_delta": null,
+              "has_reference": false,
+              "format_compliant_count": 48,
+              "format_compliance_rate": 0.96,
+              "average_output_chars": 9.26,
+              "max_output_chars": 40,
+              "primary_metric_name": "vqa_consensus_accuracy",
+              "primary_score": 0.6533333333333333,
+              "vqa_metric_definition": "min_matching_annotators_over_3"
+            }
+          }
+        }
+      },
+      "static_harness": {
+        "cost": {
+          "calls": 558,
+          "model_seconds": 1637.7445588993141,
+          "peak_allocated_bytes": 17087361536,
+          "phase_counts": {
+            "structure_task": 200,
+            "plan_workflow": 158,
+            "final_answer": 200
+          },
+          "scope_note": "legacy scope wrapper did not classify all router calls reliably"
+        },
+        "exit": {
+          "exit_code": 0,
+          "started": 1792600919.3586633,
+          "ended": 1792602567.124127,
+          "peak_allocated_bytes": 17087361536
+        },
+        "failed": false,
+        "completed_stages": null,
+        "R": null,
+        "memory": {
+          "raw": 0,
+          "abstract": 0,
+          "anchor": 0,
+          "skills": 0
+        },
+        "memory_gates": {
+          "records": 0,
+          "accepted": 0,
+          "reasons": {},
+          "rejection_reasons": {},
+          "components": {}
+        },
+        "prompt_gates": {
+          "records": 0,
+          "accepted": 0,
+          "reasons": {},
+          "rejection_reasons": {},
+          "components": {}
+        },
+        "test_read_only": {
+          "checks": 0,
+          "all_passed": null
+        },
+        "failure_events": {
+          "count": 0,
+          "scope_counts": {},
+          "note": "execution events, not distinct samples; repeated stage/final evaluations retained"
+        },
+        "stage_metrics": [],
+        "test_history": [
+          {
+            "task": "coco_detection",
+            "metrics": {
+              "evaluation_schema_version": "task_native_metrics_v4",
+              "primary_metric_name": "detection_micro_f1_iou50",
+              "primary_score": 0.0,
+              "primary_score_delta": null,
+              "mean_example_score": 0.0,
+              "correct": 0,
+              "total": 50,
+              "format_compliance_rate": 0.9,
+              "average_output_chars": 145.86,
+              "max_output_chars": 896,
+              "forget_count": 0,
+              "forget_rate": 0.0,
+              "recovered_count": 0,
+              "behavior_comparable_count": 0,
+              "behavior_change_count": 0,
+              "detection_metric_definition": "label_matched_f1_at_iou_0.5",
+              "detection_image_count": 50,
+              "detection_matched_count": 0,
+              "detection_predicted_count": 102,
+              "detection_gold_count": 148,
+              "detection_false_positive_count": 102,
+              "detection_false_negative_count": 148,
+              "detection_micro_precision_iou50": 0.0,
+              "detection_micro_recall_iou50": 0.0,
+              "detection_micro_f1_iou50": 0.0,
+              "detection_mean_image_f1_iou50": 0.0,
+              "detection_metric_source": "pycocotools.COCOeval",
+              "detection_coco_metric_definition": "AP@[IoU=0.50:0.95|area=all|maxDets=100]",
+              "detection_predictions_without_confidence": 90,
+              "detection_coco_ap": 0.0,
+              "detection_coco_ap50": 0.0,
+              "detection_coco_ap75": 0.0,
+              "detection_coco_ap_small": 0.0,
+              "detection_coco_ap_medium": 0.0,
+              "detection_coco_ap_large": 0.0,
+              "detection_coco_ar_max100": 0.0
+            }
+          },
+          {
+            "task": "coco_caption",
+            "metrics": {
+              "evaluation_schema_version": "task_native_metrics_v4",
+              "primary_metric_name": "caption_composite_score",
+              "primary_score": 0.5028505759097005,
+              "primary_score_delta": null,
+              "mean_example_score": 0.0,
+              "correct": 0,
+              "total": 50,
+              "format_compliance_rate": 1.0,
+              "average_output_chars": 79.98,
+              "max_output_chars": 168,
+              "forget_count": 0,
+              "forget_rate": 0.0,
+              "recovered_count": 0,
+              "behavior_comparable_count": 0,
+              "behavior_change_count": 0,
+              "caption_eval_error": "RuntimeError:Exception in thread \"main\" java.lang.InternalError: Error loading java.security file\n\tat java.base/java.security.Security.initialize(Security.java:105)\n\tat java.base/java.security.Security.lambda$static$0(Security.java:84)\n\tat java.base/java.security.AccessController.doPrivileged(AccessController.java:319)\n\tat java.base/java.security.Security.<clinit>(Security.java:83)\n\tat java.base/sun.security.util.SecurityProperties.getOverridableProperty(SecurityProperties.java:57)\n\tat java.base/sun.security.util.SecurityProperties.privilegedGetOverridable(SecurityProperties.java:48)\n\tat java.base/sun.security.util.SecurityProperties.includedInExceptions(SecurityProperties.java:72)\n\tat java.base/sun.security.util.SecurityProperties.<clinit>(SecurityProperties.java:36)\n\tat java.base/sun.security.util.FilePermCompat.<clinit>(FilePermCompat.java:43)\n\tat java.base/java.security.AccessControlContext.<init>(AccessControlContext.java:270)\n\tat java.base/java.security.AccessController.createWrapper(AccessController.java:649)\n\tat java.base/java.security.AccessController.doPrivileged(AccessController.java:461)\n\tat java.logging/java.util.logging.LogManager.initStatic(LogManager.java:2749)\n\tat java.logging/java.util.logging.LogManager.<clinit>(LogManager.java:2744)\n\tat java.logging/java.util.logging.Logger.demandLogger(Logger.java:650)\n\tat java.logging/java.util.logging.Logger.getLogger(Logger.java:720)\n\tat java.logging/java.util.logging.Logger.getLogger(Logger.java:703)\n\tat edu.stanford.nlp.process.PTBLexer.<clinit>(PTBLexer.java:24154)\n\tat edu.stanford.nlp.process.PTBTokenizer.<init>(PTBTokenizer.java:260)\n\tat edu.stanford.nlp.process.PTBTokenizer.tokReader(PTBTokenizer.java:444)\n\tat edu.stanford.nlp.process.PTBTokenizer.tok(PTBTokenizer.java:425)\n\tat edu.stanford.nlp.process.PTBTokenizer.main(PTBTokenizer.java:760)\nException in thread \"Logging-Cleaner\" java.lang.NoClassDefFoundError: Could not initialize class java.util.logging.LogManager\n\tat java.logging/java.util.logging.LogManager$Cleaner.run(LogManager.java:271)\nCaused by: java.lang.ExceptionInInitializerError: Exception java.lang.InternalError: Error loading java.security file [in thread \"main\"]\n\tat java.base/java.security.Security.initialize(Security.java:105)\n\tat java.base/java.security.Security.lambda$static$0(Security.java:84)\n\tat java.base/java.security.AccessController.doPrivileged(AccessController.java:319)\n\tat java.base/java.security.Security.<clinit>(Security.java:83)\n\tat java.base/sun.security.util.SecurityProperties.getOverridableProperty(SecurityProperties.java:57)\n\tat java.base/sun.security.util.SecurityProperties.privilegedGetOverridable(SecurityProperties.java:48)\n\tat java.base/sun.security.util.SecurityProperties.includedInExceptions(SecurityProperties.java:72)\n\tat java.base/sun.security.util.SecurityProperties.<clinit>(SecurityProperties.java:36)\n\tat java.base/sun.security.util.FilePermCompat.<clinit>(FilePermCompat.java:43)\n\tat java.base/java.security.AccessControlContext.<init>(AccessControlContext.java:270)\n\tat java.base/java.security.AccessController.createWrapper(AccessController.java:649)\n\tat java.base/java.security.AccessController.doPrivileged(AccessController.java:461)\n\tat java.logging/java.util.logging.LogManager.initStatic(LogManager.java:2749)\n\tat java.logging/java.util.logging.LogManager.<clinit>(LogManager.java:2744)\n\tat java.logging/java.util.logging.Logger.demandLogger(Logger.java:650)\n\tat java.logging/java.util.logging.Logger.getLogger(Logger.java:720)\n\tat java.logging/java.util.logging.Logger.getLogger(Logger.java:703)\n\tat edu.stanford.nlp.process.PTBLexer.<clinit>(PTBLexer.java:24154)\n\tat edu.stanford.nlp.process.PTBTokenizer.<init>(PTBTokenizer.java:260)\n\tat edu.stanford.nlp.process.PTBTokenizer.tokReader(PTBTokenizer.java:444)\n\tat edu.stanford.nlp.process.PTBTokenizer.tok(PTBTokenizer.java:425)\n\tat edu.stanford.nlp.process.PTBTokenizer.main(PTBTokenizer.java:760)",
+              "caption_metric_source": "fallback_token_f1",
+              "caption_anchor_criterion_available": false,
+              "caption_count": 50,
+              "caption_primary_score": 0.5028505759097005
+            }
+          },
+          {
+            "task": "refcoco_grounding",
+            "metrics": {
+              "evaluation_schema_version": "task_native_metrics_v4",
+              "primary_metric_name": "grounding_accuracy_iou50",
+              "primary_score": 0.0,
+              "primary_score_delta": null,
+              "mean_example_score": 0.0,
+              "correct": 0,
+              "total": 50,
+              "format_compliance_rate": 0.98,
+              "average_output_chars": 34.36,
+              "max_output_chars": 49,
+              "forget_count": 0,
+              "forget_rate": 0.0,
+              "recovered_count": 0,
+              "behavior_comparable_count": 0,
+              "behavior_change_count": 0,
+              "grounding_metric_definition": "accuracy_at_iou_0.5",
+              "grounding_count": 50,
+              "grounding_mean_iou": 0.08017877299616924,
+              "grounding_accuracy_iou50": 0.0,
+              "grounding_accuracy_iou75": 0.0
+            }
+          },
+          {
+            "task": "vqav2",
+            "metrics": {
+              "evaluation_schema_version": "task_native_metrics_v4",
+              "primary_metric_name": "vqa_consensus_accuracy",
+              "primary_score": 0.34,
+              "primary_score_delta": null,
+              "mean_example_score": 0.34,
+              "correct": 15,
+              "total": 50,
+              "format_compliance_rate": 0.64,
+              "average_output_chars": 19.76,
+              "max_output_chars": 85,
+              "forget_count": 0,
+              "forget_rate": 0.0,
+              "recovered_count": 0,
+              "behavior_comparable_count": 0,
+              "behavior_change_count": 0,
+              "vqa_metric_definition": "min_matching_annotators_over_3"
+            }
+          }
+        ]
+      },
+      "stability_hcl": {
+        "cost": {
+          "calls": 1481,
+          "model_seconds": 4742.671058910084,
+          "peak_allocated_bytes": 18362977280,
+          "phase_counts": {
+            "structure_task": 350,
+            "plan_workflow": 316,
+            "final_answer": 474,
+            "select_memory": 299,
+            "abstract_memory": 4,
+            "anchor_selection": 4,
+            "generate_artifact_candidates": 4,
+            "skill_evolution": 2,
+            "select_skill": 28
+          },
+          "scope_note": "legacy scope wrapper did not classify all router calls reliably"
+        },
+        "exit": {
+          "exit_code": 0,
+          "started": 1792602567.1249108,
+          "ended": 1792607646.8299484,
+          "peak_allocated_bytes": 18362977280
+        },
+        "failed": false,
+        "completed_stages": 4,
+        "R": [
+          [
+            0.0,
+            null,
+            null,
+            null
+          ],
+          [
+            0.0,
+            0.3820264512500167,
+            null,
+            null
+          ],
+          [
+            0.0,
+            0.3820264512500167,
+            0.0,
+            null
+          ],
+          [
+            0.0,
+            0.3820264512500167,
+            0.0,
+            0.19333333333333333
+          ]
+        ],
+        "memory": {
+          "raw": 10,
+          "abstract": 2,
+          "anchor": 7,
+          "skills": 0
+        },
+        "memory_gates": {
+          "records": 4,
+          "accepted": 1,
+          "reasons": {
+            "memory_candidate_rejected": 3,
+            "memory_candidate_passed_commit_gate": 1
+          },
+          "rejection_reasons": {
+            "current_task_primary_score_delta_below_minimum": 3,
+            "current_task_format_below_minimum": 1
+          },
+          "components": {
+            "memory": 4
+          }
+        },
+        "prompt_gates": {
+          "records": 7,
+          "accepted": 0,
+          "reasons": {
+            "no_candidate_passed_commit_gate": 4,
+            "insufficient_historical_anchors": 3
+          },
+          "rejection_reasons": {},
+          "components": {
+            "task_interface_structuring": 1,
+            "router_workflow": 1,
+            "memory_selector": 1,
+            "router_context": 1,
+            "memory": 3
+          }
+        },
+        "test_read_only": {
+          "checks": 0,
+          "all_passed": null
+        },
+        "failure_events": {
+          "count": 0,
+          "scope_counts": {},
+          "note": "execution events, not distinct samples; repeated stage/final evaluations retained"
+        },
+        "stage_metrics": [
+          {
+            "stage": 1,
+            "memory": {
+              "raw": 0,
+              "abstract": 0,
+              "anchor": 2,
+              "skill": 0
+            },
+            "tasks": {
+              "coco_detection": {
+                "evaluation_schema_version": "task_native_metrics_v4",
+                "mean_example_score": 0.0,
+                "correct": 0,
+                "total": 50,
+                "forget_count": 0,
+                "forget_rate": 0.0,
+                "reference_correct": 0,
+                "recovered_count": 0,
+                "behavior_comparable_count": 0,
+                "behavior_change_count": 0,
+                "reference_mean_example_score": null,
+                "mean_example_score_delta": null,
+                "has_reference": false,
+                "format_compliant_count": 45,
+                "format_compliance_rate": 0.9,
+                "average_output_chars": 145.86,
+                "max_output_chars": 896,
+                "detection_metric_definition": "label_matched_f1_at_iou_0.5",
+                "detection_image_count": 50,
+                "detection_matched_count": 0,
+                "detection_predicted_count": 102,
+                "detection_gold_count": 148,
+                "detection_false_positive_count": 102,
+                "detection_false_negative_count": 148,
+                "detection_micro_precision_iou50": 0.0,
+                "detection_micro_recall_iou50": 0.0,
+                "detection_micro_f1_iou50": 0.0,
+                "detection_mean_image_f1_iou50": 0.0,
+                "detection_metric_source": "pycocotools.COCOeval",
+                "detection_coco_metric_definition": "AP@[IoU=0.50:0.95|area=all|maxDets=100]",
+                "detection_predictions_without_confidence": 90,
+                "detection_coco_ap": 0.0,
+                "detection_coco_ap50": 0.0,
+                "detection_coco_ap75": 0.0,
+                "detection_coco_ap_small": 0.0,
+                "detection_coco_ap_medium": 0.0,
+                "detection_coco_ap_large": 0.0,
+                "detection_coco_ar_max100": 0.0,
+                "primary_metric_name": "detection_micro_f1_iou50",
+                "primary_score": 0.0
+              }
+            }
+          },
+          {
+            "stage": 2,
+            "memory": {
+              "raw": 10,
+              "abstract": 2,
+              "anchor": 3,
+              "skill": 0
+            },
+            "tasks": {
+              "coco_detection": {
+                "evaluation_schema_version": "task_native_metrics_v4",
+                "mean_example_score": 0.0,
+                "correct": 0,
+                "total": 50,
+                "forget_count": 0,
+                "forget_rate": 0.0,
+                "reference_correct": 0,
+                "recovered_count": 0,
+                "behavior_comparable_count": 50,
+                "behavior_change_count": 44,
+                "reference_mean_example_score": 0.0,
+                "mean_example_score_delta": 0.0,
+                "has_reference": true,
+                "format_compliant_count": 43,
+                "format_compliance_rate": 0.86,
+                "average_output_chars": 133.8,
+                "max_output_chars": 763,
+                "detection_metric_definition": "label_matched_f1_at_iou_0.5",
+                "detection_image_count": 50,
+                "detection_matched_count": 0,
+                "detection_predicted_count": 94,
+                "detection_gold_count": 148,
+                "detection_false_positive_count": 94,
+                "detection_false_negative_count": 148,
+                "detection_micro_precision_iou50": 0.0,
+                "detection_micro_recall_iou50": 0.0,
+                "detection_micro_f1_iou50": 0.0,
+                "detection_mean_image_f1_iou50": 0.0,
+                "detection_metric_source": "pycocotools.COCOeval",
+                "detection_coco_metric_definition": "AP@[IoU=0.50:0.95|area=all|maxDets=100]",
+                "detection_predictions_without_confidence": 91,
+                "detection_coco_ap": 0.0,
+                "detection_coco_ap50": 0.0,
+                "detection_coco_ap75": 0.0,
+                "detection_coco_ap_small": 0.0,
+                "detection_coco_ap_medium": 0.0,
+                "detection_coco_ap_large": 0.0,
+                "detection_coco_ar_max100": 0.0,
+                "primary_metric_name": "detection_micro_f1_iou50",
+                "primary_score": 0.0,
+                "reference_primary_metric_name": "detection_micro_f1_iou50",
+                "reference_primary_score": 0.0,
+                "primary_score_delta": 0.0
+              },
+              "coco_caption": {
+                "evaluation_schema_version": "task_native_metrics_v4",
+                "mean_example_score": 0.6724465875963374,
+                "correct": 34,
+                "total": 50,
+                "forget_count": 0,
+                "forget_rate": 0.0,
+                "reference_correct": 0,
+                "recovered_count": 0,
+                "behavior_comparable_count": 0,
+                "behavior_change_count": 0,
+                "reference_mean_example_score": null,
+                "mean_example_score_delta": null,
+                "has_reference": false,
+                "format_compliant_count": 50,
+                "format_compliance_rate": 1.0,
+                "average_output_chars": 73.32,
+                "max_output_chars": 143,
+                "caption_metric_source": "pycocoevalcap",
+                "caption_anchor_criterion_available": true,
+                "caption_anchor_metric_definition": "sentence_level_cider_at_least_0.5",
+                "caption_count": 50,
+                "caption_primary_score": 0.3820264512500167,
+                "caption_Bleu_1": 0.6202898550715648,
+                "caption_Bleu_2": 0.4380664035422775,
+                "caption_Bleu_3": 0.29755754524687666,
+                "caption_Bleu_4": 0.19394531135955803,
+                "caption_METEOR": 0.2675787980941853,
+                "caption_ROUGE_L": 0.47556989462828786,
+                "caption_CIDEr": 0.8785249369224911,
+                "primary_metric_name": "caption_composite_score",
+                "primary_score": 0.3820264512500167
+              }
+            }
+          },
+          {
+            "stage": 3,
+            "memory": {
+              "raw": 10,
+              "abstract": 2,
+              "anchor": 5,
+              "skill": 0
+            },
+            "tasks": {
+              "coco_detection": {
+                "evaluation_schema_version": "task_native_metrics_v4",
+                "mean_example_score": 0.0,
+                "correct": 0,
+                "total": 50,
+                "forget_count": 0,
+                "forget_rate": 0.0,
+                "reference_correct": 0,
+                "recovered_count": 0,
+                "behavior_comparable_count": 50,
+                "behavior_change_count": 0,
+                "reference_mean_example_score": 0.0,
+                "mean_example_score_delta": 0.0,
+                "has_reference": true,
+                "format_compliant_count": 43,
+                "format_compliance_rate": 0.86,
+                "average_output_chars": 133.8,
+                "max_output_chars": 763,
+                "detection_metric_definition": "label_matched_f1_at_iou_0.5",
+                "detection_image_count": 50,
+                "detection_matched_count": 0,
+                "detection_predicted_count": 94,
+                "detection_gold_count": 148,
+                "detection_false_positive_count": 94,
+                "detection_false_negative_count": 148,
+                "detection_micro_precision_iou50": 0.0,
+                "detection_micro_recall_iou50": 0.0,
+                "detection_micro_f1_iou50": 0.0,
+                "detection_mean_image_f1_iou50": 0.0,
+                "detection_metric_source": "pycocotools.COCOeval",
+                "detection_coco_metric_definition": "AP@[IoU=0.50:0.95|area=all|maxDets=100]",
+                "detection_predictions_without_confidence": 91,
+                "detection_coco_ap": 0.0,
+                "detection_coco_ap50": 0.0,
+                "detection_coco_ap75": 0.0,
+                "detection_coco_ap_small": 0.0,
+                "detection_coco_ap_medium": 0.0,
+                "detection_coco_ap_large": 0.0,
+                "detection_coco_ar_max100": 0.0,
+                "primary_metric_name": "detection_micro_f1_iou50",
+                "primary_score": 0.0,
+                "reference_primary_metric_name": "detection_micro_f1_iou50",
+                "reference_primary_score": 0.0,
+                "primary_score_delta": 0.0
+              },
+              "coco_caption": {
+                "evaluation_schema_version": "task_native_metrics_v4",
+                "mean_example_score": 0.6724465875963374,
+                "correct": 34,
+                "total": 50,
+                "forget_count": 0,
+                "forget_rate": 0.0,
+                "reference_correct": 34,
+                "recovered_count": 0,
+                "behavior_comparable_count": 50,
+                "behavior_change_count": 0,
+                "reference_mean_example_score": 0.6724465875963374,
+                "mean_example_score_delta": 0.0,
+                "has_reference": true,
+                "format_compliant_count": 50,
+                "format_compliance_rate": 1.0,
+                "average_output_chars": 73.32,
+                "max_output_chars": 143,
+                "caption_metric_source": "pycocoevalcap",
+                "caption_anchor_criterion_available": true,
+                "caption_anchor_metric_definition": "sentence_level_cider_at_least_0.5",
+                "caption_count": 50,
+                "caption_primary_score": 0.3820264512500167,
+                "caption_Bleu_1": 0.6202898550715648,
+                "caption_Bleu_2": 0.4380664035422775,
+                "caption_Bleu_3": 0.29755754524687666,
+                "caption_Bleu_4": 0.19394531135955803,
+                "caption_METEOR": 0.2675787980941853,
+                "caption_ROUGE_L": 0.47556989462828786,
+                "caption_CIDEr": 0.8785249369224911,
+                "primary_metric_name": "caption_composite_score",
+                "primary_score": 0.3820264512500167,
+                "reference_primary_metric_name": "caption_composite_score",
+                "reference_primary_score": 0.3820264512500167,
+                "primary_score_delta": 0.0
+              },
+              "refcoco_grounding": {
+                "evaluation_schema_version": "task_native_metrics_v4",
+                "mean_example_score": 0.0,
+                "correct": 0,
+                "total": 50,
+                "forget_count": 0,
+                "forget_rate": 0.0,
+                "reference_correct": 0,
+                "recovered_count": 0,
+                "behavior_comparable_count": 0,
+                "behavior_change_count": 0,
+                "reference_mean_example_score": null,
+                "mean_example_score_delta": null,
+                "has_reference": false,
+                "format_compliant_count": 48,
+                "format_compliance_rate": 0.96,
+                "average_output_chars": 34.54,
+                "max_output_chars": 73,
+                "grounding_metric_definition": "accuracy_at_iou_0.5",
+                "grounding_count": 50,
+                "grounding_mean_iou": 0.08588896248129359,
+                "grounding_accuracy_iou50": 0.0,
+                "grounding_accuracy_iou75": 0.0,
+                "primary_metric_name": "grounding_accuracy_iou50",
+                "primary_score": 0.0
+              }
+            }
+          },
+          {
+            "stage": 4,
+            "memory": {
+              "raw": 10,
+              "abstract": 2,
+              "anchor": 7,
+              "skill": 0
+            },
+            "tasks": {
+              "coco_detection": {
+                "evaluation_schema_version": "task_native_metrics_v4",
+                "mean_example_score": 0.0,
+                "correct": 0,
+                "total": 50,
+                "forget_count": 0,
+                "forget_rate": 0.0,
+                "reference_correct": 0,
+                "recovered_count": 0,
+                "behavior_comparable_count": 50,
+                "behavior_change_count": 0,
+                "reference_mean_example_score": 0.0,
+                "mean_example_score_delta": 0.0,
+                "has_reference": true,
+                "format_compliant_count": 43,
+                "format_compliance_rate": 0.86,
+                "average_output_chars": 133.8,
+                "max_output_chars": 763,
+                "detection_metric_definition": "label_matched_f1_at_iou_0.5",
+                "detection_image_count": 50,
+                "detection_matched_count": 0,
+                "detection_predicted_count": 94,
+                "detection_gold_count": 148,
+                "detection_false_positive_count": 94,
+                "detection_false_negative_count": 148,
+                "detection_micro_precision_iou50": 0.0,
+                "detection_micro_recall_iou50": 0.0,
+                "detection_micro_f1_iou50": 0.0,
+                "detection_mean_image_f1_iou50": 0.0,
+                "detection_metric_source": "pycocotools.COCOeval",
+                "detection_coco_metric_definition": "AP@[IoU=0.50:0.95|area=all|maxDets=100]",
+                "detection_predictions_without_confidence": 91,
+                "detection_coco_ap": 0.0,
+                "detection_coco_ap50": 0.0,
+                "detection_coco_ap75": 0.0,
+                "detection_coco_ap_small": 0.0,
+                "detection_coco_ap_medium": 0.0,
+                "detection_coco_ap_large": 0.0,
+                "detection_coco_ar_max100": 0.0,
+                "primary_metric_name": "detection_micro_f1_iou50",
+                "primary_score": 0.0,
+                "reference_primary_metric_name": "detection_micro_f1_iou50",
+                "reference_primary_score": 0.0,
+                "primary_score_delta": 0.0
+              },
+              "coco_caption": {
+                "evaluation_schema_version": "task_native_metrics_v4",
+                "mean_example_score": 0.6724465875963374,
+                "correct": 34,
+                "total": 50,
+                "forget_count": 0,
+                "forget_rate": 0.0,
+                "reference_correct": 34,
+                "recovered_count": 0,
+                "behavior_comparable_count": 50,
+                "behavior_change_count": 0,
+                "reference_mean_example_score": 0.6724465875963374,
+                "mean_example_score_delta": 0.0,
+                "has_reference": true,
+                "format_compliant_count": 50,
+                "format_compliance_rate": 1.0,
+                "average_output_chars": 73.32,
+                "max_output_chars": 143,
+                "caption_metric_source": "pycocoevalcap",
+                "caption_anchor_criterion_available": true,
+                "caption_anchor_metric_definition": "sentence_level_cider_at_least_0.5",
+                "caption_count": 50,
+                "caption_primary_score": 0.3820264512500167,
+                "caption_Bleu_1": 0.6202898550715648,
+                "caption_Bleu_2": 0.4380664035422775,
+                "caption_Bleu_3": 0.29755754524687666,
+                "caption_Bleu_4": 0.19394531135955803,
+                "caption_METEOR": 0.2675787980941853,
+                "caption_ROUGE_L": 0.47556989462828786,
+                "caption_CIDEr": 0.8785249369224911,
+                "primary_metric_name": "caption_composite_score",
+                "primary_score": 0.3820264512500167,
+                "reference_primary_metric_name": "caption_composite_score",
+                "reference_primary_score": 0.3820264512500167,
+                "primary_score_delta": 0.0
+              },
+              "refcoco_grounding": {
+                "evaluation_schema_version": "task_native_metrics_v4",
+                "mean_example_score": 0.0,
+                "correct": 0,
+                "total": 50,
+                "forget_count": 0,
+                "forget_rate": 0.0,
+                "reference_correct": 0,
+                "recovered_count": 0,
+                "behavior_comparable_count": 50,
+                "behavior_change_count": 0,
+                "reference_mean_example_score": 0.0,
+                "mean_example_score_delta": 0.0,
+                "has_reference": true,
+                "format_compliant_count": 48,
+                "format_compliance_rate": 0.96,
+                "average_output_chars": 34.54,
+                "max_output_chars": 73,
+                "grounding_metric_definition": "accuracy_at_iou_0.5",
+                "grounding_count": 50,
+                "grounding_mean_iou": 0.08588896248129359,
+                "grounding_accuracy_iou50": 0.0,
+                "grounding_accuracy_iou75": 0.0,
+                "primary_metric_name": "grounding_accuracy_iou50",
+                "primary_score": 0.0,
+                "reference_primary_metric_name": "grounding_accuracy_iou50",
+                "reference_primary_score": 0.0,
+                "primary_score_delta": 0.0
+              },
+              "vqav2": {
+                "evaluation_schema_version": "task_native_metrics_v4",
+                "mean_example_score": 0.19333333333333333,
+                "correct": 9,
+                "total": 50,
+                "forget_count": 0,
+                "forget_rate": 0.0,
+                "reference_correct": 0,
+                "recovered_count": 0,
+                "behavior_comparable_count": 0,
+                "behavior_change_count": 0,
+                "reference_mean_example_score": null,
+                "mean_example_score_delta": null,
+                "has_reference": false,
+                "format_compliant_count": 22,
+                "format_compliance_rate": 0.44,
+                "average_output_chars": 29.4,
+                "max_output_chars": 111,
+                "primary_metric_name": "vqa_consensus_accuracy",
+                "primary_score": 0.19333333333333333,
+                "vqa_metric_definition": "min_matching_annotators_over_3"
+              }
+            }
+          }
+        ],
+        "final_average_100": 14.38399461458375,
+        "average_forgetting_pp": 0.0,
+        "BWT_pp": 0.0
+      },
+      "plasticity_hcl": {
+        "cost": {
+          "calls": 1481,
+          "model_seconds": 5213.088416196872,
+          "peak_allocated_bytes": 18362977280,
+          "phase_counts": {
+            "structure_task": 350,
+            "plan_workflow": 316,
+            "final_answer": 474,
+            "select_memory": 299,
+            "abstract_memory": 4,
+            "anchor_selection": 4,
+            "generate_artifact_candidates": 4,
+            "skill_evolution": 2,
+            "select_skill": 28
+          },
+          "scope_note": "legacy scope wrapper did not classify all router calls reliably"
+        },
+        "exit": {
+          "exit_code": 0,
+          "started": 1792607646.9485474,
+          "ended": 1792613182.7079616,
+          "peak_allocated_bytes": 18362977280
+        },
+        "failed": false,
+        "completed_stages": 4,
+        "R": [
+          [
+            0.0,
+            null,
+            null,
+            null
+          ],
+          [
+            0.0,
+            0.3820264512500167,
+            null,
+            null
+          ],
+          [
+            0.0,
+            0.3820264512500167,
+            0.0,
+            null
+          ],
+          [
+            0.0,
+            0.3820264512500167,
+            0.0,
+            0.19333333333333333
+          ]
+        ],
+        "memory": {
+          "raw": 10,
+          "abstract": 2,
+          "anchor": 7,
+          "skills": 0
+        },
+        "memory_gates": {
+          "records": 4,
+          "accepted": 1,
+          "reasons": {
+            "memory_candidate_rejected": 3,
+            "memory_candidate_passed_commit_gate": 1
+          },
+          "rejection_reasons": {
+            "current_task_primary_score_delta_below_minimum": 3,
+            "current_task_format_below_minimum": 1
+          },
+          "components": {
+            "memory": 4
+          }
+        },
+        "prompt_gates": {
+          "records": 7,
+          "accepted": 0,
+          "reasons": {
+            "no_candidate_passed_commit_gate": 4,
+            "insufficient_historical_anchors": 3
+          },
+          "rejection_reasons": {},
+          "components": {
+            "task_interface_structuring": 1,
+            "router_workflow": 1,
+            "memory_selector": 1,
+            "router_context": 1,
+            "memory": 3
+          }
+        },
+        "test_read_only": {
+          "checks": 0,
+          "all_passed": null
+        },
+        "failure_events": {
+          "count": 0,
+          "scope_counts": {},
+          "note": "execution events, not distinct samples; repeated stage/final evaluations retained"
+        },
+        "stage_metrics": [
+          {
+            "stage": 1,
+            "memory": {
+              "raw": 0,
+              "abstract": 0,
+              "anchor": 2,
+              "skill": 0
+            },
+            "tasks": {
+              "coco_detection": {
+                "evaluation_schema_version": "task_native_metrics_v4",
+                "mean_example_score": 0.0,
+                "correct": 0,
+                "total": 50,
+                "forget_count": 0,
+                "forget_rate": 0.0,
+                "reference_correct": 0,
+                "recovered_count": 0,
+                "behavior_comparable_count": 0,
+                "behavior_change_count": 0,
+                "reference_mean_example_score": null,
+                "mean_example_score_delta": null,
+                "has_reference": false,
+                "format_compliant_count": 45,
+                "format_compliance_rate": 0.9,
+                "average_output_chars": 145.86,
+                "max_output_chars": 896,
+                "detection_metric_definition": "label_matched_f1_at_iou_0.5",
+                "detection_image_count": 50,
+                "detection_matched_count": 0,
+                "detection_predicted_count": 102,
+                "detection_gold_count": 148,
+                "detection_false_positive_count": 102,
+                "detection_false_negative_count": 148,
+                "detection_micro_precision_iou50": 0.0,
+                "detection_micro_recall_iou50": 0.0,
+                "detection_micro_f1_iou50": 0.0,
+                "detection_mean_image_f1_iou50": 0.0,
+                "detection_metric_source": "pycocotools.COCOeval",
+                "detection_coco_metric_definition": "AP@[IoU=0.50:0.95|area=all|maxDets=100]",
+                "detection_predictions_without_confidence": 90,
+                "detection_coco_ap": 0.0,
+                "detection_coco_ap50": 0.0,
+                "detection_coco_ap75": 0.0,
+                "detection_coco_ap_small": 0.0,
+                "detection_coco_ap_medium": 0.0,
+                "detection_coco_ap_large": 0.0,
+                "detection_coco_ar_max100": 0.0,
+                "primary_metric_name": "detection_micro_f1_iou50",
+                "primary_score": 0.0
+              }
+            }
+          },
+          {
+            "stage": 2,
+            "memory": {
+              "raw": 10,
+              "abstract": 2,
+              "anchor": 3,
+              "skill": 0
+            },
+            "tasks": {
+              "coco_detection": {
+                "evaluation_schema_version": "task_native_metrics_v4",
+                "mean_example_score": 0.0,
+                "correct": 0,
+                "total": 50,
+                "forget_count": 0,
+                "forget_rate": 0.0,
+                "reference_correct": 0,
+                "recovered_count": 0,
+                "behavior_comparable_count": 50,
+                "behavior_change_count": 44,
+                "reference_mean_example_score": 0.0,
+                "mean_example_score_delta": 0.0,
+                "has_reference": true,
+                "format_compliant_count": 43,
+                "format_compliance_rate": 0.86,
+                "average_output_chars": 133.8,
+                "max_output_chars": 763,
+                "detection_metric_definition": "label_matched_f1_at_iou_0.5",
+                "detection_image_count": 50,
+                "detection_matched_count": 0,
+                "detection_predicted_count": 94,
+                "detection_gold_count": 148,
+                "detection_false_positive_count": 94,
+                "detection_false_negative_count": 148,
+                "detection_micro_precision_iou50": 0.0,
+                "detection_micro_recall_iou50": 0.0,
+                "detection_micro_f1_iou50": 0.0,
+                "detection_mean_image_f1_iou50": 0.0,
+                "detection_metric_source": "pycocotools.COCOeval",
+                "detection_coco_metric_definition": "AP@[IoU=0.50:0.95|area=all|maxDets=100]",
+                "detection_predictions_without_confidence": 91,
+                "detection_coco_ap": 0.0,
+                "detection_coco_ap50": 0.0,
+                "detection_coco_ap75": 0.0,
+                "detection_coco_ap_small": 0.0,
+                "detection_coco_ap_medium": 0.0,
+                "detection_coco_ap_large": 0.0,
+                "detection_coco_ar_max100": 0.0,
+                "primary_metric_name": "detection_micro_f1_iou50",
+                "primary_score": 0.0,
+                "reference_primary_metric_name": "detection_micro_f1_iou50",
+                "reference_primary_score": 0.0,
+                "primary_score_delta": 0.0
+              },
+              "coco_caption": {
+                "evaluation_schema_version": "task_native_metrics_v4",
+                "mean_example_score": 0.6724465875963374,
+                "correct": 34,
+                "total": 50,
+                "forget_count": 0,
+                "forget_rate": 0.0,
+                "reference_correct": 0,
+                "recovered_count": 0,
+                "behavior_comparable_count": 0,
+                "behavior_change_count": 0,
+                "reference_mean_example_score": null,
+                "mean_example_score_delta": null,
+                "has_reference": false,
+                "format_compliant_count": 50,
+                "format_compliance_rate": 1.0,
+                "average_output_chars": 73.32,
+                "max_output_chars": 143,
+                "caption_metric_source": "pycocoevalcap",
+                "caption_anchor_criterion_available": true,
+                "caption_anchor_metric_definition": "sentence_level_cider_at_least_0.5",
+                "caption_count": 50,
+                "caption_primary_score": 0.3820264512500167,
+                "caption_Bleu_1": 0.6202898550715648,
+                "caption_Bleu_2": 0.4380664035422775,
+                "caption_Bleu_3": 0.29755754524687666,
+                "caption_Bleu_4": 0.19394531135955803,
+                "caption_METEOR": 0.2675787980941853,
+                "caption_ROUGE_L": 0.47556989462828786,
+                "caption_CIDEr": 0.8785249369224911,
+                "primary_metric_name": "caption_composite_score",
+                "primary_score": 0.3820264512500167
+              }
+            }
+          },
+          {
+            "stage": 3,
+            "memory": {
+              "raw": 10,
+              "abstract": 2,
+              "anchor": 5,
+              "skill": 0
+            },
+            "tasks": {
+              "coco_detection": {
+                "evaluation_schema_version": "task_native_metrics_v4",
+                "mean_example_score": 0.0,
+                "correct": 0,
+                "total": 50,
+                "forget_count": 0,
+                "forget_rate": 0.0,
+                "reference_correct": 0,
+                "recovered_count": 0,
+                "behavior_comparable_count": 50,
+                "behavior_change_count": 0,
+                "reference_mean_example_score": 0.0,
+                "mean_example_score_delta": 0.0,
+                "has_reference": true,
+                "format_compliant_count": 43,
+                "format_compliance_rate": 0.86,
+                "average_output_chars": 133.8,
+                "max_output_chars": 763,
+                "detection_metric_definition": "label_matched_f1_at_iou_0.5",
+                "detection_image_count": 50,
+                "detection_matched_count": 0,
+                "detection_predicted_count": 94,
+                "detection_gold_count": 148,
+                "detection_false_positive_count": 94,
+                "detection_false_negative_count": 148,
+                "detection_micro_precision_iou50": 0.0,
+                "detection_micro_recall_iou50": 0.0,
+                "detection_micro_f1_iou50": 0.0,
+                "detection_mean_image_f1_iou50": 0.0,
+                "detection_metric_source": "pycocotools.COCOeval",
+                "detection_coco_metric_definition": "AP@[IoU=0.50:0.95|area=all|maxDets=100]",
+                "detection_predictions_without_confidence": 91,
+                "detection_coco_ap": 0.0,
+                "detection_coco_ap50": 0.0,
+                "detection_coco_ap75": 0.0,
+                "detection_coco_ap_small": 0.0,
+                "detection_coco_ap_medium": 0.0,
+                "detection_coco_ap_large": 0.0,
+                "detection_coco_ar_max100": 0.0,
+                "primary_metric_name": "detection_micro_f1_iou50",
+                "primary_score": 0.0,
+                "reference_primary_metric_name": "detection_micro_f1_iou50",
+                "reference_primary_score": 0.0,
+                "primary_score_delta": 0.0
+              },
+              "coco_caption": {
+                "evaluation_schema_version": "task_native_metrics_v4",
+                "mean_example_score": 0.6724465875963374,
+                "correct": 34,
+                "total": 50,
+                "forget_count": 0,
+                "forget_rate": 0.0,
+                "reference_correct": 34,
+                "recovered_count": 0,
+                "behavior_comparable_count": 50,
+                "behavior_change_count": 0,
+                "reference_mean_example_score": 0.6724465875963374,
+                "mean_example_score_delta": 0.0,
+                "has_reference": true,
+                "format_compliant_count": 50,
+                "format_compliance_rate": 1.0,
+                "average_output_chars": 73.32,
+                "max_output_chars": 143,
+                "caption_metric_source": "pycocoevalcap",
+                "caption_anchor_criterion_available": true,
+                "caption_anchor_metric_definition": "sentence_level_cider_at_least_0.5",
+                "caption_count": 50,
+                "caption_primary_score": 0.3820264512500167,
+                "caption_Bleu_1": 0.6202898550715648,
+                "caption_Bleu_2": 0.4380664035422775,
+                "caption_Bleu_3": 0.29755754524687666,
+                "caption_Bleu_4": 0.19394531135955803,
+                "caption_METEOR": 0.2675787980941853,
+                "caption_ROUGE_L": 0.47556989462828786,
+                "caption_CIDEr": 0.8785249369224911,
+                "primary_metric_name": "caption_composite_score",
+                "primary_score": 0.3820264512500167,
+                "reference_primary_metric_name": "caption_composite_score",
+                "reference_primary_score": 0.3820264512500167,
+                "primary_score_delta": 0.0
+              },
+              "refcoco_grounding": {
+                "evaluation_schema_version": "task_native_metrics_v4",
+                "mean_example_score": 0.0,
+                "correct": 0,
+                "total": 50,
+                "forget_count": 0,
+                "forget_rate": 0.0,
+                "reference_correct": 0,
+                "recovered_count": 0,
+                "behavior_comparable_count": 0,
+                "behavior_change_count": 0,
+                "reference_mean_example_score": null,
+                "mean_example_score_delta": null,
+                "has_reference": false,
+                "format_compliant_count": 48,
+                "format_compliance_rate": 0.96,
+                "average_output_chars": 34.54,
+                "max_output_chars": 73,
+                "grounding_metric_definition": "accuracy_at_iou_0.5",
+                "grounding_count": 50,
+                "grounding_mean_iou": 0.08588896248129359,
+                "grounding_accuracy_iou50": 0.0,
+                "grounding_accuracy_iou75": 0.0,
+                "primary_metric_name": "grounding_accuracy_iou50",
+                "primary_score": 0.0
+              }
+            }
+          },
+          {
+            "stage": 4,
+            "memory": {
+              "raw": 10,
+              "abstract": 2,
+              "anchor": 7,
+              "skill": 0
+            },
+            "tasks": {
+              "coco_detection": {
+                "evaluation_schema_version": "task_native_metrics_v4",
+                "mean_example_score": 0.0,
+                "correct": 0,
+                "total": 50,
+                "forget_count": 0,
+                "forget_rate": 0.0,
+                "reference_correct": 0,
+                "recovered_count": 0,
+                "behavior_comparable_count": 50,
+                "behavior_change_count": 0,
+                "reference_mean_example_score": 0.0,
+                "mean_example_score_delta": 0.0,
+                "has_reference": true,
+                "format_compliant_count": 43,
+                "format_compliance_rate": 0.86,
+                "average_output_chars": 133.8,
+                "max_output_chars": 763,
+                "detection_metric_definition": "label_matched_f1_at_iou_0.5",
+                "detection_image_count": 50,
+                "detection_matched_count": 0,
+                "detection_predicted_count": 94,
+                "detection_gold_count": 148,
+                "detection_false_positive_count": 94,
+                "detection_false_negative_count": 148,
+                "detection_micro_precision_iou50": 0.0,
+                "detection_micro_recall_iou50": 0.0,
+                "detection_micro_f1_iou50": 0.0,
+                "detection_mean_image_f1_iou50": 0.0,
+                "detection_metric_source": "pycocotools.COCOeval",
+                "detection_coco_metric_definition": "AP@[IoU=0.50:0.95|area=all|maxDets=100]",
+                "detection_predictions_without_confidence": 91,
+                "detection_coco_ap": 0.0,
+                "detection_coco_ap50": 0.0,
+                "detection_coco_ap75": 0.0,
+                "detection_coco_ap_small": 0.0,
+                "detection_coco_ap_medium": 0.0,
+                "detection_coco_ap_large": 0.0,
+                "detection_coco_ar_max100": 0.0,
+                "primary_metric_name": "detection_micro_f1_iou50",
+                "primary_score": 0.0,
+                "reference_primary_metric_name": "detection_micro_f1_iou50",
+                "reference_primary_score": 0.0,
+                "primary_score_delta": 0.0
+              },
+              "coco_caption": {
+                "evaluation_schema_version": "task_native_metrics_v4",
+                "mean_example_score": 0.6724465875963374,
+                "correct": 34,
+                "total": 50,
+                "forget_count": 0,
+                "forget_rate": 0.0,
+                "reference_correct": 34,
+                "recovered_count": 0,
+                "behavior_comparable_count": 50,
+                "behavior_change_count": 0,
+                "reference_mean_example_score": 0.6724465875963374,
+                "mean_example_score_delta": 0.0,
+                "has_reference": true,
+                "format_compliant_count": 50,
+                "format_compliance_rate": 1.0,
+                "average_output_chars": 73.32,
+                "max_output_chars": 143,
+                "caption_metric_source": "pycocoevalcap",
+                "caption_anchor_criterion_available": true,
+                "caption_anchor_metric_definition": "sentence_level_cider_at_least_0.5",
+                "caption_count": 50,
+                "caption_primary_score": 0.3820264512500167,
+                "caption_Bleu_1": 0.6202898550715648,
+                "caption_Bleu_2": 0.4380664035422775,
+                "caption_Bleu_3": 0.29755754524687666,
+                "caption_Bleu_4": 0.19394531135955803,
+                "caption_METEOR": 0.2675787980941853,
+                "caption_ROUGE_L": 0.47556989462828786,
+                "caption_CIDEr": 0.8785249369224911,
+                "primary_metric_name": "caption_composite_score",
+                "primary_score": 0.3820264512500167,
+                "reference_primary_metric_name": "caption_composite_score",
+                "reference_primary_score": 0.3820264512500167,
+                "primary_score_delta": 0.0
+              },
+              "refcoco_grounding": {
+                "evaluation_schema_version": "task_native_metrics_v4",
+                "mean_example_score": 0.0,
+                "correct": 0,
+                "total": 50,
+                "forget_count": 0,
+                "forget_rate": 0.0,
+                "reference_correct": 0,
+                "recovered_count": 0,
+                "behavior_comparable_count": 50,
+                "behavior_change_count": 0,
+                "reference_mean_example_score": 0.0,
+                "mean_example_score_delta": 0.0,
+                "has_reference": true,
+                "format_compliant_count": 48,
+                "format_compliance_rate": 0.96,
+                "average_output_chars": 34.54,
+                "max_output_chars": 73,
+                "grounding_metric_definition": "accuracy_at_iou_0.5",
+                "grounding_count": 50,
+                "grounding_mean_iou": 0.08588896248129359,
+                "grounding_accuracy_iou50": 0.0,
+                "grounding_accuracy_iou75": 0.0,
+                "primary_metric_name": "grounding_accuracy_iou50",
+                "primary_score": 0.0,
+                "reference_primary_metric_name": "grounding_accuracy_iou50",
+                "reference_primary_score": 0.0,
+                "primary_score_delta": 0.0
+              },
+              "vqav2": {
+                "evaluation_schema_version": "task_native_metrics_v4",
+                "mean_example_score": 0.19333333333333333,
+                "correct": 9,
+                "total": 50,
+                "forget_count": 0,
+                "forget_rate": 0.0,
+                "reference_correct": 0,
+                "recovered_count": 0,
+                "behavior_comparable_count": 0,
+                "behavior_change_count": 0,
+                "reference_mean_example_score": null,
+                "mean_example_score_delta": null,
+                "has_reference": false,
+                "format_compliant_count": 22,
+                "format_compliance_rate": 0.44,
+                "average_output_chars": 29.4,
+                "max_output_chars": 111,
+                "primary_metric_name": "vqa_consensus_accuracy",
+                "primary_score": 0.19333333333333333,
+                "vqa_metric_definition": "min_matching_annotators_over_3"
+              }
+            }
+          }
+        ],
+        "final_average_100": 14.38399461458375,
+        "average_forgetting_pp": 0.0,
+        "BWT_pp": 0.0
+      }
+    },
+    "native_pixels_50_10_100": {
+      "raw_zero_shot": {
+        "cost": {
+          "calls": 400,
+          "model_seconds": 490.658988075098,
+          "peak_allocated_bytes": 16853378048,
+          "grouped": {
+            "category": {
+              "online_execution": {
+                "calls": 400,
+                "seconds": 490.658988075098
+              }
+            },
+            "phase": {
+              "final_answer": {
+                "calls": 400,
+                "seconds": 490.658988075098
+              }
+            },
+            "scope": {
+              "online": {
+                "calls": 400,
+                "seconds": 490.658988075098
+              }
+            }
+          }
+        },
+        "exit": {
+          "exit_code": 0,
+          "started": 1792613188.274677,
+          "ended": 1792613693.8639622,
+          "elapsed_seconds": 505.58928537368774,
+          "peak_allocated_bytes": 16853378048,
+          "all_parameters_frozen": true
+        },
+        "failed": false,
+        "completed_stages": null,
+        "R": null,
+        "memory": {},
+        "memory_gates": {
+          "records": 0,
+          "accepted": 0,
+          "reasons": {},
+          "rejection_reasons": {},
+          "components": {}
+        },
+        "prompt_gates": {
+          "records": 0,
+          "accepted": 0,
+          "reasons": {},
+          "rejection_reasons": {},
+          "components": {}
+        },
+        "test_read_only": {
+          "checks": 0,
+          "all_passed": null
+        },
+        "failure_events": {
+          "count": 0,
+          "scope_counts": {},
+          "note": "execution events, not distinct samples; repeated stage/final evaluations retained"
+        },
+        "stage_metrics": [],
+        "metrics": {
+          "overall_metrics": {
+            "evaluation_schema_version": "task_native_metrics_v4",
+            "mean_example_score": null,
+            "correct": 275,
+            "total": 400,
+            "forget_count": 0,
+            "forget_rate": 0.0,
+            "reference_correct": 0,
+            "recovered_count": 0,
+            "behavior_comparable_count": 0,
+            "behavior_change_count": 0,
+            "reference_mean_example_score": null,
+            "mean_example_score_delta": null,
+            "has_reference": false,
+            "format_compliant_count": 376,
+            "format_compliance_rate": 0.94,
+            "average_output_chars": 69.0875,
+            "max_output_chars": 900,
+            "caption_metric_source": "pycocoevalcap",
+            "caption_anchor_criterion_available": true,
+            "caption_anchor_metric_definition": "sentence_level_cider_at_least_0.5",
+            "caption_count": 100,
+            "caption_primary_score": 0.3483926467614271,
+            "caption_Bleu_1": 0.5730337078647662,
+            "caption_Bleu_2": 0.38976213935192716,
+            "caption_Bleu_3": 0.2446620611421478,
+            "caption_Bleu_4": 0.14399979695973694,
+            "caption_METEOR": 0.2602844391814417,
+            "caption_ROUGE_L": 0.4756602149480765,
+            "caption_CIDEr": 0.6582297402624963,
+            "detection_metric_definition": "label_matched_f1_at_iou_0.5",
+            "detection_image_count": 100,
+            "detection_matched_count": 116,
+            "detection_predicted_count": 155,
+            "detection_gold_count": 353,
+            "detection_false_positive_count": 39,
+            "detection_false_negative_count": 237,
+            "detection_micro_precision_iou50": 0.7483870967741936,
+            "detection_micro_recall_iou50": 0.3286118980169972,
+            "detection_micro_f1_iou50": 0.4566929133858268,
+            "detection_mean_image_f1_iou50": 0.5974841269841269,
+            "detection_metric_source": "pycocotools.COCOeval",
+            "detection_coco_metric_definition": "AP@[IoU=0.50:0.95|area=all|maxDets=100]",
+            "detection_predictions_without_confidence": 152,
+            "detection_coco_ap": 0.5410499331438491,
+            "detection_coco_ap50": 0.676472135100408,
+            "detection_coco_ap75": 0.5916336949001094,
+            "detection_coco_ap_small": 0.0009781307801109782,
+            "detection_coco_ap_medium": 0.28935926626962494,
+            "detection_coco_ap_large": 0.6813894835394187,
+            "detection_coco_ar_max100": 0.555343504105114,
+            "grounding_metric_definition": "accuracy_at_iou_0.5",
+            "grounding_count": 100,
+            "grounding_mean_iou": 0.8363775466428431,
+            "grounding_accuracy_iou50": 0.92,
+            "grounding_accuracy_iou75": 0.86,
+            "primary_metric_name": "mixed_tasks_not_comparable",
+            "primary_score": null,
+            "mixed_task_kinds": [
+              "coco_caption",
+              "coco_detection",
+              "refcoco_grounding",
+              "vqa"
+            ]
+          },
+          "per_task_metrics": {
+            "coco_detection": {
+              "evaluation_schema_version": "task_native_metrics_v4",
+              "mean_example_score": 0.5974841269841269,
+              "correct": 62,
+              "total": 100,
+              "forget_count": 0,
+              "forget_rate": 0.0,
+              "reference_correct": 0,
+              "recovered_count": 0,
+              "behavior_comparable_count": 0,
+              "behavior_change_count": 0,
+              "reference_mean_example_score": null,
+              "mean_example_score_delta": null,
+              "has_reference": false,
+              "format_compliant_count": 83,
+              "format_compliance_rate": 0.83,
+              "average_output_chars": 147.35,
+              "max_output_chars": 900,
+              "detection_metric_definition": "label_matched_f1_at_iou_0.5",
+              "detection_image_count": 100,
+              "detection_matched_count": 116,
+              "detection_predicted_count": 155,
+              "detection_gold_count": 353,
+              "detection_false_positive_count": 39,
+              "detection_false_negative_count": 237,
+              "detection_micro_precision_iou50": 0.7483870967741936,
+              "detection_micro_recall_iou50": 0.3286118980169972,
+              "detection_micro_f1_iou50": 0.4566929133858268,
+              "detection_mean_image_f1_iou50": 0.5974841269841269,
+              "detection_metric_source": "pycocotools.COCOeval",
+              "detection_coco_metric_definition": "AP@[IoU=0.50:0.95|area=all|maxDets=100]",
+              "detection_predictions_without_confidence": 152,
+              "detection_coco_ap": 0.5410499331438491,
+              "detection_coco_ap50": 0.676472135100408,
+              "detection_coco_ap75": 0.5916336949001094,
+              "detection_coco_ap_small": 0.0009781307801109782,
+              "detection_coco_ap_medium": 0.28935926626962494,
+              "detection_coco_ap_large": 0.6813894835394187,
+              "detection_coco_ar_max100": 0.555343504105114,
+              "primary_metric_name": "detection_micro_f1_iou50",
+              "primary_score": 0.4566929133858268
+            },
+            "coco_caption": {
+              "evaluation_schema_version": "task_native_metrics_v4",
+              "mean_example_score": 0.5899691106158363,
+              "correct": 56,
+              "total": 100,
+              "forget_count": 0,
+              "forget_rate": 0.0,
+              "reference_correct": 0,
+              "recovered_count": 0,
+              "behavior_comparable_count": 0,
+              "behavior_change_count": 0,
+              "reference_mean_example_score": null,
+              "mean_example_score_delta": null,
+              "has_reference": false,
+              "format_compliant_count": 100,
+              "format_compliance_rate": 1.0,
+              "average_output_chars": 78.4,
+              "max_output_chars": 122,
+              "caption_metric_source": "pycocoevalcap",
+              "caption_anchor_criterion_available": true,
+              "caption_anchor_metric_definition": "sentence_level_cider_at_least_0.5",
+              "caption_count": 100,
+              "caption_primary_score": 0.3483926467614271,
+              "caption_Bleu_1": 0.5730337078647662,
+              "caption_Bleu_2": 0.38976213935192716,
+              "caption_Bleu_3": 0.2446620611421478,
+              "caption_Bleu_4": 0.14399979695973694,
+              "caption_METEOR": 0.2602844391814417,
+              "caption_ROUGE_L": 0.4756602149480765,
+              "caption_CIDEr": 0.6582297402624963,
+              "primary_metric_name": "caption_composite_score",
+              "primary_score": 0.3483926467614271
+            },
+            "refcoco_grounding": {
+              "evaluation_schema_version": "task_native_metrics_v4",
+              "mean_example_score": 0.92,
+              "correct": 92,
+              "total": 100,
+              "forget_count": 0,
+              "forget_rate": 0.0,
+              "reference_correct": 0,
+              "recovered_count": 0,
+              "behavior_comparable_count": 0,
+              "behavior_change_count": 0,
+              "reference_mean_example_score": null,
+              "mean_example_score_delta": null,
+              "has_reference": false,
+              "format_compliant_count": 100,
+              "format_compliance_rate": 1.0,
+              "average_output_chars": 42.13,
+              "max_output_chars": 51,
+              "grounding_metric_definition": "accuracy_at_iou_0.5",
+              "grounding_count": 100,
+              "grounding_mean_iou": 0.8363775466428431,
+              "grounding_accuracy_iou50": 0.92,
+              "grounding_accuracy_iou75": 0.86,
+              "primary_metric_name": "grounding_accuracy_iou50",
+              "primary_score": 0.92
+            },
+            "vqav2": {
+              "evaluation_schema_version": "task_native_metrics_v4",
+              "mean_example_score": 0.68,
+              "correct": 65,
+              "total": 100,
+              "forget_count": 0,
+              "forget_rate": 0.0,
+              "reference_correct": 0,
+              "recovered_count": 0,
+              "behavior_comparable_count": 0,
+              "behavior_change_count": 0,
+              "reference_mean_example_score": null,
+              "mean_example_score_delta": null,
+              "has_reference": false,
+              "format_compliant_count": 93,
+              "format_compliance_rate": 0.93,
+              "average_output_chars": 8.47,
+              "max_output_chars": 40,
+              "primary_metric_name": "vqa_consensus_accuracy",
+              "primary_score": 0.68,
+              "vqa_metric_definition": "min_matching_annotators_over_3"
+            }
+          }
+        }
+      },
+      "static_harness": {
+        "cost": {
+          "calls": 1104,
+          "model_seconds": 2885.368641183828,
+          "peak_allocated_bytes": 17076706304,
+          "grouped": {
+            "category": {
+              "reporting_test": {
+                "calls": 1104,
+                "seconds": 2885.368641183828
+              }
+            },
+            "phase": {
+              "structure_task": {
+                "calls": 400,
+                "seconds": 1507.968737703166
+              },
+              "plan_workflow": {
+                "calls": 304,
+                "seconds": 841.4192775217816
+              },
+              "final_answer": {
+                "calls": 400,
+                "seconds": 535.9806259588804
+              }
+            },
+            "scope": {
+              "test": {
+                "calls": 1104,
+                "seconds": 2885.368641183828
+              }
+            }
+          }
+        },
+        "exit": {
+          "exit_code": 0,
+          "started": 1792613188.2693021,
+          "ended": 1792616091.4985502,
+          "elapsed_seconds": 2903.2292482852936,
+          "peak_allocated_bytes": 17076706304,
+          "all_parameters_frozen": true
+        },
+        "failed": false,
+        "completed_stages": null,
+        "R": null,
+        "memory": {
+          "raw": 0,
+          "abstract": 0,
+          "anchor": 0,
+          "skills": 0
+        },
+        "memory_gates": {
+          "records": 0,
+          "accepted": 0,
+          "reasons": {},
+          "rejection_reasons": {},
+          "components": {}
+        },
+        "prompt_gates": {
+          "records": 0,
+          "accepted": 0,
+          "reasons": {},
+          "rejection_reasons": {},
+          "components": {}
+        },
+        "test_read_only": {
+          "checks": 4,
+          "all_passed": true
+        },
+        "failure_events": {
+          "count": 0,
+          "scope_counts": {},
+          "note": "execution events, not distinct samples; repeated stage/final evaluations retained"
+        },
+        "stage_metrics": [],
+        "test_history": [
+          {
+            "task": "coco_detection",
+            "metrics": {
+              "evaluation_schema_version": "task_native_metrics_v4",
+              "primary_metric_name": "detection_micro_f1_iou50",
+              "primary_score": 0.5377049180327869,
+              "primary_score_delta": null,
+              "mean_example_score": 0.6306562977327682,
+              "correct": 68,
+              "total": 100,
+              "format_compliance_rate": 0.95,
+              "average_output_chars": 179.1,
+              "max_output_chars": 1442,
+              "forget_count": 0,
+              "forget_rate": 0.0,
+              "recovered_count": 0,
+              "behavior_comparable_count": 0,
+              "behavior_change_count": 0,
+              "detection_metric_definition": "label_matched_f1_at_iou_0.5",
+              "detection_image_count": 100,
+              "detection_matched_count": 164,
+              "detection_predicted_count": 257,
+              "detection_gold_count": 353,
+              "detection_false_positive_count": 93,
+              "detection_false_negative_count": 189,
+              "detection_micro_precision_iou50": 0.6381322957198443,
+              "detection_micro_recall_iou50": 0.46458923512747874,
+              "detection_micro_f1_iou50": 0.5377049180327869,
+              "detection_mean_image_f1_iou50": 0.6306562977327682,
+              "detection_metric_source": "pycocotools.COCOeval",
+              "detection_coco_metric_definition": "AP@[IoU=0.50:0.95|area=all|maxDets=100]",
+              "detection_predictions_without_confidence": 248,
+              "detection_coco_ap": 0.5733636065692019,
+              "detection_coco_ap50": 0.7693464430032965,
+              "detection_coco_ap75": 0.61293764373204,
+              "detection_coco_ap_small": 0.04176612990969426,
+              "detection_coco_ap_medium": 0.3750481770920315,
+              "detection_coco_ap_large": 0.6927609458044273,
+              "detection_coco_ar_max100": 0.590569339501228
+            }
+          },
+          {
+            "task": "coco_caption",
+            "metrics": {
+              "evaluation_schema_version": "task_native_metrics_v4",
+              "primary_metric_name": "caption_composite_score",
+              "primary_score": 0.36900235962598843,
+              "primary_score_delta": null,
+              "mean_example_score": 0.6299065407179282,
+              "correct": 61,
+              "total": 100,
+              "format_compliance_rate": 1.0,
+              "average_output_chars": 81.29,
+              "max_output_chars": 151,
+              "forget_count": 0,
+              "forget_rate": 0.0,
+              "recovered_count": 0,
+              "behavior_comparable_count": 0,
+              "behavior_change_count": 0,
+              "caption_metric_source": "pycocoevalcap",
+              "caption_anchor_criterion_available": true,
+              "caption_anchor_metric_definition": "sentence_level_cider_at_least_0.5",
+              "caption_count": 100,
+              "caption_primary_score": 0.36900235962598843,
+              "caption_Bleu_1": 0.5990597716584292,
+              "caption_Bleu_2": 0.4174213304737884,
+              "caption_Bleu_3": 0.27024006590593475,
+              "caption_Bleu_4": 0.1662288107701628,
+              "caption_METEOR": 0.26946721418556885,
+              "caption_ROUGE_L": 0.4902493988723377,
+              "caption_CIDEr": 0.7051381306474853
+            }
+          },
+          {
+            "task": "refcoco_grounding",
+            "metrics": {
+              "evaluation_schema_version": "task_native_metrics_v4",
+              "primary_metric_name": "grounding_accuracy_iou50",
+              "primary_score": 0.84,
+              "primary_score_delta": null,
+              "mean_example_score": 0.84,
+              "correct": 84,
+              "total": 100,
+              "format_compliance_rate": 0.98,
+              "average_output_chars": 51.99,
+              "max_output_chars": 111,
+              "forget_count": 0,
+              "forget_rate": 0.0,
+              "recovered_count": 0,
+              "behavior_comparable_count": 0,
+              "behavior_change_count": 0,
+              "grounding_metric_definition": "accuracy_at_iou_0.5",
+              "grounding_count": 100,
+              "grounding_mean_iou": 0.7544236003252103,
+              "grounding_accuracy_iou50": 0.84,
+              "grounding_accuracy_iou75": 0.76
+            }
+          },
+          {
+            "task": "vqav2",
+            "metrics": {
+              "evaluation_schema_version": "task_native_metrics_v4",
+              "primary_metric_name": "vqa_consensus_accuracy",
+              "primary_score": 0.37666666666666665,
+              "primary_score_delta": null,
+              "mean_example_score": 0.3766666666666667,
+              "correct": 36,
+              "total": 100,
+              "format_compliance_rate": 0.62,
+              "average_output_chars": 19.4,
+              "max_output_chars": 86,
+              "forget_count": 0,
+              "forget_rate": 0.0,
+              "recovered_count": 0,
+              "behavior_comparable_count": 0,
+              "behavior_change_count": 0,
+              "vqa_metric_definition": "min_matching_annotators_over_3"
+            }
+          }
+        ]
+      },
+      "stability_hcl": {
+        "cost": {
+          "calls": 949,
+          "model_seconds": 2430.535524813924,
+          "peak_allocated_bytes": 20571620352,
+          "grouped": {
+            "category": {
+              "historical_validation": {
+                "calls": 402,
+                "seconds": 909.6014871237567
+              },
+              "online_execution": {
+                "calls": 204,
+                "seconds": 476.32923341554124
+              },
+              "experience_consolidation": {
+                "calls": 4,
+                "seconds": 17.065807205974124
+              },
+              "candidate_generation": {
+                "calls": 8,
+                "seconds": 180.51439646817744
+              },
+              "reporting_test": {
+                "calls": 331,
+                "seconds": 847.0246006004745
+              }
+            },
+            "phase": {
+              "structure_task": {
+                "calls": 234,
+                "seconds": 765.964531882084
+              },
+              "plan_workflow": {
+                "calls": 193,
+                "seconds": 516.2530343016842
+              },
+              "final_answer": {
+                "calls": 280,
+                "seconds": 557.4989303316688
+              },
+              "select_memory": {
+                "calls": 230,
+                "seconds": 393.2388246243354
+              },
+              "abstract_memory": {
+                "calls": 2,
+                "seconds": 8.78420792601537
+              },
+              "anchor_selection": {
+                "calls": 2,
+                "seconds": 8.281599279958755
+              },
+              "generate_artifact_candidates": {
+                "calls": 8,
+                "seconds": 180.51439646817744
+              }
+            },
+            "scope": {
+              "memory_gate:stable": {
+                "calls": 111,
+                "seconds": 276.6774522229098
+              },
+              "train:coco_detection_batch_1": {
+                "calls": 98,
+                "seconds": 227.5122102338355
+              },
+              "online": {
+                "calls": 12,
+                "seconds": 197.58020367415156
+              },
+              "memory_gate:candidate": {
+                "calls": 40,
+                "seconds": 69.66014431614894
+              },
+              "candidate:task_interface_structuring:h0:c1:enhanced_evidence_summary": {
+                "calls": 31,
+                "seconds": 76.48370022966992
+              },
+              "candidate:task_interface_structuring:h0:c1:expanded_constraint_list": {
+                "calls": 13,
+                "seconds": 37.40260557795409
+              },
+              "candidate:task_interface_structuring:h0:c1:enhanced_goal_content": {
+                "calls": 19,
+                "seconds": 51.25616743799765
+              },
+              "candidate:router_workflow:h1:c2:enhanced_rationale": {
+                "calls": 30,
+                "seconds": 60.64754425303545
+              },
+              "candidate:router_workflow:h1:c2:optimized_steps": {
+                "calls": 30,
+                "seconds": 68.35999329306651
+              },
+              "candidate:router_workflow:h1:c2:enhanced_memory_selection": {
+                "calls": 30,
+                "seconds": 55.40899273788091
+              },
+              "train:coco_detection_batch_2": {
+                "calls": 93,
+                "seconds": 223.36071433045436
+              },
+              "candidate:task_interface_structuring:h1:c5:Candidate 1": {
+                "calls": 25,
+                "seconds": 65.12814212217927
+              },
+              "candidate:task_interface_structuring:h1:c5:Candidate 2": {
+                "calls": 13,
+                "seconds": 39.908896323875524
+              },
+              "candidate:router_workflow:h1:c6:optimized_memory_selection": {
+                "calls": 30,
+                "seconds": 52.40058277989738
+              },
+              "candidate:router_workflow:h1:c6:enhanced_tool_selection": {
+                "calls": 30,
+                "seconds": 56.26726582914125
+              },
+              "test:after_coco_detection:coco_detection": {
+                "calls": 331,
+                "seconds": 847.0246006004745
+              },
+              "train:coco_caption_batch_1": {
+                "calls": 13,
+                "seconds": 25.45630885125138
+              }
+            }
+          }
+        },
+        "exit": null,
+        "failed": true,
+        "completed_stages": 1,
+        "R": [
+          [
+            0.5964343598055105,
+            null,
+            null,
+            null
+          ]
+        ],
+        "memory": {
+          "raw": 10,
+          "abstract": 2,
+          "anchor": 20,
+          "skills": 0
+        },
+        "memory_gates": {
+          "records": 2,
+          "accepted": 1,
+          "reasons": {
+            "memory_candidate_passed_commit_gate": 1,
+            "memory_candidate_rejected": 1
+          },
+          "rejection_reasons": {
+            "current_task_primary_score_delta_below_minimum": 1,
+            "current_task_correct_gain_below_minimum": 1
+          },
+          "components": {
+            "memory": 2
+          }
+        },
+        "prompt_gates": {
+          "records": 8,
+          "accepted": 1,
+          "reasons": {
+            "candidate_passed_commit_gate": 1,
+            "no_candidate_passed_commit_gate": 7
+          },
+          "rejection_reasons": {},
+          "components": {
+            "task_interface_structuring": 2,
+            "router_workflow": 2,
+            "memory_selector": 2,
+            "router_context": 2
+          }
+        },
+        "test_read_only": {
+          "checks": 1,
+          "all_passed": true
+        },
+        "failure_events": {
+          "count": 0,
+          "scope_counts": {},
+          "note": "execution events, not distinct samples; repeated stage/final evaluations retained"
+        },
+        "stage_metrics": [
+          {
+            "stage": 1,
+            "memory": {
+              "raw": 10,
+              "abstract": 2,
+              "anchor": 20,
+              "skill": 0
+            },
+            "tasks": {
+              "coco_detection": {
+                "evaluation_schema_version": "task_native_metrics_v4",
+                "mean_example_score": 0.6820963073031723,
+                "correct": 73,
+                "total": 100,
+                "forget_count": 0,
+                "forget_rate": 0.0,
+                "reference_correct": 0,
+                "recovered_count": 0,
+                "behavior_comparable_count": 0,
+                "behavior_change_count": 0,
+                "reference_mean_example_score": null,
+                "mean_example_score_delta": null,
+                "has_reference": false,
+                "format_compliant_count": 98,
+                "format_compliance_rate": 0.98,
+                "average_output_chars": 196.13,
+                "max_output_chars": 828,
+                "detection_metric_definition": "label_matched_f1_at_iou_0.5",
+                "detection_image_count": 100,
+                "detection_matched_count": 184,
+                "detection_predicted_count": 264,
+                "detection_gold_count": 353,
+                "detection_false_positive_count": 80,
+                "detection_false_negative_count": 169,
+                "detection_micro_precision_iou50": 0.696969696969697,
+                "detection_micro_recall_iou50": 0.5212464589235127,
+                "detection_micro_f1_iou50": 0.5964343598055105,
+                "detection_mean_image_f1_iou50": 0.6820963073031723,
+                "detection_metric_source": "pycocotools.COCOeval",
+                "detection_coco_metric_definition": "AP@[IoU=0.50:0.95|area=all|maxDets=100]",
+                "detection_predictions_without_confidence": 262,
+                "detection_coco_ap": 0.5891757019634134,
+                "detection_coco_ap50": 0.7729462426762156,
+                "detection_coco_ap75": 0.6084415020101077,
+                "detection_coco_ap_small": 0.036790415407500374,
+                "detection_coco_ap_medium": 0.37137169960426225,
+                "detection_coco_ap_large": 0.7169187160148288,
+                "detection_coco_ar_max100": 0.6074186895549125,
+                "primary_metric_name": "detection_micro_f1_iou50",
+                "primary_score": 0.5964343598055105
+              }
+            }
+          }
+        ]
+      },
+      "plasticity_hcl": {
+        "cost": {
+          "calls": 1706,
+          "model_seconds": 4567.290366907488,
+          "peak_allocated_bytes": 20693019136,
+          "grouped": {
+            "category": {
+              "historical_validation": {
+                "calls": 1066,
+                "seconds": 2671.177890437306
+              },
+              "online_execution": {
+                "calls": 288,
+                "seconds": 675.104554604739
+              },
+              "experience_consolidation": {
+                "calls": 7,
+                "seconds": 38.488813324132934
+              },
+              "candidate_generation": {
+                "calls": 12,
+                "seconds": 290.5877316398546
+              },
+              "reporting_test": {
+                "calls": 333,
+                "seconds": 891.9313769014552
+              }
+            },
+            "phase": {
+              "structure_task": {
+                "calls": 349,
+                "seconds": 1249.9962895348435
+              },
+              "plan_workflow": {
+                "calls": 349,
+                "seconds": 971.842503425898
+              },
+              "final_answer": {
+                "calls": 557,
+                "seconds": 1149.7806346182479
+              },
+              "select_memory": {
+                "calls": 409,
+                "seconds": 832.2742726326687
+              },
+              "abstract_memory": {
+                "calls": 3,
+                "seconds": 11.54339542996604
+              },
+              "anchor_selection": {
+                "calls": 3,
+                "seconds": 12.171761856181547
+              },
+              "generate_artifact_candidates": {
+                "calls": 12,
+                "seconds": 290.5877316398546
+              },
+              "skill_evolution": {
+                "calls": 1,
+                "seconds": 14.773656037985347
+              },
+              "select_skill": {
+                "calls": 23,
+                "seconds": 34.32012173184194
+              }
+            },
+            "scope": {
+              "memory_gate:stable": {
+                "calls": 113,
+                "seconds": 309.4129230292747
+              },
+              "train:coco_detection_batch_1": {
+                "calls": 98,
+                "seconds": 228.0052764134016
+              },
+              "online": {
+                "calls": 19,
+                "seconds": 329.07654496398754
+              },
+              "memory_gate:candidate": {
+                "calls": 139,
+                "seconds": 306.7338821818121
+              },
+              "candidate:task_interface_structuring:h0:c1:enhanced_evidence_summary": {
+                "calls": 37,
+                "seconds": 88.46927654207684
+              },
+              "candidate:task_interface_structuring:h0:c1:expanded_constraint_list": {
+                "calls": 16,
+                "seconds": 45.48584353667684
+              },
+              "candidate:task_interface_structuring:h0:c1:enhanced_goal_content": {
+                "calls": 16,
+                "seconds": 42.314233777229674
+              },
+              "candidate:router_workflow:h1:c2:enhanced_rationale": {
+                "calls": 30,
+                "seconds": 60.713481115177274
+              },
+              "candidate:router_workflow:h1:c2:optimized_steps": {
+                "calls": 30,
+                "seconds": 59.54405163694173
+              },
+              "candidate:router_workflow:h1:c2:enhanced_memory_selection": {
+                "calls": 30,
+                "seconds": 59.48963068029843
+              },
+              "candidate:memory_selector:h1:c3:focus_on_high_score": {
+                "calls": 20,
+                "seconds": 36.419061334920116
+              },
+              "candidate:memory_selector:h1:c3:risk_minimization": {
+                "calls": 14,
+                "seconds": 28.204347326071
+              },
+              "candidate:router_context:h1:c4:enhanced_memory_usage_rule": {
+                "calls": 10,
+                "seconds": 17.53893610998057
+              },
+              "candidate:router_context:h1:c4:optimized_skill_selection": {
+                "calls": 10,
+                "seconds": 17.534676439943723
+              },
+              "candidate:router_context:h1:c4:enhanced_tool_usage": {
+                "calls": 10,
+                "seconds": 17.506963720195927
+              },
+              "train:coco_detection_batch_2": {
+                "calls": 94,
+                "seconds": 237.87192769162357
+              },
+              "candidate:task_interface_structuring:h1:c5:Candidate 1": {
+                "calls": 25,
+                "seconds": 62.23500040604267
+              },
+              "candidate:task_interface_structuring:h1:c5:Candidate 2": {
+                "calls": 34,
+                "seconds": 79.12277837493457
+              },
+              "candidate:router_workflow:h1:c6:enhanced_rationale": {
+                "calls": 28,
+                "seconds": 56.752440896234475
+              },
+              "candidate:router_workflow:h1:c6:optimized_steps": {
+                "calls": 30,
+                "seconds": 66.18975681322627
+              },
+              "candidate:router_workflow:h1:c6:enhanced_skill_selection": {
+                "calls": 30,
+                "seconds": 56.80781035893597
+              },
+              "test:after_coco_detection:coco_detection": {
+                "calls": 333,
+                "seconds": 891.9313769014552
+              },
+              "train:coco_caption_batch_1": {
+                "calls": 81,
+                "seconds": 177.99274681368843
+              },
+              "candidate:task_interface_structuring:h1:c9:enhanced_summary": {
+                "calls": 101,
+                "seconds": 273.3293476894032
+              },
+              "candidate:task_interface_structuring:h1:c9:goal_expansion": {
+                "calls": 55,
+                "seconds": 189.57821606181096
+              },
+              "candidate:task_interface_structuring:h1:c9:constraint_enhancement": {
+                "calls": 34,
+                "seconds": 154.1743093401892
+              },
+              "candidate:router_workflow:h1:c10:enhanced_rationale": {
+                "calls": 72,
+                "seconds": 203.10734428674914
+              },
+              "candidate:router_workflow:h1:c10:focus_on_correctness": {
+                "calls": 76,
+                "seconds": 229.26973144034855
+              },
+              "candidate:router_workflow:h1:c10:enhanced_memory_selection": {
+                "calls": 76,
+                "seconds": 152.4995125118876
+              },
+              "candidate:router_context:h2:c12:enhanced_reasoning": {
+                "calls": 30,
+                "seconds": 58.744334826944396
+              },
+              "train:coco_caption_batch_2": {
+                "calls": 15,
+                "seconds": 31.234603686025366
+              }
+            }
+          }
+        },
+        "exit": null,
+        "failed": true,
+        "completed_stages": 1,
+        "R": [
+          [
+            0.6121112929623568,
+            null,
+            null,
+            null
+          ]
+        ],
+        "memory": {
+          "raw": 10,
+          "abstract": 2,
+          "anchor": 30,
+          "skills": 0
+        },
+        "memory_gates": {
+          "records": 3,
+          "accepted": 1,
+          "reasons": {
+            "memory_candidate_passed_commit_gate": 1,
+            "memory_candidate_rejected": 2
+          },
+          "rejection_reasons": {
+            "current_task_primary_score_delta_below_minimum": 2,
+            "current_task_correct_gain_below_minimum": 1
+          },
+          "components": {
+            "memory": 3
+          }
+        },
+        "prompt_gates": {
+          "records": 12,
+          "accepted": 2,
+          "reasons": {
+            "candidate_passed_commit_gate": 2,
+            "no_candidate_passed_commit_gate": 10
+          },
+          "rejection_reasons": {},
+          "components": {
+            "task_interface_structuring": 3,
+            "router_workflow": 3,
+            "memory_selector": 3,
+            "router_context": 3
+          }
+        },
+        "test_read_only": {
+          "checks": 1,
+          "all_passed": true
+        },
+        "failure_events": {
+          "count": 0,
+          "scope_counts": {},
+          "note": "execution events, not distinct samples; repeated stage/final evaluations retained"
+        },
+        "stage_metrics": [
+          {
+            "stage": 1,
+            "memory": {
+              "raw": 10,
+              "abstract": 2,
+              "anchor": 20,
+              "skill": 0
+            },
+            "tasks": {
+              "coco_detection": {
+                "evaluation_schema_version": "task_native_metrics_v4",
+                "mean_example_score": 0.6825796500473846,
+                "correct": 73,
+                "total": 100,
+                "forget_count": 0,
+                "forget_rate": 0.0,
+                "reference_correct": 0,
+                "recovered_count": 0,
+                "behavior_comparable_count": 0,
+                "behavior_change_count": 0,
+                "reference_mean_example_score": null,
+                "mean_example_score_delta": null,
+                "has_reference": false,
+                "format_compliant_count": 95,
+                "format_compliance_rate": 0.95,
+                "average_output_chars": 207.31,
+                "max_output_chars": 1626,
+                "detection_metric_definition": "label_matched_f1_at_iou_0.5",
+                "detection_image_count": 100,
+                "detection_matched_count": 187,
+                "detection_predicted_count": 258,
+                "detection_gold_count": 353,
+                "detection_false_positive_count": 71,
+                "detection_false_negative_count": 166,
+                "detection_micro_precision_iou50": 0.7248062015503876,
+                "detection_micro_recall_iou50": 0.5297450424929179,
+                "detection_micro_f1_iou50": 0.6121112929623568,
+                "detection_mean_image_f1_iou50": 0.6825796500473846,
+                "detection_metric_source": "pycocotools.COCOeval",
+                "detection_coco_metric_definition": "AP@[IoU=0.50:0.95|area=all|maxDets=100]",
+                "detection_predictions_without_confidence": 256,
+                "detection_coco_ap": 0.5875174400048222,
+                "detection_coco_ap50": 0.7735570606502437,
+                "detection_coco_ap75": 0.609279234520447,
+                "detection_coco_ap_small": 0.03718318974754618,
+                "detection_coco_ap_medium": 0.36538304290876417,
+                "detection_coco_ap_large": 0.7186520768576559,
+                "detection_coco_ar_max100": 0.6051236746283187,
+                "primary_metric_name": "detection_micro_f1_iou50",
+                "primary_score": 0.6121112929623568
+              }
+            }
+          }
+        ]
+      }
+    },
+    "native_fail_closed_v1": {
+      "stability_hcl": {
+        "cost": {
+          "calls": 6534,
+          "model_seconds": 14441.107283783145,
+          "peak_allocated_bytes": 18700819456,
+          "grouped": {
+            "category": {
+              "online_execution": {
+                "calls": 569,
+                "seconds": 1098.292832127423
+              },
+              "experience_consolidation": {
+                "calls": 18,
+                "seconds": 146.27952471992467
+              },
+              "historical_validation": {
+                "calls": 4572,
+                "seconds": 9635.003828858025
+              },
+              "candidate_generation": {
+                "calls": 24,
+                "seconds": 566.7401813217439
+              },
+              "reporting_test": {
+                "calls": 1351,
+                "seconds": 2994.7909167560283
+              }
+            },
+            "phase": {
+              "final_answer": {
+                "calls": 2096,
+                "seconds": 2831.537038809969
+              },
+              "select_memory": {
+                "calls": 1558,
+                "seconds": 3107.9270249847323
+              },
+              "structure_task": {
+                "calls": 1186,
+                "seconds": 4026.732094598352
+              },
+              "plan_workflow": {
+                "calls": 1394,
+                "seconds": 3495.060067774495
+              },
+              "abstract_memory": {
+                "calls": 6,
+                "seconds": 28.687790686031803
+              },
+              "skill_evolution": {
+                "calls": 6,
+                "seconds": 97.22797389002517
+              },
+              "select_skill": {
+                "calls": 258,
+                "seconds": 266.83135157392826
+              },
+              "anchor_selection": {
+                "calls": 6,
+                "seconds": 20.363760143867694
+              },
+              "generate_artifact_candidates": {
+                "calls": 24,
+                "seconds": 566.7401813217439
+              }
+            },
+            "scope": {
+              "train:coco_caption_batch_1": {
+                "calls": 71,
+                "seconds": 198.5090230817441
+              },
+              "online": {
+                "calls": 42,
+                "seconds": 713.0197060416685
+              },
+              "memory_gate:candidate": {
+                "calls": 933,
+                "seconds": 1612.3967266984982
+              },
+              "candidate:task_interface_structuring:h1:c1:enhanced_summary": {
+                "calls": 104,
+                "seconds": 257.40175739710685
+              },
+              "candidate:task_interface_structuring:h1:c1:goal_expansion": {
+                "calls": 110,
+                "seconds": 257.70028703217395
+              },
+              "candidate:task_interface_structuring:h1:c1:constraint_enhancement": {
+                "calls": 47,
+                "seconds": 136.39453655586112
+              },
+              "candidate:router_context:h2:c4:enhanced_reasoning": {
+                "calls": 30,
+                "seconds": 57.28329147491604
+              },
+              "train:coco_caption_batch_2": {
+                "calls": 92,
+                "seconds": 179.1680551870959
+              },
+              "candidate:task_interface_structuring:h3:c5:enhanced_summary": {
+                "calls": 62,
+                "seconds": 157.34389800892677
+              },
+              "candidate:task_interface_structuring:h3:c5:expanded_evidence": {
+                "calls": 61,
+                "seconds": 148.6470760672819
+              },
+              "candidate:task_interface_structuring:h3:c5:goal_expansion": {
+                "calls": 58,
+                "seconds": 155.67027552903164
+              },
+              "candidate:router_workflow:h3:c6:enhanced_rationale": {
+                "calls": 80,
+                "seconds": 170.95243136177305
+              },
+              "candidate:router_workflow:h3:c6:optimized_memory_selection": {
+                "calls": 62,
+                "seconds": 137.6936898799613
+              },
+              "candidate:router_workflow:h3:c6:enhanced_tool_usage": {
+                "calls": 80,
+                "seconds": 185.48759923840407
+              },
+              "candidate:memory_selector:h3:c7:memory_selector_prompt_1": {
+                "calls": 32,
+                "seconds": 64.99321838608012
+              },
+              "candidate:router_context:h3:c8:enhanced_output_rules": {
+                "calls": 30,
+                "seconds": 55.494396429276094
+              },
+              "test:after_coco_caption:coco_detection": {
+                "calls": 302,
+                "seconds": 896.4718700656667
+              },
+              "test:after_coco_caption:coco_caption": {
+                "calls": 253,
+                "seconds": 664.9131798294839
+              },
+              "memory_gate:stable": {
+                "calls": 157,
+                "seconds": 277.265670562163
+              },
+              "train:refcoco_grounding_batch_1": {
+                "calls": 100,
+                "seconds": 187.49573926138692
+              },
+              "candidate:task_interface_structuring:h3:c9:enhanced_summary": {
+                "calls": 181,
+                "seconds": 387.1013659007149
+              },
+              "candidate:task_interface_structuring:h3:c9:goal_expansion": {
+                "calls": 148,
+                "seconds": 325.6729086926207
+              },
+              "candidate:task_interface_structuring:h3:c9:constraint_enhancement": {
+                "calls": 62,
+                "seconds": 245.8066813297337
+              },
+              "candidate:router_workflow:h3:c10:enhanced_rationale": {
+                "calls": 125,
+                "seconds": 319.0917768403888
+              },
+              "candidate:router_workflow:h3:c10:optimized_skill_selection": {
+                "calls": 132,
+                "seconds": 283.8219600203447
+              },
+              "candidate:router_workflow:h3:c10:enhanced_tool_usage": {
+                "calls": 133,
+                "seconds": 234.40634454984684
+              },
+              "candidate:memory_selector:h3:c11:memory_selector_prompt_1": {
+                "calls": 22,
+                "seconds": 37.04757512372453
+              },
+              "candidate:router_context:h3:c12:enhanced_reasoning": {
+                "calls": 50,
+                "seconds": 74.70211376587395
+              },
+              "train:refcoco_grounding_batch_2": {
+                "calls": 101,
+                "seconds": 191.97199402330443
+              },
+              "test:after_refcoco_grounding:refcoco_grounding": {
+                "calls": 396,
+                "seconds": 726.8655629479326
+              },
+              "train:vqav2_batch_1": {
+                "calls": 102,
+                "seconds": 173.2190257248003
+              },
+              "candidate:task_interface_structuring:h3:c17:enhanced_summary": {
+                "calls": 139,
+                "seconds": 284.2793253803393
+              },
+              "candidate:task_interface_structuring:h3:c17:tool_usage": {
+                "calls": 156,
+                "seconds": 420.55450076807756
+              },
+              "candidate:task_interface_structuring:h3:c17:constraint_enhancement": {
+                "calls": 89,
+                "seconds": 344.3980329128681
+              },
+              "candidate:router_workflow:h3:c18:enhanced_rationale": {
+                "calls": 194,
+                "seconds": 482.28003632614855
+              },
+              "candidate:router_workflow:h3:c18:expanded_steps": {
+                "calls": 194,
+                "seconds": 511.7656653817976
+              },
+              "candidate:router_workflow:h3:c18:enhanced_memory_selection": {
+                "calls": 184,
+                "seconds": 336.1158647577977
+              },
+              "candidate:router_context:h3:c20:enhanced_focus_on_correctness": {
+                "calls": 70,
+                "seconds": 84.71107728464995
+              },
+              "candidate:router_context:h3:c20:enhanced_skill_usage": {
+                "calls": 70,
+                "seconds": 85.56769585586153
+              },
+              "candidate:router_context:h3:c20:enhanced_tool_usage": {
+                "calls": 70,
+                "seconds": 85.92879178014118
+              },
+              "train:vqav2_batch_2": {
+                "calls": 103,
+                "seconds": 167.9289948490914
+              },
+              "candidate:task_interface_structuring:h3:c21:enhanced_summary": {
+                "calls": 87,
+                "seconds": 179.2602862882195
+              },
+              "candidate:task_interface_structuring:h3:c21:goal_expansion": {
+                "calls": 72,
+                "seconds": 153.66932269360404
+              },
+              "candidate:task_interface_structuring:h3:c21:constraint_enhancement": {
+                "calls": 51,
+                "seconds": 123.81995998637285
+              },
+              "candidate:router_workflow:h3:c22:enhanced_rationale": {
+                "calls": 188,
+                "seconds": 361.89928934839554
+              },
+              "candidate:router_workflow:h3:c22:optimized_memory_selection": {
+                "calls": 155,
+                "seconds": 290.12068077526055
+              },
+              "candidate:router_workflow:h3:c22:enhanced_tool_usage": {
+                "calls": 154,
+                "seconds": 308.2577184737893
+              },
+              "test:after_vqav2:vqav2": {
+                "calls": 400,
+                "seconds": 706.5403039129451
+              }
+            }
+          }
+        },
+        "exit": {
+          "exit_code": 0,
+          "started": 1792616965.7986624,
+          "ended": 1792635095.5034204,
+          "elapsed_seconds": 18129.704758167267,
+          "peak_allocated_bytes": 18700819456,
+          "all_parameters_frozen": true
+        },
+        "failed": false,
+        "completed_stages": 4,
+        "R": [
+          [
+            0.5964343598055105,
+            null,
+            null,
+            null
+          ],
+          [
+            0.6016260162601625,
+            0.38006826159923157,
+            null,
+            null
+          ],
+          [
+            0.6016260162601625,
+            0.38006826159923157,
+            0.84,
+            null
+          ],
+          [
+            0.6016260162601625,
+            0.38006826159923157,
+            0.84,
+            0.35666666666666663
+          ]
+        ],
+        "memory": {
+          "raw": 10,
+          "abstract": 2,
+          "anchor": 80,
+          "skills": 0
+        },
+        "memory_gates": {
+          "records": 6,
+          "accepted": 0,
+          "reasons": {
+            "memory_candidate_rejected": 6
+          },
+          "rejection_reasons": {
+            "current_task_primary_score_delta_below_minimum": 6,
+            "historical_loss_budget_exceeded": 5,
+            "current_task_correct_gain_below_minimum": 4,
+            "current_task_format_below_minimum": 2
+          },
+          "components": {
+            "memory": 6
+          }
+        },
+        "prompt_gates": {
+          "records": 24,
+          "accepted": 2,
+          "reasons": {
+            "candidate_passed_commit_gate": 2,
+            "no_candidate_passed_commit_gate": 22
+          },
+          "rejection_reasons": {},
+          "components": {
+            "task_interface_structuring": 6,
+            "router_workflow": 6,
+            "memory_selector": 6,
+            "router_context": 6
+          }
+        },
+        "test_read_only": {
+          "checks": 13,
+          "all_passed": true
+        },
+        "failure_events": {
+          "count": 11,
+          "scope_counts": {
+            "train:coco_caption_batch_1": 5,
+            "train:coco_caption_batch_2": 2,
+            "train:vqav2_batch_1": 2,
+            "train:vqav2_batch_2": 1,
+            "memory_gate:candidate": 1
+          },
+          "note": "execution events, not distinct samples; repeated stage/final evaluations retained"
+        },
+        "stage_metrics": [
+          {
+            "stage": 1,
+            "memory": {
+              "raw": 10,
+              "abstract": 2,
+              "anchor": 20,
+              "skill": 0
+            },
+            "tasks": {
+              "coco_detection": {
+                "evaluation_schema_version": "task_native_metrics_v4",
+                "mean_example_score": 0.6820963073031723,
+                "correct": 73,
+                "total": 100,
+                "forget_count": 0,
+                "forget_rate": 0.0,
+                "reference_correct": 0,
+                "recovered_count": 0,
+                "behavior_comparable_count": 0,
+                "behavior_change_count": 0,
+                "reference_mean_example_score": null,
+                "mean_example_score_delta": null,
+                "has_reference": false,
+                "format_compliant_count": 98,
+                "format_compliance_rate": 0.98,
+                "average_output_chars": 196.13,
+                "max_output_chars": 828,
+                "detection_metric_definition": "label_matched_f1_at_iou_0.5",
+                "detection_image_count": 100,
+                "detection_matched_count": 184,
+                "detection_predicted_count": 264,
+                "detection_gold_count": 353,
+                "detection_false_positive_count": 80,
+                "detection_false_negative_count": 169,
+                "detection_micro_precision_iou50": 0.696969696969697,
+                "detection_micro_recall_iou50": 0.5212464589235127,
+                "detection_micro_f1_iou50": 0.5964343598055105,
+                "detection_mean_image_f1_iou50": 0.6820963073031723,
+                "detection_metric_source": "pycocotools.COCOeval",
+                "detection_coco_metric_definition": "AP@[IoU=0.50:0.95|area=all|maxDets=100]",
+                "detection_predictions_without_confidence": 262,
+                "detection_coco_ap": 0.5891757019634134,
+                "detection_coco_ap50": 0.7729462426762156,
+                "detection_coco_ap75": 0.6084415020101077,
+                "detection_coco_ap_small": 0.036790415407500374,
+                "detection_coco_ap_medium": 0.37137169960426225,
+                "detection_coco_ap_large": 0.7169187160148288,
+                "detection_coco_ar_max100": 0.6074186895549125,
+                "primary_metric_name": "detection_micro_f1_iou50",
+                "primary_score": 0.5964343598055105
+              }
+            }
+          },
+          {
+            "stage": 2,
+            "memory": {
+              "raw": 10,
+              "abstract": 2,
+              "anchor": 40,
+              "skill": 0
+            },
+            "tasks": {
+              "coco_detection": {
+                "evaluation_schema_version": "task_native_metrics_v4",
+                "mean_example_score": 0.7000676668614884,
+                "correct": 75,
+                "total": 100,
+                "forget_count": 0,
+                "forget_rate": 0.0,
+                "reference_correct": 73,
+                "recovered_count": 2,
+                "behavior_comparable_count": 100,
+                "behavior_change_count": 67,
+                "reference_mean_example_score": 0.6820963073031723,
+                "mean_example_score_delta": 0.01797135955831608,
+                "has_reference": true,
+                "format_compliant_count": 96,
+                "format_compliance_rate": 0.96,
+                "average_output_chars": 212.2,
+                "max_output_chars": 1836,
+                "detection_metric_definition": "label_matched_f1_at_iou_0.5",
+                "detection_image_count": 100,
+                "detection_matched_count": 185,
+                "detection_predicted_count": 262,
+                "detection_gold_count": 353,
+                "detection_false_positive_count": 77,
+                "detection_false_negative_count": 168,
+                "detection_micro_precision_iou50": 0.7061068702290076,
+                "detection_micro_recall_iou50": 0.5240793201133145,
+                "detection_micro_f1_iou50": 0.6016260162601625,
+                "detection_mean_image_f1_iou50": 0.7000676668614884,
+                "detection_metric_source": "pycocotools.COCOeval",
+                "detection_coco_metric_definition": "AP@[IoU=0.50:0.95|area=all|maxDets=100]",
+                "detection_predictions_without_confidence": 260,
+                "detection_coco_ap": 0.5908365455278969,
+                "detection_coco_ap50": 0.7730199643340957,
+                "detection_coco_ap75": 0.6144657569205196,
+                "detection_coco_ap_small": 0.038136979900080595,
+                "detection_coco_ap_medium": 0.37886772384777323,
+                "detection_coco_ap_large": 0.7164976296902644,
+                "detection_coco_ar_max100": 0.6103251495666356,
+                "primary_metric_name": "detection_micro_f1_iou50",
+                "primary_score": 0.6016260162601625,
+                "reference_primary_metric_name": "detection_micro_f1_iou50",
+                "reference_primary_score": 0.5964343598055105,
+                "primary_score_delta": 0.005191656454652027
+              },
+              "coco_caption": {
+                "evaluation_schema_version": "task_native_metrics_v4",
+                "mean_example_score": 0.6664533335608432,
+                "correct": 69,
+                "total": 100,
+                "forget_count": 0,
+                "forget_rate": 0.0,
+                "reference_correct": 0,
+                "recovered_count": 0,
+                "behavior_comparable_count": 0,
+                "behavior_change_count": 0,
+                "reference_mean_example_score": null,
+                "mean_example_score_delta": null,
+                "has_reference": false,
+                "format_compliant_count": 99,
+                "format_compliance_rate": 0.99,
+                "average_output_chars": 77.38,
+                "max_output_chars": 212,
+                "caption_metric_source": "pycocoevalcap",
+                "caption_anchor_criterion_available": true,
+                "caption_anchor_metric_definition": "sentence_level_cider_at_least_0.5",
+                "caption_count": 100,
+                "caption_primary_score": 0.38006826159923157,
+                "caption_Bleu_1": 0.6038543897211964,
+                "caption_Bleu_2": 0.42162548384374526,
+                "caption_Bleu_3": 0.2740155227924923,
+                "caption_Bleu_4": 0.17122769194972062,
+                "caption_METEOR": 0.2681281793216067,
+                "caption_ROUGE_L": 0.4957653105854119,
+                "caption_CIDEr": 0.7719464304921065,
+                "primary_metric_name": "caption_composite_score",
+                "primary_score": 0.38006826159923157
+              }
+            }
+          },
+          {
+            "stage": 3,
+            "memory": {
+              "raw": 10,
+              "abstract": 2,
+              "anchor": 60,
+              "skill": 0
+            },
+            "tasks": {
+              "coco_detection": {
+                "evaluation_schema_version": "task_native_metrics_v4",
+                "mean_example_score": 0.7000676668614884,
+                "correct": 75,
+                "total": 100,
+                "forget_count": 0,
+                "forget_rate": 0.0,
+                "reference_correct": 75,
+                "recovered_count": 0,
+                "behavior_comparable_count": 100,
+                "behavior_change_count": 0,
+                "reference_mean_example_score": 0.7000676668614884,
+                "mean_example_score_delta": 0.0,
+                "has_reference": true,
+                "format_compliant_count": 96,
+                "format_compliance_rate": 0.96,
+                "average_output_chars": 212.2,
+                "max_output_chars": 1836,
+                "detection_metric_definition": "label_matched_f1_at_iou_0.5",
+                "detection_image_count": 100,
+                "detection_matched_count": 185,
+                "detection_predicted_count": 262,
+                "detection_gold_count": 353,
+                "detection_false_positive_count": 77,
+                "detection_false_negative_count": 168,
+                "detection_micro_precision_iou50": 0.7061068702290076,
+                "detection_micro_recall_iou50": 0.5240793201133145,
+                "detection_micro_f1_iou50": 0.6016260162601625,
+                "detection_mean_image_f1_iou50": 0.7000676668614884,
+                "detection_metric_source": "pycocotools.COCOeval",
+                "detection_coco_metric_definition": "AP@[IoU=0.50:0.95|area=all|maxDets=100]",
+                "detection_predictions_without_confidence": 260,
+                "detection_coco_ap": 0.5908365455278969,
+                "detection_coco_ap50": 0.7730199643340957,
+                "detection_coco_ap75": 0.6144657569205196,
+                "detection_coco_ap_small": 0.038136979900080595,
+                "detection_coco_ap_medium": 0.37886772384777323,
+                "detection_coco_ap_large": 0.7164976296902644,
+                "detection_coco_ar_max100": 0.6103251495666356,
+                "primary_metric_name": "detection_micro_f1_iou50",
+                "primary_score": 0.6016260162601625,
+                "reference_primary_metric_name": "detection_micro_f1_iou50",
+                "reference_primary_score": 0.6016260162601625,
+                "primary_score_delta": 0.0
+              },
+              "coco_caption": {
+                "evaluation_schema_version": "task_native_metrics_v4",
+                "mean_example_score": 0.6664533335608432,
+                "correct": 69,
+                "total": 100,
+                "forget_count": 0,
+                "forget_rate": 0.0,
+                "reference_correct": 69,
+                "recovered_count": 0,
+                "behavior_comparable_count": 100,
+                "behavior_change_count": 0,
+                "reference_mean_example_score": 0.6664533335608432,
+                "mean_example_score_delta": 0.0,
+                "has_reference": true,
+                "format_compliant_count": 99,
+                "format_compliance_rate": 0.99,
+                "average_output_chars": 77.38,
+                "max_output_chars": 212,
+                "caption_metric_source": "pycocoevalcap",
+                "caption_anchor_criterion_available": true,
+                "caption_anchor_metric_definition": "sentence_level_cider_at_least_0.5",
+                "caption_count": 100,
+                "caption_primary_score": 0.38006826159923157,
+                "caption_Bleu_1": 0.6038543897211964,
+                "caption_Bleu_2": 0.42162548384374526,
+                "caption_Bleu_3": 0.2740155227924923,
+                "caption_Bleu_4": 0.17122769194972062,
+                "caption_METEOR": 0.2681281793216067,
+                "caption_ROUGE_L": 0.4957653105854119,
+                "caption_CIDEr": 0.7719464304921065,
+                "primary_metric_name": "caption_composite_score",
+                "primary_score": 0.38006826159923157,
+                "reference_primary_metric_name": "caption_composite_score",
+                "reference_primary_score": 0.38006826159923157,
+                "primary_score_delta": 0.0
+              },
+              "refcoco_grounding": {
+                "evaluation_schema_version": "task_native_metrics_v4",
+                "mean_example_score": 0.84,
+                "correct": 84,
+                "total": 100,
+                "forget_count": 0,
+                "forget_rate": 0.0,
+                "reference_correct": 0,
+                "recovered_count": 0,
+                "behavior_comparable_count": 0,
+                "behavior_change_count": 0,
+                "reference_mean_example_score": null,
+                "mean_example_score_delta": null,
+                "has_reference": false,
+                "format_compliant_count": 99,
+                "format_compliance_rate": 0.99,
+                "average_output_chars": 44.01,
+                "max_output_chars": 79,
+                "grounding_metric_definition": "accuracy_at_iou_0.5",
+                "grounding_count": 100,
+                "grounding_mean_iou": 0.7621503482171734,
+                "grounding_accuracy_iou50": 0.84,
+                "grounding_accuracy_iou75": 0.77,
+                "primary_metric_name": "grounding_accuracy_iou50",
+                "primary_score": 0.84
+              }
+            }
+          },
+          {
+            "stage": 4,
+            "memory": {
+              "raw": 10,
+              "abstract": 2,
+              "anchor": 80,
+              "skill": 0
+            },
+            "tasks": {
+              "coco_detection": {
+                "evaluation_schema_version": "task_native_metrics_v4",
+                "mean_example_score": 0.7000676668614884,
+                "correct": 75,
+                "total": 100,
+                "forget_count": 0,
+                "forget_rate": 0.0,
+                "reference_correct": 75,
+                "recovered_count": 0,
+                "behavior_comparable_count": 100,
+                "behavior_change_count": 0,
+                "reference_mean_example_score": 0.7000676668614884,
+                "mean_example_score_delta": 0.0,
+                "has_reference": true,
+                "format_compliant_count": 96,
+                "format_compliance_rate": 0.96,
+                "average_output_chars": 212.2,
+                "max_output_chars": 1836,
+                "detection_metric_definition": "label_matched_f1_at_iou_0.5",
+                "detection_image_count": 100,
+                "detection_matched_count": 185,
+                "detection_predicted_count": 262,
+                "detection_gold_count": 353,
+                "detection_false_positive_count": 77,
+                "detection_false_negative_count": 168,
+                "detection_micro_precision_iou50": 0.7061068702290076,
+                "detection_micro_recall_iou50": 0.5240793201133145,
+                "detection_micro_f1_iou50": 0.6016260162601625,
+                "detection_mean_image_f1_iou50": 0.7000676668614884,
+                "detection_metric_source": "pycocotools.COCOeval",
+                "detection_coco_metric_definition": "AP@[IoU=0.50:0.95|area=all|maxDets=100]",
+                "detection_predictions_without_confidence": 260,
+                "detection_coco_ap": 0.5908365455278969,
+                "detection_coco_ap50": 0.7730199643340957,
+                "detection_coco_ap75": 0.6144657569205196,
+                "detection_coco_ap_small": 0.038136979900080595,
+                "detection_coco_ap_medium": 0.37886772384777323,
+                "detection_coco_ap_large": 0.7164976296902644,
+                "detection_coco_ar_max100": 0.6103251495666356,
+                "primary_metric_name": "detection_micro_f1_iou50",
+                "primary_score": 0.6016260162601625,
+                "reference_primary_metric_name": "detection_micro_f1_iou50",
+                "reference_primary_score": 0.6016260162601625,
+                "primary_score_delta": 0.0
+              },
+              "coco_caption": {
+                "evaluation_schema_version": "task_native_metrics_v4",
+                "mean_example_score": 0.6664533335608432,
+                "correct": 69,
+                "total": 100,
+                "forget_count": 0,
+                "forget_rate": 0.0,
+                "reference_correct": 69,
+                "recovered_count": 0,
+                "behavior_comparable_count": 100,
+                "behavior_change_count": 0,
+                "reference_mean_example_score": 0.6664533335608432,
+                "mean_example_score_delta": 0.0,
+                "has_reference": true,
+                "format_compliant_count": 99,
+                "format_compliance_rate": 0.99,
+                "average_output_chars": 77.38,
+                "max_output_chars": 212,
+                "caption_metric_source": "pycocoevalcap",
+                "caption_anchor_criterion_available": true,
+                "caption_anchor_metric_definition": "sentence_level_cider_at_least_0.5",
+                "caption_count": 100,
+                "caption_primary_score": 0.38006826159923157,
+                "caption_Bleu_1": 0.6038543897211964,
+                "caption_Bleu_2": 0.42162548384374526,
+                "caption_Bleu_3": 0.2740155227924923,
+                "caption_Bleu_4": 0.17122769194972062,
+                "caption_METEOR": 0.2681281793216067,
+                "caption_ROUGE_L": 0.4957653105854119,
+                "caption_CIDEr": 0.7719464304921065,
+                "primary_metric_name": "caption_composite_score",
+                "primary_score": 0.38006826159923157,
+                "reference_primary_metric_name": "caption_composite_score",
+                "reference_primary_score": 0.38006826159923157,
+                "primary_score_delta": 0.0
+              },
+              "refcoco_grounding": {
+                "evaluation_schema_version": "task_native_metrics_v4",
+                "mean_example_score": 0.84,
+                "correct": 84,
+                "total": 100,
+                "forget_count": 0,
+                "forget_rate": 0.0,
+                "reference_correct": 84,
+                "recovered_count": 0,
+                "behavior_comparable_count": 100,
+                "behavior_change_count": 0,
+                "reference_mean_example_score": 0.84,
+                "mean_example_score_delta": 0.0,
+                "has_reference": true,
+                "format_compliant_count": 99,
+                "format_compliance_rate": 0.99,
+                "average_output_chars": 44.01,
+                "max_output_chars": 79,
+                "grounding_metric_definition": "accuracy_at_iou_0.5",
+                "grounding_count": 100,
+                "grounding_mean_iou": 0.7621503482171734,
+                "grounding_accuracy_iou50": 0.84,
+                "grounding_accuracy_iou75": 0.77,
+                "primary_metric_name": "grounding_accuracy_iou50",
+                "primary_score": 0.84,
+                "reference_primary_metric_name": "grounding_accuracy_iou50",
+                "reference_primary_score": 0.84,
+                "primary_score_delta": 0.0
+              },
+              "vqav2": {
+                "evaluation_schema_version": "task_native_metrics_v4",
+                "mean_example_score": 0.35666666666666663,
+                "correct": 34,
+                "total": 100,
+                "forget_count": 0,
+                "forget_rate": 0.0,
+                "reference_correct": 0,
+                "recovered_count": 0,
+                "behavior_comparable_count": 0,
+                "behavior_change_count": 0,
+                "reference_mean_example_score": null,
+                "mean_example_score_delta": null,
+                "has_reference": false,
+                "format_compliant_count": 58,
+                "format_compliance_rate": 0.58,
+                "average_output_chars": 21.46,
+                "max_output_chars": 89,
+                "primary_metric_name": "vqa_consensus_accuracy",
+                "primary_score": 0.35666666666666663,
+                "vqa_metric_definition": "min_matching_annotators_over_3"
+              }
+            }
+          }
+        ],
+        "final_average_100": 54.459023613151516,
+        "average_forgetting_pp": 0.0,
+        "BWT_pp": 0.17305521515506758
+      },
+      "plasticity_hcl": {
+        "cost": {
+          "calls": 5194,
+          "model_seconds": 10311.712683266378,
+          "peak_allocated_bytes": 18706008064,
+          "grouped": {
+            "category": {
+              "online_execution": {
+                "calls": 534,
+                "seconds": 981.985409284709
+              },
+              "experience_consolidation": {
+                "calls": 15,
+                "seconds": 134.11074476188514
+              },
+              "historical_validation": {
+                "calls": 2744,
+                "seconds": 5652.627938681049
+              },
+              "candidate_generation": {
+                "calls": 20,
+                "seconds": 492.93010369793046
+              },
+              "reporting_test": {
+                "calls": 1881,
+                "seconds": 3050.058486840804
+              }
+            },
+            "phase": {
+              "final_answer": {
+                "calls": 1637,
+                "seconds": 2209.344317761832
+              },
+              "select_memory": {
+                "calls": 1113,
+                "seconds": 2359.0645199526334
+              },
+              "structure_task": {
+                "calls": 821,
+                "seconds": 2671.2737385141663
+              },
+              "plan_workflow": {
+                "calls": 872,
+                "seconds": 1880.2117349702166
+              },
+              "abstract_memory": {
+                "calls": 5,
+                "seconds": 25.628423516871408
+              },
+              "skill_evolution": {
+                "calls": 5,
+                "seconds": 89.3176959719276
+              },
+              "select_skill": {
+                "calls": 716,
+                "seconds": 564.7775236077141
+              },
+              "anchor_selection": {
+                "calls": 5,
+                "seconds": 19.16462527308613
+              },
+              "generate_artifact_candidates": {
+                "calls": 20,
+                "seconds": 492.93010369793046
+              }
+            },
+            "scope": {
+              "train:coco_caption_batch_2": {
+                "calls": 81,
+                "seconds": 164.1286379401572
+              },
+              "online": {
+                "calls": 35,
+                "seconds": 627.0408484598156
+              },
+              "memory_gate:candidate": {
+                "calls": 908,
+                "seconds": 1654.446506092092
+              },
+              "candidate:task_interface_structuring:h2:c1:enhanced_summary": {
+                "calls": 103,
+                "seconds": 239.18685997393914
+              },
+              "candidate:task_interface_structuring:h2:c1:goal_expansion": {
+                "calls": 51,
+                "seconds": 167.50195676949807
+              },
+              "candidate:task_interface_structuring:h2:c1:constraint_reduction": {
+                "calls": 30,
+                "seconds": 99.76061930367723
+              },
+              "candidate:router_workflow:h2:c2:enhanced_memory_selection_strategy": {
+                "calls": 76,
+                "seconds": 154.43568947492167
+              },
+              "candidate:router_workflow:h2:c2:optimized_tool_usage": {
+                "calls": 76,
+                "seconds": 171.45032505632844
+              },
+              "candidate:router_workflow:h2:c2:balanced_skill_and_memory_selection": {
+                "calls": 76,
+                "seconds": 154.52198034746107
+              },
+              "candidate:memory_selector:h3:c3:memory_selector_prompt_1": {
+                "calls": 36,
+                "seconds": 61.62556145095732
+              },
+              "candidate:router_context:h4:c4:enhanced_reasoning": {
+                "calls": 30,
+                "seconds": 54.091489876504056
+              },
+              "test:after_coco_caption:coco_detection": {
+                "calls": 232,
+                "seconds": 532.2602597322548
+              },
+              "test:after_coco_caption:coco_caption": {
+                "calls": 260,
+                "seconds": 482.58250646549277
+              },
+              "memory_gate:stable": {
+                "calls": 187,
+                "seconds": 269.2784457335947
+              },
+              "train:refcoco_grounding_batch_1": {
+                "calls": 101,
+                "seconds": 231.70354859449435
+              },
+              "candidate:task_interface_structuring:h4:c5:enhanced_summary": {
+                "calls": 159,
+                "seconds": 333.53588717454113
+              },
+              "candidate:task_interface_structuring:h4:c5:goal_expansion": {
+                "calls": 96,
+                "seconds": 192.08706173219252
+              },
+              "candidate:task_interface_structuring:h4:c5:constraint_enhancement": {
+                "calls": 37,
+                "seconds": 113.78824593825266
+              },
+              "train:refcoco_grounding_batch_2": {
+                "calls": 100,
+                "seconds": 191.15669078822248
+              },
+              "candidate:task_interface_structuring:h4:c9:enhanced_evidence_summary": {
+                "calls": 179,
+                "seconds": 411.12836773868185
+              },
+              "candidate:task_interface_structuring:h4:c9:expanded_constraint_list": {
+                "calls": 7,
+                "seconds": 21.869517276179977
+              },
+              "candidate:task_interface_structuring:h4:c9:enhanced_goal_content": {
+                "calls": 79,
+                "seconds": 239.63716852932703
+              },
+              "candidate:router_context:h4:c12:enhanced_reasoning": {
+                "calls": 50,
+                "seconds": 75.3814984097844
+              },
+              "candidate:router_context:h4:c12:optimized_skill_selection": {
+                "calls": 50,
+                "seconds": 78.30357465252746
+              },
+              "candidate:router_context:h4:c12:enhanced_tool_usage": {
+                "calls": 50,
+                "seconds": 81.0638426131336
+              },
+              "test:after_refcoco_grounding:coco_detection": {
+                "calls": 227,
+                "seconds": 371.98623104114085
+              },
+              "test:after_refcoco_grounding:coco_caption": {
+                "calls": 160,
+                "seconds": 132.72475025861058
+              },
+              "test:after_refcoco_grounding:refcoco_grounding": {
+                "calls": 494,
+                "seconds": 785.0066144900629
+              },
+              "train:vqav2_batch_1": {
+                "calls": 125,
+                "seconds": 186.78695969749242
+              },
+              "candidate:router_context:h4:c16:enhanced_reasoning": {
+                "calls": 70,
+                "seconds": 86.55383148812689
+              },
+              "train:vqav2_batch_2": {
+                "calls": 127,
+                "seconds": 208.20957226434257
+              },
+              "candidate:task_interface_structuring:h4:c17:Candidate 1": {
+                "calls": 171,
+                "seconds": 487.7164402224589
+              },
+              "candidate:task_interface_structuring:h4:c17:Candidate 3": {
+                "calls": 223,
+                "seconds": 505.26306882686913
+              },
+              "test:after_vqav2:vqav2": {
+                "calls": 504,
+                "seconds": 736.8066802272806
+              },
+              "test": {
+                "calls": 4,
+                "seconds": 8.691444625961594
+              }
+            }
+          }
+        },
+        "exit": {
+          "exit_code": 0,
+          "started": 1792618220.3134158,
+          "ended": 1792631673.7624452,
+          "elapsed_seconds": 13453.449030160904,
+          "peak_allocated_bytes": 18706008064,
+          "all_parameters_frozen": true
+        },
+        "failed": false,
+        "completed_stages": 4,
+        "R": [
+          [
+            0.6121112929623568,
+            null,
+            null,
+            null
+          ],
+          [
+            0.563758389261745,
+            0.36400994318298496,
+            null,
+            null
+          ],
+          [
+            0.5107142857142858,
+            0.36585345009222925,
+            0.83,
+            null
+          ],
+          [
+            0.5107142857142858,
+            0.36585345009222925,
+            0.83,
+            0.3433333333333334
+          ]
+        ],
+        "memory": {
+          "raw": 20,
+          "abstract": 4,
+          "anchor": 80,
+          "skills": 2
+        },
+        "memory_gates": {
+          "records": 5,
+          "accepted": 1,
+          "reasons": {
+            "memory_candidate_rejected": 4,
+            "memory_candidate_passed_commit_gate": 1
+          },
+          "rejection_reasons": {
+            "current_task_primary_score_delta_below_minimum": 4,
+            "current_task_format_below_minimum": 2
+          },
+          "components": {
+            "memory": 5
+          }
+        },
+        "prompt_gates": {
+          "records": 20,
+          "accepted": 2,
+          "reasons": {
+            "no_candidate_passed_commit_gate": 17,
+            "candidate_passed_commit_gate": 2,
+            "no_valid_candidate_generated": 1
+          },
+          "rejection_reasons": {},
+          "components": {
+            "task_interface_structuring": 5,
+            "router_workflow": 5,
+            "memory_selector": 5,
+            "router_context": 5
+          }
+        },
+        "test_read_only": {
+          "checks": 13,
+          "all_passed": true
+        },
+        "failure_events": {
+          "count": 17,
+          "scope_counts": {
+            "train:coco_caption_batch_2": 5,
+            "train:vqav2_batch_1": 4,
+            "memory_gate:candidate": 2,
+            "candidate:task_interface_structuring:h4:c17:Candidate 3": 2,
+            "test:after_vqav2:vqav2": 2,
+            "test": 2
+          },
+          "note": "execution events, not distinct samples; repeated stage/final evaluations retained"
+        },
+        "stage_metrics": [
+          {
+            "stage": 1,
+            "memory": {
+              "raw": 10,
+              "abstract": 2,
+              "anchor": 20,
+              "skill": 0
+            },
+            "tasks": {
+              "coco_detection": {
+                "evaluation_schema_version": "task_native_metrics_v4",
+                "mean_example_score": 0.6825796500473846,
+                "correct": 73,
+                "total": 100,
+                "forget_count": 0,
+                "forget_rate": 0.0,
+                "reference_correct": 0,
+                "recovered_count": 0,
+                "behavior_comparable_count": 0,
+                "behavior_change_count": 0,
+                "reference_mean_example_score": null,
+                "mean_example_score_delta": null,
+                "has_reference": false,
+                "format_compliant_count": 95,
+                "format_compliance_rate": 0.95,
+                "average_output_chars": 207.31,
+                "max_output_chars": 1626,
+                "detection_metric_definition": "label_matched_f1_at_iou_0.5",
+                "detection_image_count": 100,
+                "detection_matched_count": 187,
+                "detection_predicted_count": 258,
+                "detection_gold_count": 353,
+                "detection_false_positive_count": 71,
+                "detection_false_negative_count": 166,
+                "detection_micro_precision_iou50": 0.7248062015503876,
+                "detection_micro_recall_iou50": 0.5297450424929179,
+                "detection_micro_f1_iou50": 0.6121112929623568,
+                "detection_mean_image_f1_iou50": 0.6825796500473846,
+                "detection_metric_source": "pycocotools.COCOeval",
+                "detection_coco_metric_definition": "AP@[IoU=0.50:0.95|area=all|maxDets=100]",
+                "detection_predictions_without_confidence": 256,
+                "detection_coco_ap": 0.5875174400048222,
+                "detection_coco_ap50": 0.7735570606502437,
+                "detection_coco_ap75": 0.609279234520447,
+                "detection_coco_ap_small": 0.03718318974754618,
+                "detection_coco_ap_medium": 0.36538304290876417,
+                "detection_coco_ap_large": 0.7186520768576559,
+                "detection_coco_ar_max100": 0.6051236746283187,
+                "primary_metric_name": "detection_micro_f1_iou50",
+                "primary_score": 0.6121112929623568
+              }
+            }
+          },
+          {
+            "stage": 2,
+            "memory": {
+              "raw": 10,
+              "abstract": 2,
+              "anchor": 40,
+              "skill": 0
+            },
+            "tasks": {
+              "coco_detection": {
+                "evaluation_schema_version": "task_native_metrics_v4",
+                "mean_example_score": 0.6603707548490156,
+                "correct": 71,
+                "total": 100,
+                "forget_count": 4,
+                "forget_rate": 0.0547945205479452,
+                "reference_correct": 73,
+                "recovered_count": 2,
+                "behavior_comparable_count": 100,
+                "behavior_change_count": 64,
+                "reference_mean_example_score": 0.6825796500473846,
+                "mean_example_score_delta": -0.022208895198368994,
+                "has_reference": true,
+                "format_compliant_count": 95,
+                "format_compliance_rate": 0.95,
+                "average_output_chars": 200.62,
+                "max_output_chars": 1836,
+                "detection_metric_definition": "label_matched_f1_at_iou_0.5",
+                "detection_image_count": 100,
+                "detection_matched_count": 168,
+                "detection_predicted_count": 243,
+                "detection_gold_count": 353,
+                "detection_false_positive_count": 75,
+                "detection_false_negative_count": 185,
+                "detection_micro_precision_iou50": 0.691358024691358,
+                "detection_micro_recall_iou50": 0.47592067988668557,
+                "detection_micro_f1_iou50": 0.563758389261745,
+                "detection_mean_image_f1_iou50": 0.6603707548490156,
+                "detection_metric_source": "pycocotools.COCOeval",
+                "detection_coco_metric_definition": "AP@[IoU=0.50:0.95|area=all|maxDets=100]",
+                "detection_predictions_without_confidence": 241,
+                "detection_coco_ap": 0.5512282996796096,
+                "detection_coco_ap50": 0.739971915618526,
+                "detection_coco_ap75": 0.5766462675679331,
+                "detection_coco_ap_small": 0.04049724949360176,
+                "detection_coco_ap_medium": 0.36353870029525365,
+                "detection_coco_ap_large": 0.6654454099858227,
+                "detection_coco_ar_max100": 0.5690092959442804,
+                "primary_metric_name": "detection_micro_f1_iou50",
+                "primary_score": 0.563758389261745,
+                "reference_primary_metric_name": "detection_micro_f1_iou50",
+                "reference_primary_score": 0.6121112929623568,
+                "primary_score_delta": -0.04835290370061174
+              },
+              "coco_caption": {
+                "evaluation_schema_version": "task_native_metrics_v4",
+                "mean_example_score": 0.6226977682125214,
+                "correct": 58,
+                "total": 100,
+                "forget_count": 0,
+                "forget_rate": 0.0,
+                "reference_correct": 0,
+                "recovered_count": 0,
+                "behavior_comparable_count": 0,
+                "behavior_change_count": 0,
+                "reference_mean_example_score": null,
+                "mean_example_score_delta": null,
+                "has_reference": false,
+                "format_compliant_count": 99,
+                "format_compliance_rate": 0.99,
+                "average_output_chars": 80.79,
+                "max_output_chars": 212,
+                "caption_metric_source": "pycocoevalcap",
+                "caption_anchor_criterion_available": true,
+                "caption_anchor_metric_definition": "sentence_level_cider_at_least_0.5",
+                "caption_count": 100,
+                "caption_primary_score": 0.36400994318298496,
+                "caption_Bleu_1": 0.5877551020404165,
+                "caption_Bleu_2": 0.40429689701046245,
+                "caption_Bleu_3": 0.2590062761784767,
+                "caption_Bleu_4": 0.1551323610298601,
+                "caption_METEOR": 0.2650029433968622,
+                "caption_ROUGE_L": 0.4894943173097061,
+                "caption_CIDEr": 0.7174813897601691,
+                "primary_metric_name": "caption_composite_score",
+                "primary_score": 0.36400994318298496
+              }
+            }
+          },
+          {
+            "stage": 3,
+            "memory": {
+              "raw": 20,
+              "abstract": 4,
+              "anchor": 60,
+              "skill": 2
+            },
+            "tasks": {
+              "coco_detection": {
+                "evaluation_schema_version": "task_native_metrics_v4",
+                "mean_example_score": 0.6377548867989369,
+                "correct": 68,
+                "total": 100,
+                "forget_count": 8,
+                "forget_rate": 0.11267605633802817,
+                "reference_correct": 71,
+                "recovered_count": 5,
+                "behavior_comparable_count": 100,
+                "behavior_change_count": 72,
+                "reference_mean_example_score": 0.6603707548490156,
+                "mean_example_score_delta": -0.022615868050078758,
+                "has_reference": true,
+                "format_compliant_count": 94,
+                "format_compliance_rate": 0.94,
+                "average_output_chars": 190.95,
+                "max_output_chars": 1836,
+                "detection_metric_definition": "label_matched_f1_at_iou_0.5",
+                "detection_image_count": 100,
+                "detection_matched_count": 143,
+                "detection_predicted_count": 207,
+                "detection_gold_count": 353,
+                "detection_false_positive_count": 64,
+                "detection_false_negative_count": 210,
+                "detection_micro_precision_iou50": 0.6908212560386473,
+                "detection_micro_recall_iou50": 0.40509915014164305,
+                "detection_micro_f1_iou50": 0.5107142857142858,
+                "detection_mean_image_f1_iou50": 0.6377548867989369,
+                "detection_metric_source": "pycocotools.COCOeval",
+                "detection_coco_metric_definition": "AP@[IoU=0.50:0.95|area=all|maxDets=100]",
+                "detection_predictions_without_confidence": 205,
+                "detection_coco_ap": 0.5548654706457727,
+                "detection_coco_ap50": 0.7589450147229435,
+                "detection_coco_ap75": 0.5672435519414011,
+                "detection_coco_ap_small": 0.04155586987270155,
+                "detection_coco_ap_medium": 0.35669426086358785,
+                "detection_coco_ap_large": 0.6722763192032098,
+                "detection_coco_ar_max100": 0.571560264068004,
+                "primary_metric_name": "detection_micro_f1_iou50",
+                "primary_score": 0.5107142857142858,
+                "reference_primary_metric_name": "detection_micro_f1_iou50",
+                "reference_primary_score": 0.563758389261745,
+                "primary_score_delta": -0.053044103547459254
+              },
+              "coco_caption": {
+                "evaluation_schema_version": "task_native_metrics_v4",
+                "mean_example_score": 0.6310306217038253,
+                "correct": 60,
+                "total": 100,
+                "forget_count": 6,
+                "forget_rate": 0.10344827586206896,
+                "reference_correct": 58,
+                "recovered_count": 8,
+                "behavior_comparable_count": 100,
+                "behavior_change_count": 55,
+                "reference_mean_example_score": 0.6226977682125214,
+                "mean_example_score_delta": 0.00833285349130386,
+                "has_reference": true,
+                "format_compliant_count": 100,
+                "format_compliance_rate": 1.0,
+                "average_output_chars": 78.69,
+                "max_output_chars": 141,
+                "caption_metric_source": "pycocoevalcap",
+                "caption_anchor_criterion_available": true,
+                "caption_anchor_metric_definition": "sentence_level_cider_at_least_0.5",
+                "caption_count": 100,
+                "caption_primary_score": 0.36585345009222925,
+                "caption_Bleu_1": 0.5972125435535908,
+                "caption_Bleu_2": 0.4117593148166877,
+                "caption_Bleu_3": 0.26528922150790296,
+                "caption_Bleu_4": 0.16016061818605282,
+                "caption_METEOR": 0.2660669768734027,
+                "caption_ROUGE_L": 0.4880652696211952,
+                "caption_CIDEr": 0.718420115623065,
+                "primary_metric_name": "caption_composite_score",
+                "primary_score": 0.36585345009222925,
+                "reference_primary_metric_name": "caption_composite_score",
+                "reference_primary_score": 0.36400994318298496,
+                "primary_score_delta": 0.0018435069092442857
+              },
+              "refcoco_grounding": {
+                "evaluation_schema_version": "task_native_metrics_v4",
+                "mean_example_score": 0.83,
+                "correct": 83,
+                "total": 100,
+                "forget_count": 0,
+                "forget_rate": 0.0,
+                "reference_correct": 0,
+                "recovered_count": 0,
+                "behavior_comparable_count": 0,
+                "behavior_change_count": 0,
+                "reference_mean_example_score": null,
+                "mean_example_score_delta": null,
+                "has_reference": false,
+                "format_compliant_count": 100,
+                "format_compliance_rate": 1.0,
+                "average_output_chars": 45.46,
+                "max_output_chars": 72,
+                "grounding_metric_definition": "accuracy_at_iou_0.5",
+                "grounding_count": 100,
+                "grounding_mean_iou": 0.768812924579195,
+                "grounding_accuracy_iou50": 0.83,
+                "grounding_accuracy_iou75": 0.76,
+                "primary_metric_name": "grounding_accuracy_iou50",
+                "primary_score": 0.83
+              }
+            }
+          },
+          {
+            "stage": 4,
+            "memory": {
+              "raw": 20,
+              "abstract": 4,
+              "anchor": 80,
+              "skill": 2
+            },
+            "tasks": {
+              "coco_detection": {
+                "evaluation_schema_version": "task_native_metrics_v4",
+                "mean_example_score": 0.6377548867989369,
+                "correct": 68,
+                "total": 100,
+                "forget_count": 0,
+                "forget_rate": 0.0,
+                "reference_correct": 68,
+                "recovered_count": 0,
+                "behavior_comparable_count": 100,
+                "behavior_change_count": 0,
+                "reference_mean_example_score": 0.6377548867989369,
+                "mean_example_score_delta": 0.0,
+                "has_reference": true,
+                "format_compliant_count": 94,
+                "format_compliance_rate": 0.94,
+                "average_output_chars": 190.95,
+                "max_output_chars": 1836,
+                "detection_metric_definition": "label_matched_f1_at_iou_0.5",
+                "detection_image_count": 100,
+                "detection_matched_count": 143,
+                "detection_predicted_count": 207,
+                "detection_gold_count": 353,
+                "detection_false_positive_count": 64,
+                "detection_false_negative_count": 210,
+                "detection_micro_precision_iou50": 0.6908212560386473,
+                "detection_micro_recall_iou50": 0.40509915014164305,
+                "detection_micro_f1_iou50": 0.5107142857142858,
+                "detection_mean_image_f1_iou50": 0.6377548867989369,
+                "detection_metric_source": "pycocotools.COCOeval",
+                "detection_coco_metric_definition": "AP@[IoU=0.50:0.95|area=all|maxDets=100]",
+                "detection_predictions_without_confidence": 205,
+                "detection_coco_ap": 0.5548654706457727,
+                "detection_coco_ap50": 0.7589450147229435,
+                "detection_coco_ap75": 0.5672435519414011,
+                "detection_coco_ap_small": 0.04155586987270155,
+                "detection_coco_ap_medium": 0.35669426086358785,
+                "detection_coco_ap_large": 0.6722763192032098,
+                "detection_coco_ar_max100": 0.571560264068004,
+                "primary_metric_name": "detection_micro_f1_iou50",
+                "primary_score": 0.5107142857142858,
+                "reference_primary_metric_name": "detection_micro_f1_iou50",
+                "reference_primary_score": 0.5107142857142858,
+                "primary_score_delta": 0.0
+              },
+              "coco_caption": {
+                "evaluation_schema_version": "task_native_metrics_v4",
+                "mean_example_score": 0.6310306217038253,
+                "correct": 60,
+                "total": 100,
+                "forget_count": 0,
+                "forget_rate": 0.0,
+                "reference_correct": 60,
+                "recovered_count": 0,
+                "behavior_comparable_count": 100,
+                "behavior_change_count": 0,
+                "reference_mean_example_score": 0.6310306217038253,
+                "mean_example_score_delta": 0.0,
+                "has_reference": true,
+                "format_compliant_count": 100,
+                "format_compliance_rate": 1.0,
+                "average_output_chars": 78.69,
+                "max_output_chars": 141,
+                "caption_metric_source": "pycocoevalcap",
+                "caption_anchor_criterion_available": true,
+                "caption_anchor_metric_definition": "sentence_level_cider_at_least_0.5",
+                "caption_count": 100,
+                "caption_primary_score": 0.36585345009222925,
+                "caption_Bleu_1": 0.5972125435535908,
+                "caption_Bleu_2": 0.4117593148166877,
+                "caption_Bleu_3": 0.26528922150790296,
+                "caption_Bleu_4": 0.16016061818605282,
+                "caption_METEOR": 0.2660669768734027,
+                "caption_ROUGE_L": 0.4880652696211952,
+                "caption_CIDEr": 0.718420115623065,
+                "primary_metric_name": "caption_composite_score",
+                "primary_score": 0.36585345009222925,
+                "reference_primary_metric_name": "caption_composite_score",
+                "reference_primary_score": 0.36585345009222925,
+                "primary_score_delta": 0.0
+              },
+              "refcoco_grounding": {
+                "evaluation_schema_version": "task_native_metrics_v4",
+                "mean_example_score": 0.83,
+                "correct": 83,
+                "total": 100,
+                "forget_count": 0,
+                "forget_rate": 0.0,
+                "reference_correct": 83,
+                "recovered_count": 0,
+                "behavior_comparable_count": 100,
+                "behavior_change_count": 0,
+                "reference_mean_example_score": 0.83,
+                "mean_example_score_delta": 0.0,
+                "has_reference": true,
+                "format_compliant_count": 100,
+                "format_compliance_rate": 1.0,
+                "average_output_chars": 45.46,
+                "max_output_chars": 72,
+                "grounding_metric_definition": "accuracy_at_iou_0.5",
+                "grounding_count": 100,
+                "grounding_mean_iou": 0.768812924579195,
+                "grounding_accuracy_iou50": 0.83,
+                "grounding_accuracy_iou75": 0.76,
+                "primary_metric_name": "grounding_accuracy_iou50",
+                "primary_score": 0.83,
+                "reference_primary_metric_name": "grounding_accuracy_iou50",
+                "reference_primary_score": 0.83,
+                "primary_score_delta": 0.0
+              },
+              "vqav2": {
+                "evaluation_schema_version": "task_native_metrics_v4",
+                "mean_example_score": 0.34333333333333327,
+                "correct": 34,
+                "total": 100,
+                "forget_count": 0,
+                "forget_rate": 0.0,
+                "reference_correct": 0,
+                "recovered_count": 0,
+                "behavior_comparable_count": 0,
+                "behavior_change_count": 0,
+                "reference_mean_example_score": null,
+                "mean_example_score_delta": null,
+                "has_reference": false,
+                "format_compliant_count": 55,
+                "format_compliance_rate": 0.55,
+                "average_output_chars": 23.38,
+                "max_output_chars": 185,
+                "primary_metric_name": "vqa_consensus_accuracy",
+                "primary_score": 0.3433333333333334,
+                "vqa_metric_definition": "min_matching_annotators_over_3"
+              }
+            }
+          }
+        ],
+        "final_average_100": 51.247526728496204,
+        "average_forgetting_pp": 3.3799002416023662,
+        "BWT_pp": -3.3184500112942232
+      }
+    }
+  },
+  "budget": {
+    "started_epoch": 1792600034.6375468,
+    "limit_seconds": 86400,
+    "stop_after_seconds": 84600,
+    "stop_at_allocated_bytes": 47000000000,
+    "strict_limit_bytes": 50000000000,
+    "baseline_bytes": 0
+  },
+  "final_resource": {
+    "time": 1792635104.8573258,
+    "elapsed_seconds_from_original": 35070.21977567673,
+    "remaining_seconds": 49529.78022432327,
+    "total_conservative_bytes": 42636089856,
+    "nondata_conservative_bytes": 1689917952,
+    "statuses": {
+      "stability_hcl": 0,
+      "plasticity_hcl": 0
+    }
+  },
+  "recovery_exit": {
+    "time": 1792635104.8582196,
+    "statuses": {
+      "stability_hcl": 0,
+      "plasticity_hcl": 0
+    },
+    "unhandled_methods": []
+  },
+  "strict_exit": {
+    "time": 1792618218.6754148,
+    "exit_codes": {
+      "raw_zero_shot": 0,
+      "static_harness": 0,
+      "stability_hcl": 1,
+      "plasticity_hcl": 1
+    }
+  },
+  "auxiliary": {
+    "smoke": {
+      "status": "completed",
+      "elapsed_seconds": 73.28309392929077,
+      "peak_allocated_bytes": 16770550784,
+      "parameters_frozen_eval": true
+    },
+    "native_preflight": {
+      "examples": 8,
+      "format_ok": 8,
+      "scope": "fixed first 4 Detection and first 4 Grounding adaptation examples; no test"
+    },
+    "metric_repair": {
+      "additional_calls": 3,
+      "elapsed_seconds": "not instrumented separately; not included in summed model-seconds",
+      "reason": "aborted mistaken use of official raw resume; preserved outputs rescored without model"
+    }
+  }
+}

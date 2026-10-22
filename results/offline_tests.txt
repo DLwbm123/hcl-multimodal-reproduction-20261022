@@ -1,0 +1,69 @@
+test_caption_composite_is_named_and_not_exposed_as_accuracy (test_coco_evaluator.CocoEvaluatorRegressionTest.test_caption_composite_is_named_and_not_exposed_as_accuracy) ... ok
+test_checkpoint_signatures_include_evaluation_schema (test_coco_evaluator.CocoEvaluatorRegressionTest.test_checkpoint_signatures_include_evaluation_schema) ... ok
+test_detection_uses_micro_f1_and_also_reports_coco_ap (test_coco_evaluator.CocoEvaluatorRegressionTest.test_detection_uses_micro_f1_and_also_reports_coco_ap) ... skipped 'pycocotools is optional'
+test_gate_top_level_is_current_task_and_anchors_stay_per_task (test_coco_evaluator.CocoEvaluatorRegressionTest.test_gate_top_level_is_current_task_and_anchors_stay_per_task) ... skipped 'pycocotools is optional'
+test_grounding_converts_qwen_coordinates_and_reports_mean_iou (test_coco_evaluator.CocoEvaluatorRegressionTest.test_grounding_converts_qwen_coordinates_and_reports_mean_iou) ... ok
+test_paper_anchor_thresholds_and_schema_validity (test_coco_evaluator.CocoEvaluatorRegressionTest.test_paper_anchor_thresholds_and_schema_validity) ... ok
+test_recovered_multimodal_manifest_is_runtime_compatible (test_data_preparation.DataPreparationTest.test_recovered_multimodal_manifest_is_runtime_compatible) ... ok
+test_split_records_is_deterministic_and_disjoint (test_data_preparation.DataPreparationTest.test_split_records_is_deterministic_and_disjoint) ... ok
+test_textual_builder_creates_distinct_train_validation_anchor_test (test_data_preparation.DataPreparationTest.test_textual_builder_creates_distinct_train_validation_anchor_test) ... ok
+test_full_distillation_routes_memory_to_judge (test_distillation_models.DistillationModelRoutingTest.test_full_distillation_routes_memory_to_judge) ... ok
+test_judge_defaults_to_main_model (test_distillation_models.DistillationModelRoutingTest.test_judge_defaults_to_main_model) ... ok
+test_online_teacher_routes_selection_and_memory_but_not_final_or_optimizer (test_distillation_models.DistillationModelRoutingTest.test_online_teacher_routes_selection_and_memory_but_not_final_or_optimizer) ... ok
+test_partial_distillation_keeps_memory_on_main_model (test_distillation_models.DistillationModelRoutingTest.test_partial_distillation_keeps_memory_on_main_model) ... ok
+test_failed_candidate_execution_restores_learning_memory (test_local_reproduction.ReproductionStateTests.test_failed_candidate_execution_restores_learning_memory) ... [HCL 05:07:10] memory candidate baseline start gate_examples=1
+[HCL 05:07:11] sample start phase=memory_gate:stable item=1/1 task=math task_id=train/math/one memory_mode=read_only
+[HCL 05:07:11] final generation cache store task_id=train/math/one key=587916131a37
+[HCL 05:07:11] prediction cache store phase=memory_gate:stable task_id=train/math/one key=36a36f1f882f
+[HCL 05:07:11] sample done phase=memory_gate:stable item=1/1 interface_mode=rule selected_memory=0 seconds=0.0
+ok
+test_final_test_does_not_write_learning_state (test_local_reproduction.ReproductionStateTests.test_final_test_does_not_write_learning_state) ... [HCL 05:07:11] test start split=test examples=1 memory_mode=read_only
+[HCL 05:07:11] sample start phase=test item=1/1 task=math task_id=heldout memory_mode=read_only
+[HCL 05:07:11] final generation cache store task_id=heldout key=587916131a37
+[HCL 05:07:11] prediction cache store phase=test task_id=heldout key=b400c95c9fb3
+[HCL 05:07:11] sample done phase=test item=1/1 interface_mode=rule selected_memory=0 seconds=0.0
+[HCL 05:07:11] test done split=test primary_metric=exact_match_accuracy primary_score=1.0000
+ok
+test_rejected_memory_candidate_restores_all_memory (test_local_reproduction.ReproductionStateTests.test_rejected_memory_candidate_restores_all_memory) ... [HCL 05:07:11] memory candidate baseline start gate_examples=1
+[HCL 05:07:11] sample start phase=memory_gate:stable item=1/1 task=math task_id=train/math/one memory_mode=read_only
+[HCL 05:07:11] final generation cache store task_id=train/math/one key=587916131a37
+[HCL 05:07:11] prediction cache store phase=memory_gate:stable task_id=train/math/one key=b058dba1ee10
+[HCL 05:07:11] sample done phase=memory_gate:stable item=1/1 interface_mode=rule selected_memory=0 seconds=0.0
+[HCL 05:07:11] train batch inference start split=train examples=1 memory_mode=read_write
+[HCL 05:07:11] sample start phase=train item=1/1 task=math task_id=train/math/one memory_mode=read_write
+[HCL 05:07:11] memory raw updated task=math task_id=train/math/one summary={'raw': 1, 'abstract': 0, 'anchor': 0, 'skill': 0}
+[HCL 05:07:11] sample done phase=train item=1/1 interface_mode=rule selected_memory=0 seconds=0.0
+[HCL 05:07:11] memory abstract updated task=math summary={'raw': 1, 'abstract': 2, 'anchor': 0, 'skill': 0}
+[HCL 05:07:11] train batch inference done split=train primary_metric=exact_match_accuracy primary_score=1.0000
+[HCL 05:07:11] sample start phase=memory_gate:candidate item=1/1 task=math task_id=train/math/one memory_mode=read_only
+[HCL 05:07:11] final generation cache hit task_id=train/math/one key=587916131a37
+[HCL 05:07:11] prediction cache store phase=memory_gate:candidate task_id=train/math/one key=afda0b4f1b76
+[HCL 05:07:11] sample done phase=memory_gate:candidate item=1/1 interface_mode=rule selected_memory=0 seconds=0.0
+[HCL 05:07:11] memory candidate rejected reasons=['forced_regression_test'] restored={'raw': 0, 'abstract': 0, 'anchor': 0, 'skill': 0}
+ok
+test_retention_counts_losses_despite_recoveries (test_local_reproduction.ReproductionStateTests.test_retention_counts_losses_despite_recoveries) ... ok
+test_default_question_identity_remains_unchanged (test_multimodal_anchor_identity.MultimodalAnchorIdentityTest.test_default_question_identity_remains_unchanged) ... ok
+test_distinct_images_survive_identical_caption_instruction (test_multimodal_anchor_identity.MultimodalAnchorIdentityTest.test_distinct_images_survive_identical_caption_instruction) ... ok
+test_detection_array_and_invalid_boxes_are_not_repaired (test_native_geometry.NativeGeometryContractTest.test_detection_array_and_invalid_boxes_are_not_repaired) ... ok
+test_single_documented_box_can_be_wrapped_as_explicit_requested_schema (test_native_geometry.NativeGeometryContractTest.test_single_documented_box_can_be_wrapped_as_explicit_requested_schema) ... ok
+test_budget_sweep_matches_paper_protocol (test_paper_alignment.PaperAlignmentTest.test_budget_sweep_matches_paper_protocol) ... ok
+test_current_score_tie_prefers_lower_historical_loss (test_paper_alignment.PaperAlignmentTest.test_current_score_tie_prefers_lower_historical_loss) ... ok
+test_explicit_historical_budget_gates_anchor_loss (test_paper_alignment.PaperAlignmentTest.test_explicit_historical_budget_gates_anchor_loss) ... ok
+test_main_profiles_differ_only_in_historical_loss_budget (test_paper_alignment.PaperAlignmentTest.test_main_profiles_differ_only_in_historical_loss_budget) ... ok
+test_main_stream_order_and_sample_limits (test_paper_alignment.PaperAlignmentTest.test_main_stream_order_and_sample_limits) ... ok
+test_builds_executes_and_caches_safe_arithmetic_arguments (test_router_tool_arguments.RouterManagedArithmeticArgumentsTest.test_builds_executes_and_caches_safe_arithmetic_arguments) ... [HCL 05:07:11] tool argument cache store task_id=smoke/mercury tool=arithmetic_calculator key=4368015dfbfd
+[HCL 05:07:11] tool argument cache hit task_id=smoke/mercury tool=arithmetic_calculator key=4368015dfbfd
+ok
+test_rejects_unsafe_expression (test_router_tool_arguments.RouterManagedArithmeticArgumentsTest.test_rejects_unsafe_expression) ... [HCL 05:07:11] tool argument builder invalid task_id=smoke/mercury tool=arithmetic_calculator attempts=1 diagnostics=attempt_1:unsafe_or_invalid:CapabilityExecutionError:Unsupported arithmetic expression node: Call
+ok
+test_invalid_selector_is_wrong_not_successful_fallback_and_other_errors_propagate (test_runtime_fail_closed.FailedSampleAccountingTest.test_invalid_selector_is_wrong_not_successful_fallback_and_other_errors_propagate) ... [HCL 05:07:11] sample start phase=train item=1/1 task=math task_id=math/train/one memory_mode=read_write
+[HCL 05:07:11] sample failed task_id=math/train/one reason=memory_selector_invalid_schema answering_skipped=true
+[HCL 05:07:11] sample start phase=test item=1/1 task=math task_id=math/train/one memory_mode=read_only
+[HCL 05:07:11] sample failed task_id=math/train/one reason=memory_selector_invalid_schema answering_skipped=true
+[HCL 05:07:11] sample start phase=predict item=1/1 task=math task_id=math/train/one memory_mode=read_only
+ok
+
+----------------------------------------------------------------------
+Ran 29 tests in 0.434s
+
+OK (skipped=2)

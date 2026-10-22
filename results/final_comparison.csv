@@ -1,0 +1,8 @@
+method,source,detection_100,caption_100,grounding_100,vqa_100,final_mean_100,average_forgetting_pp
+Zero-shot,paper,37.52,21.1,43,85.47,46.77,
+Zero-shot,this_run,45.6692913386,34.8392646761,92,68,60.1271390037,
+Static Harness,this_run,53.7704918033,36.9002359626,84,37.6666666667,53.0843486081,
+Stability-HCL,paper,65.34,39.41,91.6,79.33,68.92,0.22
+Stability-HCL,this_run_recovery,60.162601626,38.0068261599,84,35.6666666667,54.4590236132,0
+Plasticity-HCL,paper,64.14,37.31,90.6,79.8,67.96,0.81
+Plasticity-HCL,this_run_recovery,51.0714285714,36.5853450092,83,34.3333333333,51.2475267285,3.3799002416

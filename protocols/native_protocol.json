@@ -1,0 +1,59 @@
+{
+  "name": "native_pixels_50_10_100",
+  "arms": [
+    "raw_zero_shot",
+    "static_harness",
+    "stability_hcl",
+    "plasticity_hcl"
+  ],
+  "gpus": [
+    2,
+    3,
+    4,
+    5
+  ],
+  "model": "frozen existing Qwen2.5-VL-7B BF16; same schema canonicalizer in every arm",
+  "counts_per_task": {
+    "adaptation": 50,
+    "validation": 10,
+    "test": 100
+  },
+  "batchsize": 25,
+  "candidate_count_per_artifact": 3,
+  "artifacts": [
+    "task_interface_structuring",
+    "router_workflow",
+    "memory_selector",
+    "router_context"
+  ],
+  "anchor_count_per_batch": 10,
+  "anchor_candidate_pool_limit": 25,
+  "anchor_capacity_per_task": 25,
+  "anchor_identity": "visible_input (question plus image identity; no labels)",
+  "unchanged_anchor_requirements": {
+    "minimum_total": 20,
+    "minimum_per_historical_task": 15
+  },
+  "budget_stability": 0,
+  "budget_plasticity": null,
+  "minimum_remaining_seconds": 46800,
+  "time_budget": "share budget.json original first actual start; no clock reset",
+  "expected_hcl_arm_seconds_range": [
+    18000,
+    43200
+  ],
+  "cost_rationale": "Previous HCL arm ~80min but 3 stages skipped prompt search due anchors. Conservatively budget native 5-12h per HCL arm including 1000 stage-test sample slots, 200 adaptation, 8 memory gates and up to96 prompt candidates across current10 plus up to60 anchors. Parallel arms reduce elapsed comparison time; original 24h hard limit remains authoritative. Paper 250/50/500/40updates at current latencies has no credible fit in remaining budget.",
+  "stop_conditions": [
+    "original deadline",
+    "47GB conservative total allocated bytes",
+    "39GB conservative nondata bytes",
+    "four valid arm EXIT receipts and matrices then verify/report/deliver/stop"
+  ],
+  "scientific_limits": [
+    "Substitute model, smaller counts and different anchor selection frequency; not paper numerical reproduction",
+    "Previous pilot test images excluded from all new reporting tasks",
+    "No held-out answers used in selection",
+    "No tuning after looking at new test scores",
+    "Retain the old incompatible pilot as an engineering negative result"
+  ]
+}

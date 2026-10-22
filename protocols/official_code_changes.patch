@@ -1,0 +1,419 @@
+diff --git a/hcl/memory/__init__.py b/hcl/memory/__init__.py
+index 0652e77..19e27a8 100644
+--- a/hcl/memory/__init__.py
++++ b/hcl/memory/__init__.py
+@@ -35,6 +35,7 @@ class MemoryConfig:
+     anchor_candidate_limit: int = 0
+     anchor_selection_max_new_tokens: int = 1024
+     anchor_similarity_threshold: float = 0.82
++    anchor_identity_mode: str = "question"
+     skill_enabled: bool = True
+     skill_mode: str = "llm"
+     skill_max_count: int = 6
+@@ -67,6 +68,7 @@ class ExperienceMemory:
+             root / "anchors.jsonl",
+             capacity_per_task=self.config.anchor_capacity_per_task,
+             similarity_threshold=self.config.anchor_similarity_threshold,
++            identity_mode=self.config.anchor_identity_mode,
+         )
+         self.skills = EvolvingSkillMemory(
+             root / "skills.json",
+diff --git a/hcl/memory/anchor.py b/hcl/memory/anchor.py
+index 119b7d0..c1c5ff4 100644
+--- a/hcl/memory/anchor.py
++++ b/hcl/memory/anchor.py
+@@ -16,10 +16,14 @@ class AnchorMemory:
+         *,
+         capacity_per_task: int = 15,
+         similarity_threshold: float = 0.82,
++        identity_mode: str = "question",
+     ) -> None:
+         self.path = Path(path)
+         self.capacity_per_task = max(int(capacity_per_task), 0)
+         self.similarity_threshold = min(max(float(similarity_threshold), 0.0), 1.0)
++        if identity_mode not in {"question", "visible_input"}:
++            raise ValueError("anchor identity_mode must be question or visible_input")
++        self.identity_mode = identity_mode
+         self.records = self._load()
+ 
+     def clear(self) -> None:
+@@ -32,6 +36,7 @@ class AnchorMemory:
+             [dict(item) for item in examples],
+             capacity=self.capacity_per_task,
+             similarity_threshold=self.similarity_threshold,
++            identity_mode=self.identity_mode,
+         )
+         self.records = retained + selected
+         self._persist()
+@@ -62,6 +67,7 @@ class AnchorMemory:
+             list(by_id.values()),
+             capacity=capacity,
+             similarity_threshold=self.similarity_threshold,
++            identity_mode=self.identity_mode,
+         )
+         self.records = retained + bounded
+         self._persist()
+@@ -108,12 +114,18 @@ def _clustered_anchor_selection(
+     *,
+     capacity: int,
+     similarity_threshold: float,
++    identity_mode: str = "question",
+ ) -> list[dict[str, Any]]:
+     if capacity <= 0:
+         return []
+     exact_unique: dict[str, dict[str, Any]] = {}
+     for item in records:
+         key = _normalized_question(item)
++        if identity_mode == "visible_input":
++            metadata = item.get("metadata") or {}
++            image = metadata.get("image_id", item.get("image") or item.get("image_path"))
++            if image is not None:
++                key = f"{key}\nimage:{image}"
+         if not key:
+             key = f"task_id:{item.get('task_id', '')}"
+         previous = exact_unique.get(key)
+diff --git a/hcl/models.py b/hcl/models.py
+index dca799d..3c73a84 100644
+--- a/hcl/models.py
++++ b/hcl/models.py
+@@ -348,6 +348,7 @@ class LocalTransformersModel(BaseModel):
+         if self._model is None:
+             raise RuntimeError("No compatible transformers AutoModel class found for this checkpoint.")
+         self._model.eval()
++        self._model.requires_grad_(False)
+         progress(f"model load done seconds={perf_counter() - load_start:.1f}")
+ 
+     def _model_load_kwargs(self, *, torch: Any, torch_dtype: Any, use_quantization: bool) -> dict[str, Any]:
+@@ -377,7 +378,9 @@ class LocalTransformersModel(BaseModel):
+         # Transformers 5.x renamed torch_dtype to dtype; current Qwen3.5
+         # checkpoints use that code path. Older supported releases accept the
+         # same dtype argument through from_pretrained.
+-        load_kwargs["dtype"] = torch_dtype
++        import transformers
++        dtype_key = "dtype" if int(transformers.__version__.split(".")[0]) >= 5 else "torch_dtype"
++        load_kwargs[dtype_key] = torch_dtype
+         return load_kwargs
+ 
+     def _load_model_with_kwargs(self, load_kwargs: dict[str, Any]) -> None:
+@@ -412,7 +415,7 @@ class LocalTransformersModel(BaseModel):
+             return None
+         path = Path(image_path)
+         if not path.exists():
+-            return None
++            raise FileNotFoundError(f"Requested image input is missing: {path}")
+         try:
+             from PIL import Image
+         except ImportError as exc:
+diff --git a/hcl/pipeline.py b/hcl/pipeline.py
+index a0492ee..9ee0e32 100644
+--- a/hcl/pipeline.py
++++ b/hcl/pipeline.py
+@@ -756,24 +756,39 @@ class HCLPipeline:
+             historical_anchor_examples=historical_anchor_examples,
+             split="val:memory_stable",
+         )
+-        train_result = self._evaluate_train_batch(examples, split=split)
+-        memory_candidate_predictions = self._predict(
+-            val_examples,
+-            progress_label="memory_gate:candidate",
+-        )
+-        memory_candidate = self._evaluate_gate(
+-            val_examples,
+-            memory_candidate_predictions,
+-            current_val_examples=current_val_examples,
+-            historical_anchor_examples=historical_anchor_examples,
+-            split="val:memory_candidate",
+-            reference_predictions=memory_reference_predictions,
+-        )
+-        memory_accepted, memory_reasons = self._memory_candidate_decision(
+-            memory_reference,
+-            memory_candidate,
+-            anchor_context=anchor_context,
+-        )
++        try:
++            train_result = self._evaluate_train_batch(examples, split=split)
++            memory_candidate_predictions = self._predict(
++                val_examples,
++                progress_label="memory_gate:candidate",
++            )
++            memory_candidate = self._evaluate_gate(
++                val_examples,
++                memory_candidate_predictions,
++                current_val_examples=current_val_examples,
++                historical_anchor_examples=historical_anchor_examples,
++                split="val:memory_candidate",
++                reference_predictions=memory_reference_predictions,
++            )
++            memory_accepted, memory_reasons = self._memory_candidate_decision(
++                memory_reference,
++                memory_candidate,
++                anchor_context=anchor_context,
++            )
++        except Exception as exc:
++            self.memory.restore(memory_snapshot)
++            self.evaluation_recorder.record_memory_update(
++                {
++                    "accepted": False,
++                    "reason": "memory_candidate_execution_failed",
++                    "error": f"{type(exc).__name__}: {exc}",
++                    "restored": True,
++                    "batch_index": batch_index,
++                    "batch_count": batch_count,
++                    "memory_summary": self.memory.summary(),
++                }
++            )
++            raise
+         if memory_accepted:
+             stable_val_predictions = memory_candidate_predictions
+             progress(f"memory candidate committed summary={self.memory.summary()}")
+diff --git a/hcl/totalbaseline/__main__.py b/hcl/totalbaseline/__main__.py
+index 44ecfa0..f5a4079 100644
+--- a/hcl/totalbaseline/__main__.py
++++ b/hcl/totalbaseline/__main__.py
+@@ -10,6 +10,7 @@ from ..dataset import DatasetLoader, load_task_stream_specs
+ from ..evaluator import ExactMatchEvaluator
+ from ..json_utils import atomic_write_json
+ from ..models import ChatCompletionsAPIModel
++from ..cli import _load_model
+ 
+ 
+ def main() -> int:
+@@ -24,11 +25,11 @@ def main() -> int:
+     output_dir.mkdir(parents=True, exist_ok=True)
+ 
+     model_config = dict(config["model"])
+-    model_config["backend"] = "chat_completions"
++    model_config.setdefault("backend", "chat_completions")
+     model_config.setdefault("enable_image_input", True)
+     model_config.setdefault("chat_template_kwargs", {"enable_thinking": False})
+     model_config.setdefault("log_path", str(output_dir / "llm_calls.txt"))
+-    model = ChatCompletionsAPIModel(**model_config)
++    model = _load_model(model_config, base_dir=base_dir, storage_dir=str(output_dir))
+     loader = DatasetLoader()
+     evaluator = ExactMatchEvaluator()
+     split = str(config.get("split", "test"))
+diff --git a/hcl/native_geometry.py b/hcl/native_geometry.py
+new file mode 100644
+--- /dev/null
++++ b/hcl/native_geometry.py
+@@ -0,0 +1,33 @@
++"""Opt-in Qwen2.5-VL schema compatibility for explicitly declared pixel-coordinate runs."""
++import json
++import math
++from pathlib import Path
++from .evaluator import _parse_jsonish
++from .models import LocalTransformersModel, _state_phase
++
++class NativePixelModel(LocalTransformersModel):
++    def generate(self, prompt, *, state):
++        raw = super().generate(prompt, state=state)
++        if _state_phase(state) != 'final_answer':
++            return raw
++        context = state.get('task_context') or {}
++        question = str(state.get('question') or context.get('raw_question') or prompt).lower()
++        if 'return only one json object with bbox' not in question:
++            return raw
++        value = _parse_jsonish(raw)
++        if not (isinstance(value, list) and len(value) == 1 and isinstance(value[0], dict)):
++            return raw
++        box = value[0].get('bbox_2d', value[0].get('bbox'))
++        if not (isinstance(box, list) and len(box) == 4):
++            return raw
++        try:
++            box = [float(x) for x in box]
++        except (TypeError, ValueError):
++            return raw
++        if not (all(math.isfinite(x) for x in box) and box[2] > box[0] and box[3] > box[1]):
++            return raw
++        canonical = json.dumps({'bbox': box})
++        if self.config.log_path:
++            with Path(self.config.log_path + '.schema_normalization.jsonl').open('a') as f:
++                f.write(json.dumps({'task_id': state.get('task_id'), 'profile': 'native_pixel_single_bbox', 'raw': raw, 'canonical': canonical}) + '\n')
++        return canonical
+diff --git a/hcl/runtime_fail_closed.py b/hcl/runtime_fail_closed.py
+new file mode 100644
+--- /dev/null
++++ b/hcl/runtime_fail_closed.py
+@@ -0,0 +1,43 @@
++"""Opt-in protocol: exhausted memory-selector schema errors are failed samples.
++
++The invalid selection is never accepted or used for answering. No extra retry,
++role coercion, successful memoryless fallback, or gate relaxation is performed.
++"""
++import json
++from .progress import progress
++
++def install_memory_selector_fail_closed(pipeline_class):
++    original = pipeline_class._predict_one
++    if getattr(original, '_memory_selector_fail_closed', False):
++        return
++    def guarded(self, stream_position, example, *args, **kwargs):
++        try:
++            return original(self, stream_position, example, *args, **kwargs)
++        except ValueError as exc:
++            if not str(exc).startswith('Memory Selector LLM output remained invalid after '):
++                raise
++            prediction = {
++                'task_id': str(example.get('task_id', '')),
++                'answer': '',
++                'trace': {
++                    'task_interface_mode': 'intermediate_schema_failed',
++                    'selected_memory': [],
++                    'intermediate_failure': {
++                        'phase': 'memory_selector',
++                        'error': str(exc),
++                        'sample_failed': True,
++                        'answering_skipped': True,
++                    },
++                },
++            }
++            if kwargs.get('update_memory', False):
++                self.memory.record_training_interaction(str(example.get('task_name', '')), example, prediction)
++            record = {'task_id': prediction['task_id'], 'scope': kwargs.get('progress_label'),
++                      'update_memory': bool(kwargs.get('update_memory', False)), 'error': str(exc),
++                      'answer': '', 'policy': 'failed_sample_no_answering_no_additional_retry'}
++            with (self.evaluation_recorder.record_dir / 'intermediate_failures.jsonl').open('a') as f:
++                f.write(json.dumps(record) + '\n')
++            progress(f"sample failed task_id={prediction['task_id']} reason=memory_selector_invalid_schema answering_skipped=true")
++            return prediction
++    guarded._memory_selector_fail_closed = True
++    pipeline_class._predict_one = guarded
+diff --git a/tests/test_local_reproduction.py b/tests/test_local_reproduction.py
+new file mode 100644
+--- /dev/null
++++ b/tests/test_local_reproduction.py
+@@ -0,0 +1,41 @@
++import tempfile
++import unittest
++from pathlib import Path
++from unittest.mock import patch
++from hcl.cli import _build_pipeline
++from hcl.models import RuleBasedSmokeModel
++
++class ReproductionStateTests(unittest.TestCase):
++ def pipeline(self, root):
++  return _build_pipeline({'storage_dir':str(root),'task_interface':{'mode':'rule'},'router':{'use_llm_workflow_selector':False,'use_memory_selector':False,'use_skill_selector':False,'use_tool_selector':False},'memory':{'abstract_mode':'rule','skill_enabled':False},'optimizer':{'components':[]}},model=RuleBasedSmokeModel(),base_dir=root)
++ def test_final_test_does_not_write_learning_state(self):
++  with tempfile.TemporaryDirectory() as d:
++   p=self.pipeline(Path(d)); before=p.memory.snapshot(); versions=p._component_version_snapshot()
++   p.test([{'task_id':'heldout','task_name':'math','task_type':'gsm8k','question':'2+2','answer':'4'}],split='test')
++   self.assertEqual(before,p.memory.snapshot()); self.assertEqual(versions,p._component_version_snapshot())
++ def test_rejected_memory_candidate_restores_all_memory(self):
++  with tempfile.TemporaryDirectory() as d:
++   p=self.pipeline(Path(d));before=p.memory.snapshot()
++   sample={'task_id':'train/math/one','task_name':'math','task_type':'gsm8k','question':'2+2','answer':'4','split':'train'}
++   with patch.object(p,'_memory_candidate_decision',return_value=(False,['forced_regression_test'])),patch.object(p,'_select_batch_anchors',return_value={}):
++    p._train_batch_and_optimize([sample],val_examples=[sample],current_val_examples=[sample],historical_anchor_examples=[],anchor_context={'required':False},split='train',batch_index=0,batch_count=1)
++   self.assertEqual(before,p.memory.snapshot())
++ def test_retention_counts_losses_despite_recoveries(self):
++  from hcl.evaluator import ExactMatchEvaluator
++  xs=[{'task_id':'a','answer':'yes'},{'task_id':'b','answer':'yes'}]
++  result=ExactMatchEvaluator().evaluate(xs,[{'task_id':'a','answer':'no'},{'task_id':'b','answer':'yes'}],reference_predictions=[{'task_id':'a','answer':'yes'},{'task_id':'b','answer':'no'}])
++  self.assertEqual(result['metrics']['forget_count'],1)
++  self.assertEqual(result['metrics']['recovered_count'],1)
++
++ def test_failed_candidate_execution_restores_learning_memory(self):
++  with tempfile.TemporaryDirectory() as d:
++   p=self.pipeline(Path(d));before=p.memory.snapshot()
++   sample={'task_id':'train/math/one','task_name':'math','task_type':'gsm8k','question':'2+2','answer':'4','split':'train'}
++   def fail(*args,**kwargs):
++    p.memory.raw.records.append({'partial_candidate_write':True})
++    p.memory.raw._persist()
++    raise ValueError('invalid selector schema')
++   with patch.object(p,'_evaluate_train_batch',side_effect=fail):
++    with self.assertRaisesRegex(ValueError,'invalid selector schema'):
++     p._train_batch_and_optimize([sample],val_examples=[sample],current_val_examples=[sample],historical_anchor_examples=[],anchor_context={'required':False},split='train',batch_index=0,batch_count=1)
++   self.assertEqual(before,p.memory.snapshot())
+diff --git a/tests/test_native_geometry.py b/tests/test_native_geometry.py
+new file mode 100644
+--- /dev/null
++++ b/tests/test_native_geometry.py
+@@ -0,0 +1,19 @@
++import json
++import unittest
++from unittest.mock import patch
++from hcl.native_geometry import NativePixelModel
++from hcl.models import LocalTransformersModel
++
++class NativeGeometryContractTest(unittest.TestCase):
++    def call(self, output, question):
++        model=NativePixelModel(name='contract-test',path='/unused')
++        with patch.object(LocalTransformersModel,'generate',return_value=output):
++            return model.generate(question,state={'phase':'final_answer','question':question})
++    def test_single_documented_box_can_be_wrapped_as_explicit_requested_schema(self):
++        result=self.call('[{"bbox_2d":[10,20,30,40],"label":"ignored"}]','Return only one JSON object with bbox [x1,y1,x2,y2] in absolute pixels.')
++        self.assertEqual(json.loads(result),{'bbox':[10,20,30,40]})
++    def test_detection_array_and_invalid_boxes_are_not_repaired(self):
++        raw='[{"bbox_2d":[10,20,30,40],"label":"person"}]'
++        self.assertEqual(self.call(raw,'Return a JSON array with all detections.'),raw)
++        for raw in ['[{"bbox_2d":[30,20,10,40]}]','[{"bbox_2d":[0,0,1,1]},{"bbox_2d":[2,2,3,3]}]','malformed']:
++            self.assertEqual(self.call(raw,'Return only one JSON object with bbox in pixels.'),raw)
+diff --git a/tests/test_multimodal_anchor_identity.py b/tests/test_multimodal_anchor_identity.py
+new file mode 100644
+--- /dev/null
++++ b/tests/test_multimodal_anchor_identity.py
+@@ -0,0 +1,23 @@
++import tempfile
++import unittest
++from pathlib import Path
++from hcl.memory.anchor import AnchorMemory
++
++class MultimodalAnchorIdentityTest(unittest.TestCase):
++    def test_distinct_images_survive_identical_caption_instruction(self):
++        records=[{'task_id':str(i),'task_name':'caption','question':'Describe the image.',
++                  'metadata':{'image_id':i}} for i in range(20)]
++        with tempfile.TemporaryDirectory() as d:
++            anchors=AnchorMemory(Path(d)/'anchors.jsonl',capacity_per_task=25,identity_mode='visible_input')
++            anchors.add_batch('caption',records[:10])
++            anchors.add_batch('caption',records[10:])
++            self.assertEqual(len(anchors.records),20)
++            anchors.add_batch('caption',[dict(records[0],task_id='duplicate-alias')])
++            self.assertEqual(len(anchors.records),20)
++    def test_default_question_identity_remains_unchanged(self):
++        records=[{'task_id':str(i),'task_name':'caption','question':'Describe the image.',
++                  'metadata':{'image_id':i}} for i in range(2)]
++        with tempfile.TemporaryDirectory() as d:
++            anchors=AnchorMemory(Path(d)/'anchors.jsonl')
++            anchors.add_batch('caption',records)
++            self.assertEqual(len(anchors.records),1)
+diff --git a/tests/test_runtime_fail_closed.py b/tests/test_runtime_fail_closed.py
+new file mode 100644
+--- /dev/null
++++ b/tests/test_runtime_fail_closed.py
+@@ -0,0 +1,36 @@
++import tempfile
++import unittest
++from pathlib import Path
++from unittest.mock import patch
++from hcl.cli import _build_pipeline
++from hcl.models import RuleBasedSmokeModel
++from hcl.pipeline import HCLPipeline
++from hcl.runtime_fail_closed import install_memory_selector_fail_closed
++
++class FailedSampleAccountingTest(unittest.TestCase):
++    def test_invalid_selector_is_wrong_not_successful_fallback_and_other_errors_propagate(self):
++        original=HCLPipeline._predict_one
++        try:
++            install_memory_selector_fail_closed(HCLPipeline)
++            with tempfile.TemporaryDirectory() as d:
++                root=Path(d)
++                p=_build_pipeline({'storage_dir':str(root),'task_interface':{'mode':'rule'},'router':{'use_llm_workflow_selector':False,'use_memory_selector':False,'use_skill_selector':False,'use_tool_selector':False},'memory':{'abstract_mode':'rule','skill_enabled':False}},model=RuleBasedSmokeModel(),base_dir=root)
++                x={'task_id':'math/train/one','task_name':'math','task_type':'gsm8k','question':'2+2','answer':'4'}
++                error='Memory Selector LLM output remained invalid after 2 attempt(s): selected_1_role_invalid'
++                with patch('hcl.router.Router.run',side_effect=ValueError(error)):
++                    preds=p._predict([x],update_memory=True,progress_label='train')
++                result=p.evaluator.evaluate([x],preds)['metrics']
++                self.assertEqual(result['total'],1)
++                self.assertEqual(result['correct'],0)
++                self.assertEqual(result['format_compliance_rate'],0)
++                self.assertTrue(preds[0]['trace']['intermediate_failure']['answering_skipped'])
++                self.assertEqual(p.memory.summary()['raw'],1)
++                before=p.memory.snapshot()
++                with patch('hcl.router.Router.run',side_effect=ValueError(error)):
++                    p._predict([x],update_memory=False,progress_label='test')
++                self.assertEqual(before,p.memory.snapshot())
++                with patch('hcl.router.Router.run',side_effect=ValueError('unrelated bug')):
++                    with self.assertRaisesRegex(ValueError,'unrelated bug'):
++                        p._predict([x],update_memory=False)
++        finally:
++            HCLPipeline._predict_one=original

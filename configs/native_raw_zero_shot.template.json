@@ -1,0 +1,129 @@
+{
+  "project_name": "Resource-bounded native pixel compatibility: raw_zero_shot",
+  "model": {
+    "class_path": "hcl.native_geometry.NativePixelModel",
+    "backend": "local_transformers",
+    "name": "Qwen2.5-VL-7B-Instruct",
+    "path": "@MODEL_PATH@",
+    "torch_dtype": "bfloat16",
+    "attn_implementation": "sdpa",
+    "max_new_tokens": 2048,
+    "answer_max_new_tokens": 1024,
+    "temperature": 0.0,
+    "enable_thinking": false,
+    "local_files_only": true,
+    "log_path": "@REPRO_ROOT@/code/storage/experiments/native_pixels_50_10_100/raw_zero_shot/llm_calls.txt"
+  },
+  "execution": {
+    "read_only_workers": 1,
+    "run_train_final": false
+  },
+  "task_interface": {
+    "mode": "auto",
+    "max_new_tokens": 640,
+    "invalid_output_retries": 1,
+    "retry_max_new_tokens": 1024,
+    "fallback_to_rules_on_invalid": true
+  },
+  "router": {
+    "route_name": "native_pixel_matched_harness",
+    "strip_output": true,
+    "use_llm_workflow_selector": true,
+    "use_memory_selector": true,
+    "memory_always_on": true,
+    "use_skill_selector": true,
+    "use_tool_selector": false,
+    "tool_auto_select": false,
+    "use_chat_tool_calls": false,
+    "memory_selector_max_new_tokens": 256,
+    "memory_selector_invalid_output_retries": 1,
+    "memory_selector_retry_max_new_tokens": 256,
+    "skill_selector_max_new_tokens": 256,
+    "skill_selector_invalid_output_retries": 1,
+    "skill_selector_retry_max_new_tokens": 256,
+    "skill_selector_fallback_to_empty_on_invalid": true,
+    "capability_enabled": false,
+    "capability_execution_mode": "disabled"
+  },
+  "optimizer": {
+    "candidate_count": 3,
+    "selection_objective": "plasticity",
+    "commit_policy": "plasticity_first",
+    "historical_loss_budget": 0,
+    "max_forget_count": 0,
+    "min_primary_score_delta": 1e-09,
+    "min_correct_gain": 0,
+    "min_format_compliance_rate": 1.0,
+    "recover_reward": 1.0,
+    "forget_penalty": 1.5,
+    "min_anchor_score": -5.0,
+    "min_anchor_net_score": -0.1,
+    "max_anchor_forget_rate": 0.2,
+    "components": [
+      "task_interface_structuring",
+      "router_workflow",
+      "memory_selector",
+      "router_context"
+    ]
+  },
+  "memory": {
+    "enabled": true,
+    "raw_capacity_per_task": 10,
+    "abstract_capacity_per_task": 2,
+    "anchor_capacity_per_task": 25,
+    "retrieval_top_k": 2,
+    "reset_on_start": false,
+    "abstract_mode": "llm",
+    "abstract_max_new_tokens": 512,
+    "anchor_selection_mode": "llm",
+    "anchor_count_per_batch": 10,
+    "anchor_candidate_limit": 25,
+    "anchor_selection_max_new_tokens": 128,
+    "skill_enabled": true,
+    "skill_mode": "llm",
+    "abstract_prompt_max_chars": 12000,
+    "anchor_identity_mode": "visible_input"
+  },
+  "forgetting_probe": {
+    "enabled": false
+  },
+  "task_stream_path": "configs/taskstream_native_pixels_50_10_100.json",
+  "reset_run_on_start": false,
+  "storage_dir": "@REPRO_ROOT@/code/storage/experiments/native_pixels_50_10_100/raw_zero_shot",
+  "prediction_cache": {
+    "enabled": true,
+    "path": "@REPRO_ROOT@/code/storage/experiments/native_pixels_50_10_100/raw_zero_shot/prediction_cache/read_only_predictions.jsonl"
+  },
+  "checkpoint": {
+    "enabled": true,
+    "path": "@REPRO_ROOT@/code/storage/experiments/native_pixels_50_10_100/raw_zero_shot/checkpoint.json",
+    "resume": true
+  },
+  "task_flow": [
+    {
+      "name": "train",
+      "phase": "train",
+      "train_split": "train",
+      "val_split": "validation",
+      "test_split": "test",
+      "continual": true,
+      "batchsize": 25,
+      "train_limit_per_task": 50,
+      "validation_limit_per_task": 10,
+      "test_limit_per_task": 100
+    },
+    {
+      "name": "test",
+      "phase": "test",
+      "test_split": "test",
+      "test_limit_per_task": 100,
+      "group_by_task": true
+    }
+  ],
+  "arm": "raw_zero_shot",
+  "output_dir": "@REPRO_ROOT@/code/storage/experiments/native_pixels_50_10_100/raw_zero_shot",
+  "split": "test",
+  "limit_per_task": 100,
+  "resume": false,
+  "workers": 1
+}

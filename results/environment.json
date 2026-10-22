@@ -1,0 +1,13 @@
+{
+  "python": "3.12",
+  "torch": "2.7.1+cu128",
+  "transformers": "4.51.3",
+  "Pillow": "12.3.0",
+  "accelerate": "1.14.0",
+  "pycocotools": "2.0.11",
+  "pycocoevalcap": "1.2",
+  "java": "21",
+  "gpu": "RTX PRO 5000 72GB",
+  "model": "Qwen2.5-VL-7B-Instruct BF16",
+  "seed": 20261022
+}
