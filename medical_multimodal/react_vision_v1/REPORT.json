@@ -1,0 +1,181 @@
+{
+  "status": "CLOSED_NATIVE_QUALIFICATION_FAILED",
+  "protocol_commit": "b4ecb2c",
+  "final_compatibility_commit": "ca5e415",
+  "summary": {
+    "time": 1792780666.2207768,
+    "denominator": 12,
+    "correct": 4,
+    "completed": 12,
+    "valid_final": 6,
+    "successful_visual_tool_episodes": 0,
+    "direct_tools_passed": true,
+    "planner_calls": 12,
+    "planner_input_tokens": 9905,
+    "planner_output_tokens": 1795,
+    "vision_generations": 0,
+    "fatal": null,
+    "hcl_updates": 0,
+    "controller_has_direct_image_payload": false,
+    "external_medcta_cases_used": 0,
+    "scientific_efficacy_claim": false,
+    "gate_pass": false
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "planned": 12,
+      "not_run": 12,
+      "model_generations": 0,
+      "reason": "Missing pycocotools disabled native multimodal registry"
+    },
+    {
+      "attempt": 2,
+      "planned": 12,
+      "not_run": 12,
+      "model_generations": 0,
+      "reason": "Native LLaVA wrapper incompatible with automatic SDPA"
+    },
+    {
+      "attempt": 3,
+      "planned": 12,
+      "not_run": 12,
+      "model_generations": 0,
+      "reason": "Config eager was overridden by model construction"
+    }
+  ],
+  "original_clock": {
+    "first_start": 1792777334.626717,
+    "deadline": 1792780934.626717,
+    "controller_exit": 1792780670.3471878,
+    "elapsed_seconds": 3335.7204706668854
+  },
+  "direct_preflight": {
+    "tool_calls": 4,
+    "all_successful": true,
+    "vision_generations": 2,
+    "vision_input_tokens": 98,
+    "vision_output_tokens": 146,
+    "tool_seconds": 5.728923082351685,
+    "not_autonomous_evidence": true
+  },
+  "case_results": [
+    {
+      "case_id": "15329",
+      "status": "completed",
+      "predicted": null,
+      "correct": false,
+      "planner_calls": 1,
+      "tool_calls": 0,
+      "seconds": 2.705040216445923
+    },
+    {
+      "case_id": "14779",
+      "status": "completed",
+      "predicted": null,
+      "correct": false,
+      "planner_calls": 1,
+      "tool_calls": 0,
+      "seconds": 2.007197618484497
+    },
+    {
+      "case_id": "3241",
+      "status": "completed",
+      "predicted": "C",
+      "correct": true,
+      "planner_calls": 1,
+      "tool_calls": 0,
+      "seconds": 4.982721567153931
+    },
+    {
+      "case_id": "11491",
+      "status": "completed",
+      "predicted": null,
+      "correct": false,
+      "planner_calls": 1,
+      "tool_calls": 0,
+      "seconds": 3.4383506774902344
+    },
+    {
+      "case_id": "10974",
+      "status": "completed",
+      "predicted": null,
+      "correct": false,
+      "planner_calls": 1,
+      "tool_calls": 0,
+      "seconds": 1.2930326461791992
+    },
+    {
+      "case_id": "5707",
+      "status": "completed",
+      "predicted": null,
+      "correct": false,
+      "planner_calls": 1,
+      "tool_calls": 0,
+      "seconds": 1.3747920989990234
+    },
+    {
+      "case_id": "18009",
+      "status": "completed",
+      "predicted": "E",
+      "correct": false,
+      "planner_calls": 1,
+      "tool_calls": 0,
+      "seconds": 1.1096255779266357
+    },
+    {
+      "case_id": "14255",
+      "status": "completed",
+      "predicted": "A",
+      "correct": false,
+      "planner_calls": 1,
+      "tool_calls": 0,
+      "seconds": 7.399476051330566
+    },
+    {
+      "case_id": "17474",
+      "status": "completed",
+      "predicted": "B",
+      "correct": true,
+      "planner_calls": 1,
+      "tool_calls": 0,
+      "seconds": 1.3114047050476074
+    },
+    {
+      "case_id": "11090",
+      "status": "completed",
+      "predicted": null,
+      "correct": false,
+      "planner_calls": 1,
+      "tool_calls": 0,
+      "seconds": 1.426401138305664
+    },
+    {
+      "case_id": "13005",
+      "status": "completed",
+      "predicted": "C",
+      "correct": true,
+      "planner_calls": 1,
+      "tool_calls": 0,
+      "seconds": 0.7792716026306152
+    },
+    {
+      "case_id": "5047",
+      "status": "completed",
+      "predicted": "B",
+      "correct": true,
+      "planner_calls": 1,
+      "tool_calls": 0,
+      "seconds": 4.653469085693359
+    }
+  ],
+  "retention_or_hcl_evidence": null,
+  "limitations": [
+    "Development qualification only, 12 case groups; no patient independence claim.",
+    "All four correct answers had no image access; not visual competence evidence.",
+    "Direct native visual tools ran on one image only; successful execution is not medical accuracy.",
+    "Only launch-time full ps was observed; nvidia-smi process display was not observed while these jobs used GPU.",
+    "No full GPU-second instrumentation; wall time and generation/token counts retained.",
+    "All 107 MedCTA cases remain locked external and unused."
+  ]
+}

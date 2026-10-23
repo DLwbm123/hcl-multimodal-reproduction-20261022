@@ -13,3 +13,5 @@ The independent one-hour clock includes preparation and any setup repairs; the e
 `prepare_cpu.py` canonicalizes the 12 single-frame images identically. `check_native.py` checks the actual ReAct loop with a real Calculator call and image/expression boundaries without model inference. `control.py` starts the guarded controller; `tool_worker.py` keeps the original visual tools in their compatible environment. Private raw questions, images, responses and runtime paths are excluded from public delivery.
 
 Upstream sources: [MedCTA](https://github.com/IVUL-KAUST/MedCTA), [Lagent](https://github.com/InternLM/lagent), [AgentLego](https://github.com/InternLM/agentlego). Source revisions and case selection are in `protocol.json`.
+
+Final status: **closed, native qualification failed**. All 12 episodes completed, 4 correct, 6 valid finals, zero autonomous visual-tool episodes. Four direct tool checks succeeded; those are separate engineering evidence. No HCL updates. See [Chinese report](REPORT.zh-CN.md) and [aggregate ledger](REPORT.json).

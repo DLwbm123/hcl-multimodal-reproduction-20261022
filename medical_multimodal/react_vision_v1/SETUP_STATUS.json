@@ -1,5 +1,5 @@
 {
-  "status": "three_setup_attempts_failed_before_inference",
+  "status": "fourth_attempt_completed_native_gate_failed",
   "model_generations": 0,
   "hcl_updates": 0,
   "all_12_not_run_each_attempt": true,
@@ -21,5 +21,14 @@
     }
   ],
   "shared_environment_modified": false,
-  "original_clock_and_panel_preserved": true
+  "original_clock_and_panel_preserved": true,
+  "final_outcome": {
+    "direct_tools_passed": true,
+    "completed": 12,
+    "correct": 4,
+    "valid_final": 6,
+    "autonomous_visual_tool_episodes": 0,
+    "hcl_updates": 0,
+    "branch_closed": true
+  }
 }
