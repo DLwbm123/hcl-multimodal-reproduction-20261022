@@ -1,0 +1,116 @@
+{
+  "date": "2026-10-23",
+  "protocol": "restricted-medtool-h0-development",
+  "boundary_tests": {
+    "tests": 8,
+    "passed": true,
+    "model_calls": 0
+  },
+  "scripted_pipeline_passed": true,
+  "real_revisions": [
+    {
+      "revision": "v1.0",
+      "actual_generation_records": 27,
+      "generation_seconds_including_load": 66.22563171386719,
+      "accepted": false,
+      "cases": [
+        {
+          "passed": false,
+          "termination": "provider_failure",
+          "utility": 0.0,
+          "requests": 4,
+          "saw_facts": true,
+          "saw_calculation": true
+        },
+        {
+          "passed": false,
+          "termination": "provider_failure",
+          "utility": 0.0,
+          "requests": 23,
+          "saw_facts": true,
+          "saw_calculation": false
+        }
+      ]
+    },
+    {
+      "revision": "v1.1",
+      "actual_generation_records": 25,
+      "generation_seconds_including_load": 49.883776903152466,
+      "accepted": false,
+      "cases": [
+        {
+          "passed": false,
+          "termination": "stuck",
+          "utility": 0.0,
+          "requests": 11,
+          "saw_facts": true,
+          "saw_calculation": true
+        },
+        {
+          "passed": false,
+          "termination": "provider_failure",
+          "utility": 0.0,
+          "requests": 14,
+          "saw_facts": true,
+          "saw_calculation": true
+        }
+      ]
+    },
+    {
+      "revision": "v1.2",
+      "actual_generation_records": 30,
+      "generation_seconds_including_load": 72.2993733882904,
+      "accepted": false,
+      "cases": [
+        {
+          "passed": true,
+          "termination": "submitted",
+          "utility": 1.0,
+          "requests": 6,
+          "saw_facts": true,
+          "saw_calculation": true
+        },
+        {
+          "passed": false,
+          "termination": "budget",
+          "utility": 0.0,
+          "requests": 24,
+          "saw_facts": true,
+          "saw_calculation": false
+        }
+      ]
+    },
+    {
+      "revision": "v1.3",
+      "actual_generation_records": 14,
+      "generation_seconds_including_load": 22.356971740722656,
+      "accepted": false,
+      "cases": [
+        {
+          "passed": false,
+          "termination": "provider_failure",
+          "utility": 0.0,
+          "requests": 15,
+          "saw_facts": true,
+          "saw_calculation": false
+        },
+        {
+          "passed": false,
+          "termination": "provider_failure",
+          "utility": 0.0,
+          "requests": 1,
+          "saw_facts": false,
+          "saw_calculation": false
+        }
+      ]
+    }
+  ],
+  "actual_model_calls": 96,
+  "h0_accepted": false,
+  "cl_started": false,
+  "formal_benchmark_cases_executed": 0,
+  "last_revision_second_case": "not generated: cumulative call budget already exhausted",
+  "all_task_processes_absent": true,
+  "limit": "96 total model calls and original 30-minute clock; no reset",
+  "scope": "engineering development on two synthetic cases, not medical task performance"
+}
