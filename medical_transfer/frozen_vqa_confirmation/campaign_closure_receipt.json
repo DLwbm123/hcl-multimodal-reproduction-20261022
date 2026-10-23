@@ -1,0 +1,14 @@
+{
+  "checked_epoch": 1792719251.4873865,
+  "guard_exit": {
+    "time": 1792719243.1906688,
+    "reason": "completed"
+  },
+  "guard_identity_absent": true,
+  "registered_live": [],
+  "counted_bytes_including_1GB_reserve": 1133025792,
+  "model_calls": 24280,
+  "final_vqa_gate": true,
+  "three_task_gate": false,
+  "no_more_experiments": true
+}

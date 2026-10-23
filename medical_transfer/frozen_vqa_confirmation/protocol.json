@@ -1,0 +1,24 @@
+{
+  "name": "frozen_vqa_confirmation_v1",
+  "tasks": [
+    "visual_qa"
+  ],
+  "confirmation_per_task": {
+    "visual_qa": 200
+  },
+  "arms": [
+    "static_no_memory",
+    "hcl_scoped"
+  ],
+  "frozen_source": "task_scoped_memory_v1 final committed stage3 only; not chosen by confirmation score",
+  "purpose": "one independent replication of the frozen task-aware HCL VQA signal; no further learning or policy change",
+  "model": "same frozen Qwen2.5-VL-7B BF16, temperature0, decoding/interface unchanged",
+  "selection_or_learning": false,
+  "test_used": false,
+  "success_gate": "VQA >= Static +5 percentage points AND paired bootstrap95% lower >0; exact McNemar and paired loss/gain always reported; no claim of new cross-task retention evidence",
+  "scope": "VQA only; previous 3-task pooled gate failed and remains failed; no new localization groups; no patient independence claim",
+  "calls_max": 1950,
+  "no_retry_policy": "existing schema failure handling only; other failure fatal; no automatic restart",
+  "stop": "single frozen policy, no model/prompt/threshold change after result",
+  "anchors_per_task": 24
+}

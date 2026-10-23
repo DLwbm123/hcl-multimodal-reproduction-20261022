@@ -26,3 +26,7 @@ The published code provides no automatic experiment launcher. Do not hot-patch a
 ## Completed development ablation
 
 A separate five-condition read-only development diagnostic is complete: [report and code](development_diagnostic/README.md). The shared coordinate interface was used there; the original pilot remained unchanged. It shows a small raw-memory benefit with one VQA regression, not established continual-learning superiority.
+
+## Completed 12-hour medical development campaign
+
+See [the complete campaign report](CAMPAIGN_REPORT.zh-CN.md) and [the final frozen VQA confirmation](frozen_vqa_confirmation/REPORT.zh-CN.md). The final VQA-only gate passed (+8.5pp, paired 95% CI [4.5,13.0]); the previous three-task pooled gate remains failed. No original pilot scores or protocols were rewritten.

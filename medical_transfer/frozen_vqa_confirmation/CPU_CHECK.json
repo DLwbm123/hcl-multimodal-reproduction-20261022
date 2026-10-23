@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "pipeline_constructions": 2,
+  "frozen_memory_and_selector_restored": true,
+  "fresh_caches": true,
+  "confirmation_groups": 200,
+  "real_model_calls": 0
+}
