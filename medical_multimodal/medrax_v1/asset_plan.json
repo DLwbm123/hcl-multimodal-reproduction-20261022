@@ -1,0 +1,200 @@
+{
+  "medrax_revision": "dae30e2f136ef0b2a40885a4c335386e9ffad052",
+  "files": [
+    {
+      "url": "https://huggingface.co/StanfordAIMI/CheXagent-2-3b/resolve/8f19b53a2eceda4c33b0acec6c81fbc293ad80d0/added_tokens.json",
+      "path": "models/chexagent/added_tokens.json",
+      "bytes": 2849
+    },
+    {
+      "url": "https://huggingface.co/StanfordAIMI/CheXagent-2-3b/resolve/8f19b53a2eceda4c33b0acec6c81fbc293ad80d0/config.json",
+      "path": "models/chexagent/config.json",
+      "bytes": 1059
+    },
+    {
+      "url": "https://huggingface.co/StanfordAIMI/CheXagent-2-3b/resolve/8f19b53a2eceda4c33b0acec6c81fbc293ad80d0/configuration_chexagent.py",
+      "path": "models/chexagent/configuration_chexagent.py",
+      "bytes": 9347
+    },
+    {
+      "url": "https://huggingface.co/StanfordAIMI/CheXagent-2-3b/resolve/8f19b53a2eceda4c33b0acec6c81fbc293ad80d0/generation_config.json",
+      "path": "models/chexagent/generation_config.json",
+      "bytes": 119
+    },
+    {
+      "url": "https://huggingface.co/StanfordAIMI/CheXagent-2-3b/resolve/8f19b53a2eceda4c33b0acec6c81fbc293ad80d0/merges.txt",
+      "path": "models/chexagent/merges.txt",
+      "bytes": 456318
+    },
+    {
+      "url": "https://huggingface.co/StanfordAIMI/CheXagent-2-3b/resolve/8f19b53a2eceda4c33b0acec6c81fbc293ad80d0/model-00001-of-00003.safetensors",
+      "path": "models/chexagent/model-00001-of-00003.safetensors",
+      "bytes": 4982355512
+    },
+    {
+      "url": "https://huggingface.co/StanfordAIMI/CheXagent-2-3b/resolve/8f19b53a2eceda4c33b0acec6c81fbc293ad80d0/model-00002-of-00003.safetensors",
+      "path": "models/chexagent/model-00002-of-00003.safetensors",
+      "bytes": 4982541984
+    },
+    {
+      "url": "https://huggingface.co/StanfordAIMI/CheXagent-2-3b/resolve/8f19b53a2eceda4c33b0acec6c81fbc293ad80d0/model-00003-of-00003.safetensors",
+      "path": "models/chexagent/model-00003-of-00003.safetensors",
+      "bytes": 2598191968
+    },
+    {
+      "url": "https://huggingface.co/StanfordAIMI/CheXagent-2-3b/resolve/8f19b53a2eceda4c33b0acec6c81fbc293ad80d0/model.safetensors.index.json",
+      "path": "models/chexagent/model.safetensors.index.json",
+      "bytes": 75808
+    },
+    {
+      "url": "https://huggingface.co/StanfordAIMI/CheXagent-2-3b/resolve/8f19b53a2eceda4c33b0acec6c81fbc293ad80d0/modeling_chexagent.py",
+      "path": "models/chexagent/modeling_chexagent.py",
+      "bytes": 53700
+    },
+    {
+      "url": "https://huggingface.co/StanfordAIMI/CheXagent-2-3b/resolve/8f19b53a2eceda4c33b0acec6c81fbc293ad80d0/modeling_visual.py",
+      "path": "models/chexagent/modeling_visual.py",
+      "bytes": 8236
+    },
+    {
+      "url": "https://huggingface.co/StanfordAIMI/CheXagent-2-3b/resolve/8f19b53a2eceda4c33b0acec6c81fbc293ad80d0/special_tokens_map.json",
+      "path": "models/chexagent/special_tokens_map.json",
+      "bytes": 769
+    },
+    {
+      "url": "https://huggingface.co/StanfordAIMI/CheXagent-2-3b/resolve/8f19b53a2eceda4c33b0acec6c81fbc293ad80d0/tokenization_chexagent.py",
+      "path": "models/chexagent/tokenization_chexagent.py",
+      "bytes": 26254
+    },
+    {
+      "url": "https://huggingface.co/StanfordAIMI/CheXagent-2-3b/resolve/8f19b53a2eceda4c33b0acec6c81fbc293ad80d0/tokenizer_config.json",
+      "path": "models/chexagent/tokenizer_config.json",
+      "bytes": 21014
+    },
+    {
+      "url": "https://huggingface.co/StanfordAIMI/CheXagent-2-3b/resolve/8f19b53a2eceda4c33b0acec6c81fbc293ad80d0/vocab.json",
+      "path": "models/chexagent/vocab.json",
+      "bytes": 999186
+    },
+    {
+      "url": "https://huggingface.co/IAMJB/chexpert-mimic-cxr-findings-baseline/resolve/5bed2b551d7cadfe08f0757d29cc054dc1adb60d/config.json",
+      "path": "models/findings/config.json",
+      "bytes": 78055
+    },
+    {
+      "url": "https://huggingface.co/IAMJB/chexpert-mimic-cxr-findings-baseline/resolve/5bed2b551d7cadfe08f0757d29cc054dc1adb60d/generation_config.json",
+      "path": "models/findings/generation_config.json",
+      "bytes": 131
+    },
+    {
+      "url": "https://huggingface.co/IAMJB/chexpert-mimic-cxr-findings-baseline/resolve/5bed2b551d7cadfe08f0757d29cc054dc1adb60d/model.safetensors",
+      "path": "models/findings/model.safetensors",
+      "bytes": 245236624
+    },
+    {
+      "url": "https://huggingface.co/IAMJB/chexpert-mimic-cxr-findings-baseline/resolve/5bed2b551d7cadfe08f0757d29cc054dc1adb60d/preprocessor_config.json",
+      "path": "models/findings/preprocessor_config.json",
+      "bytes": 590
+    },
+    {
+      "url": "https://huggingface.co/IAMJB/chexpert-mimic-cxr-findings-baseline/resolve/5bed2b551d7cadfe08f0757d29cc054dc1adb60d/special_tokens_map.json",
+      "path": "models/findings/special_tokens_map.json",
+      "bytes": 125
+    },
+    {
+      "url": "https://huggingface.co/IAMJB/chexpert-mimic-cxr-findings-baseline/resolve/5bed2b551d7cadfe08f0757d29cc054dc1adb60d/tokenizer_config.json",
+      "path": "models/findings/tokenizer_config.json",
+      "bytes": 1263
+    },
+    {
+      "url": "https://huggingface.co/IAMJB/chexpert-mimic-cxr-findings-baseline/resolve/5bed2b551d7cadfe08f0757d29cc054dc1adb60d/vocab.txt",
+      "path": "models/findings/vocab.txt",
+      "bytes": 124713
+    },
+    {
+      "url": "https://huggingface.co/IAMJB/chexpert-mimic-cxr-impression-baseline/resolve/dd9e8a79659426980e8197657c81d2b9d443ddd0/config.json",
+      "path": "models/impression/config.json",
+      "bytes": 78055
+    },
+    {
+      "url": "https://huggingface.co/IAMJB/chexpert-mimic-cxr-impression-baseline/resolve/dd9e8a79659426980e8197657c81d2b9d443ddd0/generation_config.json",
+      "path": "models/impression/generation_config.json",
+      "bytes": 131
+    },
+    {
+      "url": "https://huggingface.co/IAMJB/chexpert-mimic-cxr-impression-baseline/resolve/dd9e8a79659426980e8197657c81d2b9d443ddd0/model.safetensors",
+      "path": "models/impression/model.safetensors",
+      "bytes": 271078124
+    },
+    {
+      "url": "https://huggingface.co/IAMJB/chexpert-mimic-cxr-impression-baseline/resolve/dd9e8a79659426980e8197657c81d2b9d443ddd0/preprocessor_config.json",
+      "path": "models/impression/preprocessor_config.json",
+      "bytes": 590
+    },
+    {
+      "url": "https://huggingface.co/IAMJB/chexpert-mimic-cxr-impression-baseline/resolve/dd9e8a79659426980e8197657c81d2b9d443ddd0/special_tokens_map.json",
+      "path": "models/impression/special_tokens_map.json",
+      "bytes": 125
+    },
+    {
+      "url": "https://huggingface.co/IAMJB/chexpert-mimic-cxr-impression-baseline/resolve/dd9e8a79659426980e8197657c81d2b9d443ddd0/tokenizer_config.json",
+      "path": "models/impression/tokenizer_config.json",
+      "bytes": 1263
+    },
+    {
+      "url": "https://huggingface.co/IAMJB/chexpert-mimic-cxr-impression-baseline/resolve/dd9e8a79659426980e8197657c81d2b9d443ddd0/vocab.txt",
+      "path": "models/impression/vocab.txt",
+      "bytes": 180025
+    },
+    {
+      "url": "https://huggingface.co/datasets/wanglab/chest-agent-bench/resolve/921e60440927f9893228d843c0206b755744252a/figures.zip",
+      "path": "data/chestagentbench/figures.zip",
+      "bytes": 822949819
+    },
+    {
+      "url": "https://huggingface.co/datasets/wanglab/chest-agent-bench/resolve/921e60440927f9893228d843c0206b755744252a/metadata.jsonl",
+      "path": "data/chestagentbench/metadata.jsonl",
+      "bytes": 4899709
+    },
+    {
+      "url": "https://github.com/mlmed/torchxrayvision/releases/download/v1/nih-pc-chex-mimic_ch-google-openi-kaggle-densenet121-d121-tw-lr001-rot45-tr15-sc15-seed0-best.pt",
+      "path": "cache/torchxrayvision/nih-pc-chex-mimic_ch-google-openi-kaggle-densenet121-d121-tw-lr001-rot45-tr15-sc15-seed0-best.pt",
+      "bytes": 28382008
+    },
+    {
+      "url": "https://github.com/mlmed/torchxrayvision/releases/download/v1/pspnet_chestxray_best_model_4.pth",
+      "path": "cache/torchxrayvision/pspnet_chestxray_best_model_4.pth",
+      "bytes": 272988989
+    }
+  ],
+  "download_bytes": 14210744462,
+  "planned_new_bytes": 35000000000,
+  "early_stop_bytes": 45000000000,
+  "hard_limit_bytes_exclusive": 50000000000,
+  "source_items": [
+    [
+      "models",
+      "StanfordAIMI/CheXagent-2-3b",
+      "8f19b53a2eceda4c33b0acec6c81fbc293ad80d0",
+      "models/chexagent"
+    ],
+    [
+      "models",
+      "IAMJB/chexpert-mimic-cxr-findings-baseline",
+      "5bed2b551d7cadfe08f0757d29cc054dc1adb60d",
+      "models/findings"
+    ],
+    [
+      "models",
+      "IAMJB/chexpert-mimic-cxr-impression-baseline",
+      "dd9e8a79659426980e8197657c81d2b9d443ddd0",
+      "models/impression"
+    ],
+    [
+      "datasets",
+      "wanglab/chest-agent-bench",
+      "921e60440927f9893228d843c0206b755744252a",
+      "data/chestagentbench"
+    ]
+  ]
+}

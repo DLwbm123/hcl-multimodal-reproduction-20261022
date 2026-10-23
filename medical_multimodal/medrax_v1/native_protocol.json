@@ -1,0 +1,144 @@
+{
+  "stage": "native_development_qualification",
+  "upstream_revision": "dae30e2f136ef0b2a40885a4c335386e9ffad052",
+  "dataset_revision": "921e60440927f9893228d843c0206b755744252a",
+  "selection": "seed 20261023; single-image rows; greedy inverse category exposure; unique case; no answer-based filtering",
+  "eligible_questions": 1230,
+  "full_dataset_questions": 2500,
+  "panel": [
+    {
+      "images": [
+        "figures/16886/figure_1.jpg"
+      ],
+      "case_id": "16886",
+      "full_question_id": "16886_16886_8143559676571",
+      "categories": "classification,comparison,diagnosis,reasoning"
+    },
+    {
+      "images": [
+        "figures/17889/figure_1.jpg"
+      ],
+      "case_id": "17889",
+      "full_question_id": "17889_17889_8143559696826",
+      "categories": "detection,localization,characterization,reasoning"
+    },
+    {
+      "images": [
+        "figures/5369/figure_1.jpg"
+      ],
+      "case_id": "5369",
+      "full_question_id": "5369_5369_8353801540260",
+      "categories": "detection,classification,relationship,reasoning"
+    },
+    {
+      "images": [
+        "figures/17350/figure_1.jpg"
+      ],
+      "case_id": "17350",
+      "full_question_id": "17350_17350_8143559696796",
+      "categories": "localization,comparison,relationship,reasoning"
+    },
+    {
+      "images": [
+        "figures/14941/figure_1.jpg"
+      ],
+      "case_id": "14941",
+      "full_question_id": "14941_14941_8353800645548",
+      "categories": "classification,characterization,diagnosis,reasoning"
+    },
+    {
+      "images": [
+        "figures/16703/figure_1a.jpg"
+      ],
+      "case_id": "16703",
+      "full_question_id": "16703_16703_8353800455502",
+      "categories": "detection,localization,characterization,reasoning"
+    },
+    {
+      "images": [
+        "figures/18134/figure_1.jpg"
+      ],
+      "case_id": "18134",
+      "full_question_id": "18134_18134_8143559708582",
+      "categories": "classification,comparison,diagnosis,reasoning"
+    },
+    {
+      "images": [
+        "figures/18174/figure_1.jpg"
+      ],
+      "case_id": "18174",
+      "full_question_id": "18174_18174_8143559008935",
+      "categories": "localization,comparison,relationship,reasoning"
+    },
+    {
+      "images": [
+        "figures/6312/figure_1.jpg"
+      ],
+      "case_id": "6312",
+      "full_question_id": "6312_6312_8353801543041",
+      "categories": "detection,classification,relationship,reasoning"
+    },
+    {
+      "images": [
+        "figures/3842/figure_1.jpg"
+      ],
+      "case_id": "3842",
+      "full_question_id": "3842_3842_8353801524020",
+      "categories": "detection,localization,characterization,reasoning"
+    },
+    {
+      "images": [
+        "figures/18290/figure_1.jpg"
+      ],
+      "case_id": "18290",
+      "full_question_id": "18290_18290_8143559008740",
+      "categories": "classification,comparison,diagnosis,reasoning"
+    },
+    {
+      "images": [
+        "figures/1437/figure_1.jpg"
+      ],
+      "case_id": "1437",
+      "full_question_id": "1437_1437_8353802279144",
+      "categories": "localization,comparison,relationship,reasoning"
+    }
+  ],
+  "category_exposures": {
+    "classification": 6,
+    "comparison": 6,
+    "diagnosis": 4,
+    "reasoning": 12,
+    "detection": 5,
+    "localization": 6,
+    "characterization": 4,
+    "relationship": 5
+  },
+  "development_only": true,
+  "exclude_entire_panel_cases_from_future_validation_test": true,
+  "planner": "existing local Qwen2.5-VL-7B-Instruct; greedy BF16 SDPA; 256..1280 visual tokens/image",
+  "limits": {
+    "phase_seconds": 3600,
+    "episode_seconds": 240,
+    "planner_calls": 4,
+    "tool_calls": 8,
+    "input_tokens": 16384,
+    "output_tokens_per_call": 768,
+    "output_tokens_total": 3072,
+    "expert_max_new_tokens": 512,
+    "report_max_length": 128
+  },
+  "preflight": "Each of the four native tools once on first selected image; report both generation heads; separate engineering ledger",
+  "scoring": "Exact final standalone A-F or final explicit Answer: A-F; otherwise abstention/wrong. Answer and explanation never enter model/tool context. Score after all episodes. All 12 remain denominator, including load/runtime/format/budget failures.",
+  "qualification_gate": {
+    "all_four_preflight_tools_success": true,
+    "image_payload_every_planner_call": true,
+    "minimum_correct_of_12": 3,
+    "minimum_episodes_with_successful_tool": 3,
+    "minimum_valid_final_of_12": 4
+  },
+  "interpretation": "Gate is engineering feasibility only; not HCL scientific evidence. Do not tune this panel or silently substitute planner/tools. Failures retained; at most bounded compatibility repairs before new protocol.",
+  "hcl_state": "disabled passthrough unit-tested; adaptive comparison not yet authorized by qualification",
+  "storage_limit_exclusive": 50000000000,
+  "early_stop_bytes_including_reserve": 45000000000,
+  "clock": "Share FIRST_START through preparation/retries; original 23h early stop; native phase additional 1h hard limit."
+}

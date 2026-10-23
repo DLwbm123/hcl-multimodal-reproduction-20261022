@@ -1,0 +1,8 @@
+*.private.*
+outputs/
+env/
+upstream/
+*LAUNCH.json
+*STARTED.json
+*EXIT.json
+guard.json
