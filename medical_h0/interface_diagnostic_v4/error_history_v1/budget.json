@@ -1,0 +1,14 @@
+{
+  "start_epoch": 1792739463.4855042,
+  "early_stop_epoch": 1792750967.0,
+  "hard_deadline_epoch": 1792751267.0,
+  "max_model_calls": 2000,
+  "hard_bytes": 2000000000,
+  "early_stop_bytes": 1800000000,
+  "reserve_bytes": 10000000,
+  "previous_model_calls": 30,
+  "user_window_start_epoch": 1792740467.0,
+  "user_window_deadline_epoch": 1792751267.0,
+  "parent_budget": "original_v4_budget",
+  "scope": "all v4 and error_history files counted together"
+}

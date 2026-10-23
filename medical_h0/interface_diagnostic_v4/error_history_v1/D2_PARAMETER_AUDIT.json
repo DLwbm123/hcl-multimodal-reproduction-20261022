@@ -1,0 +1,37 @@
+{
+  "cases": [
+    {
+      "unique_parameter_sets": 1,
+      "exact_reference_parameter_sets": 1,
+      "formula_only_legal_sets": 1
+    },
+    {
+      "unique_parameter_sets": 1,
+      "exact_reference_parameter_sets": 1,
+      "formula_only_legal_sets": 1
+    },
+    {
+      "unique_parameter_sets": 1,
+      "exact_reference_parameter_sets": 0,
+      "formula_only_legal_sets": 0
+    },
+    {
+      "unique_parameter_sets": 1,
+      "exact_reference_parameter_sets": 1,
+      "formula_only_legal_sets": 1
+    },
+    {
+      "unique_parameter_sets": 1,
+      "exact_reference_parameter_sets": 1,
+      "formula_only_legal_sets": 1
+    },
+    {
+      "unique_parameter_sets": 0,
+      "exact_reference_parameter_sets": 0,
+      "formula_only_legal_sets": 0
+    }
+  ],
+  "cases_with_exact_reference_parameters": 4,
+  "cases_with_formula_legal_parameters": 4,
+  "scope": "offline diagnostic replay bypassing provenance validation; not an executed model success, not source correctness"
+}

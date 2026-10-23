@@ -1,0 +1,3 @@
+# error_history_v1 overlay
+
+Use the parent interface_diagnostic_v4 `code` snapshot and replace the same-named files with this directory's `code` files. All other modules, pinned vendor sources, model, fixtures and formulas are inherited unchanged. Private six-target selection and cases are intentionally absent; the repository supports synthetic regression testing but does not distribute the medical runtime inputs. Run the inherited interface/transport/storage test suites with the recorded dependencies. This overlay had 24 CPU tests and 135 real generations; see the report for failures and scope limits.

@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "tests": 27,
+  "model_calls": 0,
+  "command": "unittest test_interface test_transport test_storage_guard",
+  "meaning": "engineering only; not model capability acceptance"
+}

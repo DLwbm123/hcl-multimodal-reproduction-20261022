@@ -1,0 +1,3 @@
+# schema_contract_v1 overlay (running)
+
+Apply the parent interface_diagnostic_v4 snapshot, then error_history_v1 overlay, then this code overlay. Same six development targets and D1 gate, descriptive D2 only. The runtime source-binding acceptance rule is unchanged; the complete nested contract is now model-visible and validation feedback names the failing field. No schema coercion, formula change, scoring change, HCL or new panel. Synthetic interface/transport/storage suites passed 27 tests. This is engineering evidence only. See protocol and budget for original shared clock/calls/storage and fixed user deadline.
