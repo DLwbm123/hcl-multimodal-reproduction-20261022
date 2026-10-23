@@ -1,0 +1,89 @@
+{
+  "formal_started": false,
+  "acceptance_passed": false,
+  "phases": {
+    "unguided": {
+      "model_generations": 134,
+      "termination_counts": {
+        "budget": 3,
+        "submitted": 3,
+        "stuck_repeat": 1,
+        "context_overflow": 1
+      },
+      "tool_call_counts": {
+        "read_facts": 9,
+        "search_calculators": 83,
+        "get_calculator": 19,
+        "execute_calculator": 20,
+        "submit_answer": 3
+      },
+      "error_categories": {
+        "disabled_formula": 2,
+        "missing_parameter": 9,
+        "wrong_parameter_type": 2
+      },
+      "unmatched_output_categories": {
+        "no_name_in_submission": 64,
+        "wrong_episode": 2
+      },
+      "duplicates_cached": 73,
+      "formula_executions_uncached": 7,
+      "formula_success_cached": 0
+    },
+    "oracle_names": {
+      "model_generations": 149,
+      "termination_counts": {
+        "budget": 4,
+        "context_overflow": 1,
+        "submitted": 3
+      },
+      "tool_call_counts": {
+        "read_facts": 8,
+        "search_calculators": 92,
+        "get_calculator": 23,
+        "execute_calculator": 23,
+        "submit_answer": 3
+      },
+      "error_categories": {
+        "unknown_calculator_id": 16,
+        "malformed_json": 3,
+        "missing_parameter": 13,
+        "wrong_parameter_type": 1
+      },
+      "unmatched_output_categories": {
+        "no_name_in_submission": 54,
+        "wrong_episode": 9
+      },
+      "duplicates_cached": 70,
+      "formula_executions_uncached": 6,
+      "formula_success_cached": 0
+    }
+  },
+  "cost": {
+    "attempts": 283,
+    "real_generations": 283,
+    "generation_seconds": 1762.1920182704926,
+    "input_tokens": 3617000,
+    "output_tokens": 24172,
+    "invalid_protocol_calls": 3,
+    "invalid_output_tokens": [
+      4096,
+      4096,
+      4096
+    ]
+  },
+  "exit_codes": {
+    "EXIT": 2,
+    "SUPERVISOR_EXIT": 2
+  },
+  "checks": [
+    "same eight learning cases only",
+    "stored scoring reproduced without model calls",
+    "67 outputs per condition",
+    "tool/error accounting",
+    "cached execution separated",
+    "all 283 actual generations accounted",
+    "formal gate not bypassed",
+    "expected exit 2"
+  ]
+}

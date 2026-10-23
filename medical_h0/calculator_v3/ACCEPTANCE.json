@@ -1,0 +1,36 @@
+{
+  "passed": false,
+  "summary": {
+    "cases": 8,
+    "submitted": 3,
+    "outputs": 67,
+    "correct": 1,
+    "end_to_end_accuracy": 0.014925373134328358,
+    "selection_precision": 0.75,
+    "selection_recall": 0.04477611940298507,
+    "matched_outputs": 1,
+    "conditional_value_accuracy": 1.0,
+    "positive_cases_by_block": {
+      "train_dependency": 0,
+      "train_submission": 1
+    },
+    "formula_covered_outputs": 18,
+    "tool_errors": 13,
+    "tool_calls": 134,
+    "tool_error_rate": 0.09701492537313433,
+    "execution_successes": 7,
+    "submission_failures": 5
+  },
+  "thresholds": {
+    "min_submitted": 6,
+    "min_selection_precision": 0.8,
+    "min_selection_recall": 0.4,
+    "min_end_to_end_accuracy": 0.25,
+    "min_conditional_value_accuracy": 0.8,
+    "max_tool_error_rate": 0.2,
+    "min_positive_cases_per_block": 2
+  },
+  "calls": 134,
+  "time": 1792736723.281757,
+  "forced_submission": false
+}
