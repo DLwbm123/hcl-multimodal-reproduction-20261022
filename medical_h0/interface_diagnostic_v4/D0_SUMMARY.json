@@ -1,0 +1,18 @@
+{
+  "cases": 8,
+  "targets": 67,
+  "status_counts": {
+    "no_exact_registered_identity": 41,
+    "registered_not_enabled": 8,
+    "reference_path_executed": 14,
+    "reference_mapping_or_contract_blocked": 4
+  },
+  "formula_enabled_targets": 18,
+  "reference_value_agreements": 13,
+  "selected_count": 6,
+  "selected_value_agreements": 6,
+  "D1_ready": true,
+  "D3_D4_ready": false,
+  "scope_visibility_status": "not established; do not run unassisted scope/planning diagnostics yet",
+  "no_model_calls": true
+}

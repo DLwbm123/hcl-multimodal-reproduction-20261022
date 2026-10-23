@@ -1,0 +1,8 @@
+{
+  "news_score.py": {
+    "reason": "NEWS2 scale2 >=93 on air is zero SpO2 points; upstream ignored oxygen status in saturation component",
+    "reference": "https://www.rcp.ac.uk/media/alxev00t/news2-chart-1_the-news-scoring-system_0_0.pdf",
+    "failed_sentinel": "scale2 SpO2=93 on air returned1, expected0",
+    "test": "test_clinical_contract.ClinicalContracts.test_news_rcp_chart"
+  }
+}
