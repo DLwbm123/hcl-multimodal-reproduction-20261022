@@ -1,0 +1,53 @@
+{
+  "cases": [
+    {
+      "correct": true,
+      "submitted": true,
+      "source_id_sets_equal": true,
+      "parameter_difference_count": 0,
+      "error_class": "none"
+    },
+    {
+      "correct": false,
+      "submitted": true,
+      "source_id_sets_equal": true,
+      "parameter_difference_count": 1,
+      "error_class": "categorical_code_mapping"
+    },
+    {
+      "correct": false,
+      "submitted": true,
+      "source_id_sets_equal": true,
+      "parameter_difference_count": 4,
+      "error_class": "negated_boolean_mapping_and_unsupported_category"
+    },
+    {
+      "correct": true,
+      "submitted": true,
+      "source_id_sets_equal": false,
+      "parameter_difference_count": 0,
+      "error_class": "none",
+      "known_unsupported_cross_episode_source": true,
+      "note": "one scale-selection flag cites unrelated confusion field from another episode; raw score agreement retained, not a certified provenance chain"
+    },
+    {
+      "correct": true,
+      "submitted": true,
+      "source_id_sets_equal": true,
+      "parameter_difference_count": 0,
+      "error_class": "none"
+    },
+    {
+      "correct": true,
+      "submitted": true,
+      "source_id_sets_equal": true,
+      "parameter_difference_count": 0,
+      "error_class": "none"
+    }
+  ],
+  "cases_correct": 4,
+  "cases_submitted": 6,
+  "scope": "source-assisted development diagnostic; source identity agreement does not prove semantic extraction",
+  "known_numeric_correct_but_unsupported_source_cases": 1,
+  "source_semantics_fully_certified": false
+}

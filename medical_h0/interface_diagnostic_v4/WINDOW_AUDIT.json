@@ -1,0 +1,16 @@
+{
+  "time": 1792748231.1996613,
+  "runs": 4,
+  "actual_generations": 273,
+  "attempts": 273,
+  "episodes": 36,
+  "generation_seconds": 1936.7515985965729,
+  "input_tokens": 1364259,
+  "output_tokens": 65016,
+  "invalid_model_calls": 61,
+  "live_task_processes": 0,
+  "storage_bytes_including_reserve": 19629696,
+  "hcl_started": false,
+  "new_model_runs_planned": false,
+  "user_deadline_epoch": 1792751267
+}

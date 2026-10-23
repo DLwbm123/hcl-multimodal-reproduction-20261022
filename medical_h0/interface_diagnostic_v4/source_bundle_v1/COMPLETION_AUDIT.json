@@ -1,0 +1,35 @@
+{
+  "complete": true,
+  "attempts_this_run": 31,
+  "actual_generations": 31,
+  "previous_attempts": 242,
+  "total_attempts": 273,
+  "input_tokens": 211182,
+  "output_tokens": 10079,
+  "generation_seconds": 258.478800535202,
+  "invalid_model_calls": 3,
+  "length_capped_calls": 0,
+  "episodes": 6,
+  "hcl_started": false,
+  "data_scope": "six preselected targets from original learning cases, assisted diagnostics only",
+  "layers": {
+    "D2S": {
+      "submitted": 6,
+      "scoped_computations": 6,
+      "exact_reference_parameters": 4,
+      "reference_value_computed": 4,
+      "reference_value_submitted": 4,
+      "execution_requests": 12,
+      "execution_errors": 6,
+      "tool_requests": 31,
+      "model_calls": 31,
+      "cached_requests": 1,
+      "cases": 6,
+      "terminations": {
+        "submitted": 6
+      },
+      "computed_then_lost": 0,
+      "advance_gate": null
+    }
+  }
+}
