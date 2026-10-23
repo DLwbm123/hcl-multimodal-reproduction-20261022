@@ -77,3 +77,5 @@ Completed small medical transfer: Static 30.00%, HCL 30.67% descriptive final me
 The [18-target H0 v5 report](medical_h0/executable_gate_v5/REPORT.zh-CN.md) records a completed, failed gate: 0/18 correct submissions, with two evidence-supported computations left unsubmitted. No HCL was started. The source, protocol, aggregate diagnostics and resource audit are included; private clinical fixtures and raw traces are excluded.
 
 - [v9 显式操作数—来源绑定诊断](medical_h0/operand_binding_v9/REPORT.zh-CN.md)：16/16 次任务完成；可信完成 R 2/8、I 1/8，MME 均 0/6。4 条 I 剂量声明来源完整，但先被药名转换错误阻断；未采用，未启动 HCL。
+
+- [v10 参数级反馈与有界修复](medical_h0/bounded_repair_v10/REPORT.zh-CN.md)：CPU 反事实回放通过；四组恢复均 0/6，32 次生成全部直接弃答。门槛失败，跳过确认集并结束此路线；未启动 HCL。

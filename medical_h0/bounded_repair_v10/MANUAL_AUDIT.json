@@ -1,0 +1,490 @@
+{
+  "manual_audited": true,
+  "reviewed_episode_ids": [
+    "B01_A",
+    "B01_B",
+    "B01_C",
+    "B01_D",
+    "B02_B",
+    "B02_C",
+    "B02_D",
+    "B02_A",
+    "B03_C",
+    "B03_D",
+    "B03_A",
+    "B03_B",
+    "B04_D",
+    "B04_A",
+    "B04_B",
+    "B04_C",
+    "B05_A",
+    "B05_B",
+    "B05_C",
+    "B05_D",
+    "B06_B",
+    "B06_C",
+    "B06_D",
+    "B06_A",
+    "B07_C",
+    "B07_D",
+    "B07_A",
+    "B07_B",
+    "B08_D",
+    "B08_A",
+    "B08_B",
+    "B08_C"
+  ],
+  "accepted_computations_audited": 0,
+  "abstention_reasons_audited": 32,
+  "reviews": [
+    {
+      "id": "B01_A",
+      "answerable": true,
+      "preliminary_correct": false,
+      "final_correct": false,
+      "abstention_justified": false,
+      "accepted_computations": 0,
+      "model_corrected_execute_calls": 0,
+      "answer": {
+        "status": "abstain",
+        "reason": "The declared parameter value for 'daily_dose_mg' disagrees with the operation result."
+      },
+      "review": "Complete available dose/frequency chain; opioid identity/lowercase mismatch is repairable. Abstention is not justified."
+    },
+    {
+      "id": "B01_B",
+      "answerable": true,
+      "preliminary_correct": false,
+      "final_correct": false,
+      "abstention_justified": false,
+      "accepted_computations": 0,
+      "model_corrected_execute_calls": 0,
+      "answer": {
+        "status": "abstain",
+        "reason": "The declared opioid name 'oxycodone' does not match the operation result 'Oxycodone', indicating a mismatch between the expected and actual values for the opioid name parameter."
+      },
+      "review": "Complete available dose/frequency chain; opioid identity/lowercase mismatch is repairable. Abstention is not justified."
+    },
+    {
+      "id": "B01_C",
+      "answerable": true,
+      "preliminary_correct": false,
+      "final_correct": false,
+      "abstention_justified": false,
+      "accepted_computations": 0,
+      "model_corrected_execute_calls": 0,
+      "answer": {
+        "status": "abstain",
+        "reason": "The declared daily dose mg disagrees with the operation result."
+      },
+      "review": "Complete available dose/frequency chain; opioid identity/lowercase mismatch is repairable. Abstention is not justified."
+    },
+    {
+      "id": "B01_D",
+      "answerable": true,
+      "preliminary_correct": false,
+      "final_correct": false,
+      "abstention_justified": false,
+      "accepted_computations": 0,
+      "model_corrected_execute_calls": 0,
+      "answer": {
+        "status": "abstain",
+        "reason": "The declared opioid name 'oxycodone' does not match the operation result 'Oxycodone'. There is no evidence to resolve this discrepancy."
+      },
+      "review": "Complete available dose/frequency chain; opioid identity/lowercase mismatch is repairable. Abstention is not justified."
+    },
+    {
+      "id": "B02_B",
+      "answerable": true,
+      "preliminary_correct": false,
+      "final_correct": false,
+      "abstention_justified": false,
+      "accepted_computations": 0,
+      "model_corrected_execute_calls": 0,
+      "answer": {
+        "status": "abstain",
+        "reason": "The operand value for 'opioid_name' ('oxycodone') does not match the source value ('Oxycodone'), indicating a discrepancy that cannot be resolved without additional context or clarification."
+      },
+      "review": "Raw opioid operand mismatch is repairable from visible Oxycodone. Daily dose 9 times 2 is already correct. Abstention is not justified."
+    },
+    {
+      "id": "B02_C",
+      "answerable": true,
+      "preliminary_correct": false,
+      "final_correct": false,
+      "abstention_justified": false,
+      "accepted_computations": 0,
+      "model_corrected_execute_calls": 0,
+      "answer": {
+        "status": "abstain",
+        "reason": "The daily dose of oxycodone is reported as 18 mg, but the raw source indicates 9 mg per dose and 2 doses per day. There's a discrepancy between the reported daily dose and the raw source."
+      },
+      "review": "Raw opioid operand mismatch is repairable from visible Oxycodone. Daily dose 9 times 2 is already correct. Abstention is not justified."
+    },
+    {
+      "id": "B02_D",
+      "answerable": true,
+      "preliminary_correct": false,
+      "final_correct": false,
+      "abstention_justified": false,
+      "accepted_computations": 0,
+      "model_corrected_execute_calls": 0,
+      "answer": {
+        "status": "abstain",
+        "reason": "The operand value for 'opioid_name' ('oxycodone') does not match the source value ('Oxycodone'), indicating a discrepancy that cannot be resolved without additional context or clarification."
+      },
+      "review": "Raw opioid operand mismatch is repairable from visible Oxycodone. Daily dose 9 times 2 is already correct. Abstention is not justified."
+    },
+    {
+      "id": "B02_A",
+      "answerable": true,
+      "preliminary_correct": false,
+      "final_correct": false,
+      "abstention_justified": false,
+      "accepted_computations": 0,
+      "model_corrected_execute_calls": 0,
+      "answer": {
+        "status": "abstain",
+        "reason": "The daily dose of oxycodone was multiplied incorrectly based on the provided facts."
+      },
+      "review": "Raw opioid operand mismatch is repairable from visible Oxycodone. Daily dose 9 times 2 is already correct. Abstention is not justified."
+    },
+    {
+      "id": "B03_C",
+      "answerable": true,
+      "preliminary_correct": false,
+      "final_correct": false,
+      "abstention_justified": false,
+      "accepted_computations": 0,
+      "model_corrected_execute_calls": 0,
+      "answer": {
+        "status": "abstain",
+        "reason": "The 'unit' field is unexpected and not allowed in the parameter bindings for the anion_gap calculator."
+      },
+      "review": "Removing the unsupported unit key suffices; all numeric values and sources exist. Schema rejection is not evidence insufficiency."
+    },
+    {
+      "id": "B03_D",
+      "answerable": true,
+      "preliminary_correct": false,
+      "final_correct": false,
+      "abstention_justified": false,
+      "accepted_computations": 0,
+      "model_corrected_execute_calls": 0,
+      "answer": {
+        "status": "abstain",
+        "reason": "The 'unit' property for the 'sodium' parameter is unexpected and not allowed according to the schema validation error."
+      },
+      "review": "Removing the unsupported unit key suffices; all numeric values and sources exist. Schema rejection is not evidence insufficiency."
+    },
+    {
+      "id": "B03_A",
+      "answerable": true,
+      "preliminary_correct": false,
+      "final_correct": false,
+      "abstention_justified": false,
+      "accepted_computations": 0,
+      "model_corrected_execute_calls": 0,
+      "answer": {
+        "status": "abstain",
+        "reason": "The 'unit' field is unexpected and not allowed in the parameter binding for the anion_gap calculator."
+      },
+      "review": "Removing the unsupported unit key suffices; all numeric values and sources exist. Schema rejection is not evidence insufficiency."
+    },
+    {
+      "id": "B03_B",
+      "answerable": true,
+      "preliminary_correct": false,
+      "final_correct": false,
+      "abstention_justified": false,
+      "accepted_computations": 0,
+      "model_corrected_execute_calls": 0,
+      "answer": {
+        "status": "abstain",
+        "reason": "The 'unit' property for the 'sodium' binding is unexpected and not allowed according to the schema validation."
+      },
+      "review": "Removing the unsupported unit key suffices; all numeric values and sources exist. Schema rejection is not evidence insufficiency."
+    },
+    {
+      "id": "B04_D",
+      "answerable": true,
+      "preliminary_correct": false,
+      "final_correct": false,
+      "abstention_justified": false,
+      "accepted_computations": 0,
+      "model_corrected_execute_calls": 0,
+      "answer": {
+        "status": "abstain",
+        "reason": "The sodium value for the 'sodium' parameter is outside the permitted target scope."
+      },
+      "review": "Initial sodium is from old_visit but current sodium 142 is visible at fact_0004. Model describes the rejection without selecting current evidence."
+    },
+    {
+      "id": "B04_A",
+      "answerable": true,
+      "preliminary_correct": false,
+      "final_correct": false,
+      "abstention_justified": false,
+      "accepted_computations": 0,
+      "model_corrected_execute_calls": 0,
+      "answer": {
+        "status": "abstain",
+        "reason": "The sodium value for the anion gap calculation is sourced from 'old_visit' instead of the target episode 'visit_v10_B04'."
+      },
+      "review": "Initial sodium is from old_visit but current sodium 142 is visible at fact_0004. Model describes the rejection without selecting current evidence."
+    },
+    {
+      "id": "B04_B",
+      "answerable": true,
+      "preliminary_correct": false,
+      "final_correct": false,
+      "abstention_justified": false,
+      "accepted_computations": 0,
+      "model_corrected_execute_calls": 0,
+      "answer": {
+        "status": "abstain",
+        "reason": "The sodium fact_id is outside the permitted target scope for the synthetic patient and episode."
+      },
+      "review": "Initial sodium is from old_visit but current sodium 142 is visible at fact_0004. Model describes the rejection without selecting current evidence."
+    },
+    {
+      "id": "B04_C",
+      "answerable": true,
+      "preliminary_correct": false,
+      "final_correct": false,
+      "abstention_justified": false,
+      "accepted_computations": 0,
+      "model_corrected_execute_calls": 0,
+      "answer": {
+        "status": "abstain",
+        "reason": "The sodium value for the anion gap calculation is sourced from 'old_visit' instead of the target episode 'visit_v10_B04'."
+      },
+      "review": "Initial sodium is from old_visit but current sodium 142 is visible at fact_0004. Model describes the rejection without selecting current evidence."
+    },
+    {
+      "id": "B05_A",
+      "answerable": true,
+      "preliminary_correct": false,
+      "final_correct": false,
+      "abstention_justified": false,
+      "accepted_computations": 0,
+      "model_corrected_execute_calls": 0,
+      "answer": {
+        "status": "abstain",
+        "reason": "The declared parameter value for 'daily_dose_mg' disagrees with the operation result."
+      },
+      "review": "The declared 5 disagrees with the supplied 5 times 4; the input chain supports 20. Model declines to correct the binding despite available information."
+    },
+    {
+      "id": "B05_B",
+      "answerable": true,
+      "preliminary_correct": false,
+      "final_correct": false,
+      "abstention_justified": false,
+      "accepted_computations": 0,
+      "model_corrected_execute_calls": 0,
+      "answer": {
+        "status": "abstain",
+        "reason": "The declared daily dose mg value (5) does not match the calculated result (20), indicating a discrepancy that cannot be resolved without additional context or correction."
+      },
+      "review": "The declared 5 disagrees with the supplied 5 times 4; the input chain supports 20. Model declines to correct the binding despite available information."
+    },
+    {
+      "id": "B05_C",
+      "answerable": true,
+      "preliminary_correct": false,
+      "final_correct": false,
+      "abstention_justified": false,
+      "accepted_computations": 0,
+      "model_corrected_execute_calls": 0,
+      "answer": {
+        "status": "abstain",
+        "reason": "The declared parameter value for 'daily_dose_mg' disagrees with the operation result."
+      },
+      "review": "The declared 5 disagrees with the supplied 5 times 4; the input chain supports 20. Model declines to correct the binding despite available information."
+    },
+    {
+      "id": "B05_D",
+      "answerable": true,
+      "preliminary_correct": false,
+      "final_correct": false,
+      "abstention_justified": false,
+      "accepted_computations": 0,
+      "model_corrected_execute_calls": 0,
+      "answer": {
+        "status": "abstain",
+        "reason": "The declared daily dose mg value (5) does not match the operation result (20), indicating a discrepancy in the input data. There is no evidence to correct this mismatch."
+      },
+      "review": "The declared 5 disagrees with the supplied 5 times 4; the input chain supports 20. Model declines to correct the binding despite available information."
+    },
+    {
+      "id": "B06_B",
+      "answerable": true,
+      "preliminary_correct": false,
+      "final_correct": false,
+      "abstention_justified": false,
+      "accepted_computations": 0,
+      "model_corrected_execute_calls": 0,
+      "answer": {
+        "status": "abstain",
+        "reason": "The sodium value in the binding does not match the source value, indicating a discrepancy that cannot be resolved without additional context or clarification."
+      },
+      "review": "Current sodium 140 is visible and can replace the incorrectly declared 142. This is a repairable source-copy error, not missing evidence."
+    },
+    {
+      "id": "B06_C",
+      "answerable": true,
+      "preliminary_correct": false,
+      "final_correct": false,
+      "abstention_justified": false,
+      "accepted_computations": 0,
+      "model_corrected_execute_calls": 0,
+      "answer": {
+        "status": "abstain",
+        "reason": "The calculated anion gap differs from the raw sources, indicating a discrepancy in the input values."
+      },
+      "review": "Current sodium 140 is visible and can replace the incorrectly declared 142. This is a repairable source-copy error, not missing evidence."
+    },
+    {
+      "id": "B06_D",
+      "answerable": true,
+      "preliminary_correct": false,
+      "final_correct": false,
+      "abstention_justified": false,
+      "accepted_computations": 0,
+      "model_corrected_execute_calls": 0,
+      "answer": {
+        "status": "abstain",
+        "reason": "The sodium value in the binding does not match the source value, indicating a discrepancy that cannot be resolved without additional context or clarification."
+      },
+      "review": "Current sodium 140 is visible and can replace the incorrectly declared 142. This is a repairable source-copy error, not missing evidence."
+    },
+    {
+      "id": "B06_A",
+      "answerable": true,
+      "preliminary_correct": false,
+      "final_correct": false,
+      "abstention_justified": false,
+      "accepted_computations": 0,
+      "model_corrected_execute_calls": 0,
+      "answer": {
+        "status": "abstain",
+        "reason": "The calculated anion gap differs from the raw sources, indicating a discrepancy that cannot be resolved without additional context."
+      },
+      "review": "Current sodium 140 is visible and can replace the incorrectly declared 142. This is a repairable source-copy error, not missing evidence."
+    },
+    {
+      "id": "B07_C",
+      "answerable": false,
+      "preliminary_correct": true,
+      "final_correct": false,
+      "abstention_justified": false,
+      "accepted_computations": 0,
+      "model_corrected_execute_calls": 0,
+      "answer": {
+        "status": "abstain",
+        "reason": "The declared parameter value for 'daily_dose_mg' disagrees with the operation result."
+      },
+      "review": "Abstention action is appropriate but stated reason is wrong: actual blocker is missing target-patient frequency; the only frequency is for another patient. Model cites opioid representation or daily-dose disagreement instead."
+    },
+    {
+      "id": "B07_D",
+      "answerable": false,
+      "preliminary_correct": true,
+      "final_correct": false,
+      "abstention_justified": false,
+      "accepted_computations": 0,
+      "model_corrected_execute_calls": 0,
+      "answer": {
+        "status": "abstain",
+        "reason": "The declared opioid name 'oxycodone' does not match the operation result 'Oxycodone'. There is no evidence to resolve this discrepancy."
+      },
+      "review": "Abstention action is appropriate but stated reason is wrong: actual blocker is missing target-patient frequency; the only frequency is for another patient. Model cites opioid representation or daily-dose disagreement instead."
+    },
+    {
+      "id": "B07_A",
+      "answerable": false,
+      "preliminary_correct": true,
+      "final_correct": false,
+      "abstention_justified": false,
+      "accepted_computations": 0,
+      "model_corrected_execute_calls": 0,
+      "answer": {
+        "status": "abstain",
+        "reason": "The declared parameter value for 'daily_dose_mg' disagrees with the operation result."
+      },
+      "review": "Abstention action is appropriate but stated reason is wrong: actual blocker is missing target-patient frequency; the only frequency is for another patient. Model cites opioid representation or daily-dose disagreement instead."
+    },
+    {
+      "id": "B07_B",
+      "answerable": false,
+      "preliminary_correct": true,
+      "final_correct": false,
+      "abstention_justified": false,
+      "accepted_computations": 0,
+      "model_corrected_execute_calls": 0,
+      "answer": {
+        "status": "abstain",
+        "reason": "The declared parameter value for 'opioid_name' ('oxycodone') does not match the operation result ('Oxycodone'), indicating a discrepancy that cannot be resolved without additional context or correction."
+      },
+      "review": "Abstention action is appropriate but stated reason is wrong: actual blocker is missing target-patient frequency; the only frequency is for another patient. Model cites opioid representation or daily-dose disagreement instead."
+    },
+    {
+      "id": "B08_D",
+      "answerable": false,
+      "preliminary_correct": true,
+      "final_correct": false,
+      "abstention_justified": false,
+      "accepted_computations": 0,
+      "model_corrected_execute_calls": 0,
+      "answer": {
+        "status": "abstain",
+        "reason": "The declared opioid name 'oxycodone' does not match the operation result 'Oxycodone'. There is no evidence to resolve this discrepancy."
+      },
+      "review": "Abstention action is appropriate but stated reason is wrong: target frequency conflicts (3 versus 4) without precedence. Model cites opioid representation or generic arithmetic discrepancy, not the unresolved required field."
+    },
+    {
+      "id": "B08_A",
+      "answerable": false,
+      "preliminary_correct": true,
+      "final_correct": false,
+      "abstention_justified": false,
+      "accepted_computations": 0,
+      "model_corrected_execute_calls": 0,
+      "answer": {
+        "status": "abstain",
+        "reason": "The declared parameter value for 'daily_dose_mg' disagrees with the operation result."
+      },
+      "review": "Abstention action is appropriate but stated reason is wrong: target frequency conflicts (3 versus 4) without precedence. Model cites opioid representation or generic arithmetic discrepancy, not the unresolved required field."
+    },
+    {
+      "id": "B08_B",
+      "answerable": false,
+      "preliminary_correct": true,
+      "final_correct": false,
+      "abstention_justified": false,
+      "accepted_computations": 0,
+      "model_corrected_execute_calls": 0,
+      "answer": {
+        "status": "abstain",
+        "reason": "The declared opioid name 'oxycodone' does not match the operation result 'Oxycodone', indicating a potential error in the input data or a mismatch between expected and actual values."
+      },
+      "review": "Abstention action is appropriate but stated reason is wrong: target frequency conflicts (3 versus 4) without precedence. Model cites opioid representation or generic arithmetic discrepancy, not the unresolved required field."
+    },
+    {
+      "id": "B08_C",
+      "answerable": false,
+      "preliminary_correct": true,
+      "final_correct": false,
+      "abstention_justified": false,
+      "accepted_computations": 0,
+      "model_corrected_execute_calls": 0,
+      "answer": {
+        "status": "abstain",
+        "reason": "The declared daily dose in mg does not match the calculated daily dose based on the given facts."
+      },
+      "review": "Abstention action is appropriate but stated reason is wrong: target frequency conflicts (3 versus 4) without precedence. Model cites opioid representation or generic arithmetic discrepancy, not the unresolved required field."
+    }
+  ],
+  "time": 1792767744.3751318
+}

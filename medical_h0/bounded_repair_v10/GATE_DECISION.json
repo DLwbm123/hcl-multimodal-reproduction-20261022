@@ -1,0 +1,77 @@
+{
+  "manual_audited": true,
+  "reviewed_episode_ids": [
+    "B01_A",
+    "B01_B",
+    "B01_C",
+    "B01_D",
+    "B02_B",
+    "B02_C",
+    "B02_D",
+    "B02_A",
+    "B03_C",
+    "B03_D",
+    "B03_A",
+    "B03_B",
+    "B04_D",
+    "B04_A",
+    "B04_B",
+    "B04_C",
+    "B05_A",
+    "B05_B",
+    "B05_C",
+    "B05_D",
+    "B06_B",
+    "B06_C",
+    "B06_D",
+    "B06_A",
+    "B07_C",
+    "B07_D",
+    "B07_A",
+    "B07_B",
+    "B08_D",
+    "B08_A",
+    "B08_B",
+    "B08_C"
+  ],
+  "eligible_candidates": [],
+  "selected_candidate": null,
+  "reason": "All four arms recovered 0/6 answerable states and had 0/2 reason-correct abstentions. Every branch abstained immediately after one generation, with no corrected calculation attempted. Frozen eligibility not met; skip C and terminate.",
+  "arm_results": {
+    "A": {
+      "trusted_recovery": 0,
+      "answerable_denominator": 6,
+      "justified_abstention": 0,
+      "unanswerable_denominator": 2,
+      "corrected_execute_attempts": 0,
+      "model_generations": 8
+    },
+    "B": {
+      "trusted_recovery": 0,
+      "answerable_denominator": 6,
+      "justified_abstention": 0,
+      "unanswerable_denominator": 2,
+      "corrected_execute_attempts": 0,
+      "model_generations": 8
+    },
+    "C": {
+      "trusted_recovery": 0,
+      "answerable_denominator": 6,
+      "justified_abstention": 0,
+      "unanswerable_denominator": 2,
+      "corrected_execute_attempts": 0,
+      "model_generations": 8
+    },
+    "D": {
+      "trusted_recovery": 0,
+      "answerable_denominator": 6,
+      "justified_abstention": 0,
+      "unanswerable_denominator": 2,
+      "corrected_execute_attempts": 0,
+      "model_generations": 8
+    }
+  },
+  "confirmation_episodes_skipped": 24,
+  "no_hcl": true,
+  "time": 1792767744.375505
+}
