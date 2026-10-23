@@ -1,0 +1,78 @@
+{
+  "scope": "Read-only diagnosis of four learning acceptance cases; no new model calls; frozen runtime and scorer unchanged",
+  "exposed_tools": [
+    "read_facts",
+    "calculate",
+    "submit_answer"
+  ],
+  "clinical_formula_library": false,
+  "cases": [
+    {
+      "ordinal": 1,
+      "facts_rows": 67,
+      "successful_arithmetic_results": 1,
+      "trigger": "syntax error then cached reread",
+      "submitted_rows": 7
+    },
+    {
+      "ordinal": 2,
+      "facts_rows": 25,
+      "successful_arithmetic_results": 2,
+      "trigger": "cached reread then cached calculation",
+      "submitted_rows": 2
+    },
+    {
+      "ordinal": 3,
+      "facts_rows": 82,
+      "successful_arithmetic_results": 0,
+      "trigger": "two syntax errors; later calculate rejected because no longer registered",
+      "submitted_rows": 1
+    },
+    {
+      "ordinal": 4,
+      "facts_rows": 55,
+      "successful_arithmetic_results": 0,
+      "trigger": "two syntax errors",
+      "submitted_rows": 1
+    }
+  ],
+  "all_facts_fit_first_page": true,
+  "all_submitted_names_present_in_raw_generation": true,
+  "interface_issue": "Conditional-expression syntax unspecified; implementation requires Python numeric IfExp, model emits if(...) or ?:; missing variables and string outputs also occur.",
+  "state_issue": "Two no-progress events remove calculate/read_facts. Four acceptance cases reach submission-only phase before completing clinical work. Submission gate is not capability gate.",
+  "prompt_issue": "Official exporter uses Alvarado as naming example; model repeats it in unrelated contexts, including acknowledging non-applicability. Causal contribution not isolated.",
+  "scorer_false_positive": {
+    "pred": "Alvarez Score for Pulmonary Embolism",
+    "gold": "Wells' Criteria for Pulmonary Embolism",
+    "jaccard": 0.5,
+    "threshold": 0.45,
+    "matched": true,
+    "sole_official_correct_output": true
+  },
+  "scorer_possible_false_negative": {
+    "case": 2,
+    "pred": "Heart Rate/Systolic Blood Pressure Ratio",
+    "gold": "Shock Index",
+    "name_matched": false,
+    "value_within_tolerance": true,
+    "episode_matches": true
+  },
+  "synthetic_scorer_checks": {
+    "generic_Pulmonary_Embolism_matches_Wells": true,
+    "not_5_actually_7_matches_numeric_5": true,
+    "5_mg_matches_gold_5_g": true
+  },
+  "interpretation": "Official 1/36 retained, but neither the sole credit nor 0/36 after removing it is an adequate clinical correctness conclusion. Report calculator identity, numeric correctness, episode and submission independently.",
+  "limits": "No paired clinical-catalog/formula/control model probe performed; cannot attribute intrinsic model knowledge deficit independently of interface and state policy.",
+  "live_snapshot": {
+    "stage": "s2_train",
+    "stage1_accepted": false,
+    "stage1_reason": "no_valid_candidate_generated",
+    "stage1_proposals": 2,
+    "both_sections": 8,
+    "allowed_max_sections": 5,
+    "stage1_selection_correct": 0,
+    "stage1_selection_total": 30,
+    "historical_correct_output_count": 0
+  }
+}

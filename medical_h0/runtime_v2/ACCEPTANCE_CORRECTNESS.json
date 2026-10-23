@@ -1,0 +1,106 @@
+{
+  "scope": "post hoc read-only correctness audit; not acceptance threshold or selection input",
+  "model_calls_added": 0,
+  "cases": [
+    {
+      "case_ordinal": 1,
+      "learning_block": "train_dependency",
+      "submitted": true,
+      "correct_outputs": 0,
+      "total_gold_outputs": 10,
+      "complete_task_success": false,
+      "utility": 0.0,
+      "selection": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched": 0,
+        "gold": 10,
+        "predicted": 7
+      },
+      "rows_by_outcome": {
+        "abstain": 10
+      },
+      "model_calls": 5,
+      "saw_calculation": true
+    },
+    {
+      "case_ordinal": 2,
+      "learning_block": "train_dependency",
+      "submitted": true,
+      "correct_outputs": 0,
+      "total_gold_outputs": 7,
+      "complete_task_success": false,
+      "utility": 0.0,
+      "selection": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched": 0,
+        "gold": 7,
+        "predicted": 2
+      },
+      "rows_by_outcome": {
+        "abstain": 7
+      },
+      "model_calls": 6,
+      "saw_calculation": true
+    },
+    {
+      "case_ordinal": 3,
+      "learning_block": "train_submission",
+      "submitted": true,
+      "correct_outputs": 0,
+      "total_gold_outputs": 10,
+      "complete_task_success": false,
+      "utility": 0.0,
+      "selection": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "matched": 0,
+        "gold": 10,
+        "predicted": 1
+      },
+      "rows_by_outcome": {
+        "abstain": 10
+      },
+      "model_calls": 5,
+      "saw_calculation": false
+    },
+    {
+      "case_ordinal": 4,
+      "learning_block": "train_submission",
+      "submitted": true,
+      "correct_outputs": 1,
+      "total_gold_outputs": 9,
+      "complete_task_success": false,
+      "utility": 0.022,
+      "selection": {
+        "precision": 1.0,
+        "recall": 0.111,
+        "f1": 0.2,
+        "matched": 1,
+        "gold": 9,
+        "predicted": 1
+      },
+      "rows_by_outcome": {
+        "numeric": 1,
+        "abstain": 8
+      },
+      "model_calls": 4,
+      "saw_calculation": false
+    }
+  ],
+  "correct_outputs": 1,
+  "total_gold_outputs": 36,
+  "complete_task_success": 0,
+  "mean_utility": 0.0055,
+  "qualification": {
+    "predicted_name": "Alvarez Score for Pulmonary Embolism",
+    "scorer_correct_names": [
+      "Wells' Criteria for Pulmonary Embolism"
+    ],
+    "note": "Sole correct output uses fuzzy name matching despite a different calculator name. Frozen score retained; not proof of correct clinical calculator identification."
+  }
+}

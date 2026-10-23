@@ -1,0 +1,38 @@
+{
+  "name": "calculator_v3",
+  "frozen_epoch": 1792736153.3226619,
+  "purpose": "Medical H0 capability repair before workflow-only HCL; same capabilities and scoring for Static/HCL",
+  "data": "Original fixed32 role split reused; learning8 only for capability gate and oracle-name diagnosis. Final8 reused regression panel, not new confirmation. All original gold denominators retained.",
+  "formula_library": {
+    "repo": "u9401066/medical-calc-mcp",
+    "commit": "45f648d9b37991362df095e4ae41c34c65969caf",
+    "catalog": 152,
+    "execution": "Passing upstream compute-test coverage plus typed signatures; RCP NEWS2 scale2 on-air correction recorded",
+    "limitations": "Computational checks and primary-source sentinel checks are not clinical certification; unsupported coverage remains in denominator."
+  },
+  "acceptance_gate": {
+    "min_submitted": 6,
+    "min_selection_precision": 0.8,
+    "min_selection_recall": 0.4,
+    "min_end_to_end_accuracy": 0.25,
+    "min_conditional_value_accuracy": 0.8,
+    "max_tool_error_rate": 0.2,
+    "min_positive_cases_per_block": 2
+  },
+  "acceptance_scope": "All8 learning cases once unguided; no forced-submit state. If fail: one fixed oracle-required-name diagnostic on same8, no numerical answers, then stop. This control cannot turn failed acceptance into passed.",
+  "execution": {
+    "model": "Qwen2.5-VL-7B-Instruct",
+    "dtype": "BF16",
+    "decoding": "greedy4096",
+    "context": 32768,
+    "turns": 24,
+    "tools": 80,
+    "episode_seconds": 900,
+    "gpu": 2,
+    "json_repair": false,
+    "forced_submission": false
+  },
+  "scoring": "Explicit reviewed canonical identities/aliases, exact episode; duplicate identity/episode rejected; full-string numeric and explicit unit consistency. Official old scores preserved.",
+  "hcl": "Conditional on gate,2stages x2 automatic prose workflow proposals, empty state, selection +.05 utility and >=1 correct, zero historical correct-output loss, max5sections and original string limits. No formula/aliases/scorer/tool/model update by HCL.",
+  "stopping": "No restart or extra candidate after failure. Shared original6h/6000calls/2GB budget includes preparation, acceptance, optional diagnostic and conditional formal. Independent supervisor and per-call fresh guard."
+}

@@ -1,0 +1,6 @@
+{
+  "repo": "https://github.com/u9401066/medical-calc-mcp",
+  "commit": "45f648d9b37991362df095e4ae41c34c65969caf",
+  "license": "Apache-2.0",
+  "scope": "domain calculator source and upstream tests only; no MCP/API server or benchmark data"
+}
