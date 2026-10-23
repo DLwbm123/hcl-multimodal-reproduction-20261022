@@ -1,0 +1,58 @@
+{
+  "version": "evidence_guidance_v8",
+  "frozen_epoch": 1792762206.271532,
+  "source_parent": "bc3fded",
+  "purpose": "Improve mainline evidence support after v7: scope, conflicts and all operands of derived parameters. Paired generic policy guidance diagnostic, not HCL.",
+  "hcl_enabled": false,
+  "synthetic_only": true,
+  "benchmark_replay": false,
+  "engineering_start_epoch": 1792762024.0759363,
+  "engineering_deadline_epoch": 1792769224.0759363,
+  "post_run_audit_max_seconds": 1800,
+  "model": "Qwen2.5-VL-7B-Instruct",
+  "dtype": "bfloat16",
+  "attention": "sdpa",
+  "temperature": 0,
+  "context_window": 32768,
+  "model_window_seconds": 2700,
+  "early_stop_margin_seconds": 60,
+  "episode_seconds": 300,
+  "max_requests_per_episode": 12,
+  "max_model_requests": 288,
+  "max_input_tokens": 2000000,
+  "max_output_tokens": 192000,
+  "max_output_per_generation": 4096,
+  "max_new_bytes": 2147483648,
+  "storage_reserve_bytes": 1073741824,
+  "external_file_reserve_bytes": 1048576,
+  "planned_evidence_cases": 6,
+  "planned_mapping_cases": 6,
+  "planned_episodes": 24,
+  "arms": {
+    "R": "v7 full raw input with unchanged v6 SYSTEM",
+    "I": "same full raw input, same tools and scorer; append fixed generic evidence checklist in adapter_v8.GUIDANCE"
+  },
+  "design": "New paired cases; 6 evidence (3 answerable,2 conflict,1 missing),6 mapping (4 dose-times-frequency MME,1 direct anion gap,1 explicit RASS category). Interleave evidence and mapping pairs, balance R/I order within both families. Fresh state per episode, all raw distractors retained.",
+  "intervention": "Single preregistered prompt package addressing requested-field/scope matching, within-scope contradiction, all-operand provenance and accurate transformation descriptions. No runtime oracle, new schema, changed formula, parser repair, model change or reduced scoring. The bundle cannot isolate each instruction effect.",
+  "model_visibility": "Only task prompt, target, original schemas and complete raw evidence/state; I also sees the fixed generic checklist. No expected IDs, parameter values or answers supplied.",
+  "scoring": "Reuse v7/v5 evaluator unchanged. Evidence exact selections or justified missing/conflict abstentions. Every abstention reason and accepted calculation including transformation text is manually audited before final scores. All numerical-only and unsupported results remain distinct.",
+  "decision_rules": {
+    "evidence_ready_for_next_design": "I at least 5/6 correct, both conflicts correct, no answerable-score decrease or more scope errors than R.",
+    "mapping_ready_for_next_design": "I at least 5/6 trusted and at least 3/4 MME trusted, with direct/category controls not worse than R; audit all accepted results.",
+    "policy_improvement_signal": "I at least 3/12 more final-correct than R and at least 2/4 more trusted MME cases; descriptive small-panel signal only.",
+    "otherwise": "Report partial gains/regressions and unresolved components; no automatic follow-on experiment."
+  },
+  "stop_conditions": [
+    "CPU isolation/reference/scoring checks must pass before inference",
+    "One attempt per case and arm; no same-panel post-feedback revisions or extra model smoke",
+    "Task failures do not gate later cases or components",
+    "Provider/protocol/runtime/identity/guard failure or any original budget exhaustion stops remaining work with denominator preserved",
+    "After analysis and public source/report delivery stop; no HCL launch"
+  ],
+  "limitations": [
+    "New synthetic variants drawn from failure mechanisms observed in v7; development diagnostic rather than clinical/generalization benchmark",
+    "MME remains the existing single-oral-oxycodone evaluator subdomain",
+    "Prompt package changes both semantic guidance and prompt length; no isolated claim for one checklist rule",
+    "Full-input evidence and category examples do not establish broad autonomous medical reasoning"
+  ]
+}
