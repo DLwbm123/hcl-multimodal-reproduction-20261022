@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "pipeline_constructions": 2,
+  "configs_shared": true,
+  "fresh_memory": true,
+  "candidate_contract_settings_preserved": true,
+  "dedicated_anchors": true,
+  "confirmation_groups": 140,
+  "no_learning_confirmation_overlap": true,
+  "stage_summary_prefixes": 3,
+  "real_model_calls": 0
+}
