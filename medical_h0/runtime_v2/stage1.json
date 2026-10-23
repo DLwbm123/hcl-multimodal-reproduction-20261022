@@ -1,0 +1,28 @@
+{
+  "stage": 1,
+  "before": {
+    "version": 0,
+    "sections": []
+  },
+  "after": {
+    "version": 0,
+    "sections": []
+  },
+  "decision": {
+    "accepted": false,
+    "reason": "no_valid_candidate_generated",
+    "generation_diagnostics": {},
+    "candidate_rejections": []
+  },
+  "baseline_current": {
+    "complete_tasks": 0,
+    "correct": 0,
+    "output_total": 30,
+    "total": 4,
+    "primary_score": 0.0,
+    "format_compliance_rate": 1.0
+  },
+  "historical_success_count": 0,
+  "historical_correct_output_count": 0,
+  "candidate_pairs": {}
+}

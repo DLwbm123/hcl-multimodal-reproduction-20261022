@@ -1,0 +1,22 @@
+{
+  "complete": true,
+  "evaluated_episodes": 44,
+  "model_calls": 314,
+  "model_attempts": 315,
+  "pre_generation_refusals": 1,
+  "acceptance_generations": 20,
+  "formal_generations": 294,
+  "generation_seconds": 2566.534376144409,
+  "input_tokens": 2337814,
+  "output_tokens": 81563,
+  "invalid_tool_calls": 98,
+  "confirmation_cases_per_arm": 8,
+  "checks": [
+    "role isolation",
+    "fixed paired confirmation",
+    "candidate generation train-only prompts",
+    "full anchor pairs",
+    "commit/rollback state",
+    "call accounting"
+  ]
+}
