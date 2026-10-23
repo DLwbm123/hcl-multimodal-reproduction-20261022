@@ -1,0 +1,70 @@
+{
+  "version": "component_diagnostic_v6",
+  "frozen_epoch": 1792757546.212466,
+  "hcl_enabled": false,
+  "benchmark_replay": false,
+  "synthetic_only": true,
+  "purpose": "Remove known infrastructure defects before judging model fact-to-parameter ability; no model selection or HCL performance claim.",
+  "source_parent": "d1bc677684fca77d53610cba83388401c5e5fc7a",
+  "engineering_start_epoch": 1792757168,
+  "engineering_deadline_epoch": 1792764368,
+  "model": "Qwen2.5-VL-7B-Instruct",
+  "dtype": "bfloat16",
+  "attention": "sdpa",
+  "temperature": 0,
+  "context_window": 32768,
+  "model_window_seconds": 2700,
+  "early_stop_margin_seconds": 60,
+  "episode_seconds": 300,
+  "max_model_requests": 168,
+  "max_input_tokens": 1500000,
+  "max_output_tokens": 128000,
+  "max_output_per_generation": 4096,
+  "max_new_bytes": 2147483648,
+  "storage_reserve_bytes": 1073741824,
+  "external_file_reserve_bytes": 1048576,
+  "stages": [
+    {
+      "name": "submission",
+      "cases": 6,
+      "max_requests_per_case": 4,
+      "gate": "6/6 exact requested result-ID submissions or explicitly requested abstentions"
+    },
+    {
+      "name": "navigation",
+      "cases": 6,
+      "max_requests_per_case": 12,
+      "gate": "6/6 exact evidence-ID selections; N05 must actually retrieve the named observation"
+    },
+    {
+      "name": "mapping",
+      "cases": 6,
+      "max_requests_per_case": 12,
+      "gate": "6/6 trusted correct explicit submissions, all accepted computations audited, transformation prose reviewed after run"
+    }
+  ],
+  "gating": "Run all six cases in a stage, then stop later stages unless all six pass. Never turn unattempted later cases into model errors. One attempt per case; no same-panel post-feedback tuning or extra model smoke calls.",
+  "changes": [
+    "submit_result(result_id) and abstain(reason) replace conditional submit_answer",
+    "No caching failed execution requests; success observations retain full bodies",
+    "Persist only actually read facts, page/cursor and observation index; omitted offset deterministically advances to next unread page"
+  ],
+  "unchanged": [
+    "formula bodies and calculator profiles",
+    "fact/patient/episode and immutable result checks",
+    "official Qwen-Agent Nous free-generation transport",
+    "frozen model and decoding",
+    "v5 scores, source, trajectories and 0/18 result"
+  ],
+  "diagnostic_isolation": "Submission seeds synthetic already-completed results; navigation has no calculator and tests page/recovery state; mapping exposes no reference parameters and uses six synthetic inputs for direct extraction, dose multiplication and category mapping.",
+  "model_visibility": "Only case prompt, target scope, available schemas, seeded completed results or deliberate fault state, and observations it reads. Evaluator expected IDs/values are not added to model context, except the explicitly requested ID in submission-only tasks.",
+  "interpretation": "These are six predeclared checks per component, not a statistical reliability claim, clinical evaluation, fresh benchmark confirmation or isolated causal estimate of each bundled fix.",
+  "stop_conditions": [
+    "CPU failure prevents model launch",
+    "Any stage gate failure stops all later stages",
+    "Unexpected provider/protocol/runtime/identity/guard failure is fatal",
+    "Any budget limit stops with complete planned/attempted accounting",
+    "After diagnostic report and source delivery, stop; no HCL or full H0 replay"
+  ],
+  "post_run_audit_max_seconds": 1800
+}
