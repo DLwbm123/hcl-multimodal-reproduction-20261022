@@ -33,3 +33,11 @@ route storage policy before launch. The original failed native run stays sealed.
 `run_paired.py` uses the sibling `medrax_v1` runtime; deployment copies its pinned
 source alongside the driver. `control.py` supplies independent resource guards.
 Runtime configuration, data, images, weights and full traces remain private.
+
+## Completed result
+
+Both arms completed all 12 cases. A was correct on 6/12 with one successful
+tool-use episode; B was correct on 4/12 with 11 successful tool-use episodes.
+There were two A-only correct cases and zero B-only correct cases. Neither arm
+qualified. This prompt-adaptation branch is closed; no HCL updates were run.
+See [the report](REPORT.zh-CN.md) and `REPORT.json`.

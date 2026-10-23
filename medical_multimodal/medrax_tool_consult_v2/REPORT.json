@@ -1,0 +1,304 @@
+{
+  "time": 1792773940.7941523,
+  "denominator": 24,
+  "arms": {
+    "A_native": {
+      "denominator": 12,
+      "attempted": 12,
+      "completed": 12,
+      "correct": 6,
+      "valid_final": 12,
+      "successful_tool_episodes": 1,
+      "runtime_error_episodes": 0,
+      "image_payload_verified": true,
+      "planner_calls": 13,
+      "planner_input_tokens": 22142,
+      "planner_output_tokens": 4393,
+      "expert_generations": 2
+    },
+    "B_consult": {
+      "denominator": 12,
+      "attempted": 12,
+      "completed": 12,
+      "correct": 4,
+      "valid_final": 12,
+      "successful_tool_episodes": 11,
+      "runtime_error_episodes": 0,
+      "image_payload_verified": true,
+      "planner_calls": 24,
+      "planner_input_tokens": 46990,
+      "planner_output_tokens": 5424,
+      "expert_generations": 0
+    }
+  },
+  "fatal": null,
+  "hcl_updates": 0,
+  "scientific_efficacy_claim": false,
+  "selected_shared_base": null,
+  "paired_correctness": {
+    "both_correct": 4,
+    "A_only": 2,
+    "B_only": 0,
+    "both_wrong": 6
+  },
+  "tool_results": {
+    "A_native": {
+      "chest_xray_report_generator:completed": 1
+    },
+    "B_consult": {
+      "chest_xray_classifier:completed": 11,
+      "chest_xray_classifier:failed": 1
+    }
+  },
+  "per_case": [
+    {
+      "case_id": "16425",
+      "arm": "A_native",
+      "status": "completed",
+      "correct": false,
+      "planner_calls": 1,
+      "planner_output_tokens": 396,
+      "tool_calls": 0,
+      "seconds": 7.991210699081421
+    },
+    {
+      "case_id": "16425",
+      "arm": "B_consult",
+      "status": "completed",
+      "correct": false,
+      "planner_calls": 2,
+      "planner_output_tokens": 250,
+      "tool_calls": 1,
+      "seconds": 5.849145174026489
+    },
+    {
+      "case_id": "2364",
+      "arm": "B_consult",
+      "status": "completed",
+      "correct": false,
+      "planner_calls": 2,
+      "planner_output_tokens": 627,
+      "tool_calls": 1,
+      "seconds": 11.690193176269531
+    },
+    {
+      "case_id": "2364",
+      "arm": "A_native",
+      "status": "completed",
+      "correct": false,
+      "planner_calls": 1,
+      "planner_output_tokens": 327,
+      "tool_calls": 0,
+      "seconds": 6.0188148021698
+    },
+    {
+      "case_id": "17970",
+      "arm": "A_native",
+      "status": "completed",
+      "correct": true,
+      "planner_calls": 1,
+      "planner_output_tokens": 196,
+      "tool_calls": 0,
+      "seconds": 3.7365427017211914
+    },
+    {
+      "case_id": "17970",
+      "arm": "B_consult",
+      "status": "completed",
+      "correct": true,
+      "planner_calls": 2,
+      "planner_output_tokens": 271,
+      "tool_calls": 1,
+      "seconds": 5.26416015625
+    },
+    {
+      "case_id": "912",
+      "arm": "B_consult",
+      "status": "completed",
+      "correct": true,
+      "planner_calls": 2,
+      "planner_output_tokens": 302,
+      "tool_calls": 1,
+      "seconds": 5.9247894287109375
+    },
+    {
+      "case_id": "912",
+      "arm": "A_native",
+      "status": "completed",
+      "correct": true,
+      "planner_calls": 1,
+      "planner_output_tokens": 188,
+      "tool_calls": 0,
+      "seconds": 3.5127766132354736
+    },
+    {
+      "case_id": "8486",
+      "arm": "A_native",
+      "status": "completed",
+      "correct": true,
+      "planner_calls": 1,
+      "planner_output_tokens": 512,
+      "tool_calls": 0,
+      "seconds": 9.304547309875488
+    },
+    {
+      "case_id": "8486",
+      "arm": "B_consult",
+      "status": "completed",
+      "correct": true,
+      "planner_calls": 2,
+      "planner_output_tokens": 969,
+      "tool_calls": 1,
+      "seconds": 18.13545560836792
+    },
+    {
+      "case_id": "10966",
+      "arm": "B_consult",
+      "status": "completed",
+      "correct": false,
+      "planner_calls": 2,
+      "planner_output_tokens": 547,
+      "tool_calls": 1,
+      "seconds": 10.334131240844727
+    },
+    {
+      "case_id": "10966",
+      "arm": "A_native",
+      "status": "completed",
+      "correct": true,
+      "planner_calls": 1,
+      "planner_output_tokens": 281,
+      "tool_calls": 0,
+      "seconds": 5.216217279434204
+    },
+    {
+      "case_id": "8911",
+      "arm": "A_native",
+      "status": "completed",
+      "correct": true,
+      "planner_calls": 1,
+      "planner_output_tokens": 361,
+      "tool_calls": 0,
+      "seconds": 6.69709849357605
+    },
+    {
+      "case_id": "8911",
+      "arm": "B_consult",
+      "status": "completed",
+      "correct": true,
+      "planner_calls": 2,
+      "planner_output_tokens": 477,
+      "tool_calls": 1,
+      "seconds": 9.105046510696411
+    },
+    {
+      "case_id": "14391",
+      "arm": "B_consult",
+      "status": "completed",
+      "correct": false,
+      "planner_calls": 2,
+      "planner_output_tokens": 656,
+      "tool_calls": 1,
+      "seconds": 12.480434894561768
+    },
+    {
+      "case_id": "14391",
+      "arm": "A_native",
+      "status": "completed",
+      "correct": false,
+      "planner_calls": 1,
+      "planner_output_tokens": 508,
+      "tool_calls": 0,
+      "seconds": 9.3103506565094
+    },
+    {
+      "case_id": "4379",
+      "arm": "A_native",
+      "status": "completed",
+      "correct": false,
+      "planner_calls": 2,
+      "planner_output_tokens": 610,
+      "tool_calls": 1,
+      "seconds": 12.022912502288818
+    },
+    {
+      "case_id": "4379",
+      "arm": "B_consult",
+      "status": "completed",
+      "correct": false,
+      "planner_calls": 2,
+      "planner_output_tokens": 268,
+      "tool_calls": 1,
+      "seconds": 5.314154386520386
+    },
+    {
+      "case_id": "9152",
+      "arm": "B_consult",
+      "status": "completed",
+      "correct": false,
+      "planner_calls": 2,
+      "planner_output_tokens": 289,
+      "tool_calls": 1,
+      "seconds": 5.751554489135742
+    },
+    {
+      "case_id": "9152",
+      "arm": "A_native",
+      "status": "completed",
+      "correct": false,
+      "planner_calls": 1,
+      "planner_output_tokens": 258,
+      "tool_calls": 0,
+      "seconds": 4.824678421020508
+    },
+    {
+      "case_id": "11306",
+      "arm": "A_native",
+      "status": "completed",
+      "correct": true,
+      "planner_calls": 1,
+      "planner_output_tokens": 374,
+      "tool_calls": 0,
+      "seconds": 6.906891345977783
+    },
+    {
+      "case_id": "11306",
+      "arm": "B_consult",
+      "status": "completed",
+      "correct": false,
+      "planner_calls": 2,
+      "planner_output_tokens": 287,
+      "tool_calls": 1,
+      "seconds": 5.6417014598846436
+    },
+    {
+      "case_id": "12918",
+      "arm": "B_consult",
+      "status": "completed",
+      "correct": false,
+      "planner_calls": 2,
+      "planner_output_tokens": 481,
+      "tool_calls": 1,
+      "seconds": 9.21595025062561
+    },
+    {
+      "case_id": "12918",
+      "arm": "A_native",
+      "status": "completed",
+      "correct": false,
+      "planner_calls": 1,
+      "planner_output_tokens": 382,
+      "tool_calls": 0,
+      "seconds": 7.068549156188965
+    }
+  ],
+  "clock": {
+    "epoch": 1792773614.9762063,
+    "deadline": 1792777214.9762063
+  },
+  "exit": {
+    "time": 1792773947.143238,
+    "exit_code": 2
+  },
+  "decision": "CLOSE_PROMPT_ADAPTATION_BRANCH_NO_SHARED_BASE_SELECTED_NO_HCL"
+}
