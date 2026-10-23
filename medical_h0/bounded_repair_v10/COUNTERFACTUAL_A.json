@@ -1,0 +1,579 @@
+{
+  "real_model_calls": 0,
+  "historical_records_unchanged": true,
+  "replays": [
+    {
+      "id": "M01_I",
+      "diagnostic_only_not_model_success": true,
+      "changed_only_opioid_binding": true,
+      "trusted_correct": true,
+      "result": [
+        {
+          "calculator_id": "mme_calculator",
+          "name": "MME Calculator (Morphine Milligram Equivalent)",
+          "value": 18.0,
+          "unit": "MME/day",
+          "calculation_details": {
+            "opioid": "oxycodone",
+            "dose": 12,
+            "dose_unit": "mg/day",
+            "conversion_factor": 1.5,
+            "mme_per_day": 18.0,
+            "formula": "12 mg/day \u00d7 1.5 = 18.0 MME/day"
+          },
+          "formula_used": "MME = Daily Dose \u00d7 Conversion Factor (1.5)",
+          "formula_version": "medical-calc-mcp-45f648d9; executable_gate_v5 profiles v1; formula bodies unchanged",
+          "result_id": "result_001",
+          "patient_id": "synthetic_v9_m1",
+          "episode_id": "visit_v9_m1",
+          "parameters": {
+            "opioid_name": "oxycodone",
+            "daily_dose_mg": 12
+          },
+          "bindings": {
+            "opioid_name": {
+              "parameter": "opioid_name",
+              "value": "oxycodone",
+              "fact_ids": [
+                "fact_0005"
+              ],
+              "transformation": "lowercase(Oxycodone from fact_0005)"
+            },
+            "daily_dose_mg": {
+              "parameter": "daily_dose_mg",
+              "value": 12,
+              "fact_ids": [
+                "fact_0001",
+                "fact_0002"
+              ],
+              "transformation": "multiply(4 from fact_0001, 3 from fact_0002)"
+            }
+          },
+          "output_type": "raw",
+          "semantic_certification": "not certified by execution",
+          "operand_bindings": [
+            {
+              "parameter": "opioid_name",
+              "value": "oxycodone",
+              "operation": "lowercase",
+              "operands": [
+                {
+                  "fact_id": "fact_0005",
+                  "value": "Oxycodone"
+                }
+              ]
+            },
+            {
+              "parameter": "daily_dose_mg",
+              "value": 12,
+              "operation": "multiply",
+              "operands": [
+                {
+                  "fact_id": "fact_0001",
+                  "value": 4
+                },
+                {
+                  "fact_id": "fact_0002",
+                  "value": 3
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "M02_I",
+      "diagnostic_only_not_model_success": true,
+      "changed_only_opioid_binding": true,
+      "trusted_correct": true,
+      "result": [
+        {
+          "calculator_id": "mme_calculator",
+          "name": "MME Calculator (Morphine Milligram Equivalent)",
+          "value": 27.0,
+          "unit": "MME/day",
+          "calculation_details": {
+            "opioid": "oxycodone",
+            "dose": 18,
+            "dose_unit": "mg/day",
+            "conversion_factor": 1.5,
+            "mme_per_day": 27.0,
+            "formula": "18 mg/day \u00d7 1.5 = 27.0 MME/day"
+          },
+          "formula_used": "MME = Daily Dose \u00d7 Conversion Factor (1.5)",
+          "formula_version": "medical-calc-mcp-45f648d9; executable_gate_v5 profiles v1; formula bodies unchanged",
+          "result_id": "result_001",
+          "patient_id": "synthetic_v9_m2",
+          "episode_id": "visit_v9_m2",
+          "parameters": {
+            "opioid_name": "oxycodone",
+            "daily_dose_mg": 18
+          },
+          "bindings": {
+            "opioid_name": {
+              "parameter": "opioid_name",
+              "value": "oxycodone",
+              "fact_ids": [
+                "fact_0004"
+              ],
+              "transformation": "lowercase(Oxycodone from fact_0004)"
+            },
+            "daily_dose_mg": {
+              "parameter": "daily_dose_mg",
+              "value": 18,
+              "fact_ids": [
+                "fact_0001",
+                "fact_0005"
+              ],
+              "transformation": "multiply(6 from fact_0001, 3 from fact_0005)"
+            }
+          },
+          "output_type": "raw",
+          "semantic_certification": "not certified by execution",
+          "operand_bindings": [
+            {
+              "parameter": "opioid_name",
+              "value": "oxycodone",
+              "operation": "lowercase",
+              "operands": [
+                {
+                  "fact_id": "fact_0004",
+                  "value": "Oxycodone"
+                }
+              ]
+            },
+            {
+              "parameter": "daily_dose_mg",
+              "value": 18,
+              "operation": "multiply",
+              "operands": [
+                {
+                  "fact_id": "fact_0001",
+                  "value": 6
+                },
+                {
+                  "fact_id": "fact_0005",
+                  "value": 3
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "M04_I",
+      "diagnostic_only_not_model_success": true,
+      "changed_only_opioid_binding": true,
+      "trusted_correct": true,
+      "result": [
+        {
+          "calculator_id": "mme_calculator",
+          "name": "MME Calculator (Morphine Milligram Equivalent)",
+          "value": 105.0,
+          "unit": "MME/day",
+          "calculation_details": {
+            "opioid": "oxycodone",
+            "dose": 70,
+            "dose_unit": "mg/day",
+            "conversion_factor": 1.5,
+            "mme_per_day": 105.0,
+            "formula": "70 mg/day \u00d7 1.5 = 105.0 MME/day"
+          },
+          "formula_used": "MME = Daily Dose \u00d7 Conversion Factor (1.5)",
+          "formula_version": "medical-calc-mcp-45f648d9; executable_gate_v5 profiles v1; formula bodies unchanged",
+          "result_id": "result_001",
+          "patient_id": "synthetic_v9_m4",
+          "episode_id": "visit_v9_m4",
+          "parameters": {
+            "opioid_name": "oxycodone",
+            "daily_dose_mg": 70
+          },
+          "bindings": {
+            "opioid_name": {
+              "parameter": "opioid_name",
+              "value": "oxycodone",
+              "fact_ids": [
+                "fact_0003"
+              ],
+              "transformation": "lowercase(Oxycodone from fact_0003)"
+            },
+            "daily_dose_mg": {
+              "parameter": "daily_dose_mg",
+              "value": 70,
+              "fact_ids": [
+                "fact_0005",
+                "fact_0006"
+              ],
+              "transformation": "multiply(4 from fact_0005, 17.5 from fact_0006)"
+            }
+          },
+          "output_type": "raw",
+          "semantic_certification": "not certified by execution",
+          "operand_bindings": [
+            {
+              "parameter": "opioid_name",
+              "value": "oxycodone",
+              "operation": "lowercase",
+              "operands": [
+                {
+                  "fact_id": "fact_0003",
+                  "value": "Oxycodone"
+                }
+              ]
+            },
+            {
+              "parameter": "daily_dose_mg",
+              "value": 70,
+              "operation": "multiply",
+              "operands": [
+                {
+                  "fact_id": "fact_0005",
+                  "value": 4
+                },
+                {
+                  "fact_id": "fact_0006",
+                  "value": 17.5
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "M05_I",
+      "diagnostic_only_not_model_success": true,
+      "changed_only_opioid_binding": true,
+      "trusted_correct": true,
+      "result": [
+        {
+          "calculator_id": "mme_calculator",
+          "name": "MME Calculator (Morphine Milligram Equivalent)",
+          "value": 36.0,
+          "unit": "MME/day",
+          "calculation_details": {
+            "opioid": "oxycodone",
+            "dose": 24,
+            "dose_unit": "mg/day",
+            "conversion_factor": 1.5,
+            "mme_per_day": 36.0,
+            "formula": "24 mg/day \u00d7 1.5 = 36.0 MME/day"
+          },
+          "formula_used": "MME = Daily Dose \u00d7 Conversion Factor (1.5)",
+          "formula_version": "medical-calc-mcp-45f648d9; executable_gate_v5 profiles v1; formula bodies unchanged",
+          "result_id": "result_001",
+          "patient_id": "synthetic_v9_m5",
+          "episode_id": "visit_v9_m5",
+          "parameters": {
+            "opioid_name": "oxycodone",
+            "daily_dose_mg": 24
+          },
+          "bindings": {
+            "opioid_name": {
+              "parameter": "opioid_name",
+              "value": "oxycodone",
+              "fact_ids": [
+                "fact_0003"
+              ],
+              "transformation": "lowercase(Oxycodone from fact_0003)"
+            },
+            "daily_dose_mg": {
+              "parameter": "daily_dose_mg",
+              "value": 24,
+              "fact_ids": [
+                "fact_0006",
+                "fact_0005"
+              ],
+              "transformation": "multiply(8 from fact_0006, 3 from fact_0005)"
+            }
+          },
+          "output_type": "raw",
+          "semantic_certification": "not certified by execution",
+          "operand_bindings": [
+            {
+              "parameter": "opioid_name",
+              "value": "oxycodone",
+              "operation": "lowercase",
+              "operands": [
+                {
+                  "fact_id": "fact_0003",
+                  "value": "Oxycodone"
+                }
+              ]
+            },
+            {
+              "parameter": "daily_dose_mg",
+              "value": 24,
+              "operation": "multiply",
+              "operands": [
+                {
+                  "fact_id": "fact_0006",
+                  "value": 8
+                },
+                {
+                  "fact_id": "fact_0005",
+                  "value": 3
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "M03_I",
+      "diagnostic_only_not_model_success": true,
+      "changed_only_opioid_binding": true,
+      "trusted_correct": false,
+      "result": [
+        {
+          "calculator_id": "mme_calculator",
+          "name": "MME Calculator (Morphine Milligram Equivalent)",
+          "value": 18.8,
+          "unit": "MME/day",
+          "calculation_details": {
+            "opioid": "oxycodone",
+            "dose": 12.5,
+            "dose_unit": "mg/day",
+            "conversion_factor": 1.5,
+            "mme_per_day": 18.8,
+            "formula": "12.5 mg/day \u00d7 1.5 = 18.8 MME/day"
+          },
+          "formula_used": "MME = Daily Dose \u00d7 Conversion Factor (1.5)",
+          "formula_version": "medical-calc-mcp-45f648d9; executable_gate_v5 profiles v1; formula bodies unchanged",
+          "result_id": "result_001",
+          "patient_id": "synthetic_v9_m3",
+          "episode_id": "visit_v9_m3",
+          "parameters": {
+            "opioid_name": "oxycodone",
+            "daily_dose_mg": 12.5
+          },
+          "bindings": {
+            "opioid_name": {
+              "parameter": "opioid_name",
+              "value": "oxycodone",
+              "fact_ids": [
+                "fact_0004"
+              ],
+              "transformation": "lowercase(Oxycodone from fact_0004)"
+            },
+            "daily_dose_mg": {
+              "parameter": "daily_dose_mg",
+              "value": 12.5,
+              "fact_ids": [
+                "fact_0001"
+              ],
+              "transformation": "identity(12.5 from fact_0001)"
+            }
+          },
+          "output_type": "raw",
+          "semantic_certification": "not certified by execution",
+          "operand_bindings": [
+            {
+              "parameter": "opioid_name",
+              "value": "oxycodone",
+              "operation": "lowercase",
+              "operands": [
+                {
+                  "fact_id": "fact_0004",
+                  "value": "Oxycodone"
+                }
+              ]
+            },
+            {
+              "parameter": "daily_dose_mg",
+              "value": 12.5,
+              "operation": "identity",
+              "operands": [
+                {
+                  "fact_id": "fact_0001",
+                  "value": 12.5
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "M06_I",
+      "diagnostic_only_not_model_success": true,
+      "changed_only_opioid_binding": true,
+      "trusted_correct": false,
+      "result": [
+        {
+          "calculator_id": "mme_calculator",
+          "name": "MME Calculator (Morphine Milligram Equivalent)",
+          "value": 33.0,
+          "unit": "MME/day",
+          "calculation_details": {
+            "opioid": "oxycodone",
+            "dose": 22,
+            "dose_unit": "mg/day",
+            "conversion_factor": 1.5,
+            "mme_per_day": 33.0,
+            "formula": "22 mg/day \u00d7 1.5 = 33.0 MME/day"
+          },
+          "formula_used": "MME = Daily Dose \u00d7 Conversion Factor (1.5)",
+          "formula_version": "medical-calc-mcp-45f648d9; executable_gate_v5 profiles v1; formula bodies unchanged",
+          "result_id": "result_001",
+          "patient_id": "synthetic_v9_m6",
+          "episode_id": "visit_v9_m6",
+          "parameters": {
+            "opioid_name": "oxycodone",
+            "daily_dose_mg": 22
+          },
+          "bindings": {
+            "opioid_name": {
+              "parameter": "opioid_name",
+              "value": "oxycodone",
+              "fact_ids": [
+                "fact_0002"
+              ],
+              "transformation": "lowercase(Oxycodone from fact_0002)"
+            },
+            "daily_dose_mg": {
+              "parameter": "daily_dose_mg",
+              "value": 22,
+              "fact_ids": [
+                "fact_0005"
+              ],
+              "transformation": "identity(22 from fact_0005)"
+            }
+          },
+          "output_type": "raw",
+          "semantic_certification": "not certified by execution",
+          "operand_bindings": [
+            {
+              "parameter": "opioid_name",
+              "value": "oxycodone",
+              "operation": "lowercase",
+              "operands": [
+                {
+                  "fact_id": "fact_0002",
+                  "value": "Oxycodone"
+                }
+              ]
+            },
+            {
+              "parameter": "daily_dose_mg",
+              "value": 22,
+              "operation": "identity",
+              "operands": [
+                {
+                  "fact_id": "fact_0005",
+                  "value": 22
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "M08_I",
+      "diagnostic_only_not_model_success": true,
+      "schema_attempt": {
+        "errors": [
+          {
+            "code": "SCHEMA_ERROR",
+            "path": "/bindings/0",
+            "parameter": "sodium",
+            "message": "Additional properties are not allowed ('unit' was unexpected)",
+            "keyword": "additionalProperties"
+          },
+          {
+            "code": "SCHEMA_ERROR",
+            "path": "/bindings/1",
+            "parameter": "chloride",
+            "message": "Additional properties are not allowed ('unit' was unexpected)",
+            "keyword": "additionalProperties"
+          },
+          {
+            "code": "SCHEMA_ERROR",
+            "path": "/bindings/2",
+            "parameter": "bicarbonate",
+            "message": "Additional properties are not allowed ('unit' was unexpected)",
+            "keyword": "additionalProperties"
+          },
+          {
+            "code": "SOURCE_SCOPE_MISMATCH",
+            "path": "/bindings/0/operands/0/fact_id",
+            "parameter": "sodium",
+            "message": "Operand source is outside permitted target scope"
+          }
+        ],
+        "binding_checks": [
+          {
+            "parameter": "sodium",
+            "path": "/bindings/0",
+            "status": "invalid",
+            "source_checks_complete": true,
+            "operation_checked": true,
+            "schema_valid": false,
+            "note": "Local consistency does not establish correct fields, complete clinical inputs or conflict resolution."
+          },
+          {
+            "parameter": "chloride",
+            "path": "/bindings/1",
+            "status": "locally_consistent",
+            "source_checks_complete": true,
+            "operation_checked": true,
+            "schema_valid": false,
+            "note": "Local consistency does not establish correct fields, complete clinical inputs or conflict resolution."
+          },
+          {
+            "parameter": "bicarbonate",
+            "path": "/bindings/2",
+            "status": "locally_consistent",
+            "source_checks_complete": true,
+            "operation_checked": true,
+            "schema_valid": false,
+            "note": "Local consistency does not establish correct fields, complete clinical inputs or conflict resolution."
+          }
+        ]
+      },
+      "scope_attempt": {
+        "errors": [
+          {
+            "code": "SOURCE_SCOPE_MISMATCH",
+            "path": "/bindings/0/operands/0/fact_id",
+            "parameter": "sodium",
+            "message": "Operand source is outside permitted target scope"
+          }
+        ],
+        "binding_checks": [
+          {
+            "parameter": "sodium",
+            "path": "/bindings/0",
+            "status": "invalid",
+            "source_checks_complete": true,
+            "operation_checked": true,
+            "schema_valid": true,
+            "note": "Local consistency does not establish correct fields, complete clinical inputs or conflict resolution."
+          },
+          {
+            "parameter": "chloride",
+            "path": "/bindings/1",
+            "status": "locally_consistent",
+            "source_checks_complete": true,
+            "operation_checked": true,
+            "schema_valid": true,
+            "note": "Local consistency does not establish correct fields, complete clinical inputs or conflict resolution."
+          },
+          {
+            "parameter": "bicarbonate",
+            "path": "/bindings/2",
+            "status": "locally_consistent",
+            "source_checks_complete": true,
+            "operation_checked": true,
+            "schema_valid": true,
+            "note": "Local consistency does not establish correct fields, complete clinical inputs or conflict resolution."
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "version": "bounded_repair_v10",
+  "frozen_epoch": 1792767539.854303,
+  "source_parent": "35cc2ce",
+  "purpose": "One final bounded mainline test of parameter-level feedback versus explicit repair instructions; user-linked plan. No HCL, model changes or further interface expansion.",
+  "hcl_enabled": false,
+  "synthetic_only": true,
+  "benchmark_replay": false,
+  "engineering_start_epoch": 1792767133.672875,
+  "engineering_deadline_epoch": 1792777933.672875,
+  "post_run_audit_max_seconds": 2700,
+  "model": "Qwen2.5-VL-7B-Instruct",
+  "dtype": "bfloat16",
+  "attention": "sdpa",
+  "temperature": 0,
+  "context_window": 32768,
+  "model_window_seconds": 5400,
+  "early_stop_margin_seconds": 60,
+  "episode_seconds": 300,
+  "max_requests_per_episode": 12,
+  "max_model_requests": 352,
+  "max_input_tokens": 3000000,
+  "max_output_tokens": 256000,
+  "max_output_per_generation": 4096,
+  "max_new_bytes": 2147483648,
+  "storage_reserve_bytes": 1073741824,
+  "external_file_reserve_bytes": 1048576,
+  "planned_evidence_cases": 0,
+  "planned_mapping_cases": 20,
+  "planned_episodes": 56,
+  "arms": {
+    "A": "generic feedback, no special repair instruction",
+    "B": "structured parameter feedback, no special repair instruction",
+    "C": "generic feedback plus bounded-repair instruction",
+    "D": "structured feedback plus bounded-repair instruction"
+  },
+  "design": "B same constructed failed call/facts/calculator state copied into 4 arms, rotate arm order. C new cases with changed values/order/scope distractors, balanced control/candidate order. Stage B is controlled recovery, never natural end-to-end accuracy.",
+  "intervention": "Feedback may reveal only current arguments, read facts and public contract; independently collect errors and locally_consistent/not_checked coverage. No oracle field selection, operand completion, auto-normalization, parser repair, new operation or clinical-correctness label. Optional instruction asks one bounded repair and permits true evidence-related abstention; all bindings remain editable.",
+  "model_visibility": "Only task/raw facts/target, explicit schema, current call and arm feedback. No reference answers/required source groups. Evaluator and manual gate not supplied to solver.",
+  "scoring": "Existing v5 trusted source-complete scorer for answerable cases; evaluator-only known absent/conflicting outcomes require reason-reviewed abstention. Every accepted calculation and abstention manually audited. Correct abstentions reported separately from solvable completion.",
+  "decision_rules": {
+    "B_gate": "Candidate B/C/D must recover >=5/6 answerable, have reason-correct abstention 2/2, zero invalid source/scope/arithmetic acceptance, and net >=2/6 trusted recoveries above A.",
+    "B_selection": "Among eligible B/C, prefer greater answerable recovery; tie B (feedback only). Choose D only if no simpler arm eligible or D recovers more answerable states than all eligible simpler arms. No C run absent eligible signal.",
+    "C_gate": "Candidate >=5/6 MME,4/4 direct,2/2 justified abstentions,>=3/10 net trusted gain over control on solvable tasks,zero invalid chain acceptance. Otherwise no adoption.",
+    "otherwise": "End this route after this round; no H0/HCL or unplanned next experiment."
+  },
+  "stop_conditions": [
+    "A must pass before any model generation",
+    "Shared first-launch clock; no restart or same-panel rerun",
+    "B completes then waits within original deadline for manually audited fixed selection; C only on signed local gate receipt",
+    "No candidate changes after results",
+    "Provider/runtime/identity/guard or budget failures stop remaining work with denominators retained",
+    "Analyze and publish public source/synthetic results; stop, no HCL"
+  ],
+  "limitations": [
+    "One small constructed recovery panel and conditional synthetic development confirmation; not clinical/generalization validity",
+    "B initial failures are seeded, not natural agent behavior",
+    "Controls receive common display and hard repair-count fixes; report this explicitly",
+    "Existing numeric rules do not certify semantic completeness, conflict resolution or broader calculators"
+  ],
+  "stages": {
+    "A": "CPU only: v9 counterfactual replay and validation/serialization tests. Historical scores unchanged.",
+    "B": "8 frozen failed states x 4 arms, <=2 real generations each, at most one corrected calculation; six answerable and two truly missing/conflicting.",
+    "C": "Only after manual B gate: 12 NEW frozen tasks x 2 arms <=12 generations each, 6 MME,4 direct,2 missing/conflicting. 24 conditional episodes."
+  },
+  "common_base": "All groups receive true remaining-generation count, strict v9 identity/lowercase/multiply, full raw input, and same one-corrected-execute limit. Stage C control is v9-style feedback/instruction with these explicitly common budget/repair-limit fixes; not byte-identical historical v9. Stable corrected_qt sex scope exception preserved in CPU tests, not added to model panel.",
+  "B_eligibility_detail": "Both unavailable cases must abstain with correctly identified required field and reason, manually reviewed. A net gain of >=2 answerable states is fixed before inference."
+}
