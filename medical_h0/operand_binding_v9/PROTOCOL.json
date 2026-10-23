@@ -1,0 +1,56 @@
+{
+  "version": "operand_binding_v9",
+  "frozen_epoch": 1792765409.3075788,
+  "source_parent": "fd9ad76",
+  "purpose": "Mainline explicit operand-source binding diagnostic after v8 negative guidance result; no HCL.",
+  "hcl_enabled": false,
+  "synthetic_only": true,
+  "benchmark_replay": false,
+  "engineering_start_epoch": 1792765341.3419461,
+  "engineering_deadline_epoch": 1792772541.3419461,
+  "post_run_audit_max_seconds": 1800,
+  "model": "Qwen2.5-VL-7B-Instruct",
+  "dtype": "bfloat16",
+  "attention": "sdpa",
+  "temperature": 0,
+  "context_window": 32768,
+  "model_window_seconds": 2700,
+  "early_stop_margin_seconds": 60,
+  "episode_seconds": 300,
+  "max_requests_per_episode": 12,
+  "max_model_requests": 192,
+  "max_input_tokens": 1500000,
+  "max_output_tokens": 128000,
+  "max_output_per_generation": 4096,
+  "max_new_bytes": 2147483648,
+  "storage_reserve_bytes": 1073741824,
+  "external_file_reserve_bytes": 1048576,
+  "planned_evidence_cases": 0,
+  "planned_mapping_cases": 8,
+  "planned_episodes": 16,
+  "arms": {
+    "R": "Unchanged v7 full raw input, v6 SYSTEM and v5 bindings",
+    "I": "Identical full raw input; explicit operation and fact_id/value operand list; generic source/scope/arithmetic validation before formula execution"
+  },
+  "design": "Eight new mapping cases, six dose-times-frequency MME and two direct anion-gap controls. Fresh state, same prompts/input/model/formulas/scorer; alternate arm order. No navigation or HCL.",
+  "intervention": "Integrated schema plus validation/feedback mechanism; runtime only checks declared operand values against cited raw sources, target scope, operation arity, and declared result. It materializes the cited union and exact operation transcript for the existing immutable ledger. No expected fields, correct operation selection, missing operands, reference parameters or answers are supplied or auto-repaired. Cannot isolate schema vs guard vs feedback.",
+  "model_visibility": "All raw records including distractors, target, formula definitions and arm-specific tool schemas/instructions. No evaluator-derived reference or example answers.",
+  "scoring": "Unchanged v7/v5 evaluator plus manual review of every accepted binding and every abstention reason; value correctness and trusted source-complete correctness distinct.",
+  "decision_rules": {
+    "mechanism_signal": "I trusted MME >=5/6 and at least 3/6 above R; I direct controls 2/2 and not worse than R; no invalid operand-source or arithmetic chain accepted by I. Small development-panel signal only.",
+    "otherwise": "Report mixed or negative result; no adoption or automatic follow-on."
+  },
+  "stop_conditions": [
+    "CPU isolation/reference/scoring checks must pass before inference",
+    "One attempt per case and arm; no same-panel post-feedback revisions or extra model smoke",
+    "Task failures do not gate later cases or components",
+    "Provider/protocol/runtime/identity/guard failure or any original budget exhaustion stops remaining work with denominator preserved",
+    "After analysis and public source/report delivery stop; no HCL launch"
+  ],
+  "limitations": [
+    "Synthetic development panel selected from v8 failure mechanism; no clinical or benchmark validity claim.",
+    "Only identity, lowercase and multiply supported; no unit conversion, category mapping, conflict-resolution or general derivation claim.",
+    "Strict source/operation consistency cannot certify selection of medically correct fields or complete required operands; independent evaluator remains essential.",
+    "Schema, deterministic validation, error feedback and derived provenance serialization form one bundle."
+  ]
+}
