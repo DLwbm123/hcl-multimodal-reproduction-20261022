@@ -1,0 +1,75 @@
+{
+  "protocol": "minimal_hcl_v1",
+  "purpose": "workflow-only automatic HCL synthetic mechanism pilot; old H0 gate remains false",
+  "model": "Qwen2.5-VL-7B-Instruct BF16 sdpa frozen",
+  "transport": "Qwen-Agent pinned official Nous; no format-repair retries",
+  "decoding": {
+    "do_sample": false,
+    "max_new_tokens": 1024,
+    "context_window": 16384,
+    "seed": 42
+  },
+  "episode": {
+    "max_turns": 24,
+    "max_tools": 80,
+    "timeout_seconds": 600,
+    "planning": "on",
+    "context_policy": "none",
+    "verification": "off",
+    "early_final": "unsubmitted_final; no reminder"
+  },
+  "stages": [
+    "dependency organization",
+    "result item submission"
+  ],
+  "data": {
+    "synthetic_total": 36,
+    "learning_each_stage": 4,
+    "selection_each_stage": 4,
+    "anchor_basic": 4,
+    "anchor_dependency_independent": 4,
+    "confirmation_each_family": 4,
+    "confirmation_total": 12,
+    "formal_benchmark_cases": 0,
+    "split": "fixed visible_split.json/evaluator_gold.json; no role overlap",
+    "limit": "instance transfer of supplied synthetic recipes; arithmetic families shared; no clinical or unseen-formula claim"
+  },
+  "updates": {
+    "only": "separate versioned workflow prose; no initial handcrafted corrective hint",
+    "candidates_per_stage": 2,
+    "generation_attempts_per_stage": 2,
+    "method": "official Nous propose_workflow schema; actual hcl Optimizer normalization/ranking/strict gate reused, generator adapted",
+    "learned_sections_max": 5,
+    "section_chars_max": 400,
+    "boundary": "numeric examples/code/placeholders/override instructions rejected; immutable tools enforce access",
+    "feedback": "current-stage training only; last12 non-read-facts events; tool content capped500 chars; full original traces retained. No selection/anchor/final inputs or answers to proposer."
+  },
+  "commit_gate": {
+    "selection_complete_success_gain_at_least": 1,
+    "mean_official_utility_delta_at_least": 0,
+    "selection_submitted_fraction": 1,
+    "historical_success_to_failure_max": 0,
+    "coverage": 1,
+    "gate": "actual stability optimizer; no screening subset; argmax tie first; no candidate or invalid means no update"
+  },
+  "retention": "stage1 basic anchors; stage2 basic+independent dependency anchors relative to deployed H1; report individual transitions and nonempty baseline success; no offsetting losses",
+  "confirmation": "once after both stages, frozen Static H0 and final HCL, same12 cases, new episode state; no intermediate confirmation or checkpoint selection",
+  "signal_gate": "at least one accepted automatic update; final paired net gain >0 with zero Static successes lost; every stage has nonzero historical successes. Report paired CI and McNemar; small pilot signal not established efficacy.",
+  "budget": {
+    "max_model_calls": 3000,
+    "max_seconds": 10800,
+    "early_seconds": 10500,
+    "max_new_bytes": 500000000,
+    "early_new_bytes": 450000000,
+    "reserve_confirmation_calls": 576,
+    "reserve_local_and_neutral_bytes": 10000000,
+    "restarts": "none; all preparation/CPU/runs share start time"
+  },
+  "failure": "per-episode context/turn/unsubmitted recorded failed; global budget/guard/provider failure stops run incomplete, no partial candidate commit; no automatic retry",
+  "scope_exclusions": [
+    "fault recovery injection",
+    "full four-component HCL replication",
+    "clinical benchmark efficacy",
+    "weight training"
+  ]
+}

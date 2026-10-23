@@ -1,0 +1,27 @@
+{
+  "completed_episodes": 43,
+  "completed_generations": 282,
+  "attempted_generations": 283,
+  "generation_seconds": 330.84804797172546,
+  "input_tokens": 485393,
+  "output_tokens": 15769,
+  "exit_time": 1792727686.248161,
+  "start_time": 1792727300.0395439,
+  "phases": {
+    "s1_anchors": 4,
+    "s1_candidate0_anchors": 4,
+    "s1_candidate0_current": 4,
+    "s1_candidate1_anchors": 4,
+    "s1_candidate1_current": 4,
+    "s1_current": 4,
+    "s1_train": 4,
+    "s2_anchors": 7,
+    "s2_current": 4,
+    "s2_train": 4
+  },
+  "deployed": {
+    "version": 0,
+    "sections": []
+  },
+  "allocated_or_apparent_bytes_plus_reserve": 11880064
+}

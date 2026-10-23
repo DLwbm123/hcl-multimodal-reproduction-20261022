@@ -1,0 +1,2054 @@
+[
+  {
+    "id": "train_dependency_0",
+    "role": "train_dependency",
+    "prompt": "For SYN-000 in episode_000, return these outputs: Synthetic Primary Quantity = n/d. Synthetic Derived Quantity = r*s, where r denotes Synthetic Primary Quantity. n, d and s are field names in the facts. Read the facts and use calculate. Submit the requested named quantities. Other patients, specimens and episodes are distractors. These are synthetic exercises with supplied recipes, not clinical recommendations.",
+    "rows": [
+      {
+        "patient_id": "DISTRACTOR",
+        "field_name": "n",
+        "value_text": "901",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-000",
+        "field_name": "d",
+        "value_text": "3",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-000",
+        "field_name": "n",
+        "value_text": "12",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-000",
+        "field_name": "n",
+        "value_text": "112",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_old",
+        "unit": "number",
+        "sample_type": "Urine",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-000",
+        "field_name": "s",
+        "value_text": "4",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Chart",
+        "source": "synthetic"
+      }
+    ]
+  },
+  {
+    "id": "train_dependency_1",
+    "role": "train_dependency",
+    "prompt": "The requested report is for episode_000 of SYN-001. Recipes: Synthetic Primary Quantity = n-d. Synthetic Derived Quantity = r+s, where r denotes Synthetic Primary Quantity. n, d and s are field names in the facts. Read the facts and use calculate. Submit the requested named quantities. Other patients, specimens and episodes are distractors. These are synthetic exercises with supplied recipes, not clinical recommendations.",
+    "rows": [
+      {
+        "patient_id": "DISTRACTOR",
+        "field_name": "n",
+        "value_text": "902",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-001",
+        "field_name": "n",
+        "value_text": "18",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-001",
+        "field_name": "s",
+        "value_text": "7",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Chart",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-001",
+        "field_name": "d",
+        "value_text": "6",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-001",
+        "field_name": "n",
+        "value_text": "118",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_old",
+        "unit": "number",
+        "sample_type": "Urine",
+        "source": "synthetic"
+      }
+    ]
+  },
+  {
+    "id": "train_dependency_2",
+    "role": "train_dependency",
+    "prompt": "Use only the current serum/chart observations of SYN-002, episode_000. Required quantities: Synthetic Primary Quantity = n/d. Synthetic Derived Quantity = r-s, where r denotes Synthetic Primary Quantity. n, d and s are field names in the facts. Read the facts and use calculate. Submit the requested named quantities. Other patients, specimens and episodes are distractors. These are synthetic exercises with supplied recipes, not clinical recommendations.",
+    "rows": [
+      {
+        "patient_id": "SYN-002",
+        "field_name": "d",
+        "value_text": "5",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-002",
+        "field_name": "s",
+        "value_text": "2",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Chart",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-002",
+        "field_name": "n",
+        "value_text": "25",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-002",
+        "field_name": "n",
+        "value_text": "125",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_old",
+        "unit": "number",
+        "sample_type": "Urine",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "DISTRACTOR",
+        "field_name": "n",
+        "value_text": "903",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      }
+    ]
+  },
+  {
+    "id": "train_dependency_3",
+    "role": "train_dependency",
+    "prompt": "Produce a calculator report for SYN-003 (episode_000). Definitions: Synthetic Primary Quantity = n+d. Synthetic Derived Quantity = r/s, where r denotes Synthetic Primary Quantity. n, d and s are field names in the facts. Read the facts and use calculate. Submit the requested named quantities. Other patients, specimens and episodes are distractors. These are synthetic exercises with supplied recipes, not clinical recommendations.",
+    "rows": [
+      {
+        "patient_id": "DISTRACTOR",
+        "field_name": "n",
+        "value_text": "904",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-003",
+        "field_name": "n",
+        "value_text": "109",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_old",
+        "unit": "number",
+        "sample_type": "Urine",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-003",
+        "field_name": "s",
+        "value_text": "3",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Chart",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-003",
+        "field_name": "d",
+        "value_text": "4",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-003",
+        "field_name": "n",
+        "value_text": "9",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      }
+    ]
+  },
+  {
+    "id": "select_dependency_0",
+    "role": "select_dependency",
+    "prompt": "For SYN-004 in episode_000, return these outputs: Synthetic Primary Quantity = n/d. Synthetic Derived Quantity = r+s, where r denotes Synthetic Primary Quantity. n, d and s are field names in the facts. Read the facts and use calculate. Submit the requested named quantities. Other patients, specimens and episodes are distractors. These are synthetic exercises with supplied recipes, not clinical recommendations.",
+    "rows": [
+      {
+        "patient_id": "SYN-004",
+        "field_name": "n",
+        "value_text": "127",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_old",
+        "unit": "number",
+        "sample_type": "Urine",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-004",
+        "field_name": "s",
+        "value_text": "6",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Chart",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "DISTRACTOR",
+        "field_name": "n",
+        "value_text": "901",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-004",
+        "field_name": "n",
+        "value_text": "27",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-004",
+        "field_name": "d",
+        "value_text": "9",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      }
+    ]
+  },
+  {
+    "id": "select_dependency_1",
+    "role": "select_dependency",
+    "prompt": "The requested report is for episode_000 of SYN-005. Recipes: Synthetic Primary Quantity = n-d. Synthetic Derived Quantity = r*s, where r denotes Synthetic Primary Quantity. n, d and s are field names in the facts. Read the facts and use calculate. Submit the requested named quantities. Other patients, specimens and episodes are distractors. These are synthetic exercises with supplied recipes, not clinical recommendations.",
+    "rows": [
+      {
+        "patient_id": "SYN-005",
+        "field_name": "d",
+        "value_text": "5",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "DISTRACTOR",
+        "field_name": "n",
+        "value_text": "902",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-005",
+        "field_name": "s",
+        "value_text": "4",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Chart",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-005",
+        "field_name": "n",
+        "value_text": "13",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-005",
+        "field_name": "n",
+        "value_text": "113",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_old",
+        "unit": "number",
+        "sample_type": "Urine",
+        "source": "synthetic"
+      }
+    ]
+  },
+  {
+    "id": "select_dependency_2",
+    "role": "select_dependency",
+    "prompt": "Use only the current serum/chart observations of SYN-006, episode_000. Required quantities: Synthetic Primary Quantity = n+d. Synthetic Derived Quantity = r-s, where r denotes Synthetic Primary Quantity. n, d and s are field names in the facts. Read the facts and use calculate. Submit the requested named quantities. Other patients, specimens and episodes are distractors. These are synthetic exercises with supplied recipes, not clinical recommendations.",
+    "rows": [
+      {
+        "patient_id": "SYN-006",
+        "field_name": "s",
+        "value_text": "3",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Chart",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-006",
+        "field_name": "d",
+        "value_text": "7",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-006",
+        "field_name": "n",
+        "value_text": "8",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "DISTRACTOR",
+        "field_name": "n",
+        "value_text": "903",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-006",
+        "field_name": "n",
+        "value_text": "108",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_old",
+        "unit": "number",
+        "sample_type": "Urine",
+        "source": "synthetic"
+      }
+    ]
+  },
+  {
+    "id": "select_dependency_3",
+    "role": "select_dependency",
+    "prompt": "Produce a calculator report for SYN-007 (episode_000). Definitions: Synthetic Primary Quantity = n/d. Synthetic Derived Quantity = r**s, where r denotes Synthetic Primary Quantity. n, d and s are field names in the facts. Read the facts and use calculate. Submit the requested named quantities. Other patients, specimens and episodes are distractors. These are synthetic exercises with supplied recipes, not clinical recommendations.",
+    "rows": [
+      {
+        "patient_id": "SYN-007",
+        "field_name": "n",
+        "value_text": "32",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "DISTRACTOR",
+        "field_name": "n",
+        "value_text": "904",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-007",
+        "field_name": "s",
+        "value_text": "2",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Chart",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-007",
+        "field_name": "d",
+        "value_text": "4",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-007",
+        "field_name": "n",
+        "value_text": "132",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_old",
+        "unit": "number",
+        "sample_type": "Urine",
+        "source": "synthetic"
+      }
+    ]
+  },
+  {
+    "id": "anchor_dependency_0",
+    "role": "anchor_dependency",
+    "prompt": "For SYN-008 in episode_000, return these outputs: Synthetic Primary Quantity = n/d. Synthetic Derived Quantity = r*s, where r denotes Synthetic Primary Quantity. n, d and s are field names in the facts. Read the facts and use calculate. Submit the requested named quantities. Other patients, specimens and episodes are distractors. These are synthetic exercises with supplied recipes, not clinical recommendations.",
+    "rows": [
+      {
+        "patient_id": "SYN-008",
+        "field_name": "n",
+        "value_text": "22",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "DISTRACTOR",
+        "field_name": "n",
+        "value_text": "901",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-008",
+        "field_name": "n",
+        "value_text": "122",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_old",
+        "unit": "number",
+        "sample_type": "Urine",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-008",
+        "field_name": "d",
+        "value_text": "11",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-008",
+        "field_name": "s",
+        "value_text": "5",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Chart",
+        "source": "synthetic"
+      }
+    ]
+  },
+  {
+    "id": "anchor_dependency_1",
+    "role": "anchor_dependency",
+    "prompt": "The requested report is for episode_000 of SYN-009. Recipes: Synthetic Primary Quantity = n-d. Synthetic Derived Quantity = r/s, where r denotes Synthetic Primary Quantity. n, d and s are field names in the facts. Read the facts and use calculate. Submit the requested named quantities. Other patients, specimens and episodes are distractors. These are synthetic exercises with supplied recipes, not clinical recommendations.",
+    "rows": [
+      {
+        "patient_id": "SYN-009",
+        "field_name": "n",
+        "value_text": "131",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_old",
+        "unit": "number",
+        "sample_type": "Urine",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-009",
+        "field_name": "s",
+        "value_text": "8",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Chart",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "DISTRACTOR",
+        "field_name": "n",
+        "value_text": "902",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-009",
+        "field_name": "n",
+        "value_text": "31",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-009",
+        "field_name": "d",
+        "value_text": "7",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      }
+    ]
+  },
+  {
+    "id": "anchor_dependency_2",
+    "role": "anchor_dependency",
+    "prompt": "Use only the current serum/chart observations of SYN-010, episode_000. Required quantities: Synthetic Primary Quantity = n+d. Synthetic Derived Quantity = r+s, where r denotes Synthetic Primary Quantity. n, d and s are field names in the facts. Read the facts and use calculate. Submit the requested named quantities. Other patients, specimens and episodes are distractors. These are synthetic exercises with supplied recipes, not clinical recommendations.",
+    "rows": [
+      {
+        "patient_id": "SYN-010",
+        "field_name": "n",
+        "value_text": "6",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-010",
+        "field_name": "d",
+        "value_text": "3",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "DISTRACTOR",
+        "field_name": "n",
+        "value_text": "903",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-010",
+        "field_name": "s",
+        "value_text": "4",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Chart",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-010",
+        "field_name": "n",
+        "value_text": "106",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_old",
+        "unit": "number",
+        "sample_type": "Urine",
+        "source": "synthetic"
+      }
+    ]
+  },
+  {
+    "id": "anchor_dependency_3",
+    "role": "anchor_dependency",
+    "prompt": "Produce a calculator report for SYN-011 (episode_000). Definitions: Synthetic Primary Quantity = n-d. Synthetic Derived Quantity = r-s, where r denotes Synthetic Primary Quantity. n, d and s are field names in the facts. Read the facts and use calculate. Submit the requested named quantities. Other patients, specimens and episodes are distractors. These are synthetic exercises with supplied recipes, not clinical recommendations.",
+    "rows": [
+      {
+        "patient_id": "SYN-011",
+        "field_name": "n",
+        "value_text": "119",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_old",
+        "unit": "number",
+        "sample_type": "Urine",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-011",
+        "field_name": "d",
+        "value_text": "4",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "DISTRACTOR",
+        "field_name": "n",
+        "value_text": "904",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-011",
+        "field_name": "s",
+        "value_text": "2",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Chart",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-011",
+        "field_name": "n",
+        "value_text": "19",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      }
+    ]
+  },
+  {
+    "id": "confirm_dependency_0",
+    "role": "confirm_dependency",
+    "prompt": "For SYN-012 in episode_000, return these outputs: Synthetic Primary Quantity = n/d. Synthetic Derived Quantity = (r+s)/s, where r denotes Synthetic Primary Quantity. n, d and s are field names in the facts. Read the facts and use calculate. Submit the requested named quantities. Other patients, specimens and episodes are distractors. These are synthetic exercises with supplied recipes, not clinical recommendations.",
+    "rows": [
+      {
+        "patient_id": "SYN-012",
+        "field_name": "n",
+        "value_text": "114",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_old",
+        "unit": "number",
+        "sample_type": "Urine",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "DISTRACTOR",
+        "field_name": "n",
+        "value_text": "901",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-012",
+        "field_name": "n",
+        "value_text": "14",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-012",
+        "field_name": "d",
+        "value_text": "7",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-012",
+        "field_name": "s",
+        "value_text": "3",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Chart",
+        "source": "synthetic"
+      }
+    ]
+  },
+  {
+    "id": "confirm_dependency_1",
+    "role": "confirm_dependency",
+    "prompt": "The requested report is for episode_000 of SYN-013. Recipes: Synthetic Primary Quantity = n-d. Synthetic Derived Quantity = r*s+s, where r denotes Synthetic Primary Quantity. n, d and s are field names in the facts. Read the facts and use calculate. Submit the requested named quantities. Other patients, specimens and episodes are distractors. These are synthetic exercises with supplied recipes, not clinical recommendations.",
+    "rows": [
+      {
+        "patient_id": "SYN-013",
+        "field_name": "n",
+        "value_text": "121",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_old",
+        "unit": "number",
+        "sample_type": "Urine",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-013",
+        "field_name": "n",
+        "value_text": "21",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-013",
+        "field_name": "s",
+        "value_text": "2",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Chart",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "DISTRACTOR",
+        "field_name": "n",
+        "value_text": "902",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-013",
+        "field_name": "d",
+        "value_text": "4",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      }
+    ]
+  },
+  {
+    "id": "confirm_dependency_2",
+    "role": "confirm_dependency",
+    "prompt": "Use only the current serum/chart observations of SYN-014, episode_000. Required quantities: Synthetic Primary Quantity = n+d. Synthetic Derived Quantity = (r-s)/s, where r denotes Synthetic Primary Quantity. n, d and s are field names in the facts. Read the facts and use calculate. Submit the requested named quantities. Other patients, specimens and episodes are distractors. These are synthetic exercises with supplied recipes, not clinical recommendations.",
+    "rows": [
+      {
+        "patient_id": "SYN-014",
+        "field_name": "s",
+        "value_text": "5",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Chart",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-014",
+        "field_name": "n",
+        "value_text": "111",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_old",
+        "unit": "number",
+        "sample_type": "Urine",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-014",
+        "field_name": "d",
+        "value_text": "6",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-014",
+        "field_name": "n",
+        "value_text": "11",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "DISTRACTOR",
+        "field_name": "n",
+        "value_text": "903",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      }
+    ]
+  },
+  {
+    "id": "confirm_dependency_3",
+    "role": "confirm_dependency",
+    "prompt": "Produce a calculator report for SYN-015 (episode_000). Definitions: Synthetic Primary Quantity = n/d. Synthetic Derived Quantity = r/s+s, where r denotes Synthetic Primary Quantity. n, d and s are field names in the facts. Read the facts and use calculate. Submit the requested named quantities. Other patients, specimens and episodes are distractors. These are synthetic exercises with supplied recipes, not clinical recommendations.",
+    "rows": [
+      {
+        "patient_id": "SYN-015",
+        "field_name": "n",
+        "value_text": "136",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_old",
+        "unit": "number",
+        "sample_type": "Urine",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "DISTRACTOR",
+        "field_name": "n",
+        "value_text": "904",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-015",
+        "field_name": "n",
+        "value_text": "36",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-015",
+        "field_name": "d",
+        "value_text": "6",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-015",
+        "field_name": "s",
+        "value_text": "3",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Chart",
+        "source": "synthetic"
+      }
+    ]
+  },
+  {
+    "id": "train_submission_0",
+    "role": "train_submission",
+    "prompt": "For SYN-016 in episode_000, return these outputs: Synthetic Reported Quotient = n/d. Synthetic Followup Quantity = r*s, where r denotes Synthetic Reported Quotient. n, d and s are field names in the facts. Read the facts and use calculate. Submit the requested named quantities. Other patients, specimens and episodes are distractors. These are synthetic exercises with supplied recipes, not clinical recommendations.",
+    "rows": [
+      {
+        "patient_id": "SYN-016",
+        "field_name": "n",
+        "value_text": "45",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-016",
+        "field_name": "s",
+        "value_text": "2",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Chart",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "DISTRACTOR",
+        "field_name": "n",
+        "value_text": "901",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-016",
+        "field_name": "d",
+        "value_text": "5",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-016",
+        "field_name": "n",
+        "value_text": "145",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_old",
+        "unit": "number",
+        "sample_type": "Urine",
+        "source": "synthetic"
+      }
+    ]
+  },
+  {
+    "id": "train_submission_1",
+    "role": "train_submission",
+    "prompt": "The requested report is for episode_000 of SYN-017. Recipes: Body Mass Index (BMI) = n/(d**2). n, d and s are field names in the facts. Read the facts and use calculate. Submit the requested named quantities. Other patients, specimens and episodes are distractors. These are synthetic exercises with supplied recipes, not clinical recommendations.",
+    "rows": [
+      {
+        "patient_id": "DISTRACTOR",
+        "field_name": "n",
+        "value_text": "902",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-017",
+        "field_name": "d",
+        "value_text": "1.75",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-017",
+        "field_name": "s",
+        "value_text": "0",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Chart",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-017",
+        "field_name": "n",
+        "value_text": "70",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-017",
+        "field_name": "n",
+        "value_text": "170",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_old",
+        "unit": "number",
+        "sample_type": "Urine",
+        "source": "synthetic"
+      }
+    ]
+  },
+  {
+    "id": "train_submission_2",
+    "role": "train_submission",
+    "prompt": "Use only the current serum/chart observations of SYN-018, episode_000. Required quantities: Synthetic Adjusted Quantity = n-d. Synthetic Followup Quantity = r+s, where r denotes Synthetic Adjusted Quantity. n, d and s are field names in the facts. Read the facts and use calculate. Submit the requested named quantities. Other patients, specimens and episodes are distractors. These are synthetic exercises with supplied recipes, not clinical recommendations.",
+    "rows": [
+      {
+        "patient_id": "SYN-018",
+        "field_name": "s",
+        "value_text": "3",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Chart",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-018",
+        "field_name": "n",
+        "value_text": "16",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "DISTRACTOR",
+        "field_name": "n",
+        "value_text": "903",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-018",
+        "field_name": "d",
+        "value_text": "4",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-018",
+        "field_name": "n",
+        "value_text": "116",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_old",
+        "unit": "number",
+        "sample_type": "Urine",
+        "source": "synthetic"
+      }
+    ]
+  },
+  {
+    "id": "train_submission_3",
+    "role": "train_submission",
+    "prompt": "Produce a calculator report for SYN-019 (episode_000). Definitions: Synthetic Difference Quantity = n/d. n, d and s are field names in the facts. Read the facts and use calculate. Submit the requested named quantities. Other patients, specimens and episodes are distractors. These are synthetic exercises with supplied recipes, not clinical recommendations.",
+    "rows": [
+      {
+        "patient_id": "DISTRACTOR",
+        "field_name": "n",
+        "value_text": "904",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-019",
+        "field_name": "s",
+        "value_text": "0",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Chart",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-019",
+        "field_name": "d",
+        "value_text": "3",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-019",
+        "field_name": "n",
+        "value_text": "24",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-019",
+        "field_name": "n",
+        "value_text": "124",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_old",
+        "unit": "number",
+        "sample_type": "Urine",
+        "source": "synthetic"
+      }
+    ]
+  },
+  {
+    "id": "select_submission_0",
+    "role": "select_submission",
+    "prompt": "For SYN-020 in episode_000, return these outputs: Synthetic Reported Quotient = n/d. Synthetic Followup Quantity = r-s, where r denotes Synthetic Reported Quotient. n, d and s are field names in the facts. Read the facts and use calculate. Submit the requested named quantities. Other patients, specimens and episodes are distractors. These are synthetic exercises with supplied recipes, not clinical recommendations.",
+    "rows": [
+      {
+        "patient_id": "SYN-020",
+        "field_name": "d",
+        "value_text": "7",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-020",
+        "field_name": "n",
+        "value_text": "63",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "DISTRACTOR",
+        "field_name": "n",
+        "value_text": "901",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-020",
+        "field_name": "s",
+        "value_text": "4",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Chart",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-020",
+        "field_name": "n",
+        "value_text": "163",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_old",
+        "unit": "number",
+        "sample_type": "Urine",
+        "source": "synthetic"
+      }
+    ]
+  },
+  {
+    "id": "select_submission_1",
+    "role": "select_submission",
+    "prompt": "The requested report is for episode_000 of SYN-021. Recipes: Body Mass Index (BMI) = n/(d**2). n, d and s are field names in the facts. Read the facts and use calculate. Submit the requested named quantities. Other patients, specimens and episodes are distractors. These are synthetic exercises with supplied recipes, not clinical recommendations.",
+    "rows": [
+      {
+        "patient_id": "SYN-021",
+        "field_name": "s",
+        "value_text": "0",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Chart",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "DISTRACTOR",
+        "field_name": "n",
+        "value_text": "902",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-021",
+        "field_name": "n",
+        "value_text": "181",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_old",
+        "unit": "number",
+        "sample_type": "Urine",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-021",
+        "field_name": "n",
+        "value_text": "81",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-021",
+        "field_name": "d",
+        "value_text": "1.8",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      }
+    ]
+  },
+  {
+    "id": "select_submission_2",
+    "role": "select_submission",
+    "prompt": "Use only the current serum/chart observations of SYN-022, episode_000. Required quantities: Synthetic Adjusted Quantity = n+d. Synthetic Followup Quantity = r/s, where r denotes Synthetic Adjusted Quantity. n, d and s are field names in the facts. Read the facts and use calculate. Submit the requested named quantities. Other patients, specimens and episodes are distractors. These are synthetic exercises with supplied recipes, not clinical recommendations.",
+    "rows": [
+      {
+        "patient_id": "SYN-022",
+        "field_name": "n",
+        "value_text": "117",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_old",
+        "unit": "number",
+        "sample_type": "Urine",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-022",
+        "field_name": "n",
+        "value_text": "17",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "DISTRACTOR",
+        "field_name": "n",
+        "value_text": "903",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-022",
+        "field_name": "d",
+        "value_text": "8",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-022",
+        "field_name": "s",
+        "value_text": "2",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Chart",
+        "source": "synthetic"
+      }
+    ]
+  },
+  {
+    "id": "select_submission_3",
+    "role": "select_submission",
+    "prompt": "Produce a calculator report for SYN-023 (episode_000). Definitions: Synthetic Difference Quantity = n-d. n, d and s are field names in the facts. Read the facts and use calculate. Submit the requested named quantities. Other patients, specimens and episodes are distractors. These are synthetic exercises with supplied recipes, not clinical recommendations.",
+    "rows": [
+      {
+        "patient_id": "SYN-023",
+        "field_name": "n",
+        "value_text": "130",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_old",
+        "unit": "number",
+        "sample_type": "Urine",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "DISTRACTOR",
+        "field_name": "n",
+        "value_text": "904",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-023",
+        "field_name": "s",
+        "value_text": "0",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Chart",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-023",
+        "field_name": "d",
+        "value_text": "6",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-023",
+        "field_name": "n",
+        "value_text": "30",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      }
+    ]
+  },
+  {
+    "id": "confirm_submission_0",
+    "role": "confirm_submission",
+    "prompt": "For SYN-024 in episode_000, return these outputs: Synthetic Reported Quotient = n/d. Synthetic Followup Quantity = r+s*s, where r denotes Synthetic Reported Quotient. n, d and s are field names in the facts. Read the facts and use calculate. Submit the requested named quantities. Other patients, specimens and episodes are distractors. These are synthetic exercises with supplied recipes, not clinical recommendations.",
+    "rows": [
+      {
+        "patient_id": "SYN-024",
+        "field_name": "n",
+        "value_text": "150",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_old",
+        "unit": "number",
+        "sample_type": "Urine",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-024",
+        "field_name": "n",
+        "value_text": "50",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-024",
+        "field_name": "s",
+        "value_text": "3",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Chart",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "DISTRACTOR",
+        "field_name": "n",
+        "value_text": "901",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-024",
+        "field_name": "d",
+        "value_text": "10",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      }
+    ]
+  },
+  {
+    "id": "confirm_submission_1",
+    "role": "confirm_submission",
+    "prompt": "The requested report is for episode_000 of SYN-025. Recipes: Body Mass Index (BMI) = n/(d**2). n, d and s are field names in the facts. Read the facts and use calculate. Submit the requested named quantities. Other patients, specimens and episodes are distractors. These are synthetic exercises with supplied recipes, not clinical recommendations.",
+    "rows": [
+      {
+        "patient_id": "SYN-025",
+        "field_name": "n",
+        "value_text": "172",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_old",
+        "unit": "number",
+        "sample_type": "Urine",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-025",
+        "field_name": "s",
+        "value_text": "0",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Chart",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-025",
+        "field_name": "n",
+        "value_text": "72",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "DISTRACTOR",
+        "field_name": "n",
+        "value_text": "902",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-025",
+        "field_name": "d",
+        "value_text": "1.6",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      }
+    ]
+  },
+  {
+    "id": "confirm_submission_2",
+    "role": "confirm_submission",
+    "prompt": "Use only the current serum/chart observations of SYN-026, episode_000. Required quantities: Synthetic Adjusted Quantity = n-d. Synthetic Followup Quantity = r/s, where r denotes Synthetic Adjusted Quantity. n, d and s are field names in the facts. Read the facts and use calculate. Submit the requested named quantities. Other patients, specimens and episodes are distractors. These are synthetic exercises with supplied recipes, not clinical recommendations.",
+    "rows": [
+      {
+        "patient_id": "SYN-026",
+        "field_name": "s",
+        "value_text": "4",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Chart",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-026",
+        "field_name": "n",
+        "value_text": "29",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-026",
+        "field_name": "n",
+        "value_text": "129",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_old",
+        "unit": "number",
+        "sample_type": "Urine",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "DISTRACTOR",
+        "field_name": "n",
+        "value_text": "903",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-026",
+        "field_name": "d",
+        "value_text": "5",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      }
+    ]
+  },
+  {
+    "id": "confirm_submission_3",
+    "role": "confirm_submission",
+    "prompt": "Produce a calculator report for SYN-027 (episode_000). Definitions: Synthetic Difference Quantity = n+d. n, d and s are field names in the facts. Read the facts and use calculate. Submit the requested named quantities. Other patients, specimens and episodes are distractors. These are synthetic exercises with supplied recipes, not clinical recommendations.",
+    "rows": [
+      {
+        "patient_id": "DISTRACTOR",
+        "field_name": "n",
+        "value_text": "904",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-027",
+        "field_name": "s",
+        "value_text": "0",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Chart",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-027",
+        "field_name": "n",
+        "value_text": "142",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_old",
+        "unit": "number",
+        "sample_type": "Urine",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-027",
+        "field_name": "d",
+        "value_text": "7",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-027",
+        "field_name": "n",
+        "value_text": "42",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      }
+    ]
+  },
+  {
+    "id": "anchor_basic_0",
+    "role": "anchor_basic",
+    "prompt": "For SYN-028 in episode_000, return these outputs: Body Mass Index (BMI) = n/(d**2). n, d and s are field names in the facts. Read the facts and use calculate. Submit the requested named quantities. Other patients, specimens and episodes are distractors. These are synthetic exercises with supplied recipes, not clinical recommendations.",
+    "rows": [
+      {
+        "patient_id": "SYN-028",
+        "field_name": "d",
+        "value_text": "1.7",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-028",
+        "field_name": "n",
+        "value_text": "68",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "DISTRACTOR",
+        "field_name": "n",
+        "value_text": "901",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-028",
+        "field_name": "n",
+        "value_text": "168",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_old",
+        "unit": "number",
+        "sample_type": "Urine",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-028",
+        "field_name": "s",
+        "value_text": "0",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Chart",
+        "source": "synthetic"
+      }
+    ]
+  },
+  {
+    "id": "anchor_basic_1",
+    "role": "anchor_basic",
+    "prompt": "The requested report is for episode_000 of SYN-029. Recipes: Synthetic Primary Quantity = n/d. n, d and s are field names in the facts. Read the facts and use calculate. Submit the requested named quantities. Other patients, specimens and episodes are distractors. These are synthetic exercises with supplied recipes, not clinical recommendations.",
+    "rows": [
+      {
+        "patient_id": "SYN-029",
+        "field_name": "d",
+        "value_text": "3",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "DISTRACTOR",
+        "field_name": "n",
+        "value_text": "902",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-029",
+        "field_name": "n",
+        "value_text": "18",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-029",
+        "field_name": "s",
+        "value_text": "0",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Chart",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-029",
+        "field_name": "n",
+        "value_text": "118",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_old",
+        "unit": "number",
+        "sample_type": "Urine",
+        "source": "synthetic"
+      }
+    ]
+  },
+  {
+    "id": "anchor_basic_2",
+    "role": "anchor_basic",
+    "prompt": "Use only the current serum/chart observations of SYN-030, episode_000. Required quantities: Synthetic Primary Quantity = n+d. n, d and s are field names in the facts. Read the facts and use calculate. Submit the requested named quantities. Other patients, specimens and episodes are distractors. These are synthetic exercises with supplied recipes, not clinical recommendations.",
+    "rows": [
+      {
+        "patient_id": "SYN-030",
+        "field_name": "n",
+        "value_text": "111",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_old",
+        "unit": "number",
+        "sample_type": "Urine",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-030",
+        "field_name": "d",
+        "value_text": "8",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-030",
+        "field_name": "n",
+        "value_text": "11",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-030",
+        "field_name": "s",
+        "value_text": "0",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Chart",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "DISTRACTOR",
+        "field_name": "n",
+        "value_text": "903",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      }
+    ]
+  },
+  {
+    "id": "anchor_basic_3",
+    "role": "anchor_basic",
+    "prompt": "Produce a calculator report for SYN-031 (episode_000). Definitions: Synthetic Primary Quantity = n-d. n, d and s are field names in the facts. Read the facts and use calculate. Submit the requested named quantities. Other patients, specimens and episodes are distractors. These are synthetic exercises with supplied recipes, not clinical recommendations.",
+    "rows": [
+      {
+        "patient_id": "DISTRACTOR",
+        "field_name": "n",
+        "value_text": "904",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-031",
+        "field_name": "n",
+        "value_text": "127",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_old",
+        "unit": "number",
+        "sample_type": "Urine",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-031",
+        "field_name": "n",
+        "value_text": "27",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-031",
+        "field_name": "d",
+        "value_text": "9",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-031",
+        "field_name": "s",
+        "value_text": "0",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Chart",
+        "source": "synthetic"
+      }
+    ]
+  },
+  {
+    "id": "confirm_basic_0",
+    "role": "confirm_basic",
+    "prompt": "For SYN-032 in episode_000, return these outputs: Body Mass Index (BMI) = n/(d**2). n, d and s are field names in the facts. Read the facts and use calculate. Submit the requested named quantities. Other patients, specimens and episodes are distractors. These are synthetic exercises with supplied recipes, not clinical recommendations.",
+    "rows": [
+      {
+        "patient_id": "SYN-032",
+        "field_name": "n",
+        "value_text": "98",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-032",
+        "field_name": "s",
+        "value_text": "0",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Chart",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-032",
+        "field_name": "d",
+        "value_text": "1.4",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "DISTRACTOR",
+        "field_name": "n",
+        "value_text": "901",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-032",
+        "field_name": "n",
+        "value_text": "198",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_old",
+        "unit": "number",
+        "sample_type": "Urine",
+        "source": "synthetic"
+      }
+    ]
+  },
+  {
+    "id": "confirm_basic_1",
+    "role": "confirm_basic",
+    "prompt": "The requested report is for episode_000 of SYN-033. Recipes: Synthetic Primary Quantity = n/d. n, d and s are field names in the facts. Read the facts and use calculate. Submit the requested named quantities. Other patients, specimens and episodes are distractors. These are synthetic exercises with supplied recipes, not clinical recommendations.",
+    "rows": [
+      {
+        "patient_id": "SYN-033",
+        "field_name": "n",
+        "value_text": "28",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-033",
+        "field_name": "d",
+        "value_text": "4",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "DISTRACTOR",
+        "field_name": "n",
+        "value_text": "902",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-033",
+        "field_name": "n",
+        "value_text": "128",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_old",
+        "unit": "number",
+        "sample_type": "Urine",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-033",
+        "field_name": "s",
+        "value_text": "0",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Chart",
+        "source": "synthetic"
+      }
+    ]
+  },
+  {
+    "id": "confirm_basic_2",
+    "role": "confirm_basic",
+    "prompt": "Use only the current serum/chart observations of SYN-034, episode_000. Required quantities: Synthetic Primary Quantity = n-d. n, d and s are field names in the facts. Read the facts and use calculate. Submit the requested named quantities. Other patients, specimens and episodes are distractors. These are synthetic exercises with supplied recipes, not clinical recommendations.",
+    "rows": [
+      {
+        "patient_id": "SYN-034",
+        "field_name": "d",
+        "value_text": "6",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-034",
+        "field_name": "n",
+        "value_text": "23",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-034",
+        "field_name": "n",
+        "value_text": "123",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_old",
+        "unit": "number",
+        "sample_type": "Urine",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "DISTRACTOR",
+        "field_name": "n",
+        "value_text": "903",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-034",
+        "field_name": "s",
+        "value_text": "0",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Chart",
+        "source": "synthetic"
+      }
+    ]
+  },
+  {
+    "id": "confirm_basic_3",
+    "role": "confirm_basic",
+    "prompt": "Produce a calculator report for SYN-035 (episode_000). Definitions: Synthetic Primary Quantity = n+d. n, d and s are field names in the facts. Read the facts and use calculate. Submit the requested named quantities. Other patients, specimens and episodes are distractors. These are synthetic exercises with supplied recipes, not clinical recommendations.",
+    "rows": [
+      {
+        "patient_id": "SYN-035",
+        "field_name": "n",
+        "value_text": "107",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_old",
+        "unit": "number",
+        "sample_type": "Urine",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "DISTRACTOR",
+        "field_name": "n",
+        "value_text": "904",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-035",
+        "field_name": "d",
+        "value_text": "9",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-035",
+        "field_name": "s",
+        "value_text": "0",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Chart",
+        "source": "synthetic"
+      },
+      {
+        "patient_id": "SYN-035",
+        "field_name": "n",
+        "value_text": "7",
+        "observed_at": "2026-01-01",
+        "episode_id": "episode_000",
+        "unit": "number",
+        "sample_type": "Serum",
+        "source": "synthetic"
+      }
+    ]
+  }
+]

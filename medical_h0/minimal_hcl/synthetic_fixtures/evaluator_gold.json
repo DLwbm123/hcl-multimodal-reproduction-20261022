@@ -1,0 +1,676 @@
+{
+  "train_dependency_0": {
+    "calculator_answers": [
+      {
+        "name": "Synthetic Primary Quantity",
+        "final_answer": 4.0,
+        "inputs": []
+      },
+      {
+        "name": "Synthetic Derived Quantity",
+        "final_answer": 16.0,
+        "inputs": [
+          {
+            "field": "Synthetic Primary Quantity",
+            "value": 4.0
+          }
+        ]
+      }
+    ],
+    "required_calculators": [
+      "Synthetic Primary Quantity",
+      "Synthetic Derived Quantity"
+    ]
+  },
+  "train_dependency_1": {
+    "calculator_answers": [
+      {
+        "name": "Synthetic Primary Quantity",
+        "final_answer": 12,
+        "inputs": []
+      },
+      {
+        "name": "Synthetic Derived Quantity",
+        "final_answer": 19,
+        "inputs": [
+          {
+            "field": "Synthetic Primary Quantity",
+            "value": 12
+          }
+        ]
+      }
+    ],
+    "required_calculators": [
+      "Synthetic Primary Quantity",
+      "Synthetic Derived Quantity"
+    ]
+  },
+  "train_dependency_2": {
+    "calculator_answers": [
+      {
+        "name": "Synthetic Primary Quantity",
+        "final_answer": 5.0,
+        "inputs": []
+      },
+      {
+        "name": "Synthetic Derived Quantity",
+        "final_answer": 3.0,
+        "inputs": [
+          {
+            "field": "Synthetic Primary Quantity",
+            "value": 5.0
+          }
+        ]
+      }
+    ],
+    "required_calculators": [
+      "Synthetic Primary Quantity",
+      "Synthetic Derived Quantity"
+    ]
+  },
+  "train_dependency_3": {
+    "calculator_answers": [
+      {
+        "name": "Synthetic Primary Quantity",
+        "final_answer": 13,
+        "inputs": []
+      },
+      {
+        "name": "Synthetic Derived Quantity",
+        "final_answer": 4.333333333333333,
+        "inputs": [
+          {
+            "field": "Synthetic Primary Quantity",
+            "value": 13
+          }
+        ]
+      }
+    ],
+    "required_calculators": [
+      "Synthetic Primary Quantity",
+      "Synthetic Derived Quantity"
+    ]
+  },
+  "select_dependency_0": {
+    "calculator_answers": [
+      {
+        "name": "Synthetic Primary Quantity",
+        "final_answer": 3.0,
+        "inputs": []
+      },
+      {
+        "name": "Synthetic Derived Quantity",
+        "final_answer": 9.0,
+        "inputs": [
+          {
+            "field": "Synthetic Primary Quantity",
+            "value": 3.0
+          }
+        ]
+      }
+    ],
+    "required_calculators": [
+      "Synthetic Primary Quantity",
+      "Synthetic Derived Quantity"
+    ]
+  },
+  "select_dependency_1": {
+    "calculator_answers": [
+      {
+        "name": "Synthetic Primary Quantity",
+        "final_answer": 8,
+        "inputs": []
+      },
+      {
+        "name": "Synthetic Derived Quantity",
+        "final_answer": 32,
+        "inputs": [
+          {
+            "field": "Synthetic Primary Quantity",
+            "value": 8
+          }
+        ]
+      }
+    ],
+    "required_calculators": [
+      "Synthetic Primary Quantity",
+      "Synthetic Derived Quantity"
+    ]
+  },
+  "select_dependency_2": {
+    "calculator_answers": [
+      {
+        "name": "Synthetic Primary Quantity",
+        "final_answer": 15,
+        "inputs": []
+      },
+      {
+        "name": "Synthetic Derived Quantity",
+        "final_answer": 12,
+        "inputs": [
+          {
+            "field": "Synthetic Primary Quantity",
+            "value": 15
+          }
+        ]
+      }
+    ],
+    "required_calculators": [
+      "Synthetic Primary Quantity",
+      "Synthetic Derived Quantity"
+    ]
+  },
+  "select_dependency_3": {
+    "calculator_answers": [
+      {
+        "name": "Synthetic Primary Quantity",
+        "final_answer": 8.0,
+        "inputs": []
+      },
+      {
+        "name": "Synthetic Derived Quantity",
+        "final_answer": 64.0,
+        "inputs": [
+          {
+            "field": "Synthetic Primary Quantity",
+            "value": 8.0
+          }
+        ]
+      }
+    ],
+    "required_calculators": [
+      "Synthetic Primary Quantity",
+      "Synthetic Derived Quantity"
+    ]
+  },
+  "anchor_dependency_0": {
+    "calculator_answers": [
+      {
+        "name": "Synthetic Primary Quantity",
+        "final_answer": 2.0,
+        "inputs": []
+      },
+      {
+        "name": "Synthetic Derived Quantity",
+        "final_answer": 10.0,
+        "inputs": [
+          {
+            "field": "Synthetic Primary Quantity",
+            "value": 2.0
+          }
+        ]
+      }
+    ],
+    "required_calculators": [
+      "Synthetic Primary Quantity",
+      "Synthetic Derived Quantity"
+    ]
+  },
+  "anchor_dependency_1": {
+    "calculator_answers": [
+      {
+        "name": "Synthetic Primary Quantity",
+        "final_answer": 24,
+        "inputs": []
+      },
+      {
+        "name": "Synthetic Derived Quantity",
+        "final_answer": 3.0,
+        "inputs": [
+          {
+            "field": "Synthetic Primary Quantity",
+            "value": 24
+          }
+        ]
+      }
+    ],
+    "required_calculators": [
+      "Synthetic Primary Quantity",
+      "Synthetic Derived Quantity"
+    ]
+  },
+  "anchor_dependency_2": {
+    "calculator_answers": [
+      {
+        "name": "Synthetic Primary Quantity",
+        "final_answer": 9,
+        "inputs": []
+      },
+      {
+        "name": "Synthetic Derived Quantity",
+        "final_answer": 13,
+        "inputs": [
+          {
+            "field": "Synthetic Primary Quantity",
+            "value": 9
+          }
+        ]
+      }
+    ],
+    "required_calculators": [
+      "Synthetic Primary Quantity",
+      "Synthetic Derived Quantity"
+    ]
+  },
+  "anchor_dependency_3": {
+    "calculator_answers": [
+      {
+        "name": "Synthetic Primary Quantity",
+        "final_answer": 15,
+        "inputs": []
+      },
+      {
+        "name": "Synthetic Derived Quantity",
+        "final_answer": 13,
+        "inputs": [
+          {
+            "field": "Synthetic Primary Quantity",
+            "value": 15
+          }
+        ]
+      }
+    ],
+    "required_calculators": [
+      "Synthetic Primary Quantity",
+      "Synthetic Derived Quantity"
+    ]
+  },
+  "confirm_dependency_0": {
+    "calculator_answers": [
+      {
+        "name": "Synthetic Primary Quantity",
+        "final_answer": 2.0,
+        "inputs": []
+      },
+      {
+        "name": "Synthetic Derived Quantity",
+        "final_answer": 1.6666666666666667,
+        "inputs": [
+          {
+            "field": "Synthetic Primary Quantity",
+            "value": 2.0
+          }
+        ]
+      }
+    ],
+    "required_calculators": [
+      "Synthetic Primary Quantity",
+      "Synthetic Derived Quantity"
+    ]
+  },
+  "confirm_dependency_1": {
+    "calculator_answers": [
+      {
+        "name": "Synthetic Primary Quantity",
+        "final_answer": 17,
+        "inputs": []
+      },
+      {
+        "name": "Synthetic Derived Quantity",
+        "final_answer": 36,
+        "inputs": [
+          {
+            "field": "Synthetic Primary Quantity",
+            "value": 17
+          }
+        ]
+      }
+    ],
+    "required_calculators": [
+      "Synthetic Primary Quantity",
+      "Synthetic Derived Quantity"
+    ]
+  },
+  "confirm_dependency_2": {
+    "calculator_answers": [
+      {
+        "name": "Synthetic Primary Quantity",
+        "final_answer": 17,
+        "inputs": []
+      },
+      {
+        "name": "Synthetic Derived Quantity",
+        "final_answer": 2.4,
+        "inputs": [
+          {
+            "field": "Synthetic Primary Quantity",
+            "value": 17
+          }
+        ]
+      }
+    ],
+    "required_calculators": [
+      "Synthetic Primary Quantity",
+      "Synthetic Derived Quantity"
+    ]
+  },
+  "confirm_dependency_3": {
+    "calculator_answers": [
+      {
+        "name": "Synthetic Primary Quantity",
+        "final_answer": 6.0,
+        "inputs": []
+      },
+      {
+        "name": "Synthetic Derived Quantity",
+        "final_answer": 5.0,
+        "inputs": [
+          {
+            "field": "Synthetic Primary Quantity",
+            "value": 6.0
+          }
+        ]
+      }
+    ],
+    "required_calculators": [
+      "Synthetic Primary Quantity",
+      "Synthetic Derived Quantity"
+    ]
+  },
+  "train_submission_0": {
+    "calculator_answers": [
+      {
+        "name": "Synthetic Reported Quotient",
+        "final_answer": 9.0,
+        "inputs": []
+      },
+      {
+        "name": "Synthetic Followup Quantity",
+        "final_answer": 18.0,
+        "inputs": [
+          {
+            "field": "Synthetic Reported Quotient",
+            "value": 9.0
+          }
+        ]
+      }
+    ],
+    "required_calculators": [
+      "Synthetic Reported Quotient",
+      "Synthetic Followup Quantity"
+    ]
+  },
+  "train_submission_1": {
+    "calculator_answers": [
+      {
+        "name": "Body Mass Index (BMI)",
+        "final_answer": 22.857142857142858,
+        "inputs": []
+      }
+    ],
+    "required_calculators": [
+      "Body Mass Index (BMI)"
+    ]
+  },
+  "train_submission_2": {
+    "calculator_answers": [
+      {
+        "name": "Synthetic Adjusted Quantity",
+        "final_answer": 12,
+        "inputs": []
+      },
+      {
+        "name": "Synthetic Followup Quantity",
+        "final_answer": 15,
+        "inputs": [
+          {
+            "field": "Synthetic Adjusted Quantity",
+            "value": 12
+          }
+        ]
+      }
+    ],
+    "required_calculators": [
+      "Synthetic Adjusted Quantity",
+      "Synthetic Followup Quantity"
+    ]
+  },
+  "train_submission_3": {
+    "calculator_answers": [
+      {
+        "name": "Synthetic Difference Quantity",
+        "final_answer": 8.0,
+        "inputs": []
+      }
+    ],
+    "required_calculators": [
+      "Synthetic Difference Quantity"
+    ]
+  },
+  "select_submission_0": {
+    "calculator_answers": [
+      {
+        "name": "Synthetic Reported Quotient",
+        "final_answer": 9.0,
+        "inputs": []
+      },
+      {
+        "name": "Synthetic Followup Quantity",
+        "final_answer": 5.0,
+        "inputs": [
+          {
+            "field": "Synthetic Reported Quotient",
+            "value": 9.0
+          }
+        ]
+      }
+    ],
+    "required_calculators": [
+      "Synthetic Reported Quotient",
+      "Synthetic Followup Quantity"
+    ]
+  },
+  "select_submission_1": {
+    "calculator_answers": [
+      {
+        "name": "Body Mass Index (BMI)",
+        "final_answer": 25.0,
+        "inputs": []
+      }
+    ],
+    "required_calculators": [
+      "Body Mass Index (BMI)"
+    ]
+  },
+  "select_submission_2": {
+    "calculator_answers": [
+      {
+        "name": "Synthetic Adjusted Quantity",
+        "final_answer": 25,
+        "inputs": []
+      },
+      {
+        "name": "Synthetic Followup Quantity",
+        "final_answer": 12.5,
+        "inputs": [
+          {
+            "field": "Synthetic Adjusted Quantity",
+            "value": 25
+          }
+        ]
+      }
+    ],
+    "required_calculators": [
+      "Synthetic Adjusted Quantity",
+      "Synthetic Followup Quantity"
+    ]
+  },
+  "select_submission_3": {
+    "calculator_answers": [
+      {
+        "name": "Synthetic Difference Quantity",
+        "final_answer": 24,
+        "inputs": []
+      }
+    ],
+    "required_calculators": [
+      "Synthetic Difference Quantity"
+    ]
+  },
+  "confirm_submission_0": {
+    "calculator_answers": [
+      {
+        "name": "Synthetic Reported Quotient",
+        "final_answer": 5.0,
+        "inputs": []
+      },
+      {
+        "name": "Synthetic Followup Quantity",
+        "final_answer": 14.0,
+        "inputs": [
+          {
+            "field": "Synthetic Reported Quotient",
+            "value": 5.0
+          }
+        ]
+      }
+    ],
+    "required_calculators": [
+      "Synthetic Reported Quotient",
+      "Synthetic Followup Quantity"
+    ]
+  },
+  "confirm_submission_1": {
+    "calculator_answers": [
+      {
+        "name": "Body Mass Index (BMI)",
+        "final_answer": 28.124999999999993,
+        "inputs": []
+      }
+    ],
+    "required_calculators": [
+      "Body Mass Index (BMI)"
+    ]
+  },
+  "confirm_submission_2": {
+    "calculator_answers": [
+      {
+        "name": "Synthetic Adjusted Quantity",
+        "final_answer": 24,
+        "inputs": []
+      },
+      {
+        "name": "Synthetic Followup Quantity",
+        "final_answer": 6.0,
+        "inputs": [
+          {
+            "field": "Synthetic Adjusted Quantity",
+            "value": 24
+          }
+        ]
+      }
+    ],
+    "required_calculators": [
+      "Synthetic Adjusted Quantity",
+      "Synthetic Followup Quantity"
+    ]
+  },
+  "confirm_submission_3": {
+    "calculator_answers": [
+      {
+        "name": "Synthetic Difference Quantity",
+        "final_answer": 49,
+        "inputs": []
+      }
+    ],
+    "required_calculators": [
+      "Synthetic Difference Quantity"
+    ]
+  },
+  "anchor_basic_0": {
+    "calculator_answers": [
+      {
+        "name": "Body Mass Index (BMI)",
+        "final_answer": 23.529411764705884,
+        "inputs": []
+      }
+    ],
+    "required_calculators": [
+      "Body Mass Index (BMI)"
+    ]
+  },
+  "anchor_basic_1": {
+    "calculator_answers": [
+      {
+        "name": "Synthetic Primary Quantity",
+        "final_answer": 6.0,
+        "inputs": []
+      }
+    ],
+    "required_calculators": [
+      "Synthetic Primary Quantity"
+    ]
+  },
+  "anchor_basic_2": {
+    "calculator_answers": [
+      {
+        "name": "Synthetic Primary Quantity",
+        "final_answer": 19,
+        "inputs": []
+      }
+    ],
+    "required_calculators": [
+      "Synthetic Primary Quantity"
+    ]
+  },
+  "anchor_basic_3": {
+    "calculator_answers": [
+      {
+        "name": "Synthetic Primary Quantity",
+        "final_answer": 18,
+        "inputs": []
+      }
+    ],
+    "required_calculators": [
+      "Synthetic Primary Quantity"
+    ]
+  },
+  "confirm_basic_0": {
+    "calculator_answers": [
+      {
+        "name": "Body Mass Index (BMI)",
+        "final_answer": 50.00000000000001,
+        "inputs": []
+      }
+    ],
+    "required_calculators": [
+      "Body Mass Index (BMI)"
+    ]
+  },
+  "confirm_basic_1": {
+    "calculator_answers": [
+      {
+        "name": "Synthetic Primary Quantity",
+        "final_answer": 7.0,
+        "inputs": []
+      }
+    ],
+    "required_calculators": [
+      "Synthetic Primary Quantity"
+    ]
+  },
+  "confirm_basic_2": {
+    "calculator_answers": [
+      {
+        "name": "Synthetic Primary Quantity",
+        "final_answer": 17,
+        "inputs": []
+      }
+    ],
+    "required_calculators": [
+      "Synthetic Primary Quantity"
+    ]
+  },
+  "confirm_basic_3": {
+    "calculator_answers": [
+      {
+        "name": "Synthetic Primary Quantity",
+        "final_answer": 16,
+        "inputs": []
+      }
+    ],
+    "required_calculators": [
+      "Synthetic Primary Quantity"
+    ]
+  }
+}
