@@ -1,0 +1,20 @@
+{
+  "status": "two_setup_attempts_failed_before_inference",
+  "model_generations": 0,
+  "hcl_updates": 0,
+  "all_12_not_run_each_attempt": true,
+  "attempts": [
+    {
+      "attempt": 1,
+      "error": "Missing pycocotools disabled mmpretrain multimodal registry; upstream closure named RAMOpenset",
+      "repair": "pycocotools2.0.10 isolated overlay"
+    },
+    {
+      "attempt": 2,
+      "error": "Original LLaVA wrapper lacks SDPA compatibility",
+      "repair": "Explicit eager attention in native language encoder configuration"
+    }
+  ],
+  "shared_environment_modified": false,
+  "original_clock_and_panel_preserved": true
+}

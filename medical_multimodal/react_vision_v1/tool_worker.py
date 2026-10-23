@@ -51,6 +51,8 @@ def main():
             cfg = Config.fromfile(Path(mmpretrain.__file__).parent / '.mim/configs/llava/llava-7b-v1.5_vqa.py')
             cfg.model.tokenizer.name_or_path = paths['llava_tokenizer']
             cfg.model.lang_encoder.name_or_path = paths['llama_config']
+            # The original LLaVA wrapper predates Transformers' automatic SDPA selection.
+            cfg.model.lang_encoder.attn_implementation = 'eager'
             cfg.model.vision_encoder.pretrained = paths['clip_checkpoint']
             infer = VisualQuestionAnsweringInferencer(cfg, pretrained=paths['llava_checkpoint'], device='cuda:0')
             tools = {'ImageDescription': native.ImageDescription(),
