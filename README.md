@@ -13,7 +13,8 @@ Both strict HCL runs failed on an invalid memory-selector role. Separate, declar
 
 ## Contents
 
-- Latest medical-tool component diagnostic: [v6 report](medical_h0/component_diagnostic_v6/REPORT.zh-CN.md). Submission 6/6, navigation 2/6, mapping unattempted; synthetic component gate failed, no HCL launch.
+- Latest medical-tool input ablation: [v7 report](medical_h0/input_ablation_v7/REPORT.zh-CN.md). Autonomous navigation 3/12 vs all-raw-facts-visible 9/12; independent mapping 6/6 numeric but 4/6 trusted. All 30 synthetic episodes audited, no HCL launch.
+- Prior component diagnostic: [v6 report](medical_h0/component_diagnostic_v6/REPORT.zh-CN.md). Submission 6/6, navigation 2/6, mapping unattempted; the historical result is unchanged.
 
 - `hcl/`: official core package plus documented fixes; MIT license retained.
 - `configs/native_*.template.json`: public templates with model/data-root placeholders.

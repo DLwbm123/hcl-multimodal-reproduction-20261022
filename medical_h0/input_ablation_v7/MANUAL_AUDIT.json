@@ -1,0 +1,479 @@
+{
+  "synthetic_only": true,
+  "all_reviewed": true,
+  "reviews": [
+    {
+      "id": "C01_A",
+      "review_type": "navigation_selection_and_termination",
+      "final_correct": true,
+      "answer": {
+        "status": "success",
+        "fact_ids": [
+          "fact_0002"
+        ]
+      },
+      "review": "Correct first-page evidence; early ending is not itself an error."
+    },
+    {
+      "id": "C01_B",
+      "review_type": "navigation_selection_and_termination",
+      "final_correct": true,
+      "answer": {
+        "status": "success",
+        "fact_ids": [
+          "fact_0002"
+        ]
+      },
+      "review": "Correct evidence; redundantly reread two already available pages."
+    },
+    {
+      "id": "C02_B",
+      "review_type": "navigation_selection_and_termination",
+      "final_correct": true,
+      "answer": {
+        "status": "success",
+        "fact_ids": [
+          "fact_0007"
+        ]
+      },
+      "review": "Correct middle-page evidence from complete input."
+    },
+    {
+      "id": "C02_A",
+      "review_type": "navigation_selection_and_termination",
+      "final_correct": false,
+      "answer": {
+        "status": "abstain",
+        "reason": "The requested field 'marker_b' is not present among the available facts."
+      },
+      "review": "Unsupported missing-field claim after only four of twelve facts were read."
+    },
+    {
+      "id": "M01_B",
+      "review_type": "all_accepted_computation_bindings_and_transformation",
+      "final_correct": true,
+      "numeric_correct": true,
+      "result_id": "result_001",
+      "parameters": {
+        "sodium": 142,
+        "chloride": 104,
+        "bicarbonate": 24
+      },
+      "bindings": {
+        "sodium": {
+          "parameter": "sodium",
+          "value": 142,
+          "fact_ids": [
+            "fact_0001"
+          ],
+          "transformation": "mEq/L"
+        },
+        "chloride": {
+          "parameter": "chloride",
+          "value": 104,
+          "fact_ids": [
+            "fact_0002"
+          ],
+          "transformation": "mEq/L"
+        },
+        "bicarbonate": {
+          "parameter": "bicarbonate",
+          "value": 24,
+          "fact_ids": [
+            "fact_0003"
+          ],
+          "transformation": "mEq/L"
+        }
+      },
+      "review": "Each of sodium 142, chloride 104 and bicarbonate 24 is directly extracted from its correct same-unit source; output 14 is supported. The transformation text only repeats mEq/L, which is terse but does not assert an incorrect conversion."
+    },
+    {
+      "id": "C03_A",
+      "review_type": "navigation_selection_and_termination",
+      "final_correct": false,
+      "answer": {
+        "status": "abstain",
+        "reason": "The requested field 'marker_c' is not present among the available facts."
+      },
+      "review": "Unsupported missing-field claim before reaching the third-page target."
+    },
+    {
+      "id": "C03_B",
+      "review_type": "navigation_selection_and_termination",
+      "final_correct": true,
+      "answer": {
+        "status": "success",
+        "fact_ids": [
+          "fact_0011"
+        ]
+      },
+      "review": "Correct last-page evidence from complete input."
+    },
+    {
+      "id": "C04_B",
+      "review_type": "navigation_selection_and_termination",
+      "final_correct": true,
+      "answer": {
+        "status": "success",
+        "fact_ids": [
+          "fact_0001",
+          "fact_0010"
+        ]
+      },
+      "review": "Selected both requested fields."
+    },
+    {
+      "id": "C04_A",
+      "review_type": "navigation_selection_and_termination",
+      "final_correct": true,
+      "answer": {
+        "status": "success",
+        "fact_ids": [
+          "fact_0001",
+          "fact_0010"
+        ]
+      },
+      "review": "Read all three pages and selected both requested fields."
+    },
+    {
+      "id": "M02_B",
+      "review_type": "all_accepted_computation_bindings_and_transformation",
+      "final_correct": true,
+      "numeric_correct": true,
+      "result_id": "result_001",
+      "parameters": {
+        "sodium": 138,
+        "chloride": 101,
+        "bicarbonate": 22
+      },
+      "bindings": {
+        "sodium": {
+          "parameter": "sodium",
+          "value": 138,
+          "fact_ids": [
+            "fact_0001"
+          ],
+          "transformation": "mEq/L"
+        },
+        "chloride": {
+          "parameter": "chloride",
+          "value": 101,
+          "fact_ids": [
+            "fact_0002"
+          ],
+          "transformation": "mEq/L"
+        },
+        "bicarbonate": {
+          "parameter": "bicarbonate",
+          "value": 22,
+          "fact_ids": [
+            "fact_0003"
+          ],
+          "transformation": "mEq/L"
+        }
+      },
+      "review": "Each of sodium 138, chloride 101 and bicarbonate 22 is directly extracted from its correct same-unit source; output 15 is supported. Unit-only transformation labels are terse but consistent with direct extraction."
+    },
+    {
+      "id": "C05_A",
+      "review_type": "navigation_selection_and_termination",
+      "final_correct": true,
+      "answer": {
+        "status": "success",
+        "fact_ids": [
+          "fact_0003",
+          "fact_0006",
+          "fact_0012"
+        ]
+      },
+      "review": "Read all three pages and selected all three requested fields."
+    },
+    {
+      "id": "C05_B",
+      "review_type": "navigation_selection_and_termination",
+      "final_correct": true,
+      "answer": {
+        "status": "success",
+        "fact_ids": [
+          "fact_0003",
+          "fact_0006",
+          "fact_0012"
+        ]
+      },
+      "review": "Selected all three requested fields."
+    },
+    {
+      "id": "C06_B",
+      "review_type": "navigation_selection_and_termination",
+      "final_correct": false,
+      "answer": {
+        "status": "abstain",
+        "reason": "The field 'marker_i' is not consistently present across the required episodes and patients."
+      },
+      "review": "Tried an old-episode source plus the current source; guard rejected it. Then incorrectly treated cross-scope differences as a reason to abstain."
+    },
+    {
+      "id": "C06_A",
+      "review_type": "navigation_selection_and_termination",
+      "final_correct": false,
+      "answer": {
+        "status": "success",
+        "fact_ids": [
+          "fact_0001",
+          "fact_0003",
+          "fact_0004",
+          "fact_0006",
+          "fact_0007",
+          "fact_0008",
+          "fact_0009",
+          "fact_0010",
+          "fact_0011",
+          "fact_0012"
+        ]
+      },
+      "review": "Read all input but reported all ten in-scope facts, including nine unrelated distractors."
+    },
+    {
+      "id": "M03_B",
+      "review_type": "all_accepted_computation_bindings_and_transformation",
+      "final_correct": false,
+      "numeric_correct": true,
+      "result_id": "result_001",
+      "parameters": {
+        "opioid_name": "oxycodone",
+        "daily_dose_mg": 15
+      },
+      "bindings": {
+        "opioid_name": {
+          "parameter": "opioid_name",
+          "value": "oxycodone",
+          "fact_ids": [
+            "fact_0001"
+          ],
+          "transformation": "lower"
+        },
+        "daily_dose_mg": {
+          "parameter": "daily_dose_mg",
+          "value": 15,
+          "fact_ids": [
+            "fact_0002"
+          ],
+          "transformation": "lower"
+        }
+      },
+      "review": "Daily dose 15 and output 22.5 are numerically correct, but daily_dose_mg cites only the 5 mg/dose fact_0002 and omits the three doses/day fact_0003. Its transformation lower does not explain multiplication and is invalid for a numeric dose. Drug normalization to oxycodone is supported."
+    },
+    {
+      "id": "C07_A",
+      "review_type": "navigation_selection_and_termination",
+      "final_correct": false,
+      "answer": {
+        "status": "abstain",
+        "reason": "The field 'marker_j' is present but 'marker_k' is absent from the target scope."
+      },
+      "review": "Tried an old-episode source, then claimed the second field absent before reading its third-page fact."
+    },
+    {
+      "id": "C07_B",
+      "review_type": "navigation_selection_and_termination",
+      "final_correct": true,
+      "answer": {
+        "status": "success",
+        "fact_ids": [
+          "fact_0006",
+          "fact_0009"
+        ]
+      },
+      "review": "Selected the two correct in-scope facts despite cross-scope distractors."
+    },
+    {
+      "id": "C08_B",
+      "review_type": "navigation_selection_and_termination",
+      "final_correct": true,
+      "answer": {
+        "status": "success",
+        "fact_ids": [
+          "fact_0001",
+          "fact_0012"
+        ]
+      },
+      "review": "Reported both consistent matching facts as explicitly requested."
+    },
+    {
+      "id": "C08_A",
+      "review_type": "navigation_selection_and_termination",
+      "final_correct": false,
+      "answer": {
+        "status": "success",
+        "fact_ids": [
+          "fact_0001"
+        ]
+      },
+      "review": "Reported only the first of two consistent matching facts, without reading the final page."
+    },
+    {
+      "id": "M04_B",
+      "review_type": "all_accepted_computation_bindings_and_transformation",
+      "final_correct": false,
+      "numeric_correct": true,
+      "result_id": "result_001",
+      "parameters": {
+        "opioid_name": "oxycodone",
+        "daily_dose_mg": 20
+      },
+      "bindings": {
+        "opioid_name": {
+          "parameter": "opioid_name",
+          "value": "oxycodone",
+          "fact_ids": [
+            "fact_0001"
+          ],
+          "transformation": "lower"
+        },
+        "daily_dose_mg": {
+          "parameter": "daily_dose_mg",
+          "value": 20,
+          "fact_ids": [
+            "fact_0002"
+          ],
+          "transformation": "lower"
+        }
+      },
+      "review": "Daily dose 20 and output 30 are numerically correct, but daily_dose_mg cites only the 10 mg/dose fact_0002 and omits the two doses/day fact_0003. Numeric transformation lower is invalid. Drug normalization is supported."
+    },
+    {
+      "id": "C09_A",
+      "review_type": "navigation_selection_and_termination",
+      "final_correct": false,
+      "answer": {
+        "status": "abstain",
+        "reason": "The field 'marker_m' was not found among the available facts."
+      },
+      "review": "The field is truly absent, but abstention after only eight facts did not establish absence in the frozen finite search scope."
+    },
+    {
+      "id": "C09_B",
+      "review_type": "navigation_selection_and_termination",
+      "final_correct": true,
+      "answer": {
+        "status": "abstain",
+        "reason": "The requested field 'marker_m' is not present among the observed facts."
+      },
+      "review": "All twelve facts were available; the explicit missing-field reason matches the input. Appropriate abstention."
+    },
+    {
+      "id": "C10_B",
+      "review_type": "navigation_selection_and_termination",
+      "final_correct": true,
+      "answer": {
+        "status": "abstain",
+        "reason": "The field 'marker_n' is not found in the target episode."
+      },
+      "review": "All twelve facts were available. An out-of-scope citation was rejected; the final reason correctly identifies no target-scope match. Appropriate recovered abstention, not an error-free trajectory."
+    },
+    {
+      "id": "C10_A",
+      "review_type": "navigation_selection_and_termination",
+      "final_correct": false,
+      "answer": {
+        "status": "abstain",
+        "reason": "The field 'marker_n' is not present in the target scope."
+      },
+      "review": "After a rejected other-patient citation, abstained with four facts still unread. Absence happened to be true but was not established under the protocol."
+    },
+    {
+      "id": "M05_B",
+      "review_type": "all_accepted_computation_bindings_and_transformation",
+      "final_correct": true,
+      "numeric_correct": true,
+      "result_id": "result_001",
+      "parameters": {
+        "rass_score": 1
+      },
+      "bindings": {
+        "rass_score": {
+          "parameter": "rass_score",
+          "value": 1,
+          "fact_ids": [
+            "fact_0001"
+          ],
+          "transformation": "restless"
+        }
+      },
+      "review": "The source explicitly states Restless (+1); value 1 and fact_0001 agree with the retrieved definition. The terse restless label is consistent with that explicit category."
+    },
+    {
+      "id": "C11_A",
+      "review_type": "navigation_selection_and_termination",
+      "final_correct": false,
+      "answer": {
+        "status": "success",
+        "fact_ids": [
+          "fact_0003"
+        ]
+      },
+      "review": "Submitted one side of the conflict without reaching the second value."
+    },
+    {
+      "id": "C11_B",
+      "review_type": "navigation_selection_and_termination",
+      "final_correct": false,
+      "answer": {
+        "status": "success",
+        "fact_ids": [
+          "fact_0003",
+          "fact_0011"
+        ]
+      },
+      "review": "Both conflicting facts were correctly located, but the model reported them as success instead of the required conflict abstention."
+    },
+    {
+      "id": "C12_B",
+      "review_type": "navigation_selection_and_termination",
+      "final_correct": false,
+      "answer": {
+        "status": "success",
+        "fact_ids": [
+          "fact_0002",
+          "fact_0006",
+          "fact_0010"
+        ]
+      },
+      "review": "After a duplicate-ID schema error, reported all three matching facts; still failed the explicit conflict-abstention rule."
+    },
+    {
+      "id": "C12_A",
+      "review_type": "navigation_selection_and_termination",
+      "final_correct": false,
+      "answer": {
+        "status": "success",
+        "fact_ids": [
+          "fact_0002",
+          "fact_0006"
+        ]
+      },
+      "review": "Submitted the first field and only one side of the second-field conflict, before reading the last page."
+    },
+    {
+      "id": "M06_B",
+      "review_type": "all_accepted_computation_bindings_and_transformation",
+      "final_correct": true,
+      "numeric_correct": true,
+      "result_id": "result_001",
+      "parameters": {
+        "rass_score": 0
+      },
+      "bindings": {
+        "rass_score": {
+          "parameter": "rass_score",
+          "value": 0,
+          "fact_ids": [
+            "fact_0001"
+          ],
+          "transformation": "No transformation needed."
+        }
+      },
+      "review": "The source explicitly states Alert and calm (0); value 0 and fact_0001 agree with the definition. No transformation needed is consistent with direct extraction of the explicit score."
+    }
+  ]
+}
