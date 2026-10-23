@@ -1,0 +1,179 @@
+{
+  "experiment": "react_vision_v1",
+  "purpose": "Distinct native ReAct visual-evidence acquisition base for HCL after closing MedRAX evidence adaptation. No HCL changes yet.",
+  "architecture": "Lagent0.2.4 native ReAct and ActionExecutor, native English ReActProtocol; text controller Qwen2.5-VL7B gets question and file path, AgentLego tools process actual pixels. This is the published tool-mediated vision design; no claim of direct controller image input or exact MedCTA score.",
+  "upstream_medcta_revision": "eb7d1dc0adc6da4c31d9c5ebef3a8059a620022c",
+  "dataset": "ChestAgentBench921e60440927f9893228d843c0206b755744252a",
+  "selection": "seed20261026 metadata-only category balancing unique single-image cases, excluding all36 previously seen development cases",
+  "excluded_prior_cases": [
+    "10508",
+    "10966",
+    "11306",
+    "12428",
+    "12918",
+    "13514",
+    "1437",
+    "14391",
+    "14432",
+    "14480",
+    "14941",
+    "16366",
+    "16425",
+    "16703",
+    "1676",
+    "16866",
+    "16886",
+    "17122",
+    "17350",
+    "17889",
+    "17970",
+    "18134",
+    "18174",
+    "18290",
+    "2364",
+    "3842",
+    "4379",
+    "5369",
+    "5533",
+    "561",
+    "6312",
+    "8486",
+    "8911",
+    "912",
+    "9152",
+    "9801"
+  ],
+  "panel": [
+    {
+      "images": [
+        "figures/15329/figure_1.jpg"
+      ],
+      "case_id": "15329",
+      "full_question_id": "15329_15329_8353800544569",
+      "categories": "classification,comparison,diagnosis,reasoning"
+    },
+    {
+      "images": [
+        "figures/14779/figure_1.jpg"
+      ],
+      "case_id": "14779",
+      "full_question_id": "14779_14779_8353800645338",
+      "categories": "detection,localization,characterization,reasoning"
+    },
+    {
+      "images": [
+        "figures/3241/figure_1b.jpg"
+      ],
+      "case_id": "3241",
+      "full_question_id": "3241_3241_8353801520855",
+      "categories": "detection,classification,relationship,reasoning"
+    },
+    {
+      "images": [
+        "figures/11491/figure_1.jpg"
+      ],
+      "case_id": "11491",
+      "full_question_id": "11491_11491_8353800763489",
+      "categories": "localization,comparison,relationship,reasoning"
+    },
+    {
+      "images": [
+        "figures/10974/figure_1.jpg"
+      ],
+      "case_id": "10974",
+      "full_question_id": "10974_10974_8353802602614",
+      "categories": "classification,characterization,diagnosis,reasoning"
+    },
+    {
+      "images": [
+        "figures/5707/figure_1.jpg"
+      ],
+      "case_id": "5707",
+      "full_question_id": "5707_5707_8353801549107",
+      "categories": "localization,comparison,relationship,reasoning"
+    },
+    {
+      "images": [
+        "figures/18009/figure_1.jpg"
+      ],
+      "case_id": "18009",
+      "full_question_id": "18009_18009_8143559675364",
+      "categories": "classification,characterization,diagnosis,reasoning"
+    },
+    {
+      "images": [
+        "figures/14255/figure_1b.jpg"
+      ],
+      "case_id": "14255",
+      "full_question_id": "14255_14255_8353800688938",
+      "categories": "detection,localization,characterization,reasoning"
+    },
+    {
+      "images": [
+        "figures/17474/figure_1.jpg"
+      ],
+      "case_id": "17474",
+      "full_question_id": "17474_17474_8143559696388",
+      "categories": "detection,classification,relationship,reasoning"
+    },
+    {
+      "images": [
+        "figures/11090/figure_1.jpg"
+      ],
+      "case_id": "11090",
+      "full_question_id": "11090_11090_8353800750711",
+      "categories": "classification,comparison,diagnosis,reasoning"
+    },
+    {
+      "images": [
+        "figures/13005/figure_1.jpg"
+      ],
+      "case_id": "13005",
+      "full_question_id": "13005_13005_8353800587949",
+      "categories": "localization,comparison,relationship,reasoning"
+    },
+    {
+      "images": [
+        "figures/5047/figure_1.jpg"
+      ],
+      "case_id": "5047",
+      "full_question_id": "5047_5047_8353801511588",
+      "categories": "detection,localization,characterization,reasoning"
+    }
+  ],
+  "reserved_external": "ALL107 MedCTA cases remain locked external evaluation; no inference, adaptation or threshold selection on them. Per-case sufficient tool sets/reference trajectories never enter runtime.",
+  "tool_catalog": [
+    "ImageDescription",
+    "RegionAttributeDescription",
+    "OCR",
+    "Calculator"
+  ],
+  "tool_models": "Original mmpretrain llava7b-v1.5_vqa with336px/max100newtokens and EasyOCR English beamsearch; existing assets/environment reused read-only. GoogleSearch absent due unavailable credentials, not silently mocked.",
+  "limits": {
+    "episode_seconds": 240,
+    "planner_calls": 6,
+    "tool_calls": 6,
+    "input_tokens": 16384,
+    "output_tokens_per_call": 768,
+    "output_tokens_total": 4608
+  },
+  "phase_seconds": 3600,
+  "original_route_deadline": 1792852296.0903642,
+  "storage": {
+    "aggregate_route_hard_limit_bytes_exclusive": 30000000000,
+    "early_stop_with_reserve": 28000000000,
+    "expected_additional_bytes": 200000000
+  },
+  "gate": {
+    "all_four_direct_tools_success": true,
+    "minimum_correct_of_12": 3,
+    "minimum_valid_final_of_12": 6,
+    "minimum_episodes_with_successful_visual_tool": 6,
+    "zero_missing_episode_records": true
+  },
+  "scoring": "Reuse frozen letter extraction; answer/explanation only evaluator after all12. All12 denominator including setup/runtime/notrun. Clinical correctness is development feasibility only.",
+  "preflight": "One direct call per tool on first panel image (region fixed central half, calculator2+3), separate engineering cost. No preflight output given to agent.",
+  "stop": "At most one native protocol/configuration, no prompt search. Preserve setup failures and original1h clock; if native gate fails no HCL and do not repeat qualification to chase a pass.",
+  "hcl_updates": 0,
+  "future": "Only after native gate freeze static/ungated/HCL case-isolated study, with prior-success retention and full cost; all48 development cases excluded from later validation/test."
+}
