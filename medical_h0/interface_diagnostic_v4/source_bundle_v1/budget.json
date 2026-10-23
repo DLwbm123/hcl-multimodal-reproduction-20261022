@@ -1,0 +1,14 @@
+{
+  "start_epoch": 1792739463.4855042,
+  "early_stop_epoch": 1792748300.9396448,
+  "hard_deadline_epoch": 1792748360.9396462,
+  "max_model_calls": 386,
+  "hard_bytes": 2000000000,
+  "early_stop_bytes": 1800000000,
+  "reserve_bytes": 10000000,
+  "previous_model_calls": 242,
+  "user_window_start_epoch": 1792740467.0,
+  "user_window_deadline_epoch": 1792751267.0,
+  "parent_max_model_calls": 2000,
+  "scope": "all root storage and calls count jointly; diagnostic at most 144 additional attempts"
+}

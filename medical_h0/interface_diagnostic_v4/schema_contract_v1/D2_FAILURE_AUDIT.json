@@ -1,0 +1,46 @@
+{
+  "cases": [
+    {
+      "raw_parameters_match_reference": true,
+      "invalid_calls": {
+        "source_shape_or_required_field": 8
+      },
+      "actual_correct_submission": false
+    },
+    {
+      "raw_parameters_match_reference": true,
+      "invalid_calls": {
+        "source_shape_or_required_field": 8
+      },
+      "actual_correct_submission": false
+    },
+    {
+      "raw_parameters_match_reference": false,
+      "invalid_calls": {
+        "missing_parameters": 8
+      },
+      "actual_correct_submission": false
+    },
+    {
+      "raw_parameters_match_reference": false,
+      "invalid_calls": {
+        "invalid_json": 8
+      },
+      "actual_correct_submission": false
+    },
+    {
+      "raw_parameters_match_reference": true,
+      "invalid_calls": {},
+      "actual_correct_submission": true
+    },
+    {
+      "raw_parameters_match_reference": true,
+      "invalid_calls": {
+        "source_shape_or_required_field": 8
+      },
+      "actual_correct_submission": false
+    }
+  ],
+  "raw_parameter_match_cases": 4,
+  "scope": "raw argument inspection, not successful execution credit; strict original RESULT unchanged"
+}

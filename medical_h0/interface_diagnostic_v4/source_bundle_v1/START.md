@@ -1,0 +1,2 @@
+# source_bundle_v1
+Six original learning targets; additional reference input_sources assistance, no parameter values or score supplied. No D1 rerun, no HCL/D3/D4, no acceptance claim. Existing model, schema, formulas and scoring unchanged. Additional <=144 calls, <=30min early stop; previous242 calls and all root storage count jointly under original clock and user deadline. 28 CPU tests passed, not effect evidence.

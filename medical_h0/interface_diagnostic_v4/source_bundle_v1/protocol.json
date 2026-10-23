@@ -1,0 +1,43 @@
+{
+  "version": "source_bundle_v1",
+  "frozen_epoch": 1792746500.939713,
+  "hcl_enabled": false,
+  "model_layers": [
+    "D2S"
+  ],
+  "data": "original eight learning cases only; no selection, anchor or final regression panel",
+  "reference_selection": "D0_SELECTION.private.json frozen before target-value comparison; first successful reference target per case, fill to six in original order",
+  "D0_scope": "67-target exact identity/execution/input/output inventory; absence of exact mapping is not proof no implementation exists",
+  "D1_min_correct_submissions": 5,
+  "D1_min_exact_parameters": 5,
+  "D1_max_computed_then_lost": 0,
+  "D1_gate_meaning": "Interface-assisted invocation and serialization, not H0 acceptance or medical reliability",
+  "D2_gate": "descriptive only, no acceptance gate or automatic later layers",
+  "scope_visibility": "For selected six only, reviewed visible-field mapping finds unique reference scope. Scope still explicitly assisted in D1 and D2; no D3/D4.",
+  "model": "Qwen2.5-VL-7B-Instruct BF16 greedy",
+  "tools": "same runtime and tool schemas for both diagnostic layers",
+  "max_turns_per_episode": 24,
+  "max_tool_requests": 80,
+  "max_output_tokens": 4096,
+  "context_window": 32768,
+  "episode_seconds": 900,
+  "context": "preamble + compact state + last three complete assistant/tool blocks; prior observations retrievable; raw logs retained",
+  "formula_changes": "none relative to v3 pinned source and preserved NEWS2 correction",
+  "input_contract": "only reviewed nullable fields optional; clinical non-None defaults explicit; spesi requires each raw vital or threshold flag",
+  "source_binding": "valid existing read fact/result references and patient consistency enforced; same-patient cross-episode references retained, not prohibited. Clinical semantic correctness is not program-certified",
+  "submit": "explicit model action; result_id preserves identity/scope/raw value, no auto-fill from gold. Explicit category override remains logged",
+  "scoring": "v3 strict identity and value matching retained; assisted single-target reference-value agreement reported separately from full 67-target benchmark",
+  "stop_conditions": [
+    "D0 selection cannot execute and serialize or disagrees with reference target",
+    "D1 gate failure prevents D2",
+    "any unexpected runtime/identity/guard/budget failure is fatal, no automatic restart",
+    "D3/D4 require visible-scope audit and separate frozen protocol",
+    "no later than user window deadline 2026-10-23 18:27:47+08:00; early stop 18:22:47"
+  ],
+  "budget": "original start and global cap retained; this diagnostic <=144 new attempts and <=30min early stop, original user deadline more stringent",
+  "claims": "source assistance reveals parameter names and relevant evidence, so changes retrieval burden too; differences do not isolate pure JSON serialization or prove autonomous H0",
+  "test_checks": 28,
+  "single_change": "Additional diagnostic assistance: exact existing reference input_sources bundle; parameter values and computed answers excluded. Model must read facts, build all numeric/boolean parameters, execute and explicitly submit. Tool schemas, runtime, formulas and model unchanged from schema_contract_v1.",
+  "panel": "same six preselected learning targets; no new independent confirmation",
+  "previous_run_calls": 242
+}
