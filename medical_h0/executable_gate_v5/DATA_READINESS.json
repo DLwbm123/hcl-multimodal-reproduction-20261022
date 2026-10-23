@@ -1,0 +1,188 @@
+{
+  "phase": "A0",
+  "created_epoch": 1792754179.230912,
+  "status": "A0_READY_FOR_INTERFACE",
+  "source_tasks": 32,
+  "source_outputs": 239,
+  "review_targets": 18,
+  "status_counts": {
+    "structurally_ready": 18
+  },
+  "by_role": {
+    "L1": {
+      "targets": 6,
+      "case_groups": 5,
+      "ready": 6
+    },
+    "L2": {
+      "targets": 6,
+      "case_groups": 4,
+      "ready": 6
+    },
+    "A": {
+      "targets": 6,
+      "case_groups": 4,
+      "ready": 6
+    }
+  },
+  "selected_old_six": 0,
+  "role_groups_disjoint": true,
+  "anchor_groups_exclude_old_development": true,
+  "source_independence": "Disjoint distributed source-task groups; biological patient independence is not established.",
+  "prior_exposure": "All 32 tasks participated in earlier model evaluation. Original training groups were used for development. Original selection groups reassigned to L1 are now development-only. Anchors remain evaluation-only. No fresh-confirmation claim.",
+  "future_hcl_readiness": false,
+  "future_confirmation_blocker": "24 suitable targets across at least 12 fresh source groups have not been established; the existing confirmation panel has already been used.",
+  "fixture_limitations": [
+    "timestamps and sample_type are generated heuristically, not authentic clinical metadata",
+    "unit strings can truncate multiword units; original field/value text remains the authoritative measurement description"
+  ],
+  "model_requests": 0,
+  "real_model_generations": 0,
+  "hcl_started": false,
+  "targets": [
+    {
+      "role": "L1",
+      "skill": "L1",
+      "calculator_id": "anion_gap",
+      "status": "structurally_ready",
+      "blocker": null,
+      "reference_agrees": true
+    },
+    {
+      "role": "L1",
+      "skill": "L1",
+      "calculator_id": "winters_formula",
+      "status": "structurally_ready",
+      "blocker": null,
+      "reference_agrees": true
+    },
+    {
+      "role": "L1",
+      "skill": "L1",
+      "calculator_id": "anion_gap",
+      "status": "structurally_ready",
+      "blocker": null,
+      "reference_agrees": true
+    },
+    {
+      "role": "L1",
+      "skill": "L1",
+      "calculator_id": "mme_calculator",
+      "status": "structurally_ready",
+      "blocker": null,
+      "reference_agrees": true
+    },
+    {
+      "role": "L1",
+      "skill": "L1",
+      "calculator_id": "sofa_score",
+      "status": "structurally_ready",
+      "blocker": null,
+      "reference_agrees": true
+    },
+    {
+      "role": "L1",
+      "skill": "L1",
+      "calculator_id": "ich_score",
+      "status": "structurally_ready",
+      "blocker": null,
+      "reference_agrees": true
+    },
+    {
+      "role": "L2",
+      "skill": "L2",
+      "calculator_id": "rass",
+      "status": "structurally_ready",
+      "blocker": null,
+      "reference_agrees": true
+    },
+    {
+      "role": "L2",
+      "skill": "L2",
+      "calculator_id": "iss",
+      "status": "structurally_ready",
+      "blocker": null,
+      "reference_agrees": true
+    },
+    {
+      "role": "L2",
+      "skill": "L2",
+      "calculator_id": "perc_rule",
+      "status": "structurally_ready",
+      "blocker": null,
+      "reference_agrees": true
+    },
+    {
+      "role": "L2",
+      "skill": "L2",
+      "calculator_id": "spesi",
+      "status": "structurally_ready",
+      "blocker": null,
+      "reference_agrees": true
+    },
+    {
+      "role": "L2",
+      "skill": "L2",
+      "calculator_id": "qsofa_score",
+      "status": "structurally_ready",
+      "blocker": null,
+      "reference_agrees": true
+    },
+    {
+      "role": "L2",
+      "skill": "L2",
+      "calculator_id": "sofa_score",
+      "status": "structurally_ready",
+      "blocker": null,
+      "reference_agrees": true
+    },
+    {
+      "role": "A",
+      "skill": "L1",
+      "calculator_id": "ideal_body_weight",
+      "status": "structurally_ready",
+      "blocker": null,
+      "reference_agrees": true
+    },
+    {
+      "role": "A",
+      "skill": "L1",
+      "calculator_id": "corrected_qt",
+      "status": "structurally_ready",
+      "blocker": null,
+      "reference_agrees": true
+    },
+    {
+      "role": "A",
+      "skill": "L1",
+      "calculator_id": "ckd_epi_2021",
+      "status": "structurally_ready",
+      "blocker": null,
+      "reference_agrees": true
+    },
+    {
+      "role": "A",
+      "skill": "L2",
+      "calculator_id": "mallampati_score",
+      "status": "structurally_ready",
+      "blocker": null,
+      "reference_agrees": true
+    },
+    {
+      "role": "A",
+      "skill": "L2",
+      "calculator_id": "asa_physical_status",
+      "status": "structurally_ready",
+      "blocker": null,
+      "reference_agrees": true
+    },
+    {
+      "role": "A",
+      "skill": "L2",
+      "calculator_id": "rcri",
+      "status": "structurally_ready",
+      "blocker": null,
+      "reference_agrees": true
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "recorded_epoch": 1792755246.749302,
+  "parent_repository_commit": "bdbf8c7",
+  "upstream_provenance": {
+    "MedicalHarness": "8727186f04c25646e7ee1b9428f3b6dcd4239382",
+    "Qwen-Agent": "31a4d36d123688581a9e9744427272b33ce940e0",
+    "HCL": "a6e5a01536ac8d42ca28f0a82efa223869c8c48d",
+    "medical-calc-mcp": "45f648d9b37991362df095e4ae41c34c65969caf"
+  },
+  "provenance_limit": "Commit identities inherited from recorded source provenance; deployed source copies lack .git. No new dependency/model download or weight update. Byte identity not newly verified.",
+  "runtime_versions": {
+    "torch": "2.7.1+cu128",
+    "transformers": "4.51.3",
+    "langgraph": "1.2.11",
+    "langchain-core": "1.6.2",
+    "jsonschema": "4.26.0"
+  },
+  "model": "Qwen2.5-VL-7B-Instruct existing shared local snapshot, BF16, greedy, sdpa",
+  "hardware": "NVIDIA RTX PRO 5000 72GB Blackwell",
+  "solver_inputs": "Immutable private MODEL_INPUTS copy, 18 targets; excludes evaluator manifest and gold",
+  "evaluator_inputs": "Separate private TARGET_MANIFEST, never imported by solver",
+  "source_freeze": "This source and protocol are committed before first launch; exact commit recorded by launch receipt."
+}

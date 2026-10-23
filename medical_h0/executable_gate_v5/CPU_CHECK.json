@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "synthetic_contract_tests": 13,
+  "invalid_raw_history_check": true,
+  "reference_path_checks": 18,
+  "reference_role_counts": {
+    "L1": 6,
+    "L2": 6,
+    "A": 6
+  },
+  "model_calls": 0,
+  "scope": "CPU reference and synthetic contract checks only; not autonomous H0 performance or clinical certification",
+  "time": 1792754921.9910345
+}

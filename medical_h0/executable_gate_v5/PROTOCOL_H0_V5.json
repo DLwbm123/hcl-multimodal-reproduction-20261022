@@ -1,0 +1,95 @@
+{
+  "version": "executable_gate_v5",
+  "frozen_epoch": 1792755246.749108,
+  "hcl_enabled": false,
+  "rollouts": 18,
+  "engineering_start_epoch": 1792753454,
+  "engineering_deadline_epoch": 1792767854,
+  "engineering_max_seconds": 14400,
+  "model": "Qwen2.5-VL-7B-Instruct",
+  "dtype": "bfloat16",
+  "attention": "sdpa",
+  "temperature": 0,
+  "seed": 42,
+  "model_window_seconds": 7200,
+  "early_stop_margin_seconds": 120,
+  "post_run_audit_max_seconds": 3600,
+  "max_model_requests": 432,
+  "max_requests_per_target": 24,
+  "max_tool_requests_per_target": 80,
+  "max_input_tokens": 4000000,
+  "max_output_tokens": 256000,
+  "max_output_per_generation": 4096,
+  "context_window": 32768,
+  "episode_seconds": 900,
+  "max_new_bytes": 2147483648,
+  "storage_reserve_bytes": 1073741824,
+  "external_file_reserve_bytes": 1048576,
+  "storage_scope": "All newly created run-root files, private data, source copies, caches, logs and audit output; shared existing model/environment read-only. External neutral entry files covered by reserve.",
+  "panel": {
+    "L1": 6,
+    "L2": 6,
+    "A": 6,
+    "anchor_skills": {
+      "L1": 3,
+      "L2": 3
+    },
+    "case_groups": {
+      "L1": 5,
+      "L2": 4,
+      "A": 4
+    },
+    "max_targets_per_source_group": 2,
+    "disjoint_role_groups": true,
+    "exclude_old_six_and_source_groups": true
+  },
+  "assistance": "Explicit calculator identity, patient, episode and output convention. Visible facts from distributed root_inputs; no gold answers or reference bindings in solver inputs.",
+  "data_limits": [
+    "All source tasks previously model-evaluated; anchors not fresh confirmation",
+    "Disjoint source-task groups do not establish independent biological patients",
+    "Generated timestamp/sample metadata are hints; explicit field/value text authoritative"
+  ],
+  "tools": [
+    "read_facts",
+    "get_calculator",
+    "execute_calculator",
+    "derive_output",
+    "get_observation",
+    "submit_answer"
+  ],
+  "interface": "One binding per parameter with value, fact_ids, transformation. Current profile accepts direct facts and fact-supported numeric transformations; result dependencies supported only for explicit sPESI category derivation. No general calculation dependency graph.",
+  "formula_policy": "Named pinned profiles, unchanged formula bodies. Every clinical parameter explicit; computational options outside a named profile omitted with documented library defaults. No nullable placeholder or imputed clinical value.",
+  "source_policy": "Current patient and output episode; only consistent same-patient Sex for corrected_qt can use another episode. Executor checks structure; evaluator independently audits semantic support.",
+  "submission": "Model must explicitly submit immutable result_id, or abstain/fail with reason. No output override, forced submission or after-run repair.",
+  "context": "Preamble, compact state, last three complete assistant/tool blocks; older observations retrievable, raw history retained",
+  "audit": "Every accepted raw and derived computation reviewed, including those not submitted. Numeric correctness and trusted correctness reported separately; free-text transformations manually checked against visible facts. Unresolved semantic evidence never defaulted correct.",
+  "numeric_tolerance": "max(0.1, 2 percent of benchmark scalar); classes exact; trusted additionally requires frozen parameter/source/lineage audit and transformation review",
+  "gate": {
+    "all_18_attempted": true,
+    "engineering_valid": true,
+    "L1_trusted_min": 2,
+    "L1_distinct_groups_min": 2,
+    "L2_trusted_min": 2,
+    "L2_distinct_groups_min": 2,
+    "anchor_trusted_each_skill_min": 1,
+    "anchor_distinct_groups_min": 2,
+    "unverified_accepted_results_max": 0
+  },
+  "statuses": [
+    "DATA_BLOCKED",
+    "H0_GATE_FAIL",
+    "NEEDS_REVIEW",
+    "BUDGET_STOP",
+    "PASS"
+  ],
+  "stop_conditions": [
+    "A0 or CPU path failure prevents model launch",
+    "One pass only; no target retry, replacement, reselection, prompt/schema change or extra smoke model calls",
+    "Unexpected runtime/provider/protocol/identity/guard failure stops the run; budget stops retain all 18 in denominator",
+    "At hard budget stop, save minimal evidence and terminate owned worker",
+    "Audit unfinished after one hour: NEEDS_REVIEW",
+    "Stop after report and GitHub delivery even if PASS; HCL not authorized"
+  ],
+  "future_hcl_readiness": false,
+  "future_blocker": "Fresh 24-target confirmation panel across at least 12 source groups not established; any later HCL requires separate authorization and pre-registration"
+}
