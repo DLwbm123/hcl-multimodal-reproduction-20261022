@@ -1,0 +1,112 @@
+{
+  "protocol": "runtime_v2",
+  "purpose": "Formal MedicalHarness MedTool restricted-adapter two-block HCL pilot; no original full-environment replication",
+  "model": "Qwen2.5-VL-7B-Instruct BF16 sdpa frozen, same Static/HCL; fresh empty workflow; no synthetic learned state imported",
+  "transport": "Qwen-Agent pinned official Nous; no format-repair retries",
+  "decoding": {
+    "do_sample": false,
+    "max_new_tokens": 4096,
+    "context_window": 32768,
+    "seed": 42
+  },
+  "episode": {
+    "max_turns": 24,
+    "max_tools": 80,
+    "timeout_seconds": 900,
+    "planning": "off; runtime ledger",
+    "context_policy": "none",
+    "verification": "off",
+    "early_final": "unsubmitted_final; no reminder"
+  },
+  "stages": [
+    "fixed shuffled formal task block one",
+    "fixed shuffled formal task block two"
+  ],
+  "data": {
+    "package": "medmcp-calc-agentic32-v0.1",
+    "upstream_commit": "81f3ff2bd603de10ccef55d73c0c2e91181514d9",
+    "total_tasks": 32,
+    "learning_each_stage": 4,
+    "selection_each_stage": 4,
+    "initial_anchor_tasks": 4,
+    "extra_independent_anchor_tasks_in_stage2": 4,
+    "confirmation_tasks_each_block": 4,
+    "confirmation_total": 8,
+    "seed": 2026102306,
+    "id_freeze_before_gold_join": true,
+    "unique_package_patient_ids": 32,
+    "limitation": "Package IDs distinct; biological patient independence not established. Randomized fixed task blocks, not disease-defined task stages. Heldout8 score is not a full32 benchmark score. Public benchmark pretraining contamination not ruled out.",
+    "fixtures": "exact upstream builder env_private root_inputs plus distractors; final_answer never put in model facts",
+    "prompt": "official export prompt with only file/SQLite delivery instructions replaced by read_facts/submit_answer and fixed24-turn statement"
+  },
+  "updates": {
+    "only": "separate versioned workflow prose; no initial handcrafted corrective hint",
+    "candidates_per_stage": 2,
+    "generation_attempts_per_stage": 2,
+    "method": "official Nous propose_workflow schema; actual hcl Optimizer normalization/ranking/strict gate reused, generator adapted",
+    "learned_sections_max": 5,
+    "section_chars_max": 400,
+    "boundary": "numeric examples/code/placeholders/override instructions rejected; immutable tools enforce access",
+    "feedback": "current-stage training only; last12 non-read-facts events; tool content capped500 chars; full original traces retained. No selection/anchor/final inputs or answers to proposer."
+  },
+  "commit_gate": {
+    "selection_correct_output_gain_at_least": 1,
+    "mean_official_utility_delta_at_least": 0.05,
+    "selection_complete_task_count": "must not decrease",
+    "selection_submitted_fraction": 1,
+    "historical_complete_task_losses": 0,
+    "historical_correct_output_losses": 0,
+    "coverage": 1,
+    "gate": "actual stability optimizer; no screening; deterministic argmax tie first; wrong candidate no update",
+    "reason_for_metric": "formal multi-output clinical tasks; official utility primary and complete-task success also reported; fixed before first model call"
+  },
+  "retention": "stage1 initial4 anchors; stage2 initial4 plus independent4; compare each gold output and complete-task success with deployed previous state; no offsetting lost correct outputs; report zero-success limitations",
+  "confirmation": "only after both stages, Static H0 then final frozen HCL on same8 independent tasks; no checkpoint or candidate selection from confirmation",
+  "signal_gate": "at least one accepted automatic update, average task utility delta>=.05 and paired task-bootstrap95 lower bound>0, no previously correct Static output or full task lost; every stage has >0 historical correct outputs. Also report complete-task McNemar and per-block metrics. Small pilot, not clinical efficacy.",
+  "budget": {
+    "max_model_calls": 6000,
+    "max_seconds": 21600,
+    "early_seconds": 21300,
+    "max_new_bytes": 2000000000,
+    "early_new_bytes": 1800000000,
+    "reserve_confirmation_calls": 384,
+    "reserve_local_and_neutral_bytes": 10000000,
+    "restarts": "none automatic; preparation/CPU/model runs share original clock",
+    "acceptance_included": true
+  },
+  "failure": "per-episode context/turn/unsubmitted recorded failed; global budget/guard/provider failure stops run incomplete, no partial candidate commit; no automatic retry",
+  "scope_exclusions": [
+    "clinical formula library or new tool training",
+    "arbitrary shell/SQL/filesystem access",
+    "weight training",
+    "full four-component reproduction",
+    "full official shell environment reproduction",
+    "automatic retry",
+    "fault recovery injection"
+  ],
+  "created_epoch": 1792733921.4449325,
+  "guard": "On du return1 only when every diagnostic is a vanished relative *.tmp, perform at most3 fresh complete scans per size mode. Never accept partial counts or ignore live temporary files. Permissions/I/O/timeout/other failures stop. Both actual allocation and apparent size counted, larger plus reserve.",
+  "parent_result": "formal_medtool_v1 failed; preserved",
+  "acceptance": {
+    "cases": "first2 from each original learning role, no selection/final",
+    "gate": "submitted>=3/4; <=96 model calls; no provider/context failure; original overflow feedback packs <=20000 tokens; CPU pass",
+    "effect_gate": false
+  },
+  "runtime": {
+    "planning": "model update_plan disabled; execution state ledger instead",
+    "duplicate_calls": "idempotent exact-name+canonical-arguments cache, no reexecution",
+    "phase": "facts first, work, submit; submit only after2 no-progress or turn20",
+    "turn_cap": 24,
+    "output_token_cap": 4096,
+    "auto_answer": false,
+    "scope": "common Static and HCL; not a single-factor ablation or original official shell reproduction"
+  },
+  "feedback": {
+    "nested_arguments": "bounded400chars/8items with explicit truncation markers",
+    "trace": "last12 non-fact events",
+    "gold": "current learning output name+value only, no input duplications",
+    "prompt": "full task text preserved",
+    "packing": "actual official formatted tokenizer length<=20000; remove oldest trajectory events from largest example if needed; essential-input overflow fails"
+  },
+  "confirmation_limit": "Same quarantined8 heldout IDs as v1, reused regression panel; aggregate v1 result already known, not fresh independent confirmation. No per-case final labels/results used to implement runtime fixes."
+}

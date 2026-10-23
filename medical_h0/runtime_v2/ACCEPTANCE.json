@@ -1,0 +1,21 @@
+{
+  "submitted": 4,
+  "cases": 4,
+  "terminations": [
+    "submitted",
+    "submitted",
+    "submitted",
+    "submitted"
+  ],
+  "calls": 20,
+  "packing_replay": {
+    "input_tokens": 11864,
+    "cap": 20000,
+    "removed_trajectory_events": 0,
+    "training_cases": 4
+  },
+  "duplicate_execution": 0,
+  "gate": "at least3/4 submitted; <=96 calls; no provider/context failure; old overflow context packs <=20000 tokens; structural tests passed",
+  "time": 1792733989.9770508,
+  "passed": true
+}
