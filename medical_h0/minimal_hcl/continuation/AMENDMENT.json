@@ -1,0 +1,10 @@
+{
+  "time": 1792728667.2201152,
+  "authorization": "User explicitly permits continuing synthetic cases after guard repair",
+  "original_start_preserved": true,
+  "previous_attempted_calls": 283,
+  "guard_fix": "bounded fresh complete du rescan only for vanished atomic .tmp; no ignored partial accounting",
+  "resume": "reuse stage1 decision; reuse complete stage2 episodes; finish last anchor then original two proposals and final12x2",
+  "initial_failure_records": "retained unchanged",
+  "no_scientific_changes": true
+}

@@ -1,0 +1,261 @@
+{
+  "complete": true,
+  "stages": [
+    {
+      "stage": 1,
+      "before": {
+        "version": 0,
+        "sections": []
+      },
+      "after": {
+        "version": 0,
+        "sections": []
+      },
+      "decision": {
+        "accepted": false,
+        "reason": "no_candidate_passed_commit_gate",
+        "current_validation_primary_score": 0.25,
+        "commit_gate": {
+          "selection_objective": "stability",
+          "commit_policy": "strict_no_forgetting",
+          "historical_loss_budget": 0,
+          "min_primary_score_delta": 0.0,
+          "min_correct_gain": 1,
+          "max_forget_count": 0,
+          "min_format_compliance_rate": 1.0,
+          "recover_reward": 1.0,
+          "forget_penalty": 2.0,
+          "min_anchor_score": -1.0,
+          "min_anchor_net_score": null,
+          "max_anchor_forget_rate": null
+        },
+        "candidate_rejections": [
+          {
+            "candidate_id": "medical_workflow:h0:c10:Calculate Synthetic Quantities Workflow",
+            "reasons": [
+              "historical_loss_budget_exceeded"
+            ],
+            "primary_score_delta": 0.25,
+            "correct_gain": 1,
+            "forget_count": 0,
+            "anchor_forget_count": 3,
+            "anchor_recovered_count": 0,
+            "anchor_score": -6.0,
+            "anchor_net_score": -1.5,
+            "anchor_forget_rate": 0.0,
+            "anchor_task_primary_scores": {},
+            "format_compliance_rate": 1.0,
+            "behavior_comparable_count": 0,
+            "behavior_change_count": 0
+          },
+          {
+            "candidate_id": "medical_workflow:h0:c11:Medical Workflow for Synthetic Calculations",
+            "reasons": [
+              "historical_loss_budget_exceeded"
+            ],
+            "primary_score_delta": 0.25,
+            "correct_gain": 1,
+            "forget_count": 0,
+            "anchor_forget_count": 3,
+            "anchor_recovered_count": 0,
+            "anchor_score": -6.0,
+            "anchor_net_score": -1.5,
+            "anchor_forget_rate": 0.0,
+            "anchor_task_primary_scores": {},
+            "format_compliance_rate": 1.0,
+            "behavior_comparable_count": 0,
+            "behavior_change_count": 0
+          }
+        ]
+      },
+      "baseline_current": {
+        "correct": 1,
+        "total": 4,
+        "primary_score": 0.25,
+        "format_compliance_rate": 1.0
+      },
+      "historical_success_count": 3,
+      "candidate_pairs": {
+        "medical_workflow:h0:c10:Calculate Synthetic Quantities Workflow": {
+          "total": 4,
+          "forget_count": 3,
+          "recovered_count": 0,
+          "baseline_success_count": 3
+        },
+        "medical_workflow:h0:c11:Medical Workflow for Synthetic Calculations": {
+          "total": 4,
+          "forget_count": 3,
+          "recovered_count": 0,
+          "baseline_success_count": 3
+        }
+      }
+    },
+    {
+      "stage": 2,
+      "before": {
+        "version": 0,
+        "sections": []
+      },
+      "after": {
+        "version": 0,
+        "sections": []
+      },
+      "decision": {
+        "accepted": false,
+        "reason": "no_candidate_passed_commit_gate",
+        "current_validation_primary_score": 0.75,
+        "commit_gate": {
+          "selection_objective": "stability",
+          "commit_policy": "strict_no_forgetting",
+          "historical_loss_budget": 0,
+          "min_primary_score_delta": 0.0,
+          "min_correct_gain": 1,
+          "max_forget_count": 0,
+          "min_format_compliance_rate": 1.0,
+          "recover_reward": 1.0,
+          "forget_penalty": 2.0,
+          "min_anchor_score": -1.0,
+          "min_anchor_net_score": null,
+          "max_anchor_forget_rate": null
+        },
+        "candidate_rejections": [
+          {
+            "candidate_id": "medical_workflow:h0:c20:Calculate and Submit Synthetic Quantities",
+            "reasons": [
+              "correct_gain_below_minimum",
+              "historical_loss_budget_exceeded"
+            ],
+            "primary_score_delta": 0.0,
+            "correct_gain": 0,
+            "forget_count": 0,
+            "anchor_forget_count": 1,
+            "anchor_recovered_count": 0,
+            "anchor_score": -2.0,
+            "anchor_net_score": -0.25,
+            "anchor_forget_rate": 0.0,
+            "anchor_task_primary_scores": {},
+            "format_compliance_rate": 1.0,
+            "behavior_comparable_count": 0,
+            "behavior_change_count": 0
+          },
+          {
+            "candidate_id": "medical_workflow:h0:c21:Medical Workflow for Synthetic Calculations",
+            "reasons": [
+              "correct_gain_below_minimum",
+              "historical_loss_budget_exceeded"
+            ],
+            "primary_score_delta": 0.0,
+            "correct_gain": 0,
+            "forget_count": 0,
+            "anchor_forget_count": 1,
+            "anchor_recovered_count": 0,
+            "anchor_score": -2.0,
+            "anchor_net_score": -0.25,
+            "anchor_forget_rate": 0.0,
+            "anchor_task_primary_scores": {},
+            "format_compliance_rate": 1.0,
+            "behavior_comparable_count": 0,
+            "behavior_change_count": 0
+          }
+        ]
+      },
+      "baseline_current": {
+        "correct": 3,
+        "total": 4,
+        "primary_score": 0.75,
+        "format_compliance_rate": 1.0
+      },
+      "historical_success_count": 3,
+      "candidate_pairs": {
+        "medical_workflow:h0:c20:Calculate and Submit Synthetic Quantities": {
+          "total": 8,
+          "forget_count": 1,
+          "recovered_count": 0,
+          "baseline_success_count": 3
+        },
+        "medical_workflow:h0:c21:Medical Workflow for Synthetic Calculations": {
+          "total": 8,
+          "forget_count": 1,
+          "recovered_count": 0,
+          "baseline_success_count": 3
+        }
+      }
+    }
+  ],
+  "final_state": {
+    "version": 0,
+    "sections": []
+  },
+  "static": {
+    "correct": 5,
+    "total": 12,
+    "primary_score": 0.4166666666666667,
+    "format_compliance_rate": 1.0
+  },
+  "hcl": {
+    "correct": 5,
+    "total": 12,
+    "primary_score": 0.4166666666666667,
+    "format_compliance_rate": 1.0
+  },
+  "paired": {
+    "total": 12,
+    "forget_count": 0,
+    "recovered_count": 0,
+    "baseline_success_count": 5
+  },
+  "ci95": [
+    0.0,
+    0.0
+  ],
+  "mcnemar_p": 1.0,
+  "families": {
+    "confirm_basic": {
+      "static": {
+        "correct": 3,
+        "total": 4,
+        "primary_score": 0.75,
+        "format_compliance_rate": 1.0
+      },
+      "hcl": {
+        "correct": 3,
+        "total": 4,
+        "primary_score": 0.75,
+        "format_compliance_rate": 1.0
+      }
+    },
+    "confirm_dependency": {
+      "static": {
+        "correct": 0,
+        "total": 4,
+        "primary_score": 0.0,
+        "format_compliance_rate": 1.0
+      },
+      "hcl": {
+        "correct": 0,
+        "total": 4,
+        "primary_score": 0.0,
+        "format_compliance_rate": 1.0
+      }
+    },
+    "confirm_submission": {
+      "static": {
+        "correct": 2,
+        "total": 4,
+        "primary_score": 0.5,
+        "format_compliance_rate": 1.0
+      },
+      "hcl": {
+        "correct": 2,
+        "total": 4,
+        "primary_score": 0.5,
+        "format_compliance_rate": 1.0
+      }
+    }
+  },
+  "model_calls": 317,
+  "initial_attempted_calls": 283,
+  "initial_completed_generations": 282,
+  "mechanism_signal": false,
+  "scope": "synthetic restricted workflow-only HCL; not clinical or full original reproduction"
+}

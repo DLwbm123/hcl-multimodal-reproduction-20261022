@@ -1,0 +1,22 @@
+{
+  "complete": true,
+  "evaluated_episodes": 92,
+  "model_calls": 599,
+  "attempted_calls": 600,
+  "original_interrupted_calls": 1,
+  "reused_stage2_episodes": 15,
+  "new_completed_calls": 317,
+  "generation_seconds": 704.749014377594,
+  "input_tokens": 1036704,
+  "output_tokens": 33443,
+  "invalid_tool_calls": 20,
+  "confirmation_cases_per_arm": 12,
+  "checks": [
+    "role isolation",
+    "fixed paired confirmation",
+    "candidate generation train-only prompts",
+    "full anchor pairs",
+    "commit/rollback state",
+    "call accounting"
+  ]
+}
