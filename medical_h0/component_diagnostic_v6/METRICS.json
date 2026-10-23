@@ -1,0 +1,133 @@
+{
+  "status": "COMPONENT_GATE_FAIL",
+  "stages": {
+    "submission": {
+      "attempted": 6,
+      "correct": 6,
+      "passed": true
+    },
+    "navigation": {
+      "attempted": 6,
+      "correct": 2,
+      "passed": false
+    }
+  },
+  "cases": [
+    {
+      "id": "S01",
+      "stage": "submission",
+      "termination": "submitted",
+      "model_requests": 1,
+      "invalid_tool_calls": 0,
+      "correct": true
+    },
+    {
+      "id": "S02",
+      "stage": "submission",
+      "termination": "submitted",
+      "model_requests": 1,
+      "invalid_tool_calls": 0,
+      "correct": true
+    },
+    {
+      "id": "S03",
+      "stage": "submission",
+      "termination": "submitted",
+      "model_requests": 1,
+      "invalid_tool_calls": 0,
+      "correct": true
+    },
+    {
+      "id": "S04",
+      "stage": "submission",
+      "termination": "submitted",
+      "model_requests": 1,
+      "invalid_tool_calls": 0,
+      "correct": true
+    },
+    {
+      "id": "S05",
+      "stage": "submission",
+      "termination": "submitted",
+      "model_requests": 1,
+      "invalid_tool_calls": 0,
+      "correct": true
+    },
+    {
+      "id": "S06",
+      "stage": "submission",
+      "termination": "submitted",
+      "model_requests": 1,
+      "invalid_tool_calls": 0,
+      "correct": true
+    },
+    {
+      "id": "N01",
+      "stage": "navigation",
+      "termination": "submitted",
+      "model_requests": 2,
+      "invalid_tool_calls": 0,
+      "correct": false,
+      "observation_recovered": false
+    },
+    {
+      "id": "N02",
+      "stage": "navigation",
+      "termination": "submitted",
+      "model_requests": 3,
+      "invalid_tool_calls": 0,
+      "correct": false,
+      "observation_recovered": false
+    },
+    {
+      "id": "N03",
+      "stage": "navigation",
+      "termination": "submitted",
+      "model_requests": 3,
+      "invalid_tool_calls": 0,
+      "correct": false,
+      "observation_recovered": false
+    },
+    {
+      "id": "N04",
+      "stage": "navigation",
+      "termination": "submitted",
+      "model_requests": 1,
+      "invalid_tool_calls": 0,
+      "correct": true,
+      "observation_recovered": false
+    },
+    {
+      "id": "N05",
+      "stage": "navigation",
+      "termination": "submitted",
+      "model_requests": 2,
+      "invalid_tool_calls": 0,
+      "correct": true,
+      "observation_recovered": true
+    },
+    {
+      "id": "N06",
+      "stage": "navigation",
+      "termination": "submitted",
+      "model_requests": 2,
+      "invalid_tool_calls": 0,
+      "correct": false,
+      "observation_recovered": false
+    }
+  ],
+  "model_requests": 19,
+  "planned_cases": 18,
+  "attempted_cases": 12,
+  "unattempted_cases": [
+    "M01",
+    "M02",
+    "M03",
+    "M04",
+    "M05",
+    "M06"
+  ],
+  "hcl_started": false,
+  "synthetic_only": true,
+  "time": 1792757597.5983884
+}

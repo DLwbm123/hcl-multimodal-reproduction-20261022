@@ -1,0 +1,689 @@
+{
+  "synthetic_only": true,
+  "contains_benchmark_records": false,
+  "post_run_manual_review": true,
+  "cases": [
+    {
+      "id": "N01",
+      "stage": "navigation",
+      "answer": {
+        "status": "success",
+        "fact_ids": [
+          "fact_0001",
+          "fact_0002",
+          "fact_0003",
+          "fact_0004"
+        ]
+      },
+      "model_requests": 2,
+      "seed_tool_requests": 0,
+      "trace": [
+        {
+          "role": "assistant",
+          "content": "",
+          "tool_calls": [
+            {
+              "name": "read_facts",
+              "args": {
+                "offset": 0,
+                "limit": 4
+              },
+              "id": "7-0",
+              "type": "tool_call"
+            }
+          ],
+          "invalid_tool_calls": []
+        },
+        {
+          "role": "tool",
+          "name": "read_facts",
+          "content": "{\"rows\": [{\"patient_id\": \"synthetic_patient\", \"episode_id\": \"synthetic_visit\", \"field_name\": \"distractor_0\", \"value_text\": \"100\", \"unit\": \"\", \"observed_at\": \"synthetic\", \"sample_type\": \"synthetic\", \"source\": \"synthetic_fixture\", \"fact_id\": \"fact_0001\"}, {\"patient_id\": \"synthetic_patient\", \"episode_id\": \"synthetic_visit\", \"field_name\": \"distractor_1\", \"value_text\": \"101\", \"unit\": \"\", \"observed_at\": \"synthetic\", \"sample_type\": \"synthetic\", \"source\": \"synthetic_fixture\", \"fact_id\": \"fact_0002\"}, {\"patient_id\": \"synthetic_patient\", \"episode_id\": \"synthetic_visit\", \"field_name\": \"distractor_2\", \"value_text\": \"102\", \"unit\": \"\", \"observed_at\": \"synthetic\", \"sample_type\": \"synthetic\", \"source\": \"synthetic_fixture\", \"fact_id\": \"fact_0003\"}, {\"patient_id\": \"synthetic_patient\", \"episode_id\": \"synthetic_visit\", \"field_name\": \"distractor_3\", \"value_text\": \"103\", \"unit\": \"\", \"observed_at\": \"synthetic\", \"sample_type\": \"synthetic\", \"source\": \"synthetic_fixture\", \"fact_id\": \"fact_0004\"}], \"total\": 12, \"next_offset\": 4, \"observation_id\": \"observation_001\"}",
+          "status": "success"
+        },
+        {
+          "role": "assistant",
+          "content": "",
+          "tool_calls": [
+            {
+              "name": "report_evidence",
+              "args": {
+                "fact_ids": [
+                  "fact_0001",
+                  "fact_0002",
+                  "fact_0003",
+                  "fact_0004"
+                ]
+              },
+              "id": "8-0",
+              "type": "tool_call"
+            }
+          ],
+          "invalid_tool_calls": []
+        },
+        {
+          "role": "tool",
+          "name": "report_evidence",
+          "content": "{\"reported\": true, \"observation_id\": \"observation_002\"}",
+          "status": "success"
+        }
+      ],
+      "expected_fact_ids": [
+        "fact_0010"
+      ],
+      "manual_review": "Read only the first page, then reported all four unrelated facts.",
+      "read_pages": [
+        {
+          "offset": 0,
+          "count": 4,
+          "next_offset": 4
+        }
+      ]
+    },
+    {
+      "id": "N02",
+      "stage": "navigation",
+      "answer": {
+        "status": "success",
+        "fact_ids": [
+          "fact_0002",
+          "fact_0004"
+        ]
+      },
+      "model_requests": 3,
+      "seed_tool_requests": 0,
+      "trace": [
+        {
+          "role": "assistant",
+          "content": "",
+          "tool_calls": [
+            {
+              "name": "read_facts",
+              "args": {
+                "offset": 0,
+                "limit": 4
+              },
+              "id": "9-0",
+              "type": "tool_call"
+            }
+          ],
+          "invalid_tool_calls": []
+        },
+        {
+          "role": "tool",
+          "name": "read_facts",
+          "content": "{\"rows\": [{\"patient_id\": \"synthetic_patient\", \"episode_id\": \"synthetic_visit\", \"field_name\": \"distractor_0\", \"value_text\": \"100\", \"unit\": \"\", \"observed_at\": \"synthetic\", \"sample_type\": \"synthetic\", \"source\": \"synthetic_fixture\", \"fact_id\": \"fact_0001\"}, {\"patient_id\": \"synthetic_patient\", \"episode_id\": \"synthetic_visit\", \"field_name\": \"first_marker\", \"value_text\": \"7\", \"unit\": \"\", \"observed_at\": \"synthetic\", \"sample_type\": \"synthetic\", \"source\": \"synthetic_fixture\", \"fact_id\": \"fact_0002\"}, {\"patient_id\": \"synthetic_patient\", \"episode_id\": \"synthetic_visit\", \"field_name\": \"distractor_2\", \"value_text\": \"102\", \"unit\": \"\", \"observed_at\": \"synthetic\", \"sample_type\": \"synthetic\", \"source\": \"synthetic_fixture\", \"fact_id\": \"fact_0003\"}, {\"patient_id\": \"synthetic_patient\", \"episode_id\": \"synthetic_visit\", \"field_name\": \"distractor_3\", \"value_text\": \"103\", \"unit\": \"\", \"observed_at\": \"synthetic\", \"sample_type\": \"synthetic\", \"source\": \"synthetic_fixture\", \"fact_id\": \"fact_0004\"}], \"total\": 12, \"next_offset\": 4, \"observation_id\": \"observation_001\"}",
+          "status": "success"
+        },
+        {
+          "role": "assistant",
+          "content": "",
+          "tool_calls": [
+            {
+              "name": "read_facts",
+              "args": {
+                "offset": 4,
+                "limit": 4
+              },
+              "id": "10-0",
+              "type": "tool_call"
+            }
+          ],
+          "invalid_tool_calls": []
+        },
+        {
+          "role": "tool",
+          "name": "read_facts",
+          "content": "{\"rows\": [{\"patient_id\": \"synthetic_patient\", \"episode_id\": \"synthetic_visit\", \"field_name\": \"distractor_4\", \"value_text\": \"104\", \"unit\": \"\", \"observed_at\": \"synthetic\", \"sample_type\": \"synthetic\", \"source\": \"synthetic_fixture\", \"fact_id\": \"fact_0005\"}, {\"patient_id\": \"synthetic_patient\", \"episode_id\": \"synthetic_visit\", \"field_name\": \"distractor_5\", \"value_text\": \"105\", \"unit\": \"\", \"observed_at\": \"synthetic\", \"sample_type\": \"synthetic\", \"source\": \"synthetic_fixture\", \"fact_id\": \"fact_0006\"}, {\"patient_id\": \"synthetic_patient\", \"episode_id\": \"synthetic_visit\", \"field_name\": \"distractor_6\", \"value_text\": \"106\", \"unit\": \"\", \"observed_at\": \"synthetic\", \"sample_type\": \"synthetic\", \"source\": \"synthetic_fixture\", \"fact_id\": \"fact_0007\"}, {\"patient_id\": \"synthetic_patient\", \"episode_id\": \"synthetic_visit\", \"field_name\": \"distractor_7\", \"value_text\": \"107\", \"unit\": \"\", \"observed_at\": \"synthetic\", \"sample_type\": \"synthetic\", \"source\": \"synthetic_fixture\", \"fact_id\": \"fact_0008\"}], \"total\": 12, \"next_offset\": 8, \"observation_id\": \"observation_002\"}",
+          "status": "success"
+        },
+        {
+          "role": "assistant",
+          "content": "",
+          "tool_calls": [
+            {
+              "name": "report_evidence",
+              "args": {
+                "fact_ids": [
+                  "fact_0002",
+                  "fact_0004"
+                ]
+              },
+              "id": "11-0",
+              "type": "tool_call"
+            }
+          ],
+          "invalid_tool_calls": []
+        },
+        {
+          "role": "tool",
+          "name": "report_evidence",
+          "content": "{\"reported\": true, \"observation_id\": \"observation_003\"}",
+          "status": "success"
+        }
+      ],
+      "expected_fact_ids": [
+        "fact_0002",
+        "fact_0011"
+      ],
+      "manual_review": "Read two pages, then paired first_marker with an unrelated first-page fact; never read the third page.",
+      "read_pages": [
+        {
+          "offset": 0,
+          "count": 4,
+          "next_offset": 4
+        },
+        {
+          "offset": 4,
+          "count": 4,
+          "next_offset": 8
+        }
+      ]
+    },
+    {
+      "id": "N03",
+      "stage": "navigation",
+      "answer": {
+        "status": "abstain",
+        "reason": "No matching facts found for the target scope."
+      },
+      "model_requests": 3,
+      "seed_tool_requests": 0,
+      "trace": [
+        {
+          "role": "assistant",
+          "content": "",
+          "tool_calls": [
+            {
+              "name": "read_facts",
+              "args": {
+                "offset": 0,
+                "limit": 4
+              },
+              "id": "12-0",
+              "type": "tool_call"
+            }
+          ],
+          "invalid_tool_calls": []
+        },
+        {
+          "role": "tool",
+          "name": "read_facts",
+          "content": "{\"rows\": [{\"patient_id\": \"synthetic_patient\", \"episode_id\": \"old_visit\", \"field_name\": \"requested_marker\", \"value_text\": \"old\", \"unit\": \"\", \"observed_at\": \"synthetic\", \"sample_type\": \"synthetic\", \"source\": \"synthetic_fixture\", \"fact_id\": \"fact_0001\"}, {\"patient_id\": \"synthetic_patient\", \"episode_id\": \"synthetic_visit\", \"field_name\": \"distractor_1\", \"value_text\": \"101\", \"unit\": \"\", \"observed_at\": \"synthetic\", \"sample_type\": \"synthetic\", \"source\": \"synthetic_fixture\", \"fact_id\": \"fact_0002\"}, {\"patient_id\": \"other_synthetic_patient\", \"episode_id\": \"synthetic_visit\", \"field_name\": \"requested_marker\", \"value_text\": \"other\", \"unit\": \"\", \"observed_at\": \"synthetic\", \"sample_type\": \"synthetic\", \"source\": \"synthetic_fixture\", \"fact_id\": \"fact_0003\"}, {\"patient_id\": \"synthetic_patient\", \"episode_id\": \"synthetic_visit\", \"field_name\": \"distractor_3\", \"value_text\": \"103\", \"unit\": \"\", \"observed_at\": \"synthetic\", \"sample_type\": \"synthetic\", \"source\": \"synthetic_fixture\", \"fact_id\": \"fact_0004\"}], \"total\": 12, \"next_offset\": 4, \"observation_id\": \"observation_001\"}",
+          "status": "success"
+        },
+        {
+          "role": "assistant",
+          "content": "",
+          "tool_calls": [
+            {
+              "name": "report_evidence",
+              "args": {
+                "fact_ids": [
+                  "fact_0001",
+                  "fact_0002"
+                ]
+              },
+              "id": "13-0",
+              "type": "tool_call"
+            }
+          ],
+          "invalid_tool_calls": []
+        },
+        {
+          "role": "tool",
+          "name": "report_evidence",
+          "content": "{\"error\": \"ValueError\", \"detail\": \"Evidence outside the target scope\", \"observation_id\": \"observation_002\"}",
+          "status": "error"
+        },
+        {
+          "role": "assistant",
+          "content": "",
+          "tool_calls": [
+            {
+              "name": "abstain",
+              "args": {
+                "reason": "No matching facts found for the target scope."
+              },
+              "id": "14-0",
+              "type": "tool_call"
+            }
+          ],
+          "invalid_tool_calls": []
+        },
+        {
+          "role": "tool",
+          "name": "abstain",
+          "content": "{\"reported\": true, \"status\": \"abstain\", \"observation_id\": \"observation_003\"}",
+          "status": "success"
+        }
+      ],
+      "expected_fact_ids": [
+        "fact_0010"
+      ],
+      "manual_review": "Reported an old-episode fact plus a distractor; scope guard rejected it, then the model abstained without reading the later page.",
+      "read_pages": [
+        {
+          "offset": 0,
+          "count": 4,
+          "next_offset": 4
+        }
+      ]
+    },
+    {
+      "id": "N04",
+      "stage": "navigation",
+      "answer": {
+        "status": "success",
+        "fact_ids": [
+          "fact_0002"
+        ]
+      },
+      "model_requests": 1,
+      "seed_tool_requests": 1,
+      "trace": [
+        {
+          "role": "assistant",
+          "content": "",
+          "tool_calls": [
+            {
+              "name": "report_evidence",
+              "args": {
+                "fact_ids": [
+                  "fact_0002"
+                ]
+              },
+              "id": "15-0",
+              "type": "tool_call"
+            }
+          ],
+          "invalid_tool_calls": []
+        },
+        {
+          "role": "tool",
+          "name": "report_evidence",
+          "content": "{\"reported\": true, \"observation_id\": \"observation_002\"}",
+          "status": "success"
+        }
+      ],
+      "expected_fact_ids": [
+        "fact_0002"
+      ],
+      "manual_review": "Selected the correct fact from persistent read evidence with no seeded dialogue history.",
+      "read_pages": [
+        {
+          "offset": 0,
+          "count": 4,
+          "next_offset": 4
+        }
+      ]
+    },
+    {
+      "id": "N05",
+      "stage": "navigation",
+      "answer": {
+        "status": "success",
+        "fact_ids": [
+          "fact_0003"
+        ]
+      },
+      "model_requests": 2,
+      "seed_tool_requests": 1,
+      "trace": [
+        {
+          "role": "assistant",
+          "content": "",
+          "tool_calls": [
+            {
+              "name": "get_observation",
+              "args": {
+                "observation_id": "observation_001"
+              },
+              "id": "16-0",
+              "type": "tool_call"
+            }
+          ],
+          "invalid_tool_calls": []
+        },
+        {
+          "role": "tool",
+          "name": "get_observation",
+          "content": "{\"rows\": [{\"patient_id\": \"synthetic_patient\", \"episode_id\": \"synthetic_visit\", \"field_name\": \"distractor_0\", \"value_text\": \"100\", \"unit\": \"\", \"observed_at\": \"synthetic\", \"sample_type\": \"synthetic\", \"source\": \"synthetic_fixture\", \"fact_id\": \"fact_0001\"}, {\"patient_id\": \"synthetic_patient\", \"episode_id\": \"synthetic_visit\", \"field_name\": \"distractor_1\", \"value_text\": \"101\", \"unit\": \"\", \"observed_at\": \"synthetic\", \"sample_type\": \"synthetic\", \"source\": \"synthetic_fixture\", \"fact_id\": \"fact_0002\"}, {\"patient_id\": \"synthetic_patient\", \"episode_id\": \"synthetic_visit\", \"field_name\": \"recover_marker\", \"value_text\": \"available\", \"unit\": \"\", \"observed_at\": \"synthetic\", \"sample_type\": \"synthetic\", \"source\": \"synthetic_fixture\", \"fact_id\": \"fact_0003\"}, {\"patient_id\": \"synthetic_patient\", \"episode_id\": \"synthetic_visit\", \"field_name\": \"distractor_3\", \"value_text\": \"103\", \"unit\": \"\", \"observed_at\": \"synthetic\", \"sample_type\": \"synthetic\", \"source\": \"synthetic_fixture\", \"fact_id\": \"fact_0004\"}], \"total\": 12, \"next_offset\": 4, \"observation_id\": \"observation_001\", \"retrieved\": true}",
+          "status": "success"
+        },
+        {
+          "role": "assistant",
+          "content": "",
+          "tool_calls": [
+            {
+              "name": "report_evidence",
+              "args": {
+                "fact_ids": [
+                  "fact_0003"
+                ]
+              },
+              "id": "17-0",
+              "type": "tool_call"
+            }
+          ],
+          "invalid_tool_calls": []
+        },
+        {
+          "role": "tool",
+          "name": "report_evidence",
+          "content": "{\"reported\": true, \"observation_id\": \"observation_002\"}",
+          "status": "success"
+        }
+      ],
+      "expected_fact_ids": [
+        "fact_0003"
+      ],
+      "manual_review": "Actually retrieved observation_001 and reported the correct supporting fact.",
+      "read_pages": [
+        {
+          "offset": 0,
+          "count": 4,
+          "next_offset": 4
+        }
+      ]
+    },
+    {
+      "id": "N06",
+      "stage": "navigation",
+      "answer": {
+        "status": "success",
+        "fact_ids": [
+          "fact_0001",
+          "fact_0002",
+          "fact_0003",
+          "fact_0004"
+        ]
+      },
+      "model_requests": 2,
+      "seed_tool_requests": 1,
+      "trace": [
+        {
+          "role": "assistant",
+          "content": "",
+          "tool_calls": [
+            {
+              "name": "read_facts",
+              "args": {
+                "offset": 0
+              },
+              "id": "18-0",
+              "type": "tool_call"
+            }
+          ],
+          "invalid_tool_calls": []
+        },
+        {
+          "role": "tool",
+          "name": "read_facts",
+          "content": "{\"rows\": [{\"patient_id\": \"synthetic_patient\", \"episode_id\": \"synthetic_visit\", \"field_name\": \"distractor_0\", \"value_text\": \"100\", \"unit\": \"\", \"observed_at\": \"synthetic\", \"sample_type\": \"synthetic\", \"source\": \"synthetic_fixture\", \"fact_id\": \"fact_0001\"}, {\"patient_id\": \"synthetic_patient\", \"episode_id\": \"synthetic_visit\", \"field_name\": \"distractor_1\", \"value_text\": \"101\", \"unit\": \"\", \"observed_at\": \"synthetic\", \"sample_type\": \"synthetic\", \"source\": \"synthetic_fixture\", \"fact_id\": \"fact_0002\"}, {\"patient_id\": \"synthetic_patient\", \"episode_id\": \"synthetic_visit\", \"field_name\": \"distractor_2\", \"value_text\": \"102\", \"unit\": \"\", \"observed_at\": \"synthetic\", \"sample_type\": \"synthetic\", \"source\": \"synthetic_fixture\", \"fact_id\": \"fact_0003\"}, {\"patient_id\": \"synthetic_patient\", \"episode_id\": \"synthetic_visit\", \"field_name\": \"distractor_3\", \"value_text\": \"103\", \"unit\": \"\", \"observed_at\": \"synthetic\", \"sample_type\": \"synthetic\", \"source\": \"synthetic_fixture\", \"fact_id\": \"fact_0004\"}], \"total\": 12, \"next_offset\": 4, \"observation_id\": \"observation_002\"}",
+          "status": "success"
+        },
+        {
+          "role": "assistant",
+          "content": "",
+          "tool_calls": [
+            {
+              "name": "report_evidence",
+              "args": {
+                "fact_ids": [
+                  "fact_0001",
+                  "fact_0002",
+                  "fact_0003",
+                  "fact_0004"
+                ]
+              },
+              "id": "19-0",
+              "type": "tool_call"
+            }
+          ],
+          "invalid_tool_calls": []
+        },
+        {
+          "role": "tool",
+          "name": "report_evidence",
+          "content": "{\"reported\": true, \"observation_id\": \"observation_003\"}",
+          "status": "success"
+        }
+      ],
+      "expected_fact_ids": [
+        "fact_0010"
+      ],
+      "manual_review": "After a CPU-seeded unread-source failure, read only the first page and reported distractors; never retried the originally failed request after reading its source.",
+      "read_pages": [
+        {
+          "offset": 0,
+          "count": 4,
+          "next_offset": 4
+        }
+      ]
+    },
+    {
+      "id": "S01",
+      "stage": "submission",
+      "answer": {
+        "status": "success",
+        "result_id": "result_001",
+        "calculator_id": "anion_gap",
+        "patient_id": "synthetic_patient",
+        "episode_id": "synthetic_visit",
+        "value": 12,
+        "unit": "synthetic"
+      },
+      "model_requests": 1,
+      "seed_tool_requests": 0,
+      "trace": [
+        {
+          "role": "assistant",
+          "content": "",
+          "tool_calls": [
+            {
+              "name": "submit_result",
+              "args": {
+                "result_id": "result_001"
+              },
+              "id": "1-0",
+              "type": "tool_call"
+            }
+          ],
+          "invalid_tool_calls": []
+        },
+        {
+          "role": "tool",
+          "name": "submit_result",
+          "content": "{\"reported\": true, \"status\": \"success\", \"observation_id\": \"observation_001\"}",
+          "status": "success"
+        }
+      ],
+      "manual_review": "Matches predeclared submission-only fixture; seeded ledger values are not model computations. Abstention fixtures check terminal action, not reason specificity."
+    },
+    {
+      "id": "S02",
+      "stage": "submission",
+      "answer": {
+        "status": "success",
+        "result_id": "result_002",
+        "calculator_id": "spesi",
+        "patient_id": "synthetic_patient",
+        "episode_id": "synthetic_visit",
+        "value": "high",
+        "unit": "synthetic"
+      },
+      "model_requests": 1,
+      "seed_tool_requests": 0,
+      "trace": [
+        {
+          "role": "assistant",
+          "content": "",
+          "tool_calls": [
+            {
+              "name": "submit_result",
+              "args": {
+                "result_id": "result_002"
+              },
+              "id": "2-0",
+              "type": "tool_call"
+            }
+          ],
+          "invalid_tool_calls": []
+        },
+        {
+          "role": "tool",
+          "name": "submit_result",
+          "content": "{\"reported\": true, \"status\": \"success\", \"observation_id\": \"observation_001\"}",
+          "status": "success"
+        }
+      ],
+      "manual_review": "Matches predeclared submission-only fixture; seeded ledger values are not model computations. Abstention fixtures check terminal action, not reason specificity."
+    },
+    {
+      "id": "S03",
+      "stage": "submission",
+      "answer": {
+        "status": "success",
+        "result_id": "result_017",
+        "calculator_id": "rass",
+        "patient_id": "synthetic_patient",
+        "episode_id": "synthetic_visit",
+        "value": -2,
+        "unit": "synthetic"
+      },
+      "model_requests": 1,
+      "seed_tool_requests": 0,
+      "trace": [
+        {
+          "role": "assistant",
+          "content": "",
+          "tool_calls": [
+            {
+              "name": "submit_result",
+              "args": {
+                "result_id": "result_017"
+              },
+              "id": "3-0",
+              "type": "tool_call"
+            }
+          ],
+          "invalid_tool_calls": []
+        },
+        {
+          "role": "tool",
+          "name": "submit_result",
+          "content": "{\"reported\": true, \"status\": \"success\", \"observation_id\": \"observation_001\"}",
+          "status": "success"
+        }
+      ],
+      "manual_review": "Matches predeclared submission-only fixture; seeded ledger values are not model computations. Abstention fixtures check terminal action, not reason specificity."
+    },
+    {
+      "id": "S04",
+      "stage": "submission",
+      "answer": {
+        "status": "abstain",
+        "reason": "Insufficient evidence"
+      },
+      "model_requests": 1,
+      "seed_tool_requests": 0,
+      "trace": [
+        {
+          "role": "assistant",
+          "content": "",
+          "tool_calls": [
+            {
+              "name": "abstain",
+              "args": {
+                "reason": "Insufficient evidence"
+              },
+              "id": "4-0",
+              "type": "tool_call"
+            }
+          ],
+          "invalid_tool_calls": []
+        },
+        {
+          "role": "tool",
+          "name": "abstain",
+          "content": "{\"reported\": true, \"status\": \"abstain\", \"observation_id\": \"observation_001\"}",
+          "status": "success"
+        }
+      ],
+      "manual_review": "Matches predeclared submission-only fixture; seeded ledger values are not model computations. Abstention fixtures check terminal action, not reason specificity."
+    },
+    {
+      "id": "S05",
+      "stage": "submission",
+      "answer": {
+        "status": "abstain",
+        "reason": "Insufficient evidence"
+      },
+      "model_requests": 1,
+      "seed_tool_requests": 0,
+      "trace": [
+        {
+          "role": "assistant",
+          "content": "",
+          "tool_calls": [
+            {
+              "name": "abstain",
+              "args": {
+                "reason": "Insufficient evidence"
+              },
+              "id": "5-0",
+              "type": "tool_call"
+            }
+          ],
+          "invalid_tool_calls": []
+        },
+        {
+          "role": "tool",
+          "name": "abstain",
+          "content": "{\"reported\": true, \"status\": \"abstain\", \"observation_id\": \"observation_001\"}",
+          "status": "success"
+        }
+      ],
+      "manual_review": "Matches predeclared submission-only fixture; seeded ledger values are not model computations. Abstention fixtures check terminal action, not reason specificity."
+    },
+    {
+      "id": "S06",
+      "stage": "submission",
+      "answer": {
+        "status": "success",
+        "result_id": "result_002",
+        "calculator_id": "anion_gap",
+        "patient_id": "synthetic_patient",
+        "episode_id": "synthetic_visit",
+        "value": 14,
+        "unit": "synthetic"
+      },
+      "model_requests": 1,
+      "seed_tool_requests": 0,
+      "trace": [
+        {
+          "role": "assistant",
+          "content": "",
+          "tool_calls": [
+            {
+              "name": "submit_result",
+              "args": {
+                "result_id": "result_002"
+              },
+              "id": "6-0",
+              "type": "tool_call"
+            }
+          ],
+          "invalid_tool_calls": []
+        },
+        {
+          "role": "tool",
+          "name": "submit_result",
+          "content": "{\"reported\": true, \"status\": \"success\", \"observation_id\": \"observation_001\"}",
+          "status": "success"
+        }
+      ],
+      "manual_review": "Matches predeclared submission-only fixture; seeded ledger values are not model computations. Abstention fixtures check terminal action, not reason specificity."
+    }
+  ]
+}

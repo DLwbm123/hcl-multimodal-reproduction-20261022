@@ -1,5 +1,7 @@
 # Component diagnostic v6
 
+Completed: **COMPONENT_GATE_FAIL**. Submission passed 6/6; navigation passed 2/6; all six mapping cases were unattempted under the frozen gate. There were 19 real model generations. See [the Chinese report](REPORT.zh-CN.md), [metrics](METRICS.json), [closure audit](COMPLETION_AUDIT.json), and [synthetic-only tool traces](SYNTHETIC_EVIDENCE_AUDIT.json). No HCL or old benchmark replay was started.
+
 Bounded synthetic diagnostics following the failed v5 H0. The v5 implementation and results remain frozen. This directory reuses its unchanged formula library, official inference transport, scorer and graph adapter; it repairs terminal-tool contracts, mutable-state error caching and evidence visibility in `runtime_v6.py`.
 
 Run `test_components.py` in the recorded environment with the existing v5 dependencies. Its recovery regression reproduces the old cached-error failure, then requires the new implementation to succeed after reading the missing fact. The other checks cover terminal schemas, immutable/full-body success caching, durable evidence/cursors, source/output boundaries, and all navigation/mapping reference paths. No CPU check calls a model.
