@@ -1,0 +1,190 @@
+{
+  "protocol": "official_fncall_v1",
+  "gate_passed": false,
+  "cpu_tests": {
+    "passed": 13,
+    "total": 13
+  },
+  "scripted_graph_cases": 6,
+  "actual_generations_total": 144,
+  "new_hcl_runs": 0,
+  "os_sandbox": false,
+  "benchmark_cases_read": 0,
+  "scope": "Synthetic engineering acceptance only; no clinical benchmark or CL result.",
+  "censoring": "Final Nous recovery episode stopped at shared 144-call cap; provider_failure is budget exhaustion, not a malformed response. It is not a completed negative accuracy observation.",
+  "arms": {
+    "legacy_qwen_compatibility": {
+      "passed": false,
+      "episodes": [
+        {
+          "case": "synthetic_bmi",
+          "passed": true,
+          "termination": "submitted",
+          "requests": 6,
+          "utility": 1.0,
+          "correct_outputs": 1,
+          "scored_outputs": 1,
+          "injected_error": false,
+          "tool_errors": 0,
+          "submitted": true
+        },
+        {
+          "case": "synthetic_chain",
+          "passed": false,
+          "termination": "budget",
+          "requests": 24,
+          "utility": 0.0,
+          "correct_outputs": 0,
+          "scored_outputs": 0,
+          "injected_error": false,
+          "tool_errors": 9,
+          "submitted": false
+        },
+        {
+          "case": "new_bmi",
+          "passed": true,
+          "termination": "submitted",
+          "requests": 6,
+          "utility": 1.0,
+          "correct_outputs": 1,
+          "scored_outputs": 1,
+          "injected_error": false,
+          "tool_errors": 0,
+          "submitted": true
+        },
+        {
+          "case": "new_chain",
+          "passed": false,
+          "termination": "budget",
+          "requests": 24,
+          "utility": 0.0,
+          "correct_outputs": 0,
+          "scored_outputs": 0,
+          "injected_error": false,
+          "tool_errors": 10,
+          "submitted": false
+        },
+        {
+          "case": "new_bmi__recovery",
+          "passed": true,
+          "termination": "submitted",
+          "requests": 17,
+          "utility": 1.0,
+          "correct_outputs": 1,
+          "scored_outputs": 1,
+          "injected_error": true,
+          "tool_errors": 1,
+          "submitted": true
+        },
+        {
+          "case": "new_chain__recovery",
+          "passed": false,
+          "termination": "budget",
+          "requests": 24,
+          "utility": 0.0,
+          "correct_outputs": 0,
+          "scored_outputs": 0,
+          "injected_error": true,
+          "tool_errors": 14,
+          "submitted": false
+        }
+      ],
+      "actual_generations": 101,
+      "parsed_valid_calls": 69,
+      "parsed_invalid_calls": 32,
+      "generation_seconds_including_load": 170.23006296157837,
+      "input_tokens": 354406,
+      "output_tokens": 6504,
+      "exit_code": 2,
+      "supervisor_exit_code": 2
+    },
+    "qwen25vl_nous": {
+      "passed": false,
+      "episodes": [
+        {
+          "case": "synthetic_bmi",
+          "passed": true,
+          "termination": "submitted",
+          "requests": 5,
+          "utility": 1.0,
+          "correct_outputs": 1,
+          "scored_outputs": 1,
+          "injected_error": false,
+          "tool_errors": 0,
+          "submitted": true
+        },
+        {
+          "case": "synthetic_chain",
+          "passed": false,
+          "termination": "submitted",
+          "requests": 8,
+          "utility": 0.5,
+          "correct_outputs": 1,
+          "scored_outputs": 2,
+          "injected_error": false,
+          "tool_errors": 0,
+          "submitted": true
+        },
+        {
+          "case": "new_bmi",
+          "passed": true,
+          "termination": "submitted",
+          "requests": 6,
+          "utility": 1.0,
+          "correct_outputs": 1,
+          "scored_outputs": 1,
+          "injected_error": false,
+          "tool_errors": 0,
+          "submitted": true
+        },
+        {
+          "case": "new_chain",
+          "passed": false,
+          "termination": "submitted",
+          "requests": 8,
+          "utility": 0.5,
+          "correct_outputs": 1,
+          "scored_outputs": 2,
+          "injected_error": false,
+          "tool_errors": 0,
+          "submitted": true
+        },
+        {
+          "case": "new_bmi__recovery",
+          "passed": false,
+          "termination": "submitted",
+          "requests": 7,
+          "utility": 0.0,
+          "correct_outputs": 0,
+          "scored_outputs": 0,
+          "injected_error": true,
+          "tool_errors": 1,
+          "submitted": true
+        },
+        {
+          "case": "new_chain__recovery",
+          "passed": false,
+          "termination": "provider_failure",
+          "requests": 10,
+          "utility": 0.0,
+          "correct_outputs": 0,
+          "scored_outputs": 0,
+          "injected_error": true,
+          "tool_errors": 1,
+          "submitted": false
+        }
+      ],
+      "actual_generations": 43,
+      "parsed_valid_calls": 43,
+      "parsed_invalid_calls": 0,
+      "generation_seconds_including_load": 48.821457386016846,
+      "input_tokens": 71566,
+      "output_tokens": 1910,
+      "exit_code": 2,
+      "supervisor_exit_code": 2
+    }
+  },
+  "runtime_closed": true,
+  "accounted_bytes_including_10MB_reserve": 102504064,
+  "elapsed_seconds_from_setup_to_last_worker_exit": 537.5294332504272
+}

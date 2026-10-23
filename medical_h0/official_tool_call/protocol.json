@@ -1,0 +1,32 @@
+{
+  "version": "official_fncall_v1",
+  "hypothesis": "Replacing bespoke whole-response JSON with official Qwen-Agent function-call formatting, continuation, stop markers and parsing removes transport failure in the frozen restricted MedTool executor.",
+  "official_source": {
+    "qwen_agent_commit": "31a4d36d123688581a9e9744427272b33ce940e0",
+    "version": "0.0.34",
+    "example": "examples/qwen2vl_function_calling.py",
+    "protocol": "fncall_prompt_type=qwen; no parallel calls; no SDK retries",
+    "medicalharness_commit": "8727186f04c25646e7ee1b9428f3b6dcd4239382"
+  },
+  "frozen": [
+    "Qwen2.5-VL-7B-Instruct BF16 greedy max_new_tokens1024 context16384",
+    "restricted tools and schemas; planning on; context none; verification off",
+    "6 synthetic development episodes; old2 + new2 + first-calculate-error variants2"
+  ],
+  "gate": [
+    "12 CPU protocol/boundary tests pass",
+    "6 actual graph episodes submitted with official scorer utility1; successful facts and calculation",
+    "2 error variants actually inject failure then recover",
+    "zero invalid parsed/schema tool calls",
+    "no HCL optimization or benchmark gold access"
+  ],
+  "budget": {
+    "seconds": 1800,
+    "early_seconds": 1680,
+    "model_calls": 144,
+    "bytes": 500000000,
+    "early_bytes": 450000000
+  },
+  "interpretation": "Synthetic tool-call engineering acceptance only. Old96-call run stays closed. No claim of clinical benchmark or three-task CL acceptance. All failures preserved.",
+  "created_epoch": 1792725050.503298
+}

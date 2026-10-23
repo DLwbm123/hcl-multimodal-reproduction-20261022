@@ -1,0 +1,9 @@
+{
+  "reason": "Version alignment correction, not prompt tuning: Qwen2-VL example used legacy qwen formatter; Qwen2.5-VL official computer_use cookbook at commit 3c4f939dda856110cefb315df6280b9b4eb15219 uses NousFnCallPrompt with the exact 7B checkpoint.",
+  "protocol": "nous",
+  "change": "Only official protocol type; same model, tools, schemas, system instruction, six cases, scorer and acceptance thresholds.",
+  "source": "https://github.com/QwenLM/Qwen2.5-VL/blob/3c4f939dda856110cefb315df6280b9b4eb15219/cookbooks/computer_use.ipynb",
+  "budgets": "Original overall start and 144-generation/1800-second/500MB caps shared; no reset.",
+  "cpu_tests": 13,
+  "created_epoch": 1792725392.756125
+}
