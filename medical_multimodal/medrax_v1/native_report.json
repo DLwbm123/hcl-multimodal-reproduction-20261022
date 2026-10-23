@@ -1,0 +1,171 @@
+{
+  "time": 1792772259.3333774,
+  "stage": "native_development_qualification",
+  "denominator": 12,
+  "attempted": 12,
+  "completed": 12,
+  "correct": 4,
+  "valid_final": 12,
+  "episodes_with_successful_tool": 1,
+  "planner_calls": 13,
+  "image_payload_verified": true,
+  "direct_tool_preflight": [
+    {
+      "tool": "chest_xray_classifier",
+      "success": true
+    },
+    {
+      "tool": "chest_xray_segmentation",
+      "success": true
+    },
+    {
+      "tool": "chest_xray_expert",
+      "success": true
+    },
+    {
+      "tool": "chest_xray_report_generator",
+      "success": true
+    }
+  ],
+  "expert_generations": 3,
+  "fatal": null,
+  "hcl_updates": 0,
+  "scientific_efficacy_claim": false,
+  "native_qualified": false,
+  "planner_input_tokens": 22066,
+  "planner_output_tokens": 4437,
+  "tool_call_counts_by_phase": {
+    "direct_tool_preflight": {
+      "chest_xray_classifier": 1,
+      "chest_xray_segmentation": 1,
+      "chest_xray_expert": 1,
+      "chest_xray_report_generator": 1
+    },
+    "native_panel": {
+      "chest_xray_classifier": 1
+    }
+  },
+  "per_case": [
+    {
+      "case_id": "16886",
+      "status": "completed",
+      "correct": false,
+      "planner_calls": 1,
+      "planner_output_tokens": 238,
+      "tool_calls": 0,
+      "seconds": 4.776571273803711
+    },
+    {
+      "case_id": "17889",
+      "status": "completed",
+      "correct": true,
+      "planner_calls": 1,
+      "planner_output_tokens": 310,
+      "tool_calls": 0,
+      "seconds": 6.14369535446167
+    },
+    {
+      "case_id": "5369",
+      "status": "completed",
+      "correct": false,
+      "planner_calls": 1,
+      "planner_output_tokens": 400,
+      "tool_calls": 0,
+      "seconds": 7.576902627944946
+    },
+    {
+      "case_id": "17350",
+      "status": "completed",
+      "correct": false,
+      "planner_calls": 1,
+      "planner_output_tokens": 160,
+      "tool_calls": 0,
+      "seconds": 3.116791009902954
+    },
+    {
+      "case_id": "14941",
+      "status": "completed",
+      "correct": false,
+      "planner_calls": 1,
+      "planner_output_tokens": 507,
+      "tool_calls": 0,
+      "seconds": 9.594844579696655
+    },
+    {
+      "case_id": "16703",
+      "status": "completed",
+      "correct": false,
+      "planner_calls": 1,
+      "planner_output_tokens": 410,
+      "tool_calls": 0,
+      "seconds": 8.984577178955078
+    },
+    {
+      "case_id": "18134",
+      "status": "completed",
+      "correct": true,
+      "planner_calls": 2,
+      "planner_output_tokens": 331,
+      "tool_calls": 1,
+      "seconds": 7.7872841358184814
+    },
+    {
+      "case_id": "18174",
+      "status": "completed",
+      "correct": false,
+      "planner_calls": 1,
+      "planner_output_tokens": 377,
+      "tool_calls": 0,
+      "seconds": 7.345326662063599
+    },
+    {
+      "case_id": "6312",
+      "status": "completed",
+      "correct": false,
+      "planner_calls": 1,
+      "planner_output_tokens": 399,
+      "tool_calls": 0,
+      "seconds": 7.357131481170654
+    },
+    {
+      "case_id": "3842",
+      "status": "completed",
+      "correct": false,
+      "planner_calls": 1,
+      "planner_output_tokens": 314,
+      "tool_calls": 0,
+      "seconds": 5.862874269485474
+    },
+    {
+      "case_id": "18290",
+      "status": "completed",
+      "correct": true,
+      "planner_calls": 1,
+      "planner_output_tokens": 380,
+      "tool_calls": 0,
+      "seconds": 6.989697217941284
+    },
+    {
+      "case_id": "1437",
+      "status": "completed",
+      "correct": true,
+      "planner_calls": 1,
+      "planner_output_tokens": 611,
+      "tool_calls": 0,
+      "seconds": 11.194461107254028
+    }
+  ],
+  "run_exit": {
+    "time": 1792772262.0194798,
+    "exit_code": 2
+  },
+  "initial_setup_attempts": 3,
+  "original_native_clock": {
+    "time": 1792770802.8851082,
+    "deadline": 1792774402.8851068,
+    "original_epoch": 1792769496.090364,
+    "original_deadline": 1792852296.0903642
+  },
+  "actual_allocated_bytes": 18424356864,
+  "decision": "REJECT_NATIVE_QUALIFICATION_TOOL_USAGE_GATE_1_OF_12_BELOW_3"
+}

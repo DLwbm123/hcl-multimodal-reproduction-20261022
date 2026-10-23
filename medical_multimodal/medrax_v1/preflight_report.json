@@ -1,5 +1,5 @@
 {
-  "status": "supplemental_assets_ready_native_retry_started",
+  "status": "native_completed_gate_failed",
   "first_attempt": {
     "preparation_complete": true,
     "native_attempted": 0,
@@ -47,5 +47,13 @@
     "early_stop_including_reserve": 28000000000,
     "scope": "aggregate storage of current route assets and future registered experiment roots",
     "watchdog": "independent live guard attached without restarting running workers"
+  },
+  "completed_attempt": {
+    "attempt": 4,
+    "attempted": 12,
+    "correct": 4,
+    "successful_tool_episodes": 1,
+    "native_qualified": false,
+    "hcl_updates": 0
   }
 }

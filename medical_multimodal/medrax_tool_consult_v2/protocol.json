@@ -1,0 +1,174 @@
+{
+  "experiment": "medrax_tool_consult_v2",
+  "purpose": "Shared base-agent development for the HCL mainline; not comparison-method tuning and not HCL efficacy.",
+  "hypothesis": "The native local planner bypasses available tools; a single common consultation instruction may create real tool-use opportunities without reducing development correctness.",
+  "prior_native_result": {
+    "correct": 4,
+    "denominator": 12,
+    "successful_tool_episodes": 1,
+    "gate_pass": false
+  },
+  "source_runtime_commit": "b04692f",
+  "upstream_revision": "dae30e2f136ef0b2a40885a4c335386e9ffad052",
+  "dataset_revision": "921e60440927f9893228d843c0206b755744252a",
+  "selection": "seed20261024, single-image questions, unique case, category balancing from metadata only; exclude all v1 cases",
+  "excluded_prior_cases": [
+    "1437",
+    "14941",
+    "16703",
+    "16886",
+    "17350",
+    "17889",
+    "18134",
+    "18174",
+    "18290",
+    "3842",
+    "5369",
+    "6312"
+  ],
+  "panel": [
+    {
+      "images": [
+        "figures/16425/figure_1.jpg"
+      ],
+      "case_id": "16425",
+      "full_question_id": "16425_16425_8353800558809",
+      "categories": "detection,localization,characterization,reasoning"
+    },
+    {
+      "images": [
+        "figures/2364/figure_1.jpg"
+      ],
+      "case_id": "2364",
+      "full_question_id": "2364_2364_8353802248292",
+      "categories": "classification,comparison,diagnosis,reasoning"
+    },
+    {
+      "images": [
+        "figures/17970/figure_1.jpg"
+      ],
+      "case_id": "17970",
+      "full_question_id": "17970_17970_8143559008437",
+      "categories": "localization,comparison,relationship,reasoning"
+    },
+    {
+      "images": [
+        "figures/912/figure_1.jpg"
+      ],
+      "case_id": "912",
+      "full_question_id": "912_912_8353802117637",
+      "categories": "classification,characterization,diagnosis,reasoning"
+    },
+    {
+      "images": [
+        "figures/8486/figure_1.jpg"
+      ],
+      "case_id": "8486",
+      "full_question_id": "8486_8486_8353800888375",
+      "categories": "detection,classification,relationship,reasoning"
+    },
+    {
+      "images": [
+        "figures/10966/figure_1.jpg"
+      ],
+      "case_id": "10966",
+      "full_question_id": "10966_10966_8353800724625",
+      "categories": "detection,localization,characterization,reasoning"
+    },
+    {
+      "images": [
+        "figures/8911/figure_2.jpg"
+      ],
+      "case_id": "8911",
+      "full_question_id": "8911_8911_8353802603277",
+      "categories": "classification,comparison,diagnosis,reasoning"
+    },
+    {
+      "images": [
+        "figures/14391/figure_1.jpg"
+      ],
+      "case_id": "14391",
+      "full_question_id": "14391_14391_8353800529332",
+      "categories": "localization,comparison,relationship,reasoning"
+    },
+    {
+      "images": [
+        "figures/4379/figure_1.jpg"
+      ],
+      "case_id": "4379",
+      "full_question_id": "4379_4379_8353801527489",
+      "categories": "classification,characterization,diagnosis,reasoning"
+    },
+    {
+      "images": [
+        "figures/9152/figure_1.jpg"
+      ],
+      "case_id": "9152",
+      "full_question_id": "9152_9152_8353801549203",
+      "categories": "detection,localization,characterization,reasoning"
+    },
+    {
+      "images": [
+        "figures/11306/figure_1.jpg"
+      ],
+      "case_id": "11306",
+      "full_question_id": "11306_11306_8353800736693",
+      "categories": "detection,classification,relationship,reasoning"
+    },
+    {
+      "images": [
+        "figures/12918/figure_1a.jpg"
+      ],
+      "case_id": "12918",
+      "full_question_id": "12918_12918_8353800587295",
+      "categories": "localization,comparison,relationship,reasoning"
+    }
+  ],
+  "exclude_entire_panel_cases_from_future_validation_test": true,
+  "arms": {
+    "A_native": "",
+    "B_consult": "Before your final answer, consult at least one available chest X-ray tool to check the image findings. Assess whether its output is relevant and consistent with the image; disregard unsupported or conflicting tool claims."
+  },
+  "order": "A,B on even panel indices; B,A on odd indices. Fresh graph and episode state for each arm. No carryover, learning or prompt tuning.",
+  "limits": {
+    "phase_seconds": 3600,
+    "episode_seconds": 240,
+    "planner_calls": 4,
+    "tool_calls": 8,
+    "input_tokens": 16384,
+    "output_tokens_per_call": 768,
+    "output_tokens_total": 3072,
+    "expert_max_new_tokens": 512,
+    "report_max_length": 128
+  },
+  "phase_seconds": 3600,
+  "original_route_deadline": 1792852296.0903642,
+  "storage": {
+    "aggregate_route_hard_limit_bytes_exclusive": 30000000000,
+    "early_stop_with_reserve": 28000000000,
+    "expected_additional_bytes": 200000000
+  },
+  "decision": {
+    "prefer_A_if_original_gate_passes": true,
+    "A_gate": {
+      "all_four_preflight_tools_success": true,
+      "image_payload_every_planner_call": true,
+      "minimum_correct_of_12": 3,
+      "minimum_episodes_with_successful_tool": 3,
+      "minimum_valid_final_of_12": 4
+    },
+    "B_gate": {
+      "minimum_correct_of_12": 3,
+      "minimum_valid_final_of_12": 4,
+      "minimum_episodes_with_successful_tool": 6,
+      "correct_count_at_least_A": true,
+      "runtime_error_episodes": 0
+    },
+    "if_neither_passes": "Close this prompt-adaptation branch; no repeated prompt search, no HCL claim or launch on this gate."
+  },
+  "scoring": "Exact final standalone A-F or final explicit Answer: A-F; otherwise abstention/wrong. Answer and explanation never enter model/tool context. Score after all episodes. All 12 remain denominator, including load/runtime/format/budget failures.",
+  "planned_episodes": 24,
+  "hcl_updates": 0,
+  "direct_preflight": "Reuse v1 four-tool success evidence with identical assets/runtime; do not count it as v2 success.",
+  "gold_boundary": "Only question,image paths and arm instruction reach agent. Score after all24; no gold/explanation in tools or planner."
+}

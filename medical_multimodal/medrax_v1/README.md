@@ -71,10 +71,12 @@ MAIRA, LLaVA-Med, or RoentGen weights are part of this run.
 CPU checks passed on the existing environment with zero model generations:
 nonempty vision tensor `[1024, 1176]`, strict malformed-call rejection, matching
 tool-call/result IDs, and unchanged input/output identity with HCL disabled.
-Initial and supplemental resource preparation completed. Three setup attempts
-failed before any generation and remain recorded in `preflight_report.json`.
-The fourth native attempt has started under the original phase clock. GPU tool
-execution, native qualification, and HCL benefit remain to be established.
+The fourth attempt completed all 12 native tasks: 4 correct, 12 valid final
+answers, and only one episode with a successful real tool call. All four direct
+tools passed. The frozen native qualification gate therefore failed. See
+[the complete report](REPORT.zh-CN.md) and `native_report.json`. HCL updates
+remain disabled. A fresh-case paired consultation diagnostic is separately
+frozen in `../medrax_tool_consult_v2`.
 
 Raw questions, images, model assets, private runtime configuration, full model
 outputs, and patient-derived content stay outside this public source tree.
