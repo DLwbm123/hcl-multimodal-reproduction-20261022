@@ -68,12 +68,39 @@ def load_native(root, record, guard):
         'IAMJB/chexpert-mimic-cxr-impression-baseline': str(root / 'models/impression')
     }).ChestXRayReportGeneratorTool(cache_dir=str(root / 'cache/huggingface'), device='cuda:0')
     vqa_cls = load_module(tools_dir / 'xray_vqa.py', 'native_vqa').XRayVQATool
+    from transformers import dynamic_module_utils
+    from transformers.cache_utils import DynamicCache
+    # CheXagent's TensorFlow import is TYPE_CHECKING-only; HF's scanner treats it as runtime.
+    original_imports = dynamic_module_utils.get_imports
+    def runtime_imports(filename):
+        imports = original_imports(filename)
+        if Path(filename).name == 'tokenization_chexagent.py':
+            imports = [name for name in imports if name != 'tensorflow']
+        return imports
+    # The pinned model uses the 4.40 names for these unchanged DynamicCache operations.
+    if not hasattr(DynamicCache, 'seen_tokens'):
+        DynamicCache.seen_tokens = property(lambda cache: cache.get_seq_length())
+    if not hasattr(DynamicCache, 'get_max_length'):
+        DynamicCache.get_max_length = DynamicCache.get_max_cache_shape
     version = transformers.__version__
+    # Keep downloaded assets intact; the small runtime config resolves the nested visual model locally.
+    runtime_assets = root / 'models/chexagent_runtime'
+    runtime_assets.mkdir(exist_ok=True)
+    for asset in (root / 'models/chexagent').iterdir():
+        target = runtime_assets / asset.name
+        if asset.name == 'config.json':
+            config = json.loads(asset.read_text())
+            config['visual']['vision_model_name_or_path'] = str(root / 'models/xraysiglip')
+            target.write_text(json.dumps(config, indent=2) + '\n')
+        elif not target.exists():
+            target.symlink_to(asset)
     try:
-        expert = vqa_cls(model_name=str(root / 'models/chexagent'), device='cuda:0',
+        dynamic_module_utils.get_imports = runtime_imports
+        expert = vqa_cls(model_name=str(runtime_assets), device='cuda:0',
                          cache_dir=str(root / 'cache/huggingface'))
     finally:
         transformers.__version__ = version
+        dynamic_module_utils.get_imports = original_imports
     # Count expert/report generations separately from planner calls, with actual token lengths.
     for label, model in [('expert', expert.model), ('findings', report.findings_model),
                          ('impression', report.impression_model)]:

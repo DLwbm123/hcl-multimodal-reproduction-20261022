@@ -1,5 +1,5 @@
 {
-  "status": "compatibility_retry_running",
+  "status": "supplemental_assets_ready_native_retry_started",
   "first_attempt": {
     "preparation_complete": true,
     "native_attempted": 0,
@@ -18,5 +18,34 @@
     "qualification gate",
     "original 23-hour run and 1-hour native phase clocks"
   ],
-  "actual_allocated_bytes_after_first_attempt": 15705747456
+  "actual_allocated_bytes_after_first_attempt": 15705747456,
+  "additional_attempts": [
+    {
+      "attempt": 2,
+      "native_attempted": 0,
+      "planner_generations": 0,
+      "expert_generations": 0,
+      "failure": "Transformers scanner required a TensorFlow import used only for TYPE_CHECKING."
+    },
+    {
+      "attempt": 3,
+      "native_attempted": 0,
+      "planner_generations": 0,
+      "expert_generations": 0,
+      "failure": "CheXagent constructor referenced its nested XraySigLIP assets unavailable in offline cache."
+    }
+  ],
+  "compatibility_repairs": [
+    "Install matplotlib and sentencepiece in isolated runtime.",
+    "Filter only the pinned tokenizer TYPE_CHECKING-only TensorFlow import from dynamic dependency scanning.",
+    "Provide equivalent DynamicCache API aliases for the pinned 4.40 CheXagent code in the 4.51 shared runtime.",
+    "Pin and download the upstream nested XraySigLIP dependency; use a small runtime config and symlinks while keeping downloaded assets unchanged."
+  ],
+  "supplemental_download_bytes": 2613432448,
+  "user_storage_override": {
+    "hard_limit_bytes_exclusive": 30000000000,
+    "early_stop_including_reserve": 28000000000,
+    "scope": "aggregate storage of current route assets and future registered experiment roots",
+    "watchdog": "independent live guard attached without restarting running workers"
+  }
 }

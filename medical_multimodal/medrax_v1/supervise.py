@@ -25,6 +25,15 @@ def allocated_bytes(root):
     return total
 
 
+def storage_state():
+    path = ROOT / 'RESOURCE_POLICY.json'
+    policy = json.loads(path.read_text()) if path.exists() else {
+        'roots': [str(ROOT)], 'reserve_bytes': 1073741824,
+        'early_stop_bytes_including_reserve': 28000000000}
+    count = sum(allocated_bytes(Path(p)) for p in policy['roots']) + policy['reserve_bytes'] + 1048576
+    return count, count >= policy['early_stop_bytes_including_reserve']
+
+
 def save(name, data):
     p = ROOT / name
     t = p.with_suffix('.tmp')
@@ -38,9 +47,8 @@ def main():
     if not start_path.exists():
         save('FIRST_START.json', {'epoch': time.time(), 'deadline': time.time() + 23 * 3600})
     clock = json.loads(start_path.read_text())
-    reserve = 1024 * 1024 * 1024
-    count = allocated_bytes(ROOT) + reserve + 1048576
-    stopped = time.time() >= clock['deadline'] or count >= 45000000000
+    count, storage_stop = storage_state()
+    stopped = time.time() >= clock['deadline'] or storage_stop
     save('guard.json', {'time': time.time(), 'bytes_with_reserve': count, 'stop': stopped})
     if stopped:
         raise RuntimeError('Budget unavailable before worker launch')
@@ -50,8 +58,8 @@ def main():
                                  env=os.environ.copy(), start_new_session=True)
         save('PREPARE_LAUNCH.json', {'pid': child.pid, 'epoch': time.time(), 'supervisor_pid': os.getpid()})
         while child.poll() is None:
-            count = allocated_bytes(ROOT) + reserve + 1048576
-            stopped = time.time() >= clock['deadline'] or count >= 45000000000
+            count, storage_stop = storage_state()
+            stopped = time.time() >= clock['deadline'] or storage_stop
             save('guard.json', {'time': time.time(), 'bytes_with_reserve': count, 'stop': stopped})
             if stopped:
                 save('HARD_STOP.json', {'epoch': time.time(), 'bytes_with_reserve': count})

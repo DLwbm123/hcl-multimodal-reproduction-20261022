@@ -1,0 +1,39 @@
+{
+  "reason": "Pinned CheXagent visual constructor requires this upstream model and processor before loading the complete CheXagent weights.",
+  "repo": "StanfordAIMI/XraySigLIP__vit-l-16-siglip-384__webli",
+  "revision": "f0edbf5d90dba44edb7f4f96d8663537cb0749bf",
+  "files": [
+    {
+      "url": "https://huggingface.co/StanfordAIMI/XraySigLIP__vit-l-16-siglip-384__webli/resolve/f0edbf5d90dba44edb7f4f96d8663537cb0749bf/config.json",
+      "path": "models/xraysiglip/config.json",
+      "bytes": 662
+    },
+    {
+      "url": "https://huggingface.co/StanfordAIMI/XraySigLIP__vit-l-16-siglip-384__webli/resolve/f0edbf5d90dba44edb7f4f96d8663537cb0749bf/model.safetensors",
+      "path": "models/xraysiglip/model.safetensors",
+      "bytes": 2612631968
+    },
+    {
+      "url": "https://huggingface.co/StanfordAIMI/XraySigLIP__vit-l-16-siglip-384__webli/resolve/f0edbf5d90dba44edb7f4f96d8663537cb0749bf/preprocessor_config.json",
+      "path": "models/xraysiglip/preprocessor_config.json",
+      "bytes": 368
+    },
+    {
+      "url": "https://huggingface.co/StanfordAIMI/XraySigLIP__vit-l-16-siglip-384__webli/resolve/f0edbf5d90dba44edb7f4f96d8663537cb0749bf/special_tokens_map.json",
+      "path": "models/xraysiglip/special_tokens_map.json",
+      "bytes": 409
+    },
+    {
+      "url": "https://huggingface.co/StanfordAIMI/XraySigLIP__vit-l-16-siglip-384__webli/resolve/f0edbf5d90dba44edb7f4f96d8663537cb0749bf/spiece.model",
+      "path": "models/xraysiglip/spiece.model",
+      "bytes": 798330
+    },
+    {
+      "url": "https://huggingface.co/StanfordAIMI/XraySigLIP__vit-l-16-siglip-384__webli/resolve/f0edbf5d90dba44edb7f4f96d8663537cb0749bf/tokenizer_config.json",
+      "path": "models/xraysiglip/tokenizer_config.json",
+      "bytes": 711
+    }
+  ],
+  "download_bytes": 2613432448,
+  "original_planning_allowance_bytes": 35000000000
+}

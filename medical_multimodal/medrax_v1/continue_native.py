@@ -6,7 +6,7 @@ import signal
 import subprocess
 import time
 
-from supervise import allocated_bytes
+from supervise import allocated_bytes, storage_state
 
 ROOT = Path(os.environ['RUN_ROOT']).resolve()
 
@@ -24,8 +24,8 @@ def bounded(command, cwd, label, deadline, env):
                                  stderr=subprocess.STDOUT, start_new_session=True)
         save(label + '_LAUNCH.json', {'time': time.time(), 'pid': child.pid, 'supervisor_pid': os.getpid()})
         while child.poll() is None:
-            size = allocated_bytes(ROOT) + 1073741824 + 1048576
-            stop = time.time() >= deadline or size >= 45000000000
+            size, storage_stop = storage_state()
+            stop = time.time() >= deadline or storage_stop
             save('guard.json', {'time': time.time(), 'bytes_with_reserve': size, 'stop': stop})
             if stop:
                 save(label + '_HARD_STOP.json', {'time': time.time(), 'bytes_with_reserve': size})
@@ -57,9 +57,15 @@ def main():
     env = os.environ.copy()
     deps = ['./bin/python', '-m', 'pip', 'install', '--no-cache-dir', '--only-binary=:all:',
             '--upgrade-strategy', 'only-if-needed', 'numpy<2', 'opencv-python-headless<4.12',
-            'albumentations>=1.4.24,<2', 'pyarrow>=16,<20', 'matplotlib>=3.9,<3.11']
+            'albumentations>=1.4.24,<2', 'pyarrow>=16,<20', 'matplotlib>=3.9,<3.11', 'sentencepiece>=0.2,<0.3']
     if bounded(deps, environment, 'native_dependencies', min(clock['deadline'], time.time() + 900), env):
         raise RuntimeError('Native dependency installation failed')
+    if (ROOT / 'code/supplemental_assets.json').exists():
+        cutoff = min(clock['deadline'], time.time() + 900)
+        if (ROOT / 'NATIVE_CLOCK.json').exists():
+            cutoff = min(cutoff, json.loads((ROOT / 'NATIVE_CLOCK.json').read_text())['deadline'])
+        if bounded(['./bin/python', '/data/bmw/workers/r916.py'], environment, 'supplemental_assets', cutoff, env):
+            raise RuntimeError('Nested visual dependency preparation failed')
     config = json.loads((ROOT / 'runtime.private.json').read_text())
     check = subprocess.run(['nvidia-smi', '--id=' + config['gpu'], '--query-gpu=memory.free',
         '--format=csv,noheader,nounits'], capture_output=True, text=True, check=True)

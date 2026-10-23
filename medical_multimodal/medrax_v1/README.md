@@ -2,7 +2,7 @@
 
 This route uses the upstream MedRAX LangGraph agent and four actual chest X-ray
 tools: DenseNet classification, PSPNet anatomical segmentation, CheXagent VQA,
-and the two-head ViT-BERT report generator. Upstream source is pinned at
+and the two-head vision encoder–BERT report generator. Upstream source is pinned at
 `dae30e2f136ef0b2a40885a4c335386e9ffad052` in
 [MedRAX](https://github.com/bowang-lab/MedRAX). Dataset metadata/images come from the
 public [ChestAgentBench dataset](https://huggingface.co/datasets/wanglab/chest-agent-bench),
@@ -58,9 +58,12 @@ analysis, and any subsequently frozen HCL experiment.
 
 Preparation and retries share the initial 23-hour early deadline. Native execution
 also has a one-hour hard limit. New allocated storage includes downloads, caches,
-environment, images, temporary output, and logs, with a 45 GB early stop including
-a 1 GiB reserve and a strict exclusive 50 GB ceiling. The planned download volume
-is 14.21 GB; the total planning allowance is 35 GB. No MIMIC dataset download,
+environment, images, temporary output, and logs, with the user-updated 28 GB early stop including
+a 1 GiB reserve and a strict exclusive 30 GB ceiling, aggregated over this route
+and future registered run roots. `RESOURCE_POLICY.json` overrides the original
+asset planning figures. An independent live watchdog applies the tighter cap
+without restarting existing workers. Initial download volume is 14.21 GB; the
+nested XraySigLIP dependency discovered during constructor loading adds 2.613 GB. No MIMIC dataset download,
 MAIRA, LLaVA-Med, or RoentGen weights are part of this run.
 
 ## Current evidence
@@ -68,8 +71,10 @@ MAIRA, LLaVA-Med, or RoentGen weights are part of this run.
 CPU checks passed on the existing environment with zero model generations:
 nonempty vision tensor `[1024, 1176]`, strict malformed-call rejection, matching
 tool-call/result IDs, and unchanged input/output identity with HCL disabled.
-Resource preparation and automatic continuation have been started. GPU tool
-execution, native qualification, and HCL benefit are still unverified.
+Initial and supplemental resource preparation completed. Three setup attempts
+failed before any generation and remain recorded in `preflight_report.json`.
+The fourth native attempt has started under the original phase clock. GPU tool
+execution, native qualification, and HCL benefit remain to be established.
 
 Raw questions, images, model assets, private runtime configuration, full model
 outputs, and patient-derived content stay outside this public source tree.
