@@ -83,3 +83,5 @@ The [18-target H0 v5 report](medical_h0/executable_gate_v5/REPORT.zh-CN.md) reco
 ## Current medical multimodal route
 
 [MedRAX native qualification](medical_multimodal/medrax_v1/REPORT.zh-CN.md) completed: 4/12 correct, all four real tools executable, but only 1/12 autonomous tool-use episodes; the frozen gate failed and no HCL updates were run. A [single paired consultation diagnostic](medical_multimodal/medrax_tool_consult_v2/README.md) completed on 12 fresh cases: native 6/12 versus consultation 4/12, with two losses and no gains. The prompt-adaptation branch is closed; no HCL launch. Historical H0 results remain unchanged.
+
+MedRAX fixed tool-evidence diagnostic is complete: native 10/12, classifier seed 11/12, expert seed 5/12; the local evidence-adaptation route is closed. [Report](medical_multimodal/medrax_tool_value_v3/REPORT.zh-CN.md).

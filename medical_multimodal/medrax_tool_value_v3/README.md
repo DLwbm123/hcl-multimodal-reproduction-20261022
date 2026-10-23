@@ -9,3 +9,5 @@ The frozen protocol reports all 36 episodes, paired gains and harmful changes, r
 No new model downloads. Reuse v1 assets and environment read-only; aggregate route storage remains below 30 GB with a 28 GB early stop and 1 GiB reserve. One independent hour includes preparation and any retries, bounded by the existing route deadline. The single 30-minute monitor continues analysis and delivery.
 
 Before inference run `prepare_cpu.py` and `check_design.py` using `RUN_ROOT`; launch through `control.py` with neutral worker entries. The latter fixture checks the real native graph, tool/result correlation, identical paired inputs, forced-versus-autonomous accounting, and an injected failure in the full denominator. Its synthetic scores are not experiment results.
+
+Completed: A 10/12, B 11/12, C 5/12; expert headroom failed, route closed. See [Chinese report](REPORT.zh-CN.md) and [aggregate/per-case records](REPORT.json). No HCL updates or qualification.
