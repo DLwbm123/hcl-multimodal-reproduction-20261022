@@ -1,5 +1,5 @@
 {
-  "status": "two_setup_attempts_failed_before_inference",
+  "status": "three_setup_attempts_failed_before_inference",
   "model_generations": 0,
   "hcl_updates": 0,
   "all_12_not_run_each_attempt": true,
@@ -13,6 +13,11 @@
       "attempt": 2,
       "error": "Original LLaVA wrapper lacks SDPA compatibility",
       "repair": "Explicit eager attention in native language encoder configuration"
+    },
+    {
+      "attempt": 3,
+      "error": "mmpretrain config factory drops eager option before AutoModel.from_config; repeated SDPA failure",
+      "repair": "Process-local model factory passes eager directly to from_config; tiny actual Llama construction checked, zero generation"
     }
   ],
   "shared_environment_modified": false,

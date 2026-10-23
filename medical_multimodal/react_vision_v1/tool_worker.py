@@ -41,6 +41,15 @@ def main():
             import mmpretrain
             from mmengine.config import Config
             from mmpretrain.apis import VisualQuestionAnsweringInferencer
+            from mmpretrain.utils import register_all_modules
+            from mmpretrain.registry import MODELS
+            from transformers import AutoConfig, AutoModelForCausalLM
+            register_all_modules()
+            # mmpretrain drops this option between AutoConfig and from_config.
+            def build_eager(name_or_path, **kwargs):
+                config = AutoConfig.from_pretrained(name_or_path, local_files_only=True)
+                return AutoModelForCausalLM.from_config(config, attn_implementation='eager')
+            MODELS.register_module(name='AutoModelForCausalLM', module=build_eager, force=True)
             from agentlego.tools.ocr.ocr import OCR
             from agentlego.tools.calculator.python_calculator import Calculator
             from agentlego.types import ImageIO
