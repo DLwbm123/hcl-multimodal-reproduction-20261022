@@ -1,0 +1,9 @@
+{
+  "counts": {
+    "raw_valid_json_generations": 127,
+    "raw_invalid_json_generations": 64,
+    "targets_with_partial_fact_read": 15,
+    "targets_with_single_fact_read_call": 15
+  },
+  "scope": "Post-run counts from retained raw generations and complete target records. Partial reading alone is not scored as an error; it diagnoses the observed navigation failures. No model rerun or normalization."
+}

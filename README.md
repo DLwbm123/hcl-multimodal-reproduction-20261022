@@ -66,3 +66,7 @@ The public release contains aggregate receipts rather than raw model outputs. Ca
 ## Medical transfer pilot (2026-10-22)
 
 Completed small medical transfer: Static 30.00%, HCL 30.67% descriptive final mean, with localization regression and unresolved coordinate confound. See [medical transfer code and validation](medical_transfer/README.md) and the [Chinese final report](medical_transfer/REPORT.zh-CN.md). Isolated interface/template repairs were not deployed into this run; no follow-up paired experiment was started.
+
+## Bounded H0 executable gate v5
+
+The [18-target H0 v5 report](medical_h0/executable_gate_v5/REPORT.zh-CN.md) records a completed, failed gate: 0/18 correct submissions, with two evidence-supported computations left unsubmitted. No HCL was started. The source, protocol, aggregate diagnostics and resource audit are included; private clinical fixtures and raw traces are excluded.

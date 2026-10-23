@@ -1,0 +1,15 @@
+{
+  "recorded_epoch": 1792755380.960277,
+  "frozen_source_commit": "469cde3",
+  "field": "panel.exclude_old_six_and_source_groups",
+  "problem": "Boolean omitted the scope of source-group exclusion. It must not be read as excluding all prior development source groups from L1/L2.",
+  "intended_scope": "Old six exact targets excluded from this 18-target panel. Their source groups excluded from A and any future S/T, as in the adopted pre-run plan; development L1/L2 may reuse other targets from those groups.",
+  "observed_old_group_overlap_targets": {
+    "L1": 1,
+    "L2": 6,
+    "A": 0
+  },
+  "changes_to_inputs_code_thresholds": false,
+  "original_protocol_preserved": true,
+  "interpretation_limit": "This documentation defect is disclosed; no new independence claim is created."
+}
