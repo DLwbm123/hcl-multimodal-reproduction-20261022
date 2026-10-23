@@ -1,0 +1,70 @@
+{
+  "model_calls_added": 0,
+  "proposals": [
+    {
+      "call": 226,
+      "input_tokens": 22739,
+      "output_tokens": 439,
+      "complete_tool_envelope": true,
+      "json_valid": true,
+      "registered_name": true,
+      "official_parser_preserved_arguments": true,
+      "bridge_reproduces_original_rejection": true,
+      "rendered_schema_exact": true,
+      "all_violations": [
+        {
+          "path": [
+            "rationale"
+          ],
+          "constraint": "maxLength",
+          "limit": 1000,
+          "actual_length": 1177
+        },
+        {
+          "path": [
+            "sections"
+          ],
+          "constraint": "maxItems",
+          "limit": 5,
+          "actual_length": 8
+        },
+        {
+          "path": [
+            "artifact_diff_summary"
+          ],
+          "constraint": "maxLength",
+          "limit": 500,
+          "actual_length": 551
+        }
+      ],
+      "section_count": 8,
+      "rationale_length": 1177,
+      "summary_length": 551
+    },
+    {
+      "call": 227,
+      "input_tokens": 22739,
+      "output_tokens": 181,
+      "complete_tool_envelope": true,
+      "json_valid": true,
+      "registered_name": true,
+      "official_parser_preserved_arguments": true,
+      "bridge_reproduces_original_rejection": true,
+      "rendered_schema_exact": true,
+      "all_violations": [
+        {
+          "path": [
+            "sections"
+          ],
+          "constraint": "maxItems",
+          "limit": 5,
+          "actual_length": 8
+        }
+      ],
+      "section_count": 8,
+      "rationale_length": 161,
+      "summary_length": 104
+    }
+  ],
+  "limitation": "Replay reconstructs saved request using frozen code; full runtime rendered prompts were not saved. Does not test clinical correctness or rule compliance of other calls."
+}

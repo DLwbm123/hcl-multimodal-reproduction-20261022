@@ -1,0 +1,140 @@
+{
+  "utility_delta": 0.0,
+  "utility_ci95": [
+    0.0,
+    0.0
+  ],
+  "complete": true,
+  "stages": [
+    {
+      "stage": 1,
+      "before": {
+        "version": 0,
+        "sections": []
+      },
+      "after": {
+        "version": 0,
+        "sections": []
+      },
+      "decision": {
+        "accepted": false,
+        "reason": "no_valid_candidate_generated",
+        "generation_diagnostics": {},
+        "candidate_rejections": []
+      },
+      "baseline_current": {
+        "complete_tasks": 0,
+        "correct": 0,
+        "output_total": 30,
+        "total": 4,
+        "primary_score": 0.0,
+        "format_compliance_rate": 0.0
+      },
+      "historical_success_count": 0,
+      "historical_correct_output_count": 0,
+      "candidate_pairs": {}
+    },
+    {
+      "stage": 2,
+      "before": {
+        "version": 0,
+        "sections": []
+      },
+      "after": {
+        "version": 0,
+        "sections": []
+      },
+      "decision": {
+        "accepted": false,
+        "reason": "no_valid_candidate_generated",
+        "generation_diagnostics": {},
+        "candidate_rejections": []
+      },
+      "baseline_current": {
+        "complete_tasks": 0,
+        "correct": 0,
+        "output_total": 36,
+        "total": 4,
+        "primary_score": 0.0,
+        "format_compliance_rate": 0.0
+      },
+      "historical_success_count": 0,
+      "historical_correct_output_count": 0,
+      "candidate_pairs": {}
+    }
+  ],
+  "final_state": {
+    "version": 0,
+    "sections": []
+  },
+  "static": {
+    "complete_tasks": 0,
+    "correct": 0,
+    "output_total": 46,
+    "total": 8,
+    "primary_score": 0.0,
+    "format_compliance_rate": 0.375
+  },
+  "hcl": {
+    "complete_tasks": 0,
+    "correct": 0,
+    "output_total": 46,
+    "total": 8,
+    "primary_score": 0.0,
+    "format_compliance_rate": 0.375
+  },
+  "paired": {
+    "output_forget_count": 0,
+    "output_recovered_count": 0,
+    "total": 8,
+    "forget_count": 0,
+    "recovered_count": 0,
+    "baseline_success_count": 0
+  },
+  "ci95": [
+    0.0,
+    0.0
+  ],
+  "mcnemar_p": 1.0,
+  "families": {
+    "confirm_dependency": {
+      "static": {
+        "complete_tasks": 0,
+        "correct": 0,
+        "output_total": 21,
+        "total": 4,
+        "primary_score": 0.0,
+        "format_compliance_rate": 0.25
+      },
+      "hcl": {
+        "complete_tasks": 0,
+        "correct": 0,
+        "output_total": 21,
+        "total": 4,
+        "primary_score": 0.0,
+        "format_compliance_rate": 0.25
+      }
+    },
+    "confirm_submission": {
+      "static": {
+        "complete_tasks": 0,
+        "correct": 0,
+        "output_total": 25,
+        "total": 4,
+        "primary_score": 0.0,
+        "format_compliance_rate": 0.5
+      },
+      "hcl": {
+        "complete_tasks": 0,
+        "correct": 0,
+        "output_total": 25,
+        "total": 4,
+        "primary_score": 0.0,
+        "format_compliance_rate": 0.5
+      }
+    }
+  },
+  "model_calls": 788,
+  "mechanism_signal": false,
+  "scope": "formal MedTool 32-task split; restricted workflow-only HCL, heldout8 pilot; not full original environment reproduction or clinical validation"
+}
