@@ -1,0 +1,994 @@
+{
+  "synthetic_only": true,
+  "all_reviewed": true,
+  "accepted_computations_reviewed": 8,
+  "abstention_reasons_reviewed": 7,
+  "no_scoring_upgrades_or_relaxations": true,
+  "reviews": [
+    {
+      "id": "M01_R",
+      "preliminary_correct": false,
+      "final_correct": false,
+      "review": "Daily dose 12 and final 18 are numerically correct; only dose fact_0002 is cited, missing frequency fact_0001. The lower transformation does not describe multiplication. Drug lowercase is supported.",
+      "answer": {
+        "status": "success",
+        "result_id": "result_001",
+        "calculator_id": "mme_calculator",
+        "patient_id": "synthetic_v9_m1",
+        "episode_id": "visit_v9_m1",
+        "value": 18.0,
+        "unit": "MME/day"
+      },
+      "all_accepted_computations_reviewed": true,
+      "accepted_computations": [
+        {
+          "value": 18.0,
+          "result_id": "result_001",
+          "parameters": {
+            "opioid_name": "oxycodone",
+            "daily_dose_mg": 12
+          },
+          "bindings": {
+            "opioid_name": {
+              "parameter": "opioid_name",
+              "value": "oxycodone",
+              "fact_ids": [
+                "fact_0005"
+              ],
+              "transformation": "lower"
+            },
+            "daily_dose_mg": {
+              "parameter": "daily_dose_mg",
+              "value": 12,
+              "fact_ids": [
+                "fact_0002"
+              ],
+              "transformation": "lower"
+            }
+          }
+        }
+      ],
+      "parsed_execute_attempts": [
+        {
+          "calculator_id": "mme_calculator",
+          "patient_id": "synthetic_v9_m1",
+          "episode_id": "visit_v9_m1",
+          "bindings": [
+            {
+              "parameter": "opioid_name",
+              "value": "oxycodone",
+              "fact_ids": [
+                "fact_0005"
+              ],
+              "transformation": "lower"
+            },
+            {
+              "parameter": "daily_dose_mg",
+              "value": 12,
+              "fact_ids": [
+                "fact_0002"
+              ],
+              "transformation": "lower"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "M01_I",
+      "preliminary_correct": false,
+      "final_correct": false,
+      "review": "Daily-dose multiply declaration has the correct two target-scope operand values, both source IDs and product. However the first binding opioid_name uses identity on raw Oxycodone while declaring oxycodone, so the call is rejected before the daily-dose binding is reached. The generic error omits the parameter name; model incorrectly attributes it to daily_dose_mg and abstains. No accepted result and no end-to-end success; the correct dose chain is a post-hoc component observation only.",
+      "answer": {
+        "status": "abstain",
+        "reason": "The declared parameter value for 'daily_dose_mg' disagrees with the operation result."
+      },
+      "all_accepted_computations_reviewed": true,
+      "accepted_computations": [],
+      "parsed_execute_attempts": [
+        {
+          "calculator_id": "mme_calculator",
+          "patient_id": "synthetic_v9_m1",
+          "episode_id": "visit_v9_m1",
+          "bindings": [
+            {
+              "parameter": "opioid_name",
+              "value": "oxycodone",
+              "operation": "identity",
+              "operands": [
+                {
+                  "fact_id": "fact_0005",
+                  "value": "Oxycodone"
+                }
+              ]
+            },
+            {
+              "parameter": "daily_dose_mg",
+              "value": 12,
+              "operation": "multiply",
+              "operands": [
+                {
+                  "fact_id": "fact_0001",
+                  "value": 4
+                },
+                {
+                  "fact_id": "fact_0002",
+                  "value": 3
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "M02_I",
+      "preliminary_correct": false,
+      "final_correct": false,
+      "review": "Daily-dose multiply declaration has the correct two target-scope operand values, both source IDs and product. However the first binding opioid_name uses identity on raw Oxycodone while declaring oxycodone, so the call is rejected before the daily-dose binding is reached. The generic error omits the parameter name; model incorrectly attributes it to daily_dose_mg and abstains. No accepted result and no end-to-end success; the correct dose chain is a post-hoc component observation only.",
+      "answer": {
+        "status": "abstain",
+        "reason": "The declared parameter value for 'daily_dose_mg' disagrees with the operation result."
+      },
+      "all_accepted_computations_reviewed": true,
+      "accepted_computations": [],
+      "parsed_execute_attempts": [
+        {
+          "calculator_id": "mme_calculator",
+          "patient_id": "synthetic_v9_m2",
+          "episode_id": "visit_v9_m2",
+          "bindings": [
+            {
+              "parameter": "opioid_name",
+              "value": "oxycodone",
+              "operation": "identity",
+              "operands": [
+                {
+                  "fact_id": "fact_0004",
+                  "value": "Oxycodone"
+                }
+              ]
+            },
+            {
+              "parameter": "daily_dose_mg",
+              "value": 18,
+              "operation": "multiply",
+              "operands": [
+                {
+                  "fact_id": "fact_0001",
+                  "value": 6
+                },
+                {
+                  "fact_id": "fact_0005",
+                  "value": 3
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "M02_R",
+      "preliminary_correct": false,
+      "final_correct": false,
+      "review": "Daily dose 18 and final 27 are numerically correct; only dose fact_0001 is cited, missing frequency fact_0005. The lower transformation is not a numeric derivation. Drug lowercase is supported.",
+      "answer": {
+        "status": "success",
+        "result_id": "result_001",
+        "calculator_id": "mme_calculator",
+        "patient_id": "synthetic_v9_m2",
+        "episode_id": "visit_v9_m2",
+        "value": 27.0,
+        "unit": "MME/day"
+      },
+      "all_accepted_computations_reviewed": true,
+      "accepted_computations": [
+        {
+          "value": 27.0,
+          "result_id": "result_001",
+          "parameters": {
+            "opioid_name": "oxycodone",
+            "daily_dose_mg": 18
+          },
+          "bindings": {
+            "opioid_name": {
+              "parameter": "opioid_name",
+              "value": "oxycodone",
+              "fact_ids": [
+                "fact_0004"
+              ],
+              "transformation": "lower"
+            },
+            "daily_dose_mg": {
+              "parameter": "daily_dose_mg",
+              "value": 18,
+              "fact_ids": [
+                "fact_0001"
+              ],
+              "transformation": "lower"
+            }
+          }
+        }
+      ],
+      "parsed_execute_attempts": [
+        {
+          "calculator_id": "mme_calculator",
+          "patient_id": "synthetic_v9_m2",
+          "episode_id": "visit_v9_m2",
+          "bindings": [
+            {
+              "parameter": "opioid_name",
+              "value": "oxycodone",
+              "fact_ids": [
+                "fact_0004"
+              ],
+              "transformation": "lower"
+            },
+            {
+              "parameter": "daily_dose_mg",
+              "value": 18,
+              "fact_ids": [
+                "fact_0001"
+              ],
+              "transformation": "lower"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "M03_R",
+      "preliminary_correct": false,
+      "final_correct": false,
+      "review": "Copies per-dose 12.5 as daily dose, omitting target frequency 2 from fact_0006; output 18.8 instead of pinned-formula 37.5. Drug source is valid; float explains extraction but not the required daily-dose derivation.",
+      "answer": {
+        "status": "success",
+        "result_id": "result_001",
+        "calculator_id": "mme_calculator",
+        "patient_id": "synthetic_v9_m3",
+        "episode_id": "visit_v9_m3",
+        "value": 18.8,
+        "unit": "MME/day"
+      },
+      "all_accepted_computations_reviewed": true,
+      "accepted_computations": [
+        {
+          "value": 18.8,
+          "result_id": "result_001",
+          "parameters": {
+            "opioid_name": "oxycodone",
+            "daily_dose_mg": 12.5
+          },
+          "bindings": {
+            "opioid_name": {
+              "parameter": "opioid_name",
+              "value": "oxycodone",
+              "fact_ids": [
+                "fact_0004"
+              ],
+              "transformation": "lower"
+            },
+            "daily_dose_mg": {
+              "parameter": "daily_dose_mg",
+              "value": 12.5,
+              "fact_ids": [
+                "fact_0001"
+              ],
+              "transformation": "float"
+            }
+          }
+        }
+      ],
+      "parsed_execute_attempts": [
+        {
+          "calculator_id": "mme_calculator",
+          "patient_id": "synthetic_v9_m3",
+          "episode_id": "visit_v9_m3",
+          "bindings": [
+            {
+              "parameter": "opioid_name",
+              "value": "oxycodone",
+              "fact_ids": [
+                "fact_0004"
+              ],
+              "transformation": "lower"
+            },
+            {
+              "parameter": "daily_dose_mg",
+              "value": 12.5,
+              "fact_ids": [
+                "fact_0001"
+              ],
+              "transformation": "float"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "M03_I",
+      "preliminary_correct": false,
+      "final_correct": false,
+      "review": "First rejects opioid_name: declared operand oxycodone differs from raw Oxycodone. Daily dose also remains an incomplete identity of per-dose 12.5 rather than 12.5 times 2. No accepted result. Abstention mislabels complete available evidence as insufficient; the task fails.",
+      "answer": {
+        "status": "abstain",
+        "reason": "Insufficient evidence to proceed with the calculation due to differing operand values."
+      },
+      "all_accepted_computations_reviewed": true,
+      "accepted_computations": [],
+      "parsed_execute_attempts": [
+        {
+          "calculator_id": "mme_calculator",
+          "patient_id": "synthetic_v9_m3",
+          "episode_id": "visit_v9_m3",
+          "bindings": [
+            {
+              "parameter": "opioid_name",
+              "value": "oxycodone",
+              "operation": "identity",
+              "operands": [
+                {
+                  "fact_id": "fact_0004",
+                  "value": "oxycodone"
+                }
+              ]
+            },
+            {
+              "parameter": "daily_dose_mg",
+              "value": 12.5,
+              "operation": "identity",
+              "operands": [
+                {
+                  "fact_id": "fact_0001",
+                  "value": 12.5
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "M04_I",
+      "preliminary_correct": false,
+      "final_correct": false,
+      "review": "Daily-dose multiply declaration has the correct two target-scope operand values, both source IDs and product. However the first binding opioid_name uses identity on raw Oxycodone while declaring oxycodone, so the call is rejected before the daily-dose binding is reached. The generic error omits the parameter name; model incorrectly attributes it to daily_dose_mg and abstains. No accepted result and no end-to-end success; the correct dose chain is a post-hoc component observation only.",
+      "answer": {
+        "status": "abstain",
+        "reason": "The declared parameter value for 'daily_dose_mg' disagrees with the operation result."
+      },
+      "all_accepted_computations_reviewed": true,
+      "accepted_computations": [],
+      "parsed_execute_attempts": [
+        {
+          "calculator_id": "mme_calculator",
+          "patient_id": "synthetic_v9_m4",
+          "episode_id": "visit_v9_m4",
+          "bindings": [
+            {
+              "parameter": "opioid_name",
+              "value": "oxycodone",
+              "operation": "identity",
+              "operands": [
+                {
+                  "fact_id": "fact_0003",
+                  "value": "Oxycodone"
+                }
+              ]
+            },
+            {
+              "parameter": "daily_dose_mg",
+              "value": 70,
+              "operation": "multiply",
+              "operands": [
+                {
+                  "fact_id": "fact_0005",
+                  "value": 4
+                },
+                {
+                  "fact_id": "fact_0006",
+                  "value": 17.5
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "M04_R",
+      "preliminary_correct": false,
+      "final_correct": false,
+      "review": "Eight repeated JSON failures place 17.5 * 4 in a numeric value field, so no accepted call or result. Even the attempted daily-dose citation includes only frequency fact_0005 and omits dose fact_0006. Task ends stuck.",
+      "answer": null,
+      "all_accepted_computations_reviewed": true,
+      "accepted_computations": [],
+      "parsed_execute_attempts": []
+    },
+    {
+      "id": "M05_R",
+      "preliminary_correct": false,
+      "final_correct": false,
+      "review": "Daily dose 24 and output 36 are numerically correct; dose fact_0006 is cited without frequency fact_0005. to_number does not describe multiplication; to_uppercase is also false for Oxycodone -> oxycodone.",
+      "answer": {
+        "status": "success",
+        "result_id": "result_001",
+        "calculator_id": "mme_calculator",
+        "patient_id": "synthetic_v9_m5",
+        "episode_id": "visit_v9_m5",
+        "value": 36.0,
+        "unit": "MME/day"
+      },
+      "all_accepted_computations_reviewed": true,
+      "accepted_computations": [
+        {
+          "value": 36.0,
+          "result_id": "result_001",
+          "parameters": {
+            "opioid_name": "oxycodone",
+            "daily_dose_mg": 24
+          },
+          "bindings": {
+            "opioid_name": {
+              "parameter": "opioid_name",
+              "value": "oxycodone",
+              "fact_ids": [
+                "fact_0003"
+              ],
+              "transformation": "to_uppercase"
+            },
+            "daily_dose_mg": {
+              "parameter": "daily_dose_mg",
+              "value": 24,
+              "fact_ids": [
+                "fact_0006"
+              ],
+              "transformation": "to_number"
+            }
+          }
+        }
+      ],
+      "parsed_execute_attempts": [
+        {
+          "calculator_id": "mme_calculator",
+          "patient_id": "synthetic_v9_m5",
+          "episode_id": "visit_v9_m5",
+          "bindings": [
+            {
+              "parameter": "opioid_name",
+              "value": "oxycodone",
+              "fact_ids": [
+                "fact_0003"
+              ],
+              "transformation": "to_uppercase"
+            },
+            {
+              "parameter": "daily_dose_mg",
+              "value": 24,
+              "fact_ids": [
+                "fact_0006"
+              ],
+              "transformation": "to_number"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "M05_I",
+      "preliminary_correct": false,
+      "final_correct": false,
+      "review": "Daily-dose multiply declaration has the correct two target-scope operand values, both source IDs and product. However the first binding opioid_name uses identity on raw Oxycodone while declaring oxycodone, so the call is rejected before the daily-dose binding is reached. The generic error omits the parameter name; model incorrectly attributes it to daily_dose_mg and abstains. No accepted result and no end-to-end success; the correct dose chain is a post-hoc component observation only.",
+      "answer": {
+        "status": "abstain",
+        "reason": "The declared parameter value for 'daily_dose_mg' disagrees with the operation result."
+      },
+      "all_accepted_computations_reviewed": true,
+      "accepted_computations": [],
+      "parsed_execute_attempts": [
+        {
+          "calculator_id": "mme_calculator",
+          "patient_id": "synthetic_v9_m5",
+          "episode_id": "visit_v9_m5",
+          "bindings": [
+            {
+              "parameter": "opioid_name",
+              "value": "oxycodone",
+              "operation": "identity",
+              "operands": [
+                {
+                  "fact_id": "fact_0003",
+                  "value": "Oxycodone"
+                }
+              ]
+            },
+            {
+              "parameter": "daily_dose_mg",
+              "value": 24,
+              "operation": "multiply",
+              "operands": [
+                {
+                  "fact_id": "fact_0006",
+                  "value": 8
+                },
+                {
+                  "fact_id": "fact_0005",
+                  "value": 3
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "M06_I",
+      "preliminary_correct": false,
+      "final_correct": false,
+      "review": "First rejects opioid_name: identity of Oxycodone does not equal declared oxycodone. Daily dose is separately wrong/incomplete: identity of 22 instead of 22 times 2. The model attributes the generic error to daily_dose_mg and abstains rather than repairing. No accepted result.",
+      "answer": {
+        "status": "abstain",
+        "reason": "The declared parameter value for 'daily_dose_mg' disagrees with the operation result."
+      },
+      "all_accepted_computations_reviewed": true,
+      "accepted_computations": [],
+      "parsed_execute_attempts": [
+        {
+          "calculator_id": "mme_calculator",
+          "patient_id": "synthetic_v9_m6",
+          "episode_id": "visit_v9_m6",
+          "bindings": [
+            {
+              "parameter": "opioid_name",
+              "value": "oxycodone",
+              "operation": "identity",
+              "operands": [
+                {
+                  "fact_id": "fact_0002",
+                  "value": "Oxycodone"
+                }
+              ]
+            },
+            {
+              "parameter": "daily_dose_mg",
+              "value": 22,
+              "operation": "identity",
+              "operands": [
+                {
+                  "fact_id": "fact_0005",
+                  "value": 22
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "M06_R",
+      "preliminary_correct": false,
+      "final_correct": false,
+      "review": "Copies per-dose 22 as daily dose, omitting current frequency 2 fact_0004; output 33 instead of 66. lower is not a valid numeric derivation. Drug lowercase and source are supported.",
+      "answer": {
+        "status": "success",
+        "result_id": "result_001",
+        "calculator_id": "mme_calculator",
+        "patient_id": "synthetic_v9_m6",
+        "episode_id": "visit_v9_m6",
+        "value": 33.0,
+        "unit": "MME/day"
+      },
+      "all_accepted_computations_reviewed": true,
+      "accepted_computations": [
+        {
+          "value": 33.0,
+          "result_id": "result_001",
+          "parameters": {
+            "opioid_name": "oxycodone",
+            "daily_dose_mg": 22
+          },
+          "bindings": {
+            "opioid_name": {
+              "parameter": "opioid_name",
+              "value": "oxycodone",
+              "fact_ids": [
+                "fact_0002"
+              ],
+              "transformation": "lower"
+            },
+            "daily_dose_mg": {
+              "parameter": "daily_dose_mg",
+              "value": 22,
+              "fact_ids": [
+                "fact_0005"
+              ],
+              "transformation": "lower"
+            }
+          }
+        }
+      ],
+      "parsed_execute_attempts": [
+        {
+          "calculator_id": "mme_calculator",
+          "patient_id": "synthetic_v9_m6",
+          "episode_id": "visit_v9_m6",
+          "bindings": [
+            {
+              "parameter": "opioid_name",
+              "value": "oxycodone",
+              "fact_ids": [
+                "fact_0002"
+              ],
+              "transformation": "lower"
+            },
+            {
+              "parameter": "daily_dose_mg",
+              "value": 22,
+              "fact_ids": [
+                "fact_0005"
+              ],
+              "transformation": "lower"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "M07_R",
+      "preliminary_correct": true,
+      "final_correct": true,
+      "review": "All three target-scope parameters and source IDs correct; float adequately describes direct scalar extraction. Immutable output 13 correctly submitted.",
+      "answer": {
+        "status": "success",
+        "result_id": "result_001",
+        "calculator_id": "anion_gap",
+        "patient_id": "synthetic_v9_m7",
+        "episode_id": "visit_v9_m7",
+        "value": 13,
+        "unit": "mEq/L"
+      },
+      "all_accepted_computations_reviewed": true,
+      "accepted_computations": [
+        {
+          "value": 13,
+          "result_id": "result_001",
+          "parameters": {
+            "sodium": 140,
+            "chloride": 102,
+            "bicarbonate": 25
+          },
+          "bindings": {
+            "sodium": {
+              "parameter": "sodium",
+              "value": 140,
+              "fact_ids": [
+                "fact_0002"
+              ],
+              "transformation": "float"
+            },
+            "chloride": {
+              "parameter": "chloride",
+              "value": 102,
+              "fact_ids": [
+                "fact_0003"
+              ],
+              "transformation": "float"
+            },
+            "bicarbonate": {
+              "parameter": "bicarbonate",
+              "value": 25,
+              "fact_ids": [
+                "fact_0001"
+              ],
+              "transformation": "float"
+            }
+          }
+        }
+      ],
+      "parsed_execute_attempts": [
+        {
+          "calculator_id": "anion_gap",
+          "patient_id": "synthetic_v9_m7",
+          "episode_id": "visit_v9_m7",
+          "bindings": [
+            {
+              "parameter": "sodium",
+              "value": 140,
+              "fact_ids": [
+                "fact_0002"
+              ],
+              "transformation": "float"
+            },
+            {
+              "parameter": "chloride",
+              "value": 102,
+              "fact_ids": [
+                "fact_0003"
+              ],
+              "transformation": "float"
+            },
+            {
+              "parameter": "bicarbonate",
+              "value": 25,
+              "fact_ids": [
+                "fact_0001"
+              ],
+              "transformation": "float"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "M07_I",
+      "preliminary_correct": true,
+      "final_correct": true,
+      "review": "All three declared numeric operands match raw target facts; identity operations, output values and canonical ledger citations/explanations are correct. Immutable output 13 correctly submitted.",
+      "answer": {
+        "status": "success",
+        "result_id": "result_001",
+        "calculator_id": "anion_gap",
+        "patient_id": "synthetic_v9_m7",
+        "episode_id": "visit_v9_m7",
+        "value": 13,
+        "unit": "mEq/L"
+      },
+      "all_accepted_computations_reviewed": true,
+      "accepted_computations": [
+        {
+          "value": 13,
+          "result_id": "result_001",
+          "parameters": {
+            "sodium": 140,
+            "chloride": 102,
+            "bicarbonate": 25
+          },
+          "bindings": {
+            "sodium": {
+              "parameter": "sodium",
+              "value": 140,
+              "fact_ids": [
+                "fact_0002"
+              ],
+              "transformation": "identity(140 from fact_0002)"
+            },
+            "chloride": {
+              "parameter": "chloride",
+              "value": 102,
+              "fact_ids": [
+                "fact_0003"
+              ],
+              "transformation": "identity(102 from fact_0003)"
+            },
+            "bicarbonate": {
+              "parameter": "bicarbonate",
+              "value": 25,
+              "fact_ids": [
+                "fact_0001"
+              ],
+              "transformation": "identity(25 from fact_0001)"
+            }
+          },
+          "operand_bindings": [
+            {
+              "parameter": "sodium",
+              "value": 140,
+              "operation": "identity",
+              "operands": [
+                {
+                  "fact_id": "fact_0002",
+                  "value": 140
+                }
+              ]
+            },
+            {
+              "parameter": "chloride",
+              "value": 102,
+              "operation": "identity",
+              "operands": [
+                {
+                  "fact_id": "fact_0003",
+                  "value": 102
+                }
+              ]
+            },
+            {
+              "parameter": "bicarbonate",
+              "value": 25,
+              "operation": "identity",
+              "operands": [
+                {
+                  "fact_id": "fact_0001",
+                  "value": 25
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "parsed_execute_attempts": [
+        {
+          "calculator_id": "anion_gap",
+          "patient_id": "synthetic_v9_m7",
+          "episode_id": "visit_v9_m7",
+          "bindings": [
+            {
+              "parameter": "sodium",
+              "value": 140,
+              "operation": "identity",
+              "operands": [
+                {
+                  "fact_id": "fact_0002",
+                  "value": 140
+                }
+              ]
+            },
+            {
+              "parameter": "chloride",
+              "value": 102,
+              "operation": "identity",
+              "operands": [
+                {
+                  "fact_id": "fact_0003",
+                  "value": 102
+                }
+              ]
+            },
+            {
+              "parameter": "bicarbonate",
+              "value": 25,
+              "operation": "identity",
+              "operands": [
+                {
+                  "fact_id": "fact_0001",
+                  "value": 25
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "M08_I",
+      "preliminary_correct": false,
+      "final_correct": false,
+      "review": "Initially adds unsupported unit keys, then cites old-episode sodium fact_0001. Scope guard correctly rejects it. Model abstains for insufficient evidence instead of selecting available current sodium fact_0003. All required current facts exist; failure and regression from R.",
+      "answer": {
+        "status": "abstain",
+        "reason": "Insufficient evidence due to scope mismatch between calculator parameters and available facts."
+      },
+      "all_accepted_computations_reviewed": true,
+      "accepted_computations": [],
+      "parsed_execute_attempts": [
+        {
+          "calculator_id": "anion_gap",
+          "patient_id": "synthetic_v9_m8",
+          "episode_id": "visit_v9_m8",
+          "bindings": [
+            {
+              "parameter": "sodium",
+              "value": 158,
+              "operation": "identity",
+              "operands": [
+                {
+                  "fact_id": "fact_0001",
+                  "value": 158
+                }
+              ]
+            },
+            {
+              "parameter": "chloride",
+              "value": 110,
+              "operation": "identity",
+              "operands": [
+                {
+                  "fact_id": "fact_0004",
+                  "value": 110
+                }
+              ]
+            },
+            {
+              "parameter": "bicarbonate",
+              "value": 22,
+              "operation": "identity",
+              "operands": [
+                {
+                  "fact_id": "fact_0002",
+                  "value": 22
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "M08_R",
+      "preliminary_correct": true,
+      "final_correct": true,
+      "review": "Selects target sodium 146 fact_0003, chloride 110 fact_0004 and bicarbonate 22 fact_0002; rejects old sodium by selection. Direct scalar extraction and immutable output 14 are correct.",
+      "answer": {
+        "status": "success",
+        "result_id": "result_001",
+        "calculator_id": "anion_gap",
+        "patient_id": "synthetic_v9_m8",
+        "episode_id": "visit_v9_m8",
+        "value": 14,
+        "unit": "mEq/L"
+      },
+      "all_accepted_computations_reviewed": true,
+      "accepted_computations": [
+        {
+          "value": 14,
+          "result_id": "result_001",
+          "parameters": {
+            "sodium": 146,
+            "chloride": 110,
+            "bicarbonate": 22
+          },
+          "bindings": {
+            "sodium": {
+              "parameter": "sodium",
+              "value": 146,
+              "fact_ids": [
+                "fact_0003"
+              ],
+              "transformation": "float"
+            },
+            "chloride": {
+              "parameter": "chloride",
+              "value": 110,
+              "fact_ids": [
+                "fact_0004"
+              ],
+              "transformation": "float"
+            },
+            "bicarbonate": {
+              "parameter": "bicarbonate",
+              "value": 22,
+              "fact_ids": [
+                "fact_0002"
+              ],
+              "transformation": "float"
+            }
+          }
+        }
+      ],
+      "parsed_execute_attempts": [
+        {
+          "calculator_id": "anion_gap",
+          "patient_id": "synthetic_v9_m8",
+          "episode_id": "visit_v9_m8",
+          "bindings": [
+            {
+              "parameter": "sodium",
+              "value": 146,
+              "fact_ids": [
+                "fact_0003"
+              ],
+              "transformation": "float"
+            },
+            {
+              "parameter": "chloride",
+              "value": 110,
+              "fact_ids": [
+                "fact_0004"
+              ],
+              "transformation": "float"
+            },
+            {
+              "parameter": "bicarbonate",
+              "value": 22,
+              "fact_ids": [
+                "fact_0002"
+              ],
+              "transformation": "float"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
