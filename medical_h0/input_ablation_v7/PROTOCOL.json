@@ -1,0 +1,80 @@
+{
+  "version": "input_ablation_v7",
+  "frozen_epoch": 1792761163.5169122,
+  "source_parent": "d99ba80",
+  "purpose": "Identify whether finite raw-input acquisition or visible-evidence selection/parameter mapping blocks the mainline medical harness; no HCL launch.",
+  "hcl_enabled": false,
+  "synthetic_only": true,
+  "benchmark_replay": false,
+  "engineering_start_epoch": 1792760943.5210736,
+  "engineering_deadline_epoch": 1792768143.5210736,
+  "post_run_audit_max_seconds": 1800,
+  "model": "Qwen2.5-VL-7B-Instruct",
+  "dtype": "bfloat16",
+  "attention": "sdpa",
+  "temperature": 0,
+  "context_window": 32768,
+  "model_window_seconds": 2700,
+  "early_stop_margin_seconds": 60,
+  "episode_seconds": 300,
+  "max_requests_per_episode": 12,
+  "max_model_requests": 360,
+  "max_input_tokens": 3000000,
+  "max_output_tokens": 256000,
+  "max_output_per_generation": 4096,
+  "max_new_bytes": 2147483648,
+  "storage_reserve_bytes": 1073741824,
+  "external_file_reserve_bytes": 1048576,
+  "planned_navigation_cases": 12,
+  "navigation_arms": [
+    "A_autonomous",
+    "B_all_raw_facts"
+  ],
+  "mapping_cases": 6,
+  "planned_episodes": 30,
+  "navigation_design": "12 new synthetic cases: 8 answerable, 2 truly missing, 2 conflicting. Each arm has fresh execution state. Odd cases A then B; even cases B then A. One independent B-only mapping probe after each two navigation pairs. No score gates between cases/components.",
+  "only_between_arm_intervention": "A begins with unread input; B programmatically reads every raw page using unchanged runtime. No filtering, oracle facts, parameter values, formula results or model output reuse. Same prompts, SYSTEM, schemas, model, decode, scorer and 12-call model budget. Automatic CPU reads are separately counted and add input tokens.",
+  "navigation_task_rule": "Return all same-patient/same-episode facts matching the explicitly requested fields when each field is present with a consistent value. If any field is absent after finite input exhaustion, abstain with a missing-evidence reason. If a requested field has conflicting values with no authority rule, abstain with a conflict reason. No runtime validation using expected IDs.",
+  "navigation_scoring": "Answerable: exact expected fact-ID set and explicit success. Missing: explicit abstention, full input exhaustion, and manual reason audit supports missing facts (not budget/tool failure). Conflict: explicit abstention, both conflict facts actually visible, and manual reason audit recognizes contradictory evidence. Structural preliminary scores are not final semantic judgments.",
+  "metrics": [
+    "required_evidence_visible_at_end",
+    "exact_evidence_selection",
+    "ended_with_unread_facts",
+    "incorrect_termination_with_unread_facts",
+    "scope_error_calls",
+    "appropriate_and_inappropriate_abstention",
+    "mapping_numeric_correct",
+    "mapping_trusted_correct_after_all_accepted_result_audit",
+    "real_model_requests_and_tokens",
+    "programmatic_read_calls_and_serialized_bytes"
+  ],
+  "mapping_design": "Reuse the six v6 mapping fixtures that never received model inference, with all raw facts visible. Model must retrieve formula definitions, bind its own values and evidence, execute, and explicitly submit. Do not retroactively update v6. These are small development diagnostics, not an independent clinical validation set.",
+  "analysis": "Report paired outcomes: both correct, A only, B only, neither; distinguish 8 answerable from 4 abstention cases. Descriptive small-sample comparison, no population reliability or isolated clinical claim.",
+  "decision_rules": {
+    "input_acquisition_signal": "B at least 3/12 more correct than A, at least 8/12 B overall, and at least 6/8 B answerable: prioritize bounded input collection; descriptive threshold only.",
+    "visible_selection_failure": "B fewer than 6/8 answerable correct: visible selection/prompt/model compatibility remains unresolved; do not focus only on pagination.",
+    "mapping_usable_for_next_design": "At least 4/6 trusted correct after manual audit, covering all 3 calculator families, with all accepted computations audited. This only supports planning a new end-to-end gate.",
+    "mapping_semantics_signal": "B navigation answerable at least 6/8 but mapping criterion fails: localize mapping errors using value/source/transformation audits.",
+    "mixed": "Report uncertainty without forcing a route; no automatic follow-on run."
+  },
+  "stop_conditions": [
+    "CPU contract/scoring checks must pass before inference",
+    "No retries or same-panel post-feedback edits",
+    "Provider/protocol/runtime/identity/guard failure is fatal and preserves partial results",
+    "Model task failures do not stop later navigation or mapping episodes",
+    "Global budgets stop all remaining work with full planned/attempted accounting",
+    "After analysis and public source/report delivery stop; no HCL or automatic next experiment"
+  ],
+  "unchanged": [
+    "v5/v6 code and historical results",
+    "v6 runtime source/domain/immutable result checks",
+    "v6 SYSTEM and tool schemas between arms",
+    "official Qwen-Agent Nous free generation transport"
+  ],
+  "limitations": [
+    "Finite 12-row synthetic navigation; full raw context does not generalize to unbounded patient records",
+    "No model/grammar/harness-contract change in the A/B contrast",
+    "No patient-independent medical performance claim",
+    "New synthetic fixtures may still be easy or biased; provenance and expected rules are public"
+  ]
+}
