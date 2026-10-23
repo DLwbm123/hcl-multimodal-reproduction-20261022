@@ -57,7 +57,7 @@ def main():
     env = os.environ.copy()
     deps = ['./bin/python', '-m', 'pip', 'install', '--no-cache-dir', '--only-binary=:all:',
             '--upgrade-strategy', 'only-if-needed', 'numpy<2', 'opencv-python-headless<4.12',
-            'albumentations>=1.4.24,<2', 'pyarrow>=16,<20']
+            'albumentations>=1.4.24,<2', 'pyarrow>=16,<20', 'matplotlib>=3.9,<3.11']
     if bounded(deps, environment, 'native_dependencies', min(clock['deadline'], time.time() + 900), env):
         raise RuntimeError('Native dependency installation failed')
     config = json.loads((ROOT / 'runtime.private.json').read_text())
@@ -68,11 +68,17 @@ def main():
                                      'required_mib': 40960})
     if free_mb < 40960:
         raise RuntimeError('Insufficient free GPU memory; existing processes left untouched')
-    deadline = min(clock['deadline'], time.time() + 3600)
-    save('NATIVE_CLOCK.json', {'time': time.time(), 'deadline': deadline,
-                             'original_epoch': clock['epoch'], 'original_deadline': clock['deadline']})
+    native_clock = ROOT / 'NATIVE_CLOCK.json'
+    if native_clock.exists():
+        deadline = min(clock['deadline'], json.loads(native_clock.read_text())['deadline'])
+    else:
+        deadline = min(clock['deadline'], time.time() + 3600)
+        save('NATIVE_CLOCK.json', {'time': time.time(), 'deadline': deadline,
+                                 'original_epoch': clock['epoch'], 'original_deadline': clock['deadline']})
+    if time.time() >= deadline:
+        raise RuntimeError('Original native phase deadline exhausted')
     env.update(CUDA_VISIBLE_DEVICES=config['gpu'], HF_HUB_OFFLINE='1', TRANSFORMERS_OFFLINE='1',
-               MPLBACKEND='Agg')
+               MPLBACKEND='Agg', MPLCONFIGDIR=str(ROOT / 'cache/matplotlib'), NO_ALBUMENTATIONS_UPDATE='1')
     code = bounded(['./bin/python', '/data/bmw/workers/r914.py'], environment, 'native', deadline, env)
     save('CONTINUATION_FINISHED.json', {'time': time.time(), 'native_exit_code': code,
                                        'allocated_bytes': allocated_bytes(ROOT)})

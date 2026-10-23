@@ -1,0 +1,22 @@
+{
+  "status": "compatibility_retry_running",
+  "first_attempt": {
+    "preparation_complete": true,
+    "native_attempted": 0,
+    "native_denominator": 12,
+    "planner_generations": 0,
+    "expert_generations": 0,
+    "failure": "matplotlib missing while importing upstream segmentation tool",
+    "meaning": "Runtime setup failure before inference; no accuracy estimate or HCL efficacy evidence."
+  },
+  "repair": "Install matplotlib in the new isolated environment; preserve all attempt-1 records and original native phase deadline.",
+  "unchanged": [
+    "12-case development panel",
+    "model and tool assets",
+    "tool schemas",
+    "scoring",
+    "qualification gate",
+    "original 23-hour run and 1-hour native phase clocks"
+  ],
+  "actual_allocated_bytes_after_first_attempt": 15705747456
+}
