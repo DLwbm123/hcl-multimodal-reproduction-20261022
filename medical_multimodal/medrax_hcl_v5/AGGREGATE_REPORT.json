@@ -1,0 +1,232 @@
+{
+  "time": 1792874590.5242815,
+  "fatal": null,
+  "full_report_cases_per_state": 48,
+  "physical_case_episodes": 160,
+  "state_aliases": {
+    "H0_static": "H0_static",
+    "H_A": "H_A",
+    "H_AB_local_zero": "H_A",
+    "H_AB_local_infinite": "H_A"
+  },
+  "metrics": {
+    "H0_static": {
+      "A": {
+        "correct": 18,
+        "denominator": 24,
+        "completed": 24,
+        "valid_final": 24
+      },
+      "B": {
+        "correct": 21,
+        "denominator": 24,
+        "completed": 24,
+        "valid_final": 24
+      }
+    },
+    "H_A": {
+      "A": {
+        "correct": 17,
+        "denominator": 24,
+        "completed": 24,
+        "valid_final": 24
+      },
+      "B": {
+        "correct": 22,
+        "denominator": 24,
+        "completed": 24,
+        "valid_final": 24
+      }
+    },
+    "H_AB_local_zero": {
+      "A": {
+        "correct": 17,
+        "denominator": 24,
+        "completed": 24,
+        "valid_final": 24
+      },
+      "B": {
+        "correct": 22,
+        "denominator": 24,
+        "completed": 24,
+        "valid_final": 24
+      }
+    },
+    "H_AB_local_infinite": {
+      "A": {
+        "correct": 17,
+        "denominator": 24,
+        "completed": 24,
+        "valid_final": 24
+      },
+      "B": {
+        "correct": 22,
+        "denominator": 24,
+        "completed": 24,
+        "valid_final": 24
+      }
+    }
+  },
+  "paired": {
+    "H0_static -> H_A": {
+      "A": {
+        "both_correct": 17,
+        "gain": 0,
+        "loss": 1,
+        "both_wrong": 6,
+        "mcnemar_exact_two_sided": 1.0,
+        "denominator": 24
+      },
+      "B": {
+        "both_correct": 21,
+        "gain": 1,
+        "loss": 0,
+        "both_wrong": 2,
+        "mcnemar_exact_two_sided": 1.0,
+        "denominator": 24
+      }
+    },
+    "H_A -> H_AB_local_zero": {
+      "A": {
+        "both_correct": 17,
+        "gain": 0,
+        "loss": 0,
+        "both_wrong": 7,
+        "mcnemar_exact_two_sided": 1.0,
+        "denominator": 24
+      },
+      "B": {
+        "both_correct": 22,
+        "gain": 0,
+        "loss": 0,
+        "both_wrong": 2,
+        "mcnemar_exact_two_sided": 1.0,
+        "denominator": 24
+      }
+    },
+    "H_A -> H_AB_local_infinite": {
+      "A": {
+        "both_correct": 17,
+        "gain": 0,
+        "loss": 0,
+        "both_wrong": 7,
+        "mcnemar_exact_two_sided": 1.0,
+        "denominator": 24
+      },
+      "B": {
+        "both_correct": 22,
+        "gain": 0,
+        "loss": 0,
+        "both_wrong": 2,
+        "mcnemar_exact_two_sided": 1.0,
+        "denominator": 24
+      }
+    },
+    "H0_static -> H_AB_local_zero": {
+      "A": {
+        "both_correct": 17,
+        "gain": 0,
+        "loss": 1,
+        "both_wrong": 6,
+        "mcnemar_exact_two_sided": 1.0,
+        "denominator": 24
+      },
+      "B": {
+        "both_correct": 21,
+        "gain": 1,
+        "loss": 0,
+        "both_wrong": 2,
+        "mcnemar_exact_two_sided": 1.0,
+        "denominator": 24
+      }
+    },
+    "H_AB_local_zero -> H_AB_local_infinite": {
+      "A": {
+        "both_correct": 17,
+        "gain": 0,
+        "loss": 0,
+        "both_wrong": 7,
+        "mcnemar_exact_two_sided": 1.0,
+        "denominator": 24
+      },
+      "B": {
+        "both_correct": 22,
+        "gain": 0,
+        "loss": 0,
+        "both_wrong": 2,
+        "mcnemar_exact_two_sided": 1.0,
+        "denominator": 24
+      }
+    }
+  },
+  "retention": {
+    "H_AB_local_zero": {
+      "acquired_A_denominator": 0,
+      "acquired_A_lost": 0,
+      "base_A_denominator": 18,
+      "base_A_lost": 1
+    },
+    "H_AB_local_infinite": {
+      "acquired_A_denominator": 0,
+      "acquired_A_lost": 0,
+      "base_A_denominator": 18,
+      "base_A_lost": 1
+    }
+  },
+  "decisions": {
+    "A": {
+      "reference_correct": 7,
+      "candidate_correct": 8,
+      "denominator": 8,
+      "local_infinite_accept": true,
+      "local_zero_accept": true,
+      "anchor_protected": 0,
+      "anchor_losses": 0,
+      "anchor_complete": true,
+      "reasons": []
+    },
+    "B": {
+      "reference_correct": 8,
+      "candidate_correct": 7,
+      "denominator": 8,
+      "local_infinite_accept": false,
+      "local_zero_accept": false,
+      "anchor_protected": 7,
+      "anchor_losses": 0,
+      "anchor_complete": true,
+      "reasons": [
+        "no_positive_selection_gain"
+      ]
+    }
+  },
+  "joint_development_signal": false,
+  "clinical_or_confirmatory_efficacy": false,
+  "memory_occupancy": {
+    "H0_static": {
+      "raw": 0,
+      "abstract": 0,
+      "anchor": 0,
+      "skills": 0
+    },
+    "H_A": {
+      "raw": 2,
+      "abstract": 1,
+      "anchor": 0,
+      "skills": 0
+    },
+    "H_AB_local_zero": {
+      "raw": 2,
+      "abstract": 1,
+      "anchor": 0,
+      "skills": 0
+    },
+    "H_AB_local_infinite": {
+      "raw": 2,
+      "abstract": 1,
+      "anchor": 0,
+      "skills": 0
+    }
+  },
+  "seconds_since_original_start": 10867.88210606575,
+  "gate_contribution_pattern": false
+}

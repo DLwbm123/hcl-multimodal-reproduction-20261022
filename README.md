@@ -95,3 +95,5 @@ The distinct [native ReAct visual-tool qualification](medical_multimodal/react_v
 ## Sol High subscription medical-agent qualification
 
 [Author-aligned six-tool qualification](medical_multimodal/medrax_subscription_v4/REPORT.zh-CN.md) completed: 12/12 episodes and autonomous tool round trips, 11/12 correct. An initial image-path transport failure and all retry costs are retained (113 total reserved subscription calls). Tool outputs include low-information and malformed responses; operational qualification does not establish causal tool benefit or HCL efficacy.
+
+[首轮 Sol High 医学记忆持续学习](medical_multimodal/medrax_hcl_v5/REPORT.zh-CN.md)已完成：160回合、488调用，总正确39/48未提升，A退化1例、B更新被拒绝；抽象记忆未进入检索，联合目标失败。
