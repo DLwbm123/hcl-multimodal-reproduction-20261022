@@ -1,0 +1,45 @@
+{
+  "time": 1792851825.952926,
+  "status": "background asset preparation; agent continuation waiting for assets",
+  "controller": "gpt-6.1-sol/high via local ChatGPT subscription",
+  "original_budget": {
+    "started_epoch": 1792850175.587539,
+    "hard_deadline_epoch": 1792932975.587539,
+    "max_subscription_calls": 200,
+    "max_new_bytes_per_host": 50000000000,
+    "stop_new_bytes": 45000000000,
+    "model": "gpt-6.1-sol",
+    "reasoning": "high",
+    "mode": "author_alignment_no_HCL",
+    "initial_smoke_max_calls": 3
+  },
+  "remote_agent": {
+    "pid": 438424,
+    "start_ticks": "124219498",
+    "started": 1792851333.2563236,
+    "pgid": 438424
+  },
+  "asset_download": {
+    "pid": 437998,
+    "start_ticks": "124215962",
+    "time": 1792851297.898668
+  },
+  "local_bridge": {
+    "pid": 36809,
+    "pgid": 36809,
+    "started": 1792851788.077006,
+    "argv": [
+      "python3",
+      "/tmp/r983.py"
+    ],
+    "reason": "Refresh signed URLs with cache-busting, before first medical request; original budget unchanged"
+  },
+  "guard": {
+    "time": 1792851813.408333,
+    "bytes": 3971204644,
+    "deadline": 1792932975.587539
+  },
+  "cpu_check_passed": true,
+  "six_tools_loaded": false,
+  "medical_panel_started": false
+}

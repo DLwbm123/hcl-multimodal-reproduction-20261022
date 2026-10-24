@@ -1,0 +1,49 @@
+{
+  "purpose": "Author-aligned six-tool medical agent qualification with user-selected Sol High subscription controller; no HCL or cross-case learning.",
+  "upstream_revision": "dae30e2f136ef0b2a40885a4c335386e9ffad052",
+  "model": "gpt-6.1-sol",
+  "reasoning": "high",
+  "auth": "local ChatGPT subscription; no API key or credentials on server",
+  "selection": {
+    "seed": 20261026,
+    "n": 12,
+    "unit": "one question from each unique case",
+    "method": "metadata-only category balancing after seeded shuffle",
+    "excluded_prior_cases": 48,
+    "panel": "private/panel.json frozen before model inference"
+  },
+  "limits": {
+    "max_subscription_calls_total": 200,
+    "per_case_controller_calls": 12,
+    "per_case_tool_calls": 16,
+    "per_case_seconds": 3600,
+    "request_timeout_seconds": 1200,
+    "hard_deadline_epoch": 1792932975.587539,
+    "storage_stop_bytes": 45000000000,
+    "storage_exclusive_hard_bytes": 50000000000
+  },
+  "author_alignment": [
+    "Original MEDICAL_ASSISTANT prompt",
+    "Original six tool names/schemas/default inference parameters and report models",
+    "MAIRA-2 and LLaVA-Med load_in_8bit=True",
+    "Original LangGraph Agent workflow and MemorySaver; fresh graph per case",
+    "Original question prefix and image filename/path prompt",
+    "Original second-turn letter-only choice request and exact stripped A-F scoring"
+  ],
+  "disclosed_differences": [
+    "Sol High replaces GPT-4o; temperature .2/top_p .95 are not controllable through subscription CLI",
+    "Typed message/tool-call transport through isolated CLI structured JSON instead of ChatOpenAI native tool binding",
+    "CLI platform envelopes remain; host tools, skills, memories and label paths are disabled/denied",
+    "Original downloaded images supplied as local image attachments, lossless RGB PNG conversion only if CLI decoding requires it",
+    "Bounded 12-case development qualification instead of full benchmark; notebook resume cutoff not treated as dataset definition",
+    "Read-only shared weights plus necessary pinned-runtime compatibility adapters"
+  ],
+  "gates": {
+    "transport": "Synthetic image colors correctly enter typed tool call and matching tool result is consumed",
+    "tools": "All six native tools execute successfully on the fixed preflight image",
+    "operational": "All 12 complete both turns with valid final letter; image payload present; at least one autonomous successful tool result consumed",
+    "scientific": "Report accuracy, paired risks not claimed, tool choices and costs descriptively. Passing operational gate alone is not evidence for HCL effectiveness. Choose subsequent frozen learning protocol only after reviewing the complete report."
+  },
+  "hcl_updates": 0,
+  "scoring": "Gold answers/explanations never provided to controller/tools; exact final stripped A-F after whole panel; all12 retained including failures/notrun."
+}

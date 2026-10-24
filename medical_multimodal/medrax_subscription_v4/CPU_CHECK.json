@@ -1,0 +1,143 @@
+{
+  "passed": true,
+  "native_graph_calls": 3,
+  "matching_tool_result_id": true,
+  "second_turn_memory": true,
+  "panel_cases": 12,
+  "images": 19,
+  "dimensions": [
+    {
+      "size": [
+        480,
+        480
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "size": [
+        480,
+        480
+      ],
+      "mode": "RGB"
+    },
+    {
+      "size": [
+        480,
+        480
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "size": [
+        480,
+        480
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "size": [
+        480,
+        480
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "size": [
+        480,
+        480
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "size": [
+        480,
+        480
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "size": [
+        480,
+        480
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "size": [
+        480,
+        480
+      ],
+      "mode": "RGB"
+    },
+    {
+      "size": [
+        480,
+        480
+      ],
+      "mode": "RGB"
+    },
+    {
+      "size": [
+        480,
+        480
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "size": [
+        480,
+        480
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "size": [
+        480,
+        480
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "size": [
+        480,
+        480
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "size": [
+        480,
+        480
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "size": [
+        480,
+        480
+      ],
+      "mode": "RGB"
+    },
+    {
+      "size": [
+        480,
+        480
+      ],
+      "mode": "RGB"
+    },
+    {
+      "size": [
+        480,
+        480
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "size": [
+        480,
+        480
+      ],
+      "mode": "RGBA"
+    }
+  ]
+}

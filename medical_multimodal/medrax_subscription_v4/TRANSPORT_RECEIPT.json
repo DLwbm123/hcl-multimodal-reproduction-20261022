@@ -1,0 +1,54 @@
+{
+  "cli_version": "0.164.0-alpha.11.1",
+  "auth": "ChatGPT subscription",
+  "model": "gpt-6.1-sol",
+  "reasoning": "high",
+  "smokes": [
+    {
+      "test": "vision_smoke",
+      "status": "ok",
+      "exit_code": 0,
+      "seconds": 15.462996006011963,
+      "image_count": 1,
+      "output": {
+        "content": "",
+        "tool_calls": [
+          {
+            "name": "record_colors",
+            "arguments_json": "{\"left\":\"red\",\"right\":\"blue\"}"
+          }
+        ]
+      },
+      "usage": [
+        {
+          "input_tokens": 6211,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 37,
+          "reasoning_output_tokens": 0
+        }
+      ]
+    },
+    {
+      "test": "result_smoke",
+      "status": "ok",
+      "exit_code": 0,
+      "seconds": 24.604109048843384,
+      "image_count": 1,
+      "output": {
+        "content": "recorded-red-blue-739",
+        "tool_calls": []
+      },
+      "usage": [
+        {
+          "input_tokens": 6293,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 24,
+          "reasoning_output_tokens": 0
+        }
+      ]
+    }
+  ],
+  "passed": true
+}
