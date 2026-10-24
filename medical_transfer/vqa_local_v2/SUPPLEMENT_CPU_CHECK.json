@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "checks": [
+    "exact_discrete_pairs_and_zero_discordance",
+    "four_cell_denominators",
+    "empty_new_learning_is_not_applicable",
+    "partial_retention",
+    "mismatched_identities_rejected"
+  ],
+  "model_calls": 0
+}
