@@ -23,7 +23,10 @@
   },
   "validation": {
     "cpu_path_contract": "passed",
-    "real_medical_tool_after_repair": "pending"
+    "real_medical_tool_after_repair": "passed: first autonomous chest_xray_expert call completed; subsequent controller response with one tool result completed",
+    "six_tool_preflight_after_restart": "all six completed",
+    "first_response_exact_image_alias_rewrites": 1,
+    "full_12_case_qualification": "still running"
   },
   "budget": {
     "subscription_calls_reserved_at_restart": 77,
