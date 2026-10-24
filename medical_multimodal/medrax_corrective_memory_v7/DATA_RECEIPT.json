@@ -1,0 +1,14 @@
+{
+  "time": 1792885106.931064,
+  "cases": 80,
+  "train_cases": 32,
+  "report_cases": 48,
+  "A": 40,
+  "B": 40,
+  "planned_episodes": 176,
+  "decoded_image_occurrences": 137,
+  "case_and_known_source_overlap": 0,
+  "excluded_previous_cases": 172,
+  "selection_used_labels": false,
+  "train_report_disjoint": true
+}

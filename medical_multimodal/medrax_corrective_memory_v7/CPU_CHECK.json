@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "checks": [
+    "stage_matched_write_counts",
+    "deterministic_training_only_selection",
+    "zero_error_no_fabrication",
+    "invalid_prediction_fail_closed",
+    "source_immutable",
+    "root_alias_followed_internal_links_excluded",
+    "hardlinks_counted_once",
+    "answer_free_inputs",
+    "train_only_supervision",
+    "real_hcl_correct_and_error_records",
+    "common_semantic_context",
+    "empty_H0_unchanged"
+  ],
+  "cases": 80
+}
