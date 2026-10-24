@@ -1,0 +1,92 @@
+{
+  "status": "running_initial_image_inference_verified",
+  "checked_epoch": 1792844739.607512,
+  "freeze": {
+    "protocol_commit": "fb201b40361bdcddf7382053a2fb53581bfb6fbe",
+    "shared_source_commit": "38907d8",
+    "previous_report_commit": "25d480e",
+    "frozen_at": 1792844597.1716437,
+    "started_epoch": 1792844425.4113045,
+    "soft_deadline_epoch": 1792926325.4113045,
+    "hard_deadline_epoch": 1792927225.4113045,
+    "model_calls_at_freeze": 0,
+    "unique_development_groups": 360,
+    "max_calls_total": 8000,
+    "storage_stop_bytes": 4000000000,
+    "storage_cap_bytes": 5000000000
+  },
+  "processes": {
+    "supervisor": {
+      "pid": 286177,
+      "start_ticks": 123545890,
+      "pgid": 286177,
+      "argv": "./bin/python /data/bmw/workers/r971.py"
+    },
+    "workers": {
+      "p1": {
+        "pid": 286200,
+        "start_ticks": 123545909,
+        "pgid": 286200,
+        "argv": "./bin/python /data/bmw/workers/r972.py"
+      },
+      "p2": {
+        "pid": 286220,
+        "start_ticks": 123545936,
+        "pgid": 286220,
+        "argv": "./bin/python /data/bmw/workers/r972.py"
+      }
+    },
+    "gpus": {
+      "p1": 2,
+      "p2": 3
+    }
+  },
+  "checks": {
+    "p1": {
+      "model_ready": true,
+      "successful_final_image_calls": 8,
+      "completed_calls": 24,
+      "failure": false,
+      "progress": {
+        "phase": "evaluation",
+        "block": "empty_selection",
+        "completed": 8,
+        "total": 24,
+        "calls": 24
+      }
+    },
+    "p2": {
+      "model_ready": true,
+      "successful_final_image_calls": 8,
+      "completed_calls": 24,
+      "failure": false,
+      "progress": {
+        "phase": "evaluation",
+        "block": "empty_A_review",
+        "completed": 8,
+        "total": 24,
+        "calls": 24
+      }
+    }
+  },
+  "resource": {
+    "time": 1792844738.2702837,
+    "bytes": 2961408,
+    "calls": {
+      "p1": 23,
+      "p2": 24
+    },
+    "returncodes": {
+      "p1": null,
+      "p2": null
+    }
+  },
+  "guard_fresh": true,
+  "owned_gpu_processes": [
+    "286200, ./bin/python, 17582 MiB",
+    "286220, ./bin/python, 18500 MiB"
+  ],
+  "scope": "Startup check only; no experimental outcome claimed",
+  "monitor_id": "vqa",
+  "monitor_interval_minutes": 30
+}

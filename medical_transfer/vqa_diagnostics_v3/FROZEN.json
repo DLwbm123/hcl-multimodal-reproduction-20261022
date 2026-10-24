@@ -1,0 +1,14 @@
+{
+  "protocol_commit": "fb201b40361bdcddf7382053a2fb53581bfb6fbe",
+  "shared_source_commit": "38907d8",
+  "previous_report_commit": "25d480e",
+  "frozen_at": 1792844597.1716437,
+  "started_epoch": 1792844425.4113045,
+  "soft_deadline_epoch": 1792926325.4113045,
+  "hard_deadline_epoch": 1792927225.4113045,
+  "model_calls_at_freeze": 0,
+  "unique_development_groups": 360,
+  "max_calls_total": 8000,
+  "storage_stop_bytes": 4000000000,
+  "storage_cap_bytes": 5000000000
+}
