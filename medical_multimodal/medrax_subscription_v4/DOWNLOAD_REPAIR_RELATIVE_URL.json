@@ -1,0 +1,16 @@
+{
+  "time": 1792857835.454275,
+  "cause": "Five public LLaVA-Med metadata redirects are relative URLs; urllib rejected them before network access",
+  "repair": "Resolve relative redirects against https://huggingface.co; resume completed files and partials; original deadline/storage/call budget unchanged",
+  "old_identity": {
+    "pid": 437998,
+    "start_ticks": "124215962",
+    "time": 1792851297.898668
+  },
+  "prior_log_retained": "download.log",
+  "verified": {
+    "relative_and_absolute_url_resolution": true,
+    "live_config_and_generation_config_downloaded_and_json_readable": true,
+    "existing_download_partials_and_original_budget_preserved": true
+  }
+}

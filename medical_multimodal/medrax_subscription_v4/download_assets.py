@@ -8,6 +8,7 @@ import subprocess
 import threading
 import time
 import urllib.request
+import urllib.parse
 
 ROOT = Path(os.environ['R981_ROOT'])
 PLAN = json.loads((ROOT / 'private/download.json').read_text())
@@ -36,6 +37,7 @@ def fetch(item):
         try:
             fresh=json.loads((ROOT/'private/download.json').read_text())
             url=next(f['url'] for f in fresh['files'] if f['directory']==item['directory'] and f['name']==item['name'])
+            url=urllib.parse.urljoin('https://huggingface.co/',url)
             with opener.open(urllib.request.Request(url,headers={'Range':f'bytes={offset}-{end}'}),timeout=90) as src:
                 if src.status!=206 or not src.headers.get('Content-Range','').startswith(f'bytes {offset}-'):
                     # Tiny non-LFS files may ignore Range and return their complete body.
