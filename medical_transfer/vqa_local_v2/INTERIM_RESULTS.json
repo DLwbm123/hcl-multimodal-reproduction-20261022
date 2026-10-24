@@ -1,0 +1,155 @@
+{
+  "status": "interim_not_final",
+  "snapshot_time": "2026-10-24 approximately 18:54-18:55 Asia/Shanghai",
+  "checkpoint": "after_B",
+  "denominator_per_stage": 72,
+  "stage_order": [
+    "A",
+    "B",
+    "C"
+  ],
+  "matrix_after_A": {
+    "static": [
+      21,
+      0,
+      0
+    ],
+    "fixed_memory": [
+      23,
+      0,
+      0
+    ],
+    "bulk": [
+      28,
+      0,
+      0
+    ],
+    "stability": [
+      21,
+      0,
+      0
+    ],
+    "plasticity": [
+      21,
+      0,
+      0
+    ]
+  },
+  "matrix_after_B": {
+    "static": [
+      21,
+      0,
+      0
+    ],
+    "fixed_memory": [
+      17,
+      7,
+      0
+    ],
+    "bulk": [
+      28,
+      0,
+      0
+    ],
+    "stability": [
+      21,
+      7,
+      0
+    ],
+    "plasticity": [
+      21,
+      7,
+      0
+    ]
+  },
+  "B_learning": {
+    "stability": {
+      "before_correct": 0,
+      "after_correct": 7,
+      "lost": 0,
+      "gained": 7,
+      "delta_pp": 9.722222222222221,
+      "paired95_pp": [
+        2.7777777777777777,
+        16.666666666666664
+      ]
+    },
+    "plasticity_same_as_stability": true
+  },
+  "B_on_A_loss_recovery": {
+    "stability": {
+      "before_correct": 21,
+      "after_correct": 21,
+      "lost": 0,
+      "gained": 0
+    },
+    "plasticity": {
+      "before_correct": 21,
+      "after_correct": 21,
+      "lost": 0,
+      "gained": 0
+    },
+    "bulk": {
+      "before_correct": 28,
+      "after_correct": 28,
+      "lost": 0,
+      "gained": 0
+    },
+    "fixed_memory": {
+      "before_correct": 23,
+      "after_correct": 17,
+      "lost": 7,
+      "gained": 1
+    }
+  },
+  "B_macro_comparisons": {
+    "stability_minus_plasticity": {
+      "difference_pp": 0,
+      "paired95_pp": [
+        0,
+        0
+      ]
+    },
+    "stability_minus_bulk": {
+      "difference_pp": 0,
+      "paired95_pp": [
+        -3.7037037037037033,
+        3.7037037037037033
+      ]
+    },
+    "stability_minus_fixed_memory": {
+      "difference_pp": 1.8518518518518519,
+      "paired95_pp": [
+        0.4629629629629629,
+        3.7037037037037033
+      ]
+    }
+  },
+  "fixed_memory_completed_C_separate_checkpoint": [
+    17,
+    6,
+    0
+  ],
+  "stability_completed_C_decisions": {
+    "batches": 2,
+    "candidates_per_batch": 3,
+    "accepted_updates": 0,
+    "all_current_selection_correct_before_after": [
+      0,
+      0
+    ],
+    "all_candidates_historical_correct_to_wrong": 0
+  },
+  "final_cross_arm_comparison_available": false,
+  "protocol_modified": false,
+  "patient_independent": false,
+  "original_test_used": false,
+  "fresh_report_original_role": "train_replay_reserved_report_only",
+  "v1_report_reused": false,
+  "statistics": {
+    "paired_bootstrap_samples": 20000,
+    "seed": 2026102402,
+    "stratified_by_stage": true,
+    "multiple_stage_adjustment": false
+  }
+}
