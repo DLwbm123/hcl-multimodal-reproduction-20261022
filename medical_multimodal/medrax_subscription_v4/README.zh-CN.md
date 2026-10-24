@@ -2,7 +2,7 @@
 
 按用户要求，用本地 ChatGPT 订阅的 **gpt-6.1-sol / high** 替换作者 GPT-4o，先完成不带 HCL 的 MedRAX 基础验收，再考虑持续学习。该目录不改变此前 MedRAX/ReAct 失败记录。
 
-已完成 CLI 修复及真实订阅测试：纯结构化回复、图像识别后的工具选择、匹配工具结果的消费均通过；后两项证据见 [TRANSPORT_RECEIPT.json](TRANSPORT_RECEIPT.json)。原生 Agent 的工具调用 ID、ToolMessage 回传、第二轮 MemorySaver 状态与冻结面板图片的 CPU 检查通过。
+已完成 CLI 修复及真实订阅测试：纯结构化回复、图像识别后的工具选择、匹配工具结果的消费均通过；后两项证据见 [TRANSPORT_RECEIPT.json](TRANSPORT_RECEIPT.json)。原生 Agent 的工具调用 ID、ToolMessage 回传、第二轮 MemorySaver 状态与冻结面板图片的 CPU 检查通过。bitsandbytes 0.47.0 的微型 CUDA 8-bit 前向也已通过；Triton 缺少 Python 头文件的问题通过只读复用匹配头文件解决，修复与验证回执一并保留。
 
 作者 `dae30e2f136ef0b2a40885a4c335386e9ffad052` 的 `experiments/benchmark_medrax.ipynb` 使用六个工具，按原顺序为报告生成、分类、分割、MAIRA-2 定位、CheXagent、LLaVA-Med。MAIRA-2 和 LLaVA-Med 使用作者的 8-bit 加载配置。保留原系统提示、问题提示、LangGraph 工作流及第二轮只答 A–F 的评分流程。
 

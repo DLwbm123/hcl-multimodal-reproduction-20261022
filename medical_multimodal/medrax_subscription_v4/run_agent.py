@@ -13,6 +13,11 @@ import traceback
 import uuid
 
 ROOT=Path(os.environ['R981_ROOT'])
+# Reuse the host's matching Python headers for Triton's small CUDA helper build.
+os.environ['CPATH']='/data/bmw/envs/n3-headers/usr/include/python3.12:/data/bmw/envs/n3-headers/usr/include'
+os.environ['TMPDIR']='/data/bmw/workers/t981'
+os.environ['TRITON_CACHE_DIR']='/data/bmw/workers/t981/triton'
+
 PLAN=json.loads((ROOT/'code/protocol.json').read_text())
 BUDGET=json.loads((ROOT/'budget.json').read_text())
 CONTEXT={'phase':'waiting_assets','episode':None}

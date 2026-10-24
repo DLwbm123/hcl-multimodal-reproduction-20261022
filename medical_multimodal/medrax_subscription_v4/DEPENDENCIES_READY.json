@@ -1,0 +1,1 @@
+{"time": 1792852209.5629067, "bitsandbytes": "0.47.0", "transformers": "4.51.3", "torch": "2.7.1+cu128", "quantized_cuda_forward": true, "shape": [2, 16], "gpu": 2}

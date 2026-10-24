@@ -14,10 +14,10 @@
     "initial_smoke_max_calls": 3
   },
   "remote_agent": {
-    "pid": 438424,
-    "start_ticks": "124219498",
-    "started": 1792851333.2563236,
-    "pgid": 438424
+    "pid": 465567,
+    "start_ticks": "124311048",
+    "started": 1792852248.7602112,
+    "pgid": 465567
   },
   "asset_download": {
     "pid": 437998,
@@ -41,5 +41,6 @@
   },
   "cpu_check_passed": true,
   "six_tools_loaded": false,
-  "medical_panel_started": false
+  "medical_panel_started": false,
+  "dependency_cuda_preflight_passed": true
 }

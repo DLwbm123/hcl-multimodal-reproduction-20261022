@@ -1,0 +1,1 @@
+{"time": 1792852248.759127, "failures": ["Python.h missing", "multiarch pyconfig.h include root missing"], "fix": "Reuse matching Python3.12 headers via CPATH with both Python and usr/include roots; preserve original clock; no medical calls yet", "quantized_cuda_forward": "passed"}
