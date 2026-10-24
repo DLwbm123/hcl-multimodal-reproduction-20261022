@@ -1,0 +1,22 @@
+{
+  "time": 1792876579.9221509,
+  "state": "background_model_loading",
+  "source_commit": "44aa5e7bfc5da69dcfdb4021e23cddcff931daf6",
+  "parent_report_commit": "df4eaf18be1504be71e29c96fcf0cd3c07ccd325",
+  "gpu": 2,
+  "free_mib_before_launch": 72830,
+  "persistent_worker_and_gpu_argv_neutral_verified": true,
+  "transient_storage_probe_argv_neutral": false,
+  "argv_limitation": "Inherited short-lived du probes still carry real directory arguments. Recorded for correction before the next launch; existing experiment not restarted solely for argv compliance, per user instruction.",
+  "original_start": 1792876276.128591,
+  "hard_deadline": 1792959076.128591,
+  "max_subscription_calls": 650,
+  "model": "gpt-6.1-sol",
+  "reasoning": "high",
+  "cpu_contracts_passed": true,
+  "fresh_cases": 24,
+  "planned_episodes": 120,
+  "aggregate_remote_bytes": 42909252205,
+  "own_remote_bytes": 529086,
+  "results_complete": false
+}
