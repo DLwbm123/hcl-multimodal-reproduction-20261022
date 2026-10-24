@@ -1,0 +1,77 @@
+{
+  "checked_at": 1792830583.4877279,
+  "status": "running_initial_readonly_evaluation",
+  "protocol_code_commit": "cda2fd01307a3d9675d5cde1bb9668a4bb4fb22b",
+  "original_started_epoch": 1792830393.612229,
+  "hard_deadline_epoch": 1792913193.612229,
+  "guards_active": true,
+  "neutral_process_argv_verified": true,
+  "nvidia_display_verified": "./bin/python on owned GPU processes",
+  "arms": {
+    "stability": {
+      "model_ready": true,
+      "parameters_frozen": true,
+      "completed_model_calls_at_check": 25,
+      "completed_final_calls_at_check": 8,
+      "all_final_calls_have_image": true,
+      "progress": {
+        "phase": "report",
+        "arm": "stability",
+        "checkpoint": "empty",
+        "stage": "A",
+        "completed": 8,
+        "total": 72,
+        "calls": 24
+      }
+    },
+    "plasticity": {
+      "model_ready": true,
+      "parameters_frozen": true,
+      "completed_model_calls_at_check": 27,
+      "completed_final_calls_at_check": 9,
+      "all_final_calls_have_image": true,
+      "progress": {
+        "phase": "report",
+        "arm": "plasticity",
+        "checkpoint": "empty",
+        "stage": "A",
+        "completed": 9,
+        "total": 72,
+        "calls": 27
+      }
+    },
+    "bulk": {
+      "model_ready": true,
+      "parameters_frozen": true,
+      "completed_model_calls_at_check": 27,
+      "completed_final_calls_at_check": 9,
+      "all_final_calls_have_image": true,
+      "progress": {
+        "phase": "report",
+        "arm": "bulk",
+        "checkpoint": "empty",
+        "stage": "A",
+        "completed": 9,
+        "total": 72,
+        "calls": 27
+      }
+    },
+    "controls": {
+      "model_ready": true,
+      "parameters_frozen": true,
+      "completed_model_calls_at_check": 28,
+      "completed_final_calls_at_check": 28,
+      "all_final_calls_have_image": true,
+      "progress": {
+        "phase": "report",
+        "arm": "direct",
+        "checkpoint": "empty",
+        "stage": "A",
+        "completed": 28,
+        "total": 72,
+        "calls": 28
+      }
+    }
+  },
+  "scientific_result_available": false
+}
