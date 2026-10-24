@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "checks": [
+    "360_unique_groups_and_pixels_no_prior_report_or_test",
+    "missing_fields_flagged_absence_none_not_excluded",
+    "cyclic_images_keep_questions_targets_and_runtime_uses_shifted_file",
+    "full_bank_local_replaces_two_preserves_eight_and_one_abstract",
+    "same_predictions_distinguish_hard_budgets_and_restore_setting",
+    "C_selection_requires_gain_outside_missing_fields_and_fixed_tie_order",
+    "forced_retrieval_train_allowlist_and_training_only_contract"
+  ],
+  "model_calls": 0
+}

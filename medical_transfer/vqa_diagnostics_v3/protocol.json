@@ -1,0 +1,98 @@
+{
+  "name": "vqa_diagnostics_v3",
+  "status": "freeze_before_new_inference",
+  "seed": 2026102403,
+  "purpose": "P1 diagnose C learning bottleneck; P2 compare local/bulk one-step updates from an identical learned nonempty A state. Exploratory development experiments, not new clinical or heldout confirmation.",
+  "order": [
+    "A",
+    "B",
+    "C"
+  ],
+  "stages": {
+    "A": [
+      "yes_no_or_presence",
+      "count"
+    ],
+    "B": [
+      "color_set",
+      "instrument"
+    ],
+    "C": [
+      "location_set",
+      "choice_or_other"
+    ]
+  },
+  "anchors_per_task": 72,
+  "previous_completed_report_commit": "25d480e",
+  "shared_source_commit": "38907d8",
+  "reused_data": "v2 train/selection/anchor only; never v1/v2 report. P1 first24 C train, all24 C selection and all24 B selection; P2 both24 B train batches, B selection24 and A anchor24.",
+  "fresh_development_review": {
+    "A": 24,
+    "B": 24,
+    "C": 24,
+    "source_role": "unused h_search explicitly reserved dev_review only",
+    "selection": "seeded metadata-only global matching,12/type; exclude all prior memberships and pixels; freeze membership before target association",
+    "original_test_used": false
+  },
+  "model": "same frozen Qwen2.5-VL-7B BF16 SDPA temperature0 max2048 answer512",
+  "memory": "raw10 abstract2 top2; skills off, frozen original prompts/retrieval except declared P1 diagnostic interventions",
+  "initial_states": {
+    "P1": "empty and fixed v2 Local-0 after B, chosen as the state that reached C",
+    "P2": "v2 Bulk after A, raw10/abstract2, fixed exploration starting point; chosen with knowledge of previous report, not an independent confirmation. No checkpoint search."
+  },
+  "p1": {
+    "call_cap": 2000,
+    "selection_conditions": [
+      "empty",
+      "after_B",
+      "local_raw",
+      "bulk_raw",
+      "bulk_raw_train_only_lexical",
+      "bulk_raw_train_only_lexical_contract"
+    ],
+    "proposal": "Generate once from after_B on frozen first24 C train; preserve every train interaction trace, final proposal and local candidates. Raw-only intervention keeps previous abstract bank. Same proposal for all memory variants.",
+    "lexical": "Force up to2 proposal raw records sourced ONLY from the24 C training examples, rank by visible-question token Jaccard; ties memory_id. No evaluation answers/type metadata used for retrieval. Diagnostic intervention, not claimed automatic method.",
+    "contract": "Append output instruction and allowed 3x3 region tokens derived solely from first24 C training labels. No target labels, sample-specific answers or new scoring normalization. Treat missing question/target as audit flags, not usable supervision for instruction design.",
+    "quality_rule": "Question empty/nan/null/none OR target empty/nan/null is flagged from source fields before inference. Target none remains legitimate. Keep all24 in native primary denominator; separately report flag-free subset.",
+    "choose": "Among local_raw,bulk_raw,bulk_raw_train_only_lexical,bulk_raw_train_only_lexical_contract require net correct gain>=2 on both all24 and flag-free selection subsets versus after_B; format1.0. Max all24 correct then fixed listed order. Empty state is a context diagnostic, not an eligible fix.",
+    "review": "Only after choice, evaluate after_B and chosen condition on untouched24 C dev_review. No selection by review. If none qualifies, keep review unopened for inference and fail promotion.",
+    "promotion": "Selection conditions above plus positive native and flag-free review gain. Exploratory engineering gate, not statistical significance.",
+    "image_dependence": "Fixed after_B state on B selection24, true images vs predetermined cyclic shift by one. Labels/questions/memory same; retain all denominators. Diagnostic only; no claims from all-zero outcomes.",
+    "no_selection_optimization": "No configuration or thresholds changed after outputs; no report sample used."
+  },
+  "p2": {
+    "call_cap": 6000,
+    "design": "Two independent one-step B update blocks, both reset to identical H_A. Each uses one of the frozen v2 B train24 batches and generates one shared proposal. Not a sequential B trajectory.",
+    "candidate_families": [
+      "local",
+      "bulk"
+    ],
+    "candidate_scopes": [
+      "raw_only",
+      "abstract_only",
+      "raw_and_abstract"
+    ],
+    "gate": "B selection24+A anchors24, recompute common reference; current correct+1,score>0,format1; B0 lost old correct0 without recovery offset, Binf removes hard constraint. Same prediction reused for two budgets; tie current correct,then fewer old losses,then fixed scope index.",
+    "occupancy": "Common raw10/abstract2 full bank; local up to2raw replacements and1abstract role, bulk full bank, no expansion. Record kept/replaced/new counts, selected-memory counts and context length. Abstract role main_policy in block1, failure_avoidance in block2.",
+    "review": "Baseline empty A dev_review24 identifies newly gained G_A in H_A; commonH_A A/B review24 each; chosen state for each of4 policies evaluated on same48 review cases, identical selected states evaluated once. Choice never uses review outcomes.",
+    "primary_mechanism": "For each block require G_A_review nonempty, Local0 accepted B gain on selection and positive independent B review gain, zero G_A_review loss; BulkInf accepted with anchor loss>0 and Bulk0 rejects for historical budget. Report both blocks whether passed or failed; replicated mechanism only if both pass.",
+    "gate_attribution": "Local0 versus LocalInf differences disclosed; equality does not support extra hard-budget benefit.",
+    "scope": "Only A->B common-state mechanism now. A/B->C common-state experiment deferred until P1 yields C learning; no unbudgeted followup."
+  },
+  "statistics": "Exact paired4cells and McNemar sensitivity for all changes; descriptive effect sizes, single seed and two correlated development blocks. No confirmatory superiority claims or patient independence. No post-hoc change to v2 frozen gates.",
+  "budget": {
+    "max_calls_by_role": {
+      "p1": 2000,
+      "p2": 6000
+    },
+    "max_calls_total": 8000,
+    "runtime_soft_hours": 22.75,
+    "runtime_hard_hours": 23,
+    "storage_stop_bytes": 4000000000,
+    "storage_cap_bytes": 5000000000,
+    "expected_new_bytes": 1000000000,
+    "watch_interval_seconds": 10
+  },
+  "execution": "Two independent workers; P1 launched first, P2 common-A->B does not depend on C repair and can run alongside it. One root/clock/8000 total cap. Stop siblings on fatal error, no automatic restart, no new report-set claims.",
+  "failure": "Preserve all outputs and original clock; model/guard failures stop allowned workers. Finite-data missing flags not silently dropped or relabeled. No diagnostic promotion on floor-effect or semantic F1 alone."
+}

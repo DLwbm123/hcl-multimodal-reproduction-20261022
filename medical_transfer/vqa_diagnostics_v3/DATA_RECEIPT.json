@@ -1,0 +1,66 @@
+{
+  "passed": true,
+  "fresh_review_groups": 72,
+  "reused_development_groups": 288,
+  "excluded_history_groups": 1602,
+  "all_unique_groups_pixels": true,
+  "no_report_or_test_used": true,
+  "target_association_after_membership": true,
+  "quality": {
+    "A": {
+      "train": {
+        "n": 48,
+        "missing_field_flags": 0
+      },
+      "selection": {
+        "n": 24,
+        "missing_field_flags": 0
+      },
+      "anchor": {
+        "n": 24,
+        "missing_field_flags": 0
+      },
+      "review": {
+        "n": 24,
+        "missing_field_flags": 0
+      }
+    },
+    "B": {
+      "train": {
+        "n": 48,
+        "missing_field_flags": 0
+      },
+      "selection": {
+        "n": 24,
+        "missing_field_flags": 0
+      },
+      "anchor": {
+        "n": 24,
+        "missing_field_flags": 0
+      },
+      "review": {
+        "n": 24,
+        "missing_field_flags": 0
+      }
+    },
+    "C": {
+      "train": {
+        "n": 48,
+        "missing_field_flags": 2
+      },
+      "selection": {
+        "n": 24,
+        "missing_field_flags": 3
+      },
+      "anchor": {
+        "n": 24,
+        "missing_field_flags": 0
+      },
+      "review": {
+        "n": 24,
+        "missing_field_flags": 0
+      }
+    }
+  },
+  "model_calls": 0
+}
