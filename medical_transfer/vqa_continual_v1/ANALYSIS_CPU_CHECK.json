@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "paired_loss_and_gain_separate": true,
+  "undefined_zero_correct_denominator": true,
+  "identity_mismatch_rejected": true,
+  "bootstrap_zero_and_unit_cases": true,
+  "incomplete_run_refused": true,
+  "model_calls": 0
+}
