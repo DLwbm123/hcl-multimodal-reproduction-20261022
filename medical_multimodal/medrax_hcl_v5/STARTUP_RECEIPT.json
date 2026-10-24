@@ -1,0 +1,22 @@
+{
+  "time": 1792864213.431575,
+  "state": "six_tools_loaded_first_native_episode_running",
+  "protocol_commit": "d1cd7e225646a2bae0954fb94bb01f312b1b5c5a",
+  "gpu": 2,
+  "gpu_free_mib_before_load": 72830,
+  "neutral_process_arguments_verified": true,
+  "original_start": 1792863722.6422012,
+  "hard_deadline": 1792946522.6422012,
+  "max_subscription_calls": 1200,
+  "model": "gpt-6.1-sol",
+  "reasoning": "high",
+  "all_six_loaded": true,
+  "cpu_contracts_passed": true,
+  "new_cases": 88,
+  "decoded_image_occurrences": 144,
+  "first_request_has_image": true,
+  "aggregate_remote_bytes_at_start": 42901358783,
+  "own_remote_bytes_at_start": 1895312,
+  "private_credentials_stay_local": true,
+  "experiment_results_complete": false
+}
