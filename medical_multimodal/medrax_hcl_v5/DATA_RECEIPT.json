@@ -1,0 +1,20 @@
+{
+  "time": 1792863742.8813212,
+  "cases": 88,
+  "decoded_image_occurrences": 144,
+  "role_counts": {
+    "A:train": 8,
+    "A:selection": 8,
+    "A:anchor": 8,
+    "A:report": 24,
+    "B:train": 8,
+    "B:selection": 8,
+    "B:report": 24
+  },
+  "case_overlap": 0,
+  "known_image_source_overlap": 0,
+  "all_single_frame": true,
+  "report_labels_isolated": true,
+  "supervision_labels": 40,
+  "selection_used_labels": false
+}

@@ -1,0 +1,1 @@
+{"passed": true, "checks": ["gain_gate", "unoffset_anchor_loss", "invalid_fails_closed", "pair_denominator", "local_two_slot_write", "old_state_preserved", "production_memory_import", "empty_baseline_context_identity", "input_gold_boundary", "case_source_disjoint", "single_frame_decode"]}

@@ -1,0 +1,39 @@
+{
+  "experiment": "medrax_hcl_v5",
+  "purpose": "First bounded memory-only continual-harness pilot on the qualified Sol High six-tool MedRAX base, measuring acquisition and retention from a common pre-B state.",
+  "base_report_commit": "7f1edbe",
+  "model": "gpt-6.1-sol",
+  "reasoning": "high",
+  "author_base": "Same six native tools, prompts, two-turn scoring and isolated subscription transport as v4. No tool/backbone/prompt tuning or forced tool calls.",
+  "selection": {
+    "seed": 20261027,
+    "A": "One image and metadata categories contains diagnosis",
+    "B": "Two to four images and metadata categories contains comparison",
+    "case_assignment": "B-eligible case groups assigned to B first; A sampled from remaining cases. One seeded metadata-selected question per case.",
+    "counts": {"A": {"train": 8, "selection": 8, "anchor": 8, "report": 24}, "B": {"train": 8, "selection": 8, "report": 24}},
+    "exclusions": "All prior 60 development cases and known shared canonical image paths/source URLs; case groups and shared source identities disjoint across roles.",
+    "labels": "Freeze member list using metadata only before associating labels. Only training labels reach memory proposal generation. Selection/anchor labels are numeric evaluator-only. Report labels read after all candidate states and all report predictions are fixed.",
+    "interpretation": "Observed task-format composition, not inferred disease comorbidity, chronological drift or patient-independent clinical evaluation. At most four images bounds input cost."
+  },
+  "method": {
+    "core": "Reuse repository ExperienceMemory raw/abstract construction and vqa_local_v2.local_bank; memory-only restriction, not the full six-component HCL optimizer.",
+    "training": "One batch of eight per stage; predictions use fixed incoming state. Record all eight feedback interactions, then one model abstraction proposal; no report or anchor examples become memory.",
+    "update": "One raw+abstract local candidate per stage, at most two new raw records by frozen training order; capacity10, no task-conditioned retrieval. Stage A updates main_policy, stage B failure_avoidance; other slots unchanged. No candidate search or repair by selection answers.",
+    "retrieval": "Frozen lexical Jaccard top2 over official de-labelled raw and abstract views; same selector for all learned states. Empty baseline receives no added context.",
+    "A_gate": "Commit iff selection correct count increases by at least one and all eight candidate finals are valid/completed.",
+    "B_common_state": "All B train interactions and its single proposal originate from the same accepted H_A; no branch-specific retraining.",
+    "B_local_infinite": "Commit same candidate iff B selection correct increases by at least one and all eight candidate finals valid/completed.",
+    "B_local_zero": "Same B criterion plus zero correct-to-wrong losses on the eight frozen A anchors relative to H_A. Gains never offset losses. Any incomplete anchor evaluation fails closed.",
+    "branches": ["H0_static", "H_A", "H_AB_local_zero", "H_AB_local_infinite"],
+    "state_reuse": "Exactly identical states share report predictions; no resampling to manufacture branch differences. H_A common state and identical B predictions reused for both gates."
+  },
+  "limits": {"max_subscription_calls_total": 1200, "per_case_controller_calls": 12, "per_case_tool_calls": 16, "per_case_seconds": 3600, "request_timeout_seconds": 1200, "max_elapsed_hours": 23, "aggregate_storage_stop_bytes": 45000000000, "aggregate_storage_hard_exclusive_bytes": 50000000000, "own_storage_stop_bytes": 1000000000},
+  "report": {
+    "full_denominators": "All48 report cases for every named state, with failed/not-run counted wrong; planned maximum256 case episodes plus two abstraction calls, deduplication reported.",
+    "outcomes": ["exact A-F accuracy", "A acquisition H_A minus H0", "B immediate gain H_AB minus H_A", "A acquired-correct set G_A retention", "A base-correct set retention", "paired gain/loss counts", "anchor protected denominator and losses", "gate rejection reasons", "memory actual occupancy and changed/retained entries", "tool output quality flags", "calls/tokens/wall time/storage including failures"],
+    "joint_development_signal": "A report net gain>=1, B report net gain>=1, G_A nonempty with zero losses and zero A base-correct losses under Local-zero, final total gain>=2 over H0. All requirements and independent report completeness required; single seed/order and n24/task only development evidence.",
+    "gate_contribution": "Only identified in this pilot if Local-infinite commits, Local-zero rejects specifically due to old-anchor loss, and the rejected state causes observed A report losses. Identical states do not establish gate benefit.",
+    "statistics": "Report exact paired four-cell counts and two-sided exact McNemar descriptively; no multiplicity-adjusted or clinical efficacy claim. No report-driven retuning in this run."
+  },
+  "stop_rules": "No expansion of candidates, labels, seeds or budgets after partial results. Runtime failures and budget stops preserve states and full denominators. New hypotheses require a distinct protocol after complete analysis."
+}
