@@ -16,12 +16,27 @@ def rpc(action, payload=None):
     if p.returncode: raise RuntimeError('RPC failed: '+p.stderr[-500:])
     return json.loads(p.stdout)
 
+def normalize_image_arguments(output, aliases):
+    """Translate only exact attachment aliases; preserve unrelated or unknown arguments."""
+    value=json.loads(json.dumps(output));rewrites=[]
+    for call in value['tool_calls']:
+        args=json.loads(call['arguments_json'])
+        for field in ['image_path','image_paths']:
+            if field not in args:continue
+            old=args[field];items=old if isinstance(old,list) else [old]
+            translated=[aliases.get(x,x) if isinstance(x,str) else x for x in items]
+            for before,after in zip(items,translated):
+                if before!=after:rewrites.append({'field':field,'local_alias':before,'canonical_path':after})
+            args[field]=translated if isinstance(old,list) else translated[0]
+        call['arguments_json']=json.dumps(args)
+    return value,rewrites
+
 def execute(job, local_root):
     budget = json.loads((local_root/'budget.json').read_text())
     counter = local_root/'private/call_count.json'
     used = json.loads(counter.read_text()) if counter.exists() else 1  # Initial verified CLI smoke.
     if used >= budget['max_subscription_calls'] or time.time() >= budget['hard_deadline_epoch']:
-        raise RuntimeError('Subscription budget/deadline exhausted')
+        return {'status':'budget_or_deadline','seconds':0}
     counter.write_text(json.dumps(used+1))
     with tempfile.TemporaryDirectory(prefix='r983-',dir='/tmp') as temp:
         p = Path(temp)
@@ -58,8 +73,11 @@ skip_host_skill_discovery = true
 (allow process-exec (literal "{BINARY}"))
 ''')
         cmd=['/usr/bin/sandbox-exec','-f',str(p/'policy.sb'),BINARY,'exec','--ephemeral','--ignore-rules','--skip-git-repo-check','-C',str(p),'--json','--output-schema',str(p/'schema.json'),'-o',str(p/'final.json')]
+        canonical={part['index']:part['path'] for m in job['messages'] if isinstance(m.get('content'),list) for part in m['content'] if part.get('type')=='image' and 'path' in part}
+        aliases={}
         for i, encoded in enumerate(job.get('images',[])):
             image=p/f'i{i}.png'; image.write_bytes(base64.b64decode(encoded)); cmd+=['--image',str(image)]
+            if i in canonical:aliases[str(image)]=canonical[i]
         cmd+=['-']
         env=os.environ.copy(); env['CODEX_HOME']=str(home)
         for key in ['OPENAI_API_KEY','CODEX_API_KEY','OPENAI_BASE_URL']: env.pop(key,None)
@@ -83,7 +101,8 @@ skip_host_skill_discovery = true
             for call in value['tool_calls']:
                 assert set(call)=={'name','arguments_json'} and isinstance(call['name'],str)
                 assert isinstance(json.loads(call['arguments_json']),dict)
-            result['output']=value
+            result['raw_model_output']=value
+            result['output'],result['transport_path_rewrites']=normalize_image_arguments(value,aliases)
         return result
 
 def refresh_urls(root):

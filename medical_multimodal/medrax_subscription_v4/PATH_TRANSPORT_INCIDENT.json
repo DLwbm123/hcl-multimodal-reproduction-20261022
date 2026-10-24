@@ -1,0 +1,36 @@
+{
+  "status": "engineering_incident_repaired_revalidation_running",
+  "six_native_tool_preflight": "all six completed",
+  "initial_attempt": {
+    "completed_case_records_before_stop": 10,
+    "observed_autonomous_tool_calls": 55,
+    "observed_successful_autonomous_tools": 0,
+    "reason": "local attachment image paths rejected by remote current-case allowlist",
+    "all_12_completed": false,
+    "gold_scoring_performed": false,
+    "operational_qualified": false
+  },
+  "repair": {
+    "exact_known_attachment_aliases_only": true,
+    "fields": [
+      "image_path",
+      "image_paths"
+    ],
+    "unknown_paths_unchanged_and_still_rejected": true,
+    "original_model_output_retained": true,
+    "question_text_unchanged": true,
+    "image_order_preserved": true
+  },
+  "validation": {
+    "cpu_path_contract": "passed",
+    "real_medical_tool_after_repair": "pending"
+  },
+  "budget": {
+    "subscription_calls_reserved_at_restart": 77,
+    "max_total": 200,
+    "inflight_outcome_at_stop_may_be_unknown": true,
+    "original_clock_retained": true,
+    "same_frozen_panel": true
+  },
+  "prior_attempt_evidence": "retained privately; no case identifiers, images or outputs published"
+}
