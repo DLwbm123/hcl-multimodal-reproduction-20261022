@@ -1,0 +1,15 @@
+{
+  "frozen_at": 1792830511.7042303,
+  "protocol_code_commit": "cda2fd01307a3d9675d5cde1bb9668a4bb4fb22b",
+  "shared_hcl_source_commit": "38907d8",
+  "membership": "private_membership.json",
+  "groups": 504,
+  "reused_development_groups": 288,
+  "fresh_report_groups": 216,
+  "model_calls_before_freeze": 0,
+  "original_started_epoch": 1792830393.612229,
+  "hard_deadline_epoch": 1792913193.612229,
+  "v1_complete_report_commit": "cd5f625",
+  "previous_report_not_reused": true,
+  "data_role_reassignment": "original unused train_replay reserved report-only"
+}
