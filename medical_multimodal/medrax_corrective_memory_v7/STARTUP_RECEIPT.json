@@ -1,0 +1,28 @@
+{
+  "source_commit": "c9cdc76ee88c0857ff14bed2506429e1225202d0",
+  "parent_completed_report_commit": "447824b",
+  "source_pushed_and_anonymous_http_200": true,
+  "started_epoch": 1792885146.8915017,
+  "budget": {
+    "started_epoch": 1792885104.31015,
+    "hard_deadline_epoch": 1792967904.31015,
+    "max_subscription_calls": 800,
+    "model": "gpt-6.1-sol",
+    "reasoning": "high",
+    "aggregate_stop_new_bytes": 45000000000,
+    "own_stop_new_bytes": 1000000000,
+    "hard_exclusive_bytes": 50000000000
+  },
+  "background_worker_alive": true,
+  "local_bridge_alive": true,
+  "worker_start_identity_matched": true,
+  "main_and_gpu_argv_neutral_verified": true,
+  "storage_probe": "Python lstat, root dereferenced, internal symlinks excluded, no du subprocess",
+  "storage_fixture_passed": true,
+  "guard_own_bytes": 428792,
+  "guard_aggregate_bytes": 42917113783,
+  "no_failed_marker": true,
+  "model_loading_only": true,
+  "first_case_completed": false,
+  "six_tools_loaded_not_yet_confirmed": true
+}
