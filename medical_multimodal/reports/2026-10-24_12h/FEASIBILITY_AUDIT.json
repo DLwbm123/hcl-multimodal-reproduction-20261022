@@ -1,0 +1,44 @@
+{
+  "audit_time_utc": "2026-10-23T19:34:28.608980+00:00",
+  "scope": "One bounded read-only feasibility screen of three official medical multimodal-agent repositories; not an exhaustive survey",
+  "decision": "NO_VERIFIED_EXECUTABLE_CANDIDATE_WITHIN_CURRENT_CONSTRAINTS",
+  "model_generations": 0,
+  "remote_operations": 0,
+  "model_downloads": 0,
+  "paid_api_calls": 0,
+  "candidates": [
+    {
+      "name": "MedAgent-Pro",
+      "revision": "cea2721795bf748516b98fb959f581b502b1d186",
+      "source": "https://github.com/jinlab-imvr/MedAgent-Pro/tree/cea2721795bf748516b98fb959f581b502b1d186",
+      "evidence": [
+        "Case_level.py imports Glaucoma.tools and registers segment_optic_cup/segment_optic_disc; complete nontruncated repository tree contains only Glaucoma/__init__.py, task.json, toolset.json, with no Glaucoma/tools implementation.",
+        "Planner.py plan uses openai.ChatCompletion default chatgpt-4o-latest; Case_level.py instantiates API-based coder, analyzer, summarizer and decider.",
+        "Decider/Qwen_Decider.py supports local Qwen2.5-VL qualitative analysis, but is not a complete replacement for the released planning/code-generation pipeline."
+      ],
+      "assessment": "Distinct task-plan/case-execution architecture, but current released example is not executable from the inspected assets. Filling missing domain tools and replacing several agent roles would be a new implementation, not a verified mature native agent under the bounded screen."
+    },
+    {
+      "name": "MMedAgent",
+      "revision": "d5ae05c4d4351253d6c464a704dcb71caa461acb",
+      "source": "https://github.com/Wangyixinxin/MMedAgent/blob/d5ae05c4d4351253d6c464a704dcb71caa461acb/README.md",
+      "evidence": [
+        "README requires a specifically trained MMedAgent LoRA and reconstructed LLaVA-Med base from LLaMA plus published delta weights.",
+        "The supplied original delta archive alone is listed as 11.06 GB; this is not a measured full installation estimate.",
+        "Original serving setup also lists tool-specific checkpoints and workers."
+      ],
+      "assessment": "Existing generic LLaVA tool checkpoint is not evidence that the required trained planner/base is present. No new-model download is allowed in this screen, so do not substitute generic weights or claim native reproduction."
+    },
+    {
+      "name": "MMedAgent-Plus",
+      "revision": "d4147ff4a8fc0c88695919b0c8166bd7bce500a1",
+      "source": "https://github.com/RoxanneWAAANG/MMedAgent-Plus/blob/d4147ff4a8fc0c88695919b0c8166bd7bce500a1/agent/README.md",
+      "evidence": [
+        "Agent deployment README explicitly lists planner serving, remaining tool workers and agent loop as future release.",
+        "Current tool entrypoints cover only pathology specialists."
+      ],
+      "assessment": "No mature native full agent release verified; no attempt to fabricate an equivalent agent."
+    }
+  ],
+  "next_action": "Keep all closed scientific branches closed; wait for a material availability/authorization change or concrete new evidence. Do not repeat this audit every heartbeat, run GPU retries, buy API access or download weights. HCL remains blocked at base qualification, not disproved."
+}

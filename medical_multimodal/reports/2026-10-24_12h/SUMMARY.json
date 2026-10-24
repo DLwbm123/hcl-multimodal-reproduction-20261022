@@ -1,0 +1,115 @@
+{
+  "report_window": {
+    "start": "2026-10-24T00:05:32+08:00",
+    "end": "2026-10-24T12:05:32+08:00"
+  },
+  "basis": "Sealed experiment reports plus session action receipts; no new remote inspection or inference for this report. Counts are whole ledgers for runs sealed in the window, not a timestamp-filtered call ledger. Preparation began before the window.",
+  "source_snapshot": "200f53c",
+  "totals": {
+    "denominator": 84,
+    "completed": 84,
+    "planner_calls": 103,
+    "planner_input_tokens": 195347,
+    "planner_output_tokens": 23819,
+    "unique_development_case_groups": 48,
+    "hcl_updates_in_these_runs": 0
+  },
+  "timeline": {
+    "v1_exit": "2026-10-24T00:17:42+08:00",
+    "v2_start": "2026-10-24T00:40:14+08:00",
+    "v2_exit": "2026-10-24T00:45:47+08:00",
+    "v3_start": "2026-10-24T01:10:58+08:00",
+    "v3_exit": "2026-10-24T01:15:37+08:00",
+    "react_start": "2026-10-24T01:42:14+08:00",
+    "react_exit": "2026-10-24T02:37:50+08:00"
+  },
+  "arms": [
+    {
+      "name": "MedRAX v1",
+      "denominator": 12,
+      "completed": 12,
+      "correct": 4,
+      "valid_final": 12,
+      "planner_calls": 13,
+      "planner_input_tokens": 22066,
+      "planner_output_tokens": 4437
+    },
+    {
+      "name": "MedRAX v2 A_native",
+      "denominator": 12,
+      "completed": 12,
+      "correct": 6,
+      "valid_final": 12,
+      "planner_calls": 13,
+      "planner_input_tokens": 22142,
+      "planner_output_tokens": 4393
+    },
+    {
+      "name": "MedRAX v2 B_consult",
+      "denominator": 12,
+      "completed": 12,
+      "correct": 4,
+      "valid_final": 12,
+      "planner_calls": 24,
+      "planner_input_tokens": 46990,
+      "planner_output_tokens": 5424
+    },
+    {
+      "name": "MedRAX v3 A_native",
+      "denominator": 12,
+      "completed": 12,
+      "correct": 10,
+      "valid_final": 12,
+      "planner_calls": 12,
+      "planner_input_tokens": 20008,
+      "planner_output_tokens": 3918
+    },
+    {
+      "name": "MedRAX v3 B_classifier",
+      "denominator": 12,
+      "completed": 12,
+      "correct": 11,
+      "valid_final": 12,
+      "planner_calls": 17,
+      "planner_input_tokens": 47684,
+      "planner_output_tokens": 3558
+    },
+    {
+      "name": "MedRAX v3 C_expert",
+      "denominator": 12,
+      "completed": 12,
+      "correct": 5,
+      "valid_final": 12,
+      "planner_calls": 12,
+      "planner_input_tokens": 26552,
+      "planner_output_tokens": 294
+    },
+    {
+      "name": "ReAct v1",
+      "denominator": 12,
+      "completed": 12,
+      "correct": 4,
+      "valid_final": 6,
+      "planner_calls": 12,
+      "planner_input_tokens": 9905,
+      "planner_output_tokens": 1795
+    }
+  ],
+  "resource_snapshot": {
+    "time": "2026-10-24T03:02:59+08:00",
+    "bytes_with_reserve": 19903721472,
+    "reserve_bytes": 1073741824,
+    "derived_actual_allocated_bytes": 18829979648,
+    "hard_limit_bytes_exclusive": 30000000000,
+    "live_rechecked_for_this_report": false
+  },
+  "status": {
+    "all_four_experiments_sealed": true,
+    "hcl_efficacy_established": false,
+    "last_inference_run_exit": "2026-10-24T02:37:50+08:00",
+    "new_route_inference_started": false,
+    "chat_heartbeat_deleted_at_approx": "2026-10-24T12:03:00+08:00",
+    "independent_remote_storage_guard_stopped_or_rechecked": false
+  },
+  "next_route": "Proposed only: bounded controller/tool-value diagnosis followed by Static/Ungated/HCL selective tool-evidence learning, conditional on usable resources and a newly frozen protocol."
+}

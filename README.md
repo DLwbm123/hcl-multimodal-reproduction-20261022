@@ -87,3 +87,7 @@ The [18-target H0 v5 report](medical_h0/executable_gate_v5/REPORT.zh-CN.md) reco
 MedRAX fixed tool-evidence diagnostic is complete: native 10/12, classifier seed 11/12, expert seed 5/12; the local evidence-adaptation route is closed. [Report](medical_multimodal/medrax_tool_value_v3/REPORT.zh-CN.md).
 
 The distinct [native ReAct visual-tool qualification](medical_multimodal/react_vision_v1/REPORT.zh-CN.md) also closed: 4/12 correct, 6/12 valid finals, zero autonomous visual-tool calls, despite all direct tool checks executing. Current local bases have not qualified for HCL; no retention or HCL efficacy claim.
+
+## 2026-10-24 twelve-hour progress report
+
+[过去 12 小时进展报告](medical_multimodal/reports/2026-10-24_12h/REPORT.zh-CN.md) summarizes four sealed medical-agent experiments (84 episodes, 48 development case groups), failed qualification decisions, full planner counts, the subsequent waiting interval, and a proposed next direction. No new HCL efficacy result is claimed.
