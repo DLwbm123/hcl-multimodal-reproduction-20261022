@@ -1,0 +1,112 @@
+{
+  "name": "vqa_continual_v1",
+  "status": "frozen_before_first_inference",
+  "purpose": "Test learning and retention within a shared VQA memory, then attribute retention to the historical loss constraint",
+  "seed": 2026102401,
+  "stages": {
+    "A": [
+      "yes_no_or_presence",
+      "count"
+    ],
+    "B": [
+      "color_set",
+      "instrument"
+    ],
+    "C": [
+      "location_set",
+      "choice_or_other"
+    ]
+  },
+  "order": [
+    "A",
+    "B",
+    "C"
+  ],
+  "stage_selection": "Question types from pre-existing metadata; no correctness, output, or answer-based selection. One example per content group globally; balanced types per stage and role. Seeded type interleaving; no stage/subtype retrieval filter. Global seeded bipartite allocation replaces sequential greedy sampling to respect shared-image overlap.",
+  "counts_per_stage": {
+    "train": 48,
+    "selection": 24,
+    "anchor": 24,
+    "report": 72
+  },
+  "roles": {
+    "train": "h_search",
+    "selection": "validation",
+    "anchor": "retention_anchor",
+    "report": "validation"
+  },
+  "exclude": "All previous diagnostic, confirmation and learning memberships plus pilot selection groups; original test untouched. Membership frozen before answer association.",
+  "task_name": "visual_qa",
+  "initial_state": "fresh empty state in every arm; historical frozen positive checkpoint not reused or retuned",
+  "arms": [
+    "direct",
+    "static",
+    "fixed_memory",
+    "plasticity",
+    "stability"
+  ],
+  "controls": {
+    "direct": "same visible question and image, frozen model and answer scoring; no harness",
+    "static": "same unchanged harness, memory disabled, no updates",
+    "fixed_memory": "same raw10/abstract2 feedback storage and frozen-model abstraction as HCL, unconditional batch updates, fixed lexical-overlap top2 retrieval, no prompt search or acceptance gate; fixed policy, not a no-LLM-abstraction control",
+    "plasticity": "strict current selection gain, format and candidate validity gates; B=infinity",
+    "stability": "identical to plasticity except B=0 on historical correct-to-wrong anchor count; no offset from recovered cases"
+  },
+  "model": "existing Qwen2.5-VL-7B-Instruct BF16 SDPA, temperature0, max2048 answer512, frozen weights",
+  "learning": {
+    "batch_size": 24,
+    "batches_per_stage": 2,
+    "components": [
+      "memory_selector"
+    ],
+    "candidates_per_component_per_batch": 3,
+    "raw_capacity_total": 10,
+    "abstract_capacity_total": 2,
+    "retrieval_top_k": 2,
+    "skills_enabled": false,
+    "min_primary_score_delta": 1e-09,
+    "min_correct_gain": 1,
+    "min_format_compliance_rate": 1.0,
+    "selection_objective_both": "plasticity",
+    "B": {
+      "plasticity": null,
+      "stability": 0
+    }
+  },
+  "anchors_per_task": 72,
+  "anchor_contract": "Exactly 24 report-disjoint anchors per completed stage accumulated without clustering; stage exists only in evaluator metadata. Retain same-task earlier-stage anchors, exclude current/future stages. Recompute paired reference before each update and save acquired-stage anchor predictions; report total, reference-correct, losses, recoveries and type coverage.",
+  "common_runtime": "Existing candidate structural contract, fixed historical-memory evidence boundary in all memory arms, identical native VQA scoring; no localization, no tools, no new model/API, no task-name filtering. Disabled prediction/final caches; preprocessing cache may be reused within each arm.",
+  "evaluation": "Full 4x3 matrix at empty-state and after A/B/C, same 72 groups per stage. Report only, state-read-only. Fixed Direct/Static predictions computed once and reused across cells; explicitly accounted. Never used for checkpoint, candidate, threshold or run selection.",
+  "primary_metrics": [
+    "stage-immediate learning gain relative to preceding checkpoint",
+    "final macro exact-match and paired differences versus Static and fixed memory",
+    "acquired-stage correct-to-wrong counts on A and B after subsequent learning",
+    "worst old-stage loss rate per full 72 and per acquired-correct denominator",
+    "BWT and accuracy matrix",
+    "accepted memory/prompt updates by stage",
+    "anchor protection coverage",
+    "training and deployment calls/time/peak memory separately"
+  ],
+  "statistics": "20000 seeded paired content-group bootstrap; paired differences stratified by stage for macro values. Exact paired loss/recovery counts always. Single order and seed, content-group independence not patient independence.",
+  "success_rules": {
+    "learning_and_retention": "Stability final macro >= Static+5pp and paired95% lower>0; mean immediate learning gain >=5pp; at least one accepted update in B or C; final acquired-correct losses <=5% of all 72 report groups (at most 3 losses) in EACH of A,B; zero updates cannot support learning.",
+    "gate_attribution": "Only claim demonstrated retention advantage if Plasticity has nonzero old-case losses, Stability has fewer, and paired95% upper for Stability-minus-Plasticity loss<0; mean immediate learning gain no more than5pp below Plasticity. Otherwise attribution inconclusive/unsupported.",
+    "adaptive_advantage": "Only claim benefit beyond fixed memory if final Stability-minus-fixed_memory paired95% lower>0; report all controls regardless. No post-hoc threshold changes."
+  },
+  "budget": {
+    "runtime_soft_hours": 22.75,
+    "runtime_hard_hours": 23,
+    "max_calls_per_hcl": 18000,
+    "max_calls_controls": 7000,
+    "storage_stop_bytes": 4000000000,
+    "storage_cap_bytes": 5000000000,
+    "expected_new_bytes": 1000000000,
+    "global_user_cap_bytes_exclusive": 50000000000,
+    "watch_interval_seconds": 10
+  },
+  "failure": "Independent supervisor with owned-process identity checks and hard timeout; stop sibling arms on fatal failure, keep partial outputs and original clock/call ledger. No automatic restart, result-driven sample change or budget expansion. All invalid/missing outputs remain failures in fixed denominators.",
+  "future_scope": "This is one bounded method-mainline experiment. Analyze completion under ongoing user authorization; preserve all negatives and do not widen or retune this frozen run.",
+  "test_used": false,
+  "patient_independence": false,
+  "pre_inference_feasibility_amendment": "Initial requested report100/type-balanced stage allocation was infeasible after historical exclusions: five non-presence types require310 distinct validation groups but jointly have253. Before any membership freeze or inference, report quota changed once to72/stage, requiring240 non-presence groups including selection. Stage types, learning/anchor counts, all arms and 5pp effect thresholds unchanged. Preserve failed preparation and original clock."
+}

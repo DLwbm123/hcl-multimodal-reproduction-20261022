@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "checks": [
+    "global_allocation_preserves_scarce_groups",
+    "same_task_earlier_anchors_retained_current_future_excluded",
+    "anchor_adapter_restored_after_error",
+    "four_fresh_pipelines_no_inference",
+    "B0_counts_losses_without_recovery_offset_Binf_keeps_gain_and_format_gates",
+    "artifact_gate_B0_vs_Binf",
+    "exact_anchors_not_replaced_by_same_task",
+    "stage_and_answer_not_model_visible",
+    "504_unique_groups_pixels_and_roles_no_test",
+    "fixed_retrieval_materializes_shared_pool"
+  ],
+  "model_calls": 0,
+  "backend_loaded": false
+}

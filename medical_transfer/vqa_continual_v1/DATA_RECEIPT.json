@@ -1,0 +1,43 @@
+{
+  "passed": true,
+  "groups": 504,
+  "counts_per_stage": {
+    "train": 48,
+    "selection": 24,
+    "anchor": 24,
+    "report": 72
+  },
+  "excluded_group_count": 882,
+  "availability_before_allocation": {
+    "A/train/yes_no_or_presence": 2578,
+    "A/train/count": 1601,
+    "A/selection/yes_no_or_presence": 635,
+    "A/selection/count": 242,
+    "A/anchor/yes_no_or_presence": 516,
+    "A/anchor/count": 314,
+    "A/report/yes_no_or_presence": 635,
+    "A/report/count": 242,
+    "B/train/color_set": 1265,
+    "B/train/instrument": 1302,
+    "B/selection/color_set": 157,
+    "B/selection/instrument": 243,
+    "B/anchor/color_set": 245,
+    "B/anchor/instrument": 268,
+    "B/report/color_set": 157,
+    "B/report/instrument": 243,
+    "C/train/location_set": 1606,
+    "C/train/choice_or_other": 1633,
+    "C/selection/location_set": 244,
+    "C/selection/choice_or_other": 253,
+    "C/anchor/location_set": 316,
+    "C/anchor/choice_or_other": 321,
+    "C/report/location_set": 244,
+    "C/report/choice_or_other": 253
+  },
+  "roles_disjoint": true,
+  "stage_groups_disjoint": true,
+  "pixel_ids_disjoint": true,
+  "test_opened": false,
+  "model_calls": 0,
+  "frozen_before_target_association": true
+}
