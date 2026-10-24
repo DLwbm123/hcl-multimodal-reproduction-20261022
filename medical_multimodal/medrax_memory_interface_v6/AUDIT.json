@@ -1,0 +1,115 @@
+{
+  "complete_audit_passed": true,
+  "physical_episodes": 120,
+  "unique_report_case_groups": 24,
+  "all_inputs_answer_free": true,
+  "source_exactly_prior_frozen_training_state": true,
+  "actual_retrieval_and_context_reconstructed": 120,
+  "semantic_rendering_reconstructed": 48,
+  "source_unchanged": true,
+  "source_frozen_before_inference": true,
+  "controller_calls": 361,
+  "controller_calls_with_images": 361,
+  "controller_usage": {
+    "input_tokens": 3300843,
+    "cached_input_tokens": 1436160,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 49582,
+    "reasoning_output_tokens": 25968
+  },
+  "controller_request_seconds_sum": 5879.365833759308,
+  "tool_counts": {
+    "chest_xray_expert": 106,
+    "llava_med_qa": 20,
+    "chest_xray_report_generator": 3
+  },
+  "tool_statuses": {
+    "completed": 129
+  },
+  "tool_output_surface_flags": {
+    "not_matched": 19,
+    "bare_no": 29,
+    "repetitive_malformed": 4
+  },
+  "surface_flags_are_not_medical_correctness_labels": true,
+  "per_arm": {
+    "H0_static": {
+      "initial_mean_chars": 318.0833333333333,
+      "bare_initial_letters_omitted_by_frozen_secondary_parser": 0,
+      "supplemental_explicit_initial_parseable": 24,
+      "supplemental_initial_final_changes": 0,
+      "tools": {
+        "chest_xray_expert": 21,
+        "llava_med_qa": 5,
+        "chest_xray_report_generator": 1
+      },
+      "context_min_chars": 0,
+      "context_max_chars": 0
+    },
+    "global_letter": {
+      "initial_mean_chars": 172.375,
+      "bare_initial_letters_omitted_by_frozen_secondary_parser": 1,
+      "supplemental_explicit_initial_parseable": 24,
+      "supplemental_initial_final_changes": 0,
+      "tools": {
+        "chest_xray_expert": 22,
+        "llava_med_qa": 4
+      },
+      "context_min_chars": 2149,
+      "context_max_chars": 2149
+    },
+    "global_semantic": {
+      "initial_mean_chars": 201.20833333333334,
+      "bare_initial_letters_omitted_by_frozen_secondary_parser": 0,
+      "supplemental_explicit_initial_parseable": 24,
+      "supplemental_initial_final_changes": 0,
+      "tools": {
+        "chest_xray_expert": 20,
+        "llava_med_qa": 4,
+        "chest_xray_report_generator": 1
+      },
+      "context_min_chars": 2519,
+      "context_max_chars": 2519
+    },
+    "balanced_letter": {
+      "initial_mean_chars": 4.75,
+      "bare_initial_letters_omitted_by_frozen_secondary_parser": 22,
+      "supplemental_explicit_initial_parseable": 24,
+      "supplemental_initial_final_changes": 0,
+      "tools": {
+        "chest_xray_expert": 23,
+        "llava_med_qa": 4
+      },
+      "context_min_chars": 1736,
+      "context_max_chars": 2086
+    },
+    "balanced_semantic": {
+      "initial_mean_chars": 5.958333333333333,
+      "bare_initial_letters_omitted_by_frozen_secondary_parser": 21,
+      "supplemental_explicit_initial_parseable": 24,
+      "supplemental_initial_final_changes": 0,
+      "tools": {
+        "chest_xray_expert": 20,
+        "llava_med_qa": 3,
+        "chest_xray_report_generator": 1
+      },
+      "context_min_chars": 1774,
+      "context_max_chars": 2418
+    }
+  },
+  "final_guard": {
+    "time": 1792884005.865102,
+    "own_bytes": 6661744,
+    "aggregate_bytes": 42915384863,
+    "deadline": 1792959076.128591
+  },
+  "seconds_since_original_start": 7738.237483024597,
+  "combined_development_signal": false,
+  "limitations": [
+    "Single fixed memory snapshot and 24 development groups; no stochastic replication, new acquisition or retention test",
+    "Frozen secondary regex excludes a bare single letter at end of text; retain original metrics and label expanded parser supplemental",
+    "Abstract guidance includes output-form instructions; exposure changes observed response format, not a pure retrieval-quality contrast",
+    "Contexts are slot-matched but not token-matched; all factor comparisons retained",
+    "No arm improves pooled accuracy over H0; this fixed interface family is closed without winner adoption"
+  ]
+}

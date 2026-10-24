@@ -1,0 +1,378 @@
+{
+  "time": 1792884014.36607,
+  "fatal": null,
+  "planned_episodes": 120,
+  "physical_episodes": 120,
+  "unique_report_cases": 24,
+  "metrics": {
+    "H0_static": {
+      "A": {
+        "correct": 10,
+        "denominator": 12,
+        "completed": 12,
+        "valid_final": 12
+      },
+      "B": {
+        "correct": 11,
+        "denominator": 12,
+        "completed": 12,
+        "valid_final": 12
+      },
+      "initial_final_consistency": {
+        "parseable": 24,
+        "changed_option": 0
+      },
+      "context": {
+        "mean_chars": 0.0,
+        "memory_kinds": {}
+      }
+    },
+    "global_letter": {
+      "A": {
+        "correct": 10,
+        "denominator": 12,
+        "completed": 12,
+        "valid_final": 12
+      },
+      "B": {
+        "correct": 9,
+        "denominator": 12,
+        "completed": 12,
+        "valid_final": 12
+      },
+      "initial_final_consistency": {
+        "parseable": 23,
+        "changed_option": 0
+      },
+      "context": {
+        "mean_chars": 2149.0,
+        "memory_kinds": {
+          "raw": 48
+        }
+      }
+    },
+    "global_semantic": {
+      "A": {
+        "correct": 10,
+        "denominator": 12,
+        "completed": 12,
+        "valid_final": 12
+      },
+      "B": {
+        "correct": 11,
+        "denominator": 12,
+        "completed": 12,
+        "valid_final": 12
+      },
+      "initial_final_consistency": {
+        "parseable": 24,
+        "changed_option": 0
+      },
+      "context": {
+        "mean_chars": 2519.0,
+        "memory_kinds": {
+          "raw": 48
+        }
+      }
+    },
+    "balanced_letter": {
+      "A": {
+        "correct": 11,
+        "denominator": 12,
+        "completed": 12,
+        "valid_final": 12
+      },
+      "B": {
+        "correct": 10,
+        "denominator": 12,
+        "completed": 12,
+        "valid_final": 12
+      },
+      "initial_final_consistency": {
+        "parseable": 2,
+        "changed_option": 0
+      },
+      "context": {
+        "mean_chars": 1940.1666666666667,
+        "memory_kinds": {
+          "raw": 24,
+          "abstract": 24
+        }
+      }
+    },
+    "balanced_semantic": {
+      "A": {
+        "correct": 10,
+        "denominator": 12,
+        "completed": 12,
+        "valid_final": 12
+      },
+      "B": {
+        "correct": 9,
+        "denominator": 12,
+        "completed": 12,
+        "valid_final": 12
+      },
+      "initial_final_consistency": {
+        "parseable": 3,
+        "changed_option": 0
+      },
+      "context": {
+        "mean_chars": 2149.6666666666665,
+        "memory_kinds": {
+          "raw": 24,
+          "abstract": 24
+        }
+      }
+    }
+  },
+  "paired": {
+    "global_letter -> balanced_letter": {
+      "A": {
+        "both_correct": 10,
+        "gain": 1,
+        "loss": 0,
+        "both_wrong": 1,
+        "mcnemar_exact_two_sided": 1.0,
+        "denominator": 12
+      },
+      "B": {
+        "both_correct": 9,
+        "gain": 1,
+        "loss": 0,
+        "both_wrong": 2,
+        "mcnemar_exact_two_sided": 1.0,
+        "denominator": 12
+      },
+      "pooled": {
+        "both_correct": 19,
+        "gain": 2,
+        "loss": 0,
+        "both_wrong": 3,
+        "mcnemar_exact_two_sided": 0.5,
+        "denominator": 24
+      }
+    },
+    "global_semantic -> balanced_semantic": {
+      "A": {
+        "both_correct": 10,
+        "gain": 0,
+        "loss": 0,
+        "both_wrong": 2,
+        "mcnemar_exact_two_sided": 1.0,
+        "denominator": 12
+      },
+      "B": {
+        "both_correct": 9,
+        "gain": 0,
+        "loss": 2,
+        "both_wrong": 1,
+        "mcnemar_exact_two_sided": 0.5,
+        "denominator": 12
+      },
+      "pooled": {
+        "both_correct": 19,
+        "gain": 0,
+        "loss": 2,
+        "both_wrong": 3,
+        "mcnemar_exact_two_sided": 0.5,
+        "denominator": 24
+      }
+    },
+    "global_letter -> global_semantic": {
+      "A": {
+        "both_correct": 10,
+        "gain": 0,
+        "loss": 0,
+        "both_wrong": 2,
+        "mcnemar_exact_two_sided": 1.0,
+        "denominator": 12
+      },
+      "B": {
+        "both_correct": 9,
+        "gain": 2,
+        "loss": 0,
+        "both_wrong": 1,
+        "mcnemar_exact_two_sided": 0.5,
+        "denominator": 12
+      },
+      "pooled": {
+        "both_correct": 19,
+        "gain": 2,
+        "loss": 0,
+        "both_wrong": 3,
+        "mcnemar_exact_two_sided": 0.5,
+        "denominator": 24
+      }
+    },
+    "balanced_letter -> balanced_semantic": {
+      "A": {
+        "both_correct": 10,
+        "gain": 0,
+        "loss": 1,
+        "both_wrong": 1,
+        "mcnemar_exact_two_sided": 1.0,
+        "denominator": 12
+      },
+      "B": {
+        "both_correct": 9,
+        "gain": 0,
+        "loss": 1,
+        "both_wrong": 2,
+        "mcnemar_exact_two_sided": 1.0,
+        "denominator": 12
+      },
+      "pooled": {
+        "both_correct": 19,
+        "gain": 0,
+        "loss": 2,
+        "both_wrong": 3,
+        "mcnemar_exact_two_sided": 0.5,
+        "denominator": 24
+      }
+    },
+    "global_letter -> balanced_semantic": {
+      "A": {
+        "both_correct": 10,
+        "gain": 0,
+        "loss": 0,
+        "both_wrong": 2,
+        "mcnemar_exact_two_sided": 1.0,
+        "denominator": 12
+      },
+      "B": {
+        "both_correct": 9,
+        "gain": 0,
+        "loss": 0,
+        "both_wrong": 3,
+        "mcnemar_exact_two_sided": 1.0,
+        "denominator": 12
+      },
+      "pooled": {
+        "both_correct": 19,
+        "gain": 0,
+        "loss": 0,
+        "both_wrong": 5,
+        "mcnemar_exact_two_sided": 1.0,
+        "denominator": 24
+      }
+    },
+    "H0_static -> global_letter": {
+      "A": {
+        "both_correct": 10,
+        "gain": 0,
+        "loss": 0,
+        "both_wrong": 2,
+        "mcnemar_exact_two_sided": 1.0,
+        "denominator": 12
+      },
+      "B": {
+        "both_correct": 9,
+        "gain": 0,
+        "loss": 2,
+        "both_wrong": 1,
+        "mcnemar_exact_two_sided": 0.5,
+        "denominator": 12
+      },
+      "pooled": {
+        "both_correct": 19,
+        "gain": 0,
+        "loss": 2,
+        "both_wrong": 3,
+        "mcnemar_exact_two_sided": 0.5,
+        "denominator": 24
+      }
+    },
+    "H0_static -> global_semantic": {
+      "A": {
+        "both_correct": 10,
+        "gain": 0,
+        "loss": 0,
+        "both_wrong": 2,
+        "mcnemar_exact_two_sided": 1.0,
+        "denominator": 12
+      },
+      "B": {
+        "both_correct": 11,
+        "gain": 0,
+        "loss": 0,
+        "both_wrong": 1,
+        "mcnemar_exact_two_sided": 1.0,
+        "denominator": 12
+      },
+      "pooled": {
+        "both_correct": 21,
+        "gain": 0,
+        "loss": 0,
+        "both_wrong": 3,
+        "mcnemar_exact_two_sided": 1.0,
+        "denominator": 24
+      }
+    },
+    "H0_static -> balanced_letter": {
+      "A": {
+        "both_correct": 10,
+        "gain": 1,
+        "loss": 0,
+        "both_wrong": 1,
+        "mcnemar_exact_two_sided": 1.0,
+        "denominator": 12
+      },
+      "B": {
+        "both_correct": 10,
+        "gain": 0,
+        "loss": 1,
+        "both_wrong": 1,
+        "mcnemar_exact_two_sided": 1.0,
+        "denominator": 12
+      },
+      "pooled": {
+        "both_correct": 20,
+        "gain": 1,
+        "loss": 1,
+        "both_wrong": 2,
+        "mcnemar_exact_two_sided": 1.0,
+        "denominator": 24
+      }
+    },
+    "H0_static -> balanced_semantic": {
+      "A": {
+        "both_correct": 10,
+        "gain": 0,
+        "loss": 0,
+        "both_wrong": 2,
+        "mcnemar_exact_two_sided": 1.0,
+        "denominator": 12
+      },
+      "B": {
+        "both_correct": 9,
+        "gain": 0,
+        "loss": 2,
+        "both_wrong": 1,
+        "mcnemar_exact_two_sided": 0.5,
+        "denominator": 12
+      },
+      "pooled": {
+        "both_correct": 19,
+        "gain": 0,
+        "loss": 2,
+        "both_wrong": 3,
+        "mcnemar_exact_two_sided": 0.5,
+        "denominator": 24
+      }
+    }
+  },
+  "representation_arm_retrieval_identity": {
+    "global": {
+      "paired_cases": 24,
+      "same_ids_order": true
+    },
+    "balanced": {
+      "paired_cases": 24,
+      "same_ids_order": true
+    }
+  },
+  "combined_development_signal": false,
+  "continual_learning_or_retention_established": false,
+  "seconds_since_original_start": 7738.237483024597
+}
