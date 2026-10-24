@@ -1,0 +1,60 @@
+{
+  "checked_at": 1792816564.384194,
+  "status": "running_initial_readonly_evaluation",
+  "protocol_code_commit": "8278d0b",
+  "original_started_epoch": 1792816165.520922,
+  "hard_deadline_epoch": 1792898965.520922,
+  "guards_active": true,
+  "neutral_process_argv_verified": true,
+  "arms": {
+    "stability": {
+      "model_ready": true,
+      "parameters_frozen": true,
+      "completed_model_calls_at_check": 51,
+      "completed_final_calls_at_check": 17,
+      "all_final_calls_have_image": true,
+      "progress": {
+        "phase": "report",
+        "arm": "stability",
+        "checkpoint": "empty",
+        "stage": "A",
+        "completed": 17,
+        "total": 72,
+        "calls": 51
+      }
+    },
+    "plasticity": {
+      "model_ready": true,
+      "parameters_frozen": true,
+      "completed_model_calls_at_check": 51,
+      "completed_final_calls_at_check": 17,
+      "all_final_calls_have_image": true,
+      "progress": {
+        "phase": "report",
+        "arm": "plasticity",
+        "checkpoint": "empty",
+        "stage": "A",
+        "completed": 17,
+        "total": 72,
+        "calls": 51
+      }
+    },
+    "controls": {
+      "model_ready": true,
+      "parameters_frozen": true,
+      "completed_model_calls_at_check": 50,
+      "completed_final_calls_at_check": 50,
+      "all_final_calls_have_image": true,
+      "progress": {
+        "phase": "report",
+        "arm": "direct",
+        "checkpoint": "empty",
+        "stage": "A",
+        "completed": 50,
+        "total": 72,
+        "calls": 50
+      }
+    }
+  },
+  "scientific_result_available": false
+}

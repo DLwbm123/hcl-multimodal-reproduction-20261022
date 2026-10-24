@@ -1,0 +1,11 @@
+{
+  "frozen_at": 1792816404.3332396,
+  "protocol_code_commit": "8278d0b",
+  "shared_hcl_source_commit": "38907d8",
+  "membership": "private_membership.json",
+  "groups": 504,
+  "model_calls_before_freeze": 0,
+  "original_started_epoch": 1792816165.520922,
+  "hard_deadline_epoch": 1792898965.520922,
+  "engineering_preparation_failure_preserved": true
+}
