@@ -91,3 +91,7 @@ The distinct [native ReAct visual-tool qualification](medical_multimodal/react_v
 ## 2026-10-24 twelve-hour progress report
 
 [过去 12 小时进展报告](medical_multimodal/reports/2026-10-24_12h/REPORT.zh-CN.md) summarizes four sealed medical-agent experiments (84 episodes, 48 development case groups), failed qualification decisions, full planner counts, the subsequent waiting interval, and a proposed next direction. No new HCL efficacy result is claimed.
+
+## Sol High subscription medical-agent qualification
+
+[Author-aligned six-tool qualification](medical_multimodal/medrax_subscription_v4/REPORT.zh-CN.md) completed: 12/12 episodes and autonomous tool round trips, 11/12 correct. An initial image-path transport failure and all retry costs are retained (113 total reserved subscription calls). Tool outputs include low-information and malformed responses; operational qualification does not establish causal tool benefit or HCL efficacy.

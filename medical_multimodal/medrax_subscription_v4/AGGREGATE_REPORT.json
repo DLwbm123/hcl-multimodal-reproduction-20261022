@@ -1,0 +1,67 @@
+{
+  "denominator": 12,
+  "completed": 12,
+  "valid_final": 12,
+  "correct": 11,
+  "accuracy": 0.9166666666666666,
+  "wilson_95_descriptive": [
+    0.646120088858883,
+    0.9851349055950829
+  ],
+  "all_six_preflight_passed": true,
+  "autonomous_tool_calls": 12,
+  "autonomous_tool_counts": {
+    "chest_xray_expert": 11,
+    "llava_med_qa": 1
+  },
+  "successful_tool_episodes": 12,
+  "tool_output_surface_flags": {
+    "not_matched": 2,
+    "bare_no": 1,
+    "repetitive_malformed": 1,
+    "empty": 1
+  },
+  "surface_flags_are_not_medical_validity_judgments": true,
+  "all_controller_requests_have_images": true,
+  "image_attachment_total": 57,
+  "completed_requests_with_tool_results": 24,
+  "exact_attachment_alias_rewrites": 17,
+  "hcl_updates": 0,
+  "operational_qualified": true,
+  "medical_or_hcl_efficacy_established": false,
+  "attempt_costs": {
+    "initial_interrupted": {
+      "controller_started": 74,
+      "controller_finished": 73,
+      "usage": {
+        "input_tokens": 659169,
+        "cached_input_tokens": 109824,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 13911,
+        "reasoning_output_tokens": 5620
+      },
+      "controller_seconds_sum": 1456.1294474601746,
+      "tool_statuses": {
+        "failed": 55
+      }
+    },
+    "repaired_complete": {
+      "controller_started": 36,
+      "controller_finished": 36,
+      "usage": {
+        "input_tokens": 312406,
+        "cached_input_tokens": 97152,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 5465,
+        "reasoning_output_tokens": 2602
+      },
+      "controller_seconds_sum": 652.4914364814758,
+      "tool_statuses": {
+        "completed": 12
+      }
+    }
+  },
+  "seconds_since_original_start_to_finish": 12456.3051071167,
+  "final_guard_bytes": 42899764418,
+  "interpretation": "Development qualification only. No paired no-tool control, no independent confirmation, no causal tool-benefit or HCL claim. All failures and retry costs retained."
+}
