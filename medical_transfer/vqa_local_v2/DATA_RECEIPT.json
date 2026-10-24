@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "groups": 504,
+  "reused_development_groups": 288,
+  "fresh_report_groups": 216,
+  "report_excluded_previous_groups": 1376,
+  "report_availability": {
+    "A/yes_no_or_presence": 562,
+    "A/count": 351,
+    "B/color_set": 279,
+    "B/instrument": 281,
+    "C/location_set": 353,
+    "C/choice_or_other": 357
+  },
+  "group_and_pixel_disjoint": true,
+  "test_opened": false,
+  "targets_associated_after_membership": true,
+  "original_role_reassignment": "unused train_replay to reserved_report",
+  "historical_source_code_train_replay_usage": "data preparation/audit only; no learning entrypoint uses this role",
+  "model_calls": 0,
+  "additional_historical_validation_exclusion_audit": {
+    "passed": true,
+    "groups_checked": 12,
+    "memberships_changed": false,
+    "reason": "v1 final first-four validation exclusions were not listed as exclusion_sources; checked fixed fresh membership before inference"
+  }
+}

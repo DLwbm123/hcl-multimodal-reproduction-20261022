@@ -1,0 +1,123 @@
+{
+  "name": "vqa_local_v2",
+  "status": "frozen_before_first_inference",
+  "purpose": "Test whether bounded local memory edits reduce interference while preserving current learning, without relaxing B=0 or changing retrieval/prompt policy",
+  "seed": 2026102402,
+  "stages": {
+    "A": [
+      "yes_no_or_presence",
+      "count"
+    ],
+    "B": [
+      "color_set",
+      "instrument"
+    ],
+    "C": [
+      "location_set",
+      "choice_or_other"
+    ]
+  },
+  "order": [
+    "A",
+    "B",
+    "C"
+  ],
+  "stage_selection": "Same A/B/C types and reused development order; fresh report 36 groups/type via metadata-only seeded global matching.",
+  "counts_per_stage": {
+    "train": 48,
+    "selection": 24,
+    "anchor": 24,
+    "report": 72
+  },
+  "roles": {
+    "train": "reuse_v1_h_search",
+    "selection": "reuse_v1_validation",
+    "anchor": "reuse_v1_retention_anchor",
+    "report": "previously_unused_train_replay_reserved_report_only"
+  },
+  "exclude": "Report excludes all previous historical memberships plus all 504 v1 groups and pixel identities. Reuse only v1 train/selection/anchor as development. Reserve 216 previously unused train_replay groups as report-only BEFORE target association, an explicit original-role reassignment. Original test unopened.",
+  "task_name": "visual_qa",
+  "initial_state": "all fresh empty; no previous checkpoint",
+  "arms": [
+    "direct",
+    "static",
+    "fixed_memory",
+    "plasticity",
+    "stability",
+    "bulk"
+  ],
+  "controls": {
+    "direct": "unchanged v1 direct",
+    "static": "unchanged v1 static",
+    "fixed_memory": "unchanged v1 standard unconditional whole batch memory with lexical top2, no tuning",
+    "plasticity": "local three candidates, strict current gain and full format, B=infinity",
+    "stability": "same local three candidates, B=0",
+    "bulk": "same proposal generation, three candidate scopes and selection gates as stability, B=0; replaces full raw/abstract banks for the chosen scope"
+  },
+  "model": "existing Qwen2.5-VL-7B-Instruct BF16 SDPA, temperature0, max2048 answer512, frozen weights",
+  "learning": {
+    "batch_size": 24,
+    "batches_per_stage": 2,
+    "components": [],
+    "candidates_per_batch": 3,
+    "candidate_scopes": [
+      "raw_only",
+      "abstract_only",
+      "raw_and_abstract"
+    ],
+    "proposal": "one standard 24-example feedback pass plus existing LLM abstraction per batch from committed state; all alternatives constructed before selection outputs",
+    "local_raw": "take first two incoming proposed raw records in frozen train order; update matching id or append; at cap10 replace existing record with maximum token Jaccard overlap to incoming question; ties current record order; do not evict a just inserted record",
+    "local_abstract": "update only main_policy in first batch and failure_avoidance in second batch, preserving other role verbatim; at most one role",
+    "bulk": "each candidate scope takes full corresponding proposed bank; unmodified banks preserved verbatim",
+    "selection": "evaluate all three alternatives against same prebatch state; strict gain>=1 correct and score>0, format=1; historical correct-to-wrong<=B without recovery offset; maximize current correct then minimize historical loss then fixed candidate index. Commit at most one candidate. No within-batch sequential acceptance.",
+    "raw_capacity_total": 10,
+    "abstract_capacity_total": 2,
+    "retrieval_top_k": 2,
+    "skills_enabled": false,
+    "B": {
+      "plasticity": null,
+      "stability": 0,
+      "bulk": 0
+    },
+    "prompt_search": false,
+    "routing": "same frozen original selector in three adaptive arms, no stage/type filter or routing changes",
+    "budget_matching": "same 3 candidate evaluations and one proposal per batch in three adaptive arms; fixed standard arm has no search. Actual occupancy and costs reported."
+  },
+  "anchors_per_task": 72,
+  "anchor_contract": "Exactly 24 report-disjoint anchors per completed stage accumulated without clustering; stage exists only in evaluator metadata. Retain same-task earlier-stage anchors, exclude current/future stages. Recompute paired reference before each update and save acquired-stage anchor predictions; report total, reference-correct, losses, recoveries and type coverage.",
+  "common_runtime": "Existing candidate structural contract, fixed historical-memory evidence boundary in all memory arms, identical native VQA scoring; no localization, no tools, no new model/API, no task-name filtering. Disabled prediction/final caches; preprocessing cache may be reused within each arm.",
+  "evaluation": "Full 4x3 matrices on fresh reserved report72/stage; read-only; static/direct computed once. New report groups never used for proposal or selection or stopping; all full denominators retained.",
+  "primary_metrics": [
+    "stage-immediate learning gain relative to preceding checkpoint",
+    "final macro exact-match and paired differences versus Static and fixed memory",
+    "acquired-stage correct-to-wrong counts on A and B after subsequent learning",
+    "worst old-stage loss rate per full 72 and per acquired-correct denominator",
+    "BWT and accuracy matrix",
+    "accepted memory/prompt updates by stage",
+    "anchor protection coverage",
+    "training and deployment calls/time/peak memory separately"
+  ],
+  "statistics": "20000 paired content-group bootstrap seed2026102402 stratified by stage; single order and seed; newly reserved adaptation-role holdout, not original validation/test or patient independent. Do not compare v1 and v2 scores as paired.",
+  "success_rules": {
+    "learning_and_retention": "Local Stability final macro >=Static+5pp and paired95 lower>0; mean immediate learning gain>=5pp; positive immediate gains and accepted updates in BOTH B and C; A/B acquired-correct losses<=3/72 each; each old stage must have nonzero acquired correct. No vacuous retention success.",
+    "gate_attribution": "Only claim demonstrated retention advantage if Plasticity has nonzero old-case losses, Stability has fewer, and paired95% upper for Stability-minus-Plasticity loss<0; mean immediate learning gain no more than5pp below Plasticity. Otherwise attribution inconclusive/unsupported.",
+    "adaptive_advantage": "Only claim benefit beyond fixed memory if final Stability-minus-fixed_memory paired95% lower>0; report all controls regardless. No post-hoc threshold changes.",
+    "locality": "Local Stability vs matched Bulk: final paired95 lower>0, final old-case loss rate not greater, mean immediate learning gain not lower. Otherwise no demonstrated locality advantage.",
+    "combined": "Joint learning-retention AND advantage over standard fixed memory AND locality criteria all pass. Separate gates also reported."
+  },
+  "budget": {
+    "runtime_soft_hours": 22.75,
+    "runtime_hard_hours": 23,
+    "max_calls_per_hcl": 15000,
+    "max_calls_controls": 7000,
+    "storage_stop_bytes": 4000000000,
+    "storage_cap_bytes": 5000000000,
+    "expected_new_bytes": 1000000000,
+    "global_user_cap_bytes_exclusive": 50000000000,
+    "watch_interval_seconds": 10
+  },
+  "failure": "Independent supervisor with owned-process identity checks and hard timeout; stop sibling arms on fatal failure, keep partial outputs and original clock/call ledger. No automatic restart, result-driven sample change or budget expansion. All invalid/missing outputs remain failures in fixed denominators.",
+  "future_scope": "One bounded local-memory method experiment; no result-driven changes. Preserve all negative outcomes; all outcomes reported.",
+  "test_used": false,
+  "patient_independence": false
+}
