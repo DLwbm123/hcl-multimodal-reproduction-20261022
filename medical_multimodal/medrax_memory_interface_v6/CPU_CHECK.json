@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "checks": [
+    "exact_option_mapping",
+    "orthogonal_selection_ids",
+    "abstract_quota",
+    "immutable_state",
+    "gold_free_inputs",
+    "global_letter_exactly_matches_v5_context_for_all24",
+    "empty_baseline_unchanged",
+    "all_actual_source_answers_mapped"
+  ],
+  "tested_cases": 24
+}
