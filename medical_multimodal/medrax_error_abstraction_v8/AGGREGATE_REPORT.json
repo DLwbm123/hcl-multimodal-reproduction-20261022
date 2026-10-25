@@ -1,0 +1,164 @@
+{
+  "time": 1792908013.271429,
+  "fatal": null,
+  "planned_report_episodes": 144,
+  "physical_report_episodes": 144,
+  "unique_report_cases": 48,
+  "valid_notes": 2,
+  "planned_note_calls": 2,
+  "metrics": {
+    "H0_static": {
+      "A": {
+        "correct": 23,
+        "denominator": 24,
+        "completed": 24,
+        "valid_final": 24
+      },
+      "B": {
+        "correct": 18,
+        "denominator": 24,
+        "completed": 24,
+        "valid_final": 24
+      },
+      "initial_final_consistency": {
+        "parseable": 48,
+        "changed_option": 0
+      },
+      "context": {
+        "mean_chars": 0.0,
+        "memory_reads": 0,
+        "distinct_records": 0
+      }
+    },
+    "raw_errors": {
+      "A": {
+        "correct": 23,
+        "denominator": 24,
+        "completed": 24,
+        "valid_final": 24
+      },
+      "B": {
+        "correct": 18,
+        "denominator": 24,
+        "completed": 24,
+        "valid_final": 24
+      },
+      "initial_final_consistency": {
+        "parseable": 48,
+        "changed_option": 0
+      },
+      "context": {
+        "mean_chars": 2815.0,
+        "memory_reads": 96,
+        "distinct_records": 2
+      }
+    },
+    "error_notes": {
+      "A": {
+        "correct": 22,
+        "denominator": 24,
+        "completed": 24,
+        "valid_final": 24
+      },
+      "B": {
+        "correct": 18,
+        "denominator": 24,
+        "completed": 24,
+        "valid_final": 24
+      },
+      "initial_final_consistency": {
+        "parseable": 48,
+        "changed_option": 0
+      },
+      "context": {
+        "mean_chars": 3543.0,
+        "memory_reads": 96,
+        "distinct_records": 2
+      }
+    }
+  },
+  "paired": {
+    "H0_static -> raw_errors": {
+      "A": {
+        "both_correct": 23,
+        "gain": 0,
+        "loss": 0,
+        "both_wrong": 1,
+        "mcnemar_exact_two_sided": 1.0,
+        "denominator": 24
+      },
+      "B": {
+        "both_correct": 18,
+        "gain": 0,
+        "loss": 0,
+        "both_wrong": 6,
+        "mcnemar_exact_two_sided": 1.0,
+        "denominator": 24
+      },
+      "pooled": {
+        "both_correct": 41,
+        "gain": 0,
+        "loss": 0,
+        "both_wrong": 7,
+        "mcnemar_exact_two_sided": 1.0,
+        "denominator": 48
+      }
+    },
+    "H0_static -> error_notes": {
+      "A": {
+        "both_correct": 22,
+        "gain": 0,
+        "loss": 1,
+        "both_wrong": 1,
+        "mcnemar_exact_two_sided": 1.0,
+        "denominator": 24
+      },
+      "B": {
+        "both_correct": 18,
+        "gain": 0,
+        "loss": 0,
+        "both_wrong": 6,
+        "mcnemar_exact_two_sided": 1.0,
+        "denominator": 24
+      },
+      "pooled": {
+        "both_correct": 40,
+        "gain": 0,
+        "loss": 1,
+        "both_wrong": 7,
+        "mcnemar_exact_two_sided": 1.0,
+        "denominator": 48
+      }
+    },
+    "raw_errors -> error_notes": {
+      "A": {
+        "both_correct": 22,
+        "gain": 0,
+        "loss": 1,
+        "both_wrong": 1,
+        "mcnemar_exact_two_sided": 1.0,
+        "denominator": 24
+      },
+      "B": {
+        "both_correct": 18,
+        "gain": 0,
+        "loss": 0,
+        "both_wrong": 6,
+        "mcnemar_exact_two_sided": 1.0,
+        "denominator": 24
+      },
+      "pooled": {
+        "both_correct": 40,
+        "gain": 0,
+        "loss": 1,
+        "both_wrong": 7,
+        "mcnemar_exact_two_sided": 1.0,
+        "denominator": 48
+      }
+    }
+  },
+  "development_signal": false,
+  "notes_medically_validated": false,
+  "continual_learning_or_retention_established": false,
+  "seconds_since_original_start": 10276.62624001503
+}

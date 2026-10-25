@@ -1,0 +1,81 @@
+{
+  "complete_audit_passed": true,
+  "physical_report_episodes": 144,
+  "unique_report_cases": 48,
+  "all_contexts_reconstructed": 144,
+  "source_exactly_matches_frozen_v7_errors": true,
+  "notes_exactly_match_original_generation": true,
+  "source_report_ids_disjoint": true,
+  "all_report_calls_after_states_frozen": true,
+  "all_states_immutable": true,
+  "all_paired_tables_recomputed": true,
+  "per_arm": {
+    "H0_static": {
+      "records": 0,
+      "mean_chars": 0.0,
+      "memory_reads": 0,
+      "distinct_records": 0
+    },
+    "raw_errors": {
+      "records": 2,
+      "mean_chars": 2815.0,
+      "memory_reads": 96,
+      "distinct_records": 2
+    },
+    "error_notes": {
+      "records": 2,
+      "mean_chars": 3543.0,
+      "memory_reads": 96,
+      "distinct_records": 2
+    }
+  },
+  "controller_calls": 447,
+  "controller_calls_with_images": 447,
+  "note_generation_calls": 2,
+  "note_generation_seconds": 56.04217076301575,
+  "controller_usage": {
+    "input_tokens": 4106361,
+    "cached_input_tokens": 1803648,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 73471,
+    "reasoning_output_tokens": 38592
+  },
+  "controller_request_seconds_sum": 8065.804981946945,
+  "tool_counts": {
+    "chest_xray_expert": 134,
+    "chest_xray_report_generator": 12,
+    "llava_med_qa": 13
+  },
+  "tool_statuses": {
+    "completed": 159
+  },
+  "tool_output_surface_flags": {
+    "not_matched": 19,
+    "repetitive_malformed": 8,
+    "bare_no": 24
+  },
+  "surface_flags_are_not_medical_correctness_labels": true,
+  "source_errors_initial_to_final_option_changed": [
+    false,
+    false
+  ],
+  "seconds_since_original_start": 10276.62624001503,
+  "final_guard": {
+    "time": 1792908003.662351,
+    "own_bytes": 8988062,
+    "aggregate_bytes": 42936134539,
+    "deadline": 1792980536.645191,
+    "probe": "python_lstat_no_inner_symlinks"
+  },
+  "B_gain_threshold_mathematically_reachable": true,
+  "development_signal": false,
+  "notes_medically_validated": false,
+  "limitations": [
+    "Zero B gains or losses against either control; A loses one baseline-correct case",
+    "Two fixed B sources and one generation each, without independent source or stochastic replication",
+    "All cases receive both records; applicability text is not a tested retrieval or abstention mechanism",
+    "No source-image ablation; content, length and extra generation differ from raw",
+    "Structural and provenance checks do not establish medical correctness",
+    "No A acquisition or sequential learning and retention established"
+  ]
+}
