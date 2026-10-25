@@ -1,0 +1,93 @@
+{
+  "complete_audit_passed": true,
+  "physical_episodes": 176,
+  "unique_cases": 80,
+  "unique_report_cases": 48,
+  "all_training_and_report_contexts_reconstructed": 176,
+  "banks_exactly_reconstructed_from_training_only": true,
+  "training_snapshots": 32,
+  "training_labels_only_before_report": true,
+  "all_reports_after_states_frozen": true,
+  "all_states_immutable": true,
+  "training_bank_audit": {
+    "A": {
+      "training_denominator": 16,
+      "correct": 16,
+      "incorrect": 0,
+      "matched_selected_per_bank": 0
+    },
+    "B": {
+      "training_denominator": 16,
+      "correct": 13,
+      "incorrect": 3,
+      "matched_selected_per_bank": 2
+    }
+  },
+  "per_arm": {
+    "H0_static": {
+      "bank_raw_records": 0,
+      "retrieved_raw_reads": 0,
+      "distinct_retrieved_records": 0,
+      "context_chars_mean": 0.0,
+      "all_bank_sources_B_training": null
+    },
+    "success_memory": {
+      "bank_raw_records": 2,
+      "retrieved_raw_reads": 96,
+      "distinct_retrieved_records": 2,
+      "context_chars_mean": 3808.0,
+      "all_bank_sources_B_training": true
+    },
+    "corrective_memory": {
+      "bank_raw_records": 2,
+      "retrieved_raw_reads": 96,
+      "distinct_retrieved_records": 2,
+      "context_chars_mean": 2815.0,
+      "all_bank_sources_B_training": true
+    }
+  },
+  "controller_calls": 536,
+  "controller_calls_with_images": 536,
+  "controller_usage": {
+    "input_tokens": 4882822,
+    "cached_input_tokens": 2150016,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 79804,
+    "reasoning_output_tokens": 39738
+  },
+  "controller_request_seconds_sum": 8947.436735630035,
+  "tool_counts": {
+    "chest_xray_expert": 159,
+    "llava_med_qa": 22,
+    "chest_xray_report_generator": 10
+  },
+  "tool_statuses": {
+    "completed": 190,
+    "failed": 1
+  },
+  "tool_output_surface_flags": {
+    "repetitive_malformed": 7,
+    "not_matched": 16,
+    "bare_no": 32,
+    "empty": 2
+  },
+  "surface_flags_are_not_medical_correctness_labels": true,
+  "seconds_since_original_start": 11479.662718296051,
+  "final_guard": {
+    "time": 1792896576.8987408,
+    "own_bytes": 10874445,
+    "aggregate_bytes": 42927559436,
+    "deadline": 1792967904.31015,
+    "probe": "python_lstat_no_inner_symlinks"
+  },
+  "source_error_coverage": false,
+  "acquisition_development_signal": false,
+  "limitations": [
+    "No A training errors, so no A corrective record; cannot test A correction learning or infer A acquisition",
+    "Only two B raw records in each bank; every report receives both, with no effective relevance filtering",
+    "Corrective versus H0 gain1 loss0 falls below the frozen at-least2 threshold; vs success gain2 includes reversal of one success-bank regression",
+    "No stochastic repeat or confirmatory significance; all frozen endpoints and denominators retained",
+    "Question/image/answer source content differs between error and success banks; equal record count is not equal context length",
+    "Acquisition signal not established; sequential learning and retention untested"
+  ]
+}

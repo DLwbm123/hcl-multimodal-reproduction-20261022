@@ -1,0 +1,178 @@
+{
+  "time": 1792896583.9728665,
+  "fatal": null,
+  "planned_episodes": 176,
+  "physical_episodes": 176,
+  "training_completed": 32,
+  "planned_training_episodes": 32,
+  "unique_report_cases": 48,
+  "metrics": {
+    "H0_static": {
+      "A": {
+        "correct": 23,
+        "denominator": 24,
+        "completed": 24,
+        "valid_final": 24
+      },
+      "B": {
+        "correct": 18,
+        "denominator": 24,
+        "completed": 24,
+        "valid_final": 24
+      },
+      "initial_final_consistency": {
+        "parseable": 47,
+        "changed_option": 0
+      },
+      "context": {
+        "mean_chars": 0.0,
+        "raw_reads": 0,
+        "distinct_records": 0
+      }
+    },
+    "success_memory": {
+      "A": {
+        "correct": 23,
+        "denominator": 24,
+        "completed": 24,
+        "valid_final": 24
+      },
+      "B": {
+        "correct": 17,
+        "denominator": 24,
+        "completed": 24,
+        "valid_final": 24
+      },
+      "initial_final_consistency": {
+        "parseable": 47,
+        "changed_option": 0
+      },
+      "context": {
+        "mean_chars": 3808.0,
+        "raw_reads": 96,
+        "distinct_records": 2
+      }
+    },
+    "corrective_memory": {
+      "A": {
+        "correct": 23,
+        "denominator": 24,
+        "completed": 24,
+        "valid_final": 24
+      },
+      "B": {
+        "correct": 19,
+        "denominator": 24,
+        "completed": 24,
+        "valid_final": 24
+      },
+      "initial_final_consistency": {
+        "parseable": 48,
+        "changed_option": 0
+      },
+      "context": {
+        "mean_chars": 2815.0,
+        "raw_reads": 96,
+        "distinct_records": 2
+      }
+    }
+  },
+  "paired": {
+    "H0_static -> success_memory": {
+      "A": {
+        "both_correct": 23,
+        "gain": 0,
+        "loss": 0,
+        "both_wrong": 1,
+        "mcnemar_exact_two_sided": 1.0,
+        "denominator": 24
+      },
+      "B": {
+        "both_correct": 17,
+        "gain": 0,
+        "loss": 1,
+        "both_wrong": 6,
+        "mcnemar_exact_two_sided": 1.0,
+        "denominator": 24
+      },
+      "pooled": {
+        "both_correct": 40,
+        "gain": 0,
+        "loss": 1,
+        "both_wrong": 7,
+        "mcnemar_exact_two_sided": 1.0,
+        "denominator": 48
+      }
+    },
+    "H0_static -> corrective_memory": {
+      "A": {
+        "both_correct": 23,
+        "gain": 0,
+        "loss": 0,
+        "both_wrong": 1,
+        "mcnemar_exact_two_sided": 1.0,
+        "denominator": 24
+      },
+      "B": {
+        "both_correct": 18,
+        "gain": 1,
+        "loss": 0,
+        "both_wrong": 5,
+        "mcnemar_exact_two_sided": 1.0,
+        "denominator": 24
+      },
+      "pooled": {
+        "both_correct": 41,
+        "gain": 1,
+        "loss": 0,
+        "both_wrong": 6,
+        "mcnemar_exact_two_sided": 1.0,
+        "denominator": 48
+      }
+    },
+    "success_memory -> corrective_memory": {
+      "A": {
+        "both_correct": 23,
+        "gain": 0,
+        "loss": 0,
+        "both_wrong": 1,
+        "mcnemar_exact_two_sided": 1.0,
+        "denominator": 24
+      },
+      "B": {
+        "both_correct": 17,
+        "gain": 2,
+        "loss": 0,
+        "both_wrong": 5,
+        "mcnemar_exact_two_sided": 0.5,
+        "denominator": 24
+      },
+      "pooled": {
+        "both_correct": 40,
+        "gain": 2,
+        "loss": 0,
+        "both_wrong": 6,
+        "mcnemar_exact_two_sided": 0.5,
+        "denominator": 48
+      }
+    }
+  },
+  "training_bank_audit": {
+    "A": {
+      "training_denominator": 16,
+      "correct": 16,
+      "incorrect": 0,
+      "matched_selected_per_bank": 0
+    },
+    "B": {
+      "training_denominator": 16,
+      "correct": 13,
+      "incorrect": 3,
+      "matched_selected_per_bank": 2
+    }
+  },
+  "source_error_coverage": false,
+  "acquisition_development_signal": false,
+  "continual_learning_or_retention_established": false,
+  "seconds_since_original_start": 11479.662718296051
+}
