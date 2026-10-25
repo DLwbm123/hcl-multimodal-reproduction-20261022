@@ -1,0 +1,65 @@
+{
+  "experiment": "medrax_tool_query_v13",
+  "parent_result_commit": "4428570",
+  "hypothesis": "A persistent tool-query program derived from source training feedback can improve observations elicited from CURRENT images and downstream answers beyond a source-free fixed query using the same tool, images and call count. Native unchanged H0 remains the primary reference.",
+  "motivation": "v12 source experience changed no initial answers during review; test acquisition of new current-case tool observations rather than further passive review. Existing B is the previously defined metadata-based multi-image comparison task, not an invented clinical shift.",
+  "selection": {
+    "training": "Original24 v9B training cases and their H0_train attempts plus unadjudicated benchmark feedback; all sources retained. Only source text/feedback sent to the one program proposal, no target questions or outcomes.",
+    "development": "Six exposed v7B report cases: first3 H0 errors then first3 H0-correct cases in original v7 input order. Explicitly outcome-enriched adaptive reuse; target selection never uses v11/v12 predictions.",
+    "confirmation_protected": 96,
+    "new_case_allocation": 0,
+    "separation": "Source/target case IDs and known canonical image paths disjoint; not a claim of patient-independent evaluation."
+  },
+  "policy": {
+    "proposal_count": 1,
+    "regeneration_or_repair": false,
+    "may_decline": true,
+    "schema": "admit,tool_name,query_template,source_indices,rationale; tool restricted to chest_xray_expert or llava_med_qa, one literal question_stem placeholder,250-1600chars,>=4 distinct source indices0-23. No generated code execution.",
+    "source_supervision": "Benchmark feedback is not clinical adjudication; propose observable-fact elicitation, never assert source diagnoses as medical rules.",
+    "persistent_state": "One source-derived query program frozen before evaluation. Fixed control uses SAME selected tool and independently frozen source-free query. No target feedback updates either state.",
+    "decline_or_invalid": "Preserve original one proposal and costs, perform no target evaluation; report eligibility/format failure rather than a clinical negative result."
+  },
+  "execution": {
+    "arms": [
+      "H0_static",
+      "fixed_query",
+      "learned_query"
+    ],
+    "repeats": 2,
+    "physical_episodes": 36,
+    "current_fact_prefix": "For each target image, execute exactly one actual selected native-tool invocation in fixed and learned arms. Use the same tool across these two arms. Both queries receive the same current question stem without answer options; only the persistent query procedure differs. Standard tool defaults preserved.",
+    "controller": "Original author native prompt/current images/six tools/two-turn final-letter scoring. H0 gets no prefix. Other arms receive the same wrapper and image-indexed raw tool observations, not explicit program/query/rationale/source records. Tool outputs may echo their input and remain fallible; no expert observation oracle is claimed.",
+    "bounds": "One prefix call per current image; prefix calls count toward the same16-tool budget. Further native tool calls allowed under unchanged total limits. Observation text capped12000chars per image identically for both prefix arms, full native tool logs private.",
+    "order": "Casewise3-arm rotation; second block reverse target order and shift rotation by1; new Agent/MemorySaver every physical episode, no aliases.",
+    "scoring": "Read gold only after all predictions or termination; full planned denominators, exact final A-F.",
+    "model": "Existing local subscription gpt-6.1-sol/high; all medical tools/weights unchanged; no new credentials,API provider or paid resource."
+  },
+  "gate": {
+    "requirements": "All36 valid and admitted program. BOTH repeats learned vsH0 net>=2/6 with H0 loss<=1; learned vsfixed net>=1/6; >=2 cases repeated H0 wrong/learned correct AND learned actual controller observation-prefix text differs from fixed in each repeat.",
+    "interpretation": "Necessary non-identical intervention check, not proof that text differences are medically correct or causal. Solely error-enriched exploratory benchmark evidence, no general clinical accuracy, full-HCL or A-to-B retention claim.",
+    "fail": "Close fixed policy/variant; no proposal regeneration, target/source resampling, prompt/threshold changes or selective reruns inside experiment.",
+    "statistics": "All paired gain/loss tables, descriptive exact McNemar, tool-query/evidence coverage, identical-observation nominal gains, per-arm inference/tool/token/rate-limit/runtime costs; repetitions do not increase independent N."
+  },
+  "limits": {
+    "max_elapsed_hours": 6,
+    "max_subscription_calls_total": 220,
+    "includes_one_proposal_call": true,
+    "window_deadline_epoch": 1792983297.617537,
+    "hard_deadline": "min(original local implementation/preparation start+6h,windowdeadline); do not reset",
+    "own_storage_stop_bytes": 100000000,
+    "aggregate_storage_stop_bytes": 45000000000,
+    "aggregate_storage_hard_exclusive_bytes": 50000000000,
+    "per_case_controller_calls": 12,
+    "per_case_tool_calls": 16,
+    "per_case_seconds": 3600,
+    "request_timeout_seconds": 1200
+  },
+  "limitations": [
+    "Training supervision and tool observations not independently medically adjudicated; this is not Pro E1 or an O-oracle.",
+    "Six reused, error-enriched targets from existing B group; single frozen source bank/proposal, adaptive development.",
+    "Fixed/learned tool choice matched but query lengths not exactly token matched; H0 has fewer mandatory tool calls.",
+    "Raw tool text can contain ungrounded interpretations, artifacts or echoes; completed does not imply factual correctness.",
+    "Current images only, no historical-patient images sent to tools; no doctor resource fabricated."
+  ],
+  "public_boundary": "Only code,protocol,aggregate,audit,cost; no question/image/label/program content/case identifier/per-case trace/credential."
+}
