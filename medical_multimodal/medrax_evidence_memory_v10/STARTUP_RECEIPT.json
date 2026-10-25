@@ -1,0 +1,35 @@
+{
+  "checked_epoch": 1792918608.7302983,
+  "worker_identity_matches_alive": true,
+  "worker_pid": 3508340,
+  "worker_start_ticks": "130944094",
+  "bridge_running": true,
+  "neutral_worker_and_bridge_argv_checked": true,
+  "gpu_process_not_yet_present_during_note_generation": true,
+  "source_commit": "ca9f688b92c0b58223ed4cc10adaea88f35ebc3e",
+  "original_budget": {
+    "started_epoch": 1792918354.426146,
+    "hard_deadline_epoch": 1792939954.426146,
+    "max_subscription_calls": 650,
+    "model": "gpt-6.1-sol",
+    "reasoning": "high",
+    "aggregate_stop_new_bytes": 45000000000,
+    "own_stop_new_bytes": 200000000,
+    "hard_exclusive_bytes": 50000000000
+  },
+  "gpu_free_mib_before_launch": 72830,
+  "last_guard": {
+    "time": 1792918594.4962966,
+    "own_bytes": 357398,
+    "aggregate_bytes": 42941733996,
+    "deadline": 1792939954.426146
+  },
+  "subscription_calls_reserved": 1,
+  "state": "training_note_generation",
+  "first_case_complete": false,
+  "states_frozen": false,
+  "six_tools_loaded": false,
+  "finished": false,
+  "failed": false,
+  "first_full_episode_not_yet_verified": true
+}
