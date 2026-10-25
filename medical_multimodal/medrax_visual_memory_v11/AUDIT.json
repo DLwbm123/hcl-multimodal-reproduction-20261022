@@ -1,0 +1,168 @@
+{
+  "audit_passed": true,
+  "planned_episodes": 192,
+  "physical_episodes": 106,
+  "completed_format_valid": 105,
+  "failed_started_episodes": 1,
+  "not_started_episodes": 86,
+  "full_repeat_blocks": [
+    1
+  ],
+  "complete": false,
+  "original_order_prefix_verified": true,
+  "all_started_initial_requests_and_contexts_verified": 106,
+  "training_cases": 24,
+  "confirmation_excluded": 96,
+  "frozen_selection_uses_question_only": true,
+  "same_completed_case_results": {
+    "1": {
+      "all_four_completed_cases": 24,
+      "correct_on_same_completed_cases": {
+        "H0_static": 22,
+        "history_text": 20,
+        "history_image": 21,
+        "history_mismatch": 21
+      },
+      "aligned_mismatch_answer_disagreement": 0
+    },
+    "2": {
+      "all_four_completed_cases": 2,
+      "correct_on_same_completed_cases": {
+        "H0_static": 2,
+        "history_text": 2,
+        "history_image": 2,
+        "history_mismatch": 2
+      },
+      "aligned_mismatch_answer_disagreement": 0
+    }
+  },
+  "planned_denominator_pairs": [
+    {
+      "H0_to_image": {
+        "both_correct": 21,
+        "gain": 0,
+        "loss": 1,
+        "both_wrong": 2,
+        "mcnemar_exact_two_sided": 1.0,
+        "denominator": 24
+      },
+      "text_to_image": {
+        "both_correct": 20,
+        "gain": 1,
+        "loss": 0,
+        "both_wrong": 3,
+        "mcnemar_exact_two_sided": 1.0,
+        "denominator": 24
+      },
+      "mismatch_to_image": {
+        "both_correct": 21,
+        "gain": 0,
+        "loss": 0,
+        "both_wrong": 3,
+        "mcnemar_exact_two_sided": 1.0,
+        "denominator": 24
+      }
+    },
+    {
+      "H0_to_image": {
+        "both_correct": 2,
+        "gain": 0,
+        "loss": 0,
+        "both_wrong": 22,
+        "mcnemar_exact_two_sided": 1.0,
+        "denominator": 24
+      },
+      "text_to_image": {
+        "both_correct": 2,
+        "gain": 0,
+        "loss": 0,
+        "both_wrong": 22,
+        "mcnemar_exact_two_sided": 1.0,
+        "denominator": 24
+      },
+      "mismatch_to_image": {
+        "both_correct": 2,
+        "gain": 0,
+        "loss": 1,
+        "both_wrong": 21,
+        "mcnemar_exact_two_sided": 1.0,
+        "denominator": 24
+      }
+    }
+  ],
+  "missing_as_wrong_accounting_is_not_an_observed_scientific_comparison": true,
+  "gate_passed": false,
+  "controller_started_events": 329,
+  "remote_controller_finished_events": 328,
+  "local_subscription_execute_calls": 328,
+  "local_completed_response_files": 328,
+  "responses_status_counts": {
+    "ok": 328
+  },
+  "remote_controller_usage": {
+    "input_tokens": 2894166,
+    "cached_input_tokens": 1280768,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 50506,
+    "reasoning_output_tokens": 24003
+  },
+  "request_seconds_sum_completed_local": 19737.962658166885,
+  "responses_with_visible_429": 31,
+  "visible_retry_events_lower_bound": 31,
+  "visible_backoff_seconds_lower_bound": 13343.988665791,
+  "internal_attempts_not_fully_counted_by_logical_calls": true,
+  "tool_counts": {
+    "chest_xray_expert": 97,
+    "chest_xray_report_generator": 17,
+    "llava_med_qa": 3
+  },
+  "tool_status_counts": {
+    "completed": 117
+  },
+  "historical_image_boundary_rejections": 0,
+  "initial_final_consistency": {
+    "H0_static_r1": {
+      "parseable_initial": 24,
+      "initial_final_option_changed": 0
+    },
+    "history_text_r1": {
+      "parseable_initial": 24,
+      "initial_final_option_changed": 0
+    },
+    "history_image_r1": {
+      "parseable_initial": 24,
+      "initial_final_option_changed": 0
+    },
+    "history_mismatch_r1": {
+      "parseable_initial": 24,
+      "initial_final_option_changed": 0
+    },
+    "H0_static_r2": {
+      "parseable_initial": 2,
+      "initial_final_option_changed": 0
+    },
+    "history_text_r2": {
+      "parseable_initial": 2,
+      "initial_final_option_changed": 0
+    },
+    "history_image_r2": {
+      "parseable_initial": 2,
+      "initial_final_option_changed": 0
+    },
+    "history_mismatch_r2": {
+      "parseable_initial": 3,
+      "initial_final_option_changed": 0
+    }
+  },
+  "original_wall_seconds": 21600.380557775497,
+  "original_deadline_epoch": 1792953470.683676,
+  "terminal_record_epoch": 1792953471.0642326,
+  "final_guard": {
+    "time": 1792953470.6353302,
+    "own_bytes": 5832376,
+    "aggregate_bytes": 42955070976,
+    "deadline": 1792953470.683676
+  },
+  "medical_validity_established": false,
+  "sequential_learning_established": false
+}

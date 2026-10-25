@@ -1,0 +1,14 @@
+{
+  "time": 1792947049.230071,
+  "type": "subscription_provider_rate_limiting",
+  "evidence": "Visible request stderr records HTTP 429 Too Many Requests and a service-specified retry delay; requests subsequently returned ok. No scientific answer inspected.",
+  "completed_responses_inspected": 111,
+  "responses_with_visible_429": 24,
+  "visible_retry_events_lower_bound": 24,
+  "visible_backoff_seconds_lower_bound": 11553.989747292,
+  "request_duration_seconds": 14096.21017742157,
+  "max_request_seconds": 614.7419509887695,
+  "all_status_ok": true,
+  "action": "Keep frozen v11 limits and provider backoff; no resend, alternate account, parallel bypass or deadline extension. Size follow-on experiment from observed service capacity.",
+  "v11_original_deadline_epoch": 1792953470.683676
+}
