@@ -1,0 +1,52 @@
+{
+  "status": "started_loading_tools_not_completed",
+  "source_commit": "47187dfc52793f36ced01aedec9e2b036daad311",
+  "original_budget": {
+    "started_epoch": 1792931870.683676,
+    "hard_deadline_epoch": 1792953470.683676,
+    "max_subscription_calls": 800,
+    "model": "gpt-6.1-sol",
+    "reasoning": "high",
+    "aggregate_stop_new_bytes": 45000000000,
+    "own_stop_new_bytes": 200000000,
+    "hard_exclusive_bytes": 50000000000
+  },
+  "cpu_check": {
+    "passed": true,
+    "source_cases": 24,
+    "reused_development_cases": 24,
+    "confirmation_excluded": 96,
+    "fixed_retrieval_and_distinct_mismatch_checked": 24,
+    "raw_memory_restore_checked": true,
+    "historical_image_rejected_by_real_current_case_tool_boundary": true,
+    "repeated_gate_failure_checks": true,
+    "real_model_calls": 0
+  },
+  "data_receipt": {
+    "time": 1792931871.6366317,
+    "training_A_cases": 24,
+    "reused_development_A_cases": 24,
+    "fresh_development_cases": 0,
+    "protected_confirmation_cases": 96,
+    "historical_images_per_active_case": 1,
+    "same_case_or_canonical_image_overlap": 0,
+    "source_selection_uses_labels": false,
+    "distinct_selected_sources": 14,
+    "metadata_membership_and_images_reused_from_v10": true,
+    "new_image_decode_or_hash": false
+  },
+  "startup_check_time": 1792931962.6483626,
+  "worker_identity_verified_alive": true,
+  "local_bridge_verified_alive": true,
+  "neutral_worker_bridge_and_gpu_argv_verified": true,
+  "calls_at_startup_check": 0,
+  "guard": {
+    "time": 1792931956.4999793,
+    "own_bytes": 190682,
+    "aggregate_bytes": 42949429282,
+    "deadline": 1792953470.683676
+  },
+  "failure_at_startup_check": null,
+  "expected_new_artifact_bytes": 40000000,
+  "new_weights_downloaded": false
+}
