@@ -105,3 +105,5 @@ The distinct [native ReAct visual-tool qualification](medical_multimodal/react_v
 [v11视觉经验结项](medical_multimodal/medrax_visual_memory_v11/REPORT.zh-CN.md)：完整第一轮H0 22/24、文字20/24、图文21/24、错配21/24；原6小时截止，106/192回合启动，第二轮不完整。没有观察到图像经验增益，限流与全部失败成本保留。
 
 [v12初答后经验核查已启动](medical_multimodal/medrax_postdraft_memory_v12/README.zh-CN.md)：6个既有病例、三臂两轮36回合，对照原流程与等额通用核查；220次调用/原6小时上限，初答已正确的名义差异不算经验修复。
+
+[v12结项负结果](medical_multimodal/medrax_postdraft_memory_v12/REPORT.zh-CN.md)：36/36完成，经验组两轮均与H0同为4/6，0初答修复；137次请求全部ok。

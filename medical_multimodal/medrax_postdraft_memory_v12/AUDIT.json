@@ -1,0 +1,91 @@
+{
+  "audit_passed": true,
+  "physical_episodes": 36,
+  "all_final_options_valid": true,
+  "complete": true,
+  "error_enriched_reused_cases": 6,
+  "training_source_cases": 24,
+  "confirmation_excluded": 96,
+  "selection_reconstructed_from_v10_not_v11": true,
+  "learned_memory_reused_unchanged": true,
+  "initial_controller_payloads_identical_across_all_three_arms_for_each_case_and_repeat": true,
+  "actual_post_draft_review_and_final_turns_verified": 36,
+  "all_paired_tables_and_gate_recomputed": true,
+  "gate_passed": false,
+  "repeat_attributable_repairs": 0,
+  "transitions": {
+    "H0_static_r1": {
+      "initial_to_review_option_changes": 0,
+      "initial_to_final_option_changes": 0,
+      "review_to_final_option_changes": 0,
+      "initial_wrong_to_final_correct": 0,
+      "initial_correct_to_final_wrong": 0
+    },
+    "generic_review_r1": {
+      "initial_to_review_option_changes": 1,
+      "initial_to_final_option_changes": 1,
+      "review_to_final_option_changes": 0,
+      "initial_wrong_to_final_correct": 0,
+      "initial_correct_to_final_wrong": 1
+    },
+    "experience_review_r1": {
+      "initial_to_review_option_changes": 0,
+      "initial_to_final_option_changes": 0,
+      "review_to_final_option_changes": 0,
+      "initial_wrong_to_final_correct": 0,
+      "initial_correct_to_final_wrong": 0
+    },
+    "H0_static_r2": {
+      "initial_to_review_option_changes": 0,
+      "initial_to_final_option_changes": 0,
+      "review_to_final_option_changes": 0,
+      "initial_wrong_to_final_correct": 0,
+      "initial_correct_to_final_wrong": 0
+    },
+    "generic_review_r2": {
+      "initial_to_review_option_changes": 1,
+      "initial_to_final_option_changes": 1,
+      "review_to_final_option_changes": 0,
+      "initial_wrong_to_final_correct": 1,
+      "initial_correct_to_final_wrong": 0
+    },
+    "experience_review_r2": {
+      "initial_to_review_option_changes": 0,
+      "initial_to_final_option_changes": 0,
+      "review_to_final_option_changes": 0,
+      "initial_wrong_to_final_correct": 0,
+      "initial_correct_to_final_wrong": 0
+    }
+  },
+  "repeat_final_option_disagreement": {
+    "H0_static": 0,
+    "generic_review": 1,
+    "experience_review": 0
+  },
+  "controller_calls": 137,
+  "usage": {
+    "input_tokens": 1195719,
+    "cached_input_tokens": 519552,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 27148,
+    "reasoning_output_tokens": 15158
+  },
+  "completed_request_seconds": 2578.358319759369,
+  "visible_429_response_count": 0,
+  "tool_counts": {
+    "chest_xray_expert": 34,
+    "chest_xray_report_generator": 7
+  },
+  "tool_status_counts": {
+    "completed": 41
+  },
+  "new_memory_generation_calls": 0,
+  "original_wall_seconds": 4120.232751369476,
+  "final_guard": {
+    "time": 1792958572.5330138,
+    "own_bytes": 2861894,
+    "aggregate_bytes": 42958065136,
+    "deadline": 1792976066.929297
+  },
+  "medical_or_sequential_learning_established": false
+}
