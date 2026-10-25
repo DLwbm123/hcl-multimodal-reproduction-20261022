@@ -1,0 +1,62 @@
+{
+  "experiment": "medrax_visual_memory_v11",
+  "parent_result_commit": "1afc4b6",
+  "hypothesis": "Keeping the image of a retrieved historical training example can improve new-case decisions beyond the identical text-only example, unchanged H0 and a source-image mismatch control. External episodic memory is the learned state; no weight or tool updates.",
+  "selection": {
+    "training": "All original 24 A training cases from v9, reusing v10 source_training; retain both benchmark-correct and discordant source attempts. No new generation or expert-validity claim.",
+    "development": "Reuse the exact 24 v10 development cases and order. Their results/labels have been exposed in development; this is an adaptive development experiment, not fresh confirmation.",
+    "protected_confirmation": 96,
+    "new_case_allocation": 0,
+    "source_retrieval": "Question-only Jaccard after fixed token removal, rank then frozen memory ID; always select exactly one of the 24 training examples. No target labels, previous outcome or manual choice in retrieval.",
+    "mismatch": "Replace the selected historical image with the next source image cyclically in the frozen 24-source bank; keep selected question/attempt/target text unchanged. Never use a development or confirmation image as historical support."
+  },
+  "memory": {
+    "raw_capacity_per_task": 24,
+    "abstract_capacity_per_task": 2,
+    "abstract_records": 0,
+    "representation": "Historical question, semantic attempted answer and unadjudicated target text, with original source image only in image arms. Stored source labels are training feedback, not current-case gold.",
+    "source_risk": "Known source-supervision uncertainty is retained and explicitly warned in every historical prompt. Do not make clinical validity claims or infer that benchmark targets are medical truth.",
+    "no_compression_or_regeneration": true
+  },
+  "execution": {
+    "arms": [
+      "H0_static",
+      "history_text",
+      "history_image",
+      "history_mismatch"
+    ],
+    "repeats": 2,
+    "physical_episodes": 192,
+    "order": "Case-wise rotation of all four arms, second block reversed case order with rotation shifted by one. Fresh Agent/MemorySaver per physical run, no aliases.",
+    "images": "One current-case image in every arm. Exactly one extra historical image in image/mismatch. Current image first; support image second. Image/mismatch prompts have identical text.",
+    "tool_boundary": "All six unchanged author tools may inspect ONLY the current-case images. Historical-image requests fail normal validation and remain in recorded cost/failure counts. No new visual tool or baseline tuning.",
+    "scoring": "Original two-turn exact final-letter scoring. Evaluator sidecar read by worker only after all predictions or termination. No in-run source/parameter/threshold edits.",
+    "controller": "gpt-6.1-sol/high through existing local subscription bridge, no API key or Astra."
+  },
+  "gate": {
+    "requirements": "All 192 episodes valid. In BOTH repeats image arm net gain >=2/24 vs H0 with H0 losses <=1; net gain >=1/24 vs text and >=1/24 vs mismatch; >=2 cases H0 wrong/image correct in both repeats.",
+    "interpretation": "Exploratory development gate only. A positive gap vs mismatch alone may reflect mismatch harm; require positive gain vs unchanged H0 and text too. No B learning or retention claim.",
+    "pass": "Freeze a subsequent B-learning/retention protocol using actual learned A state before touching the 96-case confirmation reserve.",
+    "fail": "Close this fixed hypothesis/variant. No source resampling, extra generations, threshold relaxation, new A cases or follow-up prompt tweaks inside the run.",
+    "statistics": "Full paired tables per repeat, exact descriptive McNemar, acquired/lost subsets, current-case tool failures from historical-image misuse, context/image-token cost. Repeated cases do not increase independent N."
+  },
+  "limits": {
+    "max_subscription_calls_total": 800,
+    "max_elapsed_hours": 6,
+    "own_storage_stop_bytes": 200000000,
+    "aggregate_storage_stop_bytes": 45000000000,
+    "aggregate_storage_hard_exclusive_bytes": 50000000000,
+    "per_case_controller_calls": 12,
+    "per_case_tool_calls": 16,
+    "per_case_seconds": 3600,
+    "request_timeout_seconds": 1200
+  },
+  "limitations": [
+    "Adaptive reuse of v10 development after observing its failure; not independent confirmation.",
+    "One source bank, one fixed retrieval rule, limited 24-case development, no clinical adjudication.",
+    "Image vs text includes extra image-token and latency cost; mismatch controls image count but is a deliberately mismatched experimental input, never clinical use.",
+    "No claim that HCL generally fails or succeeds from one variant.",
+    "Only A acquisition; no sequential B update until a qualifying A signal."
+  ],
+  "public_boundary": "Only source/protocol/aggregate/cost; no source questions, images, answers, private identifiers, memory records or per-case outputs."
+}
