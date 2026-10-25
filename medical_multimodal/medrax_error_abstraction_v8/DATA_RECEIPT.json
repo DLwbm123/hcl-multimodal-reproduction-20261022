@@ -1,0 +1,14 @@
+{
+  "time": 1792897738.551351,
+  "cases": 48,
+  "A": 24,
+  "B": 24,
+  "planned_report_episodes": 144,
+  "planned_note_calls": 2,
+  "decoded_image_occurrences": 83,
+  "case_and_known_source_overlap": 0,
+  "excluded_previous_cases": 252,
+  "selection_used_labels": false,
+  "source_raw_errors": 2,
+  "source_only_prior_B_training": true
+}

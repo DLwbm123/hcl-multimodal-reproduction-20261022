@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "checks": [
+    "strict_schema_and_size",
+    "empty_extra_directive_rejection",
+    "all48_inputs_answer_free",
+    "source_is_exact_two_prior_training_errors",
+    "raw_context_exactly_matches_v7_all48",
+    "all_six_note_fields_exposed",
+    "HCL_snapshot_roundtrip",
+    "empty_H0_unchanged",
+    "source_immutable"
+  ],
+  "cases": 48
+}
