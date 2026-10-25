@@ -1,0 +1,64 @@
+{
+  "experiment": "medrax_task_memory_v16",
+  "parent_result_commit": "9a1f65a",
+  "hypothesis": "Writing all24 B training cases and feedback into persistent HCL raw memory, rather than compressing them into a global program, improves B beyond H0 and prior A-only H_A while a small task-routed A panel does not lose accuracy.",
+  "mechanism": "H_A24 A raw records; H_B48=24A+24B, real ExperienceMemory restore/capacity24per task. B selects top2 B records under H_B versus top2 A records under H_A; A both select A records identically. No generated program/model weights.",
+  "source": "Original24 A sources fromv10/v9 and24 originalv9 B training sources, allcorrect/errorfeedbackretained. Clinical adjudication absent.",
+  "selection": {
+    "B": "Same6 v15/v13 reused B, originally first3 v7 H0errors+first3correct",
+    "A": "First3 v10 H0-correct A cases in original order, already exposed reused development",
+    "new_cases": 0,
+    "confirmation_excluded": 96,
+    "source_target": "All48sourceIDs andknowncanonicalimages disjointfrom9targets; no patient-independenceclaim"
+  },
+  "retrieval": "Same stem-only Jaccard/STOPwords and memory_id tie, always top2 of24, no threshold. Current stage metadata chooses stored bank. Context shows historical stem, decoded attempt option and unadjudicated target, eachfieldcap1500chars, same warning/template; no source images, source IDs or raw letters. Memory count matched; token length not exact.",
+  "execution": {
+    "B_arms": [
+      "H0_static",
+      "H_A",
+      "H_B"
+    ],
+    "A_arms": [
+      "H_A",
+      "H_B"
+    ],
+    "repeats": 2,
+    "physical_episodes": 48,
+    "order": "For eachrepeat B6casewise3armrotation thenA3casewise2armrotation; secondrepeat reverseeachpanel+shift1; independentAgent/MemorySaver",
+    "controller": "Native author prompt/current original images/six unmodifiedtools/two-turn finalletter; tools onlycurrent images",
+    "frozen": "States/support beforeall predictions; restore/snapshotimmutable eachphysicalepisode; goldonly allend/termination",
+    "model": "existinggpt-6.1-sol/high subscription only"
+  },
+  "gate": {
+    "B": "BOTHrepeat H_BvsH0net>=2/6 loss<=1, HBvsH_A net>=1/6;>=2Bcases bothrepeatH0wrong/HBcorrect with2actualBmemoriesanddifferentactualcontextfromH_A",
+    "A": "BOTHrepeatH_Acorrect>=2/3,H_Bcorrect>=2/3,HA\u2192HBloss0/net>=0. A contexts identical bydesign; not parameter-retention evidence",
+    "complete": "48allvalid required, report fullplanned denominator and unrunasunknown/unsuccessfulaccounting, not clinicalaccuracy",
+    "fail": "No retune/source resample/addcases/thresholdchange/regen/selectiverepeat. Only independent later protocol if windowpermits"
+  },
+  "limits": {
+    "max_elapsed_hours": 2.75,
+    "max_subscription_calls_total": 220,
+    "memory_generation_calls": 0,
+    "physical_episodes": 48,
+    "hard_deadline": "min(originalprep+9900sec,1792983297.617537),neverreset",
+    "per_case_controller_calls": 12,
+    "per_case_tool_calls": 16,
+    "per_case_seconds": 3600,
+    "request_timeout_seconds": 1200,
+    "own_storage_stop_bytes": 100000000,
+    "aggregate_storage_stop_bytes": 45000000000,
+    "strict_new_bytes_per_host_exclusive": 50000000000,
+    "aggregate_roots": "v4-v16 thirteenexperiments+12hcontrol14roots",
+    "expected_new_bytes": 20000000,
+    "independent_guard_seconds": 15
+  },
+  "runtime_rationale": "Mostrecent36episodes targetinference2546sec after2317sec cold toolload.48planned~3395sec inference+samecoldload+~15minsetup gives~1.84h, under2.75h cap and remaining12hwindow. No expectationof429recovery/extension.",
+  "limitations": [
+    "Outcome-enriched adaptive development and tiny3case A panel; no general clinicalaccuracy or confirmation.",
+    "A context remains identical through metadata task routing by construction, not learned consolidation or parameter retention.",
+    "Task ID known from existingA/Bmetadata, no automatic task identification claim.",
+    "Feedback unadjudicated and mayteach benchmark artifacts; gains not clinicalcorrectness.",
+    "2records matchedcount but semantic/context/token lengths maydiffer; H0haslessmemory."
+  ],
+  "public_boundary": "Onlysource/protocol/aggregate/audit/cost/closure; noimages/questions/answers/banks/IDs/individualtraces/credentials."
+}
