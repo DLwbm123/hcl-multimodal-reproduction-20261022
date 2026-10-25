@@ -1,0 +1,55 @@
+{
+  "experiment": "medrax_postdraft_memory_v12",
+  "parent_result_commit": "6dbccc0",
+  "purpose": "Test whether activating existing persistent training experience in an explicit post-draft review workflow can repair answers beyond unchanged native H0 and a matched generic review. This is a workflow intervention using a previously learned frozen memory state, not a claim that a new medical skill was validated.",
+  "selection": {
+    "development": "Six already-exposed v10 development cases: all three H0_static_r1 benchmark errors, then first three benchmark-correct cases in original input order. Selection uses v10 outcomes explicitly, never v11 outcomes. Error-enriched adaptive development, not population accuracy or independent confirmation.",
+    "training": "Unchanged v10 H_A two-note state derived from original24 A training cases, including ambiguous/discordant feedback. No new memory generation, labels, source filtering or expert validation.",
+    "source_and_development_disjoint": true,
+    "confirmation_reserved": 96,
+    "new_case_allocation": 0
+  },
+  "execution": {
+    "arms": [
+      "H0_static",
+      "generic_review",
+      "experience_review"
+    ],
+    "repeats": 2,
+    "physical_episodes": 36,
+    "first_draft": "Identical original current-case input, author system prompt, six tools and native workflow in all arms; no memory injected before this draft. New Agent/MemorySaver for each physical run.",
+    "review": "H0 immediately receives original final-letter turn. Both review arms first receive the same review-stage instruction plus two structured procedures, then the original final-letter turn. Same allowed tools, total controller/tool limits and current-case image whitelist.",
+    "generic_control": "Two fixed substantive generic procedures, same four fields as learned notes; source/development-answer-free, prepared once. Note field character count3004 vs learned2961; actual serialized context lengths reported. Equal stage opportunity, not exact token equality.",
+    "experience": "The two unchanged v10 learned notes are exposed in the post-draft review for every selected case. No lexical cue threshold or historical image. Only conditional procedure fields are exposed, not source case IDs or answer letters.",
+    "order": "Case-wise rotation of3 arms; second block reverse case order with rotation shifted by one; no aliasing or sharing predictions.",
+    "scoring": "Original final A-F exact scoring. Gold read only after all predictions or termination. First-draft/review option parser pre-frozen; unparseable intermediate answers cannot qualify as attributable repairs.",
+    "model": "gpt-6.1-sol/high through existing local subscription, no new credentials/API provider or weight updates."
+  },
+  "gate": {
+    "requirements": "All36 valid. BOTH repeats: experience vsH0 net>=2/6 with H0 losses<=1; experience vs generic net>=1/6; at least2 cases repeated in both blocks with H0 final wrong, experience initial parsed option wrong, experience review parsed option correct and final correct.",
+    "interpretation": "Exploratory error-enriched mechanism gate only. Improvements already present before memory review do not count as attributable repairs. Generic comparison controls extra review opportunity; it does not eliminate all sampling, token/content or execution differences.",
+    "stop": "No threshold/panel/source/review changes, no selective reruns within experiment. Keep full planned denominators; truncated matrix is inconclusive for complete-repeat claims.",
+    "statistics": "Full paired tables, exact descriptive McNemar, first-draft and review transitions, repeat repairs, controller/tool/image/token/runtime/rate-limit costs. Repeated cases are not independent N."
+  },
+  "limits": {
+    "max_subscription_calls_total": 220,
+    "max_elapsed_hours": 6,
+    "window_deadline_epoch": 1792983297.617537,
+    "actual_deadline": "min(original start+6h,window deadline); budget started before local implementation/preparation, never reset",
+    "own_storage_stop_bytes": 100000000,
+    "aggregate_storage_stop_bytes": 45000000000,
+    "aggregate_storage_hard_exclusive_bytes": 50000000000,
+    "per_case_controller_calls": 12,
+    "per_case_tool_calls": 16,
+    "per_case_seconds": 3600,
+    "request_timeout_seconds": 1200
+  },
+  "limitations": [
+    "Adaptive error-enriched six-case development; cannot estimate general medical accuracy or clinical utility.",
+    "No independent medical reviewer; retain original benchmark labels and supervision concerns, no expert/O-observation arm.",
+    "Frozen previously learned notes reused; this tests deployment workflow, not new source acquisition, full six-component HCL or A-to-B retention.",
+    "Generic and learned context not exactly token matched; first-draft sampling may vary despite identical initial requests.",
+    "Service429 backoff may truncate; no workaround, extra resend or extension."
+  ],
+  "public_boundary": "Only source/protocol/aggregate/audit/cost; no cases, questions, images, labels, note contents, per-case outputs or credentials."
+}
