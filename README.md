@@ -1,6 +1,6 @@
 # HCL multimodal reproduction — Qwen2.5-VL-7B
 
-[路线收尾决定（2026-10-25）](medical_multimodal/FINAL_ROUTE_DECISION_20261025.zh-CN.md)：E1因缺少独立医学审核未启动；仅完成既有v11及公开收尾，随后停止自动后继实验。
+[新的12小时自主实验窗口](medical_multimodal/AUTONOMY_12H_20261025.zh-CN.md)：2026-10-25 22:54至10-26 10:54（北京时间），恢复有界自主方法实验，替代此前只收尾安排；v11原协议与截止不变，E1审核前置条件仍未满足。
 
 [最新医学 Agent 结果汇总（2026-10-25）](medical_multimodal/CURRENT_RESULTS_20261025.zh-CN.md)：v5–v10 共848实际回合、2629次订阅请求，尚无可信、可重复、可归因的记忆学习收益；v10名义+1未使用经验。汇总区分数据问题、受限方法实现与未证实的机制解释，v11仍在运行。
 
