@@ -1,0 +1,30 @@
+{
+  "source_commit": "4b7017d1a40354bd0009eb0d1b52bfd71063dae8",
+  "parent_completed_report_commit": "8bf66c8",
+  "source_pushed_and_anonymous_http_200": true,
+  "started_epoch": 1792897782.2910612,
+  "budget": {
+    "started_epoch": 1792897736.645191,
+    "hard_deadline_epoch": 1792980536.645191,
+    "max_subscription_calls": 650,
+    "model": "gpt-6.1-sol",
+    "reasoning": "high",
+    "aggregate_stop_new_bytes": 45000000000,
+    "own_stop_new_bytes": 1000000000,
+    "hard_exclusive_bytes": 50000000000
+  },
+  "worker_and_local_bridge_alive": true,
+  "worker_start_identity_matched": true,
+  "worker_gpu_and_active_subscription_cli_argv_neutral_verified": true,
+  "storage_probe": "Python lstat without inner symlink traversal",
+  "guard_own_bytes": 279764,
+  "guard_aggregate_bytes": 42927426241,
+  "note_calls_completed": 2,
+  "notes_structurally_valid": 2,
+  "notes_medically_validated": false,
+  "states_frozen_epoch": 1792897846.2353384,
+  "report_gold_not_read_at_state_freeze": true,
+  "six_tools_loading": true,
+  "first_report_case_completed": false,
+  "no_failed_marker": true
+}
