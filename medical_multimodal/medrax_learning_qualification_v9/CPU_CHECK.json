@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "input_cases": 72,
+  "reserved_cases": 96,
+  "empty_contexts_checked": 72,
+  "confirmation_gold_absent": true,
+  "selection_and_failure_denominators_checked": true
+}

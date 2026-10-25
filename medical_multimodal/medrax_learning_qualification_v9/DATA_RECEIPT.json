@@ -1,0 +1,18 @@
+{
+  "time": 1792908829.8753374,
+  "local_snapshot_cases": 609,
+  "excluded_previous_cases": 300,
+  "source_disjoint_eligible_before_allocation": {
+    "A": 99,
+    "B": 186
+  },
+  "new_train_cases": 48,
+  "repeat_development_cases": 24,
+  "confirmation_reserved_cases": 96,
+  "selection_used_labels": false,
+  "confirmation_gold_accessed": false,
+  "decoded_image_occurrences": 124,
+  "max_case_episodes": 104,
+  "mandatory_case_episodes": 96,
+  "new_train_confirmation_case_and_known_source_overlap": 0
+}

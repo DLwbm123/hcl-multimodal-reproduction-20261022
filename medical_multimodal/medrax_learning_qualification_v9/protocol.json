@@ -1,0 +1,45 @@
+{
+  "experiment": "medrax_learning_qualification_v9",
+  "parent_result_commit": "94ab3e1",
+  "purpose": "Bounded qualification of error-learning sources and stochastic reference for the next continual-learning mechanism. No baseline/tool tuning or efficacy claim.",
+  "decision_question": "Do fixed A/B training pools provide repeat-observed errors, and how often does an unchanged H0 flip on an outcome-unselected development panel?",
+  "selection": {
+    "seed": 20261031,
+    "A": "single-image diagnosis outside B-eligible cases",
+    "B": "two-to-four-image comparison, B assigned first",
+    "repeat_development_per_stage": 12,
+    "repeat_sources": "Only prior v5/v7 training cases, selected by metadata/seed without consulting prior predictions; two fresh physical runs per case",
+    "new_training_per_stage": 24,
+    "error_rechecks_per_stage_max": 4,
+    "protected_confirmation_per_stage": 48,
+    "rule": "Reserve confirmation cases first, then new training, with case and known canonical/source-image exclusions. Metadata members frozen before labels. Never read confirmation answers. Recheck first four valid final-answer errors per stage in frozen training order; no adaptive expansion or regeneration."
+  },
+  "execution": {
+    "max_case_episodes": 104,
+    "mandatory_episodes": 96,
+    "order": "24 development cases round 1; 24 development cases round 2 in reverse order; 48 new training cases A/B interleaved; up to 8 frozen-order error rechecks",
+    "unchanged": "Sol High subscription, author's six tools and defaults, prompts, images/options and original two-turn exact final-letter scoring; empty HCL state and fresh Agent/MemorySaver every episode",
+    "source_error_definition": "Completed valid final option unequal to training gold; failure/invalid is reported but not an error-memory source",
+    "repeat_error_definition": "Source is wrong in both independent completed valid runs. Report identical versus differing wrong options separately. Two runs do not establish stable error probability or medical validity.",
+    "boundaries": "Only training/development labels used; no report/confirmation inference or answers, no memory generation or updates, no use of historical report scores for membership selection"
+  },
+  "limits": {
+    "max_subscription_calls_total": 400,
+    "max_elapsed_hours": 4,
+    "own_storage_stop_bytes": 200000000,
+    "aggregate_storage_stop_bytes": 45000000000,
+    "aggregate_storage_hard_exclusive_bytes": 50000000000,
+    "per_case_controller_calls": 12,
+    "per_case_tool_calls": 16,
+    "per_case_seconds": 3600,
+    "request_timeout_seconds": 1200
+  },
+  "analysis": {
+    "repeatability": "Per-stage full paired correctness table, answer disagreement, both-valid pairs, initial/final option flips, tools, elapsed time and available model identity. Failures retain full denominators and cannot count as reliable agreement.",
+    "sources": "Per-stage 24-case valid/correct/error counts; first-four recheck denominator; wrong twice, recovered, failed/invalid and same/different wrong option counts. Store private source and repeated response provenance, no selective reporting.",
+    "qualification": "At least two repeat-observed errors allows preliminary one-bank construction; at least four permits two disjoint two-source banks. These are computational candidates, pending supervision/evidence review, not validated medical knowledge. An A deficit prevents an A-error-acquisition claim, but does not justify rolling expansion.",
+    "stop": "End after the fixed repeat panel, fixed training pool and at most four error rechecks per stage, or earlier on original resource deadline. No new samples, prompt variants or extra repeats inside this experiment. This is sufficient for the next route decision; do not spend remaining quota merely because available.",
+    "next": "Use complete results to choose one independent method experiment. Future sequential B feedback and selection headroom must be measured under actual H_A. Do not run a separate H0 selection matrix now: it cannot establish future H_A headroom. Preserve confirmation reserve; use it only after method/protocol freeze."
+  },
+  "public_boundary": "Publish code/protocol/aggregate/cost only; exclude questions, images, gold, source IDs, per-case predictions and credentials."
+}

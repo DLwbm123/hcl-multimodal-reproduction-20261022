@@ -1,0 +1,6 @@
+{
+  "phase": "preparation",
+  "inference_calls": 0,
+  "issue": "CPU check invoked before image preparation finished; inputs not yet present",
+  "resolution": "Awaited original prepare exit 0, then same check passed; no resampling, no code repair, original clock retained"
+}
