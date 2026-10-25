@@ -1,0 +1,14 @@
+{
+  "review_type": "post-endpoint nonexpert source qualification, not relabeling",
+  "reviewed_sources": 8,
+  "original_images_inspected": 14,
+  "medical_validity_established": 0,
+  "supervision_concerns_flagged": 7,
+  "visual_localization_unresolved": 1,
+  "expert_adjudication": false,
+  "original_source_pages_verified": false,
+  "source_page_limitation": "Selected original Eurorad pages returned 403/unavailable; metadata explanations are not full original case verification.",
+  "no_gold_or_scores_changed": true,
+  "no_sources_removed_from_v9_denominators": true,
+  "future_use": "Do not promote the eight benchmark-discordant targets to established medical corrections. Any learned notes must preserve supervision uncertainty; acquisition and generalization need a new frozen experiment."
+}

@@ -1,0 +1,59 @@
+{
+  "complete_audit_passed": true,
+  "physical_episodes": 104,
+  "unique_case_inputs": 72,
+  "empty_contexts_checked": 104,
+  "deterministic_first_error_selection_checked": true,
+  "all_paired_and_source_tables_recomputed": true,
+  "execution_order_checked": true,
+  "reserved_confirmation_ids_excluded_from_inputs_and_supervision": 96,
+  "controller_calls": 327,
+  "controller_calls_with_images": 327,
+  "controller_usage": {
+    "input_tokens": 2882328,
+    "cached_input_tokens": 1241856,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 51694,
+    "reasoning_output_tokens": 25075
+  },
+  "reasoning_tokens_are_subset_not_additional": true,
+  "controller_request_seconds_sum": 6192.642863273621,
+  "tool_counts": {
+    "chest_xray_expert": 101,
+    "llava_med_qa": 11,
+    "chest_xray_report_generator": 13
+  },
+  "tool_statuses": {
+    "completed": 125
+  },
+  "tool_output_surface_flags": {
+    "bare_no": 27,
+    "not_matched": 18,
+    "empty": 1,
+    "repetitive_malformed": 4
+  },
+  "surface_flags_not_medical_labels": true,
+  "repeat_pairs_with_different_ordered_tool_names": {
+    "A": 1,
+    "B": 3
+  },
+  "episode_seconds_by_state": {
+    "H0_repeat_1": 1641.0536978244781,
+    "H0_repeat_2": 1655.4594988822937,
+    "H0_train": 3521.3443689346313,
+    "H0_error_recheck": 670.4193925857544
+  },
+  "configured_model": "gpt-6.1-sol",
+  "configured_reasoning": "high",
+  "backend_snapshot_identity_available": false,
+  "original_wall_seconds": 8154.014739751816,
+  "final_guard": {
+    "time": 1792916930.5928352,
+    "own_bytes": 6306150,
+    "aggregate_bytes": 42941922863,
+    "deadline": 1792923177.1779468,
+    "probe": "python_lstat_no_inner_symlinks"
+  },
+  "medical_source_validity_established": false,
+  "continual_learning_established": false
+}

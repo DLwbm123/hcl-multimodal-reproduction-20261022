@@ -1,3 +1,7 @@
+# v9：重复性与来源资格（已完成）
+
+完整结果见 [REPORT.zh-CN.md](REPORT.zh-CN.md)，复核见 [AUDIT.json](AUDIT.json)，监督边界见 [SOURCE_REVIEW.json](SOURCE_REVIEW.json)。104/104 有效，A/B 各 4 个重复失分；尚未建立医学监督有效性或 HCL 收益。
+
 # v9：下一轮持续学习方法所需的最小资格诊断
 
 [v8](../medrax_error_abstraction_v8/REPORT.zh-CN.md)完整结果为笔记40/48、H0与raw均41/48，B无新增正确，A丢失1个原正确病例。关闭该固定笔记路线后，本轮只回答两个直接影响主线选择的问题：不更新的H0重跑有多少变化；预先固定的训练池能否提供可重复观察到的错误来源。不优化基座或工具，不做提示搜索，也不将诊断当成持续学习效果。

@@ -1,0 +1,104 @@
+{
+  "time": 1792916931.1926012,
+  "fatal": null,
+  "mandatory_episodes": 96,
+  "max_episodes": 104,
+  "planned_given_selected_errors": 104,
+  "physical_episodes": 104,
+  "complete": true,
+  "repeatability": {
+    "A": {
+      "denominator": 12,
+      "both_valid": 12,
+      "answer_disagreement_both_valid": 1,
+      "missing_or_invalid_pairs": 0,
+      "correctness_paired_full_denominator": {
+        "both_correct": 10,
+        "gain": 1,
+        "loss": 0,
+        "both_wrong": 1,
+        "mcnemar_exact_two_sided": 1.0,
+        "denominator": 12
+      }
+    },
+    "B": {
+      "denominator": 12,
+      "both_valid": 12,
+      "answer_disagreement_both_valid": 0,
+      "missing_or_invalid_pairs": 0,
+      "correctness_paired_full_denominator": {
+        "both_correct": 11,
+        "gain": 0,
+        "loss": 0,
+        "both_wrong": 1,
+        "mcnemar_exact_two_sided": 1.0,
+        "denominator": 12
+      }
+    }
+  },
+  "sources": {
+    "A": {
+      "training_denominator": 24,
+      "training_valid": 24,
+      "training_correct": 20,
+      "training_valid_errors": 4,
+      "training_missing_or_invalid": 0,
+      "selected_for_recheck": 4,
+      "recheck_valid": 4,
+      "wrong_twice": 4,
+      "same_wrong_option": 4,
+      "different_wrong_option": 0,
+      "recovered": 0,
+      "recheck_missing_or_invalid": 0,
+      "preliminary_one_bank_sources": true,
+      "preliminary_two_disjoint_banks_sources": true
+    },
+    "B": {
+      "training_denominator": 24,
+      "training_valid": 24,
+      "training_correct": 20,
+      "training_valid_errors": 4,
+      "training_missing_or_invalid": 0,
+      "selected_for_recheck": 4,
+      "recheck_valid": 4,
+      "wrong_twice": 4,
+      "same_wrong_option": 4,
+      "different_wrong_option": 0,
+      "recovered": 0,
+      "recheck_missing_or_invalid": 0,
+      "preliminary_one_bank_sources": true,
+      "preliminary_two_disjoint_banks_sources": true
+    }
+  },
+  "initial_final_consistency": {
+    "H0_repeat_1": {
+      "episodes": 24,
+      "valid": 24,
+      "initial_parseable_valid": 24,
+      "initial_final_changed": 0
+    },
+    "H0_repeat_2": {
+      "episodes": 24,
+      "valid": 24,
+      "initial_parseable_valid": 24,
+      "initial_final_changed": 0
+    },
+    "H0_train": {
+      "episodes": 48,
+      "valid": 48,
+      "initial_parseable_valid": 48,
+      "initial_final_changed": 0
+    },
+    "H0_error_recheck": {
+      "episodes": 8,
+      "valid": 8,
+      "initial_parseable_valid": 8,
+      "initial_final_changed": 0
+    }
+  },
+  "confirmation_reserved_cases": 96,
+  "confirmation_labels_accessed": false,
+  "medical_source_validity_established": false,
+  "continual_learning_established": false,
+  "seconds_since_original_start": 8154.014739751816
+}
