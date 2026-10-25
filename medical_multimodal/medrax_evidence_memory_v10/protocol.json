@@ -1,0 +1,61 @@
+{
+  "experiment": "medrax_evidence_memory_v10",
+  "parent_result_commit": "e0fa519",
+  "hypothesis": "A training-derived bank of evidence-bounded conditional procedures can produce repeat-observed new-case acquisition beyond unchanged H0 and a fixed generic procedure prompt. This tests the composite method, not a causal decomposition of quality filtering, retrieval or successful/error sources.",
+  "selection": {
+    "seed": 20261101,
+    "A_train": "All 24 A training cases from v9 in their frozen order; include all correct and benchmark-discordant attempts. Never promote benchmark labels to adjudicated medical truth.",
+    "development_A_cases": 24,
+    "development_selection": "Metadata and known-image-source disjoint from all prior used and reserved cases, including 96 protected v9 confirmation cases; freeze membership before labels. No expansion or resampling.",
+    "B_training": "Not run in v10; v9 B sources are preserved for feedback under actual frozen H_A only after this A-acquisition gate passes.",
+    "confirmation_reserved": 96
+  },
+  "method": {
+    "generation_calls": 25,
+    "generation_per_source": 1,
+    "input": "Original A source question/images, first H0 attempt and semantic target text. No development data.",
+    "memory": "One candidate conditional procedural note per source. Preserve acceptance and rejection; synthesize admitted notes once into HCL main_policy and failure_avoidance slots, retaining admitted source-index provenance. Model assessment is not medical validation.",
+    "capacity": 2,
+    "retrieval": "At most two notes; require two distinct non-generic cue tokens shared with current question, rank Jaccard then memory ID. No inference-time learning.",
+    "generation_failure": "Malformed schema or unexpected tools stops without regeneration. Zero admitted candidates ends without evaluation; otherwise exactly one consolidation call yielding two valid policies.",
+    "consolidation": "One text-only call after the 24 image-conditioned candidate calls; only admitted candidates, no development data or new external medical knowledge. Preserve source indices and conditional uncertainty."
+  },
+  "execution": {
+    "arms": [
+      "H0_static",
+      "generic_procedure",
+      "H_A"
+    ],
+    "repeats": 2,
+    "case_episodes": 144,
+    "order": "All states frozen before evaluation. Within each case rotate three arms, fresh agent/session; repeat 2 reverses case order and shifts arm order. Every arm physically rerun, no aliases.",
+    "fixed": "Sol High subscription, six author tools/defaults, original case input and two-turn final-letter scoring. Generic prompt is a prespecified scientific control, not tuned after development.",
+    "development_gold": "Sealed before generation; read only after all predictions or termination. All unrun/invalid outcomes remain in full denominators."
+  },
+  "gate": {
+    "per_repeat": "H_A net gain >=2/24 vs H0, H0 losses <=1/24, net gain >=1/24 vs fixed generic, in BOTH repeat blocks; all 144 valid and >=2 acquired cases H0 wrong/H_A correct in both blocks.",
+    "pass_action": "Only a development signal: next independently frozen B update under H_A and coeval H0/H_A/H_AB replay with retention criteria. Confirmation untouched.",
+    "fail_action": "Stop this frozen variant; retain null/harm/headroom/retrieval evidence. No prompt rewrite, regeneration, new panels or relaxed threshold in this experiment.",
+    "statistics": "Full paired tables and exact descriptive McNemar per block. Do not multiply repeated cases into independent N; no confirmatory p-value or no-forgetting claim.",
+    "headroom": "Report if any control/repeat has too few errors for the frozen gain gate; never loosen it."
+  },
+  "limits": {
+    "max_subscription_calls_total": 650,
+    "max_elapsed_hours": 6,
+    "own_storage_stop_bytes": 200000000,
+    "aggregate_storage_stop_bytes": 45000000000,
+    "aggregate_storage_hard_exclusive_bytes": 50000000000,
+    "per_case_controller_calls": 12,
+    "per_case_tool_calls": 16,
+    "per_case_seconds": 3600,
+    "request_timeout_seconds": 1200
+  },
+  "limitations": [
+    "24 training cases and one generation per case, one source bank, two stochastic inference repeats, no independent bank or full-stream replication.",
+    "Composite change vs v8: all A training traces, model acceptance, two-slot consolidation and conditional retrieval; no isolated causal attribution.",
+    "Source supervision and generated notes not clinically adjudicated.",
+    "Generic and learned context length/coverage and generation costs differ; report all.",
+    "Development-only A acquisition; neither sequential B learning nor retention established."
+  ],
+  "public_boundary": "Source/protocol/aggregates/cost only; no questions/images/gold/source IDs/notes/per-case predictions/credentials."
+}

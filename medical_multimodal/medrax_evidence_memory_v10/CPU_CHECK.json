@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "source_A_cases": 24,
+  "development_A_cases": 24,
+  "confirmation_excluded": 96,
+  "memory_restore_and_context_checks": 72,
+  "retrieval_requires_two_distinct_cue_tokens": true,
+  "retrieval_top2_tie_and_nonmatch_checked": true,
+  "generation_schema_and_repeated_gate_failures_checked": true,
+  "development_gold_not_sent_to_generation_or_inference": true
+}

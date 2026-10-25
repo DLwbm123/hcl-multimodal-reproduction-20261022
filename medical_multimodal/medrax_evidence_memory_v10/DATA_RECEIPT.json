@@ -1,0 +1,13 @@
+{
+  "time": 1792918379.0506823,
+  "training_A_cases": 24,
+  "new_development_A_cases": 24,
+  "eligible_A_before_allocation": 27,
+  "confirmation_reserved_preserved": 96,
+  "confirmation_answers_accessed": false,
+  "case_and_known_source_overlap": 0,
+  "development_labels_sealed_after_membership": true,
+  "decoded_image_occurrences": 48,
+  "source_correct": 20,
+  "source_benchmark_discordant": 4
+}

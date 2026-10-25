@@ -1,0 +1,16 @@
+{
+  "original_budget_preserved": true,
+  "inference_calls_before_fixes": 0,
+  "incidents": [
+    {
+      "stage": "remote_setup",
+      "issue": "Quoting error in generated neutral-wrapper setup script caused Python SyntaxError before any remote write.",
+      "resolution": "Rebuilt wrapper text as structured Python payload; same original budget."
+    },
+    {
+      "stage": "CPU_preflight",
+      "issue": "Attempted abstract capacity 24 rejected by existing HCL contract requiring exactly two roles.",
+      "resolution": "Preserve the existing two-slot architecture; all 24 source proposals feed one frozen consolidation call before evaluation. Membership remains unchanged; source code and final protocol frozen before inference."
+    }
+  ]
+}
