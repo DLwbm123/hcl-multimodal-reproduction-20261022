@@ -1,0 +1,174 @@
+{
+  "complete_audit_passed": true,
+  "physical_episodes": 144,
+  "unique_development_cases": 24,
+  "training_cases": 24,
+  "all_generated_proposals_and_consolidation_reconstructed": true,
+  "candidate_acceptance": {
+    "accepted": 24,
+    "rejected": 0,
+    "expert_medical_validation": false
+  },
+  "final_policy_count": 2,
+  "policy_source_counts": [
+    24,
+    24
+  ],
+  "all_contexts_reconstructed": 144,
+  "execution_order_verified": true,
+  "all_paired_tables_and_gate_recomputed": true,
+  "confirmation_reserve_excluded": 96,
+  "trigger_stratified_results": {
+    "repeat_1": {
+      "memory_absent": {
+        "denominator": 19,
+        "correct": {
+          "H0_static": 16,
+          "generic_procedure": 15,
+          "H_A": 17
+        },
+        "H0_to_HA": {
+          "both_correct": 16,
+          "gain": 1,
+          "loss": 0,
+          "both_wrong": 2,
+          "mcnemar_exact_two_sided": 1.0,
+          "denominator": 19
+        },
+        "answer_disagreement_H0_HA": 1
+      },
+      "memory_present": {
+        "denominator": 5,
+        "correct": {
+          "H0_static": 5,
+          "generic_procedure": 5,
+          "H_A": 5
+        },
+        "H0_to_HA": {
+          "both_correct": 5,
+          "gain": 0,
+          "loss": 0,
+          "both_wrong": 0,
+          "mcnemar_exact_two_sided": 1.0,
+          "denominator": 5
+        },
+        "answer_disagreement_H0_HA": 0
+      }
+    },
+    "repeat_2": {
+      "memory_absent": {
+        "denominator": 19,
+        "correct": {
+          "H0_static": 16,
+          "generic_procedure": 15,
+          "H_A": 17
+        },
+        "H0_to_HA": {
+          "both_correct": 16,
+          "gain": 1,
+          "loss": 0,
+          "both_wrong": 2,
+          "mcnemar_exact_two_sided": 1.0,
+          "denominator": 19
+        },
+        "answer_disagreement_H0_HA": 1
+      },
+      "memory_present": {
+        "denominator": 5,
+        "correct": {
+          "H0_static": 5,
+          "generic_procedure": 5,
+          "H_A": 5
+        },
+        "H0_to_HA": {
+          "both_correct": 5,
+          "gain": 0,
+          "loss": 0,
+          "both_wrong": 0,
+          "mcnemar_exact_two_sided": 1.0,
+          "denominator": 5
+        },
+        "answer_disagreement_H0_HA": 0
+      }
+    }
+  },
+  "same_unique_gain_case_in_both_repeats": true,
+  "all_nominal_gain_episodes_had_zero_memory_context": true,
+  "gain_case_initial_controller_payloads_identical_across_H0_HA_and_both_repeats": true,
+  "memory_attributable_gain_not_established": true,
+  "repeat_answer_disagreement": {
+    "H0_static": 0,
+    "generic_procedure": 0,
+    "H_A": 0
+  },
+  "initial_final_consistency": {
+    "H0_static_r1": {
+      "initial_parseable": 24,
+      "changed_option": 0
+    },
+    "generic_procedure_r1": {
+      "initial_parseable": 24,
+      "changed_option": 0
+    },
+    "H_A_r1": {
+      "initial_parseable": 24,
+      "changed_option": 0
+    },
+    "H0_static_r2": {
+      "initial_parseable": 24,
+      "changed_option": 0
+    },
+    "generic_procedure_r2": {
+      "initial_parseable": 24,
+      "changed_option": 0
+    },
+    "H_A_r2": {
+      "initial_parseable": 24,
+      "changed_option": 0
+    }
+  },
+  "controller_calls": 470,
+  "calls_by_state": {
+    "note_generation": 24,
+    "consolidation": 1,
+    "H0_static_r1": 73,
+    "generic_procedure_r1": 75,
+    "H_A_r1": 75,
+    "generic_procedure_r2": 76,
+    "H_A_r2": 73,
+    "H0_static_r2": 73
+  },
+  "controller_usage": {
+    "input_tokens": 3964308,
+    "cached_input_tokens": 1870848,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 89809,
+    "reasoning_output_tokens": 45819
+  },
+  "reasoning_tokens_are_subset_not_additional": true,
+  "controller_request_seconds_sum": 9665.88054060936,
+  "generation_request_seconds": 965.0054731369019,
+  "controller_starts_with_images": 469,
+  "tool_counts": {
+    "chest_xray_expert": 133,
+    "chest_xray_report_generator": 20,
+    "llava_med_qa": 4
+  },
+  "tool_statuses": {
+    "completed": 157
+  },
+  "tool_output_surface_flags": {
+    "bare_no": 32,
+    "not_matched": 18
+  },
+  "surface_flags_not_medical_accuracy": true,
+  "original_wall_seconds": 11836.03859615326,
+  "final_guard": {
+    "time": 1792930185.463642,
+    "own_bytes": 7897727,
+    "aggregate_bytes": 42949274325,
+    "deadline": 1792939954.426146
+  },
+  "acquisition_gate_passed": false,
+  "clinical_or_sequential_learning_claim": false
+}
