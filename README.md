@@ -1,5 +1,7 @@
 # HCL multimodal reproduction — Qwen2.5-VL-7B
 
+[最新医学 Agent 结果汇总（2026-10-25）](medical_multimodal/CURRENT_RESULTS_20261025.zh-CN.md)：v5–v10 共848实际回合、2629次订阅请求，尚无可信、可重复、可归因的记忆学习收益；v10名义+1未使用经验。汇总区分数据问题、受限方法实现与未证实的机制解释，v11仍在运行。
+
 A resource-bounded reproduction of [Harness Continual Learning](https://arxiv.org/abs/2608.19013v2), based on [official code](https://github.com/RL-MIND/Harness-Continual-Learning) commit `a6e5a01536ac8d42ca28f0a82efa223869c8c48d`. **Not an exact paper-setting or paper-number replication.** The Chinese experimental report is [REPORT.md](REPORT.md); license/provenance are in [UPSTREAM.md](UPSTREAM.md).
 
 | Method | This run final mean (0–100) | Avg. forgetting (pp) | Paper Table 2 mean |
