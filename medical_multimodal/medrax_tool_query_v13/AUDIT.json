@@ -1,0 +1,53 @@
+{
+  "audit_passed": true,
+  "physical_episodes": 36,
+  "source_cases": 24,
+  "confirmation_excluded": 96,
+  "source_only_single_proposal_no_images": true,
+  "original_selection_and_execution_order_verified": true,
+  "actual_prefix_in_initial_payload_verified": 36,
+  "original_two_turn_final_scoring_verified": 36,
+  "policy_frozen_before_targets": true,
+  "prefix_calls": 56,
+  "prefix_status": {
+    "completed": 56
+  },
+  "prefix_output_char_min": 199,
+  "prefix_output_char_max": 519,
+  "different_fixed_learned_observations_case_repeat_pairs": 12,
+  "final_option_disagreements_between_arms": 0,
+  "repeat_final_option_disagreement": {
+    "H0_static": 0,
+    "fixed_query": 0,
+    "learned_query": 0
+  },
+  "gate_passed": false,
+  "repeated_gains": 0,
+  "all_paired_tables_and_gate_recomputed": true,
+  "controller_calls_including_one_proposal": 99,
+  "usage": {
+    "input_tokens": 905958,
+    "cached_input_tokens": 392832,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 16795,
+    "reasoning_output_tokens": 8639
+  },
+  "completed_request_seconds": 1790.6500704288483,
+  "visible_429_response_count": 0,
+  "tool_counts": {
+    "chest_xray_expert": 23,
+    "llava_med_qa": 58,
+    "chest_xray_report_generator": 2
+  },
+  "tool_status_counts": {
+    "completed": 83
+  },
+  "original_wall_seconds": 3452.1034104824066,
+  "final_guard": {
+    "time": 1792963398.8442364,
+    "own_bytes": 2953171,
+    "aggregate_bytes": 42960896577,
+    "deadline": 1792981547.4492211
+  },
+  "medical_or_sequential_learning_established": false
+}
