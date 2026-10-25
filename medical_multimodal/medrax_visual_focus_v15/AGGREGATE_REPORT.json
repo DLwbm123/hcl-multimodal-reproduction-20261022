@@ -1,0 +1,95 @@
+{
+  "time": 1792970811.1543448,
+  "fatal": null,
+  "complete": true,
+  "policy_proposal_admitted": true,
+  "planned_episodes": 36,
+  "physical_episodes": 36,
+  "metrics": {
+    "H0_static_r1": {
+      "denominator": 6,
+      "correct": 3,
+      "valid": 6,
+      "crop_images": 0
+    },
+    "fixed_focus_r1": {
+      "denominator": 6,
+      "correct": 3,
+      "valid": 6,
+      "crop_images": 56
+    },
+    "learned_focus_r1": {
+      "denominator": 6,
+      "correct": 3,
+      "valid": 6,
+      "crop_images": 56
+    },
+    "H0_static_r2": {
+      "denominator": 6,
+      "correct": 3,
+      "valid": 6,
+      "crop_images": 0
+    },
+    "fixed_focus_r2": {
+      "denominator": 6,
+      "correct": 3,
+      "valid": 6,
+      "crop_images": 56
+    },
+    "learned_focus_r2": {
+      "denominator": 6,
+      "correct": 3,
+      "valid": 6,
+      "crop_images": 56
+    }
+  },
+  "paired_per_repeat": [
+    {
+      "H0_to_learned": {
+        "both_correct": 3,
+        "gain": 0,
+        "loss": 0,
+        "both_wrong": 3,
+        "mcnemar_exact_two_sided": 1.0,
+        "denominator": 6
+      },
+      "fixed_to_learned": {
+        "both_correct": 3,
+        "gain": 0,
+        "loss": 0,
+        "both_wrong": 3,
+        "mcnemar_exact_two_sided": 1.0,
+        "denominator": 6
+      }
+    },
+    {
+      "H0_to_learned": {
+        "both_correct": 3,
+        "gain": 0,
+        "loss": 0,
+        "both_wrong": 3,
+        "mcnemar_exact_two_sided": 1.0,
+        "denominator": 6
+      },
+      "fixed_to_learned": {
+        "both_correct": 3,
+        "gain": 0,
+        "loss": 0,
+        "both_wrong": 3,
+        "mcnemar_exact_two_sided": 1.0,
+        "denominator": 6
+      }
+    }
+  ],
+  "acquisition_gate": {
+    "pass": false,
+    "repeated_gain_with_actual_different_pixels_count": 0,
+    "exploratory_error_enriched_benchmark_only": true
+  },
+  "error_enriched_reused_B_cases": 6,
+  "completed_policy_proposal_calls": 1,
+  "confirmation_used": false,
+  "medical_validity_established": false,
+  "sequential_learning_established": false,
+  "seconds_since_original_start": 5152.32671380043
+}

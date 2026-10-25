@@ -1,0 +1,55 @@
+{
+  "audit_passed": true,
+  "physical_episodes": 36,
+  "source_cases": 24,
+  "confirmation_excluded": 96,
+  "source_only_single_proposal_no_images": true,
+  "original_selection_and_execution_order_verified": true,
+  "actual_original_and_crop_paths_in_controller_payloads_verified": 36,
+  "original_two_turn_final_scoring_verified": 36,
+  "policy_frozen_before_targets": true,
+  "real_crop_views_in_payloads": 224,
+  "learned_case_repeats_reporting_actual_pixel_difference": 12,
+  "remote_pixel_check": {
+    "time": 1792972375.3423433,
+    "actual_crop_files_readable_and512x512": 224,
+    "learned_fixed_case_repeat_pairs_with_actual_saved_pixel_difference": 12,
+    "check_is_scientific_intervention_not_transfer_hash": true
+  },
+  "final_option_disagreements_between_arms": 1,
+  "repeat_final_option_disagreement": {
+    "H0_static": 1,
+    "fixed_focus": 0,
+    "learned_focus": 0
+  },
+  "gate_passed": false,
+  "repeated_gains": 0,
+  "all_paired_tables_and_gate_recomputed": true,
+  "controller_calls_including_one_proposal": 110,
+  "usage": {
+    "input_tokens": 1317903,
+    "cached_input_tokens": 430848,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 18479,
+    "reasoning_output_tokens": 8926
+  },
+  "completed_request_seconds": 1994.9570894241333,
+  "visible_429_response_count": 0,
+  "tool_counts": {
+    "chest_xray_expert": 30,
+    "llava_med_qa": 6,
+    "chest_xray_report_generator": 2
+  },
+  "tool_status_counts": {
+    "completed": 38
+  },
+  "original_wall_seconds": 5152.32671380043,
+  "native_tool_load_seconds_after_program_freeze": 2317.2375905513763,
+  "final_guard": {
+    "time": 1792970810.3342478,
+    "own_bytes": 25523495,
+    "aggregate_bytes": 42986187730,
+    "deadline": 1792980058.827698
+  },
+  "medical_or_sequential_learning_established": false
+}

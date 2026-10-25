@@ -1,0 +1,18 @@
+{
+  "time": 1792972164.3217645,
+  "worker_identity_alive": false,
+  "bridge_alive": false,
+  "last_subscription_cli_alive": false,
+  "worker_receipt": {
+    "pid": 1650914,
+    "start_ticks": "135673418",
+    "started": 1792965872.4553285,
+    "pgid": 1650914,
+    "gpu": 1
+  },
+  "bridge_receipt": {
+    "pid": 15000,
+    "pgid": 15000,
+    "started": 1792965872.141222
+  }
+}
