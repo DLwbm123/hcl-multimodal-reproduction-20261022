@@ -1,0 +1,83 @@
+{
+  "experiment": "medrax_joint_query_v14",
+  "parent_result_commit": "224e221",
+  "hypothesis": "Source-feedback query programs can elicit cross-image evidence by jointly observing ALL current images and improve downstream answers beyond a fixed joint query with the SAME tool/images/call count; native H0 is primary.",
+  "motivation": "v13 generated different single-image observations in all12 pairs but zero final changes or gains. Test the missing joint acquisition operation, rather than revise v13 prompt or threshold. CheXagent native interface accepts image_paths as an ordered list and directly serializes every supplied image.",
+  "selection": {
+    "training": "Original24 v9B training cases and their H0_train attempts plus unadjudicated benchmark feedback; all sources retained. Only source text/feedback sent to the one program proposal, no target questions or outcomes.",
+    "development": "Same six v13 cases, selected as first3 original v7B H0 errors and first3 original v7B correct in input order. v13 outputs inform the joint-acquisition mechanism choice, not case selection. Adaptive reused development.",
+    "confirmation_protected": 96,
+    "new_case_allocation": 0,
+    "separation": "Source/target case IDs and known canonical image paths disjoint; not a claim of patient-independent evaluation."
+  },
+  "policy": {
+    "proposal_count": 1,
+    "regeneration_or_repair": false,
+    "may_decline": true,
+    "schema": "admit,tool_name=chest_xray_expert,query_template250-1600chars with exactly one question_stem placeholder,4-24 source_indices,rationale. No generated code.",
+    "execution": "ONE actual joint call using ALL current2-4 images; same order, same question stem and native tool defaults for fixed and learned. Controller receives only actual returned observations, not explicit query/source.",
+    "source_supervision": "All24 original B training examples and benchmark feedback, not clinically adjudicated; no target input/outcome/image enters proposal."
+  },
+  "execution": {
+    "arms": [
+      "H0_static",
+      "fixed_joint",
+      "learned_joint"
+    ],
+    "repeats": 2,
+    "physical_episodes": 36,
+    "current_fact_prefix": "Execute exactly ONE chest_xray_expert invocation with ALL2-4 current images in their original order in fixed and learned arms. Same current question stem without options, same tool and native parameters; only persistent query differs.",
+    "controller": "Original author prompt/current images/six tools/two-turn letter scoring. H0 has no prefix. Matched joint wrapper and current-image-indices raw observations, no explicit query/rationale/source. Tool can echo and hallucinate.",
+    "bounds": "ONE joint prefix call per case, counted in the same16-tool budget. Further native calls allowed. Observation capped12000chars per joint output identically; full raw logs private.",
+    "order": "Casewise3-arm rotation; second block reverse target order and shift rotation by1; new Agent/MemorySaver every physical episode, no aliases.",
+    "scoring": "Read gold only after all predictions or termination; full planned denominators, exact final A-F.",
+    "model": "Existing local subscription gpt-6.1-sol/high; all medical tools/weights unchanged; no new credentials,API provider or paid resource."
+  },
+  "gate": {
+    "requirements": "All36 valid and admitted program. BOTH repeats learned vsH0 net>=2/6 with H0 loss<=1; learned vsfixed net>=1/6; >=2 cases repeated H0 wrong/learned correct AND learned actual controller observation-prefix text differs from fixed in each repeat.",
+    "interpretation": "Necessary non-identical intervention check, not proof that text differences are medically correct or causal. Solely error-enriched exploratory benchmark evidence, no general clinical accuracy, full-HCL or A-to-B retention claim.",
+    "fail": "Close fixed policy/variant; no proposal regeneration, target/source resampling, prompt/threshold changes or selective reruns inside experiment.",
+    "statistics": "All paired gain/loss tables, descriptive exact McNemar, tool-query/evidence coverage, identical-observation nominal gains, per-arm inference/tool/token/rate-limit/runtime costs; repetitions do not increase independent N."
+  },
+  "limits": {
+    "max_elapsed_hours": 4,
+    "max_subscription_calls_total": 220,
+    "includes_one_proposal_call": true,
+    "window_deadline_epoch": 1792983297.617537,
+    "hard_deadline": "min(original local implementation/preparation start+4h,windowdeadline); never reset",
+    "own_storage_stop_bytes": 100000000,
+    "aggregate_storage_stop_bytes": 45000000000,
+    "aggregate_storage_hard_exclusive_bytes": 50000000000,
+    "per_case_controller_calls": 12,
+    "per_case_tool_calls": 16,
+    "per_case_seconds": 3600,
+    "request_timeout_seconds": 1200
+  },
+  "limitations": [
+    "Training supervision and tool observations not independently medically adjudicated; this is not Pro E1 or an O-oracle.",
+    "Six reused, error-enriched targets from existing B group; single frozen source bank/proposal, adaptive development.",
+    "Fixed/learned use same chest_xray_expert, all current images, one joint call and native settings; query lengths not exact token matched; H0 has fewer mandatory calls.",
+    "Raw tool text can contain ungrounded interpretations, artifacts or echoes; completed does not imply factual correctness.",
+    "Current images only, no historical-patient images sent to tools; no doctor resource fabricated."
+  ],
+  "public_boundary": "Only code,protocol,aggregate,audit,cost; no question/image/label/program content/case identifier/per-case trace/credential.",
+  "arms": {
+    "H0_static": "Unchanged native two-turn agent, six tools and current images, no prefix",
+    "fixed_joint": "ONE chest_xray_expert call on all current images with frozen source-free joint query",
+    "learned_joint": "ONE chest_xray_expert call on all current images with the single source-only learned joint query"
+  },
+  "budget": {
+    "original_clock": "From first local preparation, includes all setup, proposal and failure/retry costs",
+    "cap_seconds": 14400,
+    "hard_deadline": "min(originalstart+4h,1792983297.617537)",
+    "controller_calls_including_single_proposal": 220,
+    "physical_episodes": 36,
+    "own_stop_new_bytes": 100000000,
+    "aggregate_stop_new_bytes": 45000000000,
+    "strict_new_bytes_limit_per_host": 50000000000,
+    "expected_new_bytes": 20000000,
+    "aggregate_roots": "v4-v14 eleven experiments plus12h control,12roots",
+    "independent_guard_seconds": 15
+  },
+  "scope": "Six outcome-enriched reused B development cases, two repeats, no new cases,96 confirmation cases untouched. No clinical, patient-independent or sequential HCL claims."
+}
