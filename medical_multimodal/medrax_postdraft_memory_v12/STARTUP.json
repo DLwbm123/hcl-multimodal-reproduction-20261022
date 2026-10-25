@@ -1,0 +1,73 @@
+{
+  "status": "started_loading_tools_not_completed",
+  "source_commit": "e1332814a857ab953fbdf60fb0446828aa87d6fd",
+  "parent_result_commit": "6dbccc0",
+  "original_budget": {
+    "started_epoch": 1792954466.929297,
+    "hard_deadline_epoch": 1792976066.929297,
+    "max_subscription_calls": 220,
+    "model": "gpt-6.1-sol",
+    "reasoning": "high",
+    "aggregate_stop_new_bytes": 45000000000,
+    "own_stop_new_bytes": 100000000,
+    "hard_exclusive_bytes": 50000000000,
+    "window_deadline_epoch": 1792983297.617537
+  },
+  "cpu_check": {
+    "passed": true,
+    "production_episode_workflow_checked": true,
+    "initial_input_identical_across_all_three_arms": true,
+    "only_post_draft_review_receives_procedures": true,
+    "final_author_turn_preserved": true,
+    "memory_restore_and_immutability_checked": true,
+    "gate_rejects_preexisting_initial_correctness_as_repair": true,
+    "incomplete_gate_rejected": true,
+    "real_model_calls": 0
+  },
+  "data_receipt": {
+    "time": 1792954754.69279,
+    "reused_development_cases": 6,
+    "v10_prior_errors": 3,
+    "v10_prior_correct_controls": 3,
+    "new_case_allocation": 0,
+    "confirmation_excluded": 96,
+    "source_training_cases": 24,
+    "new_memory_generation_calls": 0,
+    "source_state_reused_unchanged": true,
+    "review_context_chars": {
+      "H0_static": 0,
+      "generic_review": 3798,
+      "experience_review": 3755
+    },
+    "generic_to_experience_char_ratio": 1.0114513981358189,
+    "selection_uses_prior_v10_outcomes": true,
+    "selection_uses_v11_outcomes": false,
+    "medical_adjudication_established": false
+  },
+  "preparation_note": {
+    "time": 1792954908.6064372,
+    "launch_preflight_refused_before_worker_start": true,
+    "observed_original_gpu2_free_mib": 15937,
+    "required_free_mib": 45000,
+    "all_other_processes_preserved": true,
+    "resolution": "Select a GPU with sufficient current headroom in the unchanged deployment preflight; retain original budget.",
+    "model_calls_before_launch": 0,
+    "release_file_count_check": "One local release count included ignored bytecode directory; corrected to tracked files before launch, seven source files parsed and privacy checked."
+  },
+  "startup_check_time": 1792955030.2370386,
+  "worker_identity_verified_alive": true,
+  "local_bridge_verified_alive": true,
+  "worker_bridge_gpu_argv_neutral_verified": true,
+  "gpu_selected": 6,
+  "gpu_free_mib_before_launch": 70639,
+  "calls_at_startup_check": 0,
+  "guard": {
+    "time": 1792955017.4902754,
+    "own_bytes": 419729,
+    "aggregate_bytes": 42955622858,
+    "deadline": 1792976066.929297
+  },
+  "failure_at_startup_check": null,
+  "new_weights_downloaded": false,
+  "expected_new_artifact_bytes": 20000000
+}

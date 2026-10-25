@@ -103,3 +103,5 @@ The distinct [native ReAct visual-tool qualification](medical_multimodal/react_v
 [首轮 Sol High 医学记忆持续学习](medical_multimodal/medrax_hcl_v5/REPORT.zh-CN.md)已完成：160回合、488调用，总正确39/48未提升，A退化1例、B更新被拒绝；抽象记忆未进入检索，联合目标失败。
 
 [v11视觉经验结项](medical_multimodal/medrax_visual_memory_v11/REPORT.zh-CN.md)：完整第一轮H0 22/24、文字20/24、图文21/24、错配21/24；原6小时截止，106/192回合启动，第二轮不完整。没有观察到图像经验增益，限流与全部失败成本保留。
+
+[v12初答后经验核查已启动](medical_multimodal/medrax_postdraft_memory_v12/README.zh-CN.md)：6个既有病例、三臂两轮36回合，对照原流程与等额通用核查；220次调用/原6小时上限，初答已正确的名义差异不算经验修复。
