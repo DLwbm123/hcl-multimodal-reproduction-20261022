@@ -1,0 +1,48 @@
+{
+  "time": 1792965464.4028642,
+  "error": "KeyError('max_subscription_calls') in local transport before subscription execution",
+  "missing_transport_fields": [
+    "max_subscription_calls",
+    "model",
+    "reasoning",
+    "hard_exclusive_bytes"
+  ],
+  "repair": "Bind fields to already frozen protocol:220calls,gpt-6.1-sol/high,strict50GB. No scientific arm/data/gate/tool/model change; no worker restart.",
+  "subscription_calls_before_repair": 0,
+  "original_clock_preserved": true,
+  "original_budget": {
+    "started_epoch": 1792965209.914797,
+    "hard_deadline_epoch": 1792979609.914797,
+    "experiment_cap_seconds": 14400,
+    "window_deadline_epoch": 1792983297.617537,
+    "own_stop_new_bytes": 100000000,
+    "aggregate_stop_new_bytes": 45000000000,
+    "strict_new_bytes_limit": 50000000000,
+    "expected_new_artifact_bytes": 20000000,
+    "new_root_baseline": 0,
+    "clock_includes_implementation_preparation_proposal_failures_and_retries": true
+  },
+  "amended_budget": {
+    "started_epoch": 1792965209.914797,
+    "hard_deadline_epoch": 1792979609.914797,
+    "experiment_cap_seconds": 14400,
+    "window_deadline_epoch": 1792983297.617537,
+    "own_stop_new_bytes": 100000000,
+    "aggregate_stop_new_bytes": 45000000000,
+    "strict_new_bytes_limit": 50000000000,
+    "expected_new_artifact_bytes": 20000000,
+    "new_root_baseline": 0,
+    "clock_includes_implementation_preparation_proposal_failures_and_retries": true,
+    "max_subscription_calls": 220,
+    "model": "gpt-6.1-sol",
+    "reasoning": "high",
+    "hard_exclusive_bytes": 50000000000
+  },
+  "counter_seed_correction": {
+    "time": 1792965488.734847,
+    "before": 2,
+    "after": 1,
+    "reason": "Shared v4 transport defaults missing counters to1 for its original smoke test; v14 has no smoke call. Preserve actual first in-flight proposal as1, remove inherited phantom reservation only.",
+    "actual_subscription_call_count": 1
+  }
+}

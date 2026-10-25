@@ -1,0 +1,39 @@
+{
+  "audit_passed": true,
+  "outcome": "single_proposal_schema_rejected_no_target_evaluation",
+  "one_proposal": true,
+  "admit_claimed_by_model": true,
+  "actual_admission": false,
+  "query_template_chars": 1639,
+  "frozen_max_template_chars": 1600,
+  "supporting_source_count": 12,
+  "program_repaired_or_regenerated": false,
+  "target_episodes_started": 0,
+  "planned_target_episodes": 36,
+  "observed_target_accuracy": null,
+  "paired_target_effects": null,
+  "medical_joint_acquisition_hypothesis_tested": false,
+  "source_only_request_images": 0,
+  "subscription_calls": 1,
+  "request_status": "ok",
+  "completed_request_seconds": 39.86868500709534,
+  "visible_429": 0,
+  "usage": {
+    "input_tokens": 16126,
+    "cached_input_tokens": 4224,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 809,
+    "reasoning_output_tokens": 376
+  },
+  "original_wall_seconds": 295.40158462524414,
+  "transport_config_error_before_any_execution_recorded": true,
+  "original_clock_and_limits_preserved": true,
+  "final_guard": {
+    "time": 1792965499.0362897,
+    "own_bytes": 179775,
+    "aggregate_bytes": 42960638833,
+    "deadline": 1792979609.914797
+  },
+  "worker_and_bridge_exited": true,
+  "confirmation_used": false
+}
