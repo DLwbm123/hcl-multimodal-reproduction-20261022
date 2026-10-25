@@ -1,0 +1,66 @@
+{
+  "experiment": "medrax_visual_focus_v15",
+  "parent_result_commit": "c2288e3",
+  "hypothesis": "A persistent finite crop program chosen from source training feedback can improve current-case visual evidence and downstream answers beyond equal-area/equal-count fixed quadrant zooms, while retaining every original image. H0 remains primary.",
+  "motivation": "v13 changed12/12tool-observation pairs but no answers; passive text/history/review have no support. v14 proposal rejected before targets, not evidence against joint vision; do not repair or reuse it. This independent experiment changes actual visual preprocessing, not tool-query wording.",
+  "selection": {
+    "training": "Original24 v9B training cases and their H0_train attempts plus unadjudicated benchmark feedback; all sources retained. Only source text/feedback sent to the one program proposal, no target questions or outcomes.",
+    "development": "Same six v13/v14 panel cases, originally first3 v7B H0 errors and first3 correct. No selection using v13/v14 results; adaptive development with known exposed labels.",
+    "confirmation_protected": 96,
+    "new_case_allocation": 0,
+    "separation": "Source/target case IDs and known canonical image paths disjoint; not a claim of patient-independent evaluation."
+  },
+  "policy": {
+    "proposal_count": 1,
+    "may_decline": true,
+    "regeneration_or_repair": false,
+    "schema": "admit,crop_ids exactly4 distinct ints0-8,source_indices4-24 unique0-23,rationale1-1600chars. At least2 crop IDs outside fixed set; canonical sorted IDs. Decline empty lists. No generated code execution.",
+    "catalog": "Nine half-width by half-height windows with x/y origins0,0.25,0.5; IDs row-major0-8. Fixed four corners0,2,6,8. Every crop512x512, native Pillow crop+resize.",
+    "application": "Same immutable4-region program to EVERY current image of every target; no target-conditioned crop policy. All original images first, then4actual crops per original image. Metadata only maps coordinates/paths/parent image; no source feedback/rationale.",
+    "supervision": "All24 original B source text/attempts plus unadjudicated benchmark feedback. No source/target image, target question/outcome or rejected v14 program enters generation."
+  },
+  "execution": {
+    "arms": [
+      "H0_static",
+      "fixed_focus",
+      "learned_focus"
+    ],
+    "repeats": 2,
+    "physical_episodes": 36,
+    "current_fact_prefix": "No mandatory tool prefix. Deterministic current-image crop creation before controller inference. Both crop arms append4derived images per original, same crop area/2xzoom/512x512 dimensions. Originals remain unchanged first.",
+    "controller": "Original native author prompt/six tools/two-turn letter scoring/current questions. Additional common mapping identifies each crop as a derivative of current image, never another patient/timepoint. All original and derived current-image paths allowed to tools. H0 input unchanged.",
+    "bounds": "All originals+4crops per original,10or20image attachments per request. Per-case12controller/16tools/3600sec. No new tool/model weights or mandatory tool call.",
+    "order": "Casewise3-arm rotation; second block reverse target order and shift rotation by1; new Agent/MemorySaver every physical episode, no aliases.",
+    "scoring": "Read gold only after all predictions or termination; full planned denominators, exact final A-F.",
+    "model": "Existing local subscription gpt-6.1-sol/high; all medical tools/weights unchanged; no new credentials,API provider or paid resource."
+  },
+  "gate": {
+    "requirements": "All36 valid and admitted program. BOTH repeats learned vsH0 net>=2/6 with H0loss<=1; learned vsfixed net>=1/6; >=2 cases repeated H0 wrong/learned correct with actual resized crop pixels differing from fixed in each repeat.",
+    "interpretation": "Actual pixel-difference test is a scientific intervention check, not transfer-integrity validation or proof of medically useful evidence. Exploratory outcome-enriched reused benchmark only.",
+    "fail": "Close fixed policy/variant; no proposal regeneration, target/source resampling, prompt/threshold changes or selective reruns inside experiment.",
+    "statistics": "All paired effects/descriptive McNemar; real crop geometry/pixel-difference/count and input-image/token/tool/time/rate/failure costs. No patient-independent or clinical endpoint claim; repeated cases do not increase N."
+  },
+  "limits": {
+    "max_elapsed_hours": 4,
+    "max_subscription_calls_total": 220,
+    "includes_one_proposal_call": true,
+    "window_deadline_epoch": 1792983297.617537,
+    "hard_deadline": "min(original local prep+4h,1792983297.617537), never reset",
+    "own_storage_stop_bytes": 500000000,
+    "aggregate_storage_stop_bytes": 45000000000,
+    "aggregate_storage_hard_exclusive_bytes": 50000000000,
+    "per_case_controller_calls": 12,
+    "per_case_tool_calls": 16,
+    "per_case_seconds": 3600,
+    "request_timeout_seconds": 1200
+  },
+  "limitations": [
+    "Source feedback not medically adjudicated; no expert O or Pro E1.",
+    "Six reused outcome-enriched cases and one global source-only crop program; adaptive development, not patient-independent confirmation.",
+    "512x512 crops standardize count/area/size; image content/token cost not exactly equal. H0 has fewer image attachments.",
+    "Original clinical images retained, crop images contain no new clinical facts and can degrade context or magnify artifacts.",
+    "Tool access includes only current originals and their derivatives; no source images or96confirmation images.",
+    "This is a source-learned external perception program, not parameter training or complete A-to-B HCL retention."
+  ],
+  "public_boundary": "Source/protocol/aggregate/cost/audit only. No images/crops/questions/answers/program/caseIDs/per-case traces/credentials."
+}
