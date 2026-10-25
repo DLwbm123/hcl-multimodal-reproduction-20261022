@@ -13,3 +13,6 @@
 原始时钟含实现/部署/提案/失败重试，上限4小时且≤12h窗口10:54:57；220逻辑订阅调用含唯一提案。每case12controller/16tools/3600秒、request1200秒。预计新增200MB，own500MB与v4-v15十二实验+window控制13roots aggregate45GB保守停写、严格<50GB每实验/host；15秒独立guard读错/预算failclosed终止自身组。Local bridge同roots allocated守卫。既有六模型只读复用，无新权重，仅SolHigh订阅。CPU检查真实production裁剪像素/原图保留/固定与学习公平性/实际干预gate与transport字段，不是医学模型验证。
 
 报告完整配对、裁剪执行和原图路径、原生工具/模型调用、token/time/失败与重复；图片/crops/问题/答案/程序/逐例继续私有。无医学审核者，来源监督不冒充专家O；不宣称临床有效性、总体准确率、完整HCL顺序学习或保持。
+
+
+实际启动：2026-10-26 06:04:32，原始准备起点06:00:58，硬截止10:00:58不变。唯一来源程序已准入并在目标前冻结；worker/bridge正常，六工具加载中，尚无目标性能结果。详见[启动回执](STARTUP.json)。

@@ -1,0 +1,166 @@
+{
+  "experiment": "medrax_visual_focus_v15",
+  "time": 1792965985.076032,
+  "confirmed_status": "worker and bridge alive; one source-only program proposal admitted and frozen; original tools loading; no target performance result",
+  "source_commit": "19e70839076b353e5a19528c84d72c9a8f165b3f",
+  "launch": {
+    "pid": 1650914,
+    "start_ticks": "135673418",
+    "started": 1792965872.4553285,
+    "pgid": 1650914,
+    "gpu": 1
+  },
+  "local_bridge": {
+    "pid": 15000,
+    "pgid": 15000,
+    "started": 1792965872.141222
+  },
+  "original_budget": {
+    "started_epoch": 1792965658.827698,
+    "hard_deadline_epoch": 1792980058.827698,
+    "max_subscription_calls": 220,
+    "model": "gpt-6.1-sol",
+    "reasoning": "high",
+    "experiment_cap_seconds": 14400,
+    "window_deadline_epoch": 1792983297.617537,
+    "own_stop_new_bytes": 500000000,
+    "aggregate_stop_new_bytes": 45000000000,
+    "hard_exclusive_bytes": 50000000000,
+    "expected_new_artifact_bytes": 200000000,
+    "new_root_baseline": 0,
+    "clock_includes_implementation_preparation_proposal_failures_and_retries": true
+  },
+  "frozen": {
+    "time": 1792965872.4532738,
+    "source_commit": "19e70839076b353e5a19528c84d72c9a8f165b3f",
+    "parent_result_commit": "c2288e3",
+    "original_budget": {
+      "started_epoch": 1792965658.827698,
+      "hard_deadline_epoch": 1792980058.827698,
+      "max_subscription_calls": 220,
+      "model": "gpt-6.1-sol",
+      "reasoning": "high",
+      "experiment_cap_seconds": 14400,
+      "window_deadline_epoch": 1792983297.617537,
+      "own_stop_new_bytes": 500000000,
+      "aggregate_stop_new_bytes": 45000000000,
+      "hard_exclusive_bytes": 50000000000,
+      "expected_new_artifact_bytes": 200000000,
+      "new_root_baseline": 0,
+      "clock_includes_implementation_preparation_proposal_failures_and_retries": true
+    },
+    "cpu_check_passed": true,
+    "states_frozen": false,
+    "members_frozen": true,
+    "policy_proposal_pending": true,
+    "confirmation_gold_not_accessed": true,
+    "reused_development_cases": 6,
+    "new_root_baseline_before_creation": 0,
+    "own_bytes_before_launch": 185407,
+    "aggregate_bytes_before_launch": 42960846206,
+    "expected_new_artifact_bytes": 200000000,
+    "gpu_free_mib_before_launch": 69678
+  },
+  "data_receipt": {
+    "time": 1792965822.0540698,
+    "training_B_cases": 24,
+    "training_prior_benchmark_correct": 20,
+    "reused_development_B_cases": 6,
+    "prior_v7_errors": 3,
+    "prior_v7_correct_controls": 3,
+    "current_images_per_target": [
+      2,
+      2,
+      2,
+      2,
+      4,
+      2
+    ],
+    "confirmation_excluded": 96,
+    "new_case_allocation": 0,
+    "source_generation_has_no_target_inputs_or_feedback": true,
+    "expert_adjudication_established": false
+  },
+  "cpu_check": {
+    "passed": true,
+    "transport_budget_fields_checked": true,
+    "production_crop_program_creates_expected_real_pixels": true,
+    "all_original_images_retained_first": true,
+    "fixed_and_learned_count_area_zoom_and_output_size_matched": true,
+    "reordering_fixed_program_rejected": true,
+    "source_feedback_not_explicitly_in_controller_context": true,
+    "gate_requires_actual_pixel_difference_and_complete_repeats": true,
+    "real_model_calls": 0
+  },
+  "preparation": {
+    "time": 1792965820.909224,
+    "mount": "/data  /dev/sdc1 ext4",
+    "free_bytes": 14929275527168,
+    "small_write_read_probe": true,
+    "new_root_baseline": 0,
+    "expected_new_bytes": 200000000
+  },
+  "current_status": {
+    "time": 1792965985.076032,
+    "worker_identity_alive": true,
+    "worker_command": "/data/bmw/workers/p981/bin/python /data/bmw/workers/r1020.py",
+    "process_group_commands": [
+      "1650914       1 1650914 /data/bmw/workers/p981/bin/python /data/bmw/workers/r1020.py"
+    ],
+    "gpu_worker": [],
+    "files": {
+      "AGENT_LAUNCH.json": {
+        "pid": 1650914,
+        "start_ticks": "135673418",
+        "started": 1792965872.4553285,
+        "pgid": 1650914,
+        "gpu": 1
+      },
+      "STARTED.json": {
+        "time": 1792965872.7438486,
+        "original_start": 1792965658.827698,
+        "deadline": 1792980058.827698
+      },
+      "STATES_FROZEN.json": {
+        "time": 1792965947.8676684,
+        "one_proposal_admitted": true,
+        "source_cases": 24,
+        "crop_count_per_image": 4,
+        "supporting_source_count": 9,
+        "target_inputs_not_used_for_proposal": true,
+        "medical_validation": false
+      },
+      "RUN_GUARD.json": {
+        "time": 1792965948.7906322,
+        "own_bytes": 240384,
+        "aggregate_bytes": 42960901182,
+        "deadline": 1792980058.827698
+      }
+    },
+    "bridge_alive": true,
+    "bridge_command": "/opt/miniconda3/bin/python /tmp/r1020b.py",
+    "local_bridge_receipt": {
+      "pid": 15000,
+      "pgid": 15000,
+      "started": 1792965872.141222
+    },
+    "bridge_completed_responses": 1,
+    "bridge_response_statuses": [
+      "ok"
+    ],
+    "bridge_visible_429": 0
+  },
+  "startup_load_observation": {
+    "time": 1792966117.3622625,
+    "tool_loading_still_in_progress": true,
+    "main_thread_observed_io_wait_channel": "folio_wait_bit_common",
+    "guard_resumed_and_last_updated_epoch": 1792966111.191351,
+    "gpu_preflight_before_loading": {
+      "time": 1792965947.9634986,
+      "gpu": 1,
+      "free_mib": 69678
+    },
+    "no_restart_or_clock_extension": true,
+    "target_performance_not_yet_observed": true
+  }
+}
