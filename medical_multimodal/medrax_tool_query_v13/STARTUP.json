@@ -1,0 +1,84 @@
+{
+  "status": "started_policy_frozen_and_tools_loaded_evaluation_in_progress",
+  "source_commit": "a1fc5f30b98d505fb7a41539a2428828840063a3",
+  "parent_result_commit": "4428570",
+  "original_budget": {
+    "started_epoch": 1792959947.4492211,
+    "hard_deadline_epoch": 1792981547.4492211,
+    "max_subscription_calls": 220,
+    "model": "gpt-6.1-sol",
+    "reasoning": "high",
+    "own_stop_new_bytes": 100000000,
+    "aggregate_stop_new_bytes": 45000000000,
+    "hard_exclusive_bytes": 50000000000,
+    "window_deadline_epoch": 1792983297.617537
+  },
+  "cpu_check": {
+    "passed": true,
+    "restricted_program_schema_and_placeholder_checked": true,
+    "production_prefix_invokes_one_real_wrapped_tool_per_current_image": true,
+    "queries_use_current_stem_without_answer_options": true,
+    "controller_observations_exclude_program_query_and_source_feedback": true,
+    "H0_has_no_prefix_calls": true,
+    "identical_observation_gain_not_counted_as_source_intervention": true,
+    "incomplete_gate_rejected": true,
+    "real_model_calls": 0
+  },
+  "data_receipt": {
+    "time": 1792960427.2615159,
+    "training_B_cases": 24,
+    "training_prior_benchmark_correct": 20,
+    "reused_development_B_cases": 6,
+    "prior_v7_errors": 3,
+    "prior_v7_correct_controls": 3,
+    "current_images_per_target": [
+      2,
+      2,
+      2,
+      2,
+      4,
+      2
+    ],
+    "confirmation_excluded": 96,
+    "new_case_allocation": 0,
+    "source_generation_has_no_target_inputs_or_feedback": true,
+    "expert_adjudication_established": false
+  },
+  "policy_freeze_metadata": {
+    "time": 1792960626.3863418,
+    "one_proposal_admitted": true,
+    "source_cases": 24,
+    "tool_name": "llava_med_qa",
+    "supporting_source_count": 14,
+    "target_inputs_not_used_for_proposal": true,
+    "medical_validation": false
+  },
+  "tools_loaded": {
+    "time": 1792960667.3095708,
+    "names": [
+      "chest_xray_report_generator",
+      "chest_xray_classifier",
+      "chest_xray_segmentation",
+      "xray_phrase_grounding",
+      "chest_xray_expert",
+      "llava_med_qa"
+    ]
+  },
+  "startup_check_time": 1792960715.0357687,
+  "worker_identity_verified_alive": true,
+  "local_bridge_verified_alive": true,
+  "worker_bridge_gpu_argv_neutral_verified": true,
+  "gpu_selected": 7,
+  "gpu_free_mib_before_launch": 70137,
+  "calls_at_startup_check": 3,
+  "guard": {
+    "time": 1792960704.21504,
+    "own_bytes": 1128420,
+    "aggregate_bytes": 42959071829,
+    "deadline": 1792981547.4492211
+  },
+  "failure_at_startup_check": null,
+  "expected_new_artifact_bytes": 20000000,
+  "new_weights_downloaded": false,
+  "policy_schema_acceptance_is_not_medical_validation": true
+}
