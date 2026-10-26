@@ -1,0 +1,10 @@
+{
+  "time": 1792982801.931056,
+  "all_relevant_processes_gone": {
+    "worker": true,
+    "external_guard": true,
+    "last_cli": true
+  },
+  "original_deadline_preserved": true,
+  "new_gpu_models": 0
+}

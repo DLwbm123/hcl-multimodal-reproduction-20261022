@@ -1,0 +1,57 @@
+{
+  "time": 1792982634.616477,
+  "complete": true,
+  "planned_controller_calls": 6,
+  "completed_controller_calls": 6,
+  "valid_structured_responses": 6,
+  "pairs": [
+    {
+      "alias": "C03",
+      "valid_pair": true,
+      "review_correct": false,
+      "operation_correct": false,
+      "benchmark_gain": false,
+      "benchmark_loss": false,
+      "clinically_verified_tool_repair": null,
+      "independent_transfer_established": false
+    },
+    {
+      "alias": "C11",
+      "valid_pair": true,
+      "review_correct": false,
+      "operation_correct": false,
+      "benchmark_gain": false,
+      "benchmark_loss": false,
+      "clinically_verified_tool_repair": null,
+      "independent_transfer_established": false
+    },
+    {
+      "alias": "C13",
+      "valid_pair": true,
+      "review_correct": false,
+      "operation_correct": false,
+      "benchmark_gain": false,
+      "benchmark_loss": false,
+      "clinically_verified_tool_repair": null,
+      "independent_transfer_established": false
+    }
+  ],
+  "review_correct": 0,
+  "operation_correct": 0,
+  "paired_benchmark_gains": 0,
+  "paired_benchmark_losses": 0,
+  "medical_skill_validity_established": false,
+  "new_cases": 0,
+  "confirmation_used": 0,
+  "usage": {
+    "input_tokens": 45483,
+    "cached_input_tokens": 21120,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 3004,
+    "reasoning_output_tokens": 2287
+  },
+  "request_seconds": 212.84178853034973,
+  "visible_429_responses": 0,
+  "seconds_since_original_start": 385.38069224357605,
+  "new_allocated_bytes_at_worker_exit": 4001792
+}

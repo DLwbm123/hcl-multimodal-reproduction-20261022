@@ -1,0 +1,19 @@
+{
+  "time": 1792982801.931058,
+  "frozen_before_first_call": true,
+  "planned_and_completed_calls": 6,
+  "valid_responses": 6,
+  "original_image_prefix_and_order_preserved": true,
+  "actual_attachment_counts_match": true,
+  "current_only_paths": true,
+  "derived_images_512_square": 8,
+  "geometry_and_binding_verified": true,
+  "confirmation_used": 0,
+  "case_count": 3,
+  "case_repeats": 1,
+  "letters_unchanged_in_all_3_pairs": true,
+  "independently_verified_medical_observations": null,
+  "verified_medical_skill_registered": false,
+  "source_labels_unadjudicated": true,
+  "pass_execution_audit": true
+}

@@ -1,0 +1,59 @@
+{
+  "time": 1792982559.0023391,
+  "complete": true,
+  "planned": 6,
+  "completed_requests": 6,
+  "fatal": null,
+  "seconds_since_original_start": 385.38069224357605,
+  "calls": [
+    {
+      "index": 0,
+      "alias": "C03",
+      "arm": "review",
+      "status": "ok",
+      "seconds": 35.21521067619324,
+      "images": 1
+    },
+    {
+      "index": 1,
+      "alias": "C03",
+      "arm": "operation",
+      "status": "ok",
+      "seconds": 45.440479040145874,
+      "images": 2
+    },
+    {
+      "index": 2,
+      "alias": "C11",
+      "arm": "operation",
+      "status": "ok",
+      "seconds": 29.782119035720825,
+      "images": 2
+    },
+    {
+      "index": 3,
+      "alias": "C11",
+      "arm": "review",
+      "status": "ok",
+      "seconds": 33.84863615036011,
+      "images": 1
+    },
+    {
+      "index": 4,
+      "alias": "C13",
+      "arm": "review",
+      "status": "ok",
+      "seconds": 35.54745078086853,
+      "images": 3
+    },
+    {
+      "index": 5,
+      "alias": "C13",
+      "arm": "operation",
+      "status": "ok",
+      "seconds": 33.00789284706116,
+      "images": 9
+    }
+  ],
+  "new_allocated_bytes": 4001792
+}

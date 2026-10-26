@@ -1,0 +1,41 @@
+[
+  {
+    "alias": "C03",
+    "status": "executed_diagnostic_workflow_without_demonstrated_repair",
+    "trigger": "current mediastinal/stent spatial relation",
+    "action": "central mediastinal magnification retaining full image",
+    "executable_primitive": "PIL crop with preserved original and source coordinate mapping",
+    "process_verification": "coordinate bounds, source binding and geometry can be checked; medically valid side/shift needs independent adjudication",
+    "benchmark_gain_in_this_probe": false,
+    "independent_medical_observation_truth": null,
+    "independent_transfer_evidence": false,
+    "may_enter_learned_skill_bank": false,
+    "fallback": "preserve original benchmark score; report uncertainty; do not treat answer letter as medical truth"
+  },
+  {
+    "alias": "C11",
+    "status": "executed_diagnostic_workflow_without_demonstrated_repair",
+    "trigger": "local vertebral/endplate and disc-space attribute",
+    "action": "spinal-region magnification retaining full image",
+    "executable_primitive": "PIL crop with preserved original and source coordinate mapping",
+    "process_verification": "crop geometry is checkable; physical disc-space interpretation needs independent reference",
+    "benchmark_gain_in_this_probe": false,
+    "independent_medical_observation_truth": null,
+    "independent_transfer_evidence": false,
+    "may_enter_learned_skill_bank": false,
+    "fallback": "preserve original benchmark score; report uncertainty; do not treat answer letter as medical truth"
+  },
+  {
+    "alias": "C13",
+    "status": "executed_diagnostic_workflow_without_demonstrated_repair",
+    "trigger": "regional temporal visual change",
+    "action": "paired left/right lung crops for all supplied images in unchanged figure order",
+    "executable_primitive": "PIL crop with preserved original and source coordinate mapping",
+    "process_verification": "all source-image bindings and order are checkable; chronology and regional clinical change not independently established",
+    "benchmark_gain_in_this_probe": false,
+    "independent_medical_observation_truth": null,
+    "independent_transfer_evidence": false,
+    "may_enter_learned_skill_bank": false,
+    "fallback": "preserve original benchmark score; report uncertainty; do not treat answer letter as medical truth"
+  }
+]
