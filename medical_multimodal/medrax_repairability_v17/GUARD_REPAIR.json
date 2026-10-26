@@ -1,0 +1,7 @@
+{
+  "time": 1792982412.3615549,
+  "pid": 84855,
+  "reason": "sandbox-exec becomes codex through exec; add independent identity-cached CLI deadline guard without restart or clock change",
+  "deadline_unchanged": true,
+  "model_or_data_changes": false
+}

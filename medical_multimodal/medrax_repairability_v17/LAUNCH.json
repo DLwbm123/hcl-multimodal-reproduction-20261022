@@ -1,0 +1,9 @@
+{
+  "pid": 84593,
+  "started": 1792982346.02769,
+  "argv": [
+    "/opt/miniconda3/bin/python",
+    "/tmp/r1031.py"
+  ],
+  "gpu_models": 0
+}

@@ -1,0 +1,10 @@
+{
+  "time": 1792982173.6216488,
+  "population": "all 8 H0_train errors in frozen v9 48-source pool + all7 H0_static errors in frozen v7 48-report pool",
+  "previous_pool_denominator": 96,
+  "errors": 15,
+  "images_copied": 28,
+  "new_cases": 0,
+  "medical_adjudication": false,
+  "protected_confirmation_cases_accessed": 0
+}

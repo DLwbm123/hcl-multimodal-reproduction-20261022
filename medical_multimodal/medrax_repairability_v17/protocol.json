@@ -1,0 +1,39 @@
+{
+  "started_epoch": 1792982173.6216488,
+  "hard_deadline_epoch": 1792982953.6216488,
+  "model": "gpt-6.1-sol",
+  "reasoning": "high",
+  "max_subscription_calls": 6,
+  "own_stop_new_bytes": 64000000,
+  "per_host_exclusive_limit_bytes": 50000000000,
+  "population": "15 already exposed benchmark errors from two complete old pools of48 each; adaptive developmental audit",
+  "candidate_aliases": [
+    "C03",
+    "C11",
+    "C13"
+  ],
+  "selection": "three visual attribute disagreements with executable geometric actions; source labels and outcomes already known; no blinding or independent testing claim",
+  "intervention": "current-case regional magnification retaining originals; question-dependent finite geometry, no learned policy",
+  "arms": [
+    "one additional original-image review",
+    "same additional review plus executed crop-tool output"
+  ],
+  "order": "C03 review then operation; C11 operation then review; C13 review then operation",
+  "endpoints": [
+    "paired benchmark option changes and gain/loss",
+    "actual tool geometry/current-image binding",
+    "whether independent process truth and transfer evidence exist"
+  ],
+  "positive_skill_rule": "A benchmark gain is only a repair candidate. Verified medical skill requires independently established observation, action correctness, and transfer beyond these exposed cases. Unknown prerequisites are reported as unknown, never pass.",
+  "failure_rule": "no regeneration/format rescue/crop retuning/repeat; record errors and planned6 denominator; stop at original deadline and64MB; all six finish before outcome aggregation",
+  "new_cases": 0,
+  "confirmation_used": 0,
+  "gpu_models_loaded": 0,
+  "controller_interface": "single structured visual review using subscription transport; not the full six-tool MedRAX workflow",
+  "limitations": [
+    "No independent medical adjudication",
+    "Source labels were available during candidate triage",
+    "Crop arm adds image and token cost; not token-matched",
+    "No correct-case harm panel, no repeatability, no independently held-out transfer"
+  ]
+}
