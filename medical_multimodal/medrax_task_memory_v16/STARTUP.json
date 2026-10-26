@@ -1,0 +1,139 @@
+{
+  "experiment": "medrax_task_memory_v16",
+  "time": 1792972836.1233203,
+  "confirmed_status": "worker and bridge alive, H_A24/H_B48 raw states and support frozen before inference, native tools loading, no target result yet",
+  "source_commit": "7953d630f580dbfe02ec4f3a75a9fc0f3d2ba49d",
+  "original_budget": {
+    "started_epoch": 1792972538.2225401,
+    "hard_deadline_epoch": 1792982438.2225401,
+    "max_subscription_calls": 220,
+    "model": "gpt-6.1-sol",
+    "reasoning": "high",
+    "own_stop_new_bytes": 100000000,
+    "aggregate_stop_new_bytes": 45000000000,
+    "hard_exclusive_bytes": 50000000000,
+    "window_deadline_epoch": 1792983297.617537,
+    "expected_new_artifact_bytes": 20000000,
+    "experiment_cap_seconds": 9900
+  },
+  "frozen": {
+    "time": 1792972772.9868033,
+    "source_commit": "7953d630f580dbfe02ec4f3a75a9fc0f3d2ba49d",
+    "parent_result_commit": "9a1f65a",
+    "original_budget": {
+      "started_epoch": 1792972538.2225401,
+      "hard_deadline_epoch": 1792982438.2225401,
+      "max_subscription_calls": 220,
+      "model": "gpt-6.1-sol",
+      "reasoning": "high",
+      "own_stop_new_bytes": 100000000,
+      "aggregate_stop_new_bytes": 45000000000,
+      "hard_exclusive_bytes": 50000000000,
+      "window_deadline_epoch": 1792983297.617537,
+      "expected_new_artifact_bytes": 20000000,
+      "experiment_cap_seconds": 9900
+    },
+    "cpu_check_passed": true,
+    "states_frozen": true,
+    "members_frozen": true,
+    "policy_proposal_pending": false,
+    "memory_generation_calls": 0,
+    "H_A_records": 24,
+    "H_B_records": 48,
+    "confirmation_gold_not_accessed": true,
+    "reused_development_cases": 9,
+    "new_root_baseline_before_creation": 0,
+    "own_bytes_before_launch": 242526,
+    "aggregate_bytes_before_launch": 42986471463,
+    "expected_new_artifact_bytes": 20000000,
+    "gpu_free_mib_before_launch": 67924
+  },
+  "data_receipt": {
+    "time": 1792972697.240747,
+    "A_sources": 24,
+    "B_sources": 24,
+    "H_A_raw_records": 24,
+    "H_B_raw_records": 48,
+    "source_question_only_top2_selection_frozen": true,
+    "A_context_identical_by_construction": true,
+    "retention_A_cases": 3,
+    "acquisition_B_cases": 6,
+    "confirmation_excluded": 96,
+    "new_cases": 0,
+    "A_selection": "first3 original v10 H0-correct cases in input order, reused exposed labels",
+    "B_selection": "same6 v15/v13 targets originally selected from exposed v7 outcomes",
+    "training_B_prior_benchmark_correct": 20,
+    "source_and_target_ID_and_known_images_disjoint": true,
+    "source_supervision_not_clinically_adjudicated": true,
+    "generation_calls": 0,
+    "all_source_records_retained": true
+  },
+  "cpu_check": {
+    "passed": true,
+    "real_HCL_restore_keeps24A_and48AB_records": true,
+    "question_only_top2_task_bank_isolation_checked": true,
+    "A_HA_HB_actual_context_identical": true,
+    "no_generation_or_historical_image_inference": true,
+    "actual_B_context_update_and_complete_retention_gate_checked": true,
+    "real_model_calls": 0
+  },
+  "preparation": {
+    "time": 1792972696.2052581,
+    "mount": "/data  /dev/sdc1 ext4",
+    "free_bytes": 14924744511488,
+    "small_write_read_probe": true,
+    "new_root_baseline": 0,
+    "expected_new_bytes": 20000000
+  },
+  "current_status": {
+    "time": 1792972836.1233203,
+    "worker_identity_alive": true,
+    "worker_command": "/data/bmw/workers/p981/bin/python /data/bmw/workers/r1024.py",
+    "process_group_commands": [
+      "2067817       1 2067817 /data/bmw/workers/p981/bin/python /data/bmw/workers/r1024.py"
+    ],
+    "gpu_worker": [],
+    "files": {
+      "AGENT_LAUNCH.json": {
+        "pid": 2067817,
+        "start_ticks": "136363471",
+        "started": 1792972772.989052,
+        "pgid": 2067817,
+        "gpu": 1
+      },
+      "STARTED.json": {
+        "time": 1792972773.0714364,
+        "original_start": 1792972538.2225401,
+        "deadline": 1792982438.2225401
+      },
+      "STATES_FROZEN.json": {
+        "time": 1792972697.240747,
+        "A_sources": 24,
+        "B_sources": 24,
+        "H_A_raw_records": 24,
+        "H_B_raw_records": 48,
+        "source_question_only_top2_selection_frozen": true,
+        "A_context_identical_by_construction": true,
+        "retention_A_cases": 3,
+        "acquisition_B_cases": 6,
+        "confirmation_excluded": 96
+      },
+      "RUN_GUARD.json": {
+        "time": 1792972834.5876248,
+        "own_bytes": 248082,
+        "aggregate_bytes": 42986477015,
+        "deadline": 1792982438.2225401
+      }
+    },
+    "bridge_alive": true,
+    "bridge_command": "/opt/miniconda3/bin/python /tmp/r1024b.py",
+    "local_bridge_receipt": {
+      "pid": 41857,
+      "pgid": 41857,
+      "started": 1792972772.714568
+    },
+    "bridge_completed_responses": 0,
+    "bridge_response_statuses": [],
+    "bridge_visible_429": 0
+  }
+}
