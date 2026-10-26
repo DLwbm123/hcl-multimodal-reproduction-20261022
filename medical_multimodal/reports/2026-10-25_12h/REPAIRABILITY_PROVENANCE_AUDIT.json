@@ -1,0 +1,70 @@
+{
+  "audit_type": "post-completion descriptive provenance and repairability qualification; no new inference, no relabeling or statistical confirmation",
+  "time": 1792981401.227242,
+  "sources": {
+    "A": {
+      "records": 24,
+      "benchmark_errors": 4,
+      "correct": 20,
+      "errors_with_old_unresolved_review": 4,
+      "review_concern_counts": {
+        "measurement_and_localization": 1,
+        "input_insufficient_for_specific_diagnosis": 1,
+        "visual_localization_unresolved": 1,
+        "etiology_not_established_by_input": 1
+      }
+    },
+    "B": {
+      "records": 24,
+      "benchmark_errors": 4,
+      "correct": 20,
+      "errors_with_old_unresolved_review": 4,
+      "review_concern_counts": {
+        "longitudinal_target_inconsistency": 1,
+        "nonunique_candidate_features": 2,
+        "specificity_overclaim": 1
+      }
+    }
+  },
+  "target_retrieval": {
+    "H_A_all_B": {
+      "targets": 6,
+      "targets_receiving_at_least_one_benchmark_error_source": 1,
+      "selected_source_slots": 12,
+      "benchmark_error_source_slots": 2,
+      "old_unresolved_review_slots": 2
+    },
+    "H_A_old_h0_incorrect_B": {
+      "targets": 3,
+      "targets_receiving_at_least_one_benchmark_error_source": 0,
+      "selected_source_slots": 6,
+      "benchmark_error_source_slots": 0,
+      "old_unresolved_review_slots": 0
+    },
+    "H_B_all_B": {
+      "targets": 6,
+      "targets_receiving_at_least_one_benchmark_error_source": 1,
+      "selected_source_slots": 12,
+      "benchmark_error_source_slots": 1,
+      "old_unresolved_review_slots": 1
+    },
+    "H_B_old_h0_incorrect_B": {
+      "targets": 3,
+      "targets_receiving_at_least_one_benchmark_error_source": 0,
+      "selected_source_slots": 6,
+      "benchmark_error_source_slots": 0,
+      "old_unresolved_review_slots": 0
+    }
+  },
+  "independently_validated_repair_pairs": null,
+  "medical_validity": "unresolved",
+  "changes_to_old_protocol_or_scores": false,
+  "confirmation_cases_accessed": 0,
+  "new_model_calls": 0,
+  "limitations": [
+    "Membership in old nonexpert concern list is not proof of an incorrect gold label.",
+    "Unselected source records remain in the frozen bank.",
+    "Source error retrieval is not evidence of matching repair type or causal usefulness.",
+    "No independently adjudicated action-to-observation-to-correction chain exists in the inspected records."
+  ]
+}
