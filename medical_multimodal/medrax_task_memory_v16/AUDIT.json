@@ -1,0 +1,65 @@
+{
+  "audit_passed": true,
+  "physical_episodes": 48,
+  "training_source_cases": 48,
+  "confirmation_excluded": 96,
+  "source_target_ID_and_known_images_disjoint": true,
+  "selection_and_48_episode_order_reconstructed": true,
+  "actual_initial_memory_payload_and_current_only_images_verified": 48,
+  "original_two_turn_final_scoring_verified": 48,
+  "B_HA_HB_case_repeat_pairs_with_actual_different_context": 12,
+  "A_HA_HB_case_repeat_pairs_with_identical_full_initial_payload": 6,
+  "memory_exposure_episodes": {
+    "B_H0_static": 0,
+    "B_H_A": 12,
+    "B_H_B": 12,
+    "A_H_A": 6,
+    "A_H_B": 6
+  },
+  "selected_distinct_source_counts": {
+    "A": 13,
+    "B": 11
+  },
+  "all_paired_tables_and_gate_recomputed": true,
+  "overall_gate_passed": false,
+  "B_acquisition_passed": false,
+  "small_A_retention_passed": true,
+  "repeated_B_gains": 0,
+  "repeat_final_option_changes": {
+    "B_H0_static": 0,
+    "B_H_A": 0,
+    "B_H_B": 0,
+    "A_H_A": 0,
+    "A_H_B": 0
+  },
+  "B_final_option_disagreement_across_arms_case_repeat_pairs": 2,
+  "controller_calls": 144,
+  "memory_generation_calls": 0,
+  "usage": {
+    "input_tokens": 1305085,
+    "cached_input_tokens": 489984,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 23463,
+    "reasoning_output_tokens": 11546
+  },
+  "completed_request_seconds": 2899.4065594673157,
+  "visible_429_response_count": 0,
+  "tool_counts": {
+    "chest_xray_expert": 42,
+    "llava_med_qa": 6
+  },
+  "tool_status_counts": {
+    "completed": 48
+  },
+  "original_wall_seconds": 5914.479506492615,
+  "tool_load_seconds_from_worker_start": 2076.7789244651794,
+  "target_execution_seconds": 3602.851683139801,
+  "final_guard": {
+    "time": 1792978444.9488676,
+    "own_bytes": 3192153,
+    "aggregate_bytes": 42989420565,
+    "deadline": 1792982438.2225401
+  },
+  "skill_evolution_enabled": false,
+  "parameter_or_clinical_retention_established": false
+}
