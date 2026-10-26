@@ -1,0 +1,35 @@
+{
+  "time": 1792983320.742055,
+  "window_start_epoch": 1792940097.617537,
+  "original_window_deadline_epoch": 1792983297.617537,
+  "original_deadline_reached": true,
+  "active_run": null,
+  "remote_process_snapshot": {
+    "time": 1792983320.9897332,
+    "active_run": null,
+    "old_worker_pid_present": {
+      "4155979": false,
+      "1030597": false,
+      "1333587": false,
+      "1623156": false,
+      "1650914": false,
+      "2067817": false
+    }
+  },
+  "local_bridge_worker_guard_last_cli_pid_present": {
+    "80520": false,
+    "72039": false,
+    "94054": false,
+    "12814": false,
+    "15000": false,
+    "41857": false,
+    "84593": false,
+    "84855": false,
+    "85350": false
+  },
+  "all_run_closure_receipts_present": true,
+  "all_experiment_processes_gone": true,
+  "confirmation_cases_used": 0,
+  "new_run_after_deadline": false,
+  "monitor_removal": "remove sole vqa after final push and anonymous access verification"
+}

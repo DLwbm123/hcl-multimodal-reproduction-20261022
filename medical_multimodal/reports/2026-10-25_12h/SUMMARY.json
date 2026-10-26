@@ -1,0 +1,149 @@
+{
+  "window_start_epoch": 1792940097.617537,
+  "window_hard_deadline_epoch": 1792983297.617537,
+  "window_CST": "2026-10-25 22:54:57 to2026-10-26 10:54:57",
+  "nominal_authorized_seconds": 43200,
+  "cost_scope": "completed controller events with completion time within original window, includes full duration/tokens for calls crossing window start; not all attempts or cash cost",
+  "completed_requests": 750,
+  "request_seconds": 22302.605631113052,
+  "usage": {
+    "input_tokens": 7018164,
+    "cached_input_tokens": 2834304,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 128827,
+    "reasoning_output_tokens": 65707
+  },
+  "cost_by_run": {
+    "medrax_visual_memory_v11": {
+      "finished_requests_in_window": 253,
+      "statuses": {
+        "ok": 253
+      },
+      "request_seconds": 12786.523118495941,
+      "usage": {
+        "input_tokens": 2231890,
+        "cached_input_tokens": 975744,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 39129,
+        "reasoning_output_tokens": 18775
+      },
+      "phase_counts": {
+        "case": 253
+      }
+    },
+    "medrax_postdraft_memory_v12": {
+      "finished_requests_in_window": 137,
+      "statuses": {
+        "ok": 137
+      },
+      "request_seconds": 2578.358319759369,
+      "usage": {
+        "input_tokens": 1195719,
+        "cached_input_tokens": 519552,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 27148,
+        "reasoning_output_tokens": 15158
+      },
+      "phase_counts": {
+        "case": 137
+      }
+    },
+    "medrax_tool_query_v13": {
+      "finished_requests_in_window": 99,
+      "statuses": {
+        "ok": 99
+      },
+      "request_seconds": 1790.6500704288483,
+      "usage": {
+        "input_tokens": 905958,
+        "cached_input_tokens": 392832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 16795,
+        "reasoning_output_tokens": 8639
+      },
+      "phase_counts": {
+        "policy_generation": 1,
+        "case": 98
+      }
+    },
+    "medrax_joint_query_v14": {
+      "finished_requests_in_window": 1,
+      "statuses": {
+        "ok": 1
+      },
+      "request_seconds": 39.86868500709534,
+      "usage": {
+        "input_tokens": 16126,
+        "cached_input_tokens": 4224,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 809,
+        "reasoning_output_tokens": 376
+      },
+      "phase_counts": {
+        "policy_generation": 1
+      }
+    },
+    "medrax_visual_focus_v15": {
+      "finished_requests_in_window": 110,
+      "statuses": {
+        "ok": 110
+      },
+      "request_seconds": 1994.9570894241333,
+      "usage": {
+        "input_tokens": 1317903,
+        "cached_input_tokens": 430848,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 18479,
+        "reasoning_output_tokens": 8926
+      },
+      "phase_counts": {
+        "policy_generation": 1,
+        "case": 109
+      }
+    },
+    "medrax_task_memory_v16": {
+      "finished_requests_in_window": 144,
+      "statuses": {
+        "ok": 144
+      },
+      "request_seconds": 2899.4065594673157,
+      "usage": {
+        "input_tokens": 1305085,
+        "cached_input_tokens": 489984,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 23463,
+        "reasoning_output_tokens": 11546
+      },
+      "phase_counts": {
+        "case": 144
+      }
+    },
+    "medrax_repairability_v17": {
+      "finished_requests_in_window": 6,
+      "statuses": {
+        "ok": 6
+      },
+      "request_seconds": 212.84178853034973,
+      "usage": {
+        "input_tokens": 45483,
+        "cached_input_tokens": 21120,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 3004,
+        "reasoning_output_tokens": 2287
+      },
+      "phase_counts": {
+        "bounded_single_review_diagnostic": 6
+      }
+    }
+  },
+  "new_full_agent_episodes_completed": 156,
+  "new_single_review_diagnostic_calls_completed": 6,
+  "v14_target_episodes_started": 0,
+  "confirmation_cases_used": 0,
+  "continual_medical_learning_established": false,
+  "independently_verified_tool_repair_established": false,
+  "new_learned_medical_skills_registered": 0,
+  "data_replacement_decided": false,
+  "final_individual_report_commit": "0031fa5",
+  "resource_scope": "run guards and exits are historical snapshots, not a final full filesystem peak audit; shared read-only weights not counted as new copies"
+}
