@@ -1,8 +1,10 @@
 # HCL multimodal reproduction — Qwen2.5-VL-7B
 
-[新的12小时自主实验窗口](medical_multimodal/AUTONOMY_12H_20261025.zh-CN.md)：2026-10-25 22:54至10-26 10:54（北京时间），恢复有界自主方法实验，替代此前只收尾安排；v11原协议与截止不变，E1审核前置条件仍未满足。
+[最新实验报告：供 Pro 审阅（2026-10-26）](medical_multimodal/PRO_REVIEW_REPORT_20261026.zh-CN.md)：汇总v4–v17结果、现有错误与工具可修复性、v17诊断限制及是否转向过程标注数据的待决问题；尚未证明持续学习或已验证skill收益。
 
-[最新医学 Agent 结果汇总（2026-10-25）](medical_multimodal/CURRENT_RESULTS_20261025.zh-CN.md)：v5–v10 共848实际回合、2629次订阅请求，尚无可信、可重复、可归因的记忆学习收益；v10名义+1未使用经验。汇总区分数据问题、受限方法实现与未证实的机制解释，v11仍在运行。
+[12小时窗口最终报告](medical_multimodal/reports/2026-10-25_12h/REPORT.zh-CN.md)：原2026-10-25 22:54:57至10-26 10:54:57窗口已结束，全部相关实验进程退出，唯一监测已删除；750次窗口内完成请求，96确认病例未触碰。
+
+[历史医学 Agent 结果汇总（截至2026-10-25）](medical_multimodal/CURRENT_RESULTS_20261025.zh-CN.md)：v5–v10共848实际回合、2629次订阅请求；其中v11运行状态是当时快照，当前结项结果以上述新报告为准。
 
 A resource-bounded reproduction of [Harness Continual Learning](https://arxiv.org/abs/2608.19013v2), based on [official code](https://github.com/RL-MIND/Harness-Continual-Learning) commit `a6e5a01536ac8d42ca28f0a82efa223869c8c48d`. **Not an exact paper-setting or paper-number replication.** The Chinese experimental report is [REPORT.md](REPORT.md); license/provenance are in [UPSTREAM.md](UPSTREAM.md).
 
