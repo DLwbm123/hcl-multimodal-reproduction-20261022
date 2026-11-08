@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "frozen_at_utc": "2026-11-08T14:50:25.493823+00:00",
+  "purpose": "24-source real-controller integration; not confirmation or proof of learned conditional policy",
+  "source_groups": 24,
+  "planned_episodes": 96,
+  "arms": [
+    "H0",
+    "Raw",
+    "Fixed",
+    "Proposed_v0"
+  ],
+  "selection": "Previously reserved method_development split; all 24 kept; no model outcome selection or replacement",
+  "data": "39 sanitized private images; final pixel review complete; original questions/targets unchanged; task annotations retained; patient independence unknown",
+  "score": "Final single-letter exact benchmark agreement; failures and missing outputs retained in denominator. Primary contrast Proposed_v0 vs Fixed. Separate source-aligned 7 and unresolved/conflicting 17; neither is independent clinical adjudication. Free-report negation parser is not used.",
+  "policy_status": "Proposed_v0 operation selected by earlier six-source paired feedback; applicability instructions manually specified, actual controller chooses from current task/observations; no learned conditional boundary or automatic method promotion claimed. Fixed has the same focused action plus reasonable skip/rejection rules.",
+  "raw_adaptation": "Old 48-record bank; unchanged stem Jaccard/top2/format, search both banks without evaluation-stage oracle; no online memory updates. Current source IDs excluded from old training.",
+  "shared": "Same actual six-tool native Agent, model, original images, tool limits, visual guard, one-image expert requests and token cap; only policy context differs. Distinct Agent/MemorySaver per episode; casewise cyclic arm order.",
+  "limits": {
+    "per_case_controller_calls": 8,
+    "per_case_tool_calls": 12,
+    "per_case_seconds": 600,
+    "request_timeout_seconds": 240,
+    "hard_hours": 8,
+    "max_subscription_calls": 768,
+    "remote_storage_stop_bytes": 4000000000,
+    "local_storage_stop_bytes": 1000000000
+  },
+  "decision": "No automatic promotion/confirmation from this pilot. Inspect task gain/loss and actual action use; do not treat unchanged action execution as learned conditional gain. All failures retained; no outcome-triggered retries or retuning within run.",
+  "confirmation_used": false,
+  "privacy": "No raw images/questions/answers/banks/per-case logs/source IDs publicly released",
+  "gpu": 1,
+  "host": "pro5000"
+}

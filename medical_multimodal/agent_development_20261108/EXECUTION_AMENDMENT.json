@@ -1,0 +1,23 @@
+{
+  "created_at_utc": "2026-11-08T15:02:38.722926+00:00",
+  "authorization": "User requested acceleration using GPUs 5 and 6",
+  "gpus": [
+    1,
+    5,
+    6
+  ],
+  "partitions": 3,
+  "sources_per_partition": 8,
+  "episodes_per_partition": 32,
+  "full_sources": 24,
+  "full_episodes": 96,
+  "before_repartitioning_controller_requests": 0,
+  "before_repartitioning_agent_episodes": 0,
+  "change": "Across-case scheduling only; within-case arm order unchanged; each partition loads identical tools/weights/configuration. Original clock and shared global call/storage budgets retained.",
+  "model_or_scoring_changes": false,
+  "confirmation_used": false,
+  "inference_retries": 0,
+  "counter": "File-locked global 768 subscription-call limit for concurrent transport",
+  "claim_boundary": "Development integration prototype; no learned conditional boundary claim",
+  "assignment": "Round-robin original source order, 4 single-image and 4 multi-image sources per GPU; retain original per-case arm rotation using execution_index"
+}

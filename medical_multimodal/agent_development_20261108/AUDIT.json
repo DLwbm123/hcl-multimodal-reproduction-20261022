@@ -1,0 +1,15 @@
+{
+  "remote": {
+    "allocated_bytes": 14721024,
+    "limit_exclusive": 50000000000,
+    "method": "allocated regular files without following shared links; includes neutral runtime caches and temporary directories"
+  },
+  "local": {
+    "allocated_bytes": 3670016,
+    "limit_exclusive": 50000000000
+  },
+  "all_prior_workers_absent": true,
+  "all_three_exit_codes": 0,
+  "aggregation_recomputed_once": true,
+  "all_96_unique_and_valid": true
+}

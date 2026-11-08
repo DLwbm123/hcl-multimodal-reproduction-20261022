@@ -1,0 +1,96 @@
+{
+  "arms": {
+    "H0": {
+      "tools": {
+        "chest_xray_expert": 36
+      },
+      "tool_status": {
+        "completed": 36
+      },
+      "qualified_expert_requests": 36,
+      "visual_contract_pass": 36,
+      "generation_by_model": {
+        "expert": 36
+      },
+      "controller_usage": {
+        "input_tokens": 632689,
+        "cached_input_tokens": 261888,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 10642,
+        "reasoning_output_tokens": 4744
+      },
+      "episodes_with_tool": 24
+    },
+    "Raw": {
+      "tools": {
+        "chest_xray_expert": 33,
+        "chest_xray_report_generator": 1
+      },
+      "tool_status": {
+        "completed": 34
+      },
+      "qualified_expert_requests": 33,
+      "visual_contract_pass": 33,
+      "generation_by_model": {
+        "expert": 33,
+        "findings": 1,
+        "impression": 1
+      },
+      "controller_usage": {
+        "input_tokens": 693253,
+        "cached_input_tokens": 270336,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 11285,
+        "reasoning_output_tokens": 5486
+      },
+      "episodes_with_tool": 24
+    },
+    "Fixed": {
+      "tools": {
+        "chest_xray_expert": 33
+      },
+      "tool_status": {
+        "completed": 33
+      },
+      "qualified_expert_requests": 33,
+      "visual_contract_pass": 33,
+      "generation_by_model": {
+        "expert": 33
+      },
+      "controller_usage": {
+        "input_tokens": 661399,
+        "cached_input_tokens": 253440,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 10937,
+        "reasoning_output_tokens": 5515
+      },
+      "episodes_with_tool": 24
+    },
+    "Proposed_v0": {
+      "tools": {
+        "chest_xray_expert": 31
+      },
+      "tool_status": {
+        "completed": 31
+      },
+      "qualified_expert_requests": 31,
+      "visual_contract_pass": 31,
+      "generation_by_model": {
+        "expert": 31
+      },
+      "controller_usage": {
+        "input_tokens": 651950,
+        "cached_input_tokens": 244992,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 11259,
+        "reasoning_output_tokens": 5880
+      },
+      "episodes_with_tool": 24
+    }
+  },
+  "controller_calls": 294,
+  "all_controller_ok": true,
+  "exact_focused_match_only": true,
+  "all_six_tools_loaded_but_only_two_tool_types_used": true,
+  "clinical_claim": false
+}

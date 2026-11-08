@@ -1,0 +1,142 @@
+{
+  "planned_episodes": 96,
+  "recorded_episodes": 96,
+  "metrics": {
+    "H0": {
+      "denominator": 24,
+      "completed": 24,
+      "correct": 24,
+      "controller_calls": 72,
+      "tool_calls": 36,
+      "seconds": 1931.4959456920624,
+      "focused_requests": 0
+    },
+    "Raw": {
+      "denominator": 24,
+      "completed": 24,
+      "correct": 24,
+      "controller_calls": 76,
+      "tool_calls": 34,
+      "seconds": 2051.064481973648,
+      "focused_requests": 0
+    },
+    "Fixed": {
+      "denominator": 24,
+      "completed": 24,
+      "correct": 24,
+      "controller_calls": 74,
+      "tool_calls": 33,
+      "seconds": 1920.6372821331024,
+      "focused_requests": 4
+    },
+    "Proposed_v0": {
+      "denominator": 24,
+      "completed": 24,
+      "correct": 24,
+      "controller_calls": 72,
+      "tool_calls": 31,
+      "seconds": 1939.8829374313354,
+      "focused_requests": 0
+    }
+  },
+  "paired": {
+    "all_benchmark_targets": {
+      "H0_to_Proposed_v0": {
+        "denominator": 24,
+        "gain": 0,
+        "loss": 0
+      },
+      "Raw_to_Proposed_v0": {
+        "denominator": 24,
+        "gain": 0,
+        "loss": 0
+      },
+      "Fixed_to_Proposed_v0": {
+        "denominator": 24,
+        "gain": 0,
+        "loss": 0
+      }
+    },
+    "source_aligned_not_adjudicated": {
+      "H0_to_Proposed_v0": {
+        "denominator": 7,
+        "gain": 0,
+        "loss": 0
+      },
+      "Raw_to_Proposed_v0": {
+        "denominator": 7,
+        "gain": 0,
+        "loss": 0
+      },
+      "Fixed_to_Proposed_v0": {
+        "denominator": 7,
+        "gain": 0,
+        "loss": 0
+      }
+    },
+    "unresolved_or_conflicting_reference": {
+      "H0_to_Proposed_v0": {
+        "denominator": 17,
+        "gain": 0,
+        "loss": 0
+      },
+      "Raw_to_Proposed_v0": {
+        "denominator": 17,
+        "gain": 0,
+        "loss": 0
+      },
+      "Fixed_to_Proposed_v0": {
+        "denominator": 17,
+        "gain": 0,
+        "loss": 0
+      }
+    }
+  },
+  "confirmation_used": false,
+  "clinical_correctness_established": false,
+  "learned_conditional_boundary_established": false,
+  "automatic_promotion_allowed": false,
+  "purpose": "real-controller development integration; benchmark concordance, not clinical validation",
+  "finished_at": 1794153039.6302688,
+  "partitions": [
+    {
+      "partition": "w0",
+      "gpu": 1,
+      "episodes": 32,
+      "tools_loaded": true,
+      "exit": {
+        "time": 1794152939.4556434,
+        "worker_exit_code": 0,
+        "guard_stop_reason": null
+      },
+      "error": null
+    },
+    {
+      "partition": "w1",
+      "gpu": 5,
+      "episodes": 32,
+      "tools_loaded": true,
+      "exit": {
+        "time": 1794152954.482698,
+        "worker_exit_code": 0,
+        "guard_stop_reason": null
+      },
+      "error": null
+    },
+    {
+      "partition": "w2",
+      "gpu": 6,
+      "episodes": 32,
+      "tools_loaded": true,
+      "exit": {
+        "time": 1794153039.5673058,
+        "worker_exit_code": 0,
+        "guard_stop_reason": null
+      },
+      "error": null
+    }
+  ],
+  "seconds_since_original_start": 3550.1729555130005,
+  "complete": true,
+  "execution_amendment": "User requested GPUs 5 and 6; 3 partitions of 8 sources, same within-case arm order; no prior episodes restarted."
+}

@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "planned_inputs": 24,
+  "planned_episodes": 96,
+  "gold_excluded_from_controller_inputs": true,
+  "missing_failure_denominator_check": true,
+  "duplicate_episode_rejected": true,
+  "actual_model_execution_tested": false
+}

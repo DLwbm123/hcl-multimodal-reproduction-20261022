@@ -1,0 +1,5 @@
+private/
+outputs/
+partitions/
+*.log
+*.private.json
