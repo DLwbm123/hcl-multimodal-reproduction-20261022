@@ -1,0 +1,15 @@
+{
+  "planned_cells": 4,
+  "completed_cells": 4,
+  "model_generation_attempts": 4,
+  "source_images": 2,
+  "token_budget_pass": 4,
+  "identical_across_images_for_each_prompt": true,
+  "same_image_responses_differ_between_prompts": true,
+  "clinical_truth_established": false,
+  "image_independence_not_proven_by_text": true,
+  "elapsed_seconds_including_preparation_and_zero_inference_failures": 318.24885416030884,
+  "allocated_bytes_final_guard": 30781440,
+  "startup_failures_before_inference": 2,
+  "worker_exit_code": 0
+}

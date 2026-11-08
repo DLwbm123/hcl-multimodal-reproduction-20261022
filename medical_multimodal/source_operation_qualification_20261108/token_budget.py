@@ -30,4 +30,3 @@ def encode_checked(tokenizer, image_paths, prompt, max_new_tokens, configured_co
     )
     decision = check_budget(int(tokens.shape[1]), max_new_tokens, configured_context)
     return (tokens if decision["admissible"] else None), decision
-

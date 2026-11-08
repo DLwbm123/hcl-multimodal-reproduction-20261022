@@ -1,0 +1,19 @@
+{
+  "planned_cells": 8,
+  "completed_cells": 8,
+  "new_model_generation_calls": 8,
+  "original_calls": 4,
+  "original_visual_encoder_calls": 0,
+  "adapted_calls": 4,
+  "adapted_visual_encoder_calls": 4,
+  "all_original_prefills_empty_dynamic_cache": true,
+  "all_adapted_calls_encode_exact_current_image": true,
+  "declared_gate_pass": true,
+  "paired_outputs_changed": 4,
+  "clinical_correctness_established": false,
+  "learning_gain_established": false,
+  "scope": "pinned CheXagent assets with Transformers4.51.3, two screened source images and two prompts; historical impact requires runtime provenance audit",
+  "elapsed_seconds_including_preparation": 47.0211820602417,
+  "allocated_bytes_last_guard": 438272,
+  "worker_exit_code": 0
+}

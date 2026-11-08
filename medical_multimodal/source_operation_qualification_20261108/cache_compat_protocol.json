@@ -1,0 +1,34 @@
+{
+  "frozen_at_utc": "2026-11-08T13:29:50.821229+00:00",
+  "hypothesis": "Transformers 4.51.3 empty DynamicCache at first forward bypasses pinned CheXagent None-only visual branch",
+  "selected_images": 2,
+  "source": "same two approved source images as d1; no selection using new d2 outputs",
+  "prompts": {
+    "describe": "Describe the chest X-ray findings.",
+    "question": "What abnormalities are visible in this chest X-ray?"
+  },
+  "variants": [
+    "unmodified",
+    "normalize_empty_prefill"
+  ],
+  "max_new_tokens": 256,
+  "planned_generation_calls": 8,
+  "endpoint": "visual.encode call count on prefill; cache type/length; current-image count and feature shape; completion and output differences secondary",
+  "success_gate": "all 4 original cells have image_start_tokens=1, cache DynamicCache length0, visual_calls=0; all 4 adapted cells completed with exactly1 normalization and1 visual encode call on1 current image; nonempty decode caches not normalized",
+  "unchanged": [
+    "weights",
+    "tokenizer",
+    "images",
+    "prompt",
+    "sampling",
+    "output token cap",
+    "attention/padding defaults"
+  ],
+  "no_clinical_gold": true,
+  "clinical_correctness_not_inferred": true,
+  "confirmation_used": false,
+  "timeout_seconds": 3600,
+  "storage_limit_bytes": 100000000,
+  "failure_policy": "preserve all8 cells; no prompt or data tuning; no repeated model failures without new evidence",
+  "scope": "compatibility diagnosis and shared tool repair; not learned method or medical efficacy"
+}
