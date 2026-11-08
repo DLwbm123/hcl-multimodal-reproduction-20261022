@@ -1,0 +1,27 @@
+{
+  "name": "MedCTA source-derived OCR harness development pilot",
+  "started_epoch": 1794136200.186143,
+  "hard_deadline_epoch": 1794143400.186143,
+  "model": "gpt-6.1-sol",
+  "reasoning": "high",
+  "max_subscription_calls": 25,
+  "own_stop_new_bytes": 100000000,
+  "source": 4,
+  "development": 6,
+  "validation_reserved": 12,
+  "confirmation_reserved": 68,
+  "selection": "seed 20261108; OCR present, GoogleSearch absent; image paths unique; labels not used in membership selection; patient and original source grouping unavailable",
+  "candidate": "one source-trajectory-derived general OCR usage policy generated before development; at most 1200 chars; no retune",
+  "control": "same controller, image, OCR access, call budget and final-answer contract without learned policy",
+  "tool": "local Tesseract OCR computed from current image only, exposed once if requested; evidence not automatically medical truth",
+  "arms": [
+    "no_experience",
+    "source_policy"
+  ],
+  "arm_order": "alternates by index",
+  "primary": "strict normalized exact whitelist match and exact blacklist avoidance, conservative proxy; report paired gain/loss and all failures; no clinical claim",
+  "secondary": "OCR invocation/completion, current-image evidence exposure, time/calls, outputs for private adjudication",
+  "confirmation": "none; held-out validation and confirmation labels not read",
+  "limits": "25 total calls; <=2 calls per case-arm; 2 hour original deadline; own allocated files below 100 MB; shared data read-only; no GPU",
+  "public_boundary": "no raw images, questions, answers, trajectories, case IDs, credentials or individual outputs"
+}

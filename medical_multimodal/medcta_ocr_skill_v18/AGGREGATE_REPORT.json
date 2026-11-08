@@ -1,0 +1,19 @@
+{
+  "completed": true,
+  "cases": 6,
+  "cells": 12,
+  "strict_exact_control": 0,
+  "strict_exact_policy": 0,
+  "gain": 0,
+  "loss": 0,
+  "strict_metric_note": "Exact whitelist text only: undercounts semantically correct answers; not clinical ground truth or independent patient confirmation.",
+  "ocr_calls": {
+    "no_experience": 0,
+    "source_policy": 0
+  },
+  "calls_used": 13,
+  "validation_used": false,
+  "confirmation_used": false,
+  "patient_independence": "unknown",
+  "causal_qualification": "development only; learned policy not matched in token length; baseline and candidate share tools and max calls"
+}

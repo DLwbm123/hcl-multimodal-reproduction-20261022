@@ -1,0 +1,10 @@
+{
+  "time": 1794136604.33773,
+  "complete": true,
+  "fatal": null,
+  "completed_cells": 12,
+  "planned_cells": 12,
+  "calls_used": 13,
+  "new_allocated_bytes": 798720,
+  "elapsed_seconds": 404.1525912284851
+}
