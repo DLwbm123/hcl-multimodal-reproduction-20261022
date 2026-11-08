@@ -1,0 +1,38 @@
+{
+  "frozen_at_utc": "2026-11-08T13:47:00.219718+00:00",
+  "hypothesis": "A focused question about airspace opacity can improve concordance with source figure findings over general description on repaired visual tool",
+  "purpose": "source action qualification for later conditional experience; candidate action diagnostic, not final method or transfer test",
+  "prior_exposure": "all7 source views previously exposed; two also used D1-D3; no independent confirmation claims",
+  "reference": "original MedRAX Eurorad metadata filtered to two existing training source groups; broad findings cross-checked against indexed official pages; references never passed to model",
+  "source_groups": 2,
+  "image_views": 7,
+  "independent_patient_count_known": false,
+  "same_group_views_not_independent": true,
+  "arms": {
+    "describe": "Describe the chest X-ray findings.",
+    "focused": "Does this chest X-ray show airspace opacity or consolidation? Answer yes or no."
+  },
+  "max_new_tokens": 256,
+  "planned_cells": 14,
+  "same_weights_images_decoding_budget": true,
+  "cache_fix_all_arms": true,
+  "token_guard_all_arms": true,
+  "max_controller_calls": 0,
+  "primary_metric": "source-report-concordant broad opacity presence, conservative text parser; unknown counts incorrect, all cells retained",
+  "secondary": [
+    "paired gain/loss",
+    "unknown outputs",
+    "actual visual encoding",
+    "per-source-group net gain",
+    "generation cost"
+  ],
+  "candidate_gate": "complete14; no losses and at least2 gains, with a gain in each of2 source groups; otherwise no promotion",
+  "clinical_truth_established": false,
+  "protected_confirmation_used": false,
+  "privacy": "7 locally screened versions; possible peripheral identifying strings masked; source-only, private; no original images or per-case results published",
+  "timeout_seconds": 1800,
+  "storage_limit_bytes": 100000000,
+  "storage_stop_bytes": 90000000,
+  "retry_policy": "keep failure; no extra query search or automatic costly rerun",
+  "failure_next_step": "reject this candidate if gate fails; analyze observation/wording limits without rewriting frozen scores"
+}

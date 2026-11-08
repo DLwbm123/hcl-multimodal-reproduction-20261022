@@ -1,0 +1,54 @@
+{
+  "metrics": {
+    "describe": {
+      "denominator": 7,
+      "correct": 4,
+      "unknown": 3,
+      "completed": 7
+    },
+    "focused": {
+      "denominator": 7,
+      "correct": 7,
+      "unknown": 0,
+      "completed": 7
+    }
+  },
+  "paired_gain": 3,
+  "paired_loss": 0,
+  "source_groups": 2,
+  "group_counts": [
+    {
+      "views": 3,
+      "gain": 0,
+      "loss": 0
+    },
+    {
+      "views": 4,
+      "gain": 3,
+      "loss": 0
+    }
+  ],
+  "complete": true,
+  "candidate_gate_pass": false,
+  "metric_is_report_concordance_proxy": true,
+  "clinical_accuracy_established": false,
+  "learning_or_transfer_established": false,
+  "runtime": {
+    "finished_at": 1794145751.6146286,
+    "planned_cells": 14,
+    "completed_cells": 14,
+    "fatal": null,
+    "generation_attempts": 14,
+    "visual_calls": 14,
+    "controller_model_calls": 0,
+    "source_groups": 2,
+    "image_views": 7,
+    "clinical_accuracy_evaluated": false,
+    "learning_evaluated": false
+  },
+  "elapsed_seconds_including_preparation": 131.39491057395935,
+  "allocated_bytes_last_guard": 1036288,
+  "worker_exit_code": 0,
+  "all_gains_from_unknown_descriptions": true,
+  "decision": "Do not promote: the prespecified cross-source gain condition failed; test output-contract confound on disjoint development sources"
+}

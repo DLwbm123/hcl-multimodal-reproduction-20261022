@@ -1,0 +1,13 @@
+{
+  "candidate_status": "qualified_for_agent_development_only",
+  "selection_reason": "qualified_by_new_development_gate",
+  "accepted_route": "selected_development_operation",
+  "unsupported_predicate_rejected": true,
+  "multiview_rejected": true,
+  "unreviewed_image_rejected": true,
+  "gate_failure_does_not_overwrite": true,
+  "earlier_failed_source_gate_preserved": true,
+  "runtime_intent_inference_implemented": false,
+  "actual_llm_controller_using_entry_tested": false,
+  "method_advantage_over_focused_fixed_established": false
+}

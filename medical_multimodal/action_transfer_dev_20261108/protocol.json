@@ -1,0 +1,34 @@
+{
+  "frozen_at_utc": "2026-11-08T13:53:08.785405+00:00",
+  "purpose": "Source-disjoint development challenge plus explicit output-contract control; candidate operation diagnostic, not learned method confirmation",
+  "hypothesis": "Focused action should improve source-report concordance beyond generic reporting and a report with explicit target output contract if it has more than formatting value",
+  "selection": "Exclude180 known source groups from v9 members/inputs and v4 panel, including all96 reserved confirmation groups; among remaining original source metadata, take first3 explicitly normal CXR figures and first3 explicit airspace/consolidation CXR figures by numeric source-case order; one view per group; all6 passed pixel/metadata review; no model outcomes used",
+  "source_groups": 6,
+  "image_views": 6,
+  "reference_class_counts": {
+    "present": 3,
+    "absent": 3
+  },
+  "selection_is_stratified_not_representative": true,
+  "patient_independence_not_verified": true,
+  "reference": "Original upstream Eurorad figure captions; report-derived proxy, not new specialist adjudication; not sent to tool",
+  "arms": {
+    "describe": "Describe the chest X-ray findings.",
+    "focused": "Does this chest X-ray show airspace opacity or consolidation? Answer yes or no.",
+    "report_with_decision": "Describe the chest X-ray findings. Then finish with exactly one of these statements: Airspace opacity or consolidation: yes. Airspace opacity or consolidation: no. Airspace opacity or consolidation: uncertain."
+  },
+  "max_new_tokens": 256,
+  "planned_cells": 18,
+  "shared_visual_fix": true,
+  "max_controller_calls": 0,
+  "score": "Frozen first-study parser for describe/focused; report_with_decision requires exactly one final explicit target statement; unknown counts incorrect; full denominator",
+  "candidate_gate": "complete18; focused versus report_with_decision gains>=2, losses=0; focused correctly rejects all3 explicit-normal source references; otherwise no experience promotion",
+  "source_study_gate_not_overridden": true,
+  "interpretation": "First study gains were all unknown-to-explicit outputs concentrated in one source; do not label them corrected clinical mistakes. This control diagnoses that confound.",
+  "protected_confirmation_used": false,
+  "timeout_seconds": 1800,
+  "storage_limit_bytes": 100000000,
+  "storage_stop_bytes": 90000000,
+  "retry_policy": "No prompt adjustment or additional calls within this panel; retain failures",
+  "privacy": "Metadata stripped, locally reviewed private images; public aggregate only"
+}

@@ -1,0 +1,64 @@
+{
+  "metrics": {
+    "describe": {
+      "denominator": 6,
+      "correct": 3,
+      "unknown": 3,
+      "completed": 6,
+      "negative_reference_correct": 2
+    },
+    "focused": {
+      "denominator": 6,
+      "correct": 6,
+      "unknown": 0,
+      "completed": 6,
+      "negative_reference_correct": 3
+    },
+    "report_with_decision": {
+      "denominator": 6,
+      "correct": 2,
+      "unknown": 1,
+      "completed": 6,
+      "negative_reference_correct": 2
+    }
+  },
+  "paired": {
+    "describe_to_focused": {
+      "gain": 3,
+      "loss": 0
+    },
+    "report_with_decision_to_focused": {
+      "gain": 4,
+      "loss": 0
+    }
+  },
+  "complete": true,
+  "candidate_gate_pass": true,
+  "report_concordance_proxy_only": true,
+  "clinical_accuracy_established": false,
+  "learning_established": false,
+  "runtime": {
+    "finished_at": 1794146061.01824,
+    "planned_cells": 18,
+    "completed_cells": 18,
+    "fatal": null,
+    "generation_attempts": 18,
+    "visual_calls": 18,
+    "controller_model_calls": 0,
+    "source_groups": 6,
+    "image_views": 6,
+    "clinical_accuracy_evaluated": false,
+    "learning_evaluated": false
+  },
+  "elapsed_seconds_including_preparation": 72.23283505439758,
+  "allocated_bytes_last_guard": 847872,
+  "worker_exit_code": 0,
+  "reference_classes": {
+    "positive": 3,
+    "negative": 3
+  },
+  "excluded_known_source_groups": 180,
+  "protected_confirmation_groups_excluded": 96,
+  "decision": "Qualify narrow focused operation for agent development only; no full-agent learning claim; strong Fixed must use focused action",
+  "report_control_discordant_explicit_outputs": 3
+}
