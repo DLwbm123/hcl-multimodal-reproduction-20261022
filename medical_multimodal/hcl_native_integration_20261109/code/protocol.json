@@ -1,0 +1,73 @@
+{
+  "version": 1,
+  "purpose": "One bounded two-stage end-to-end integration, not new-method efficacy or independent confirmation",
+  "parent_commit": "297e1a9",
+  "source_groups": 24,
+  "privacy": "Reuse exactly the 39 already sanitized and visually reviewed images; no new images or protected sources",
+  "stages": {
+    "A": "Existing single-image development stratum, 12 sources",
+    "B": "Existing multi-image development stratum, 12 sources"
+  },
+  "task_boundary": "Engineering replay of existing single/multiple-image strata; NOT the old v5 diagnosis/comparison task definition and not a new clinical task or independent task-generalization test",
+  "roles_per_stage": {
+    "train": 4,
+    "selection": 4,
+    "anchor": 2,
+    "report": 2
+  },
+  "role_seed_A": 20261109,
+  "role_seed_B": 20261110,
+  "exposure": "All 24 sources have already appeared in the preceding four-arm development run. New role separation is within-run only; all reported results are exposed development replay.",
+  "components": {
+    "input_interface": "Existing TaskInterface, rule mode, fixed",
+    "memory": "Existing ExperienceMemory, raw plus LLM abstraction, one candidate per stage",
+    "capabilities": "Same six native tools and historical focused operation as known common prior; original skill evolution optional, min_source_tasks=2, empty allowed",
+    "routing": "Existing Router semantic zero-to-two selection; at most one Optimizer-generated memory_selector artifact per stage",
+    "workflow": "Fixed native MedRAX graph; no graph surgery"
+  },
+  "candidate_order": [
+    "memory",
+    "memory_plus_selector"
+  ],
+  "candidate_design": "Both candidates originate from same deployed incoming state. Second reuses exactly the one memory proposal plus one generated memory_selector artifact. Evaluate both; commit highest admissible current score, tie favor memory-only. This joint alternative is declared, not two sequential accepted updates.",
+  "gate": {
+    "current_correct_gain_min": 1,
+    "historical_correct_to_wrong_max": 0,
+    "require_all_reference_and_candidate_finals_valid": true,
+    "selection_count": 4,
+    "historical_anchor_count_B": 2,
+    "default_optimizer_20_15_anchor_gate": "not invoked; explicit native binary gate uses exact frozen counts, no screening or skip"
+  },
+  "evaluation": "Training feedback only goes to proposal generation. Selection/anchor labels evaluator-only; report labels loaded after all states/predictions freeze. No test forgetting probes. No prediction cache. Native episodes and temporary memory state are read-only relative to the evaluated snapshot.",
+  "baseline": "H0 and strong Fixed re-run on report cases under same visual repair/native budgets. S0 has the same known focused prior as Fixed; empty-memory S0 uses exact same context as Fixed. Do not import old scores as new controls.",
+  "report_states": [
+    "S0",
+    "SA",
+    "SAB"
+  ],
+  "report_denominators": {
+    "A": 2,
+    "B": 2
+  },
+  "planned_max_native_episodes": 54,
+  "limits": {
+    "per_case_controller_calls": 8,
+    "per_case_tool_calls": 12,
+    "per_case_seconds": 600,
+    "request_timeout_seconds": 240,
+    "max_router_calls_per_case": 4,
+    "max_subscription_calls": 800,
+    "hard_hours": 7,
+    "remote_storage_stop_bytes": 4000000000,
+    "local_storage_stop_bytes": 1000000000
+  },
+  "stop": "One run only; no result-driven thresholds, new samples, forced commits, extra candidates, or retry of completed episodes. At hard deadline preserve full denominators. No new experiments after 2026-11-09 09:22 Asia/Shanghai; remaining preparation is code/trace/report work.",
+  "engineering_success": "Both stages execute real interactions; >=1 changed legal candidate per stage gets real selection evaluation; B real historical-anchor evaluation; gate decision and atomic state save/reload; terminal read-only report and explicit aliases. All candidates rejected is valid closure; all skipped is NOT.",
+  "clinical_claim": false,
+  "new_learning_effect_required": false,
+  "protected_sets_used": false,
+  "public_boundary": "Only code/config/aggregate/report, never images/questions/answers/source IDs/memory or individual traces",
+  "episode_accounting": "8 training + 8 reference-selection + 2 reference-anchors + 16 candidate-selection + 4 candidate-anchors + up to16 report (H0,Fixed,SA,SAB; S0 aliases Fixed). Invalid/unavailable selector reduces executed calls, but remains disclosed. B anchors only from A.",
+  "frozen_at_epoch": 1794153838.175026,
+  "planned_episodes": 54
+}

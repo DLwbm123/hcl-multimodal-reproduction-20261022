@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "scope": "synthetic CPU tests only",
+  "checks": [
+    "gain gate",
+    "anchor loss not offset",
+    "missing denominator rejected",
+    "failed output rejected",
+    "uncommitted/interrupted pointer recovery",
+    "rejection preserves deployed state",
+    "accepted snapshot reload",
+    "current labels and task identity excluded from visible interface",
+    "real Router schema/materialization and read-only memory with synthetic selector"
+  ],
+  "preflight": {
+    "sources": 24,
+    "role_counts": {
+      "train": 4,
+      "selection": 4,
+      "anchor": 2,
+      "report": 2
+    },
+    "historical_anchors_B": 2,
+    "no_test_probe": true,
+    "prediction_cache_disabled": true,
+    "within_run_roles_disjoint": true,
+    "all_sources_previously_exposed": true,
+    "privacy_approved": true,
+    "paths_checked": false
+  }
+}

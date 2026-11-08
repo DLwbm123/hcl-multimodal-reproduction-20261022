@@ -1,0 +1,14 @@
+{
+  "model": "gpt-6.1-sol",
+  "reasoning": "high",
+  "max_subscription_calls": 800,
+  "hard_hours": 7,
+  "run_role": "exposed development engineering replay",
+  "native_entry": "code/worker.py",
+  "private_requirements": [
+    "approved images and role-separated inputs/labels",
+    "legal local model assets and upstream MedRAX checkout",
+    "authenticated transport configuration"
+  ],
+  "self_contained_private_reproduction": false
+}

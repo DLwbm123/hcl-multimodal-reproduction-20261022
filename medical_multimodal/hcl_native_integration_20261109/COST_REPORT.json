@@ -1,0 +1,25 @@
+{
+  "controller_requests": 146,
+  "native_controller_requests": 122,
+  "hcl_metadata_requests": 24,
+  "proposal_requests": 4,
+  "routing_requests": 20,
+  "controller_usage": {
+    "input_tokens": 1330598,
+    "cached_input_tokens": 587136,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 24231,
+    "reasoning_output_tokens": 12796
+  },
+  "usage_note": "Cached input is a subset of input; reasoning output is a subset of output. Do not add these twice.",
+  "tool_calls": {
+    "chest_xray_expert": 35,
+    "chest_xray_report_generator": 1
+  },
+  "tool_generation_calls": 37,
+  "tool_output_tokens": 850,
+  "tool_token_note": "Separate local tool-model output count; not part of subscription controller usage.",
+  "episodes_with_tool_calls": 28,
+  "seconds_from_original_start": 3715.022587299347,
+  "cash_cost": null
+}

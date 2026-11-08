@@ -1,0 +1,26 @@
+{
+  "engineering_complete": true,
+  "all_46_episodes_valid": true,
+  "four_candidates_really_evaluated": true,
+  "both_B_candidates_used_two_A_anchors": true,
+  "read_only_checks": 46,
+  "nonempty_candidate_memory_selections": 20,
+  "all_candidate_evaluations_restored_incoming": true,
+  "S0_SA_SAB_contents_equal": true,
+  "accepted_updates": 0,
+  "acquired_A_retention_is_null": true,
+  "expert_visual_encoding_passes": 35,
+  "worker_exit_code": 0,
+  "clinical_validity_established": false,
+  "learning_benefit_established": false,
+  "report_actual_unique_execution_arms": [
+    "H0",
+    "Fixed"
+  ],
+  "report_state_aliases": {
+    "S0": "Fixed",
+    "SA": "Fixed",
+    "SAB": "Fixed"
+  },
+  "source_scope": "24 previously exposed development sources; protected sets unused"
+}

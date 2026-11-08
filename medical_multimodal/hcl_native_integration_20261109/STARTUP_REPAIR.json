@@ -1,0 +1,8 @@
+{
+  "time": 1794154032.794028,
+  "error": "Supervisor missing PYTHONPATH for storage_guard",
+  "model_calls": 0,
+  "worker_started": false,
+  "fix": "Set code directory in supervisor environment before import",
+  "original_clock_retained": true
+}

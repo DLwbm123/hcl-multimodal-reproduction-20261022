@@ -1,0 +1,336 @@
+{
+  "metrics": {
+    "H0": {
+      "A": {
+        "denominator": 2,
+        "correct": 2,
+        "completed": 2,
+        "valid_final": 2
+      },
+      "B": {
+        "denominator": 2,
+        "correct": 2,
+        "completed": 2,
+        "valid_final": 2
+      }
+    },
+    "Fixed": {
+      "A": {
+        "denominator": 2,
+        "correct": 2,
+        "completed": 2,
+        "valid_final": 2
+      },
+      "B": {
+        "denominator": 2,
+        "correct": 2,
+        "completed": 2,
+        "valid_final": 2
+      }
+    },
+    "S0": {
+      "A": {
+        "denominator": 2,
+        "correct": 2,
+        "completed": 2,
+        "valid_final": 2
+      },
+      "B": {
+        "denominator": 2,
+        "correct": 2,
+        "completed": 2,
+        "valid_final": 2
+      }
+    },
+    "SA": {
+      "A": {
+        "denominator": 2,
+        "correct": 2,
+        "completed": 2,
+        "valid_final": 2
+      },
+      "B": {
+        "denominator": 2,
+        "correct": 2,
+        "completed": 2,
+        "valid_final": 2
+      }
+    },
+    "SAB": {
+      "A": {
+        "denominator": 2,
+        "correct": 2,
+        "completed": 2,
+        "valid_final": 2
+      },
+      "B": {
+        "denominator": 2,
+        "correct": 2,
+        "completed": 2,
+        "valid_final": 2
+      }
+    }
+  },
+  "paired": {
+    "H0_to_SAB": {
+      "A": {
+        "denominator": 2,
+        "gain": 0,
+        "loss": 0
+      },
+      "B": {
+        "denominator": 2,
+        "gain": 0,
+        "loss": 0
+      }
+    },
+    "Fixed_to_SAB": {
+      "A": {
+        "denominator": 2,
+        "gain": 0,
+        "loss": 0
+      },
+      "B": {
+        "denominator": 2,
+        "gain": 0,
+        "loss": 0
+      }
+    },
+    "S0_to_SA": {
+      "A": {
+        "denominator": 2,
+        "gain": 0,
+        "loss": 0
+      },
+      "B": {
+        "denominator": 2,
+        "gain": 0,
+        "loss": 0
+      }
+    },
+    "SA_to_SAB": {
+      "A": {
+        "denominator": 2,
+        "gain": 0,
+        "loss": 0
+      },
+      "B": {
+        "denominator": 2,
+        "gain": 0,
+        "loss": 0
+      }
+    }
+  },
+  "retention": {
+    "acquired_A_count": 0,
+    "acquired_A_lost": null,
+    "acquired_A_retention": null,
+    "base_A_count": 2,
+    "base_A_lost": 0
+  },
+  "state_aliases": {
+    "S0": "Fixed",
+    "SA": "Fixed",
+    "SAB": "Fixed"
+  },
+  "development_replay_only": true,
+  "clinical_correctness_established": false,
+  "fatal": null,
+  "engineering_loop_complete": true,
+  "decisions": {
+    "A": {
+      "candidates": [
+        {
+          "accept": false,
+          "reasons": [
+            "no_positive_current_gain"
+          ],
+          "current_denominator": 4,
+          "before_correct": 4,
+          "after_correct": 4,
+          "current_gain": 0,
+          "anchor_denominator": 0,
+          "anchor_protected": 0,
+          "anchor_losses": 0,
+          "anchor_recovered": 0,
+          "candidate": "memory",
+          "diff": {
+            "changed_top_level_fields": [
+              "version",
+              "memory"
+            ],
+            "memory_counts_before": {
+              "raw": 0,
+              "abstract": 0,
+              "anchor": 0,
+              "skills": 0
+            },
+            "memory_counts_after": {
+              "raw": 4,
+              "abstract": 2,
+              "anchor": 0,
+              "skills": 0
+            },
+            "selector_changed": false
+          },
+          "restored_incoming_after_evaluation": true
+        },
+        {
+          "accept": false,
+          "reasons": [
+            "no_positive_current_gain"
+          ],
+          "current_denominator": 4,
+          "before_correct": 4,
+          "after_correct": 4,
+          "current_gain": 0,
+          "anchor_denominator": 0,
+          "anchor_protected": 0,
+          "anchor_losses": 0,
+          "anchor_recovered": 0,
+          "candidate": "memory_plus_selector",
+          "diff": {
+            "changed_top_level_fields": [
+              "version",
+              "memory",
+              "memory_selector"
+            ],
+            "memory_counts_before": {
+              "raw": 0,
+              "abstract": 0,
+              "anchor": 0,
+              "skills": 0
+            },
+            "memory_counts_after": {
+              "raw": 4,
+              "abstract": 2,
+              "anchor": 0,
+              "skills": 0
+            },
+            "selector_changed": true
+          },
+          "restored_incoming_after_evaluation": true
+        }
+      ],
+      "selected": null,
+      "accepted": false,
+      "diff": {
+        "changed_top_level_fields": [],
+        "memory_counts_before": {
+          "raw": 0,
+          "abstract": 0,
+          "anchor": 0,
+          "skills": 0
+        },
+        "memory_counts_after": {
+          "raw": 0,
+          "abstract": 0,
+          "anchor": 0,
+          "skills": 0
+        },
+        "selector_changed": false
+      }
+    },
+    "B": {
+      "candidates": [
+        {
+          "accept": false,
+          "reasons": [
+            "no_positive_current_gain"
+          ],
+          "current_denominator": 4,
+          "before_correct": 4,
+          "after_correct": 4,
+          "current_gain": 0,
+          "anchor_denominator": 2,
+          "anchor_protected": 2,
+          "anchor_losses": 0,
+          "anchor_recovered": 0,
+          "candidate": "memory",
+          "diff": {
+            "changed_top_level_fields": [
+              "version",
+              "memory"
+            ],
+            "memory_counts_before": {
+              "raw": 0,
+              "abstract": 0,
+              "anchor": 0,
+              "skills": 0
+            },
+            "memory_counts_after": {
+              "raw": 4,
+              "abstract": 2,
+              "anchor": 0,
+              "skills": 0
+            },
+            "selector_changed": false
+          },
+          "restored_incoming_after_evaluation": true
+        },
+        {
+          "accept": false,
+          "reasons": [
+            "no_positive_current_gain"
+          ],
+          "current_denominator": 4,
+          "before_correct": 4,
+          "after_correct": 4,
+          "current_gain": 0,
+          "anchor_denominator": 2,
+          "anchor_protected": 2,
+          "anchor_losses": 0,
+          "anchor_recovered": 0,
+          "candidate": "memory_plus_selector",
+          "diff": {
+            "changed_top_level_fields": [
+              "version",
+              "memory",
+              "memory_selector"
+            ],
+            "memory_counts_before": {
+              "raw": 0,
+              "abstract": 0,
+              "anchor": 0,
+              "skills": 0
+            },
+            "memory_counts_after": {
+              "raw": 4,
+              "abstract": 2,
+              "anchor": 0,
+              "skills": 0
+            },
+            "selector_changed": true
+          },
+          "restored_incoming_after_evaluation": true
+        }
+      ],
+      "selected": null,
+      "accepted": false,
+      "diff": {
+        "changed_top_level_fields": [],
+        "memory_counts_before": {
+          "raw": 0,
+          "abstract": 0,
+          "anchor": 0,
+          "skills": 0
+        },
+        "memory_counts_after": {
+          "raw": 0,
+          "abstract": 0,
+          "anchor": 0,
+          "skills": 0
+        },
+        "selector_changed": false
+      }
+    }
+  },
+  "native_episodes": 46,
+  "hcl_metadata_calls": 24,
+  "controller_calls": 146,
+  "tool_calls": 36,
+  "read_only_checks": 46,
+  "accepted_updates": 0,
+  "finished_at": 1794157616.03717,
+  "seconds_since_original_start": 3715.022587299347
+}
