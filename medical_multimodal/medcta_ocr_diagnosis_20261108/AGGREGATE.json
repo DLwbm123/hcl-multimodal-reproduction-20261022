@@ -1,0 +1,12 @@
+{
+  "time": 1794138757.991819,
+  "source": "previously exposed v19 cases with zero default OCR",
+  "planned_calls": 5,
+  "completed_calls": 5,
+  "exit_zero": 5,
+  "new_nonempty": 4,
+  "still_empty": 1,
+  "timed_out": 0,
+  "elapsed_seconds": 0.23012089729309082,
+  "interpretation": "Output presence is not OCR accuracy; post-hoc diagnostic, no answer labels or scores; not a model evaluation."
+}
