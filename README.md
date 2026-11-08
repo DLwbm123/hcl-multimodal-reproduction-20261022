@@ -1,5 +1,7 @@
 # HCL multimodal reproduction — Qwen2.5-VL-7B
 
+[项目方法与结果总览（2026-11-08）](medical_multimodal/PROJECT_METHOD_RESULTS_20261108.zh-CN.md)：汇总通用复现、医学多任务迁移、MedRAX v1–v17、MedCTA v18–v19，以及正向信号、失败和证据边界。最新 v19 的 6 次 OCR 中 5 次输出为空，不支持把词项匹配当作医学正确性或证明策略有效。
+
 [最新实验报告：供 Pro 审阅（2026-10-26）](medical_multimodal/PRO_REVIEW_REPORT_20261026.zh-CN.md)：汇总v4–v17结果、现有错误与工具可修复性、v17诊断限制及是否转向过程标注数据的待决问题；尚未证明持续学习或已验证skill收益。
 
 [12小时窗口最终报告](medical_multimodal/reports/2026-10-25_12h/REPORT.zh-CN.md)：原2026-10-25 22:54:57至10-26 10:54:57窗口已结束，全部相关实验进程退出，唯一监测已删除；750次窗口内完成请求，96确认病例未触碰。

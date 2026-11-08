@@ -1,0 +1,1 @@
+{"first_issue":"invalid UTF-8 in OCR error output","second_issue":"Tesseract could not open a path through /tmp symlink; verified resolved /private/tmp path works","fix":"decode with replacement and pass resolved path","model_calls_before_repair":0,"original_budget_unchanged":true}

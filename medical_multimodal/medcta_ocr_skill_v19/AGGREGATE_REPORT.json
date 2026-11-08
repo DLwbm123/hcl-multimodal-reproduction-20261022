@@ -1,0 +1,39 @@
+{
+  "complete": true,
+  "cases": 6,
+  "cells": 18,
+  "keyword_proxy": {
+    "H0": 2,
+    "fixed_ocr": 2,
+    "fixed_ocr_policy": 2
+  },
+  "strict_exact": {
+    "H0": 0,
+    "fixed_ocr": 0,
+    "fixed_ocr_policy": 0
+  },
+  "pairs": {
+    "H0_to_ocr": {
+      "gain": 0,
+      "loss": 0,
+      "net": 0
+    },
+    "ocr_to_policy": {
+      "gain": 0,
+      "loss": 0,
+      "net": 0
+    },
+    "H0_to_policy": {
+      "gain": 0,
+      "loss": 0,
+      "net": 0
+    }
+  },
+  "ocr_executions": 6,
+  "ocr_shared_equally": true,
+  "remaining_validation_cases": 6,
+  "confirmation_reserved": 68,
+  "patient_independence": "unknown",
+  "calls_used": 18,
+  "metric_limit": "Keyword matching does not establish medical correctness; semantically correct paraphrases may be missed and mentions/negations may yield false positives. Only development evidence."
+}

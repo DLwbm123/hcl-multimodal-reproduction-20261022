@@ -1,0 +1,22 @@
+{
+  "planned_cells": 18,
+  "completed_cells": 18,
+  "completed_statuses": 18,
+  "unique_development_cases": 6,
+  "ocr_completions": 6,
+  "ocr_empty_outputs": 5,
+  "ocr_nonempty_outputs": 1,
+  "ocr_nonempty_character_count": 98,
+  "reference_trajectory_ocr_nonempty": 6,
+  "reference_nonempty_runtime_empty": 5,
+  "reference_ocr_clinically_adjudicated": false,
+  "policy_identical_to_v18_frozen_policy": true,
+  "keyword_proxy_h0_ocr_policy": [2, 2, 2],
+  "strict_exact_h0_ocr_policy": [0, 0, 0],
+  "subscription_requests": 18,
+  "request_seconds_sum": 379.15,
+  "usage": {"input_tokens": 124711, "cached_input_tokens": 12672, "output_tokens": 2984, "reasoning_output_tokens": 2057},
+  "guard_observed_cli_identities": 18,
+  "guard_actions": 0,
+  "scope": "local aggregate verification, not clinical truth, per-case payload replay, patient independence, or byte-for-byte integrity"
+}

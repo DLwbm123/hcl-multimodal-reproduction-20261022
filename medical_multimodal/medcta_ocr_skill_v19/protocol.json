@@ -1,0 +1,23 @@
+{
+  "name": "MedCTA matched real OCR evidence and source policy v19",
+  "started_epoch": 1794137446.803329,
+  "hard_deadline_epoch": 1794144646.803329,
+  "model": "gpt-6.1-sol",
+  "reasoning": "high",
+  "max_subscription_calls": 18,
+  "own_stop_new_bytes": 100000000,
+  "development_cases": 6,
+  "selection": "first 6 of v18 reserved validation in original seeded order; no prediction or label used for selection; original remaining 6 validation and 68 confirmation not used; distinct image paths, patient/source independence unknown",
+  "policy": "the single v18 policy generated only from 4 source trajectories and frozen before v18 development; no new policy generation or selection",
+  "arms": [
+    "H0 no OCR",
+    "fixed OCR evidence",
+    "same fixed OCR evidence plus source policy"
+  ],
+  "tool": "real Tesseract once per case on current image; identical cached OCR provided to both OCR arms; no autonomous tool-selection claim; OCR failure stops before inference for that case",
+  "order": "rotate arms by case index",
+  "primary": "all nonempty normalized whitelist phrases appear with token boundaries and no normalized blacklist phrase appears; conservative keyword proxy not semantic correctness or medical adjudication; gold read only after all 18 cells",
+  "secondary": "strict normalized exact, paired gain/loss, OCR output length, calls, failures, cost",
+  "limits": "18 model calls, 2h original clock, own storage stop 100MB, per-host <50GB; no retries, no image/gold leakage; no GPU",
+  "public_boundary": "no image, case ID, source policy, raw question, answer or model output"
+}
