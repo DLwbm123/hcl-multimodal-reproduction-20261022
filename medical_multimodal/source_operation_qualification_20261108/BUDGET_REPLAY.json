@@ -1,0 +1,9 @@
+{
+  "historical_requests": 46,
+  "token_budget_admissible": 30,
+  "deferred_before_inference": 16,
+  "boundary_check_pass": true,
+  "actual_new_inference_calls": 0,
+  "privacy_approval_not_implied": true,
+  "clinical_gain_not_tested": true
+}

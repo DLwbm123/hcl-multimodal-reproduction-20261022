@@ -1,0 +1,40 @@
+{
+  "created_at": "2026-11-08T13:11:53.912879+00:00",
+  "type": "retrospective_source_and_operation_qualification",
+  "prior_observations_disclosed": [
+    "Eight historical unresolved supervision concerns",
+    "Short or malformed CheXagent responses seen during inspection",
+    "1024 image placeholder span and 2048 configured context discovered by code inspection"
+  ],
+  "scope": "48 original A/B source cases; primary H0_train episodes only; 8 later rechecks separately identified and excluded from primary denominator",
+  "sources": [
+    "medrax_task_memory_v16/private/states.json:H_B.raw",
+    "medrax_learning_qualification_v9/private/inputs.json:train",
+    "medrax_learning_qualification_v9/private/episodes.json:H0_train",
+    "medrax_learning_qualification_v9/private/events.jsonl:H0_train",
+    "medrax_learning_qualification_v9/private/source_review/REVIEW.private.json"
+  ],
+  "operations": [
+    "join source record to original input and primary episode",
+    "verify argument image paths against current-case image list",
+    "parse tool outputs and identify deterministic format violations",
+    "calculate exact prompt length with existing tokenizer, no image decode, no inference",
+    "separate source benchmark correctness from independently validated operation utility"
+  ],
+  "new_model_inference_calls": 0,
+  "protected_confirmation_access": false,
+  "clinical_relabeling": false,
+  "limits": {
+    "wall_seconds": 7200,
+    "additional_storage_bytes": 100000000,
+    "remote_existing_assets_read_only": true
+  },
+  "decision_rules": [
+    "No source becomes callable corrective experience merely from correct benchmark answer or completed tool status",
+    "All eight unresolved cases remain pending adjudication",
+    "Context exceedance is interface qualification failure, not proof of cause or model clinical invalidity",
+    "No semantic gain, action benefit, or transfer claim from offline contract checks",
+    "Proceed to bounded operation diagnostic only after input, privacy and observation qualifications; no protected labels for selection"
+  ],
+  "public_outputs": "code, protocol, aggregated counts and report only; case ids, raw prompts, responses and images private"
+}

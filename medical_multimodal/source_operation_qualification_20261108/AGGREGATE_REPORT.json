@@ -1,0 +1,74 @@
+{
+  "type": "retrospective_development_diagnostic",
+  "sources": 48,
+  "benchmark_correct": 40,
+  "unresolved_supervision": 8,
+  "source_memory_image_mismatches": 0,
+  "source_image_references": 83,
+  "primary_tool_calls": 57,
+  "tools": {
+    "chest_xray_expert": 46,
+    "chest_xray_report_generator": 4,
+    "llava_med_qa": 7
+  },
+  "execution_statuses": {
+    "completed": 57
+  },
+  "image_binding_failures": 0,
+  "chexagent_declared_context": 2048,
+  "chexagent_by_image_count": [
+    {
+      "images_per_call": 1,
+      "calls": 30,
+      "input_tokens_min": 1086,
+      "input_tokens_max": 1155,
+      "input_exceeds_declared_context": 0,
+      "response_formats": {
+        "malformed_structured_output": 1,
+        "free_text_unverified": 9,
+        "structured_boxes_syntax_only": 5,
+        "bare_verdict_requires_task_contract": 15
+      }
+    },
+    {
+      "images_per_call": 2,
+      "calls": 11,
+      "input_tokens_min": 2130,
+      "input_tokens_max": 2181,
+      "input_exceeds_declared_context": 11,
+      "response_formats": {
+        "bare_verdict_requires_task_contract": 4,
+        "structured_boxes_syntax_only": 5,
+        "free_text_unverified": 2
+      }
+    },
+    {
+      "images_per_call": 3,
+      "calls": 3,
+      "input_tokens_min": 3166,
+      "input_tokens_max": 3246,
+      "input_exceeds_declared_context": 3,
+      "response_formats": {
+        "malformed_structured_output": 2,
+        "free_text_unverified": 1
+      }
+    },
+    {
+      "images_per_call": 4,
+      "calls": 2,
+      "input_tokens_min": 4199,
+      "input_tokens_max": 4200,
+      "input_exceeds_declared_context": 2,
+      "response_formats": {
+        "malformed_structured_output": 2
+      }
+    }
+  ],
+  "paired_verified_corrective_experiences": 0,
+  "no_evidence_is_not_proof_of_no_possible_utility": true,
+  "historical_rechecks_excluded_from_primary": 8,
+  "new_inference_calls": 0,
+  "confirmation_used": false,
+  "privacy_pixel_screening": "not_performed_no_images_sent_to_models",
+  "clinical_or_learning_gain_established": false
+}

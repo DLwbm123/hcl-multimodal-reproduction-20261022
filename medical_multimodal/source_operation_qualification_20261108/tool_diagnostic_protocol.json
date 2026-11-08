@@ -1,0 +1,26 @@
+{
+  "frozen_at_utc": "2026-11-08T13:21:21.392131+00:00",
+  "scope": "tool_input_output_qualification_only",
+  "candidate_sources": 8,
+  "candidate_images": 20,
+  "selected_images": 2,
+  "screening_excluded_images": 18,
+  "selection": "indices 9 and 15 in frozen private image manifest; safety and retained image usability, not output or answer selection",
+  "selection_bias": "exposed development sources; not an efficacy denominator",
+  "prompts": {
+    "describe": "Describe the chest X-ray findings.",
+    "question": "What abnormalities are visible in this chest X-ray?"
+  },
+  "max_new_tokens": 256,
+  "planned_generation_calls": 4,
+  "controls": "same sanitized image, pinned model/tokenizer, decoding and output cap; arm order rotated",
+  "new_controller_calls": 0,
+  "clinical_gold_loaded": false,
+  "protected_cases": false,
+  "success_criteria": "all four cells run within declared context; inspect output format; neither execution nor format is medical validation",
+  "failure_policy": "record all four cells including not_run; no semantic retry or post-result prompt edits",
+  "deadline_seconds": 3600,
+  "storage_limit_bytes": 100000000,
+  "source_images_outside_scope": "never read by this worker",
+  "learned_method": false
+}
