@@ -1,0 +1,10 @@
+{
+  "purpose": "Synthetic mechanism probe: learn task-conditioned calculator benefit from paired source outcomes; not clinical evaluation or a full continual learning claim.",
+  "data": "Random seed 2601108; 4 synthetic source tasks and 8 disjoint synthetic development tasks, alternating derived-computation and direct-reading tasks. No patient information or real images. No MedCTA or MedRAX protected data.",
+  "method": "For each source task evaluate raw input and the same input with a genuine deterministic multiplication observation. After all source calls, score exact numeric answers. By visible task category select calculator iff source paired gains exceed losses; ties choose no call. Freeze this rule before development calls. Tool gives an intermediate, never the final answer for computation tasks.",
+  "arms": ["raw", "fixed calculator", "learned source-advantage action", "label-blind shuffled actions with the same total action count as learned"],
+  "control": "One model call per arm per task. Same model and prompt skeleton; tool observations reflect actual chosen local multiplication. Shuffle uses a distinct fixed seed and never uses development answers. Rotate arm order by task index.",
+  "metrics": "Exact numeric accuracy and paired gain/loss vs raw; invalid responses counted wrong, plus invalid count, action count, calls, errors and wall time. Full denominator required. Synthetic arithmetic only; no clinical or independent generalization claim.",
+  "stopping": "40 subscription calls maximum, one-hour original clock, 50 MB allocated local stop, hard independent guard; any transport failure stops without retry. Development gold read only after all 32 cells complete.",
+  "limitations": "4 source examples and one synthetic development set are low-power exploratory mechanism tests; method is an external controller, not model parameter training, no RL, no autonomous tool selection, no demonstrated continual retention."
+}

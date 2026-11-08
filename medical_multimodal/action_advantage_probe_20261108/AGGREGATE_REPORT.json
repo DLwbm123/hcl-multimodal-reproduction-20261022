@@ -1,0 +1,55 @@
+{
+  "complete": true,
+  "source_cases": 4,
+  "development_cases": 8,
+  "development_cells": 32,
+  "source_policy": {
+    "compute": {
+      "gain": 0,
+      "loss": 0,
+      "action": false
+    },
+    "read": {
+      "gain": 0,
+      "loss": 0,
+      "action": false
+    }
+  },
+  "accuracy": {
+    "raw": 8,
+    "fixed": 8,
+    "learned": 8,
+    "sham": 8
+  },
+  "invalid": {
+    "raw": 0,
+    "fixed": 0,
+    "learned": 0,
+    "sham": 0
+  },
+  "paired_vs_raw": {
+    "fixed": {
+      "gain": 0,
+      "loss": 0,
+      "net": 0
+    },
+    "learned": {
+      "gain": 0,
+      "loss": 0,
+      "net": 0
+    },
+    "sham": {
+      "gain": 0,
+      "loss": 0,
+      "net": 0
+    }
+  },
+  "action_counts": {
+    "raw": 0,
+    "fixed": 8,
+    "learned": 0,
+    "sham": 0
+  },
+  "calls_used": 40,
+  "interpretation": "Synthetic exploratory test only; no clinical performance, autonomous tool use, reinforcement learning, or continual retention established."
+}
