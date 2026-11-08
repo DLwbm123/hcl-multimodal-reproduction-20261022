@@ -1,0 +1,25 @@
+{
+  "frozen_at_utc": "2026-11-08T13:40:10.608113+00:00",
+  "scope": "Native MedRAX graph routing integration using a scripted controller and real CheXagent; not full six-tool or live controller qualification",
+  "hypothesis": "Shared guard is applied on native Agent tool path, visual encoding executes for accepted single images and invalid inputs return failure without generation",
+  "panel": "same two privacy-approved D1/D2 images, no new source or target labels",
+  "cells": [
+    "single_0",
+    "single_1",
+    "over_window",
+    "outside_case"
+  ],
+  "planned_cells": 4,
+  "planned_model_generations": 2,
+  "controller_model_calls": 0,
+  "prompt": "Describe the chest X-ray findings.",
+  "max_new_tokens": 256,
+  "gate": "both accepted cells complete with one current-image encoding; both rejected cells have zero generations; all four return a ToolMessage to scripted graph controller and terminate",
+  "no_efficacy_comparison": true,
+  "confirmation_used": false,
+  "timeout_seconds": 1800,
+  "storage_limit_bytes": 100000000,
+  "storage_stop_bytes": 90000000,
+  "retry_policy": "preserve failed cells, no automatic costly reruns",
+  "method_link": "Mandatory shared correctness layer for every future H0/Raw/Fixed/Proposed arm; does not count as learned skill"
+}
