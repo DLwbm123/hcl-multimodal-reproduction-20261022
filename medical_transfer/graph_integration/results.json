@@ -1,0 +1,238 @@
+{
+  "purpose": "engineering integration only; no efficacy claim",
+  "cpu_checks_v1": 6,
+  "cpu_checks_v2": 7,
+  "initial_v1": {
+    "exit_code": 0,
+    "stages": 3,
+    "graph": {
+      "episodes": 62,
+      "completed": 19,
+      "failed": 43,
+      "tool_calls": 23,
+      "controller_calls": 85
+    },
+    "by_task": {
+      "classification": {
+        "episodes": 30,
+        "completed": 19,
+        "tool_calls": 19,
+        "tools": {
+          "classify_image": 19
+        }
+      },
+      "polyp_localization": {
+        "episodes": 21,
+        "completed": 0,
+        "tool_calls": 4,
+        "tools": {
+          "localize_region": 4
+        }
+      },
+      "visual_qa": {
+        "episodes": 11,
+        "completed": 0,
+        "tool_calls": 0,
+        "tools": {}
+      }
+    },
+    "graph_errors": {
+      "answer before required tool call": 21,
+      "unexpected action keys": 21,
+      "controller action is not JSON": 1
+    },
+    "model_calls": 269,
+    "generated_prompt_candidates": 12,
+    "prompt_decisions": 12,
+    "accepted_prompt_updates": 0,
+    "invalid_prompt_artifacts": 1,
+    "memory_decisions": 3,
+    "accepted_memory_updates": 1,
+    "memory_rejection_reasons": [
+      [],
+      [
+        "current_task_primary_score_delta_below_minimum",
+        "current_task_format_below_minimum"
+      ],
+      [
+        "current_task_primary_score_delta_below_minimum",
+        "current_task_format_below_minimum"
+      ]
+    ],
+    "stage_test_passes": 6,
+    "test_readonly_assertions_passed": 6,
+    "task_order": [
+      "classification",
+      "polyp_localization",
+      "visual_qa"
+    ],
+    "descriptive_test_matrix": [
+      [
+        0,
+        null,
+        null
+      ],
+      [
+        0,
+        0,
+        null
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "test_metric_names": {
+      "classification": "accuracy",
+      "polyp_localization": "localization_accuracy_iou50",
+      "visual_qa": "normalized_exact_match"
+    },
+    "final_memory": {
+      "raw": 1,
+      "abstract": 2,
+      "anchor": 3,
+      "skill": 0
+    },
+    "seconds": 615.6492705345154,
+    "model_frozen": true
+  },
+  "interface_check_v2": {
+    "checks": [
+      {
+        "task": "classification",
+        "graph_completed": true,
+        "format_valid": true,
+        "tools": [
+          "classify_image"
+        ]
+      },
+      {
+        "task": "polyp_localization",
+        "graph_completed": true,
+        "format_valid": true,
+        "tools": [
+          "localize_region"
+        ]
+      },
+      {
+        "task": "visual_qa",
+        "graph_completed": true,
+        "format_valid": true,
+        "tools": [
+          "answer_visual_question"
+        ]
+      }
+    ],
+    "model_calls": 15,
+    "passed": true,
+    "correctness_not_a_launch_criterion": true,
+    "cumulative_model_calls": 284
+  },
+  "full_v2": {
+    "exit_code": 0,
+    "stages": 3,
+    "graph": {
+      "episodes": 63,
+      "completed": 63,
+      "failed": 0,
+      "tool_calls": 63,
+      "controller_calls": 126
+    },
+    "by_task": {
+      "classification": {
+        "episodes": 31,
+        "completed": 31,
+        "tool_calls": 31,
+        "tools": {
+          "classify_image": 31
+        }
+      },
+      "polyp_localization": {
+        "episodes": 21,
+        "completed": 21,
+        "tool_calls": 21,
+        "tools": {
+          "localize_region": 21
+        }
+      },
+      "visual_qa": {
+        "episodes": 11,
+        "completed": 11,
+        "tool_calls": 11,
+        "tools": {
+          "answer_visual_question": 10,
+          "classify_image": 1
+        }
+      }
+    },
+    "graph_errors": {},
+    "model_calls": 289,
+    "generated_prompt_candidates": 12,
+    "prompt_decisions": 12,
+    "accepted_prompt_updates": 0,
+    "invalid_prompt_artifacts": 0,
+    "memory_decisions": 3,
+    "accepted_memory_updates": 0,
+    "memory_rejection_reasons": [
+      [
+        "current_task_primary_score_delta_below_minimum"
+      ],
+      [
+        "current_task_primary_score_delta_below_minimum",
+        "current_task_format_below_minimum"
+      ],
+      [
+        "current_task_primary_score_delta_below_minimum"
+      ]
+    ],
+    "stage_test_passes": 6,
+    "test_readonly_assertions_passed": 6,
+    "task_order": [
+      "classification",
+      "polyp_localization",
+      "visual_qa"
+    ],
+    "descriptive_test_matrix": [
+      [
+        1,
+        null,
+        null
+      ],
+      [
+        1,
+        0,
+        null
+      ],
+      [
+        1,
+        0,
+        0
+      ]
+    ],
+    "test_metric_names": {
+      "classification": "accuracy",
+      "polyp_localization": "localization_accuracy_iou50",
+      "visual_qa": "normalized_exact_match"
+    },
+    "final_memory": {
+      "raw": 0,
+      "abstract": 0,
+      "anchor": 3,
+      "skill": 0
+    },
+    "seconds": 470.99697256088257,
+    "model_frozen": true
+  },
+  "total_model_calls": 573,
+  "total_elapsed_seconds": 1256.0648746490479,
+  "new_run_file_bytes": 7793768,
+  "runtime": {
+    "python": "3.12.3",
+    "torch": "2.7.1+cu128",
+    "transformers": "4.51.3",
+    "langgraph": "1.2.11",
+    "langchain_core": "1.6.2"
+  },
+  "final_worker_and_supervisor_exited": true
+}
