@@ -1,0 +1,17 @@
+{
+  "name": "six_tool_engineering_demo_v4",
+  "revision": "Three model-routing attempts failed on schema/order. Stop routing prompt iterations. Execute the coverage plan deterministically, with real VLM inference for task tools and final synthesis. Trace explicitly labels prescribed_plan vs model decisions. All failures, original clock, storage and cumulative call budget retained.",
+  "purpose": "one prescribed tool-coverage workflow; no performance or autonomous-policy claim",
+  "input": "first visible polyp_localization h_search row in existing prepared data; no target/private/validation/test records",
+  "tools": ["analyze_image_quality", "classify_image", "localize_region", "inspect_region", "segmentation", "answer_visual_question"],
+  "roi": "fixed central 80 percent by original image dimensions; not inferred from labels or selected for success",
+  "segmentation": "OpenCV GrabCut rectangle, seed 0, 3 iterations, max processing side 768, binary nearest-neighbor restore",
+  "model": "existing frozen Qwen2.5-VL-7B",
+  "max_tool_calls": 8,
+  "max_model_calls": 20,
+  "max_episodes": 4,
+  "hard_timeout_seconds": 1800,
+  "stop_new_bytes": 1000000000,
+  "pass": "completed graph, six tool types executed, new tool statuses ok, crop and original-size binary mask readable; empty mask reported honestly",
+  "stop": "end after this workflow and delivery; no efficacy experiments, memory learning, label-based tuning or automatic further rounds"
+}

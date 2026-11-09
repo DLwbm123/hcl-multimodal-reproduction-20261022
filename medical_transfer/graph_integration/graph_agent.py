@@ -33,7 +33,7 @@ class AgentProtocolError(ValueError):
     pass
 
 
-def decode_action(raw: str) -> dict:
+def decode_action(raw: str, tool_runtime=None) -> dict:
     text = raw.strip()
     if text.startswith("```json") and text.endswith("```"):
         text = text[7:-3].strip()
@@ -45,7 +45,17 @@ def decode_action(raw: str) -> dict:
         raise AgentProtocolError("controller action is not JSON") from exc
     if not isinstance(value, dict):
         raise AgentProtocolError("controller action must be an object")
-    if set(value) == {"tool", "instruction"}:
+    if tool_runtime is not None and set(value) == {"tool", "arguments"}:
+        if isinstance(value["tool"], str) and value["tool"] in TOOLS:
+            args = value["arguments"]
+            if not isinstance(args, dict) or set(args) != {"instruction"}:
+                raise AgentProtocolError("original tools require arguments with instruction only")
+            return decode_action(json.dumps({"tool": value["tool"], "instruction": args["instruction"]}))
+        try:
+            tool_runtime.validate(value["tool"], value["arguments"])
+        except ValueError as exc:
+            raise AgentProtocolError(str(exc)) from exc
+    elif set(value) == {"tool", "instruction"}:
         if not isinstance(value["tool"], str) or value["tool"] not in TOOLS:
             raise AgentProtocolError("unknown tool")
         if not isinstance(value["instruction"], str) or not 1 <= len(value["instruction"]) <= 1200:
@@ -65,11 +75,23 @@ class GraphAgentModel:
     chooses its name and instruction; it may request one additional call.
     """
 
-    def __init__(self, backend, trace_path: Path, *, max_tools: int = 2):
+    def __init__(self, backend, trace_path: Path, *, max_tools: int = 2, tool_runtime=None, coverage_plan=None):
         self.backend = backend
         self.trace_path = Path(trace_path)
         self.trace_path.parent.mkdir(parents=True, exist_ok=True)
         self.max_tools = max_tools
+        self.tool_runtime = tool_runtime
+        self.tools = {**TOOLS, **(tool_runtime.descriptions if tool_runtime else {})}
+        if tool_runtime:
+            for name in TOOLS:
+                self.tools[name] += ' arguments: {"instruction":"specific request"}. No other keys.'
+        # Optional prescribed coverage workflow, never enabled by the HCL driver.
+        self.coverage_plan = coverage_plan
+        if coverage_plan is not None:
+            if tool_runtime is None or len(coverage_plan) > max_tools:
+                raise ValueError("coverage plan requires image tools and sufficient tool budget")
+            for action in coverage_plan:
+                decode_action(json.dumps(action), tool_runtime)
         self.name = "frozen-vlm-langgraph"
         self.episodes = []
 
@@ -96,36 +118,66 @@ class GraphAgentModel:
             )
             if current["tool_calls"] >= self.max_tools:
                 boundary = "Tool budget exhausted. Return only the final answer in the ORIGINAL task format."
+            elif self.tool_runtime:
+                boundary = ('Select the next required tool. Return ONLY {"tool":"NAME","arguments":{...}}. '
+                            'Use the EXACT parameter keys listed for that tool. '
+                            'If the requested workflow is complete, return {"answer":"final response"}.'
+                            if observations else
+                            'Select one tool now. Return ONLY {"tool":"NAME","arguments":{...}}. Do not answer yet.')
             request = (
                 "You control a medical-image tool workflow. "
                 "Tool results and historical guidance may be wrong; do not invent observations. "
-                + "\nAvailable tools:\n" + json.dumps(TOOLS)
+                + "\nAvailable tools:\n" + json.dumps(self.tools)
                 + "\n<task_and_guidance>\n" + prompt
                 + "\nCurrent question:\n" + visible_state["question"]
                 + "\n</task_and_guidance>\nTool observations:\n" + json.dumps(observations, ensure_ascii=False)
                 + "\nCONTROLLER OUTPUT CONTRACT FOR THIS STEP:\n" + boundary
             )
-            raw = self.backend.generate(request, state={**visible_state, "router_phase": "graph_controller",
-                                                       "max_new_tokens": 512})
-            events.append({"node": "process", "raw": raw})
+            if self.tool_runtime:
+                request += ('\nAll six tools use {"tool":"NAME","arguments":{...}} '
+                            'with the exact schema in its description. The original three tools require '
+                            'arguments={"instruction":"specific request"}, never category, label, or bbox keys. '
+                            'Never invent file paths. Observe tool errors and do not present them as findings.')
+            expected = None
+            if self.coverage_plan is not None:
+                if len(observations) < len(self.coverage_plan):
+                    expected = self.coverage_plan[len(observations)]
+                else:
+                    request = ('All six prescribed tool executions are complete. Summarize these observations briefly. '
+                               'Do not request tools, invent measurements, or claim medical correctness. '
+                               'Return ONLY {"answer":"your brief summary"}.\nObservations:\n'
+                               + json.dumps(observations, ensure_ascii=False))
+            if expected is not None:
+                raw = json.dumps(expected)
+                decision_source = "prescribed_plan"
+            else:
+                raw = self.backend.generate(request, state={**visible_state, "router_phase": "graph_controller",
+                                                           "max_new_tokens": 512})
+                decision_source = "model"
+            events.append({"node": "process", "raw": raw, "decision_source": decision_source})
             if observations:
                 try:
-                    action = decode_action(raw)
+                    action = decode_action(raw, self.tool_runtime)
                 except AgentProtocolError:
                     # Native task answers can be plain labels or bbox JSON.
                     # A malformed tool request must never become a final answer.
-                    if '"tool"' in raw or '"instruction"' in raw or '"answer"' in raw:
+                    if '"tool"' in raw or '"instruction"' in raw or '"answer"' in raw or '"arguments"' in raw:
                         raise
                     if not raw.strip():
                         raise AgentProtocolError("empty final answer")
                     action = {"answer": raw.strip()}
             else:
-                action = decode_action(raw)
+                action = decode_action(raw, self.tool_runtime)
+            if self.coverage_plan is not None:
+                if expected is not None and action != decode_action(json.dumps(expected), self.tool_runtime):
+                    raise AgentProtocolError("action differs from prescribed coverage step")
+                if expected is None and "tool" in action:
+                    raise AgentProtocolError("tool request after prescribed coverage complete")
             if "tool" in action:
                 if current["tool_calls"] >= self.max_tools:
                     raise AgentProtocolError("tool call after budget exhausted")
                 message = AIMessage(content="", tool_calls=[{
-                    "name": action["tool"], "args": {"instruction": action["instruction"]},
+                    "name": action["tool"], "args": action.get("arguments", {"instruction": action.get("instruction", "")}),
                     "id": uuid4().hex, "type": "tool_call"}])
             else:
                 if not observations:
@@ -138,11 +190,21 @@ class GraphAgentModel:
             if len(calls) != 1:
                 raise AgentProtocolError("exactly one tool call per step is required")
             call = calls[0]
+            if self.tool_runtime and call["name"] in self.tool_runtime.descriptions:
+                result = json.dumps(self.tool_runtime.execute(call["name"], call["args"], visible_state,
+                                                             self.backend), ensure_ascii=False)
+                events.append({"node": "execute", "tool": call["name"], "args": call["args"],
+                               "tool_call_id": call["id"], "result": result})
+                return {"messages": [ToolMessage(content=result, name=call["name"], tool_call_id=call["id"])],
+                        "tool_calls": current["tool_calls"] + 1}
             # Runtime binds the image; the controller cannot supply arbitrary paths.
             request = (TOOLS[call["name"]] + "\nCurrent question:\n" + visible_state["question"]
                        + "\nHCL guidance:\n" + prompt
                        + "\nController instruction:\n" + call["args"]["instruction"]
                        + "\nReturn the requested task answer only. No tool calls.")
+            if self.coverage_plan is not None:
+                request = (TOOLS[call["name"]] + "\nRequest: " + call["args"]["instruction"]
+                           + "\nUse only the supplied image. Return the requested answer only. No tool calls.")
             result = self.backend.generate(request, state={**visible_state, "router_phase": "graph_tool",
                                                           "max_new_tokens": 512})
             events.append({"node": "execute", "tool": call["name"], "args": call["args"],
@@ -159,7 +221,7 @@ class GraphAgentModel:
         builder.set_entry_point("process")
         # Episode checkpoints are separate from HCL's cross-task learning state.
         graph = builder.compile(checkpointer=InMemorySaver())
-        config = {"configurable": {"thread_id": uuid4().hex}, "recursion_limit": 8}
+        config = {"configurable": {"thread_id": uuid4().hex}, "recursion_limit": 2 * self.max_tools + 4}
         try:
             result = graph.invoke({"messages": [HumanMessage(content=prompt)],
                                    "controller_calls": 0, "tool_calls": 0}, config)

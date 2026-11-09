@@ -1,0 +1,107 @@
+{
+  "attempts": [
+    {
+      "revision": "v1",
+      "passed": false,
+      "checks": {
+        "graph_completed": false,
+        "all_six_tools": false,
+        "new_tool_statuses_ok": false,
+        "model_frozen": true
+      },
+      "tool_sequence": [
+        "analyze_image_quality"
+      ],
+      "tool_calls": 1,
+      "model_calls": 2,
+      "controller_calls": null,
+      "foreground_empty": null,
+      "elapsed_seconds": 13.892870426177979,
+      "scope": "prescribed coverage only; no medical accuracy, learning or autonomous routing claim",
+      "exit_code": 1,
+      "attempt_seconds": 15.012086153030396
+    },
+    {
+      "revision": "v2",
+      "passed": false,
+      "checks": {
+        "graph_completed": false,
+        "all_six_tools": false,
+        "new_tool_statuses_ok": false,
+        "model_frozen": true
+      },
+      "tool_sequence": [
+        "analyze_image_quality",
+        "classify_image"
+      ],
+      "tool_calls": 2,
+      "model_calls": 6,
+      "controller_calls": null,
+      "foreground_empty": null,
+      "elapsed_seconds": 191.60611081123352,
+      "scope": "prescribed coverage only; no medical accuracy, learning or autonomous routing claim",
+      "exit_code": 1,
+      "attempt_seconds": 20.02275776863098
+    },
+    {
+      "revision": "v3",
+      "passed": false,
+      "checks": {
+        "graph_completed": false,
+        "all_six_tools": false,
+        "new_tool_statuses_ok": false,
+        "model_frozen": true
+      },
+      "tool_sequence": [],
+      "tool_calls": 0,
+      "model_calls": 7,
+      "controller_calls": null,
+      "foreground_empty": null,
+      "elapsed_seconds": 330.8771376609802,
+      "scope": "prescribed coverage only; no medical accuracy, learning or autonomous routing claim",
+      "exit_code": 1,
+      "attempt_seconds": 15.015727519989014
+    },
+    {
+      "revision": "v4",
+      "passed": true,
+      "checks": {
+        "graph_completed": true,
+        "all_six_tools": true,
+        "new_tool_statuses_ok": true,
+        "mask_original_shape_binary": true,
+        "crop_readable_expected_size": true,
+        "model_frozen": true
+      },
+      "tool_sequence": [
+        "analyze_image_quality",
+        "classify_image",
+        "localize_region",
+        "inspect_region",
+        "segmentation",
+        "answer_visual_question"
+      ],
+      "tool_calls": 6,
+      "model_calls": 12,
+      "controller_calls": 7,
+      "run_model_calls": 5,
+      "planned_actions": 6,
+      "model_controller_calls": 1,
+      "foreground_empty": false,
+      "elapsed_seconds": 564.8459000587463,
+      "scope": "prescribed coverage only; no medical accuracy, learning or autonomous routing claim",
+      "exit_code": 0,
+      "attempt_seconds": 35.05160999298096
+    }
+  ],
+  "tests": {
+    "legacy_tests": 7,
+    "failures": 0,
+    "errors": 0,
+    "passed": true,
+    "new_tool_tests": 6
+  },
+  "scope": "engineering coverage, not efficacy or autonomous planning",
+  "run_directory_bytes": 193141847,
+  "total_model_calls": 12
+}

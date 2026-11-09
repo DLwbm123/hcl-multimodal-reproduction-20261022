@@ -166,8 +166,12 @@ def main():
     backend = AuditedBackend(root, protocol, budget)
     backend._load()
     assert not backend._model.training and all(not p.requires_grad for p in backend._model.parameters())
+    tool_runtime = None
+    if protocol.get("enable_image_operations", False):
+        from medical_transfer.six_tool_demo.vision_tools import VisionTools
+        tool_runtime = VisionTools(private / "tool_artifacts")
     graph_model = GraphAgentModel(backend, private / "graph_traces.jsonl",
-                                  max_tools=protocol["max_tool_calls_per_episode"])
+                                  max_tools=protocol["max_tool_calls_per_episode"], tool_runtime=tool_runtime)
     pipeline = construct_pipeline(prepared, private / "pipeline", model=backend,
                                   real_execution_authorized=True)
     integrate(pipeline, backend, graph_model, protocol)
