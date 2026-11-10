@@ -1,0 +1,37 @@
+{
+  "planned_episodes": 92,
+  "recorded_episodes": 92,
+  "coverage_complete": true,
+  "metrics": {
+    "Fixed": {
+      "planned": 46,
+      "recorded": 46,
+      "completed": 43,
+      "semantic_denominator": 13,
+      "benchmark_correct": 6,
+      "tool_calls": 10,
+      "seconds": 121.4578504562378
+    },
+    "Probe": {
+      "planned": 46,
+      "recorded": 46,
+      "completed": 46,
+      "semantic_denominator": 13,
+      "benchmark_correct": 7,
+      "tool_calls": 81,
+      "seconds": 75.73077964782715
+    }
+  },
+  "paired": {
+    "denominator": 13,
+    "observed_pairs": 13,
+    "gain": 2,
+    "loss": 1
+  },
+  "unknown_reference_groups": 33,
+  "independent_evaluation": false,
+  "learned_policy": false,
+  "clinical_validation": false,
+  "fatal": null,
+  "elapsed_since_original_start": 212.8654272556305
+}

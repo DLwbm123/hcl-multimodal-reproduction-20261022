@@ -1,0 +1,26 @@
+{
+  "reserved_learning_source_ids": 48,
+  "inference_source_groups": 46,
+  "semantic_feedback_source_groups": 13,
+  "unresolved_semantic_feedback_withheld": 33,
+  "qualification_scope": "Benchmark-reference visual discriminator alignment, not full correctness of diagnosis or clinical adjudication. Unknown reference cases contribute only executable trace/cost/failure evidence.",
+  "frozen_evaluation_targets_read": false,
+  "clinically_validated": false,
+  "exclusions": {
+    "cross_identifier_same_image_source": 1,
+    "redaction_obscures_task_relevant_region": 1
+  },
+  "similarity_audit": {
+    "selected_images": 198,
+    "compared_files": 6267,
+    "usable_files": 6267,
+    "threshold": 0.985,
+    "elapsed_seconds": 64.47892618179321,
+    "limitation": "Aligned grayscale thumbnail screen can miss cropped, rotated, mirrored or recompressed duplicates; similarity is not patient identity.",
+    "cross_source_directional_candidates": 4,
+    "undirected_image_pairs": 2,
+    "cross_partition_candidates_above_threshold": 0
+  },
+  "reference_rule": "Only source-aligned visual discriminators receive benchmark agreement; no independent clinical adjudication; causal or management clauses are not established.",
+  "scope": "Source-learning only; image-only duplicate audit covers reserved images against existing pool, without evaluation questions or targets."
+}

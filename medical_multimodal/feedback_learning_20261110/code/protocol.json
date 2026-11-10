@@ -1,0 +1,36 @@
+{
+  "experiment": "native_medrax_paired_feedback_acquisition_v1",
+  "phase": "source-learning operation exploration; not final method evaluation",
+  "source_groups": 46,
+  "planned_episodes": 92,
+  "arms": [
+    "Fixed",
+    "Probe"
+  ],
+  "semantic_feedback_source_groups": 13,
+  "unresolved_reference_groups": 33,
+  "method": "Pair unchanged historical Fixed with a real per-image expert observation before the same native Agent. This is exploratory action feedback for subsequent HCL Memory/Router/Optimizer, not a learned policy yet.",
+  "controller": {
+    "name": "Qwen2.5-VL-7B-Instruct",
+    "dtype": "bfloat16",
+    "temperature": 0,
+    "max_pixels": 1003520,
+    "max_new_tokens": 1024,
+    "max_input_tokens": 24000
+  },
+  "limits": {
+    "per_case_controller_calls": 8,
+    "per_case_tool_calls": 8,
+    "per_case_seconds": 900,
+    "request_timeout_seconds": 300
+  },
+  "probe": "One existing chest_xray_expert call per eligible current image, question stem without options, max_new_tokens256. Results bound to image/call and included as fallible observations. Skip unqualified detail crop. Shared total eight-tool-call cap.",
+  "shared_interface_revision": "Native textual answers allowed without inventing calls; malformed tool JSON still fails. Up to eight calls per turn within eight per-case cap. Final-only step accepts exact A-F or explicit JSON content only. Shared by both arms; not a method contribution.",
+  "feedback": "Only 13 source-aligned visual-discriminator cases receive benchmark agreement feedback. Etiology/management details remain unadjudicated. All other reference outcomes are withheld and cannot be semantic learning rewards. All46 can contribute execution/cost/error evidence.",
+  "controls": "Same input order, model, original Fixed context, tool guards and case budgets. Alternating arm order by immutable index. Extra probe action/token cost separately reported, not cost-matched. No replacement or rerun based on outcomes.",
+  "selection_and_evaluation": "No development or frozen-evaluation input/target is opened. Candidate memory, if built, remains unaccepted until separate frozen development and retention gates.",
+  "budget": "4h hard deadline shared by retries; stop at10GB apparent run bytes; strict per-server actual<50GB. Shared existing assets read-only; run-local caches and private outputs.",
+  "stop": "Stop on privacy or visual-contract invariant breach; preserve failures and budgets. No post-result parser relaxation or outcome-dependent repeat.",
+  "clinical_validation": false,
+  "measurement": "Missing episodes count against full aggregate denominator, but paired gain/loss require both recorded arms; failed recorded arms count incorrect. Unknown reference groups always have null semantic feedback. Per-case 900s alarm includes forced probes; requests use model generation max_time; independent supervisor bounds total run."
+}

@@ -1,0 +1,45 @@
+{
+  "coverage": {
+    "planned": 92,
+    "attempted": 92,
+    "completed": 89,
+    "valid_final": 89
+  },
+  "observations": {
+    "forced_per_image_requests": 80,
+    "probe_arm_total_tool_requests": 81,
+    "fixed_arm_total_tool_requests": 10,
+    "successful_expert_visual_contracts": 84,
+    "rejected_before_generation": 7,
+    "generic_matched_or_not_matched_responses": 23,
+    "generic_patient_selector_responses": 4,
+    "zero_observation_probe_episodes": 1
+  },
+  "gain_attribution": {
+    "raw_source_gains": 2,
+    "raw_source_losses": 1,
+    "gains_with_failed_fixed_format": 1,
+    "gains_with_no_actual_probe_observation": 1,
+    "gains_supported_by_demonstrated_useful_new_tool_evidence": 0,
+    "interpretation": "Descriptive trace audit, not causal adjudication. One no-observation pair still received the probe wrapper text. Do not learn a positive tool-efficacy reward from either raw gain."
+  },
+  "controller_cost": {
+    "Fixed": {
+      "calls": 99,
+      "input_tokens": 246840,
+      "output_tokens": 4625
+    },
+    "Probe": {
+      "calls": 93,
+      "input_tokens": 241927,
+      "output_tokens": 1463
+    }
+  },
+  "errors": {
+    "JSONDecodeError": 3
+  },
+  "decision": "Do not promote a learned policy or claim useful-evidence gain. Retain negative, neutral, format and cost evidence for subsequent HCL candidate construction.",
+  "method_state_updated": false,
+  "runtime_exit": 0,
+  "budget_stop": null
+}
