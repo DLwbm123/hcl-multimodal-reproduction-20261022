@@ -1,0 +1,92 @@
+{
+  "study": "vqa_full_loop_20261110",
+  "seed": 20261110,
+  "anchors_per_task": 64,
+  "prepared_data": "<authorized prepared data>",
+  "old_state": "<authorized old stage3 state>",
+  "model_path": "<local Qwen2.5-VL-7B-Instruct>",
+  "python_paths": [
+    "<coordinate and frozen-state adapter modules>",
+    "<medical_transfer/src>",
+    "<pinned HCL package root>"
+  ],
+  "learning": {
+    "arms": [
+      "fresh",
+      "resume"
+    ],
+    "batches": 2,
+    "batchsize": 24,
+    "gate": 48,
+    "historical_anchors": 72,
+    "components": [
+      "memory_selector",
+      "router_context"
+    ],
+    "candidates_per_component_per_batch": 2,
+    "candidate_gate": "current correct gain >=1/48, historical old-correct loss <=2/72 per decision, current format >=0.95, structural validity and rollback retained",
+    "weights": "frozen",
+    "memory": "full original feedback, raw/abstract/skill consolidation; gated commit"
+  },
+  "development": {
+    "n": 80,
+    "select_arm": "max primary_score of fresh,resume; tie resume",
+    "primary_control": "max primary_score of B,F; tie B",
+    "B": "static harness no memory",
+    "F": "static harness with six fixed examples, first training row of each question type",
+    "H": "restored old stage3",
+    "no_baseline_tuning": true
+  },
+  "confirmation": {
+    "n": 200,
+    "source": "unused train_replay role reassigned within this study before outputs",
+    "quotas": {
+      "yes_no_or_presence": 60,
+      "other_each": 28
+    },
+    "arms": [
+      "B",
+      "F",
+      "H",
+      "N"
+    ],
+    "once_only": true,
+    "read_after": "FROZEN_SELECTION.json",
+    "primary": "N versus development-selected B/F",
+    "ci": "20000 paired source-group bootstrap draws, seed20261110, percentile; one example per group",
+    "all_failure_denominators_retained": true,
+    "patient_isolation": "unverified",
+    "test": "original test never accessed",
+    "research_threshold_reference_only": "gain at least 5 percentage points and paired bootstrap 95% lower >0 against primary control; positive N-H delta for new learning benefit",
+    "interview_acceptance": "complete real feedback/proposal/gate/commit-or-rollback; disclose whether updates occurred and actual net gains/losses; no required 5pp or CI lower>0"
+  },
+  "shared_answer_interface": "same shortest answer / digits for count / semicolon for multiple items; no answer vocabulary; different from old experiments",
+  "budget": {
+    "max_calls_per_worker": 16000,
+    "watch_interval_seconds": 20,
+    "storage_stop_bytes": 44000000000,
+    "hard_storage_bytes": 50000000000,
+    "expected_peak_bytes": 4000000000,
+    "hard_seconds": 82800,
+    "soft_seconds": 81000.0,
+    "one_original_clock_for_all_phases": true
+  },
+  "limitations": [
+    "new confirmation sourced from unused adaptation-role data, not original test",
+    "source-group and pixel isolation, patient independence unavailable",
+    "no forced acceptance and no guarantee of positive result"
+  ],
+  "version": 2,
+  "purpose": "interview: demonstrate and explain complete HCL feedback/proposal/gate/update loop, with honest descriptive gains/losses",
+  "gate": {
+    "min_current_correct_gain": 1,
+    "historical_loss_budget": 2,
+    "min_format_compliance_rate": 0.95,
+    "historical_scope": "per candidate relative to deployed predecessor; report cumulative losses separately"
+  },
+  "amendment": {
+    "reason": "explicit user request: loosen gate for interview, not paper submission",
+    "applies": "new attempt; original data/weights/selection/confirmation unchanged; retain original clock and all prior outputs",
+    "decision_timing": "before any feedback-generated candidate results or acceptance decisions; original workers still in first stable reference gate"
+  }
+}
