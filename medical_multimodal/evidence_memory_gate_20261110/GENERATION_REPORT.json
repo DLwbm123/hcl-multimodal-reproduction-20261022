@@ -1,0 +1,20 @@
+{
+  "source_groups": 46,
+  "semantic_sources": 13,
+  "unknown_sources": 33,
+  "raw_memory_count": 46,
+  "abstract_count": 4,
+  "skill_count": 6,
+  "candidate_names": [
+    "memory"
+  ],
+  "accepted": false,
+  "restored_empty_state": true,
+  "generation_calls": 14,
+  "input_tokens": 64185,
+  "output_tokens": 6312,
+  "selector_parse_status": "valid",
+  "development_or_test_targets_accessed": false,
+  "elapsed_seconds": 346.82508873939514,
+  "method_efficacy_established": false
+}

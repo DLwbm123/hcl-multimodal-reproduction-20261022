@@ -1,0 +1,9 @@
+{
+  "reason": "First source abstraction was rejected for missing guidance fields; no candidate or evaluation outcome exists.",
+  "original_result_preserved": true,
+  "new_generation_calls_budget": "One restarted metadata-construction pass with explicit required JSON shape; any further invalid abstraction aborts. No repeated clinical inference or outcome-based repair.",
+  "original_clock_retained": true,
+  "clinical_predictions_reused_without_changes": 92,
+  "generic_fallback": false,
+  "change_scope": "Metadata prompt schema only; no data, candidate count, primary gate, evaluator or clinical-controller changes."
+}

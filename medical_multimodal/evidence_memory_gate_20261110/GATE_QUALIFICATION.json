@@ -1,0 +1,17 @@
+{
+  "total_source_groups": 24,
+  "current_groups": 20,
+  "current_semantic_sources": 6,
+  "historical_anchor_groups": 4,
+  "historical_semantic_sources": 2,
+  "unknown_sources": 16,
+  "images": 39,
+  "historical_current_source_disjoint": true,
+  "source_learning_overlap": 0,
+  "all24_previously_exposed": true,
+  "independent_evaluation": false,
+  "old_unread_development_claim_corrected": true,
+  "original_anchor_membership_reused": true,
+  "clinical_adjudication": false,
+  "small_panel_development_gate_only": true
+}

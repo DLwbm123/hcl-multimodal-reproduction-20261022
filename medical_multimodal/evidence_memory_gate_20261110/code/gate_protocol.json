@@ -1,0 +1,49 @@
+{
+  "experiment": "source-trained HCL operation memory repeated-development gate",
+  "source_training_groups": 46,
+  "source_development_groups": 24,
+  "current_development_groups": 20,
+  "historical_anchor_groups": 4,
+  "semantic_current": 6,
+  "semantic_historical": 2,
+  "unknown_reference_groups": 16,
+  "repeated_development_only": true,
+  "independent_evaluation": false,
+  "planned_episodes": 48,
+  "arms": [
+    "Fixed",
+    "memory"
+  ],
+  "controller": {
+    "name": "Qwen2.5-VL-7B-Instruct",
+    "dtype": "bfloat16",
+    "temperature": 0,
+    "max_pixels": 1003520,
+    "max_new_tokens": 1024,
+    "max_input_tokens": 24000
+  },
+  "limits": {
+    "per_case_controller_calls": 8,
+    "per_case_tool_calls": 8,
+    "per_case_seconds": 900,
+    "request_timeout_seconds": 300,
+    "max_router_calls_per_case": 2
+  },
+  "candidate_frozen": "one memory candidate; optimizer failed to produce a distinct valid selector artifact; no candidate chosen by development outcomes",
+  "gate": {
+    "current_source_net_gain_min": 1,
+    "current_source_loss_max": 1,
+    "historical_source_net_loss_max": 0,
+    "historical_source_losses_max": 0,
+    "failed_episode_increase_max": 0,
+    "tool_call_total_ratio_vs_fixed_max": 2.0,
+    "tool_call_total_additive_allowance": 2,
+    "selection": "eligible candidate with largest current net gain, then fewer tool calls, then base-memory candidate; if none, retain empty state"
+  },
+  "full_coverage_required": true,
+  "semantic_gate_scope": "source-description visual discriminator agreement, not independent clinical truth; all24 contribute failures and costs",
+  "role_partition": "Reuse the four pre-existing historical anchor memberships; other20 current. No source counted in both. Both roles previously exposed; current training46 disjoint.",
+  "clock": "Share original8h clock from metadata generation and its failed structure attempt; no reset",
+  "selection": "A passing candidate is research-development accepted only, not independent efficacy or clinical deployment. Otherwise restore empty memory with Fixed prior.",
+  "cost": "All routing/model/tool time and tokens reported separately; routes add up to2 metadata calls, unchanged native8 calls and8 tools. Per-case900s includes routing."
+}

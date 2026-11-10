@@ -1,0 +1,34 @@
+{
+  "routes_completed": 23,
+  "routes_with_selected_memory": 22,
+  "routes_with_selected_skills": 18,
+  "candidate_tool_requests": 0,
+  "native_controller_cost": {
+    "Fixed": {
+      "calls": 55,
+      "input_tokens": 135337,
+      "output_tokens": 2111
+    },
+    "memory": {
+      "calls": 46,
+      "input_tokens": 176685,
+      "output_tokens": 380
+    }
+  },
+  "metadata_cost_including_failed_generation": {
+    "calls": 62,
+    "input_tokens": 248504,
+    "output_tokens": 9663,
+    "seconds": 286.9796235561371
+  },
+  "errors": {
+    "memory: ValueError": 1,
+    "Fixed: JSONDecodeError": 1
+  },
+  "tool_statuses": {
+    "Fixed/chest_xray_expert/failed": 5,
+    "Fixed/chest_xray_expert/completed": 3
+  },
+  "generation_limitation": "Abstractions are mostly generic expert-use/fallback advice and some request unavailable history/modalities. No evidence that new tool utility was learned.",
+  "decision": "Rejected under precommitted gain requirement; prior empty memory retained. Do not redefine tied agreement as efficiency: additional route cost increased total episode time."
+}

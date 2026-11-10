@@ -1,0 +1,53 @@
+{
+  "qualified_scores": {
+    "current": {
+      "denominator": 6,
+      "Fixed_correct": 4,
+      "memory_correct": 4,
+      "gain": 0,
+      "loss": 0,
+      "net": 0
+    },
+    "anchor": {
+      "denominator": 2,
+      "Fixed_correct": 1,
+      "memory_correct": 1,
+      "gain": 0,
+      "loss": 0,
+      "net": 0
+    }
+  },
+  "all_source_costs": {
+    "Fixed": {
+      "recorded": 24,
+      "failed_or_invalid": 1,
+      "tool_calls": 8,
+      "route_calls": 0,
+      "seconds": 85.22091841697693
+    },
+    "memory": {
+      "recorded": 24,
+      "failed_or_invalid": 1,
+      "tool_calls": 0,
+      "route_calls": 48,
+      "seconds": 165.64815258979797
+    }
+  },
+  "checks": {
+    "full_coverage": true,
+    "sufficient_qualified_sources": true,
+    "current_gain": false,
+    "current_loss": true,
+    "historical_no_loss": true,
+    "failure_nonincrease": true,
+    "tool_cost": true
+  },
+  "accepted_for_research_development": false,
+  "clinical_deployment": false,
+  "independent_evaluation": false,
+  "unknown_sources": 16,
+  "fatal": null,
+  "elapsed_since_original_start": 984.686384677887,
+  "recorded": 48,
+  "planned": 48
+}

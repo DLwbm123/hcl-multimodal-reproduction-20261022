@@ -1,0 +1,35 @@
+{
+  "experiment": "HCL operation-evidence memory candidate and acceptance",
+  "stage": "source candidate generation first; evaluation cannot start without separately frozen eligibility and gate",
+  "source_groups": 46,
+  "qualified_semantic_sources": 13,
+  "unknown_sources": 33,
+  "candidates": "maximum two: memory with fixed selector; same memory with one optimizer selector proposal",
+  "generation": "Frozen Qwen2.5-VL-7B text metadata generation, temperature0. Groups by visible image count; immutable ordered batches of at most6. All 46 paired records retained. HCL Memory raw/abstract/skills, Optimizer candidate_count1. Invalid abstraction aborts rather than generic fallback. Unknown record correctness stays null. No outcome-based retries.",
+  "budget": {
+    "hours_total": 8,
+    "stop_apparent_bytes": 10000000000,
+    "strict_actual_bytes": 50000000000,
+    "metadata_input_tokens": 20000,
+    "metadata_output_tokens_max": 4096,
+    "metadata_request_max_time": 180
+  },
+  "initial_state": "empty evidence memory, existing Fixed prior; restore empty after generation; never automatically accept",
+  "evaluation_preconditions": "Finish 24 reserved method-development input/privacy/reference qualification and historical anchor qualification, freeze actual denominator, candidate names and acceptance thresholds before evaluating. Keep48 frozen evaluation and96 original confirmation sealed.",
+  "primary_gate_precommit": {
+    "current_source_net_gain_min": 1,
+    "current_source_loss_max": 1,
+    "historical_source_net_loss_max": 0,
+    "historical_source_losses_max": 0,
+    "failed_episode_increase_max": 0,
+    "tool_call_total_ratio_vs_fixed_max": 2.0,
+    "tool_call_total_additive_allowance": 2,
+    "selection": "eligible candidate with largest current net gain, then fewer tool calls, then base-memory candidate; if none, retain empty state"
+  },
+  "prohibited_claims": [
+    "clinical correctness",
+    "parameter RL",
+    "A-to-B retention without acquisition",
+    "independent test improvement from development"
+  ]
+}
