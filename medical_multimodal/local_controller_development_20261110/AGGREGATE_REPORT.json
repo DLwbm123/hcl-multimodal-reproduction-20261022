@@ -1,0 +1,104 @@
+{
+  "planned_episodes": 96,
+  "recorded_episodes": 96,
+  "metrics": {
+    "H0": {
+      "denominator": 24,
+      "completed": 21,
+      "correct": 13,
+      "controller_calls": 54,
+      "tool_calls": 9,
+      "seconds": 83.62524008750916,
+      "focused_requests": 0
+    },
+    "Raw": {
+      "denominator": 24,
+      "completed": 23,
+      "correct": 12,
+      "controller_calls": 55,
+      "tool_calls": 8,
+      "seconds": 63.01810884475708,
+      "focused_requests": 0
+    },
+    "Fixed": {
+      "denominator": 24,
+      "completed": 23,
+      "correct": 10,
+      "controller_calls": 55,
+      "tool_calls": 8,
+      "seconds": 68.23109936714172,
+      "focused_requests": 0
+    },
+    "Proposed_v0": {
+      "denominator": 24,
+      "completed": 19,
+      "correct": 9,
+      "controller_calls": 54,
+      "tool_calls": 12,
+      "seconds": 89.0143711566925,
+      "focused_requests": 1
+    }
+  },
+  "paired": {
+    "all_benchmark_targets": {
+      "H0_to_Proposed_v0": {
+        "denominator": 24,
+        "gain": 0,
+        "loss": 4
+      },
+      "Raw_to_Proposed_v0": {
+        "denominator": 24,
+        "gain": 1,
+        "loss": 4
+      },
+      "Fixed_to_Proposed_v0": {
+        "denominator": 24,
+        "gain": 0,
+        "loss": 1
+      }
+    },
+    "source_aligned_not_adjudicated": {
+      "H0_to_Proposed_v0": {
+        "denominator": 7,
+        "gain": 0,
+        "loss": 2
+      },
+      "Raw_to_Proposed_v0": {
+        "denominator": 7,
+        "gain": 0,
+        "loss": 2
+      },
+      "Fixed_to_Proposed_v0": {
+        "denominator": 7,
+        "gain": 0,
+        "loss": 1
+      }
+    },
+    "unresolved_or_conflicting_reference": {
+      "H0_to_Proposed_v0": {
+        "denominator": 17,
+        "gain": 0,
+        "loss": 2
+      },
+      "Raw_to_Proposed_v0": {
+        "denominator": 17,
+        "gain": 1,
+        "loss": 2
+      },
+      "Fixed_to_Proposed_v0": {
+        "denominator": 17,
+        "gain": 0,
+        "loss": 0
+      }
+    }
+  },
+  "confirmation_used": false,
+  "clinical_correctness_established": false,
+  "learned_conditional_boundary_established": false,
+  "automatic_promotion_allowed": false,
+  "purpose": "real-controller development integration; benchmark concordance, not clinical validation",
+  "fatal": null,
+  "finished_at": 1794305050.5110059,
+  "seconds_since_original_start": 2271.475398540497,
+  "complete": false
+}

@@ -1,0 +1,22 @@
+{
+  "time": 1794302920.2961218,
+  "issue": "Exact final choice was wrongly rejected by JSON action parser",
+  "change": "Accept only exact A-F in final-only step; strict JSON remains mandatory for tool turns",
+  "recovered_original_outputs": [
+    {
+      "id": "d00",
+      "arm": "H0"
+    },
+    {
+      "id": "d00",
+      "arm": "Raw"
+    },
+    {
+      "id": "d00",
+      "arm": "Fixed"
+    }
+  ],
+  "new_inference_for_recovery": 0,
+  "original_clock_retained": true,
+  "model_policy_data_unchanged": true
+}

@@ -1,0 +1,17 @@
+{
+  "coverage_complete": true,
+  "planned_episodes": 96,
+  "recorded_episodes": 96,
+  "valid_completed_episodes": 86,
+  "failed_episodes": 10,
+  "exit_code": 0,
+  "controller_generations_including_all_attempts": 218,
+  "tool_attempts_including_preflight": 49,
+  "episode_tools": 37,
+  "storage_last_apparent_bytes": 2933425,
+  "all_episode_successful": false,
+  "positive_primary_result": false,
+  "clinical_validation": false,
+  "qualification": "Development diagnostic, no independent confirmation",
+  "original_report_complete_field_means": "All expected episodes completed successfully with a valid final answer, not merely matrix coverage."
+}

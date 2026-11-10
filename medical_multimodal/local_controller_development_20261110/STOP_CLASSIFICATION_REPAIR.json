@@ -1,0 +1,9 @@
+{
+  "time": 1794304829.713967,
+  "issue": "Protocol specifies three consecutive infrastructure failures, but worker also stopped on measured controller format failures",
+  "change": "JSON syntax and over-two-call outputs remain failed episodes but do not trigger infrastructure abort",
+  "recorded_episodes_preserved": 61,
+  "rerun_failed_episodes": false,
+  "original_clock_retained": true,
+  "policy_parser_scoring_unchanged": true
+}

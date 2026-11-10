@@ -1,0 +1,45 @@
+{
+  "experiment": "native_medrax_local_controller_development_v1",
+  "purpose": "Mechanistic development diagnostic; no independent efficacy claim. Test whether available medical tools and prior feedback operation change local Qwen decisions.",
+  "source_groups": 24,
+  "planned_episodes": 96,
+  "arms": [
+    "H0",
+    "Raw",
+    "Fixed",
+    "Proposed_v0"
+  ],
+  "controller": {
+    "name": "Qwen2.5-VL-7B-Instruct",
+    "dtype": "bfloat16",
+    "temperature": 0,
+    "max_pixels": 1003520,
+    "max_new_tokens": 1024,
+    "max_input_tokens": 24000
+  },
+  "tools": [
+    "chest_xray_classifier",
+    "chest_xray_segmentation",
+    "chest_xray_expert",
+    "chest_xray_report_generator"
+  ],
+  "limits": {
+    "per_case_controller_calls": 8,
+    "per_case_tool_calls": 8,
+    "per_case_seconds": 900,
+    "request_timeout_seconds": 300
+  },
+  "data_role": "Reuses previously exposed 24-source development only. Original 120-source reservation and 96-source confirmation remain untouched. All frozen denominators retained including failures.",
+  "selection": "No model-accuracy selection or case replacement. Case order and rotated arms unchanged.",
+  "primary": "Proposed_v0 versus Fixed final benchmark agreement paired gain/loss; unadjudicated reference tiers reported separately.",
+  "secondary": [
+    "H0 comparison",
+    "tool success",
+    "focused query rate",
+    "controller and tool cost",
+    "latency"
+  ],
+  "limits_note": "12h hard wall clock shared by retries; stop at 10GB new apparent bytes including caches/temp, below strict 50GB actual storage. Existing models shared without copies.",
+  "stop": "Immediate stop on visual contract or privacy violation; three consecutive infrastructure failures abort for repair; no changing policy from partial evaluation.",
+  "next_step": "After diagnostic, design mechanism and learn only from reserved learning split after eligibility review. Freeze on method development; evaluate reserved frozen evaluation once."
+}

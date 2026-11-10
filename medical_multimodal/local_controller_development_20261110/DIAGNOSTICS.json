@@ -1,0 +1,73 @@
+{
+  "H0": {
+    "failed": {
+      "JSONDecodeError": 3
+    },
+    "tool_statuses": {
+      "completed": 4,
+      "failed": 5
+    },
+    "visual_contracts": {
+      "True": 4,
+      "False": 5
+    },
+    "episodes_with_tool": 9,
+    "exact_letter_second_pass_changes": 0,
+    "drift_correct_to_wrong": 0,
+    "drift_wrong_to_correct": 0,
+    "format_failures_after_successful_tools": 0
+  },
+  "Raw": {
+    "failed": {
+      "JSONDecodeError": 1
+    },
+    "tool_statuses": {
+      "completed": 4,
+      "failed": 4
+    },
+    "visual_contracts": {
+      "True": 4,
+      "False": 4
+    },
+    "episodes_with_tool": 8,
+    "exact_letter_second_pass_changes": 0,
+    "drift_correct_to_wrong": 0,
+    "drift_wrong_to_correct": 0,
+    "format_failures_after_successful_tools": 0
+  },
+  "Fixed": {
+    "failed": {
+      "JSONDecodeError": 1
+    },
+    "tool_statuses": {
+      "completed": 3,
+      "failed": 5
+    },
+    "visual_contracts": {
+      "True": 3,
+      "False": 5
+    },
+    "episodes_with_tool": 8,
+    "exact_letter_second_pass_changes": 1,
+    "drift_correct_to_wrong": 0,
+    "drift_wrong_to_correct": 0,
+    "format_failures_after_successful_tools": 0
+  },
+  "Proposed_v0": {
+    "failed": {
+      "JSONDecodeError": 3,
+      "ValueError": 2
+    },
+    "tool_statuses": {
+      "completed": 12
+    },
+    "visual_contracts": {
+      "True": 12
+    },
+    "episodes_with_tool": 11,
+    "exact_letter_second_pass_changes": 1,
+    "drift_correct_to_wrong": 0,
+    "drift_wrong_to_correct": 1,
+    "format_failures_after_successful_tools": 3
+  }
+}
