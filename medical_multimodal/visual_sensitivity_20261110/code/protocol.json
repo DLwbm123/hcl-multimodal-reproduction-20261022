@@ -1,0 +1,39 @@
+{
+  "experiment": "bounded_image_conditioning_diagnostic",
+  "purpose": "Test actual image sensitivity of existing expert/report observations after source-feedback gains were all confounded; no method efficacy or clinical scoring.",
+  "selection": "First six immutable execution-order source-learning groups with pre-existing semantic qualification and at least one eligible tool image; first eligible image only. No prediction/correctness-based choice.",
+  "source_groups": 6,
+  "tools": [
+    "chest_xray_expert",
+    "chest_xray_report_generator"
+  ],
+  "conditions": [
+    "real",
+    "repeat_real",
+    "cyclic_other_image",
+    "uniform_black"
+  ],
+  "planned_tool_calls": 48,
+  "expert_prompt": "Describe the chest X-ray findings.",
+  "expert_max_new_tokens": 256,
+  "controls": "Same generic prompt/tool configuration for every condition. Repeated real image measures generation variability. Other image is the next selected image cyclically. Black image matches input dimensions. Conditions are declared synthetic diagnostics and never clinical training labels.",
+  "metrics": [
+    "successful_calls/full48",
+    "per-tool real vs repeated-real normalized-string equality",
+    "per-tool real vs cyclic-image normalized-string changes",
+    "per-tool real vs black-image normalized-string changes",
+    "token Jaccard similarity and output lengths as diagnostics only",
+    "visual encoding contract for all expert calls"
+  ],
+  "limitations": "Output change is sensitivity, not truth, localization accuracy, clinical utility or proof against all conditioning bugs. No answers, diagnosis targets, development or held-out cases are read.",
+  "limits": {
+    "per_case_tool_calls": 8,
+    "per_case_seconds": 180
+  },
+  "budget": {
+    "total_seconds": 1800,
+    "stop_apparent_bytes": 2000000000,
+    "strict_actual_bytes": 50000000000
+  },
+  "stop": "No prompt search or extra cells after48; stop on visual contract breach or resource limit; retain every failure and full denominator."
+}

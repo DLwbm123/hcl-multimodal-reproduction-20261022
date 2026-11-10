@@ -1,0 +1,7 @@
+# Existing report-tool feedback acquisition
+
+This source-learning run changes the frozen exploration operation from per-image CheXagent queries to per-image native chest-X-ray report generation. The historical Fixed comparison, controller, tool access, budgets, qualified inputs and scoring are unchanged. An empty eligible-image set adds no observation wrapper. This is action-evidence acquisition for the HCL mainline, not baseline optimization or a learned accepted policy.
+
+The same 46 sources are reused; 13 have limited visual-discriminator benchmark feedback and 33 retain null semantic feedback. The report tool receives an image only, not the question or answer choices. All 92 attempted episodes and all costs are retained. None of the current-development or frozen-evaluation targets is used in this run.
+
+The setup and private input schema follow feedback_learning_20261110. Use code/protocol.json and the original budget.json, supervised with supervisor.py. Existing local model/image assets remain read-only; four-hour total deadline,10GB apparent stop, strict actual new storage<50GB. Two legacy host paths in the public run_agent.py are replaced by environment variables as in the prior release. The old subscription/six-tool entry points are unused. Source checks: python code/check_scoring.py and python code/local_controller.py. Actual operation evidence is described in the report, without publishing patient images, private questions, traces or deployment files.

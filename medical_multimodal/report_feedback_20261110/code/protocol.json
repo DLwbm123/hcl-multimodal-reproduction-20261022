@@ -1,0 +1,38 @@
+{
+  "experiment": "native_medrax_report_operation_feedback_v1",
+  "phase": "source-learning operation exploration; not final method evaluation",
+  "source_groups": 46,
+  "planned_episodes": 92,
+  "arms": [
+    "Fixed",
+    "Probe"
+  ],
+  "semantic_feedback_source_groups": 13,
+  "unresolved_reference_groups": 33,
+  "method": "Pair unchanged Fixed with a real per-image report from the existing native report generator. This expands source-learning action evidence after generic expert observations and an HCL candidate failed. No learned policy or evaluation claim.",
+  "controller": {
+    "name": "Qwen2.5-VL-7B-Instruct",
+    "dtype": "bfloat16",
+    "temperature": 0,
+    "max_pixels": 1003520,
+    "max_new_tokens": 1024,
+    "max_input_tokens": 24000
+  },
+  "limits": {
+    "per_case_controller_calls": 8,
+    "per_case_tool_calls": 8,
+    "per_case_seconds": 900,
+    "request_timeout_seconds": 300
+  },
+  "probe": "One existing chest_xray_report_generator call per eligible image with its standard configuration. No generated question or answer options are passed to the report tool. Fallible report bound to image/event. No eligible images means exactly no probe context. All calls count toward8 total.",
+  "shared_interface_revision": "Reuse previous paired-run shared interface and guards. If no image is eligible, both arms receive the identical Fixed context (no empty observation wrapper). Other parser and scoring rules unchanged.",
+  "feedback": "Only 13 source-aligned visual-discriminator cases receive benchmark agreement feedback. Etiology/management details remain unadjudicated. All other reference outcomes are withheld and cannot be semantic learning rewards. All46 can contribute execution/cost/error evidence.",
+  "controls": "Same input order, model, original Fixed context, tool guards and case budgets. Alternating arm order by immutable index. Extra probe action/token cost separately reported, not cost-matched. No replacement or rerun based on outcomes.",
+  "selection_and_evaluation": "No method-development or frozen-evaluation input/target is read by this experiment. No automatic candidate generation or promotion from results. Complete all92 attempts and analyze useful evidence vs format/wrapper differences.",
+  "budget": "4h hard deadline shared by retries; stop at10GB apparent run bytes; strict per-server actual<50GB. Shared existing assets read-only; run-local caches and private outputs.",
+  "stop": "Stop on privacy or visual-contract invariant breach; preserve failures and budgets. No post-result parser relaxation or outcome-dependent repeat.",
+  "clinical_validation": false,
+  "measurement": "Missing episodes count against full aggregate denominator, but paired gain/loss require both recorded arms; failed recorded arms count incorrect. Unknown reference groups always have null semantic feedback. Per-case 900s alarm includes forced probes; requests use model generation max_time; independent supervisor bounds total run.",
+  "motivation": "Prior expert source feedback gave no demonstrated useful-evidence gain; HCL source memory candidate tied repeated development and was rejected. Test whether a different existing observation type provides discriminating information for future evidence-conditioned operation selection; not baseline optimization.",
+  "reference_scope": "Same frozen46 source groups/13 qualified visual-feedback groups/33unknown and exact approved images as previous acquisition; repeated source data, not additional independent samples."
+}

@@ -1,0 +1,49 @@
+{
+  "planned_calls": 48,
+  "recorded_calls": 48,
+  "successful_calls": 48,
+  "coverage_complete": true,
+  "by_tool": {
+    "chest_xray_expert": {
+      "planned_sources": 6,
+      "complete_control_sets": 6,
+      "comparisons": {
+        "repeat_real": {
+          "text_changed_sources": 0,
+          "mean_token_jaccard": 1.0
+        },
+        "cyclic_other_image": {
+          "text_changed_sources": 6,
+          "mean_token_jaccard": 0.04945054945054945
+        },
+        "uniform_black": {
+          "text_changed_sources": 6,
+          "mean_token_jaccard": 0.03813492063492063
+        }
+      }
+    },
+    "chest_xray_report_generator": {
+      "planned_sources": 6,
+      "complete_control_sets": 6,
+      "comparisons": {
+        "repeat_real": {
+          "text_changed_sources": 0,
+          "mean_token_jaccard": 1.0
+        },
+        "cyclic_other_image": {
+          "text_changed_sources": 5,
+          "mean_token_jaccard": 0.5465540563410746
+        },
+        "uniform_black": {
+          "text_changed_sources": 6,
+          "mean_token_jaccard": 0.4770075211330959
+        }
+      }
+    }
+  },
+  "clinical_accuracy_measured": false,
+  "method_effectiveness_measured": false,
+  "labels_accessed": false,
+  "fatal": null,
+  "elapsed_seconds": 70.69743132591248
+}

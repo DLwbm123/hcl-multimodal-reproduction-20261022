@@ -1,0 +1,33 @@
+{
+  "attempted": 92,
+  "completed": 89,
+  "paired_gain": 1,
+  "paired_loss": 0,
+  "gain_with_failed_fixed_format": 1,
+  "gain_supported_by_demonstrated_new_discriminating_evidence": 0,
+  "forced_report_requests": 80,
+  "tool_status_counts": {
+    "Probe/chest_xray_report_generator/completed": 80,
+    "Probe/chest_xray_expert/completed": 1,
+    "Fixed/chest_xray_expert/completed": 3,
+    "Fixed/chest_xray_expert/failed": 7,
+    "Probe/chest_xray_expert/failed": 4
+  },
+  "controller_cost": {
+    "Fixed": {
+      "calls": 99,
+      "input_tokens": 246847,
+      "output_tokens": 4627
+    },
+    "Probe": {
+      "calls": 97,
+      "input_tokens": 268832,
+      "output_tokens": 1957
+    }
+  },
+  "errors": {
+    "JSONDecodeError": 3
+  },
+  "clinical_utility_not_established": true,
+  "decision": "Do not promote the report workflow. Sole gain is confounded by Fixed formatting failure; report lacks the decisive margin description and introduces unsupported temporal language."
+}

@@ -1,0 +1,11 @@
+# Bounded image-sensitivity diagnostic
+
+After two source-learning observation probes failed to demonstrate useful-evidence gain, this diagnostic checks whether the existing expert and report tools actually change outputs when the image changes. It is not a new method, baseline tuning, clinical accuracy test or held-out evaluation.
+
+Six source-learning groups are selected by immutable execution order among the prequalified groups with eligible images, without using prediction correctness. Each tool receives the real image, a repeated real image, the next selected image cyclically, and a same-dimension black image:48 calls total. The expert prompt and tool settings are fixed. No task answers, development or held-out inputs are loaded. Synthetic controls never become clinical training labels.
+
+All48 calls succeeded. Expert outputs changed for6/6 swapped and6/6 black images; report outputs changed for5/6 swapped and6/6 black images. Both tools repeated the same normalized text for6/6 identical-image repetitions. This supports image sensitivity on these controls; it does not establish semantic truth, attention to the relevant lesion or absence of every conditioning bug.
+
+The run lasted70.7seconds and ended normally, with actual new storage917504bytes. A30minute original deadline,2GB apparent storage stop and independent supervisor bounded the run. Source/image assets were read-only. The short run finished before the follow-up process snapshot, so no live ps/nvidia snapshot was captured for this diagnostic; neutral launch paths were recorded. No run was repeated merely to obtain a snapshot.
+
+Use the same native runtime/asset layout and environment as report_feedback_20261110. Set R981_ROOT,R1136_TMP,R1136_CACHE,CUDA_VISIBLE_DEVICES,HF offline/cache variables, and the supervisor entry variables. Private inputs.json contains audit_id,image,source_id,selection_index. audit.py generates only blank controls and never reads benchmark targets. Two public legacy paths are replaced with environment variables as in previous releases. Native graph/controller functions imported by the reused runtime are not executed by this audit. Output equality denominators and repeat controls were checked on synthetic records before execution. Private images, outputs and source identities are not published.
