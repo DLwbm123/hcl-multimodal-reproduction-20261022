@@ -1,0 +1,44 @@
+{
+  "planned_episodes": 92,
+  "recorded_episodes": 92,
+  "coverage_complete": true,
+  "metrics": {
+    "Advisory": {
+      "planned": 46,
+      "recorded": 46,
+      "completed": 46,
+      "semantic_denominator": 13,
+      "benchmark_correct": 7,
+      "tool_calls": 2,
+      "seconds": 92.3115005493164
+    },
+    "Contract": {
+      "planned": 46,
+      "recorded": 46,
+      "completed": 46,
+      "semantic_denominator": 13,
+      "benchmark_correct": 7,
+      "tool_calls": 2,
+      "seconds": 90.26369118690491
+    }
+  },
+  "paired": {
+    "denominator": 13,
+    "observed_pairs": 13,
+    "gain": 0,
+    "loss": 0
+  },
+  "unknown_reference_groups": 33,
+  "independent_evaluation": false,
+  "learned_policy": false,
+  "clinical_validation": false,
+  "cached_report_acquisition_requests_per_arm": 80,
+  "fatal": null,
+  "elapsed_since_original_start": 203.82661175727844,
+  "valid_final": {
+    "Advisory": 46,
+    "Contract": 46
+  },
+  "source_diagnostic_continuation_signal": false,
+  "candidate_accepted": false
+}

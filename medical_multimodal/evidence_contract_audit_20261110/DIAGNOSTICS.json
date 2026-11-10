@@ -1,0 +1,30 @@
+{
+  "cached_reports_per_arm": 80,
+  "changed_admitted_report_texts": 29,
+  "sources_with_changed_report_text": 22,
+  "whole_reports_quarantined": 5,
+  "source_final_choice_changes": 3,
+  "qualified_source_choice_changes": 0,
+  "unknown_source_choice_changes": 3,
+  "controller_cost": {
+    "Advisory": {
+      "controller_calls": 94,
+      "input_tokens": 264959,
+      "output_tokens": 1306
+    },
+    "Contract": {
+      "controller_calls": 94,
+      "input_tokens": 262995,
+      "output_tokens": 1293
+    }
+  },
+  "tool_status_counts": {
+    "Advisory/chest_xray_expert/completed": 1,
+    "Contract/chest_xray_expert/completed": 1,
+    "Contract/chest_xray_expert/failed": 1,
+    "Advisory/chest_xray_expert/failed": 1
+  },
+  "fresh_report_calls": 0,
+  "all_clinical_truth_fields_unknown": true,
+  "decision": "No source-level gain/loss; do not integrate this diagnostic filter as an effective learned strategy. No efficiency claim from a roughly two-second timing difference."
+}

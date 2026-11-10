@@ -1,0 +1,36 @@
+{
+  "analysis_type": "post_hoc_source_learning_audit",
+  "new_model_calls": 0,
+  "source_groups": 46,
+  "sources_with_reports": 45,
+  "sources_without_eligible_report_images": 1,
+  "report_observations": 80,
+  "source_semantic_eligibility": {
+    "unknown": 33,
+    "qualified": 13
+  },
+  "manual_primary_demand_counts": {
+    "clinical_cause": 15,
+    "local_morphology": 8,
+    "spatial_relation": 9,
+    "distribution": 4,
+    "measurement": 2,
+    "local_bone_and_management": 1,
+    "management": 1,
+    "temporal_comparison": 6
+  },
+  "temporal_marker_reports": 27,
+  "sources_with_temporal_marker_reports": 20,
+  "cross_section_literal_flag_reports": 5,
+  "sources_with_cross_section_literal_flags": 5,
+  "literal_flag_counts": {
+    "pleural_effusion": 4,
+    "pneumonia": 1
+  },
+  "clinical_accuracy_measured": false,
+  "contradiction_detector_validated": false,
+  "manual_demand_labels_are_provisional_single_reviewer": true,
+  "evaluation_or_confirmation_read": false,
+  "unknown_clinical_truth_preserved": true,
+  "candidate_accepted": false
+}

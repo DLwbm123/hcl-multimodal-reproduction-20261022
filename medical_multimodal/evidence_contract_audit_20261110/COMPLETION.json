@@ -1,0 +1,15 @@
+{
+  "recorded_episodes": 92,
+  "planned_episodes": 92,
+  "exit_code": 0,
+  "stop_reason": null,
+  "worker_exited": true,
+  "actual_new_bytes": 1912832,
+  "elapsed_since_original_start_seconds": 203.82661175727844,
+  "time_limit_seconds": 3600,
+  "stop_apparent_bytes": 2000000000,
+  "strict_actual_limit_bytes": 50000000000,
+  "neutral_live_ps_and_gpu_process_name_observed": true,
+  "source_only": true,
+  "candidate_accepted": false
+}

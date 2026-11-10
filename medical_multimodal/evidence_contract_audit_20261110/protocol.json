@@ -1,0 +1,46 @@
+{
+  "experiment": "report_provenance_admission_mechanism_v1",
+  "phase": "source-only mechanism diagnostic, not learned policy or final method",
+  "source_groups": 46,
+  "planned_episodes": 92,
+  "arms": [
+    "Advisory",
+    "Contract"
+  ],
+  "semantic_feedback_source_groups": 13,
+  "unresolved_reference_groups": 33,
+  "method": "Reuse the exact 80 frozen real report observations on46 source groups. Both arms receive identical provenance/risk fields and original current images. Advisory includes unfiltered sections; Contract excludes a report if narrow cross-section flags occur, otherwise excludes sentences containing temporal markers. Empty eligibility gets no wrapper in both. This is a source-derived deterministic mechanism diagnostic, not learning effectiveness.",
+  "controller": {
+    "name": "Qwen2.5-VL-7B-Instruct",
+    "dtype": "bfloat16",
+    "temperature": 0,
+    "max_pixels": 1003520,
+    "max_new_tokens": 1024,
+    "max_input_tokens": 24000
+  },
+  "limits": {
+    "per_case_controller_calls": 8,
+    "per_case_tool_calls": 8,
+    "per_case_seconds": 300,
+    "request_timeout_seconds": 300
+  },
+  "probe": "No forced new report acquisition. Paired existing observations are reused verbatim by source/image. Neither source question/options nor clinical reference is used by the filter. Native4 tools remain identically available; newly invoked report outputs receive the same arm-specific admission transform. All additional calls and controller tokens counted.",
+  "shared_interface_revision": "Reuse previous paired-run shared interface and guards. If no image is eligible, both arms receive the identical Fixed context (no empty observation wrapper). Other parser and scoring rules unchanged.",
+  "feedback": "Only 13 source-aligned visual-discriminator cases receive benchmark agreement feedback. Etiology/management details remain unadjudicated. All other reference outcomes are withheld and cannot be semantic learning rewards. All46 can contribute execution/cost/error evidence.",
+  "controls": "Same initial Fixed prior, model, input order, shared parser/visual safeguards, tool config, budgets and risk-envelope schema. Arm order alternates by immutable source execution index. Token lengths change when content is withheld: not token matched and cannot isolate all shortening effects. No old prediction reused as control, both arms rerun once.",
+  "selection_and_evaluation": "Complete92 attempted episodes before qualified targets loaded. No new clinical truth/reward. No automatic promotion, no read of24 development/48 frozen/96 confirmation. Diagnostic continuation signal only: source net gain>=1, source loss0, valid final answers do not decrease; otherwise do not integrate this filter as effective. Even passing needs a separately frozen HCL candidate and repeated-development gate.",
+  "budget": "1h original hard deadline shared by retries, 2GB apparent stop line, strict actual<50GB. No new models/images copied; existing approved assets read-only. At most92 episodes,736 native tool requests,736 controller calls; no outcome retries.",
+  "stop": "Stop on privacy or visual-contract invariant breach; preserve failures and budgets. No post-result parser relaxation or outcome-dependent repeat.",
+  "clinical_validation": false,
+  "measurement": "All46 sources execution/cost; only13 known visual-option-reference agreement. Failed recorded arms count incorrect;33 unknown remain null. Raw report acquisition80 calls historical, equal shared antecedent, not newly measured savings. Added native tools may mediate effects; gains require per-trace attribution separating formatting. Contract cannot claim corrected medical facts.",
+  "motivation": "Post-hoc audit found27/80 reports with temporal phrases despite single-image inputs and5/80 narrow cross-section opposition flags. Test hard provenance admission against the same warnings without hard exclusion before adding an HCL learned state-dependent acquisition mechanism.",
+  "reference_scope": "Same frozen46 source groups/13 qualified visual-feedback groups/33unknown and exact approved images as previous acquisition; repeated source data, not additional independent samples.",
+  "filter_frozen": {
+    "temporal_regex": "audit.TEMPORAL",
+    "cross_section_rules": "audit.OPPOSED plus conservative sentence negation guard",
+    "clinical_truth": "null for every parsed observation",
+    "cross_section_action": "quarantine whole report, retain original only in private log",
+    "temporal_action": "quarantine whole sentence; absence of admitted text means unknown, not normal",
+    "scope": "advisory and contract both show identical flags; only report content admitted differs"
+  }
+}
