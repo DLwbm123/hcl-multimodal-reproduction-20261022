@@ -27,6 +27,8 @@ class AgentState(TypedDict):
     messages: Annotated[list[AnyMessage], operator.add]
     controller_calls: int
     tool_calls: int
+    protocol_errors: int
+    last_protocol_error: str
 
 
 class AgentProtocolError(ValueError):
@@ -75,11 +77,14 @@ class GraphAgentModel:
     chooses its name and instruction; it may request one additional call.
     """
 
-    def __init__(self, backend, trace_path: Path, *, max_tools: int = 2, tool_runtime=None, coverage_plan=None):
+    def __init__(self, backend, trace_path: Path, *, max_tools: int = 2, tool_runtime=None, coverage_plan=None, max_action_retries: int = 0):
         self.backend = backend
         self.trace_path = Path(trace_path)
         self.trace_path.parent.mkdir(parents=True, exist_ok=True)
         self.max_tools = max_tools
+        if type(max_action_retries) is not int or not 0 <= max_action_retries <= 2:
+            raise ValueError("action retries must be between zero and two")
+        self.max_action_retries = max_action_retries
         self.tool_runtime = tool_runtime
         self.tools = {**TOOLS, **(tool_runtime.descriptions if tool_runtime else {})}
         if tool_runtime:
@@ -105,7 +110,7 @@ class GraphAgentModel:
 
         def process(current: AgentState):
             count = current["controller_calls"] + 1
-            if count > self.max_tools + 1:
+            if count > self.max_tools + 1 + self.max_action_retries:
                 raise AgentProtocolError("controller call limit exceeded")
             observations = [{"tool": m.name, "result": m.content}
                             for m in current["messages"] if isinstance(m, ToolMessage)]
@@ -138,6 +143,11 @@ class GraphAgentModel:
                             'with the exact schema in its description. The original three tools require '
                             'arguments={"instruction":"specific request"}, never category, label, or bbox keys. '
                             'Never invent file paths. Observe tool errors and do not present them as findings.')
+            if current["last_protocol_error"]:
+                request += ('\nYour previous action was rejected before tool execution: '
+                            + current["last_protocol_error"]
+                            + '\nSubmit a corrected complete action using the listed schema, or a final answer if observations suffice. '
+                            'A rejected action produced no new observation. Do not repeat missing arguments.')
             expected = None
             if self.coverage_plan is not None:
                 if len(observations) < len(self.coverage_plan):
@@ -155,19 +165,27 @@ class GraphAgentModel:
                                                            "max_new_tokens": 512})
                 decision_source = "model"
             events.append({"node": "process", "raw": raw, "decision_source": decision_source})
-            if observations:
-                try:
+            try:
+                if observations:
+                    try:
+                        action = decode_action(raw, self.tool_runtime)
+                    except AgentProtocolError:
+                        # Malformed tool requests must never become ordinary final answers.
+                        if '"tool"' in raw or '"instruction"' in raw or '"answer"' in raw or '"arguments"' in raw:
+                            raise
+                        if not raw.strip():
+                            raise AgentProtocolError("empty final answer")
+                        action = {"answer": raw.strip()}
+                else:
                     action = decode_action(raw, self.tool_runtime)
-                except AgentProtocolError:
-                    # Native task answers can be plain labels or bbox JSON.
-                    # A malformed tool request must never become a final answer.
-                    if '"tool"' in raw or '"instruction"' in raw or '"answer"' in raw or '"arguments"' in raw:
-                        raise
-                    if not raw.strip():
-                        raise AgentProtocolError("empty final answer")
-                    action = {"answer": raw.strip()}
-            else:
-                action = decode_action(raw, self.tool_runtime)
+            except AgentProtocolError as exc:
+                if current["protocol_errors"] >= self.max_action_retries or self.coverage_plan is not None:
+                    raise
+                events.append({"node": "validation_error", "error": str(exc),
+                               "retry": current["protocol_errors"] + 1, "tool_executed": False})
+                return {"messages": [HumanMessage(content="Action validation error: " + str(exc))],
+                        "controller_calls": count, "protocol_errors": current["protocol_errors"] + 1,
+                        "last_protocol_error": str(exc)}
             if self.coverage_plan is not None:
                 if expected is not None and action != decode_action(json.dumps(expected), self.tool_runtime):
                     raise AgentProtocolError("action differs from prescribed coverage step")
@@ -183,7 +201,7 @@ class GraphAgentModel:
                 if not observations:
                     raise AgentProtocolError("answer before required tool call")
                 message = AIMessage(content=action["answer"])
-            return {"messages": [message], "controller_calls": count}
+            return {"messages": [message], "controller_calls": count, "last_protocol_error": ""}
 
         def execute(current: AgentState):
             calls = current["messages"][-1].tool_calls
@@ -215,20 +233,23 @@ class GraphAgentModel:
         builder = StateGraph(AgentState)
         builder.add_node("process", process)
         builder.add_node("execute", execute)
-        builder.add_conditional_edges("process", lambda s: bool(s["messages"][-1].tool_calls),
-                                      {True: "execute", False: END})
+        builder.add_conditional_edges("process",
+                                      lambda s: "retry" if s["last_protocol_error"] else "tool" if s["messages"][-1].tool_calls else "done",
+                                      {"retry": "process", "tool": "execute", "done": END})
         builder.add_edge("execute", "process")
         builder.set_entry_point("process")
         # Episode checkpoints are separate from HCL's cross-task learning state.
         graph = builder.compile(checkpointer=InMemorySaver())
-        config = {"configurable": {"thread_id": uuid4().hex}, "recursion_limit": 2 * self.max_tools + 4}
+        config = {"configurable": {"thread_id": uuid4().hex}, "recursion_limit": 2 * self.max_tools + 4 + self.max_action_retries}
         try:
             result = graph.invoke({"messages": [HumanMessage(content=prompt)],
-                                   "controller_calls": 0, "tool_calls": 0}, config)
+                                   "controller_calls": 0, "tool_calls": 0,
+                                   "protocol_errors": 0, "last_protocol_error": ""}, config)
             answer = result["messages"][-1].content
             episode.update(status="completed", answer=answer,
                            controller_calls=result["controller_calls"], tool_calls=result["tool_calls"],
-                           checkpoint_count=sum(1 for _ in graph.get_state_history(config)))
+                           checkpoint_count=sum(1 for _ in graph.get_state_history(config)),
+                           protocol_errors=result["protocol_errors"])
             return answer
         except AgentProtocolError as exc:
             episode.update(status="failed", error=str(exc), answer="")

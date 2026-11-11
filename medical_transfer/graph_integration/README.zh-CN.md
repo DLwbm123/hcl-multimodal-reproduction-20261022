@@ -1,3 +1,5 @@
+> 2026-11-11：新增[已学习VQA状态的LangGraph联调与面试说明](../vqa_graph_interview_20261111/INTERVIEW.zh-CN.md)，3例真实循环及一次有界纠错已完成。下文保留早期三任务实验口径。本地整理目录中，`run.py`对应`worker.py`，`test_integration.py`对应`检查流程.py`。
+
 # 三任务 HCL + LangGraph 融合实现
 
 本目录把原有医学三任务 HCLPipeline 与 MedRAX 风格的工具执行循环接在一起。分类、息肉定位、医学 VQA 的任务顺序、数据角色和医学评分器沿用三任务实现；最终作答改为真实 LangGraph 的 `process → execute → process` 循环。

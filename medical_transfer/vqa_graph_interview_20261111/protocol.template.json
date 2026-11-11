@@ -1,0 +1,35 @@
+{
+  "seed": 20261110,
+  "anchors_per_task": 64,
+  "prepared_data": "<authorized local prepared_data>",
+  "old_state": "<authorized local old_state>",
+  "model_path": "<authorized local model_path>",
+  "python_paths": [
+    "<previous VQA adapter dependencies>",
+    "<medical_transfer/src>",
+    "<HCL package root>",
+    "<medical_transfer/graph_integration>",
+    "<medical_transfer/six_tool_demo>"
+  ],
+  "gate": {
+    "min_current_correct_gain": 1,
+    "historical_loss_budget": 2,
+    "min_format_compliance_rate": 0.95,
+    "historical_scope": "per candidate relative to deployed predecessor; report cumulative losses separately"
+  },
+  "purpose": "bounded interview integration smoke; no new efficacy claim",
+  "previous_run": "<authorized local previous_run>",
+  "learned_state": "<authorized local learned_state>",
+  "example_count": 3,
+  "max_tools_per_episode": 2,
+  "max_model_calls": 128,
+  "storage_stop_bytes": 1000000000,
+  "hard_seconds": 900,
+  "soft_seconds": 840,
+  "gpu": 1,
+  "selection": "first three already-used training examples; no result-based selection",
+  "coverage_plan": null,
+  "version": 2,
+  "max_action_retries": 1,
+  "amendment": "one schema-validation retry after observed missing tool instruction; same three cases, no efficacy selection; original clock and calls retained"
+}

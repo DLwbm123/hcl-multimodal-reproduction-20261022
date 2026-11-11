@@ -1,0 +1,182 @@
+{
+  "purpose": "engineering integration, not accuracy evaluation",
+  "cases": [
+    {
+      "case_index": 1,
+      "completed": true,
+      "event_nodes": [
+        "process",
+        "execute",
+        "process",
+        "execute",
+        "process"
+      ],
+      "tools": [
+        "answer_visual_question",
+        "answer_visual_question"
+      ],
+      "controller_decisions_model_generated": true,
+      "controller_calls": 3,
+      "tool_calls": 2,
+      "graph_checkpoints": 7,
+      "selected_memory_count": 2,
+      "read_only_state_equal": true,
+      "protocol_errors": 0,
+      "failure_reason": null
+    },
+    {
+      "case_index": 2,
+      "completed": true,
+      "event_nodes": [
+        "process",
+        "execute",
+        "process",
+        "validation_error",
+        "process",
+        "execute",
+        "process"
+      ],
+      "tools": [
+        "answer_visual_question",
+        "answer_visual_question"
+      ],
+      "controller_decisions_model_generated": true,
+      "controller_calls": 4,
+      "tool_calls": 2,
+      "graph_checkpoints": 8,
+      "selected_memory_count": 2,
+      "read_only_state_equal": true,
+      "protocol_errors": 1,
+      "failure_reason": null
+    },
+    {
+      "case_index": 3,
+      "completed": true,
+      "event_nodes": [
+        "process",
+        "execute",
+        "process",
+        "execute",
+        "process"
+      ],
+      "tools": [
+        "answer_visual_question",
+        "answer_visual_question"
+      ],
+      "controller_decisions_model_generated": true,
+      "controller_calls": 3,
+      "tool_calls": 2,
+      "graph_checkpoints": 7,
+      "selected_memory_count": 1,
+      "read_only_state_equal": true,
+      "protocol_errors": 0,
+      "failure_reason": null
+    }
+  ],
+  "all_graphs_completed": true,
+  "no_prescribed_tool_plan": true,
+  "model_calls": 47,
+  "memory": {
+    "raw": 10,
+    "abstract": 2,
+    "anchor": 72,
+    "skill": 0
+  },
+  "learned_state_preserved": true,
+  "metadata_backends_preserved": true,
+  "parameters_frozen": true,
+  "new_learning_run": false,
+  "previous_confirmation_not_reused": true,
+  "peak_gpu_bytes": 17665531392,
+  "first_pass": {
+    "purpose": "engineering integration, not accuracy evaluation",
+    "cases": [
+      {
+        "case_index": 1,
+        "completed": true,
+        "event_nodes": [
+          "process",
+          "execute",
+          "process",
+          "execute",
+          "process"
+        ],
+        "tools": [
+          "answer_visual_question",
+          "answer_visual_question"
+        ],
+        "controller_decisions_model_generated": true,
+        "controller_calls": 3,
+        "tool_calls": 2,
+        "graph_checkpoints": 7,
+        "selected_memory_count": 2,
+        "read_only_state_equal": true
+      },
+      {
+        "case_index": 2,
+        "completed": false,
+        "event_nodes": [
+          "process",
+          "execute",
+          "process"
+        ],
+        "tools": [
+          "answer_visual_question"
+        ],
+        "controller_decisions_model_generated": true,
+        "controller_calls": null,
+        "tool_calls": null,
+        "graph_checkpoints": null,
+        "selected_memory_count": 2,
+        "read_only_state_equal": true
+      },
+      {
+        "case_index": 3,
+        "completed": true,
+        "event_nodes": [
+          "process",
+          "execute",
+          "process",
+          "execute",
+          "process"
+        ],
+        "tools": [
+          "answer_visual_question",
+          "answer_visual_question"
+        ],
+        "controller_decisions_model_generated": true,
+        "controller_calls": 3,
+        "tool_calls": 2,
+        "graph_checkpoints": 7,
+        "selected_memory_count": 1,
+        "read_only_state_equal": true
+      }
+    ],
+    "all_graphs_completed": false,
+    "no_prescribed_tool_plan": true,
+    "model_calls": 22,
+    "memory": {
+      "raw": 10,
+      "abstract": 2,
+      "anchor": 72,
+      "skill": 0
+    },
+    "learned_state_preserved": true,
+    "metadata_backends_preserved": true,
+    "parameters_frozen": true,
+    "new_learning_run": false,
+    "previous_confirmation_not_reused": true,
+    "peak_gpu_bytes": 17665531392
+  },
+  "runtime": {
+    "success": true,
+    "ended": 1794389805.7407868,
+    "elapsed_seconds": 254.11843466758728
+  },
+  "cpu_tests": {
+    "new_contract_checks": 3,
+    "existing_integration_regressions": 7,
+    "passed": true,
+    "model_outputs": "scripted fixtures, not efficacy evidence"
+  }
+}
