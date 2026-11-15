@@ -1,0 +1,910 @@
+{
+  "policy": {
+    "allowed_macro_intents": [
+      "location"
+    ],
+    "training_groups": {
+      "presence": {
+        "support": 14,
+        "incumbent_correct": 11,
+        "macro_correct": 11,
+        "gains": 0,
+        "losses": 0
+      },
+      "count": {
+        "support": 8,
+        "incumbent_correct": 7,
+        "macro_correct": 7,
+        "gains": 0,
+        "losses": 0
+      },
+      "color": {
+        "support": 8,
+        "incumbent_correct": 1,
+        "macro_correct": 1,
+        "gains": 0,
+        "losses": 0
+      },
+      "location": {
+        "support": 8,
+        "incumbent_correct": 2,
+        "macro_correct": 3,
+        "gains": 1,
+        "losses": 0
+      },
+      "other": {
+        "support": 10,
+        "incumbent_correct": 4,
+        "macro_correct": 4,
+        "gains": 0,
+        "losses": 0
+      }
+    },
+    "training_count": 48,
+    "selection_used": false,
+    "confirmation_used": false,
+    "fallback": "unchanged incumbent",
+    "incumbent": {
+      "allowed_intents": [
+        "color",
+        "location"
+      ],
+      "training_groups": {
+        "presence": {
+          "support": 14,
+          "base_correct": 11,
+          "evidence_correct": 8,
+          "gains": 0,
+          "losses": 3
+        },
+        "count": {
+          "support": 8,
+          "base_correct": 7,
+          "evidence_correct": 6,
+          "gains": 1,
+          "losses": 2
+        },
+        "color": {
+          "support": 8,
+          "base_correct": 0,
+          "evidence_correct": 1,
+          "gains": 1,
+          "losses": 0
+        },
+        "location": {
+          "support": 8,
+          "base_correct": 1,
+          "evidence_correct": 2,
+          "gains": 1,
+          "losses": 0
+        },
+        "other": {
+          "support": 10,
+          "base_correct": 4,
+          "evidence_correct": 1,
+          "gains": 0,
+          "losses": 3
+        }
+      },
+      "training_count": 48,
+      "selection_used": false,
+      "confirmation_used": false,
+      "fallback": "base",
+      "rule": {
+        "min_support": 4,
+        "min_net_training_gain": 1,
+        "max_training_losses": 0
+      }
+    },
+    "rule": {
+      "min_support": 4,
+      "min_net_training_gain": 1,
+      "max_training_losses": 0
+    }
+  },
+  "gate": {
+    "accepted": true,
+    "reasons": [],
+    "selection_before": 12,
+    "selection_after": 13,
+    "selection_total": 24,
+    "current_correct_gain": 1,
+    "paired_gains": 1,
+    "paired_losses": 0,
+    "selection_format": 1.0,
+    "historical_before": 38,
+    "historical_after": 38,
+    "historical_losses": 0,
+    "historical_recoveries": 0,
+    "historical_total": 72
+  },
+  "confirmation_opened": true,
+  "roles": {
+    "fit_incumbent": {
+      "metrics": {
+        "counterfactual_train": {
+          "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+          "total": 48,
+          "correct": 25,
+          "format_compliant_count": 47,
+          "format_compliance_rate": 0.9791666666666666,
+          "missing_count": 0,
+          "primary_metric_name": "normalized_exact_match",
+          "primary_score": 0.5208333333333334,
+          "mean_example_score": 0.5208333333333334,
+          "has_reference": false,
+          "reference_correct": 0,
+          "forget_count": 0,
+          "recovered_count": 0,
+          "behavior_comparable_count": 0,
+          "behavior_change_count": 0,
+          "task_primary_scores": {
+            "visual_qa": 0.5208333333333334
+          },
+          "forget_rate": 0.0,
+          "answer_f1_diagnostic": 0.6774801587301588
+        }
+      },
+      "generation_calls": 395,
+      "generation_failed": 0,
+      "generation_seconds": 799.4568859157152,
+      "feature_forwards": 64,
+      "feature_seconds": 9.252564557362348,
+      "graph_completed": 49,
+      "graph_failed": 1,
+      "tool_calls": 98,
+      "macro_queries": 0,
+      "geometry_proposals": {
+        "ok": 0,
+        "absent": 0,
+        "uncertain": 0,
+        "error": 0
+      },
+      "read_only_and_weights_frozen": true
+    },
+    "fit_macro": {
+      "metrics": {
+        "counterfactual_train": {
+          "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+          "total": 48,
+          "correct": 26,
+          "format_compliant_count": 47,
+          "format_compliance_rate": 0.9791666666666666,
+          "missing_count": 0,
+          "primary_metric_name": "normalized_exact_match",
+          "primary_score": 0.5416666666666666,
+          "mean_example_score": 0.5416666666666666,
+          "has_reference": false,
+          "reference_correct": 0,
+          "forget_count": 0,
+          "recovered_count": 0,
+          "behavior_comparable_count": 0,
+          "behavior_change_count": 0,
+          "task_primary_scores": {
+            "visual_qa": 0.5416666666666666
+          },
+          "forget_rate": 0.0,
+          "answer_f1_diagnostic": 0.6726190476190476
+        }
+      },
+      "generation_calls": 359,
+      "generation_failed": 0,
+      "generation_seconds": 416.1302710385062,
+      "feature_forwards": 64,
+      "feature_seconds": 3.9614782077260315,
+      "graph_completed": 49,
+      "graph_failed": 1,
+      "tool_calls": 98,
+      "macro_queries": 18,
+      "geometry_proposals": {
+        "ok": 5,
+        "absent": 11,
+        "uncertain": 0,
+        "error": 2
+      },
+      "read_only_and_weights_frozen": true
+    },
+    "eval_incumbent": {
+      "metrics": {
+        "selection": {
+          "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+          "total": 24,
+          "correct": 12,
+          "format_compliant_count": 24,
+          "format_compliance_rate": 1.0,
+          "missing_count": 0,
+          "primary_metric_name": "normalized_exact_match",
+          "primary_score": 0.5,
+          "mean_example_score": 0.5,
+          "has_reference": false,
+          "reference_correct": 0,
+          "forget_count": 0,
+          "recovered_count": 0,
+          "behavior_comparable_count": 0,
+          "behavior_change_count": 0,
+          "task_primary_scores": {
+            "visual_qa": 0.5
+          },
+          "forget_rate": 0.0,
+          "answer_f1_diagnostic": 0.6307659932659933
+        },
+        "historical": {
+          "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+          "total": 72,
+          "correct": 38,
+          "format_compliant_count": 71,
+          "format_compliance_rate": 0.9861111111111112,
+          "missing_count": 0,
+          "primary_metric_name": "mixed_tasks_not_comparable",
+          "primary_score": null,
+          "mean_example_score": null,
+          "has_reference": false,
+          "reference_correct": 0,
+          "forget_count": 0,
+          "recovered_count": 0,
+          "behavior_comparable_count": 0,
+          "behavior_change_count": 0,
+          "task_primary_scores": {
+            "classification": 0.125,
+            "polyp_localization": 0.875,
+            "visual_qa": 0.5833333333333334
+          },
+          "forget_rate": 0.0
+        }
+      },
+      "generation_calls": 544,
+      "generation_failed": 0,
+      "generation_seconds": 1437.2515314454213,
+      "feature_forwards": 100,
+      "feature_seconds": 14.874143335036933,
+      "graph_completed": 50,
+      "graph_failed": 0,
+      "tool_calls": 100,
+      "macro_queries": 0,
+      "geometry_proposals": {
+        "ok": 0,
+        "absent": 0,
+        "uncertain": 0,
+        "error": 0
+      },
+      "read_only_and_weights_frozen": true
+    },
+    "eval_macro": {
+      "metrics": {
+        "selection": {
+          "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+          "total": 24,
+          "correct": 12,
+          "format_compliant_count": 24,
+          "format_compliance_rate": 1.0,
+          "missing_count": 0,
+          "primary_metric_name": "normalized_exact_match",
+          "primary_score": 0.5,
+          "mean_example_score": 0.5,
+          "has_reference": false,
+          "reference_correct": 0,
+          "forget_count": 0,
+          "recovered_count": 0,
+          "behavior_comparable_count": 0,
+          "behavior_change_count": 0,
+          "task_primary_scores": {
+            "visual_qa": 0.5
+          },
+          "forget_rate": 0.0,
+          "answer_f1_diagnostic": 0.6171296296296297
+        },
+        "historical": {
+          "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+          "total": 72,
+          "correct": 38,
+          "format_compliant_count": 71,
+          "format_compliance_rate": 0.9861111111111112,
+          "missing_count": 0,
+          "primary_metric_name": "mixed_tasks_not_comparable",
+          "primary_score": null,
+          "mean_example_score": null,
+          "has_reference": false,
+          "reference_correct": 0,
+          "forget_count": 0,
+          "recovered_count": 0,
+          "behavior_comparable_count": 0,
+          "behavior_change_count": 0,
+          "task_primary_scores": {
+            "classification": 0.125,
+            "polyp_localization": 0.875,
+            "visual_qa": 0.5833333333333334
+          },
+          "forget_rate": 0.0
+        }
+      },
+      "generation_calls": 520,
+      "generation_failed": 0,
+      "generation_seconds": 817.6004256657325,
+      "feature_forwards": 100,
+      "feature_seconds": 5.553650782909244,
+      "graph_completed": 50,
+      "graph_failed": 0,
+      "tool_calls": 100,
+      "macro_queries": 12,
+      "geometry_proposals": {
+        "ok": 3,
+        "absent": 8,
+        "uncertain": 0,
+        "error": 1
+      },
+      "read_only_and_weights_frozen": true
+    },
+    "eval_proposed": {
+      "metrics": {
+        "selection": {
+          "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+          "total": 24,
+          "correct": 13,
+          "format_compliant_count": 24,
+          "format_compliance_rate": 1.0,
+          "missing_count": 0,
+          "primary_metric_name": "normalized_exact_match",
+          "primary_score": 0.5416666666666666,
+          "mean_example_score": 0.5416666666666666,
+          "has_reference": false,
+          "reference_correct": 0,
+          "forget_count": 0,
+          "recovered_count": 0,
+          "behavior_comparable_count": 0,
+          "behavior_change_count": 0,
+          "task_primary_scores": {
+            "visual_qa": 0.5416666666666666
+          },
+          "forget_rate": 0.0,
+          "answer_f1_diagnostic": 0.6587962962962963
+        },
+        "historical": {
+          "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+          "total": 72,
+          "correct": 38,
+          "format_compliant_count": 71,
+          "format_compliance_rate": 0.9861111111111112,
+          "missing_count": 0,
+          "primary_metric_name": "mixed_tasks_not_comparable",
+          "primary_score": null,
+          "mean_example_score": null,
+          "has_reference": false,
+          "reference_correct": 0,
+          "forget_count": 0,
+          "recovered_count": 0,
+          "behavior_comparable_count": 0,
+          "behavior_change_count": 0,
+          "task_primary_scores": {
+            "classification": 0.125,
+            "polyp_localization": 0.875,
+            "visual_qa": 0.5833333333333334
+          },
+          "forget_rate": 0.0
+        }
+      },
+      "generation_calls": 532,
+      "generation_failed": 0,
+      "generation_seconds": 820.6405297718011,
+      "feature_forwards": 100,
+      "feature_seconds": 5.540269885212183,
+      "graph_completed": 50,
+      "graph_failed": 0,
+      "tool_calls": 100,
+      "macro_queries": 6,
+      "geometry_proposals": {
+        "ok": 3,
+        "absent": 2,
+        "uncertain": 0,
+        "error": 1
+      },
+      "read_only_and_weights_frozen": true
+    },
+    "confirm_incumbent": {
+      "metrics": {
+        "confirmation": {
+          "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+          "total": 76,
+          "correct": 45,
+          "format_compliant_count": 76,
+          "format_compliance_rate": 1.0,
+          "missing_count": 0,
+          "primary_metric_name": "normalized_exact_match",
+          "primary_score": 0.5921052631578947,
+          "mean_example_score": 0.5921052631578947,
+          "has_reference": false,
+          "reference_correct": 0,
+          "forget_count": 0,
+          "recovered_count": 0,
+          "behavior_comparable_count": 0,
+          "behavior_change_count": 0,
+          "task_primary_scores": {
+            "visual_qa": 0.5921052631578947
+          },
+          "forget_rate": 0.0,
+          "answer_f1_diagnostic": 0.6718102073365231
+        }
+      },
+      "generation_calls": 607,
+      "generation_failed": 0,
+      "generation_seconds": 1269.5736951953731,
+      "feature_forwards": 131,
+      "feature_seconds": 20.40681907394901,
+      "graph_completed": 76,
+      "graph_failed": 0,
+      "tool_calls": 152,
+      "macro_queries": 0,
+      "geometry_proposals": {
+        "ok": 0,
+        "absent": 0,
+        "uncertain": 0,
+        "error": 0
+      },
+      "read_only_and_weights_frozen": true
+    },
+    "confirm_proposed": {
+      "metrics": {
+        "confirmation": {
+          "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+          "total": 76,
+          "correct": 44,
+          "format_compliant_count": 76,
+          "format_compliance_rate": 1.0,
+          "missing_count": 0,
+          "primary_metric_name": "normalized_exact_match",
+          "primary_score": 0.5789473684210527,
+          "mean_example_score": 0.5789473684210527,
+          "has_reference": false,
+          "reference_correct": 0,
+          "forget_count": 0,
+          "recovered_count": 0,
+          "behavior_comparable_count": 0,
+          "behavior_change_count": 0,
+          "task_primary_scores": {
+            "visual_qa": 0.5789473684210527
+          },
+          "forget_rate": 0.0,
+          "answer_f1_diagnostic": 0.6564992025518341
+        }
+      },
+      "generation_calls": 587,
+      "generation_failed": 0,
+      "generation_seconds": 690.0996009367518,
+      "feature_forwards": 131,
+      "feature_seconds": 7.373753079678863,
+      "graph_completed": 76,
+      "graph_failed": 0,
+      "tool_calls": 152,
+      "macro_queries": 10,
+      "geometry_proposals": {
+        "ok": 5,
+        "absent": 4,
+        "uncertain": 0,
+        "error": 1
+      },
+      "read_only_and_weights_frozen": true
+    },
+    "confirm_macro": {
+      "metrics": {
+        "confirmation": {
+          "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+          "total": 76,
+          "correct": 44,
+          "format_compliant_count": 76,
+          "format_compliance_rate": 1.0,
+          "missing_count": 0,
+          "primary_metric_name": "normalized_exact_match",
+          "primary_score": 0.5789473684210527,
+          "mean_example_score": 0.5789473684210527,
+          "has_reference": false,
+          "reference_correct": 0,
+          "forget_count": 0,
+          "recovered_count": 0,
+          "behavior_comparable_count": 0,
+          "behavior_change_count": 0,
+          "task_primary_scores": {
+            "visual_qa": 0.5789473684210527
+          },
+          "forget_rate": 0.0,
+          "answer_f1_diagnostic": 0.6564992025518341
+        }
+      },
+      "generation_calls": 567,
+      "generation_failed": 0,
+      "generation_seconds": 663.1545306243934,
+      "feature_forwards": 131,
+      "feature_seconds": 7.27591986535117,
+      "graph_completed": 76,
+      "graph_failed": 0,
+      "tool_calls": 152,
+      "macro_queries": 20,
+      "geometry_proposals": {
+        "ok": 6,
+        "absent": 13,
+        "uncertain": 0,
+        "error": 1
+      },
+      "read_only_and_weights_frozen": true
+    }
+  },
+  "paired_proposed_vs": {
+    "incumbent": {
+      "gain": 0,
+      "loss": 1,
+      "delta_pp": -1.3157894736842106,
+      "paired95_pp": [
+        -3.9473684210526314,
+        0.0
+      ],
+      "mcnemar_p": 1.0
+    },
+    "macro": {
+      "gain": 0,
+      "loss": 0,
+      "delta_pp": 0.0,
+      "paired95_pp": [
+        0.0,
+        0.0
+      ],
+      "mcnemar_p": 1.0
+    }
+  },
+  "audits": {
+    "fit_incumbent": {
+      "generation_calls": 395,
+      "generation_failed": 0,
+      "known_query_macro_checks": 50,
+      "read_only_and_frozen": true,
+      "training_only_references": true,
+      "splits": {
+        "counterfactual_train": {
+          "total": 48,
+          "correct": 25,
+          "graph_episodes": 48,
+          "completed": 47,
+          "failed": 1,
+          "tool_calls": 94,
+          "macro_episodes": 0,
+          "proposal_status": {
+            "ok": 0,
+            "absent": 0,
+            "uncertain": 0,
+            "error": 0
+          },
+          "successful_crops": 0,
+          "crop_errors": 0,
+          "fallback_episodes": 0
+        }
+      }
+    },
+    "fit_macro": {
+      "generation_calls": 359,
+      "generation_failed": 0,
+      "known_query_macro_checks": 50,
+      "read_only_and_frozen": true,
+      "training_only_references": true,
+      "splits": {
+        "counterfactual_train": {
+          "total": 48,
+          "correct": 26,
+          "graph_episodes": 48,
+          "completed": 47,
+          "failed": 1,
+          "tool_calls": 94,
+          "macro_episodes": 16,
+          "proposal_status": {
+            "ok": 5,
+            "absent": 10,
+            "uncertain": 0,
+            "error": 1
+          },
+          "successful_crops": 5,
+          "crop_errors": 0,
+          "fallback_episodes": 11
+        }
+      }
+    },
+    "eval_incumbent": {
+      "generation_calls": 544,
+      "generation_failed": 0,
+      "known_query_macro_checks": 26,
+      "read_only_and_frozen": true,
+      "training_only_references": true,
+      "splits": {
+        "selection": {
+          "total": 24,
+          "correct": 12,
+          "graph_episodes": 24,
+          "completed": 24,
+          "failed": 0,
+          "tool_calls": 48,
+          "macro_episodes": 0,
+          "proposal_status": {
+            "ok": 0,
+            "absent": 0,
+            "uncertain": 0,
+            "error": 0
+          },
+          "successful_crops": 0,
+          "crop_errors": 0,
+          "fallback_episodes": 0
+        },
+        "historical": {
+          "total": 72,
+          "correct": 38,
+          "graph_episodes": 24,
+          "completed": 24,
+          "failed": 0,
+          "tool_calls": 48,
+          "macro_episodes": 0,
+          "proposal_status": {
+            "ok": 0,
+            "absent": 0,
+            "uncertain": 0,
+            "error": 0
+          },
+          "successful_crops": 0,
+          "crop_errors": 0,
+          "fallback_episodes": 0
+        }
+      }
+    },
+    "eval_macro": {
+      "generation_calls": 520,
+      "generation_failed": 0,
+      "known_query_macro_checks": 26,
+      "read_only_and_frozen": true,
+      "training_only_references": true,
+      "splits": {
+        "selection": {
+          "total": 24,
+          "correct": 12,
+          "graph_episodes": 24,
+          "completed": 24,
+          "failed": 0,
+          "tool_calls": 48,
+          "macro_episodes": 8,
+          "proposal_status": {
+            "ok": 3,
+            "absent": 5,
+            "uncertain": 0,
+            "error": 0
+          },
+          "successful_crops": 3,
+          "crop_errors": 0,
+          "fallback_episodes": 5
+        },
+        "historical": {
+          "total": 72,
+          "correct": 38,
+          "graph_episodes": 24,
+          "completed": 24,
+          "failed": 0,
+          "tool_calls": 48,
+          "macro_episodes": 2,
+          "proposal_status": {
+            "ok": 0,
+            "absent": 2,
+            "uncertain": 0,
+            "error": 0
+          },
+          "successful_crops": 0,
+          "crop_errors": 0,
+          "fallback_episodes": 2
+        }
+      }
+    },
+    "eval_proposed": {
+      "generation_calls": 532,
+      "generation_failed": 0,
+      "known_query_macro_checks": 26,
+      "read_only_and_frozen": true,
+      "training_only_references": true,
+      "splits": {
+        "selection": {
+          "total": 24,
+          "correct": 13,
+          "graph_episodes": 24,
+          "completed": 24,
+          "failed": 0,
+          "tool_calls": 48,
+          "macro_episodes": 4,
+          "proposal_status": {
+            "ok": 3,
+            "absent": 1,
+            "uncertain": 0,
+            "error": 0
+          },
+          "successful_crops": 3,
+          "crop_errors": 0,
+          "fallback_episodes": 1
+        },
+        "historical": {
+          "total": 72,
+          "correct": 38,
+          "graph_episodes": 24,
+          "completed": 24,
+          "failed": 0,
+          "tool_calls": 48,
+          "macro_episodes": 1,
+          "proposal_status": {
+            "ok": 0,
+            "absent": 1,
+            "uncertain": 0,
+            "error": 0
+          },
+          "successful_crops": 0,
+          "crop_errors": 0,
+          "fallback_episodes": 1
+        }
+      }
+    },
+    "confirm_incumbent": {
+      "generation_calls": 607,
+      "generation_failed": 0,
+      "known_query_macro_checks": 76,
+      "read_only_and_frozen": true,
+      "training_only_references": true,
+      "splits": {
+        "confirmation": {
+          "total": 76,
+          "correct": 45,
+          "graph_episodes": 76,
+          "completed": 76,
+          "failed": 0,
+          "tool_calls": 152,
+          "macro_episodes": 0,
+          "proposal_status": {
+            "ok": 0,
+            "absent": 0,
+            "uncertain": 0,
+            "error": 0
+          },
+          "successful_crops": 0,
+          "crop_errors": 0,
+          "fallback_episodes": 0
+        }
+      }
+    },
+    "confirm_proposed": {
+      "generation_calls": 587,
+      "generation_failed": 0,
+      "known_query_macro_checks": 76,
+      "read_only_and_frozen": true,
+      "training_only_references": true,
+      "splits": {
+        "confirmation": {
+          "total": 76,
+          "correct": 44,
+          "graph_episodes": 76,
+          "completed": 76,
+          "failed": 0,
+          "tool_calls": 152,
+          "macro_episodes": 10,
+          "proposal_status": {
+            "ok": 5,
+            "absent": 4,
+            "uncertain": 0,
+            "error": 1
+          },
+          "successful_crops": 5,
+          "crop_errors": 0,
+          "fallback_episodes": 5
+        }
+      }
+    },
+    "confirm_macro": {
+      "generation_calls": 567,
+      "generation_failed": 0,
+      "known_query_macro_checks": 76,
+      "read_only_and_frozen": true,
+      "training_only_references": true,
+      "splits": {
+        "confirmation": {
+          "total": 76,
+          "correct": 44,
+          "graph_episodes": 76,
+          "completed": 76,
+          "failed": 0,
+          "tool_calls": 152,
+          "macro_episodes": 20,
+          "proposal_status": {
+            "ok": 6,
+            "absent": 13,
+            "uncertain": 0,
+            "error": 1
+          },
+          "successful_crops": 6,
+          "crop_errors": 0,
+          "fallback_episodes": 14
+        }
+      }
+    }
+  },
+  "gains_losses_by_macro_path": {
+    "fit_macro": {
+      "absent": {
+        "n": 10,
+        "gains": 1,
+        "losses": 0
+      },
+      "error": {
+        "n": 1,
+        "gains": 0,
+        "losses": 0
+      },
+      "ok": {
+        "n": 5,
+        "gains": 0,
+        "losses": 0
+      }
+    },
+    "eval_proposed": {
+      "ok": {
+        "n": 3,
+        "gains": 0,
+        "losses": 0
+      },
+      "absent": {
+        "n": 1,
+        "gains": 0,
+        "losses": 0
+      }
+    },
+    "confirm_proposed": {
+      "ok": {
+        "n": 5,
+        "gains": 0,
+        "losses": 1
+      },
+      "absent": {
+        "n": 4,
+        "gains": 0,
+        "losses": 0
+      },
+      "error": {
+        "n": 1,
+        "gains": 0,
+        "losses": 0
+      }
+    }
+  },
+  "completion": {
+    "ended": 1794783504.1247382,
+    "elapsed_seconds": 3966.3570256233215,
+    "bytes": 40243200,
+    "success": true
+  },
+  "total_costs": {
+    "generation_calls": 4111,
+    "generation_failed": 0,
+    "generation_seconds": 6913.907470593695,
+    "feature_forwards": 821,
+    "feature_seconds": 74.23859878722578,
+    "graph_completed": 476,
+    "graph_failed": 2,
+    "tool_calls": 952,
+    "macro_queries": 66
+  },
+  "data_isolation": {
+    "reused_train": 48,
+    "unchanged_unopened_selection": 24,
+    "unchanged_unopened_confirmation": 76,
+    "prior_empty_policy": true,
+    "no_prior_eval_or_confirm_workers": true,
+    "partition_seed_preserved": 2026111605,
+    "no_outcome_reallocation": true,
+    "source_pixel_groups_distinct": true,
+    "model_calls": 0,
+    "official_test_accessed": false,
+    "patient_independence": "unverified"
+  },
+  "limitations": [
+    "Mechanism study of a learned skill trigger on fixed learned memory/model, not a complete validated continual-learning algorithm.",
+    "Qwen region proposal is unvalidated and can mislocalize; crop observations may omit context; uncertainty/error falls back within the original budget.",
+    "Macro changes view acquisition and controller overhead together; count actual calls, do not attribute gain to one primitive alone.",
+    "48 training examples reused; original unseen24/76 split preserved, smaller confirmation precision.",
+    "No HCL.train or model weight update; patient independence unverified and officialtest unused.",
+    "Prior source-policy empty result did not expose its evaluation partitions; no revealed confirmation is used for fitting.",
+    "Legal coordinates are not validated localization accuracy; crop/fallback subgroup effects are descriptive post-run diagnostics."
+  ]
+}
