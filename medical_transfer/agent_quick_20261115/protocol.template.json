@@ -1,0 +1,118 @@
+{
+  "study": "agent_quick_20261115",
+  "seed": 20261115,
+  "anchors_per_task": 64,
+  "prepared_data": "<AUTHORIZED_PREPARED_DATA>",
+  "old_state": "<AUTHORIZED_OLD_STATE>",
+  "model_path": "<AUTHORIZED_MODEL_PATH>",
+  "python_paths": [
+    "<AUTHORIZED_FROZEN_ADAPTER_CODE>",
+    "<AUTHORIZED_MEDICAL_HCL_SOURCE>",
+    "<AUTHORIZED_HCL_SOURCE>"
+  ],
+  "learning": {
+    "arms": [
+      "fresh"
+    ],
+    "batches": 1,
+    "batchsize": 24,
+    "gate": 24,
+    "historical_anchors": 72,
+    "components": [
+      "memory_selector",
+      "router_context"
+    ],
+    "candidates_per_component_per_batch": 1,
+    "candidate_gate": "current correct gain >=1/48, historical old-correct loss <=2/72 per decision, current format >=0.95, structural validity and rollback retained",
+    "weights": "frozen",
+    "memory": "full original feedback, raw/abstract/skill consolidation; gated commit",
+    "graph_scope": "All VQA train, selection, historical VQA anchors, development and confirmation use graph; other-task anchors preserve original direct coordinate-safe interface",
+    "initialization": {
+      "fresh": "empty raw/abstract, original 72 anchors",
+      "resume": "restore prior direct-trained committed state"
+    },
+    "execution_change": "Controller sees only visible question, schema and observations; tools/final answer receive learned HCL guidance. Explicit finalize node; no model weight change."
+  },
+  "development": {
+    "n": 24,
+    "use": "diagnostic only, no selection"
+  },
+  "confirmation": {
+    "n": 100,
+    "source": "previously unused h_search source/pixel groups for all four roles; exclude all prior studies",
+    "quotas": {
+      "yes_no_or_presence": 30,
+      "other_each": 14
+    },
+    "arms": [
+      "G0",
+      "GN",
+      "GF"
+    ],
+    "primary": "GN versus G0 after one full guarded learning batch",
+    "secondary": [
+      "GN versus fixed-six GF"
+    ],
+    "read_after": "FROZEN_SELECTION.json after one complete learning batch",
+    "once_only": true,
+    "ci": "20000 paired bootstrap draws, seed20261115; one predeclared primary",
+    "all_failure_denominators_retained": true,
+    "patient_isolation": "unverified",
+    "original_test": "never accessed",
+    "positive": "report descriptive exact-match gain separately from multiplicity-adjusted statistical evidence; no guaranteed gain"
+  },
+  "shared_answer_interface": "same shortest answer / digits for count / semicolon for multiple items; no answer vocabulary; different from old experiments",
+  "budget": {
+    "max_calls_per_worker": 10000,
+    "watch_interval_seconds": 10,
+    "storage_stop_bytes": 4000000000,
+    "hard_storage_bytes": 50000000000,
+    "expected_peak_bytes": 1000000000,
+    "hard_seconds": 10800,
+    "soft_seconds": 10500,
+    "one_original_clock_for_all_phases": true,
+    "gpus": {
+      "learning_assignments": [
+        [
+          "fresh",
+          6
+        ]
+      ],
+      "confirmation_parallel_candidates": [
+        6,
+        7
+      ],
+      "max_confirmation_workers": 2,
+      "minimum_free_mib": 35000
+    }
+  },
+  "limitations": [
+    "all study roles newly allocated from unused h_search; not original test; patient independence unverified",
+    "one deterministic seed and frozen model; controller and tools share VLM",
+    "prior direct-trained initialization was selected in a previous experiment",
+    "non-VQA historical anchors retain unchanged direct interface",
+    "no gate relaxation, forced acceptance or outcome-based checkpoint selection",
+    "formal efficacy cannot be inferred from successful execution alone",
+    "separate small-scale expedited study running alongside the larger two-start experiment; report both, do not substitute this panel for the larger study"
+  ],
+  "version": 1,
+  "purpose": "Time-bounded interview diagnostic: one complete guarded Agent learning update and independent 100-case confirmation",
+  "gate": {
+    "min_current_correct_gain": 1,
+    "historical_loss_budget": 2,
+    "min_format_compliance_rate": 0.95,
+    "historical_scope": "per candidate relative to deployed predecessor; report cumulative losses separately"
+  },
+  "previous_run": "<AUTHORIZED_PREVIOUS_RUN>",
+  "learned_direct_state": "<AUTHORIZED_LEARNED_DIRECT_STATE>",
+  "max_tools_per_episode": 2,
+  "max_action_retries": 1,
+  "coverage_plan": null,
+  "arm_definitions": {
+    "G0": "same empty initial Agent before new learning",
+    "GN": "Agent after one full 24-example guarded learning batch, final committed state",
+    "GF": "static harness, same fixed six training examples appended to graph guidance"
+  },
+  "previous_graph_run": "<AUTHORIZED_PREVIOUS_GRAPH_RUN>",
+  "extra_exclusion_run": "<AUTHORIZED_EXTRA_EXCLUSION_RUN>"
+}

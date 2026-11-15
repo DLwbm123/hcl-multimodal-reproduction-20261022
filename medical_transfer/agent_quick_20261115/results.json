@@ -1,0 +1,424 @@
+{
+  "confirmation": {
+    "G0": {
+      "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+      "total": 100,
+      "correct": 18,
+      "format_compliant_count": 100,
+      "format_compliance_rate": 1.0,
+      "missing_count": 0,
+      "primary_metric_name": "normalized_exact_match",
+      "primary_score": 0.18,
+      "mean_example_score": 0.18,
+      "has_reference": false,
+      "reference_correct": 0,
+      "forget_count": 0,
+      "recovered_count": 0,
+      "behavior_comparable_count": 0,
+      "behavior_change_count": 0,
+      "task_primary_scores": {
+        "visual_qa": 0.18
+      },
+      "forget_rate": 0.0,
+      "answer_f1_diagnostic": 0.212
+    },
+    "GN": {
+      "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+      "total": 100,
+      "correct": 17,
+      "format_compliant_count": 100,
+      "format_compliance_rate": 1.0,
+      "missing_count": 0,
+      "primary_metric_name": "normalized_exact_match",
+      "primary_score": 0.17,
+      "mean_example_score": 0.17,
+      "has_reference": false,
+      "reference_correct": 0,
+      "forget_count": 0,
+      "recovered_count": 0,
+      "behavior_comparable_count": 0,
+      "behavior_change_count": 0,
+      "task_primary_scores": {
+        "visual_qa": 0.17
+      },
+      "forget_rate": 0.0,
+      "answer_f1_diagnostic": 0.22866666666666668
+    },
+    "GF": {
+      "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+      "total": 100,
+      "correct": 25,
+      "format_compliant_count": 100,
+      "format_compliance_rate": 1.0,
+      "missing_count": 0,
+      "primary_metric_name": "normalized_exact_match",
+      "primary_score": 0.25,
+      "mean_example_score": 0.25,
+      "has_reference": false,
+      "reference_correct": 0,
+      "forget_count": 0,
+      "recovered_count": 0,
+      "behavior_comparable_count": 0,
+      "behavior_change_count": 0,
+      "task_primary_scores": {
+        "visual_qa": 0.25
+      },
+      "forget_rate": 0.0,
+      "answer_f1_diagnostic": 0.29600000000000004
+    }
+  },
+  "paired_GN_vs": {
+    "G0": {
+      "gain": 5,
+      "loss": 6,
+      "unchanged": 89,
+      "delta_pp": -1,
+      "paired95_pp": [
+        -7,
+        5
+      ],
+      "mcnemar_two_sided_p": 1.0
+    },
+    "GF": {
+      "gain": 2,
+      "loss": 10,
+      "unchanged": 88,
+      "delta_pp": -8,
+      "paired95_pp": [
+        -15,
+        -2
+      ],
+      "mcnemar_two_sided_p": 0.03857421875
+    }
+  },
+  "graph": {
+    "G0": {
+      "episodes": 100,
+      "completed": 100,
+      "failed": 0,
+      "tool_counts": {
+        "answer_visual_question": 139,
+        "inspect_region": 19,
+        "localize_region": 32,
+        "classify_image": 9,
+        "analyze_image_quality": 1
+      },
+      "validation_errors": 1,
+      "controller_calls": 201
+    },
+    "GN": {
+      "episodes": 100,
+      "completed": 100,
+      "failed": 0,
+      "tool_counts": {
+        "answer_visual_question": 139,
+        "inspect_region": 19,
+        "localize_region": 32,
+        "classify_image": 9,
+        "analyze_image_quality": 1
+      },
+      "validation_errors": 1,
+      "controller_calls": 201
+    },
+    "GF": {
+      "episodes": 100,
+      "completed": 100,
+      "failed": 0,
+      "tool_counts": {
+        "answer_visual_question": 141,
+        "inspect_region": 18,
+        "localize_region": 32,
+        "classify_image": 8,
+        "analyze_image_quality": 1
+      },
+      "validation_errors": 1,
+      "controller_calls": 201
+    }
+  },
+  "costs": {
+    "G0": {
+      "calls": 697,
+      "model_seconds": 715.50227367552
+    },
+    "GN": {
+      "calls": 797,
+      "model_seconds": 2226.628410540521
+    },
+    "GF": {
+      "calls": 697,
+      "model_seconds": 715.9889972191304
+    }
+  },
+  "memory_accepted": true,
+  "learning_receipts": [
+    {
+      "batch": 1,
+      "before_version": 0,
+      "after_version": 0,
+      "memory_changed": true,
+      "memory_summary": {
+        "raw": 10,
+        "abstract": 2,
+        "anchor": 72,
+        "skill": 0
+      },
+      "candidate_count": 2,
+      "decisions": [
+        {
+          "accepted": false,
+          "reason": "no_candidate_passed_commit_gate",
+          "current_validation_primary_score": 0.3333333333333333,
+          "commit_gate": {
+            "selection_objective": "plasticity",
+            "commit_policy": "plasticity_first",
+            "historical_loss_budget": 2,
+            "min_primary_score_delta": 1e-09,
+            "min_correct_gain": 1,
+            "max_forget_count": 0,
+            "min_format_compliance_rate": 0.95,
+            "recover_reward": 1.0,
+            "forget_penalty": 2.0,
+            "min_anchor_score": -1.0,
+            "min_anchor_net_score": null,
+            "max_anchor_forget_rate": null
+          },
+          "candidate_rejections": [
+            {
+              "candidate_id": "memory_selector:h0:c1:default_memory_selection",
+              "reasons": [
+                "no_behavior_change",
+                "primary_score_delta_below_minimum",
+                "correct_gain_below_minimum"
+              ],
+              "primary_score_delta": 0.0,
+              "correct_gain": 0,
+              "forget_count": 0,
+              "anchor_forget_count": 0,
+              "anchor_recovered_count": 0,
+              "anchor_score": 0.0,
+              "anchor_net_score": 0.0,
+              "anchor_forget_rate": 0.0,
+              "anchor_task_primary_scores": {
+                "classification": 0.08333333333333333,
+                "polyp_localization": 0.875,
+                "visual_qa": 0.08333333333333333
+              },
+              "format_compliance_rate": 1.0,
+              "behavior_comparable_count": 24,
+              "behavior_change_count": 0
+            }
+          ]
+        },
+        {
+          "accepted": false,
+          "reason": "no_candidate_passed_commit_gate",
+          "current_validation_primary_score": 0.3333333333333333,
+          "commit_gate": {
+            "selection_objective": "plasticity",
+            "commit_policy": "plasticity_first",
+            "historical_loss_budget": 2,
+            "min_primary_score_delta": 1e-09,
+            "min_correct_gain": 1,
+            "max_forget_count": 0,
+            "min_format_compliance_rate": 0.95,
+            "recover_reward": 1.0,
+            "forget_penalty": 2.0,
+            "min_anchor_score": -1.0,
+            "min_anchor_net_score": null,
+            "max_anchor_forget_rate": null
+          },
+          "candidate_rejections": [
+            {
+              "candidate_id": "router_context:h0:c2:enhanced_router_context",
+              "reasons": [
+                "primary_score_delta_below_minimum",
+                "correct_gain_below_minimum"
+              ],
+              "primary_score_delta": 0.0,
+              "correct_gain": 0,
+              "forget_count": 0,
+              "anchor_forget_count": 0,
+              "anchor_recovered_count": 1,
+              "anchor_score": 1.0,
+              "anchor_net_score": 0.013888888888888888,
+              "anchor_forget_rate": 0.0,
+              "anchor_task_primary_scores": {
+                "classification": 0.125,
+                "polyp_localization": 0.875,
+                "visual_qa": 0.08333333333333333
+              },
+              "format_compliance_rate": 1.0,
+              "behavior_comparable_count": 24,
+              "behavior_change_count": 1
+            }
+          ]
+        }
+      ],
+      "graph_training": {
+        "episodes": 24,
+        "completed": 24,
+        "tool_counts": {
+          "classify_image": 3,
+          "answer_visual_question": 31,
+          "inspect_region": 7,
+          "localize_region": 7
+        },
+        "failures": []
+      }
+    }
+  ],
+  "historical_retention": {
+    "total": 72,
+    "initial_correct": 26,
+    "final_correct": 25,
+    "losses": 2,
+    "recoveries": 1
+  },
+  "limitations": [
+    "all study roles newly allocated from unused h_search; not original test; patient independence unverified",
+    "one deterministic seed and frozen model; controller and tools share VLM",
+    "prior direct-trained initialization was selected in a previous experiment",
+    "non-VQA historical anchors retain unchanged direct interface",
+    "no gate relaxation, forced acceptance or outcome-based checkpoint selection",
+    "formal efficacy cannot be inferred from successful execution alone",
+    "separate small-scale expedited study running alongside the larger two-start experiment; report both, do not substitute this panel for the larger study"
+  ],
+  "full_single_batch_learning_completed": true,
+  "completion": {
+    "ended": 1794727480.195187,
+    "returncodes": {
+      "fresh": 0,
+      "confirm_G0": 0,
+      "confirm_GN": 0,
+      "confirm_GF": 0
+    },
+    "elapsed_seconds": 5795.655832052231,
+    "bytes": 43311104,
+    "success": true
+  },
+  "data_check": {
+    "counts": {
+      "train": 24,
+      "selection": 24,
+      "development": 24,
+      "confirmation": 100
+    },
+    "all_roles_new_and_disjoint": true,
+    "excluded_groups": 2626,
+    "original_test_untouched": true,
+    "patient_independence": "unverified",
+    "model_calls": 0
+  },
+  "agent_checks": {
+    "passed": true,
+    "tests": 5,
+    "scripted_only": true,
+    "confirmation_labels_opened": false
+  },
+  "costs_all_workers": {
+    "fresh": {
+      "issued": 3133,
+      "completed_receipts": 3133,
+      "model_seconds": 3485.3509738822468
+    },
+    "confirm_G0": {
+      "issued": 697,
+      "completed_receipts": 697,
+      "model_seconds": 715.50227367552
+    },
+    "confirm_GN": {
+      "issued": 797,
+      "completed_receipts": 797,
+      "model_seconds": 2226.628410540521
+    },
+    "confirm_GF": {
+      "issued": 697,
+      "completed_receipts": 697,
+      "model_seconds": 715.9889972191304
+    }
+  },
+  "total_model_calls": 5324,
+  "memory_gate": {
+    "accepted": true,
+    "reason": "memory_candidate_passed_commit_gate",
+    "rejection_reasons": [],
+    "stable_current_task_metrics": {
+      "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+      "primary_metric_name": "normalized_exact_match",
+      "primary_score": 0.125,
+      "primary_score_delta": null,
+      "mean_example_score": 0.125,
+      "correct": 3,
+      "total": 24,
+      "format_compliance_rate": 1.0,
+      "average_output_chars": 0.0,
+      "max_output_chars": 0,
+      "forget_count": 0,
+      "forget_rate": 0.0,
+      "recovered_count": 0,
+      "behavior_comparable_count": 0,
+      "behavior_change_count": 0
+    },
+    "candidate_current_task_metrics": {
+      "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+      "primary_metric_name": "normalized_exact_match",
+      "primary_score": 0.3333333333333333,
+      "primary_score_delta": 0.20833333333333331,
+      "mean_example_score": 0.3333333333333333,
+      "correct": 8,
+      "total": 24,
+      "format_compliance_rate": 1.0,
+      "average_output_chars": 0.0,
+      "max_output_chars": 0,
+      "forget_count": 0,
+      "forget_rate": 0.0,
+      "recovered_count": 5,
+      "behavior_comparable_count": 24,
+      "behavior_change_count": 15
+    },
+    "candidate_historical_anchor_metrics": {
+      "evaluation_schema_version": null,
+      "primary_metric_name": "historical_tasks_reported_separately",
+      "primary_score": null,
+      "primary_score_delta": null,
+      "mean_example_score": 0.0,
+      "correct": 25,
+      "total": 72,
+      "format_compliance_rate": 0.9861111111111112,
+      "average_output_chars": 0.0,
+      "max_output_chars": 0,
+      "forget_count": 2,
+      "forget_rate": 0.07692307692307693,
+      "recovered_count": 1,
+      "behavior_comparable_count": 0,
+      "behavior_change_count": 0
+    }
+  },
+  "development": {
+    "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+    "total": 24,
+    "correct": 5,
+    "format_compliant_count": 24,
+    "format_compliance_rate": 1.0,
+    "missing_count": 0,
+    "primary_metric_name": "normalized_exact_match",
+    "primary_score": 0.20833333333333334,
+    "mean_example_score": 0.20833333333333334,
+    "has_reference": false,
+    "reference_correct": 0,
+    "forget_count": 0,
+    "recovered_count": 0,
+    "behavior_comparable_count": 0,
+    "behavior_change_count": 0,
+    "task_primary_scores": {
+      "visual_qa": 0.20833333333333334
+    },
+    "forget_rate": 0.0,
+    "answer_f1_diagnostic": 0.2736111111111111
+  },
+  "protocol_notes": [
+    "Frozen prose candidate_gate retained a stale 1/48 denominator from parent study. Actual selection and structural plan use 24, code requires absolute correct gain >=1; no gate changed during execution.",
+    "Unused resume initialization and prior-direct initialization limitation were inherited metadata. This study used fresh empty memory only.",
+    "Secondary GN-GF p is nominal and not multiplicity-adjusted; primary GN-G0 is negative."
+  ]
+}
