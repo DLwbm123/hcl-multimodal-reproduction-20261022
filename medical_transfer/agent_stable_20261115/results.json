@@ -1,0 +1,840 @@
+{
+  "confirmation": {
+    "G0": {
+      "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+      "total": 200,
+      "correct": 36,
+      "format_compliant_count": 199,
+      "format_compliance_rate": 0.995,
+      "missing_count": 0,
+      "primary_metric_name": "normalized_exact_match",
+      "primary_score": 0.18,
+      "mean_example_score": 0.18,
+      "has_reference": false,
+      "reference_correct": 0,
+      "forget_count": 0,
+      "recovered_count": 0,
+      "behavior_comparable_count": 0,
+      "behavior_change_count": 0,
+      "task_primary_scores": {
+        "visual_qa": 0.18
+      },
+      "forget_rate": 0.0,
+      "answer_f1_diagnostic": 0.20709523809523808
+    },
+    "GT": {
+      "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+      "total": 200,
+      "correct": 74,
+      "format_compliant_count": 199,
+      "format_compliance_rate": 0.995,
+      "missing_count": 0,
+      "primary_metric_name": "normalized_exact_match",
+      "primary_score": 0.37,
+      "mean_example_score": 0.37,
+      "has_reference": false,
+      "reference_correct": 0,
+      "forget_count": 0,
+      "recovered_count": 0,
+      "behavior_comparable_count": 0,
+      "behavior_change_count": 0,
+      "task_primary_scores": {
+        "visual_qa": 0.37
+      },
+      "forget_rate": 0.0,
+      "answer_f1_diagnostic": 0.4255952380952381
+    },
+    "GN": {
+      "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+      "total": 200,
+      "correct": 36,
+      "format_compliant_count": 199,
+      "format_compliance_rate": 0.995,
+      "missing_count": 0,
+      "primary_metric_name": "normalized_exact_match",
+      "primary_score": 0.18,
+      "mean_example_score": 0.18,
+      "has_reference": false,
+      "reference_correct": 0,
+      "forget_count": 0,
+      "recovered_count": 0,
+      "behavior_comparable_count": 0,
+      "behavior_change_count": 0,
+      "task_primary_scores": {
+        "visual_qa": 0.18
+      },
+      "forget_rate": 0.0,
+      "answer_f1_diagnostic": 0.20709523809523808
+    },
+    "GR": {
+      "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+      "total": 200,
+      "correct": 73,
+      "format_compliant_count": 199,
+      "format_compliance_rate": 0.995,
+      "missing_count": 0,
+      "primary_metric_name": "normalized_exact_match",
+      "primary_score": 0.365,
+      "mean_example_score": 0.365,
+      "has_reference": false,
+      "reference_correct": 0,
+      "forget_count": 0,
+      "recovered_count": 0,
+      "behavior_comparable_count": 0,
+      "behavior_change_count": 0,
+      "task_primary_scores": {
+        "visual_qa": 0.365
+      },
+      "forget_rate": 0.0,
+      "answer_f1_diagnostic": 0.4172619047619047
+    },
+    "GF": {
+      "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+      "total": 200,
+      "correct": 60,
+      "format_compliant_count": 199,
+      "format_compliance_rate": 0.995,
+      "missing_count": 0,
+      "primary_metric_name": "normalized_exact_match",
+      "primary_score": 0.3,
+      "mean_example_score": 0.3,
+      "has_reference": false,
+      "reference_correct": 0,
+      "forget_count": 0,
+      "recovered_count": 0,
+      "behavior_comparable_count": 0,
+      "behavior_change_count": 0,
+      "task_primary_scores": {
+        "visual_qa": 0.3
+      },
+      "forget_rate": 0.0,
+      "answer_f1_diagnostic": 0.33874675324675324
+    },
+    "D0": {
+      "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+      "total": 200,
+      "correct": 56,
+      "format_compliant_count": 200,
+      "format_compliance_rate": 1.0,
+      "missing_count": 0,
+      "primary_metric_name": "normalized_exact_match",
+      "primary_score": 0.28,
+      "mean_example_score": 0.28,
+      "has_reference": false,
+      "reference_correct": 0,
+      "forget_count": 0,
+      "recovered_count": 0,
+      "behavior_comparable_count": 0,
+      "behavior_change_count": 0,
+      "task_primary_scores": {
+        "visual_qa": 0.28
+      },
+      "forget_rate": 0.0,
+      "answer_f1_diagnostic": 0.31066666666666665
+    },
+    "DT": {
+      "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+      "total": 200,
+      "correct": 76,
+      "format_compliant_count": 200,
+      "format_compliance_rate": 1.0,
+      "missing_count": 0,
+      "primary_metric_name": "normalized_exact_match",
+      "primary_score": 0.38,
+      "mean_example_score": 0.38,
+      "has_reference": false,
+      "reference_correct": 0,
+      "forget_count": 0,
+      "recovered_count": 0,
+      "behavior_comparable_count": 0,
+      "behavior_change_count": 0,
+      "task_primary_scores": {
+        "visual_qa": 0.38
+      },
+      "forget_rate": 0.0,
+      "answer_f1_diagnostic": 0.4684285714285714
+    }
+  },
+  "paired": {
+    "GN_vs_G0": {
+      "gain": 0,
+      "loss": 0,
+      "unchanged": 200,
+      "delta_pp": 0.0,
+      "paired95_pp": [
+        0.0,
+        0.0
+      ],
+      "mcnemar_two_sided_p": 1.0,
+      "holm_adjusted_p": 1.0
+    },
+    "GR_vs_GT": {
+      "gain": 0,
+      "loss": 1,
+      "unchanged": 199,
+      "delta_pp": -0.5,
+      "paired95_pp": [
+        -1.5,
+        0.0
+      ],
+      "mcnemar_two_sided_p": 1.0,
+      "holm_adjusted_p": 1.0
+    },
+    "GN_vs_GF": {
+      "gain": 7,
+      "loss": 31,
+      "unchanged": 162,
+      "delta_pp": -12.0,
+      "paired95_pp": [
+        -18.0,
+        -6.5
+      ],
+      "mcnemar_two_sided_p": 0.00011616700794547796
+    },
+    "GR_vs_GF": {
+      "gain": 23,
+      "loss": 10,
+      "unchanged": 167,
+      "delta_pp": 6.5,
+      "paired95_pp": [
+        1.0,
+        12.0
+      ],
+      "mcnemar_two_sided_p": 0.03508203336969018
+    },
+    "GT_vs_DT": {
+      "gain": 10,
+      "loss": 12,
+      "unchanged": 178,
+      "delta_pp": -1.0,
+      "paired95_pp": [
+        -5.5,
+        3.5000000000000004
+      ],
+      "mcnemar_two_sided_p": 0.8318119049072266
+    },
+    "GN_vs_D0": {
+      "gain": 9,
+      "loss": 29,
+      "unchanged": 162,
+      "delta_pp": -10.0,
+      "paired95_pp": [
+        -16.0,
+        -4.0
+      ],
+      "mcnemar_two_sided_p": 0.0016580525261815637
+    },
+    "GR_vs_D0": {
+      "gain": 25,
+      "loss": 8,
+      "unchanged": 167,
+      "delta_pp": 8.5,
+      "paired95_pp": [
+        3.0,
+        14.000000000000002
+      ],
+      "mcnemar_two_sided_p": 0.004551384132355452
+    },
+    "GN_vs_DT": {
+      "gain": 12,
+      "loss": 52,
+      "unchanged": 136,
+      "delta_pp": -20.0,
+      "paired95_pp": [
+        -27.500000000000004,
+        -12.5
+      ],
+      "mcnemar_two_sided_p": 4.5666107004454105e-07
+    },
+    "GR_vs_DT": {
+      "gain": 10,
+      "loss": 13,
+      "unchanged": 177,
+      "delta_pp": -1.5,
+      "paired95_pp": [
+        -6.0,
+        3.0
+      ],
+      "mcnemar_two_sided_p": 0.6776394844055176
+    }
+  },
+  "graph": {
+    "G0": {
+      "episodes": 200,
+      "completed": 199,
+      "failed": 1,
+      "tool_counts": {
+        "answer_visual_question": 284,
+        "inspect_region": 28,
+        "localize_region": 63,
+        "classify_image": 21,
+        "segmentation": 1,
+        "analyze_image_quality": 1
+      },
+      "validation_errors": 1,
+      "controller_calls": 400
+    },
+    "GT": {
+      "episodes": 200,
+      "completed": 199,
+      "failed": 1,
+      "tool_counts": {
+        "answer_visual_question": 285,
+        "inspect_region": 28,
+        "localize_region": 63,
+        "classify_image": 20,
+        "segmentation": 1,
+        "analyze_image_quality": 1
+      },
+      "validation_errors": 1,
+      "controller_calls": 400
+    },
+    "GN": {
+      "episodes": 200,
+      "completed": 199,
+      "failed": 1,
+      "tool_counts": {
+        "answer_visual_question": 284,
+        "inspect_region": 28,
+        "localize_region": 63,
+        "classify_image": 21,
+        "segmentation": 1,
+        "analyze_image_quality": 1
+      },
+      "validation_errors": 1,
+      "controller_calls": 400
+    },
+    "GR": {
+      "episodes": 200,
+      "completed": 199,
+      "failed": 1,
+      "tool_counts": {
+        "answer_visual_question": 285,
+        "inspect_region": 28,
+        "localize_region": 63,
+        "classify_image": 20,
+        "segmentation": 1,
+        "analyze_image_quality": 1
+      },
+      "validation_errors": 1,
+      "controller_calls": 400
+    },
+    "GF": {
+      "episodes": 200,
+      "completed": 199,
+      "failed": 1,
+      "tool_counts": {
+        "answer_visual_question": 285,
+        "inspect_region": 28,
+        "localize_region": 63,
+        "classify_image": 20,
+        "segmentation": 1,
+        "analyze_image_quality": 1
+      },
+      "validation_errors": 2,
+      "controller_calls": 401
+    },
+    "D0": {
+      "episodes": 0
+    },
+    "DT": {
+      "episodes": 0
+    }
+  },
+  "costs": {
+    "G0": {
+      "calls": 1392,
+      "model_seconds": 4502.511883909348,
+      "seconds_per_case": 22.512559419546744
+    },
+    "GT": {
+      "calls": 1592,
+      "model_seconds": 5517.352008914109,
+      "seconds_per_case": 27.586760044570546
+    },
+    "GN": {
+      "calls": 1392,
+      "model_seconds": 4550.461547665298,
+      "seconds_per_case": 22.75230773832649
+    },
+    "GR": {
+      "calls": 1592,
+      "model_seconds": 5535.941933598835,
+      "seconds_per_case": 27.679709667994175
+    },
+    "GF": {
+      "calls": 1393,
+      "model_seconds": 2590.507022031583,
+      "seconds_per_case": 12.952535110157914
+    },
+    "D0": {
+      "calls": 600,
+      "model_seconds": 2265.1428200704977,
+      "seconds_per_case": 11.325714100352489
+    },
+    "DT": {
+      "calls": 800,
+      "model_seconds": 1285.028559871018,
+      "seconds_per_case": 6.42514279935509
+    }
+  },
+  "full_agent_learning_completed": true,
+  "limitations": [
+    "all study roles newly allocated from unused h_search; not original test; patient independence unverified",
+    "one deterministic seed and frozen model; controller and tools share VLM",
+    "prior direct-trained initialization was selected in a previous experiment",
+    "non-VQA historical anchors retain unchanged direct interface",
+    "no gate relaxation, forced acceptance or outcome-based checkpoint selection",
+    "formal efficacy cannot be inferred from successful execution alone"
+  ],
+  "learning": {
+    "fresh": {
+      "memory_gate_accepts": 0,
+      "memory_gate_total": 2,
+      "historical_retention": {
+        "total": 72,
+        "initial_correct": 26,
+        "final_correct": 26,
+        "cumulative_losses": 0,
+        "recoveries": 0
+      },
+      "batches": [
+        {
+          "batch": 1,
+          "before_version": 0,
+          "after_version": 0,
+          "memory_changed": false,
+          "memory_summary": {
+            "raw": 0,
+            "abstract": 0,
+            "anchor": 72,
+            "skill": 0
+          },
+          "candidate_count": 4,
+          "training_episode_count": 24,
+          "training_completed": 24,
+          "training_failed": 0,
+          "component_decisions": [
+            {
+              "accepted": false,
+              "reason": "no_candidate_passed_commit_gate"
+            },
+            {
+              "accepted": false,
+              "reason": "no_candidate_passed_commit_gate"
+            }
+          ],
+          "memory_gate": {
+            "accepted": false,
+            "rejection_reasons": [
+              "historical_loss_budget_exceeded"
+            ],
+            "stable_current_task_metrics": {
+              "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+              "primary_metric_name": "normalized_exact_match",
+              "primary_score": 0.125,
+              "primary_score_delta": null,
+              "mean_example_score": 0.125,
+              "correct": 6,
+              "total": 48,
+              "format_compliance_rate": 1.0,
+              "average_output_chars": 0.0,
+              "max_output_chars": 0,
+              "forget_count": 0,
+              "forget_rate": 0.0,
+              "recovered_count": 0,
+              "behavior_comparable_count": 0,
+              "behavior_change_count": 0
+            },
+            "candidate_current_task_metrics": {
+              "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+              "primary_metric_name": "normalized_exact_match",
+              "primary_score": 0.20833333333333334,
+              "primary_score_delta": 0.08333333333333334,
+              "mean_example_score": 0.20833333333333334,
+              "correct": 10,
+              "total": 48,
+              "format_compliance_rate": 1.0,
+              "average_output_chars": 0.0,
+              "max_output_chars": 0,
+              "forget_count": 0,
+              "forget_rate": 0.0,
+              "recovered_count": 4,
+              "behavior_comparable_count": 48,
+              "behavior_change_count": 29
+            },
+            "candidate_historical_anchor_metrics": {
+              "evaluation_schema_version": null,
+              "primary_metric_name": "historical_tasks_reported_separately",
+              "primary_score": null,
+              "primary_score_delta": null,
+              "mean_example_score": 0.0,
+              "correct": 31,
+              "total": 72,
+              "format_compliance_rate": 0.9861111111111112,
+              "average_output_chars": 0.0,
+              "max_output_chars": 0,
+              "forget_count": 3,
+              "forget_rate": 0.11538461538461539,
+              "recovered_count": 8,
+              "behavior_comparable_count": 0,
+              "behavior_change_count": 0
+            }
+          }
+        },
+        {
+          "batch": 2,
+          "before_version": 0,
+          "after_version": 0,
+          "memory_changed": false,
+          "memory_summary": {
+            "raw": 0,
+            "abstract": 0,
+            "anchor": 72,
+            "skill": 0
+          },
+          "candidate_count": 4,
+          "training_episode_count": 24,
+          "training_completed": 24,
+          "training_failed": 0,
+          "component_decisions": [
+            {
+              "accepted": false,
+              "reason": "no_candidate_passed_commit_gate"
+            },
+            {
+              "accepted": false,
+              "reason": "no_candidate_passed_commit_gate"
+            }
+          ],
+          "memory_gate": {
+            "accepted": false,
+            "rejection_reasons": [
+              "historical_loss_budget_exceeded"
+            ],
+            "stable_current_task_metrics": {
+              "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+              "primary_metric_name": "normalized_exact_match",
+              "primary_score": 0.125,
+              "primary_score_delta": null,
+              "mean_example_score": 0.125,
+              "correct": 6,
+              "total": 48,
+              "format_compliance_rate": 1.0,
+              "average_output_chars": 0.0,
+              "max_output_chars": 0,
+              "forget_count": 0,
+              "forget_rate": 0.0,
+              "recovered_count": 0,
+              "behavior_comparable_count": 0,
+              "behavior_change_count": 0
+            },
+            "candidate_current_task_metrics": {
+              "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+              "primary_metric_name": "normalized_exact_match",
+              "primary_score": 0.2916666666666667,
+              "primary_score_delta": 0.16666666666666669,
+              "mean_example_score": 0.2916666666666667,
+              "correct": 14,
+              "total": 48,
+              "format_compliance_rate": 1.0,
+              "average_output_chars": 0.0,
+              "max_output_chars": 0,
+              "forget_count": 0,
+              "forget_rate": 0.0,
+              "recovered_count": 8,
+              "behavior_comparable_count": 48,
+              "behavior_change_count": 29
+            },
+            "candidate_historical_anchor_metrics": {
+              "evaluation_schema_version": null,
+              "primary_metric_name": "historical_tasks_reported_separately",
+              "primary_score": null,
+              "primary_score_delta": null,
+              "mean_example_score": 0.0,
+              "correct": 23,
+              "total": 72,
+              "format_compliance_rate": 0.9861111111111112,
+              "average_output_chars": 0.0,
+              "max_output_chars": 0,
+              "forget_count": 3,
+              "forget_rate": 0.11538461538461539,
+              "recovered_count": 0,
+              "behavior_comparable_count": 0,
+              "behavior_change_count": 0
+            }
+          }
+        }
+      ]
+    },
+    "resume": {
+      "memory_gate_accepts": 0,
+      "memory_gate_total": 2,
+      "historical_retention": {
+        "total": 72,
+        "initial_correct": 35,
+        "final_correct": 35,
+        "cumulative_losses": 0,
+        "recoveries": 0
+      },
+      "batches": [
+        {
+          "batch": 1,
+          "before_version": 0,
+          "after_version": 2,
+          "memory_changed": false,
+          "memory_summary": {
+            "raw": 10,
+            "abstract": 2,
+            "anchor": 72,
+            "skill": 0
+          },
+          "candidate_count": 4,
+          "training_episode_count": 24,
+          "training_completed": 24,
+          "training_failed": 0,
+          "component_decisions": [
+            {
+              "accepted": true,
+              "reason": "candidate_passed_commit_gate"
+            },
+            {
+              "accepted": true,
+              "reason": "candidate_passed_commit_gate"
+            }
+          ],
+          "memory_gate": {
+            "accepted": false,
+            "rejection_reasons": [
+              "historical_loss_budget_exceeded",
+              "current_task_primary_score_delta_below_minimum",
+              "current_task_correct_gain_below_minimum"
+            ],
+            "stable_current_task_metrics": {
+              "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+              "primary_metric_name": "normalized_exact_match",
+              "primary_score": 0.3125,
+              "primary_score_delta": null,
+              "mean_example_score": 0.3125,
+              "correct": 15,
+              "total": 48,
+              "format_compliance_rate": 1.0,
+              "average_output_chars": 0.0,
+              "max_output_chars": 0,
+              "forget_count": 0,
+              "forget_rate": 0.0,
+              "recovered_count": 0,
+              "behavior_comparable_count": 0,
+              "behavior_change_count": 0
+            },
+            "candidate_current_task_metrics": {
+              "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+              "primary_metric_name": "normalized_exact_match",
+              "primary_score": 0.25,
+              "primary_score_delta": -0.0625,
+              "mean_example_score": 0.25,
+              "correct": 12,
+              "total": 48,
+              "format_compliance_rate": 1.0,
+              "average_output_chars": 0.0,
+              "max_output_chars": 0,
+              "forget_count": 6,
+              "forget_rate": 0.4,
+              "recovered_count": 3,
+              "behavior_comparable_count": 48,
+              "behavior_change_count": 25
+            },
+            "candidate_historical_anchor_metrics": {
+              "evaluation_schema_version": null,
+              "primary_metric_name": "historical_tasks_reported_separately",
+              "primary_score": null,
+              "primary_score_delta": null,
+              "mean_example_score": 0.0,
+              "correct": 32,
+              "total": 72,
+              "format_compliance_rate": 0.9861111111111112,
+              "average_output_chars": 0.0,
+              "max_output_chars": 0,
+              "forget_count": 3,
+              "forget_rate": 0.08571428571428572,
+              "recovered_count": 0,
+              "behavior_comparable_count": 0,
+              "behavior_change_count": 0
+            }
+          }
+        },
+        {
+          "batch": 2,
+          "before_version": 2,
+          "after_version": 2,
+          "memory_changed": false,
+          "memory_summary": {
+            "raw": 10,
+            "abstract": 2,
+            "anchor": 72,
+            "skill": 0
+          },
+          "candidate_count": 4,
+          "training_episode_count": 24,
+          "training_completed": 24,
+          "training_failed": 0,
+          "component_decisions": [
+            {
+              "accepted": false,
+              "reason": "no_candidate_passed_commit_gate"
+            },
+            {
+              "accepted": false,
+              "reason": "no_candidate_passed_commit_gate"
+            }
+          ],
+          "memory_gate": {
+            "accepted": false,
+            "rejection_reasons": [
+              "historical_loss_budget_exceeded",
+              "current_task_primary_score_delta_below_minimum",
+              "current_task_correct_gain_below_minimum"
+            ],
+            "stable_current_task_metrics": {
+              "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+              "primary_metric_name": "normalized_exact_match",
+              "primary_score": 0.3541666666666667,
+              "primary_score_delta": null,
+              "mean_example_score": 0.3541666666666667,
+              "correct": 17,
+              "total": 48,
+              "format_compliance_rate": 1.0,
+              "average_output_chars": 0.0,
+              "max_output_chars": 0,
+              "forget_count": 0,
+              "forget_rate": 0.0,
+              "recovered_count": 0,
+              "behavior_comparable_count": 0,
+              "behavior_change_count": 0
+            },
+            "candidate_current_task_metrics": {
+              "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+              "primary_metric_name": "normalized_exact_match",
+              "primary_score": 0.2708333333333333,
+              "primary_score_delta": -0.08333333333333337,
+              "mean_example_score": 0.2708333333333333,
+              "correct": 13,
+              "total": 48,
+              "format_compliance_rate": 1.0,
+              "average_output_chars": 0.0,
+              "max_output_chars": 0,
+              "forget_count": 7,
+              "forget_rate": 0.4117647058823529,
+              "recovered_count": 3,
+              "behavior_comparable_count": 48,
+              "behavior_change_count": 27
+            },
+            "candidate_historical_anchor_metrics": {
+              "evaluation_schema_version": null,
+              "primary_metric_name": "historical_tasks_reported_separately",
+              "primary_score": null,
+              "primary_score_delta": null,
+              "mean_example_score": 0.0,
+              "correct": 25,
+              "total": 72,
+              "format_compliance_rate": 0.9861111111111112,
+              "average_output_chars": 0.0,
+              "max_output_chars": 0,
+              "forget_count": 10,
+              "forget_rate": 0.2857142857142857,
+              "recovered_count": 0,
+              "behavior_comparable_count": 0,
+              "behavior_change_count": 0
+            }
+          }
+        }
+      ]
+    }
+  },
+  "costs_all_workers": {
+    "fresh": {
+      "issued_calls_including_prior_attempts": 9092,
+      "completed_call_receipts": 9092,
+      "interrupted_or_missing_receipts": 0,
+      "successful_call_receipts": 9092,
+      "model_seconds_including_archived_completed_calls": 22234.474024329334
+    },
+    "resume": {
+      "issued_calls_including_prior_attempts": 10092,
+      "completed_call_receipts": 10092,
+      "interrupted_or_missing_receipts": 0,
+      "successful_call_receipts": 10092,
+      "model_seconds_including_archived_completed_calls": 28253.477208563127
+    },
+    "confirm_G0": {
+      "issued_calls_including_prior_attempts": 2149,
+      "completed_call_receipts": 2148,
+      "interrupted_or_missing_receipts": 1,
+      "successful_call_receipts": 2148,
+      "model_seconds_including_archived_completed_calls": 6937.2798916311
+    },
+    "confirm_GT": {
+      "issued_calls_including_prior_attempts": 2277,
+      "completed_call_receipts": 2276,
+      "interrupted_or_missing_receipts": 1,
+      "successful_call_receipts": 2276,
+      "model_seconds_including_archived_completed_calls": 7952.349087830633
+    },
+    "confirm_GN": {
+      "issued_calls_including_prior_attempts": 2142,
+      "completed_call_receipts": 2141,
+      "interrupted_or_missing_receipts": 1,
+      "successful_call_receipts": 2141,
+      "model_seconds_including_archived_completed_calls": 6982.969578588381
+    },
+    "confirm_GR": {
+      "issued_calls_including_prior_attempts": 1592,
+      "completed_call_receipts": 1592,
+      "interrupted_or_missing_receipts": 0,
+      "successful_call_receipts": 1592,
+      "model_seconds_including_archived_completed_calls": 5535.941933598835
+    },
+    "confirm_GF": {
+      "issued_calls_including_prior_attempts": 1393,
+      "completed_call_receipts": 1393,
+      "interrupted_or_missing_receipts": 0,
+      "successful_call_receipts": 1393,
+      "model_seconds_including_archived_completed_calls": 2590.507022031583
+    },
+    "confirm_D0": {
+      "issued_calls_including_prior_attempts": 600,
+      "completed_call_receipts": 600,
+      "interrupted_or_missing_receipts": 0,
+      "successful_call_receipts": 600,
+      "model_seconds_including_archived_completed_calls": 2265.1428200704977
+    },
+    "confirm_DT": {
+      "issued_calls_including_prior_attempts": 800,
+      "completed_call_receipts": 800,
+      "interrupted_or_missing_receipts": 0,
+      "successful_call_receipts": 800,
+      "model_seconds_including_archived_completed_calls": 1285.028559871018
+    }
+  },
+  "total_model_calls": {
+    "issued": 30137,
+    "completed_receipts": 30134,
+    "interrupted_or_missing_receipts": 3
+  },
+  "completion": {
+    "ended": 1794761271.339596,
+    "elapsed_seconds": 41920.90074968338,
+    "bytes": 177590272,
+    "success": true
+  },
+  "recovery_note": "A temporary-file size-accounting race interrupted the first confirmation attempt. All confirmation arms were rerun from the same frozen states; partial attempts and their calls were retained, and the original deadline was unchanged.",
+  "data_isolation": {
+    "train": 48,
+    "selection": 48,
+    "development": 80,
+    "confirmation": 200,
+    "all_four_roles_new_source_and_pixel_groups": true,
+    "patient_independence": "unverified",
+    "official_test_accessed": false
+  }
+}
