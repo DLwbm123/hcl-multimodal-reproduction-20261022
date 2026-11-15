@@ -1,0 +1,298 @@
+{
+  "diagnostic_only": true,
+  "policy_updated": false,
+  "selection_n": 0,
+  "confirmation_n": 0,
+  "roles": {
+    "fit_repeat_a": {
+      "metrics": {
+        "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+        "total": 48,
+        "correct": 25,
+        "format_compliant_count": 47,
+        "format_compliance_rate": 0.9791666666666666,
+        "missing_count": 0,
+        "primary_metric_name": "normalized_exact_match",
+        "primary_score": 0.5208333333333334,
+        "mean_example_score": 0.5208333333333334,
+        "has_reference": false,
+        "reference_correct": 0,
+        "forget_count": 0,
+        "recovered_count": 0,
+        "behavior_comparable_count": 0,
+        "behavior_change_count": 0,
+        "task_primary_scores": {
+          "visual_qa": 0.5208333333333334
+        },
+        "forget_rate": 0.0,
+        "answer_f1_diagnostic": 0.6774801587301588
+      },
+      "training_n": 48,
+      "training_correct": 25,
+      "training_graph_failed": 1,
+      "geometry": {
+        "ok": 0,
+        "absent": 0,
+        "uncertain": 0,
+        "error": 0
+      },
+      "actual_inspections": 0,
+      "fallbacks": 0,
+      "generation_calls": 395,
+      "generation_failed": 0,
+      "generation_seconds": 443.1302611399442,
+      "feature_forwards": 64,
+      "feature_seconds": 3.7482237559743226,
+      "tool_calls": 98,
+      "controller_calls": 100,
+      "read_only_and_weights_frozen": true
+    },
+    "fit_repeat_b": {
+      "metrics": {
+        "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+        "total": 48,
+        "correct": 25,
+        "format_compliant_count": 47,
+        "format_compliance_rate": 0.9791666666666666,
+        "missing_count": 0,
+        "primary_metric_name": "normalized_exact_match",
+        "primary_score": 0.5208333333333334,
+        "mean_example_score": 0.5208333333333334,
+        "has_reference": false,
+        "reference_correct": 0,
+        "forget_count": 0,
+        "recovered_count": 0,
+        "behavior_comparable_count": 0,
+        "behavior_change_count": 0,
+        "task_primary_scores": {
+          "visual_qa": 0.5208333333333334
+        },
+        "forget_rate": 0.0,
+        "answer_f1_diagnostic": 0.6774801587301588
+      },
+      "training_n": 48,
+      "training_correct": 25,
+      "training_graph_failed": 1,
+      "geometry": {
+        "ok": 0,
+        "absent": 0,
+        "uncertain": 0,
+        "error": 0
+      },
+      "actual_inspections": 0,
+      "fallbacks": 0,
+      "generation_calls": 395,
+      "generation_failed": 0,
+      "generation_seconds": 445.67592422058806,
+      "feature_forwards": 64,
+      "feature_seconds": 3.6899884114973247,
+      "tool_calls": 98,
+      "controller_calls": 100,
+      "read_only_and_weights_frozen": true
+    },
+    "fit_crop": {
+      "metrics": {
+        "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+        "total": 16,
+        "correct": 4,
+        "format_compliant_count": 16,
+        "format_compliance_rate": 1.0,
+        "missing_count": 0,
+        "primary_metric_name": "normalized_exact_match",
+        "primary_score": 0.25,
+        "mean_example_score": 0.25,
+        "has_reference": false,
+        "reference_correct": 0,
+        "forget_count": 0,
+        "recovered_count": 0,
+        "behavior_comparable_count": 0,
+        "behavior_change_count": 0,
+        "task_primary_scores": {
+          "visual_qa": 0.25
+        },
+        "forget_rate": 0.0,
+        "answer_f1_diagnostic": 0.6428571428571429
+      },
+      "training_n": 16,
+      "training_correct": 4,
+      "training_graph_failed": 0,
+      "geometry": {
+        "ok": 5,
+        "absent": 10,
+        "uncertain": 0,
+        "error": 1
+      },
+      "actual_inspections": 5,
+      "fallbacks": 11,
+      "generation_calls": 106,
+      "generation_failed": 0,
+      "generation_seconds": 135.80113197816536,
+      "feature_forwards": 47,
+      "feature_seconds": 2.8232243796810508,
+      "tool_calls": 36,
+      "controller_calls": 0,
+      "read_only_and_weights_frozen": true
+    },
+    "fit_fullview": {
+      "metrics": {
+        "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+        "total": 16,
+        "correct": 4,
+        "format_compliant_count": 16,
+        "format_compliance_rate": 1.0,
+        "missing_count": 0,
+        "primary_metric_name": "normalized_exact_match",
+        "primary_score": 0.25,
+        "mean_example_score": 0.25,
+        "has_reference": false,
+        "reference_correct": 0,
+        "forget_count": 0,
+        "recovered_count": 0,
+        "behavior_comparable_count": 0,
+        "behavior_change_count": 0,
+        "task_primary_scores": {
+          "visual_qa": 0.25
+        },
+        "forget_rate": 0.0,
+        "answer_f1_diagnostic": 0.59375
+      },
+      "training_n": 16,
+      "training_correct": 4,
+      "training_graph_failed": 0,
+      "geometry": {
+        "ok": 5,
+        "absent": 10,
+        "uncertain": 0,
+        "error": 1
+      },
+      "actual_inspections": 5,
+      "fallbacks": 11,
+      "generation_calls": 106,
+      "generation_failed": 0,
+      "generation_seconds": 134.95439154887572,
+      "feature_forwards": 47,
+      "feature_seconds": 2.797058761585504,
+      "tool_calls": 36,
+      "controller_calls": 0,
+      "read_only_and_weights_frozen": true
+    }
+  },
+  "paired": {
+    "unchanged_repeat": {
+      "n": 48,
+      "left_correct": 25,
+      "right_correct": 25,
+      "gains": 0,
+      "losses": 0,
+      "answer_changed": 0,
+      "by_intent": {
+        "presence": {
+          "n": 14,
+          "gains": 0,
+          "losses": 0
+        },
+        "count": {
+          "n": 8,
+          "gains": 0,
+          "losses": 0
+        },
+        "other": {
+          "n": 10,
+          "gains": 0,
+          "losses": 0
+        },
+        "location": {
+          "n": 8,
+          "gains": 0,
+          "losses": 0
+        },
+        "color": {
+          "n": 8,
+          "gains": 0,
+          "losses": 0
+        }
+      }
+    },
+    "view_control": {
+      "n": 16,
+      "left_correct": 4,
+      "right_correct": 4,
+      "gains": 0,
+      "losses": 0,
+      "answer_changed": 4,
+      "by_intent": {
+        "color": {
+          "n": 8,
+          "gains": 0,
+          "losses": 0
+        },
+        "location": {
+          "n": 8,
+          "gains": 0,
+          "losses": 0
+        }
+      },
+      "identical_proposal_n": 16,
+      "identical_proposal_gains": 0,
+      "identical_proposal_losses": 0,
+      "unmatched_n": 0
+    },
+    "crop_vs_incumbent": {
+      "n": 16,
+      "left_correct": 3,
+      "right_correct": 4,
+      "gains": 1,
+      "losses": 0,
+      "answer_changed": 5,
+      "by_intent": {
+        "color": {
+          "n": 8,
+          "gains": 0,
+          "losses": 0
+        },
+        "location": {
+          "n": 8,
+          "gains": 1,
+          "losses": 0
+        }
+      }
+    },
+    "fullview_vs_incumbent": {
+      "n": 16,
+      "left_correct": 3,
+      "right_correct": 4,
+      "gains": 1,
+      "losses": 0,
+      "answer_changed": 5,
+      "by_intent": {
+        "color": {
+          "n": 8,
+          "gains": 0,
+          "losses": 0
+        },
+        "location": {
+          "n": 8,
+          "gains": 1,
+          "losses": 0
+        }
+      }
+    }
+  },
+  "cost_totals": {
+    "generation_calls": 1002,
+    "generation_failed": 0,
+    "generation_seconds": 1159.5617088875733,
+    "feature_forwards": 222,
+    "feature_seconds": 13.058495308738202,
+    "tool_calls": 268,
+    "controller_calls": 200
+  },
+  "limitations": [
+    "Reused training outcomes only; no generalization or CL claim.",
+    "Order fixed, shared GPU load and fresh process effects remain.",
+    "A/A agreement does not prove universal determinism.",
+    "Changing ROI also changes truthful geometry metadata supplied to finalizer.",
+    "Training evidence motivates control: previous crop path had zero gains, sole training gain came from absent fallback.",
+    "No tuning from revealed confirmation; no HCL.train or model updates."
+  ]
+}

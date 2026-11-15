@@ -1,0 +1,123 @@
+{
+  "anchors_per_task": 64,
+  "prepared_data": "/YOUR_STORAGE/HCL/medical_transfer_v1/prepared_data",
+  "old_state": "/YOUR_STORAGE/HCL/medical_transfer_v1/campaign_12h_20261022/runs/task_scoped_memory_v1/hcl_scoped/committed_stage_state.json",
+  "model_path": "/YOUR_STORAGE/CRL_Medical_MLLM/models/Qwen2.5-VL-7B-Instruct",
+  "python_paths": [
+    "/YOUR_STORAGE/HCL/medical_transfer_v1/campaign_12h_20261022/runs/frozen_vqa_confirmation_v1/code",
+    "/YOUR_STORAGE/HCL/medical_transfer_v1/src",
+    "/YOUR_STORAGE/HCL/selective_med_hcl_prep/references/hcl_historical"
+  ],
+  "learning": {
+    "arms": [
+      "eval_base",
+      "eval_contract",
+      "eval_evidence"
+    ],
+    "batches": 2,
+    "batchsize": 24,
+    "gate": 48,
+    "historical_anchors": 72,
+    "components": [
+      "memory_selector",
+      "router_context"
+    ],
+    "candidates_per_component_per_batch": 1,
+    "candidate_gate": "current correct gain >=1/48; historical losses <=2/72 per decision; format >=0.95; report cumulative losses",
+    "weights": "frozen",
+    "memory": "full original feedback, raw/abstract/skill consolidation; gated commit",
+    "graph_scope": "All VQA train, selection, historical VQA anchors, development and confirmation use graph; other-task anchors preserve original direct coordinate-safe interface",
+    "initialization": {
+      "fresh": "empty memory; adaptive applicability and train-derived tool statistics",
+      "reference": "empty memory; previous exact-question visual-reference method"
+    },
+    "execution_change": "Controller sees only visible question, schema and observations; tools/final answer receive learned HCL guidance. Explicit finalize node; no model weight change.",
+    "note": "Inherited HCL adapter settings only. No additional HCL.train is called; a compiled evidence-harness candidate is externally gated."
+  },
+  "gate": {
+    "min_current_correct_gain": 1,
+    "historical_loss_budget": 2,
+    "min_format_compliance_rate": 0.95,
+    "historical_scope": "per candidate relative to deployed predecessor; report cumulative losses separately"
+  },
+  "method": {
+    "raw_capacity_per_task": 24,
+    "max_reference_examples": 2,
+    "reference_max_side": 448,
+    "match": "same visible-question intent plus exact match OR frozen text similarity above train-only cross-intent 95th percentile; rank 0.7 text cosine + 0.3 image cosine; recognizable object terms must agree for non-exact matches",
+    "unknown_question": "require exact match for unknown intent; otherwise abstain if threshold fails",
+    "source": "only deployed/candidate raw records with training-only image registry; no query self-reference",
+    "reference_order": "prefer distinct corrected answers, then deterministic source-id tie break",
+    "image_location": "reference images first; current target image last; separate explicit labels",
+    "scope": "VQA only; historical other-task interface unchanged",
+    "calibration": "first 24 training examples visible text/images only; no future-batch labels/images in threshold calibration",
+    "tool_history": "per-intent tool-sequence counts, final and first-tool correctness from training only; min2 episodes per sequence; max3 sequences; no historical answers or freeform instructions to controller",
+    "learning_gate": "policy statistics stored inside raw candidate memory, committed and rolled back together",
+    "feature_cost": "separate timed forward-pass receipts; visible-feature cache only, no prediction cache"
+  },
+  "max_tools_per_episode": 2,
+  "max_action_retries": 1,
+  "coverage_plan": null,
+  "parent_run": "/YOUR_STORAGE/HCL/agent_adaptive_20261115",
+  "previous_routing_run": "/YOUR_STORAGE/HCL/agent_routing_20261116",
+  "study": "agent_viewcontrol_20261116",
+  "seed": 2026111607,
+  "version": 1,
+  "DESIGN_FROZEN_AT": "2026-11-15T23:17:40.898746+00:00",
+  "purpose": "Training-only diagnosis of repeated unchanged execution and target crop versus matched whole-image view; no candidate fitting or acceptance.",
+  "source_run": "/YOUR_STORAGE/HCL/agent_grounding_20261116",
+  "roles": [
+    "fit_repeat_a",
+    "fit_repeat_b",
+    "fit_crop",
+    "fit_fullview"
+  ],
+  "data_plan": {
+    "train": 48,
+    "spatial_subset": 16,
+    "selection": 0,
+    "confirmation": 0,
+    "membership": "existing training48 unchanged; crop/fullview use all visible-intent color/location cases in original order",
+    "never_use": "No revealed acceptance/confirmation examples or outcomes enter this experiment; no fresh holdout remains."
+  },
+  "hypotheses": [
+    "A/A unchanged reruns on one GPU may reveal execution instability despite fixed seed and greedy decoding.",
+    "Training-only legal proposals may benefit or harm answers when target ROI is replaced with whole-image inspection at matched tool/controller budget."
+  ],
+  "controls": {
+    "gpu": 4,
+    "workers": 1,
+    "order": [
+      "fit_repeat_a",
+      "fit_repeat_b",
+      "fit_crop",
+      "fit_fullview"
+    ],
+    "repeat": "Same incumbent twice, all48; fresh process but same seed and GPU.",
+    "view": "Both color/location macro arms use same detector prompt, same two tools, same finalizer/memory/contracts; legal ROI is replaced only by full original image bbox in fullview. Actual geometry metadata also changes; not a pure pixels-only intervention.",
+    "pairing": "Report detector agreement before attributing view differences; unmatched proposals remain in denominator, disclosed separately.",
+    "decision": "diagnostic only; no winner selection, no policy update, no acceptance/confirmation"
+  },
+  "budget": {
+    "max_calls_per_worker": 1500,
+    "watch_interval_seconds": 10,
+    "storage_stop_bytes": 4000000000,
+    "hard_storage_bytes": 50000000000,
+    "expected_peak_bytes": 1000000000,
+    "hard_seconds": 7200,
+    "soft_seconds": 6900,
+    "one_original_clock_for_all_phases": true,
+    "gpus": {
+      "max_workers": 1,
+      "minimum_free_mib": 35000
+    }
+  },
+  "limitations": [
+    "Reused training outcomes only; no generalization or CL claim.",
+    "Order fixed, shared GPU load and fresh process effects remain.",
+    "A/A agreement does not prove universal determinism.",
+    "Changing ROI also changes truthful geometry metadata supplied to finalizer.",
+    "Training evidence motivates control: previous crop path had zero gains, sole training gain came from absent fallback.",
+    "No tuning from revealed confirmation; no HCL.train or model updates."
+  ]
+}

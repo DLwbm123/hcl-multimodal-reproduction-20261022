@@ -1,0 +1,11 @@
+{
+  "at": 1794786284.648539,
+  "success": true,
+  "all_workers_exit_zero": true,
+  "no_new_model_calls": true,
+  "original_supervisor_failure_preserved": true,
+  "failure": "Failed Agent episode omitted controller_calls; counted actual process events instead.",
+  "elapsed_since_original_start_seconds": 1521.7496299743652,
+  "inference_elapsed_seconds": 1262.3251993656158,
+  "inference_recorded_bytes": 9400320
+}
