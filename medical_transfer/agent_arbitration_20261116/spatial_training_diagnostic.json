@@ -1,0 +1,18 @@
+{
+  "color": {
+    "episodes": 8,
+    "tool_counts": {
+      "answer_visual_question": 13,
+      "inspect_region": 2,
+      "classify_image": 1
+    },
+    "identical_repeated_tool_requests": 0
+  },
+  "location": {
+    "episodes": 8,
+    "tool_counts": {
+      "localize_region": 16
+    },
+    "identical_repeated_tool_requests": 0
+  }
+}

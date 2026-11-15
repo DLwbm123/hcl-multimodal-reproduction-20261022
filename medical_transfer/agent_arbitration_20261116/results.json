@@ -1,0 +1,258 @@
+{
+  "policy": {
+    "contract_override_intents": [],
+    "training_groups": {
+      "presence": {
+        "support": 14,
+        "incumbent_correct": 11,
+        "contract_correct": 11,
+        "gains": 0,
+        "losses": 0
+      },
+      "count": {
+        "support": 8,
+        "incumbent_correct": 7,
+        "contract_correct": 7,
+        "gains": 0,
+        "losses": 0
+      },
+      "color": {
+        "support": 8,
+        "incumbent_correct": 1,
+        "contract_correct": 0,
+        "gains": 0,
+        "losses": 1
+      },
+      "location": {
+        "support": 8,
+        "incumbent_correct": 2,
+        "contract_correct": 1,
+        "gains": 0,
+        "losses": 1
+      },
+      "other": {
+        "support": 10,
+        "incumbent_correct": 4,
+        "contract_correct": 4,
+        "gains": 0,
+        "losses": 0
+      }
+    },
+    "training_count": 48,
+    "selection_used": false,
+    "confirmation_used": false,
+    "fallback": "unchanged incumbent",
+    "incumbent": {
+      "allowed_intents": [
+        "color",
+        "location"
+      ],
+      "training_groups": {
+        "presence": {
+          "support": 14,
+          "base_correct": 11,
+          "evidence_correct": 8,
+          "gains": 0,
+          "losses": 3
+        },
+        "count": {
+          "support": 8,
+          "base_correct": 7,
+          "evidence_correct": 6,
+          "gains": 1,
+          "losses": 2
+        },
+        "color": {
+          "support": 8,
+          "base_correct": 0,
+          "evidence_correct": 1,
+          "gains": 1,
+          "losses": 0
+        },
+        "location": {
+          "support": 8,
+          "base_correct": 1,
+          "evidence_correct": 2,
+          "gains": 1,
+          "losses": 0
+        },
+        "other": {
+          "support": 10,
+          "base_correct": 4,
+          "evidence_correct": 1,
+          "gains": 0,
+          "losses": 3
+        }
+      },
+      "training_count": 48,
+      "selection_used": false,
+      "confirmation_used": false,
+      "fallback": "base",
+      "rule": {
+        "min_support": 4,
+        "min_net_training_gain": 1,
+        "max_training_losses": 0
+      }
+    },
+    "rule": {
+      "min_support": 4,
+      "min_net_training_gain": 1,
+      "max_training_losses": 0
+    }
+  },
+  "gate": {
+    "accepted": false,
+    "reasons": [
+      "no_supported_contract_overrides"
+    ],
+    "selection_opened": false
+  },
+  "confirmation_opened": false,
+  "roles": {
+    "fit_incumbent": {
+      "metrics": {
+        "counterfactual_train": {
+          "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+          "total": 48,
+          "correct": 25,
+          "format_compliant_count": 47,
+          "format_compliance_rate": 0.9791666666666666,
+          "missing_count": 0,
+          "primary_metric_name": "normalized_exact_match",
+          "primary_score": 0.5208333333333334,
+          "mean_example_score": 0.5208333333333334,
+          "has_reference": false,
+          "reference_correct": 0,
+          "forget_count": 0,
+          "recovered_count": 0,
+          "behavior_comparable_count": 0,
+          "behavior_change_count": 0,
+          "task_primary_scores": {
+            "visual_qa": 0.5208333333333334
+          },
+          "forget_rate": 0.0,
+          "answer_f1_diagnostic": 0.6774801587301588
+        }
+      },
+      "generation_calls": 395,
+      "generation_failed": 0,
+      "generation_seconds": 830.8239737977274,
+      "feature_forwards": 64,
+      "feature_seconds": 9.189806188922375,
+      "graph_completed": 49,
+      "graph_failed": 1,
+      "tool_calls": 98,
+      "source_strategies": {
+        "base": 32,
+        "contract": 0,
+        "evidence": 18
+      },
+      "read_only_and_weights_frozen": true
+    },
+    "fit_contract": {
+      "metrics": {
+        "counterfactual_train": {
+          "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+          "total": 48,
+          "correct": 23,
+          "format_compliant_count": 47,
+          "format_compliance_rate": 0.9791666666666666,
+          "missing_count": 0,
+          "primary_metric_name": "normalized_exact_match",
+          "primary_score": 0.4791666666666667,
+          "mean_example_score": 0.4791666666666667,
+          "has_reference": false,
+          "reference_correct": 0,
+          "forget_count": 0,
+          "recovered_count": 0,
+          "behavior_comparable_count": 0,
+          "behavior_change_count": 0,
+          "task_primary_scores": {
+            "visual_qa": 0.4791666666666667
+          },
+          "forget_rate": 0.0,
+          "answer_f1_diagnostic": 0.5885912698412699
+        }
+      },
+      "generation_calls": 395,
+      "generation_failed": 0,
+      "generation_seconds": 439.68352813553065,
+      "feature_forwards": 64,
+      "feature_seconds": 3.6636341814883053,
+      "graph_completed": 49,
+      "graph_failed": 1,
+      "tool_calls": 98,
+      "source_strategies": {
+        "base": 0,
+        "contract": 50,
+        "evidence": 0
+      },
+      "read_only_and_weights_frozen": true
+    }
+  },
+  "audits": {
+    "fit_incumbent": {
+      "total": 48,
+      "correct": 25,
+      "generation_calls": 395,
+      "generation_failed": 0,
+      "source_choices_checked": 50,
+      "completed": 47,
+      "failed": 1,
+      "training_only_references": true,
+      "read_only_and_frozen": true
+    },
+    "fit_contract": {
+      "total": 48,
+      "correct": 23,
+      "generation_calls": 395,
+      "generation_failed": 0,
+      "source_choices_checked": 50,
+      "completed": 47,
+      "failed": 1,
+      "training_only_references": true,
+      "read_only_and_frozen": true
+    }
+  },
+  "completion": {
+    "ended": 1794778476.2757688,
+    "elapsed_seconds": 861.3413445949554,
+    "bytes": 5906432,
+    "success": true
+  },
+  "total_costs": {
+    "generation_calls": 790,
+    "generation_failed": 0,
+    "generation_seconds": 1270.507501933258,
+    "feature_forwards": 128,
+    "feature_seconds": 12.85344037041068,
+    "graph_completed": 98,
+    "graph_failed": 2,
+    "tool_calls": 196
+  },
+  "data_plan": {
+    "counts": {
+      "reused_train": 48,
+      "selection_from_unopened_reserve": 24,
+      "confirmation_from_unopened_reserve": 76
+    },
+    "prior_gate_rejected": true,
+    "prior_confirmation_workers_absent": true,
+    "prior100_preserved": true,
+    "all100_distinct_groups_and_pixels": true,
+    "disjoint_from_later_evidence_and_routing_panels": true,
+    "selection_confirmation_disjoint": true,
+    "model_calls": 0,
+    "patient_independence": "unverified",
+    "official_test_accessed": false
+  },
+  "limitations": [
+    "A bounded source-policy mechanism experiment, not a novel complete continual-learning method.",
+    "Parent raw/abstract/prompt state, model weights and incumbent routing policy fixed; no new HCL.train.",
+    "Training48 reused; empirical support and zero observed loss do not give a reliability guarantee.",
+    "Last untouched reserved100 partitioned before inference into selection24 and confirmation76; lower precision and selected custom question mix.",
+    "Patient independence unverified; official test unused.",
+    "All failed episodes retained; concurrent GPU load confounds wall time."
+  ],
+  "no_independent_attribution_claim": "Only training comparisons ran; zero supported overrides does not prove independent visual observations caused the earlier confirmation gain."
+}
