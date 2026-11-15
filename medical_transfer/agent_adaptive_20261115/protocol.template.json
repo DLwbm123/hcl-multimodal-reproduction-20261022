@@ -1,0 +1,155 @@
+{
+  "study": "agent_adaptive_20261115",
+  "seed": 20261115,
+  "anchors_per_task": 64,
+  "prepared_data": "<configure:prepared_data>",
+  "old_state": "<configure:old_state>",
+  "model_path": "<configure:model_path>",
+  "python_paths": [
+    "<configure:prior_runtime_code>",
+    "<configure:medical_adapter_code>",
+    "<configure:hcl_package>"
+  ],
+  "learning": {
+    "arms": [
+      "fresh",
+      "reference"
+    ],
+    "batches": 2,
+    "batchsize": 24,
+    "gate": 48,
+    "historical_anchors": 72,
+    "components": [
+      "memory_selector",
+      "router_context"
+    ],
+    "candidates_per_component_per_batch": 1,
+    "candidate_gate": "current correct gain >=1/48; historical losses <=2/72 per decision; format >=0.95; report cumulative losses",
+    "weights": "frozen",
+    "memory": "full original feedback, raw/abstract/skill consolidation; gated commit",
+    "graph_scope": "All VQA train, selection, historical VQA anchors, development and confirmation use graph; other-task anchors preserve original direct coordinate-safe interface",
+    "initialization": {
+      "fresh": "empty memory; adaptive applicability and train-derived tool statistics",
+      "reference": "empty memory; previous exact-question visual-reference method"
+    },
+    "execution_change": "Controller sees only visible question, schema and observations; tools/final answer receive learned HCL guidance. Explicit finalize node; no model weight change."
+  },
+  "development": {
+    "n": 24,
+    "use": "diagnostic only, no selection"
+  },
+  "confirmation": {
+    "n": 100,
+    "source": "previously unused h_search source/pixel groups for all four roles; exclude all prior studies",
+    "quotas": {
+      "yes_no_or_presence": 30,
+      "other_each": 14
+    },
+    "arms": [
+      "G0",
+      "GR",
+      "GN",
+      "GP",
+      "GE",
+      "GF"
+    ],
+    "primary": "GN versus GR: proposed versus prior method after identical two-batch training; single primary",
+    "secondary": [
+      "GN versus G0",
+      "GN versus GP: tool-guidance ablation",
+      "GN versus GE: applicability ablation",
+      "GN versus GF"
+    ],
+    "read_after": "both learning workers complete two batches; final states locked without outcome selection",
+    "once_only": true,
+    "ci": "20000 paired bootstrap draws, seed20261115; one predeclared primary",
+    "all_failure_denominators_retained": true,
+    "patient_isolation": "unverified",
+    "original_test": "never accessed",
+    "positive": "report descriptive exact-match gain separately from multiplicity-adjusted statistical evidence; no guaranteed gain"
+  },
+  "shared_answer_interface": "same shortest answer / digits for count / semicolon for multiple items; no answer vocabulary; different from old experiments",
+  "budget": {
+    "max_calls_per_worker": 24000,
+    "watch_interval_seconds": 10,
+    "storage_stop_bytes": 4000000000,
+    "hard_storage_bytes": 50000000000,
+    "expected_peak_bytes": 1000000000,
+    "hard_seconds": 32400,
+    "soft_seconds": 32100,
+    "one_original_clock_for_all_phases": true,
+    "gpus": {
+      "learning_assignments": [
+        [
+          "fresh",
+          1
+        ],
+        [
+          "reference",
+          3
+        ]
+      ],
+      "confirmation_parallel_candidates": [
+        1,
+        5,
+        7
+      ],
+      "max_confirmation_workers": 2,
+      "minimum_free_mib": 35000
+    }
+  },
+  "limitations": [
+    "all study roles newly allocated from unused h_search; not original test; patient independence unverified",
+    "one deterministic seed and frozen model; controller and tools share VLM",
+    "non-VQA historical anchors retain unchanged direct interface",
+    "no gate relaxation, forced acceptance or outcome-based checkpoint selection",
+    "formal efficacy cannot be inferred from successful execution alone",
+    "separate small-scale expedited study running alongside the larger two-start experiment; report both, do not substitute this panel for the larger study",
+    "method developed after earlier aggregate confirmation failures, new confirmation panel reserved; no causal comparison across different panels",
+    "mechanism diagnostic, not established novel contribution or guaranteed performance gain",
+    "reference and proposed training, raw capacity24, max2 reference examples, tool budget2 and gates matched",
+    "two batches only; broader cross-dataset and long-stream generalization remains untested",
+    "tool guidance is aggregated evidence, not a separately trained controller or medical expert",
+    "past confirmation scores motivate a new mechanism study but are not reused for tuning or selection"
+  ],
+  "version": 1,
+  "purpose": "Matched two-batch mechanism study of applicability-aware episodic retrieval and feedback-derived tool guidance",
+  "gate": {
+    "min_current_correct_gain": 1,
+    "historical_loss_budget": 2,
+    "min_format_compliance_rate": 0.95,
+    "historical_scope": "per candidate relative to deployed predecessor; report cumulative losses separately"
+  },
+  "previous_run": "<configure:previous_run>",
+  "learned_direct_state": "<configure:learned_direct_state>",
+  "max_tools_per_episode": 2,
+  "max_action_retries": 1,
+  "coverage_plan": null,
+  "arm_definitions": {
+    "G0": "initial empty Agent",
+    "GR": "reference method final state after two batches; exact question retrieval",
+    "GN": "proposed final state, adaptive retrieval and tool history",
+    "GP": "same proposed final state, no tool history supplied to controller",
+    "GE": "same proposed final state, exact-question retrieval, tool history retained",
+    "GF": "unchanged fixed-six-example Agent"
+  },
+  "previous_graph_run": "<configure:previous_graph_run>",
+  "extra_exclusion_run": "<configure:extra_exclusion_run>",
+  "previous_quick_run": "<configure:previous_quick_run>",
+  "method": {
+    "raw_capacity_per_task": 24,
+    "max_reference_examples": 2,
+    "reference_max_side": 448,
+    "match": "same visible-question intent plus exact match OR frozen text similarity above train-only cross-intent 95th percentile; rank 0.7 text cosine + 0.3 image cosine; recognizable object terms must agree for non-exact matches",
+    "unknown_question": "require exact match for unknown intent; otherwise abstain if threshold fails",
+    "source": "only deployed/candidate raw records with training-only image registry; no query self-reference",
+    "reference_order": "prefer distinct corrected answers, then deterministic source-id tie break",
+    "image_location": "reference images first; current target image last; separate explicit labels",
+    "scope": "VQA only; historical other-task interface unchanged",
+    "calibration": "first 24 training examples visible text/images only; no future-batch labels/images in threshold calibration",
+    "tool_history": "per-intent tool-sequence counts, final and first-tool correctness from training only; min2 episodes per sequence; max3 sequences; no historical answers or freeform instructions to controller",
+    "learning_gate": "policy statistics stored inside raw candidate memory, committed and rolled back together",
+    "feature_cost": "separate timed forward-pass receipts; visible-feature cache only, no prediction cache"
+  },
+  "previous_visual_run": "<configure:previous_visual_run>"
+}
