@@ -1,0 +1,50 @@
+{
+  "choice_or_other": {
+    "n": 8,
+    "base": 6,
+    "contract": 6,
+    "evidence": 0,
+    "evidence_gain": 0,
+    "evidence_loss": 6
+  },
+  "color_set": {
+    "n": 8,
+    "base": 0,
+    "contract": 1,
+    "evidence": 1,
+    "evidence_gain": 1,
+    "evidence_loss": 0
+  },
+  "count": {
+    "n": 8,
+    "base": 3,
+    "contract": 3,
+    "evidence": 6,
+    "evidence_gain": 3,
+    "evidence_loss": 0
+  },
+  "instrument": {
+    "n": 8,
+    "base": 3,
+    "contract": 3,
+    "evidence": 2,
+    "evidence_gain": 2,
+    "evidence_loss": 3
+  },
+  "location_set": {
+    "n": 8,
+    "base": 1,
+    "contract": 1,
+    "evidence": 0,
+    "evidence_gain": 0,
+    "evidence_loss": 1
+  },
+  "yes_no_or_presence": {
+    "n": 8,
+    "base": 7,
+    "contract": 7,
+    "evidence": 7,
+    "evidence_gain": 0,
+    "evidence_loss": 0
+  }
+}

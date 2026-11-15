@@ -1,0 +1,321 @@
+{
+  "gate": {
+    "accepted": false,
+    "reasons": [
+      "current_correct_gain_below_one"
+    ],
+    "selection_before": 20,
+    "selection_after": 16,
+    "selection_total": 48,
+    "current_correct_gain": -4,
+    "selection_format": 1.0,
+    "historical_before": 38,
+    "historical_after": 37,
+    "historical_losses": 2,
+    "historical_recoveries": 1,
+    "historical_total": 72,
+    "candidate_selection": "evidence only; contract ablation not eligible as fallback"
+  },
+  "training_contract_support": {
+    "color": 8,
+    "location": 8
+  },
+  "training_vocabulary_counts": {
+    "color": 4,
+    "location": 11
+  },
+  "roles": {
+    "eval_base": {
+      "metrics": {
+        "selection": {
+          "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+          "total": 48,
+          "correct": 20,
+          "format_compliant_count": 48,
+          "format_compliance_rate": 1.0,
+          "missing_count": 0,
+          "primary_metric_name": "normalized_exact_match",
+          "primary_score": 0.4166666666666667,
+          "mean_example_score": 0.4166666666666667,
+          "has_reference": false,
+          "reference_correct": 0,
+          "forget_count": 0,
+          "recovered_count": 0,
+          "behavior_comparable_count": 0,
+          "behavior_change_count": 0,
+          "task_primary_scores": {
+            "visual_qa": 0.4166666666666667
+          },
+          "forget_rate": 0.0,
+          "answer_f1_diagnostic": 0.4701388888888889
+        },
+        "historical": {
+          "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+          "total": 72,
+          "correct": 38,
+          "format_compliant_count": 71,
+          "format_compliance_rate": 0.9861111111111112,
+          "missing_count": 0,
+          "primary_metric_name": "mixed_tasks_not_comparable",
+          "primary_score": null,
+          "mean_example_score": null,
+          "has_reference": false,
+          "reference_correct": 0,
+          "forget_count": 0,
+          "recovered_count": 0,
+          "behavior_comparable_count": 0,
+          "behavior_change_count": 0,
+          "task_primary_scores": {
+            "classification": 0.125,
+            "polyp_localization": 0.875,
+            "visual_qa": 0.5833333333333334
+          },
+          "forget_rate": 0.0
+        }
+      },
+      "generation_calls": 736,
+      "generation_seconds": 1948.9898442416452,
+      "feature_forward_calls": 125,
+      "feature_seconds": 19.56191916577518,
+      "tool_calls": 148,
+      "completed_episodes": 74,
+      "failed_episodes": 0
+    },
+    "eval_contract": {
+      "metrics": {
+        "selection": {
+          "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+          "total": 48,
+          "correct": 21,
+          "format_compliant_count": 48,
+          "format_compliance_rate": 1.0,
+          "missing_count": 0,
+          "primary_metric_name": "normalized_exact_match",
+          "primary_score": 0.4375,
+          "mean_example_score": 0.4375,
+          "has_reference": false,
+          "reference_correct": 0,
+          "forget_count": 0,
+          "recovered_count": 0,
+          "behavior_comparable_count": 0,
+          "behavior_change_count": 0,
+          "task_primary_scores": {
+            "visual_qa": 0.4375
+          },
+          "forget_rate": 0.0,
+          "answer_f1_diagnostic": 0.516540404040404
+        },
+        "historical": {
+          "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+          "total": 72,
+          "correct": 38,
+          "format_compliant_count": 71,
+          "format_compliance_rate": 0.9861111111111112,
+          "missing_count": 0,
+          "primary_metric_name": "mixed_tasks_not_comparable",
+          "primary_score": null,
+          "mean_example_score": null,
+          "has_reference": false,
+          "reference_correct": 0,
+          "forget_count": 0,
+          "recovered_count": 0,
+          "behavior_comparable_count": 0,
+          "behavior_change_count": 0,
+          "task_primary_scores": {
+            "classification": 0.125,
+            "polyp_localization": 0.875,
+            "visual_qa": 0.5833333333333334
+          },
+          "forget_rate": 0.0
+        }
+      },
+      "generation_calls": 736,
+      "generation_seconds": 1104.5160408001393,
+      "feature_forward_calls": 125,
+      "feature_seconds": 11.15326154883951,
+      "tool_calls": 148,
+      "completed_episodes": 74,
+      "failed_episodes": 0
+    },
+    "eval_evidence": {
+      "metrics": {
+        "selection": {
+          "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+          "total": 48,
+          "correct": 16,
+          "format_compliant_count": 48,
+          "format_compliance_rate": 1.0,
+          "missing_count": 0,
+          "primary_metric_name": "normalized_exact_match",
+          "primary_score": 0.3333333333333333,
+          "mean_example_score": 0.3333333333333333,
+          "has_reference": false,
+          "reference_correct": 0,
+          "forget_count": 0,
+          "recovered_count": 0,
+          "behavior_comparable_count": 0,
+          "behavior_change_count": 0,
+          "task_primary_scores": {
+            "visual_qa": 0.3333333333333333
+          },
+          "forget_rate": 0.0,
+          "answer_f1_diagnostic": 0.47481060606060604
+        },
+        "historical": {
+          "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+          "total": 72,
+          "correct": 37,
+          "format_compliant_count": 71,
+          "format_compliance_rate": 0.9861111111111112,
+          "missing_count": 0,
+          "primary_metric_name": "mixed_tasks_not_comparable",
+          "primary_score": null,
+          "mean_example_score": null,
+          "has_reference": false,
+          "reference_correct": 0,
+          "forget_count": 0,
+          "recovered_count": 0,
+          "behavior_comparable_count": 0,
+          "behavior_change_count": 0,
+          "task_primary_scores": {
+            "classification": 0.125,
+            "polyp_localization": 0.875,
+            "visual_qa": 0.5416666666666666
+          },
+          "forget_rate": 0.0
+        }
+      },
+      "generation_calls": 736,
+      "generation_seconds": 1033.771529871039,
+      "feature_forward_calls": 125,
+      "feature_seconds": 6.9245735253207386,
+      "tool_calls": 148,
+      "completed_episodes": 74,
+      "failed_episodes": 0
+    }
+  },
+  "limitations": [
+    "Feedback contract idea already exists in this project; this is controlled mechanism development, not a claim of a novel full algorithm.",
+    "Parent state and 48 training feedback examples reused; new selection48 and confirmation100 source/pixel groups exclude prior and concurrent studies.",
+    "Contract and evidence changes are not model-weight training.",
+    "Shifted image panel is an input-dependence diagnostic, not clinical validation.",
+    "Patient independence unverified, official test untouched.",
+    "Concurrent GPU load confounds wall-clock speed comparisons; report calls and feature costs.",
+    "Selection only controls the one prespecified evidence candidate; no selecting contract arm as fallback."
+  ],
+  "confirmation_opened": false,
+  "audits": {
+    "eval_base": {
+      "generation_issued": 736,
+      "generation_completed": 736,
+      "read_only_and_weights_frozen": true,
+      "training_only_references": true,
+      "splits": {
+        "selection": {
+          "total": 48,
+          "correct": 20,
+          "graph_episodes": 48,
+          "completed": 48,
+          "failed": 0,
+          "tool_calls": 96,
+          "queries_with_reference": 47,
+          "queries_with_tool_statistics": 31
+        },
+        "historical": {
+          "total": 72,
+          "correct": 38,
+          "graph_episodes": 24,
+          "completed": 24,
+          "failed": 0,
+          "tool_calls": 48,
+          "queries_with_reference": 17,
+          "queries_with_tool_statistics": 22
+        }
+      }
+    },
+    "eval_contract": {
+      "generation_issued": 736,
+      "generation_completed": 736,
+      "read_only_and_weights_frozen": true,
+      "training_only_references": true,
+      "splits": {
+        "selection": {
+          "total": 48,
+          "correct": 21,
+          "graph_episodes": 48,
+          "completed": 48,
+          "failed": 0,
+          "tool_calls": 96,
+          "queries_with_reference": 47,
+          "queries_with_tool_statistics": 31
+        },
+        "historical": {
+          "total": 72,
+          "correct": 38,
+          "graph_episodes": 24,
+          "completed": 24,
+          "failed": 0,
+          "tool_calls": 48,
+          "queries_with_reference": 17,
+          "queries_with_tool_statistics": 22
+        }
+      }
+    },
+    "eval_evidence": {
+      "generation_issued": 736,
+      "generation_completed": 736,
+      "read_only_and_weights_frozen": true,
+      "training_only_references": true,
+      "splits": {
+        "selection": {
+          "total": 48,
+          "correct": 16,
+          "graph_episodes": 48,
+          "completed": 48,
+          "failed": 0,
+          "tool_calls": 96,
+          "queries_with_reference": 47,
+          "queries_with_tool_statistics": 31
+        },
+        "historical": {
+          "total": 72,
+          "correct": 37,
+          "graph_episodes": 24,
+          "completed": 24,
+          "failed": 0,
+          "tool_calls": 48,
+          "queries_with_reference": 17,
+          "queries_with_tool_statistics": 22
+        }
+      }
+    }
+  },
+  "total_costs": {
+    "generation_calls": 2208,
+    "generation_seconds": 4087.2774149128236,
+    "feature_forward_calls": 375,
+    "feature_seconds": 37.63975423993543,
+    "tool_calls": 444,
+    "completed_episodes": 222,
+    "failed_episodes": 0
+  },
+  "completion": {
+    "ended": 1794771194.4523273,
+    "elapsed_seconds": 2222.500278234482,
+    "bytes": 17174528,
+    "success": true
+  },
+  "data_isolation": {
+    "counts": {
+      "reused_parent_train": 48,
+      "new_selection": 48,
+      "new_confirmation": 100
+    },
+    "new_roles_disjoint_from_parent_and_concurrent_studies": true,
+    "excluded_groups": 3314,
+    "original_test_untouched": true,
+    "patient_independence": "unverified",
+    "model_calls": 0
+  },
+  "timing_limitation": "Shared GPU load; summed call seconds are not wall time or a controlled speed comparison. Full costs include preflight and failed episodes."
+}

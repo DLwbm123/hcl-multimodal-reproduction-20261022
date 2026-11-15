@@ -1,0 +1,148 @@
+{
+  "study": "agent_evidence_20261116",
+  "seed": 2026111603,
+  "anchors_per_task": 64,
+  "prepared_data": "/srv/research/HCL/medical_transfer_v1/prepared_data",
+  "old_state": "/srv/research/HCL/medical_transfer_v1/campaign_12h_20261022/runs/task_scoped_memory_v1/hcl_scoped/committed_stage_state.json",
+  "model_path": "/srv/research/CRL_Medical_MLLM/models/Qwen2.5-VL-7B-Instruct",
+  "python_paths": [
+    "/srv/research/HCL/medical_transfer_v1/campaign_12h_20261022/runs/frozen_vqa_confirmation_v1/code",
+    "/srv/research/HCL/medical_transfer_v1/src",
+    "/srv/research/HCL/selective_med_hcl_prep/references/hcl_historical"
+  ],
+  "learning": {
+    "arms": [
+      "eval_base",
+      "eval_contract",
+      "eval_evidence"
+    ],
+    "batches": 2,
+    "batchsize": 24,
+    "gate": 48,
+    "historical_anchors": 72,
+    "components": [
+      "memory_selector",
+      "router_context"
+    ],
+    "candidates_per_component_per_batch": 1,
+    "candidate_gate": "current correct gain >=1/48; historical losses <=2/72 per decision; format >=0.95; report cumulative losses",
+    "weights": "frozen",
+    "memory": "full original feedback, raw/abstract/skill consolidation; gated commit",
+    "graph_scope": "All VQA train, selection, historical VQA anchors, development and confirmation use graph; other-task anchors preserve original direct coordinate-safe interface",
+    "initialization": {
+      "fresh": "empty memory; adaptive applicability and train-derived tool statistics",
+      "reference": "empty memory; previous exact-question visual-reference method"
+    },
+    "execution_change": "Controller sees only visible question, schema and observations; tools/final answer receive learned HCL guidance. Explicit finalize node; no model weight change.",
+    "note": "Inherited HCL adapter settings only. No additional HCL.train is called; a compiled evidence-harness candidate is externally gated."
+  },
+  "development": {
+    "n": 0,
+    "use": "parent development only diagnoses failure mechanism; new selection allocated for acceptance"
+  },
+  "confirmation": {
+    "n": 100,
+    "arms": [
+      "base",
+      "contract",
+      "evidence",
+      "shifted"
+    ],
+    "primary": "evidence versus base normalized exact match; secondary evidence versus contract, evidence versus shifted",
+    "conditional_on": "one prespecified evidence candidate passes new selection48 and historical72",
+    "once_only": true,
+    "patient_isolation": "unverified",
+    "original_test": "never accessed",
+    "ci": "paired bootstrap20k seed2026111603 and exact two-sided McNemar; secondary descriptive unadjusted"
+  },
+  "shared_answer_interface": "same shortest answer / digits for count / semicolon for multiple items; no answer vocabulary; different from old experiments",
+  "budget": {
+    "max_calls_per_worker": 5000,
+    "watch_interval_seconds": 10,
+    "storage_stop_bytes": 4000000000,
+    "hard_storage_bytes": 50000000000,
+    "expected_peak_bytes": 1000000000,
+    "hard_seconds": 14400,
+    "soft_seconds": 14100,
+    "one_original_clock_for_all_phases": true,
+    "gpus": {
+      "confirmation_parallel_candidates": [
+        0,
+        4
+      ],
+      "max_confirmation_workers": 2,
+      "minimum_free_mib": 35000
+    }
+  },
+  "limitations": [
+    "Feedback contract idea already exists in this project; this is controlled mechanism development, not a claim of a novel full algorithm.",
+    "Parent state and 48 training feedback examples reused; new selection48 and confirmation100 source/pixel groups exclude prior and concurrent studies.",
+    "Contract and evidence changes are not model-weight training.",
+    "Shifted image panel is an input-dependence diagnostic, not clinical validation.",
+    "Patient independence unverified, official test untouched.",
+    "Concurrent GPU load confounds wall-clock speed comparisons; report calls and feature costs.",
+    "Selection only controls the one prespecified evidence candidate; no selecting contract arm as fallback."
+  ],
+  "version": 1,
+  "purpose": "Training-feedback task contracts plus independent current-image tool evidence: test output-granularity and controller-suggestion contamination, with contract-only ablation and shifted-image diagnostic.",
+  "gate": {
+    "min_current_correct_gain": 1,
+    "historical_loss_budget": 2,
+    "min_format_compliance_rate": 0.95,
+    "historical_scope": "per candidate relative to deployed predecessor; report cumulative losses separately"
+  },
+  "previous_run": "/srv/research/HCL/vqa_full_loop_20261110",
+  "learned_direct_state": "/srv/research/HCL/vqa_full_loop_20261110/fresh/private_final_state.json",
+  "max_tools_per_episode": 2,
+  "max_action_retries": 1,
+  "coverage_plan": null,
+  "arm_definitions": {
+    "G0": "initial empty Agent",
+    "GR": "reference method final state after two batches; exact question retrieval",
+    "GN": "proposed final state, adaptive retrieval and tool history",
+    "GP": "same proposed final state, no tool history supplied to controller",
+    "GE": "same proposed final state, exact-question retrieval, tool history retained",
+    "GF": "unchanged fixed-six-example Agent"
+  },
+  "previous_graph_run": "/srv/research/HCL/vqa_graph_loop_20261112",
+  "extra_exclusion_run": "/srv/research/HCL/agent_stable_20261115",
+  "previous_quick_run": "/srv/research/HCL/agent_quick_20261115",
+  "method": {
+    "raw_capacity_per_task": 24,
+    "max_reference_examples": 2,
+    "reference_max_side": 448,
+    "match": "same visible-question intent plus exact match OR frozen text similarity above train-only cross-intent 95th percentile; rank 0.7 text cosine + 0.3 image cosine; recognizable object terms must agree for non-exact matches",
+    "unknown_question": "require exact match for unknown intent; otherwise abstain if threshold fails",
+    "source": "only deployed/candidate raw records with training-only image registry; no query self-reference",
+    "reference_order": "prefer distinct corrected answers, then deterministic source-id tie break",
+    "image_location": "reference images first; current target image last; separate explicit labels",
+    "scope": "VQA only; historical other-task interface unchanged",
+    "calibration": "first 24 training examples visible text/images only; no future-batch labels/images in threshold calibration",
+    "tool_history": "per-intent tool-sequence counts, final and first-tool correctness from training only; min2 episodes per sequence; max3 sequences; no historical answers or freeform instructions to controller",
+    "learning_gate": "policy statistics stored inside raw candidate memory, committed and rolled back together",
+    "feature_cost": "separate timed forward-pass receipts; visible-feature cache only, no prediction cache"
+  },
+  "previous_visual_run": "/srv/research/HCL/agent_visual_20261115",
+  "parent_run": "/srv/research/HCL/agent_adaptive_20261115",
+  "previous_action_run": "/srv/research/HCL/agent_action_20261116",
+  "evidence_method": {
+    "training_source": "parent 48 training cases only; reused from committed parent state",
+    "feedback_contracts": "reuse prior project vqa_diagnostics_v3 contract idea; compile color/location label vocabulary from training feedback only, not a novel component by itself",
+    "contract_application": "tool and final answer nodes; matched across contract and evidence arms",
+    "independent_tools": "for image-answer tools, remove HCL historical guidance and speculative controller instruction, retain current image/question, generic tool task and training-derived contract; crop tool uses current question in a neutral observation request, retaining proposed coordinates",
+    "controller": "unchanged schema and optional parent training-tool statistics; observes actual results",
+    "main_candidate": "evidence; fixed before any parent confirmation result inspection",
+    "comparison": "base vs contract vs evidence; contract is ablation, never fallback winner",
+    "gate": "evidence vs base on new selection48: net gain>=1, 72 historical old-correct losses<=2, current format>=.95; reject => no confirmation",
+    "confirmation_if_accepted": [
+      "base",
+      "contract",
+      "evidence",
+      "shifted"
+    ],
+    "shifted": "fixed one-step cyclic permutation of 100 current target images; original questions/labels and training-reference images unchanged; diagnostic only, never selection",
+    "scope": "one mechanism candidate from feedback, not rerunning HCL.train or updating model weights"
+  },
+  "DESIGN_FROZEN_AT": "2026-11-16T02:50:27.589860+08:00",
+  "DESIGN_BASIS": "Parent completed development24: color1/4, location0/4 for both arms; training trajectory repeated/assertive requests; prior vqa_diagnostics_v3 shows location contract confound. No parent confirmation metrics inspected to choose this design."
+}
