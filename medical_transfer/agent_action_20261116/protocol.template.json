@@ -1,0 +1,153 @@
+{
+  "study": "agent_action_20261116",
+  "seed": 20261116,
+  "anchors_per_task": 64,
+  "prepared_data": "/srv/research/HCL/medical_transfer_v1/prepared_data",
+  "old_state": "/srv/research/HCL/medical_transfer_v1/campaign_12h_20261022/runs/task_scoped_memory_v1/hcl_scoped/committed_stage_state.json",
+  "model_path": "/srv/research/CRL_Medical_MLLM/models/Qwen2.5-VL-7B-Instruct",
+  "python_paths": [
+    "/srv/research/HCL/medical_transfer_v1/campaign_12h_20261022/runs/frozen_vqa_confirmation_v1/code",
+    "/srv/research/HCL/medical_transfer_v1/src",
+    "/srv/research/HCL/selective_med_hcl_prep/references/hcl_historical"
+  ],
+  "learning": {
+    "arms": [
+      "fit_full",
+      "fit_one"
+    ],
+    "batches": 2,
+    "batchsize": 24,
+    "gate": 48,
+    "historical_anchors": 72,
+    "components": [
+      "memory_selector",
+      "router_context"
+    ],
+    "candidates_per_component_per_batch": 1,
+    "candidate_gate": "current correct gain >=1/48; historical losses <=2/72 per decision; format >=0.95; report cumulative losses",
+    "weights": "frozen",
+    "memory": "full original feedback, raw/abstract/skill consolidation; gated commit",
+    "graph_scope": "All VQA train, selection, historical VQA anchors, development and confirmation use graph; other-task anchors preserve original direct coordinate-safe interface",
+    "initialization": {
+      "fresh": "empty memory; adaptive applicability and train-derived tool statistics",
+      "reference": "empty memory; previous exact-question visual-reference method"
+    },
+    "execution_change": "Controller sees only visible question, schema and observations; tools/final answer receive learned HCL guidance. Explicit finalize node; no model weight change.",
+    "note": "Inherited adapter configuration only: this experiment does not call HCL.train. It fits a separate stopping-policy candidate from training counterfactual pairs."
+  },
+  "development": {
+    "n": 0,
+    "use": "parent development not used for candidate acceptance; new selection24 allocated"
+  },
+  "confirmation": {
+    "n": 100,
+    "arms": [
+      "full",
+      "policy"
+    ],
+    "primary": "policy versus full, normalized exact match and fixed failure denominator; report paired gain/loss/CI and actual calls",
+    "conditional_on": "candidate accepted on new selection24 and historical72",
+    "patient_isolation": "unverified",
+    "original_test": "never accessed",
+    "ci": "20000 paired bootstrap draws, seed20261116; McNemar two-sided exact"
+  },
+  "shared_answer_interface": "same shortest answer / digits for count / semicolon for multiple items; no answer vocabulary; different from old experiments",
+  "budget": {
+    "max_calls_per_worker": 5000,
+    "watch_interval_seconds": 10,
+    "storage_stop_bytes": 4000000000,
+    "hard_storage_bytes": 50000000000,
+    "expected_peak_bytes": 1000000000,
+    "hard_seconds": 14400,
+    "soft_seconds": 14100,
+    "one_original_clock_for_all_phases": true,
+    "gpus": {
+      "learning_assignments": [
+        [
+          "fit_full",
+          0
+        ],
+        [
+          "fit_one",
+          2
+        ]
+      ],
+      "confirmation_parallel_candidates": [
+        0,
+        2
+      ],
+      "max_confirmation_workers": 2,
+      "minimum_free_mib": 35000
+    }
+  },
+  "limitations": [
+    "Counterfactual stopping mechanism study built on a previously learned frozen state, not new model-weight training.",
+    "48 training pairs and 24 acceptance cases are small; support is empirical, not calibrated probability.",
+    "Early stopping policy is a finite learned rule over coarse visible features; tools and controller share one frozen VLM.",
+    "Training images are intentionally reused from the parent; new selection and confirmation source/pixel groups exclude all prior experiments.",
+    "Patient independence unverified; official test unused.",
+    "If the policy gate rejects, no independent confirmation is opened and no improvement is claimed."
+  ],
+  "version": 1,
+  "purpose": "Learn a visible-observation stopping policy from matched one-versus-two-tool training rollouts, gate it, then independently confirm only if accepted; this is a mechanism experiment, not a full novelty claim.",
+  "gate": {
+    "min_current_correct_gain": 1,
+    "historical_loss_budget": 2,
+    "min_format_compliance_rate": 0.95,
+    "historical_scope": "per candidate relative to deployed predecessor; report cumulative losses separately"
+  },
+  "previous_run": "/srv/research/HCL/vqa_full_loop_20261110",
+  "learned_direct_state": "/srv/research/HCL/vqa_full_loop_20261110/fresh/private_final_state.json",
+  "max_tools_per_episode": 2,
+  "max_action_retries": 1,
+  "coverage_plan": null,
+  "arm_definitions": {
+    "G0": "initial empty Agent",
+    "GR": "reference method final state after two batches; exact question retrieval",
+    "GN": "proposed final state, adaptive retrieval and tool history",
+    "GP": "same proposed final state, no tool history supplied to controller",
+    "GE": "same proposed final state, exact-question retrieval, tool history retained",
+    "GF": "unchanged fixed-six-example Agent"
+  },
+  "previous_graph_run": "/srv/research/HCL/vqa_graph_loop_20261112",
+  "extra_exclusion_run": "/srv/research/HCL/agent_stable_20261115",
+  "previous_quick_run": "/srv/research/HCL/agent_quick_20261115",
+  "method": {
+    "raw_capacity_per_task": 24,
+    "max_reference_examples": 2,
+    "reference_max_side": 448,
+    "match": "same visible-question intent plus exact match OR frozen text similarity above train-only cross-intent 95th percentile; rank 0.7 text cosine + 0.3 image cosine; recognizable object terms must agree for non-exact matches",
+    "unknown_question": "require exact match for unknown intent; otherwise abstain if threshold fails",
+    "source": "only deployed/candidate raw records with training-only image registry; no query self-reference",
+    "reference_order": "prefer distinct corrected answers, then deterministic source-id tie break",
+    "image_location": "reference images first; current target image last; separate explicit labels",
+    "scope": "VQA only; historical other-task interface unchanged",
+    "calibration": "first 24 training examples visible text/images only; no future-batch labels/images in threshold calibration",
+    "tool_history": "per-intent tool-sequence counts, final and first-tool correctness from training only; min2 episodes per sequence; max3 sequences; no historical answers or freeform instructions to controller",
+    "learning_gate": "policy statistics stored inside raw candidate memory, committed and rolled back together",
+    "feature_cost": "separate timed forward-pass receipts; visible-feature cache only, no prediction cache"
+  },
+  "previous_visual_run": "/srv/research/HCL/agent_visual_20261115",
+  "parent_run": "/srv/research/HCL/agent_adaptive_20261115",
+  "action_policy": {
+    "training_pairs": 48,
+    "min_support": 4,
+    "max_training_losses_per_key": 0,
+    "allowed_first_tools": [
+      "answer_visual_question",
+      "classify_image"
+    ],
+    "key": "question intent, first tool, coarse observation shape; excludes answer identity; abstain on uncertainty/long output",
+    "utility": "choose one-tool finalize only with at least 4 matched first observations and no training loss vs full two-tool; validation still requires net +1 correct",
+    "selection_n": 24,
+    "historical_n": 72,
+    "confirmation_n": 100,
+    "selection_rule": "one prespecified candidate, no threshold search; reject => no confirmation and no deployment",
+    "frozen_base": "parent fresh final committed state; no parent confirmation outcomes read or used",
+    "memory_update": "none; only training-derived action-policy candidate, submitted to unchanged gain/retention/format criteria",
+    "fit_order": [
+      "full",
+      "one"
+    ]
+  }
+}

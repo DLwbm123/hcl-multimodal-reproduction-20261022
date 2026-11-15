@@ -1,0 +1,428 @@
+{
+  "policy_candidate": {
+    "allowed_keys": [
+      "color|answer_visual_question|short_text",
+      "count|answer_visual_question|digits",
+      "presence|answer_visual_question|binary",
+      "presence|answer_visual_question|short_text"
+    ],
+    "training_groups": {
+      "presence|answer_visual_question|binary": {
+        "support": 6,
+        "one_gains": 0,
+        "one_losses": 0,
+        "full_correct": 6,
+        "one_correct": 6
+      },
+      "count|answer_visual_question|digits": {
+        "support": 8,
+        "one_gains": 0,
+        "one_losses": 0,
+        "full_correct": 7,
+        "one_correct": 7
+      },
+      "color|answer_visual_question|short_text": {
+        "support": 5,
+        "one_gains": 0,
+        "one_losses": 0,
+        "full_correct": 0,
+        "one_correct": 0
+      },
+      "presence|answer_visual_question|short_text": {
+        "support": 8,
+        "one_gains": 0,
+        "one_losses": 0,
+        "full_correct": 5,
+        "one_correct": 5
+      },
+      "color|classify_image|short_text": {
+        "support": 1,
+        "one_gains": 0,
+        "one_losses": 0,
+        "full_correct": 0,
+        "one_correct": 0
+      }
+    },
+    "excluded": {
+      "missing_observation": 1,
+      "unmatched_first_observation": 3,
+      "ineligible_feature": 16
+    },
+    "trained_on": 48,
+    "min_support": 4,
+    "answer_identity_not_used": true,
+    "selection_or_confirmation_used_for_fit": false
+  },
+  "gate": {
+    "accepted": false,
+    "reasons": [
+      "current_correct_gain_below_one"
+    ],
+    "selection_before": 9,
+    "selection_after": 8,
+    "selection_total": 24,
+    "current_correct_gain": -1,
+    "selection_format": 0.9583333333333334,
+    "historical_before": 38,
+    "historical_after": 38,
+    "historical_losses": 0,
+    "historical_recoveries": 0,
+    "historical_total": 72
+  },
+  "roles": {
+    "fit_full": {
+      "metrics": {
+        "counterfactual_train": {
+          "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+          "total": 48,
+          "correct": 23,
+          "format_compliant_count": 47,
+          "format_compliance_rate": 0.9791666666666666,
+          "missing_count": 0,
+          "primary_metric_name": "normalized_exact_match",
+          "primary_score": 0.4791666666666667,
+          "mean_example_score": 0.4791666666666667,
+          "has_reference": false,
+          "reference_correct": 0,
+          "forget_count": 0,
+          "recovered_count": 0,
+          "behavior_comparable_count": 0,
+          "behavior_change_count": 0,
+          "task_primary_scores": {
+            "visual_qa": 0.4791666666666667
+          },
+          "forget_rate": 0.0,
+          "answer_f1_diagnostic": 0.5736111111111112
+        },
+        "selection": {
+          "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+          "total": 24,
+          "correct": 9,
+          "format_compliant_count": 23,
+          "format_compliance_rate": 0.9583333333333334,
+          "missing_count": 0,
+          "primary_metric_name": "normalized_exact_match",
+          "primary_score": 0.375,
+          "mean_example_score": 0.375,
+          "has_reference": false,
+          "reference_correct": 0,
+          "forget_count": 0,
+          "recovered_count": 0,
+          "behavior_comparable_count": 0,
+          "behavior_change_count": 0,
+          "task_primary_scores": {
+            "visual_qa": 0.375
+          },
+          "forget_rate": 0.0,
+          "answer_f1_diagnostic": 0.4166666666666667
+        },
+        "historical": {
+          "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+          "total": 72,
+          "correct": 38,
+          "format_compliant_count": 71,
+          "format_compliance_rate": 0.9861111111111112,
+          "missing_count": 0,
+          "primary_metric_name": "mixed_tasks_not_comparable",
+          "primary_score": null,
+          "mean_example_score": null,
+          "has_reference": false,
+          "reference_correct": 0,
+          "forget_count": 0,
+          "recovered_count": 0,
+          "behavior_comparable_count": 0,
+          "behavior_change_count": 0,
+          "task_primary_scores": {
+            "classification": 0.125,
+            "polyp_localization": 0.875,
+            "visual_qa": 0.5833333333333334
+          },
+          "forget_rate": 0.0
+        }
+      },
+      "generation_calls": 920,
+      "generation_seconds": 1263.6192477252334,
+      "feature_forward_calls": 116,
+      "feature_seconds": 6.6102871973998845,
+      "tool_calls": 192,
+      "learned_stops": 0
+    },
+    "fit_one": {
+      "metrics": {
+        "counterfactual_train": {
+          "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+          "total": 48,
+          "correct": 22,
+          "format_compliant_count": 47,
+          "format_compliance_rate": 0.9791666666666666,
+          "missing_count": 0,
+          "primary_metric_name": "normalized_exact_match",
+          "primary_score": 0.4583333333333333,
+          "mean_example_score": 0.4583333333333333,
+          "has_reference": false,
+          "reference_correct": 0,
+          "forget_count": 0,
+          "recovered_count": 0,
+          "behavior_comparable_count": 0,
+          "behavior_change_count": 0,
+          "task_primary_scores": {
+            "visual_qa": 0.4583333333333333
+          },
+          "forget_rate": 0.0,
+          "answer_f1_diagnostic": 0.5340277777777778
+        },
+        "selection": {
+          "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+          "total": 24,
+          "correct": 8,
+          "format_compliant_count": 23,
+          "format_compliance_rate": 0.9583333333333334,
+          "missing_count": 0,
+          "primary_metric_name": "normalized_exact_match",
+          "primary_score": 0.3333333333333333,
+          "mean_example_score": 0.3333333333333333,
+          "has_reference": false,
+          "reference_correct": 0,
+          "forget_count": 0,
+          "recovered_count": 0,
+          "behavior_comparable_count": 0,
+          "behavior_change_count": 0,
+          "task_primary_scores": {
+            "visual_qa": 0.3333333333333333
+          },
+          "forget_rate": 0.0,
+          "answer_f1_diagnostic": 0.3541666666666667
+        },
+        "historical": {
+          "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+          "total": 72,
+          "correct": 38,
+          "format_compliant_count": 71,
+          "format_compliance_rate": 0.9861111111111112,
+          "missing_count": 0,
+          "primary_metric_name": "mixed_tasks_not_comparable",
+          "primary_score": null,
+          "mean_example_score": null,
+          "has_reference": false,
+          "reference_correct": 0,
+          "forget_count": 0,
+          "recovered_count": 0,
+          "behavior_comparable_count": 0,
+          "behavior_change_count": 0,
+          "task_primary_scores": {
+            "classification": 0.125,
+            "polyp_localization": 0.875,
+            "visual_qa": 0.5833333333333334
+          },
+          "forget_rate": 0.0
+        }
+      },
+      "generation_calls": 728,
+      "generation_seconds": 1966.5600760821253,
+      "feature_forward_calls": 116,
+      "feature_seconds": 40.30067037977278,
+      "tool_calls": 96,
+      "learned_stops": 0
+    },
+    "candidate": {
+      "metrics": {
+        "selection": {
+          "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+          "total": 24,
+          "correct": 8,
+          "format_compliant_count": 23,
+          "format_compliance_rate": 0.9583333333333334,
+          "missing_count": 0,
+          "primary_metric_name": "normalized_exact_match",
+          "primary_score": 0.3333333333333333,
+          "mean_example_score": 0.3333333333333333,
+          "has_reference": false,
+          "reference_correct": 0,
+          "forget_count": 0,
+          "recovered_count": 0,
+          "behavior_comparable_count": 0,
+          "behavior_change_count": 0,
+          "task_primary_scores": {
+            "visual_qa": 0.3333333333333333
+          },
+          "forget_rate": 0.0,
+          "answer_f1_diagnostic": 0.3541666666666667
+        },
+        "historical": {
+          "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+          "total": 72,
+          "correct": 38,
+          "format_compliant_count": 71,
+          "format_compliance_rate": 0.9861111111111112,
+          "missing_count": 0,
+          "primary_metric_name": "mixed_tasks_not_comparable",
+          "primary_score": null,
+          "mean_example_score": null,
+          "has_reference": false,
+          "reference_correct": 0,
+          "forget_count": 0,
+          "recovered_count": 0,
+          "behavior_comparable_count": 0,
+          "behavior_change_count": 0,
+          "task_primary_scores": {
+            "classification": 0.125,
+            "polyp_localization": 0.875,
+            "visual_qa": 0.5833333333333334
+          },
+          "forget_rate": 0.0
+        }
+      },
+      "generation_calls": 453,
+      "generation_seconds": 1499.8576470734552,
+      "feature_forward_calls": 100,
+      "feature_seconds": 19.659739441704005,
+      "tool_calls": 58,
+      "learned_stops": 36
+    }
+  },
+  "limitations": [
+    "Counterfactual stopping mechanism study built on a previously learned frozen state, not new model-weight training.",
+    "48 training pairs and 24 acceptance cases are small; support is empirical, not calibrated probability.",
+    "Early stopping policy is a finite learned rule over coarse visible features; tools and controller share one frozen VLM.",
+    "Training images are intentionally reused from the parent; new selection and confirmation source/pixel groups exclude all prior experiments.",
+    "Patient independence unverified; official test unused.",
+    "If the policy gate rejects, no independent confirmation is opened and no improvement is claimed."
+  ],
+  "confirmation_opened": false,
+  "audited_roles": {
+    "fit_full": {
+      "generation_issued": 920,
+      "generation_completed": 920,
+      "splits": {
+        "counterfactual_train": {
+          "total": 48,
+          "correct": 23,
+          "graph_episodes": 48,
+          "graph_completed": 47,
+          "graph_failed": 1,
+          "tool_calls": 94,
+          "learned_stops": 0
+        },
+        "selection": {
+          "total": 24,
+          "correct": 9,
+          "graph_episodes": 24,
+          "graph_completed": 23,
+          "graph_failed": 1,
+          "tool_calls": 46,
+          "learned_stops": 0
+        },
+        "historical": {
+          "total": 72,
+          "correct": 38,
+          "graph_episodes": 24,
+          "graph_completed": 24,
+          "graph_failed": 0,
+          "tool_calls": 48,
+          "learned_stops": 0
+        }
+      }
+    },
+    "fit_one": {
+      "generation_issued": 728,
+      "generation_completed": 728,
+      "splits": {
+        "counterfactual_train": {
+          "total": 48,
+          "correct": 22,
+          "graph_episodes": 48,
+          "graph_completed": 47,
+          "graph_failed": 1,
+          "tool_calls": 47,
+          "learned_stops": 0
+        },
+        "selection": {
+          "total": 24,
+          "correct": 8,
+          "graph_episodes": 24,
+          "graph_completed": 23,
+          "graph_failed": 1,
+          "tool_calls": 23,
+          "learned_stops": 0
+        },
+        "historical": {
+          "total": 72,
+          "correct": 38,
+          "graph_episodes": 24,
+          "graph_completed": 24,
+          "graph_failed": 0,
+          "tool_calls": 24,
+          "learned_stops": 0
+        }
+      }
+    },
+    "candidate": {
+      "generation_issued": 453,
+      "generation_completed": 453,
+      "splits": {
+        "selection": {
+          "total": 24,
+          "correct": 8,
+          "graph_episodes": 24,
+          "graph_completed": 23,
+          "graph_failed": 1,
+          "tool_calls": 32,
+          "learned_stops": 14
+        },
+        "historical": {
+          "total": 72,
+          "correct": 38,
+          "graph_episodes": 24,
+          "graph_completed": 24,
+          "graph_failed": 0,
+          "tool_calls": 26,
+          "learned_stops": 22
+        }
+      }
+    }
+  },
+  "paired_selection": {
+    "fit_one": {
+      "gain": 0,
+      "loss": 1
+    },
+    "candidate": {
+      "gain": 0,
+      "loss": 1
+    }
+  },
+  "completion": {
+    "ended": 1794768828.7342303,
+    "elapsed_seconds": 3813.527539253235,
+    "bytes": 14389248,
+    "success": true
+  },
+  "total_costs": {
+    "generation_calls": 2101,
+    "generation_seconds": 4730.036970880814,
+    "feature_forward_calls": 332,
+    "feature_seconds": 66.57069701887667,
+    "tool_calls": 346,
+    "learned_stops": 36
+  },
+  "data_isolation": {
+    "reused_training": 48,
+    "new_selection": 24,
+    "reserved_confirmation": 100,
+    "official_test_accessed": false,
+    "patient_independence": "unverified",
+    "check": {
+      "counts": {
+        "reused_parent_train": 48,
+        "new_selection": 24,
+        "new_confirmation": 100
+      },
+      "new_roles_disjoint_from_parent_and_each_other": true,
+      "excluded_groups": 3190,
+      "original_test_untouched": true,
+      "patient_independence": "unverified",
+      "model_calls": 0
+    }
+  },
+  "cost_limitation": "Shared GPU load; elapsed times are not a controlled between-arm speed comparison. All preflight and failed-episode calls are included."
+}
