@@ -1,0 +1,134 @@
+{
+  "study": "agent_visual_20261115",
+  "seed": 20261115,
+  "anchors_per_task": 64,
+  "prepared_data": "<AUTHORIZED_PREPARED_DATA>",
+  "old_state": "<AUTHORIZED_OLD_STATE>",
+  "model_path": "<AUTHORIZED_MODEL_PATH>",
+  "python_paths": [
+    "<AUTHORIZED_FROZEN_ADAPTER_CODE>",
+    "<AUTHORIZED_MEDICAL_HCL_SOURCE>",
+    "<AUTHORIZED_HCL_SOURCE>"
+  ],
+  "learning": {
+    "arms": [
+      "fresh"
+    ],
+    "batches": 1,
+    "batchsize": 24,
+    "gate": 24,
+    "historical_anchors": 72,
+    "components": [
+      "memory_selector",
+      "router_context"
+    ],
+    "candidates_per_component_per_batch": 1,
+    "candidate_gate": "absolute current correct gain >=1 on 24 selection cases; historical previously-correct losses <=2/72; format >=0.95",
+    "weights": "frozen",
+    "memory": "full original feedback, raw/abstract/skill consolidation; gated commit",
+    "graph_scope": "All VQA train, selection, historical VQA anchors, development and confirmation use graph; other-task anchors preserve original direct coordinate-safe interface",
+    "initialization": {
+      "fresh": "empty raw/abstract with original 72 anchors"
+    },
+    "execution_change": "Controller sees only visible question, schema and observations; tools/final answer receive learned HCL guidance. Explicit finalize node; no model weight change."
+  },
+  "development": {
+    "n": 24,
+    "use": "diagnostic only, no selection"
+  },
+  "confirmation": {
+    "n": 100,
+    "source": "previously unused h_search source/pixel groups for all four roles; exclude all prior studies",
+    "quotas": {
+      "yes_no_or_presence": 30,
+      "other_each": 14
+    },
+    "arms": [
+      "G0",
+      "GN",
+      "GX",
+      "GF"
+    ],
+    "primary": "GN versus G0; one predeclared primary",
+    "secondary": [
+      "GN versus GX to isolate reference images",
+      "GN versus fixed-six GF"
+    ],
+    "read_after": "one complete learning batch, final state frozen",
+    "once_only": true,
+    "ci": "20000 paired bootstrap draws, seed20261115; one predeclared primary",
+    "all_failure_denominators_retained": true,
+    "patient_isolation": "unverified",
+    "original_test": "never accessed",
+    "positive": "report descriptive exact-match gain separately from multiplicity-adjusted statistical evidence; no guaranteed gain"
+  },
+  "shared_answer_interface": "same shortest answer / digits for count / semicolon for multiple items; no answer vocabulary; different from old experiments",
+  "budget": {
+    "max_calls_per_worker": 14000,
+    "watch_interval_seconds": 10,
+    "storage_stop_bytes": 4000000000,
+    "hard_storage_bytes": 50000000000,
+    "expected_peak_bytes": 1000000000,
+    "hard_seconds": 18000,
+    "soft_seconds": 17700,
+    "one_original_clock_for_all_phases": true,
+    "gpus": {
+      "learning_assignments": [
+        [
+          "fresh",
+          6
+        ]
+      ],
+      "confirmation_parallel_candidates": [
+        6,
+        1
+      ],
+      "max_confirmation_workers": 2,
+      "minimum_free_mib": 35000
+    }
+  },
+  "limitations": [
+    "all study roles newly allocated from unused h_search; not original test; patient independence unverified",
+    "one deterministic seed and frozen model; controller and tools share VLM",
+    "non-VQA historical anchors retain unchanged direct interface",
+    "no gate relaxation, forced acceptance or outcome-based checkpoint selection",
+    "formal efficacy cannot be inferred from successful execution alone",
+    "separate small-scale expedited study running alongside the larger two-start experiment; report both, do not substitute this panel for the larger study",
+    "method developed after earlier aggregate confirmation failures, new confirmation panel reserved; no causal comparison across different panels",
+    "raw memory capacity increases from 10 to 24; GX uses the same 24 capacity and exact final state",
+    "mechanism diagnostic, not established novel contribution or guaranteed performance gain"
+  ],
+  "version": 1,
+  "purpose": "Mechanism study: question-scoped corrected episodic memory with visual references, tested on a newly withheld panel",
+  "gate": {
+    "min_current_correct_gain": 1,
+    "historical_loss_budget": 2,
+    "min_format_compliance_rate": 0.95,
+    "historical_scope": "per candidate relative to deployed predecessor; report cumulative losses separately"
+  },
+  "previous_run": "<AUTHORIZED_PREVIOUS_RUN>",
+  "learned_direct_state": "<AUTHORIZED_LEARNED_DIRECT_STATE>",
+  "max_tools_per_episode": 2,
+  "max_action_retries": 1,
+  "coverage_plan": null,
+  "arm_definitions": {
+    "G0": "same empty initial Agent before new learning",
+    "GN": "Agent after one full 24-example guarded learning batch, final committed state",
+    "GF": "static harness, same fixed six training examples appended to graph guidance",
+    "GX": "same final state and question-scoped corrected text as GN, reference images withheld only at final answer"
+  },
+  "previous_graph_run": "<AUTHORIZED_PREVIOUS_GRAPH_RUN>",
+  "extra_exclusion_run": "<AUTHORIZED_EXTRA_EXCLUSION_RUN>",
+  "previous_quick_run": "<AUTHORIZED_PREVIOUS_QUICK_RUN>",
+  "method": {
+    "raw_capacity_per_task": 24,
+    "max_reference_examples": 2,
+    "reference_max_side": 448,
+    "match": "exact normalized visible question, no labels or test metadata used for retrieval",
+    "unknown_question": "abstain from episodic retrieval",
+    "source": "only entries in current HCL candidate/deployed raw memory, joined to authorized training-only image registry",
+    "reference_order": "prefer distinct corrected answers, then deterministic source-id tie break",
+    "image_location": "reference images first; current target image last; separate explicit labels",
+    "scope": "VQA only; historical other-task interface unchanged"
+  }
+}

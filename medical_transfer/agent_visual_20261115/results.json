@@ -1,0 +1,521 @@
+{
+  "confirmation": {
+    "G0": {
+      "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+      "total": 100,
+      "correct": 23,
+      "format_compliant_count": 99,
+      "format_compliance_rate": 0.99,
+      "missing_count": 0,
+      "primary_metric_name": "normalized_exact_match",
+      "primary_score": 0.23,
+      "mean_example_score": 0.23,
+      "has_reference": false,
+      "reference_correct": 0,
+      "forget_count": 0,
+      "recovered_count": 0,
+      "behavior_comparable_count": 0,
+      "behavior_change_count": 0,
+      "task_primary_scores": {
+        "visual_qa": 0.23
+      },
+      "forget_rate": 0.0,
+      "answer_f1_diagnostic": 0.2583809523809524
+    },
+    "GN": {
+      "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+      "total": 100,
+      "correct": 57,
+      "format_compliant_count": 99,
+      "format_compliance_rate": 0.99,
+      "missing_count": 0,
+      "primary_metric_name": "normalized_exact_match",
+      "primary_score": 0.57,
+      "mean_example_score": 0.57,
+      "has_reference": false,
+      "reference_correct": 0,
+      "forget_count": 0,
+      "recovered_count": 0,
+      "behavior_comparable_count": 0,
+      "behavior_change_count": 0,
+      "task_primary_scores": {
+        "visual_qa": 0.57
+      },
+      "forget_rate": 0.0,
+      "answer_f1_diagnostic": 0.6261666666666666
+    },
+    "GX": {
+      "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+      "total": 100,
+      "correct": 56,
+      "format_compliant_count": 99,
+      "format_compliance_rate": 0.99,
+      "missing_count": 0,
+      "primary_metric_name": "normalized_exact_match",
+      "primary_score": 0.56,
+      "mean_example_score": 0.56,
+      "has_reference": false,
+      "reference_correct": 0,
+      "forget_count": 0,
+      "recovered_count": 0,
+      "behavior_comparable_count": 0,
+      "behavior_change_count": 0,
+      "task_primary_scores": {
+        "visual_qa": 0.56
+      },
+      "forget_rate": 0.0,
+      "answer_f1_diagnostic": 0.6161666666666666
+    },
+    "GF": {
+      "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+      "total": 100,
+      "correct": 47,
+      "format_compliant_count": 99,
+      "format_compliance_rate": 0.99,
+      "missing_count": 0,
+      "primary_metric_name": "normalized_exact_match",
+      "primary_score": 0.47,
+      "mean_example_score": 0.47,
+      "has_reference": false,
+      "reference_correct": 0,
+      "forget_count": 0,
+      "recovered_count": 0,
+      "behavior_comparable_count": 0,
+      "behavior_change_count": 0,
+      "task_primary_scores": {
+        "visual_qa": 0.47
+      },
+      "forget_rate": 0.0,
+      "answer_f1_diagnostic": 0.5123809523809524
+    }
+  },
+  "paired_GN_vs": {
+    "G0": {
+      "gain": 37,
+      "loss": 3,
+      "unchanged": 60,
+      "delta_pp": 34,
+      "paired95_pp": [
+        24,
+        45
+      ],
+      "mcnemar_two_sided_p": 1.946500560734421e-08
+    },
+    "GX": {
+      "gain": 2,
+      "loss": 1,
+      "unchanged": 97,
+      "delta_pp": 1,
+      "paired95_pp": [
+        -2,
+        5
+      ],
+      "mcnemar_two_sided_p": 1.0
+    },
+    "GF": {
+      "gain": 20,
+      "loss": 10,
+      "unchanged": 70,
+      "delta_pp": 10,
+      "paired95_pp": [
+        0,
+        21
+      ],
+      "mcnemar_two_sided_p": 0.09873714670538902
+    }
+  },
+  "graph": {
+    "G0": {
+      "episodes": 100,
+      "completed": 99,
+      "failed": 1,
+      "tool_counts": {
+        "classify_image": 8,
+        "localize_region": 29,
+        "answer_visual_question": 147,
+        "inspect_region": 14
+      },
+      "validation_errors": 1,
+      "controller_calls": 200,
+      "queries_with_reference": 0,
+      "reference_examples_total": 0,
+      "visual_references_enabled": true
+    },
+    "GN": {
+      "episodes": 100,
+      "completed": 99,
+      "failed": 1,
+      "tool_counts": {
+        "classify_image": 8,
+        "answer_visual_question": 148,
+        "localize_region": 28,
+        "inspect_region": 14
+      },
+      "validation_errors": 1,
+      "controller_calls": 200,
+      "queries_with_reference": 60,
+      "reference_examples_total": 102,
+      "visual_references_enabled": true
+    },
+    "GX": {
+      "episodes": 100,
+      "completed": 99,
+      "failed": 1,
+      "tool_counts": {
+        "classify_image": 8,
+        "answer_visual_question": 148,
+        "localize_region": 28,
+        "inspect_region": 14
+      },
+      "validation_errors": 1,
+      "controller_calls": 200,
+      "queries_with_reference": 60,
+      "reference_examples_total": 102,
+      "visual_references_enabled": false
+    },
+    "GF": {
+      "episodes": 100,
+      "completed": 99,
+      "failed": 1,
+      "tool_counts": {
+        "classify_image": 8,
+        "localize_region": 29,
+        "answer_visual_question": 147,
+        "inspect_region": 14
+      },
+      "validation_errors": 1,
+      "controller_calls": 200,
+      "queries_with_reference": 0,
+      "reference_examples_total": 0,
+      "visual_references_enabled": true
+    }
+  },
+  "costs": {
+    "G0": {
+      "calls": 694,
+      "model_seconds": 710.6324818222784
+    },
+    "GN": {
+      "calls": 794,
+      "model_seconds": 1237.6963386298157
+    },
+    "GX": {
+      "calls": 794,
+      "model_seconds": 880.3485786444508
+    },
+    "GF": {
+      "calls": 694,
+      "model_seconds": 997.8446855228394
+    }
+  },
+  "memory_accepted": true,
+  "learning_receipts": [
+    {
+      "batch": 1,
+      "before_version": 0,
+      "after_version": 1,
+      "memory_changed": true,
+      "memory_summary": {
+        "raw": 24,
+        "abstract": 2,
+        "anchor": 72,
+        "skill": 0
+      },
+      "candidate_count": 2,
+      "decisions": [
+        {
+          "accepted": false,
+          "reason": "no_candidate_passed_commit_gate",
+          "current_validation_primary_score": 0.2916666666666667,
+          "commit_gate": {
+            "selection_objective": "plasticity",
+            "commit_policy": "plasticity_first",
+            "historical_loss_budget": 2,
+            "min_primary_score_delta": 1e-09,
+            "min_correct_gain": 1,
+            "max_forget_count": 0,
+            "min_format_compliance_rate": 0.95,
+            "recover_reward": 1.0,
+            "forget_penalty": 2.0,
+            "min_anchor_score": -1.0,
+            "min_anchor_net_score": null,
+            "max_anchor_forget_rate": null
+          },
+          "candidate_rejections": [
+            {
+              "candidate_id": "memory_selector:h0:c1:default_memory_selection",
+              "reasons": [
+                "no_behavior_change",
+                "primary_score_delta_below_minimum",
+                "correct_gain_below_minimum"
+              ],
+              "primary_score_delta": 0.0,
+              "correct_gain": 0,
+              "forget_count": 0,
+              "anchor_forget_count": 0,
+              "anchor_recovered_count": 0,
+              "anchor_score": 0.0,
+              "anchor_net_score": 0.0,
+              "anchor_forget_rate": 0.0,
+              "anchor_task_primary_scores": {
+                "classification": 0.08333333333333333,
+                "polyp_localization": 0.875,
+                "visual_qa": 0.5
+              },
+              "format_compliance_rate": 0.9583333333333334,
+              "behavior_comparable_count": 24,
+              "behavior_change_count": 0
+            }
+          ]
+        },
+        {
+          "accepted": true,
+          "reason": "candidate_passed_commit_gate",
+          "candidate_id": "router_context:h0:c2:enhanced_router_context",
+          "component": "router_context",
+          "source_version": 0,
+          "current_validation_primary_score": 0.2916666666666667,
+          "candidate_validation_primary_score": 0.3333333333333333,
+          "primary_score_delta": 0.04166666666666663,
+          "commit_gate": {
+            "selection_objective": "plasticity",
+            "commit_policy": "plasticity_first",
+            "min_primary_score_delta": 1e-09,
+            "min_correct_gain": 1,
+            "max_forget_count": 0,
+            "min_format_compliance_rate": 0.95,
+            "recover_reward": 1.0,
+            "forget_penalty": 2.0,
+            "min_anchor_score": -1.0,
+            "min_anchor_net_score": null,
+            "max_anchor_forget_rate": null
+          },
+          "anchor_forget_count": 0,
+          "anchor_recovered_count": 1,
+          "anchor_score": 1.0,
+          "anchor_net_score": 0.013888888888888888,
+          "candidate_rejections": [
+            {
+              "candidate_id": "router_context:h0:c2:enhanced_router_context",
+              "reasons": [],
+              "primary_score_delta": 0.04166666666666663,
+              "correct_gain": 1,
+              "forget_count": 0,
+              "anchor_forget_count": 0,
+              "anchor_recovered_count": 1,
+              "anchor_score": 1.0,
+              "anchor_net_score": 0.013888888888888888,
+              "anchor_forget_rate": 0.0,
+              "anchor_task_primary_scores": {
+                "classification": 0.125,
+                "polyp_localization": 0.875,
+                "visual_qa": 0.5416666666666666
+              },
+              "format_compliance_rate": 0.9583333333333334,
+              "behavior_comparable_count": 24,
+              "behavior_change_count": 2
+            }
+          ],
+          "correct_gain": 1
+        }
+      ],
+      "graph_training": {
+        "episodes": 24,
+        "completed": 24,
+        "tool_counts": {
+          "answer_visual_question": 36,
+          "classify_image": 3,
+          "localize_region": 8,
+          "inspect_region": 1
+        },
+        "failures": []
+      }
+    }
+  ],
+  "historical_retention": {
+    "total": 72,
+    "initial_correct": 26,
+    "final_correct": 36,
+    "losses": 1,
+    "recoveries": 11
+  },
+  "limitations": [
+    "all study roles newly allocated from unused h_search; not original test; patient independence unverified",
+    "one deterministic seed and frozen model; controller and tools share VLM",
+    "non-VQA historical anchors retain unchanged direct interface",
+    "no gate relaxation, forced acceptance or outcome-based checkpoint selection",
+    "formal efficacy cannot be inferred from successful execution alone",
+    "separate small-scale expedited study running alongside the larger two-start experiment; report both, do not substitute this panel for the larger study",
+    "method developed after earlier aggregate confirmation failures, new confirmation panel reserved; no causal comparison across different panels",
+    "raw memory capacity increases from 10 to 24; GX uses the same 24 capacity and exact final state",
+    "mechanism diagnostic, not established novel contribution or guaranteed performance gain"
+  ],
+  "full_single_batch_learning_completed": true,
+  "completion": {
+    "ended": 1794739604.985047,
+    "returncodes": {
+      "fresh": 0,
+      "confirm_G0": 0,
+      "confirm_GN": 0,
+      "confirm_GX": 0,
+      "confirm_GF": 0
+    },
+    "elapsed_seconds": 5805.966957092285,
+    "bytes": 43966464,
+    "success": true
+  },
+  "data_check": {
+    "counts": {
+      "train": 24,
+      "selection": 24,
+      "development": 24,
+      "confirmation": 100
+    },
+    "all_roles_new_and_disjoint": true,
+    "excluded_groups": 2798,
+    "original_test_untouched": true,
+    "patient_independence": "unverified",
+    "model_calls": 0
+  },
+  "costs_all_workers": {
+    "fresh": {
+      "issued": 3109,
+      "completed_receipts": 3109,
+      "model_seconds": 3449.1767664467916
+    },
+    "confirm_G0": {
+      "issued": 694,
+      "completed_receipts": 694,
+      "model_seconds": 710.6324818222784
+    },
+    "confirm_GN": {
+      "issued": 794,
+      "completed_receipts": 794,
+      "model_seconds": 1237.6963386298157
+    },
+    "confirm_GX": {
+      "issued": 794,
+      "completed_receipts": 794,
+      "model_seconds": 880.3485786444508
+    },
+    "confirm_GF": {
+      "issued": 694,
+      "completed_receipts": 694,
+      "model_seconds": 997.8446855228394
+    }
+  },
+  "reference_boundary_checks": {
+    "confirm_G0": {
+      "started_after_freeze": true,
+      "retrieval_sources_training_only": true,
+      "query_excluded_from_references": true,
+      "reference_backend_calls": 0,
+      "actual_image_counts": []
+    },
+    "confirm_GN": {
+      "started_after_freeze": true,
+      "retrieval_sources_training_only": true,
+      "query_excluded_from_references": true,
+      "reference_backend_calls": 60,
+      "actual_image_counts": [
+        2,
+        3
+      ]
+    },
+    "confirm_GX": {
+      "started_after_freeze": true,
+      "retrieval_sources_training_only": true,
+      "query_excluded_from_references": true,
+      "reference_backend_calls": 60,
+      "actual_image_counts": [
+        1
+      ]
+    },
+    "confirm_GF": {
+      "started_after_freeze": true,
+      "retrieval_sources_training_only": true,
+      "query_excluded_from_references": true,
+      "reference_backend_calls": 0,
+      "actual_image_counts": []
+    }
+  },
+  "total_model_calls": 6085,
+  "memory_gate": {
+    "accepted": true,
+    "reason": "memory_candidate_passed_commit_gate",
+    "rejection_reasons": [],
+    "stable_current_task_metrics": {
+      "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+      "primary_metric_name": "normalized_exact_match",
+      "primary_score": 0.08333333333333333,
+      "primary_score_delta": null,
+      "mean_example_score": 0.08333333333333333,
+      "correct": 2,
+      "total": 24,
+      "format_compliance_rate": 0.9583333333333334,
+      "average_output_chars": 0.0,
+      "max_output_chars": 0,
+      "forget_count": 0,
+      "forget_rate": 0.0,
+      "recovered_count": 0,
+      "behavior_comparable_count": 0,
+      "behavior_change_count": 0
+    },
+    "candidate_current_task_metrics": {
+      "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+      "primary_metric_name": "normalized_exact_match",
+      "primary_score": 0.2916666666666667,
+      "primary_score_delta": 0.20833333333333337,
+      "mean_example_score": 0.2916666666666667,
+      "correct": 7,
+      "total": 24,
+      "format_compliance_rate": 0.9583333333333334,
+      "average_output_chars": 0.0,
+      "max_output_chars": 0,
+      "forget_count": 0,
+      "forget_rate": 0.0,
+      "recovered_count": 5,
+      "behavior_comparable_count": 24,
+      "behavior_change_count": 11
+    },
+    "candidate_historical_anchor_metrics": {
+      "evaluation_schema_version": null,
+      "primary_metric_name": "historical_tasks_reported_separately",
+      "primary_score": null,
+      "primary_score_delta": null,
+      "mean_example_score": 0.0,
+      "correct": 35,
+      "total": 72,
+      "format_compliance_rate": 0.9861111111111112,
+      "average_output_chars": 0.0,
+      "max_output_chars": 0,
+      "forget_count": 1,
+      "forget_rate": 0.038461538461538464,
+      "recovered_count": 10,
+      "behavior_comparable_count": 0,
+      "behavior_change_count": 0
+    }
+  },
+  "development": {
+    "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+    "total": 24,
+    "correct": 8,
+    "format_compliant_count": 24,
+    "format_compliance_rate": 1.0,
+    "missing_count": 0,
+    "primary_metric_name": "normalized_exact_match",
+    "primary_score": 0.3333333333333333,
+    "mean_example_score": 0.3333333333333333,
+    "has_reference": false,
+    "reference_correct": 0,
+    "forget_count": 0,
+    "recovered_count": 0,
+    "behavior_comparable_count": 0,
+    "behavior_change_count": 0,
+    "task_primary_scores": {
+      "visual_qa": 0.3333333333333333
+    },
+    "forget_rate": 0.0,
+    "answer_f1_diagnostic": 0.37777777777777777
+  }
+}
