@@ -1,0 +1,673 @@
+{
+  "policy": {
+    "allowed_intents": [
+      "color",
+      "location"
+    ],
+    "training_groups": {
+      "presence": {
+        "support": 14,
+        "base_correct": 11,
+        "evidence_correct": 8,
+        "gains": 0,
+        "losses": 3
+      },
+      "count": {
+        "support": 8,
+        "base_correct": 7,
+        "evidence_correct": 6,
+        "gains": 1,
+        "losses": 2
+      },
+      "color": {
+        "support": 8,
+        "base_correct": 0,
+        "evidence_correct": 1,
+        "gains": 1,
+        "losses": 0
+      },
+      "location": {
+        "support": 8,
+        "base_correct": 1,
+        "evidence_correct": 2,
+        "gains": 1,
+        "losses": 0
+      },
+      "other": {
+        "support": 10,
+        "base_correct": 4,
+        "evidence_correct": 1,
+        "gains": 0,
+        "losses": 3
+      }
+    },
+    "training_count": 48,
+    "selection_used": false,
+    "confirmation_used": false,
+    "fallback": "base",
+    "rule": {
+      "min_support": 4,
+      "min_net_training_gain": 1,
+      "max_training_losses": 0
+    }
+  },
+  "gate": {
+    "accepted": true,
+    "reasons": [],
+    "selection_before": 15,
+    "selection_after": 16,
+    "selection_total": 48,
+    "current_correct_gain": 1,
+    "paired_gains": 1,
+    "paired_losses": 0,
+    "selection_format": 1.0,
+    "historical_before": 38,
+    "historical_after": 38,
+    "historical_losses": 0,
+    "historical_recoveries": 0,
+    "historical_total": 72
+  },
+  "confirmation_opened": true,
+  "roles": {
+    "fit_base": {
+      "metrics": {
+        "counterfactual_train": {
+          "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+          "total": 48,
+          "correct": 23,
+          "format_compliant_count": 47,
+          "format_compliance_rate": 0.9791666666666666,
+          "missing_count": 0,
+          "primary_metric_name": "normalized_exact_match",
+          "primary_score": 0.4791666666666667,
+          "mean_example_score": 0.4791666666666667,
+          "has_reference": false,
+          "reference_correct": 0,
+          "forget_count": 0,
+          "recovered_count": 0,
+          "behavior_comparable_count": 0,
+          "behavior_change_count": 0,
+          "task_primary_scores": {
+            "visual_qa": 0.4791666666666667
+          },
+          "forget_rate": 0.0,
+          "answer_f1_diagnostic": 0.5736111111111112
+        }
+      },
+      "generation_calls": 395,
+      "generation_failed": 0,
+      "generation_seconds": 862.3451934452169,
+      "feature_forwards": 64,
+      "feature_seconds": 10.07423497363925,
+      "graph_completed": 49,
+      "graph_failed": 1,
+      "tool_calls": 98,
+      "independent_selected": 0,
+      "read_only_and_weights_frozen": true
+    },
+    "fit_evidence": {
+      "metrics": {
+        "counterfactual_train": {
+          "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+          "total": 48,
+          "correct": 18,
+          "format_compliant_count": 47,
+          "format_compliance_rate": 0.9791666666666666,
+          "missing_count": 0,
+          "primary_metric_name": "normalized_exact_match",
+          "primary_score": 0.375,
+          "mean_example_score": 0.375,
+          "has_reference": false,
+          "reference_correct": 0,
+          "forget_count": 0,
+          "recovered_count": 0,
+          "behavior_comparable_count": 0,
+          "behavior_change_count": 0,
+          "task_primary_scores": {
+            "visual_qa": 0.375
+          },
+          "forget_rate": 0.0,
+          "answer_f1_diagnostic": 0.5316468253968254
+        }
+      },
+      "generation_calls": 395,
+      "generation_failed": 0,
+      "generation_seconds": 443.0254812403582,
+      "feature_forwards": 64,
+      "feature_seconds": 3.7758044148795307,
+      "graph_completed": 49,
+      "graph_failed": 1,
+      "tool_calls": 98,
+      "independent_selected": 50,
+      "read_only_and_weights_frozen": true
+    },
+    "eval_base": {
+      "metrics": {
+        "selection": {
+          "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+          "total": 48,
+          "correct": 15,
+          "format_compliant_count": 48,
+          "format_compliance_rate": 1.0,
+          "missing_count": 0,
+          "primary_metric_name": "normalized_exact_match",
+          "primary_score": 0.3125,
+          "mean_example_score": 0.3125,
+          "has_reference": false,
+          "reference_correct": 0,
+          "forget_count": 0,
+          "recovered_count": 0,
+          "behavior_comparable_count": 0,
+          "behavior_change_count": 0,
+          "task_primary_scores": {
+            "visual_qa": 0.3125
+          },
+          "forget_rate": 0.0,
+          "answer_f1_diagnostic": 0.381712962962963
+        },
+        "historical": {
+          "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+          "total": 72,
+          "correct": 38,
+          "format_compliant_count": 71,
+          "format_compliance_rate": 0.9861111111111112,
+          "missing_count": 0,
+          "primary_metric_name": "mixed_tasks_not_comparable",
+          "primary_score": null,
+          "mean_example_score": null,
+          "has_reference": false,
+          "reference_correct": 0,
+          "forget_count": 0,
+          "recovered_count": 0,
+          "behavior_comparable_count": 0,
+          "behavior_change_count": 0,
+          "task_primary_scores": {
+            "classification": 0.125,
+            "polyp_localization": 0.875,
+            "visual_qa": 0.5833333333333334
+          },
+          "forget_rate": 0.0
+        }
+      },
+      "generation_calls": 736,
+      "generation_failed": 0,
+      "generation_seconds": 1994.0899360412732,
+      "feature_forwards": 122,
+      "feature_seconds": 22.38936386210844,
+      "graph_completed": 74,
+      "graph_failed": 0,
+      "tool_calls": 148,
+      "independent_selected": 0,
+      "read_only_and_weights_frozen": true
+    },
+    "eval_evidence": {
+      "metrics": {
+        "selection": {
+          "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+          "total": 48,
+          "correct": 17,
+          "format_compliant_count": 48,
+          "format_compliance_rate": 1.0,
+          "missing_count": 0,
+          "primary_metric_name": "normalized_exact_match",
+          "primary_score": 0.3541666666666667,
+          "mean_example_score": 0.3541666666666667,
+          "has_reference": false,
+          "reference_correct": 0,
+          "forget_count": 0,
+          "recovered_count": 0,
+          "behavior_comparable_count": 0,
+          "behavior_change_count": 0,
+          "task_primary_scores": {
+            "visual_qa": 0.3541666666666667
+          },
+          "forget_rate": 0.0,
+          "answer_f1_diagnostic": 0.4978535353535354
+        },
+        "historical": {
+          "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+          "total": 72,
+          "correct": 37,
+          "format_compliant_count": 71,
+          "format_compliance_rate": 0.9861111111111112,
+          "missing_count": 0,
+          "primary_metric_name": "mixed_tasks_not_comparable",
+          "primary_score": null,
+          "mean_example_score": null,
+          "has_reference": false,
+          "reference_correct": 0,
+          "forget_count": 0,
+          "recovered_count": 0,
+          "behavior_comparable_count": 0,
+          "behavior_change_count": 0,
+          "task_primary_scores": {
+            "classification": 0.125,
+            "polyp_localization": 0.875,
+            "visual_qa": 0.5416666666666666
+          },
+          "forget_rate": 0.0
+        }
+      },
+      "generation_calls": 736,
+      "generation_failed": 0,
+      "generation_seconds": 1032.2753635691479,
+      "feature_forwards": 122,
+      "feature_seconds": 6.839312163181603,
+      "graph_completed": 74,
+      "graph_failed": 0,
+      "tool_calls": 148,
+      "independent_selected": 74,
+      "read_only_and_weights_frozen": true
+    },
+    "eval_routed": {
+      "metrics": {
+        "selection": {
+          "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+          "total": 48,
+          "correct": 16,
+          "format_compliant_count": 48,
+          "format_compliance_rate": 1.0,
+          "missing_count": 0,
+          "primary_metric_name": "normalized_exact_match",
+          "primary_score": 0.3333333333333333,
+          "mean_example_score": 0.3333333333333333,
+          "has_reference": false,
+          "reference_correct": 0,
+          "forget_count": 0,
+          "recovered_count": 0,
+          "behavior_comparable_count": 0,
+          "behavior_change_count": 0,
+          "task_primary_scores": {
+            "visual_qa": 0.3333333333333333
+          },
+          "forget_rate": 0.0,
+          "answer_f1_diagnostic": 0.47702020202020207
+        },
+        "historical": {
+          "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+          "total": 72,
+          "correct": 38,
+          "format_compliant_count": 71,
+          "format_compliance_rate": 0.9861111111111112,
+          "missing_count": 0,
+          "primary_metric_name": "mixed_tasks_not_comparable",
+          "primary_score": null,
+          "mean_example_score": null,
+          "has_reference": false,
+          "reference_correct": 0,
+          "forget_count": 0,
+          "recovered_count": 0,
+          "behavior_comparable_count": 0,
+          "behavior_change_count": 0,
+          "task_primary_scores": {
+            "classification": 0.125,
+            "polyp_localization": 0.875,
+            "visual_qa": 0.5833333333333334
+          },
+          "forget_rate": 0.0
+        }
+      },
+      "generation_calls": 736,
+      "generation_failed": 0,
+      "generation_seconds": 1051.4860280593857,
+      "feature_forwards": 122,
+      "feature_seconds": 6.869329462759197,
+      "graph_completed": 74,
+      "graph_failed": 0,
+      "tool_calls": 148,
+      "independent_selected": 20,
+      "read_only_and_weights_frozen": true
+    },
+    "confirm_base": {
+      "metrics": {
+        "confirmation": {
+          "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+          "total": 100,
+          "correct": 48,
+          "format_compliant_count": 100,
+          "format_compliance_rate": 1.0,
+          "missing_count": 0,
+          "primary_metric_name": "normalized_exact_match",
+          "primary_score": 0.48,
+          "mean_example_score": 0.48,
+          "has_reference": false,
+          "reference_correct": 0,
+          "forget_count": 0,
+          "recovered_count": 0,
+          "behavior_comparable_count": 0,
+          "behavior_change_count": 0,
+          "task_primary_scores": {
+            "visual_qa": 0.48
+          },
+          "forget_rate": 0.0,
+          "answer_f1_diagnostic": 0.5388888888888889
+        }
+      },
+      "generation_calls": 799,
+      "generation_failed": 0,
+      "generation_seconds": 1691.0704378439113,
+      "feature_forwards": 154,
+      "feature_seconds": 24.495530562475324,
+      "graph_completed": 100,
+      "graph_failed": 0,
+      "tool_calls": 200,
+      "independent_selected": 0,
+      "read_only_and_weights_frozen": true
+    },
+    "confirm_routed": {
+      "metrics": {
+        "confirmation": {
+          "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+          "total": 100,
+          "correct": 51,
+          "format_compliant_count": 100,
+          "format_compliance_rate": 1.0,
+          "missing_count": 0,
+          "primary_metric_name": "normalized_exact_match",
+          "primary_score": 0.51,
+          "mean_example_score": 0.51,
+          "has_reference": false,
+          "reference_correct": 0,
+          "forget_count": 0,
+          "recovered_count": 0,
+          "behavior_comparable_count": 0,
+          "behavior_change_count": 0,
+          "task_primary_scores": {
+            "visual_qa": 0.51
+          },
+          "forget_rate": 0.0,
+          "answer_f1_diagnostic": 0.6232222222222222
+        }
+      },
+      "generation_calls": 799,
+      "generation_failed": 0,
+      "generation_seconds": 895.5104420287535,
+      "feature_forwards": 154,
+      "feature_seconds": 8.585920491721481,
+      "graph_completed": 100,
+      "graph_failed": 0,
+      "tool_calls": 200,
+      "independent_selected": 28,
+      "read_only_and_weights_frozen": true
+    },
+    "confirm_evidence": {
+      "metrics": {
+        "confirmation": {
+          "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+          "total": 100,
+          "correct": 46,
+          "format_compliant_count": 100,
+          "format_compliance_rate": 1.0,
+          "missing_count": 0,
+          "primary_metric_name": "normalized_exact_match",
+          "primary_score": 0.46,
+          "mean_example_score": 0.46,
+          "has_reference": false,
+          "reference_correct": 0,
+          "forget_count": 0,
+          "recovered_count": 0,
+          "behavior_comparable_count": 0,
+          "behavior_change_count": 0,
+          "task_primary_scores": {
+            "visual_qa": 0.46
+          },
+          "forget_rate": 0.0,
+          "answer_f1_diagnostic": 0.5665555555555556
+        }
+      },
+      "generation_calls": 799,
+      "generation_failed": 0,
+      "generation_seconds": 896.1009418186732,
+      "feature_forwards": 154,
+      "feature_seconds": 8.638723154552281,
+      "graph_completed": 100,
+      "graph_failed": 0,
+      "tool_calls": 200,
+      "independent_selected": 100,
+      "read_only_and_weights_frozen": true
+    }
+  },
+  "paired_routed_vs": {
+    "base": {
+      "gain": 3,
+      "loss": 0,
+      "delta_pp": 3,
+      "paired95_pp": [
+        0,
+        7
+      ],
+      "mcnemar_p": 0.25
+    },
+    "evidence": {
+      "gain": 9,
+      "loss": 4,
+      "delta_pp": 5,
+      "paired95_pp": [
+        -2,
+        12
+      ],
+      "mcnemar_p": 0.266845703125
+    }
+  },
+  "audits": {
+    "fit_base": {
+      "generation_issued": 395,
+      "generation_completed": 395,
+      "generation_failed": 0,
+      "known_query_route_checks": 50,
+      "references_train_only_and_no_self": true,
+      "splits": {
+        "counterfactual_train": {
+          "total": 48,
+          "correct": 23,
+          "graph_episodes": 48,
+          "completed": 47,
+          "failed": 1,
+          "independent_selected": 0,
+          "tool_calls": 94
+        }
+      }
+    },
+    "fit_evidence": {
+      "generation_issued": 395,
+      "generation_completed": 395,
+      "generation_failed": 0,
+      "known_query_route_checks": 50,
+      "references_train_only_and_no_self": true,
+      "splits": {
+        "counterfactual_train": {
+          "total": 48,
+          "correct": 18,
+          "graph_episodes": 48,
+          "completed": 47,
+          "failed": 1,
+          "independent_selected": 48,
+          "tool_calls": 94
+        }
+      }
+    },
+    "eval_base": {
+      "generation_issued": 736,
+      "generation_completed": 736,
+      "generation_failed": 0,
+      "known_query_route_checks": 50,
+      "references_train_only_and_no_self": true,
+      "splits": {
+        "selection": {
+          "total": 48,
+          "correct": 15,
+          "graph_episodes": 48,
+          "completed": 48,
+          "failed": 0,
+          "independent_selected": 0,
+          "tool_calls": 96
+        },
+        "historical": {
+          "total": 72,
+          "correct": 38,
+          "graph_episodes": 24,
+          "completed": 24,
+          "failed": 0,
+          "independent_selected": 0,
+          "tool_calls": 48
+        }
+      }
+    },
+    "eval_evidence": {
+      "generation_issued": 736,
+      "generation_completed": 736,
+      "generation_failed": 0,
+      "known_query_route_checks": 50,
+      "references_train_only_and_no_self": true,
+      "splits": {
+        "selection": {
+          "total": 48,
+          "correct": 17,
+          "graph_episodes": 48,
+          "completed": 48,
+          "failed": 0,
+          "independent_selected": 48,
+          "tool_calls": 96
+        },
+        "historical": {
+          "total": 72,
+          "correct": 37,
+          "graph_episodes": 24,
+          "completed": 24,
+          "failed": 0,
+          "independent_selected": 24,
+          "tool_calls": 48
+        }
+      }
+    },
+    "eval_routed": {
+      "generation_issued": 736,
+      "generation_completed": 736,
+      "generation_failed": 0,
+      "known_query_route_checks": 50,
+      "references_train_only_and_no_self": true,
+      "splits": {
+        "selection": {
+          "total": 48,
+          "correct": 16,
+          "graph_episodes": 48,
+          "completed": 48,
+          "failed": 0,
+          "independent_selected": 16,
+          "tool_calls": 96
+        },
+        "historical": {
+          "total": 72,
+          "correct": 38,
+          "graph_episodes": 24,
+          "completed": 24,
+          "failed": 0,
+          "independent_selected": 2,
+          "tool_calls": 48
+        }
+      }
+    },
+    "confirm_base": {
+      "generation_issued": 799,
+      "generation_completed": 799,
+      "generation_failed": 0,
+      "known_query_route_checks": 100,
+      "references_train_only_and_no_self": true,
+      "splits": {
+        "confirmation": {
+          "total": 100,
+          "correct": 48,
+          "graph_episodes": 100,
+          "completed": 100,
+          "failed": 0,
+          "independent_selected": 0,
+          "tool_calls": 200
+        }
+      }
+    },
+    "confirm_routed": {
+      "generation_issued": 799,
+      "generation_completed": 799,
+      "generation_failed": 0,
+      "known_query_route_checks": 100,
+      "references_train_only_and_no_self": true,
+      "splits": {
+        "confirmation": {
+          "total": 100,
+          "correct": 51,
+          "graph_episodes": 100,
+          "completed": 100,
+          "failed": 0,
+          "independent_selected": 28,
+          "tool_calls": 200
+        }
+      }
+    },
+    "confirm_evidence": {
+      "generation_issued": 799,
+      "generation_completed": 799,
+      "generation_failed": 0,
+      "known_query_route_checks": 100,
+      "references_train_only_and_no_self": true,
+      "splits": {
+        "confirmation": {
+          "total": 100,
+          "correct": 46,
+          "graph_episodes": 100,
+          "completed": 100,
+          "failed": 0,
+          "independent_selected": 100,
+          "tool_calls": 200
+        }
+      }
+    }
+  },
+  "completion": {
+    "ended": 1794777124.922468,
+    "elapsed_seconds": 4916.317414283752,
+    "bytes": 29519872,
+    "success": true
+  },
+  "data_isolation": {
+    "counts": {
+      "reused_parent_train": 48,
+      "new_selection": 48,
+      "transferred_unevaluated_confirmation": 100
+    },
+    "new_selection_disjoint_from_all_prior_used_and_reserved_groups": true,
+    "transferred_confirmation_never_evaluated": true,
+    "excluded_groups": 3462,
+    "original_test_untouched": true,
+    "patient_independence": "unverified",
+    "model_calls": 0
+  },
+  "confirmation_transfer": {
+    "count": 100,
+    "prior_gate_rejected": true,
+    "prior_confirm_workers_absent": true,
+    "confirmation_only": true,
+    "unchanged_reserved_membership": true,
+    "disjoint_from_new_selection": true,
+    "no_model_outputs_used_for_transfer": true
+  },
+  "total_costs": {
+    "generation_calls": 5395,
+    "generation_failed": 0,
+    "generation_seconds": 8865.90382404672,
+    "feature_forwards": 956,
+    "feature_seconds": 91.6682190853171,
+    "graph_completed": 620,
+    "graph_failed": 2,
+    "tool_calls": 1240,
+    "independent_selected": 272
+  },
+  "limitations": [
+    "Reuses prior learned state and its training48; fitting is in-sample and requires fresh independent acceptance.",
+    "Routing uses coarse visible intent with empirical support, not calibrated reliability or formal safety.",
+    "Prior evidence acceptance motivates the routing hypothesis, but no route is selected from those outcomes. New acceptance excludes all prior groups; final confirmation transfers an unevaluated reserved panel after predecessor gate rejection.",
+    "Model weights and raw/abstract memories remain fixed; only a routing policy candidate is learned.",
+    "Patient independence unverified; official test unused.",
+    "Shared GPU load confounds timing comparisons.",
+    "Whole role costs include preflight; concurrent GPU load confounds timing. Routing switches both tool guidance and final output contract; the trial does not isolate those two components."
+  ]
+}

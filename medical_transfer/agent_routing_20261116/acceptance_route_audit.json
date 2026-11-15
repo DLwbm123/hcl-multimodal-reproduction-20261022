@@ -1,0 +1,47 @@
+{
+  "base": {
+    "selection_correct": 15,
+    "independent_selected": 0,
+    "route_integrity_checked": 48,
+    "historical_correct": 38
+  },
+  "evidence": {
+    "selection_correct": 17,
+    "independent_selected": 48,
+    "route_integrity_checked": 48,
+    "historical_correct": 37
+  },
+  "routed": {
+    "selection_correct": 16,
+    "independent_selected": 16,
+    "route_integrity_checked": 48,
+    "historical_correct": 38
+  },
+  "routed_by_visible_intent": {
+    "color": {
+      "n": 8,
+      "base": 0,
+      "routed": 1
+    },
+    "count": {
+      "n": 8,
+      "base": 2,
+      "routed": 2
+    },
+    "location": {
+      "n": 8,
+      "base": 0,
+      "routed": 0
+    },
+    "other": {
+      "n": 8,
+      "base": 3,
+      "routed": 3
+    },
+    "presence": {
+      "n": 16,
+      "base": 10,
+      "routed": 10
+    }
+  }
+}
