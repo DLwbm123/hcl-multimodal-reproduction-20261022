@@ -1,0 +1,415 @@
+{
+  "confirmation": {
+    "G0": {
+      "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+      "total": 200,
+      "correct": 25,
+      "format_compliant_count": 125,
+      "format_compliance_rate": 0.625,
+      "missing_count": 0,
+      "primary_metric_name": "normalized_exact_match",
+      "primary_score": 0.125,
+      "mean_example_score": 0.125,
+      "has_reference": false,
+      "reference_correct": 0,
+      "forget_count": 0,
+      "recovered_count": 0,
+      "behavior_comparable_count": 0,
+      "behavior_change_count": 0,
+      "task_primary_scores": {
+        "visual_qa": 0.125
+      },
+      "forget_rate": 0.0,
+      "answer_f1_diagnostic": 0.16855555555555554
+    },
+    "GF": {
+      "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+      "total": 200,
+      "correct": 2,
+      "format_compliant_count": 54,
+      "format_compliance_rate": 0.27,
+      "missing_count": 0,
+      "primary_metric_name": "normalized_exact_match",
+      "primary_score": 0.01,
+      "mean_example_score": 0.01,
+      "has_reference": false,
+      "reference_correct": 0,
+      "forget_count": 0,
+      "recovered_count": 0,
+      "behavior_comparable_count": 0,
+      "behavior_change_count": 0,
+      "task_primary_scores": {
+        "visual_qa": 0.01
+      },
+      "forget_rate": 0.0,
+      "answer_f1_diagnostic": 0.026000000000000002
+    },
+    "GT": {
+      "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+      "total": 200,
+      "correct": 68,
+      "format_compliant_count": 182,
+      "format_compliance_rate": 0.91,
+      "missing_count": 0,
+      "primary_metric_name": "normalized_exact_match",
+      "primary_score": 0.34,
+      "mean_example_score": 0.34,
+      "has_reference": false,
+      "reference_correct": 0,
+      "forget_count": 0,
+      "recovered_count": 0,
+      "behavior_comparable_count": 0,
+      "behavior_change_count": 0,
+      "task_primary_scores": {
+        "visual_qa": 0.34
+      },
+      "forget_rate": 0.0,
+      "answer_f1_diagnostic": 0.4053174603174603
+    },
+    "GN": {
+      "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+      "total": 200,
+      "correct": 25,
+      "format_compliant_count": 125,
+      "format_compliance_rate": 0.625,
+      "missing_count": 0,
+      "primary_metric_name": "normalized_exact_match",
+      "primary_score": 0.125,
+      "mean_example_score": 0.125,
+      "has_reference": false,
+      "reference_correct": 0,
+      "forget_count": 0,
+      "recovered_count": 0,
+      "behavior_comparable_count": 0,
+      "behavior_change_count": 0,
+      "task_primary_scores": {
+        "visual_qa": 0.125
+      },
+      "forget_rate": 0.0,
+      "answer_f1_diagnostic": 0.16855555555555554
+    },
+    "D0": {
+      "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+      "total": 200,
+      "correct": 60,
+      "format_compliant_count": 200,
+      "format_compliance_rate": 1.0,
+      "missing_count": 0,
+      "primary_metric_name": "normalized_exact_match",
+      "primary_score": 0.3,
+      "mean_example_score": 0.3,
+      "has_reference": false,
+      "reference_correct": 0,
+      "forget_count": 0,
+      "recovered_count": 0,
+      "behavior_comparable_count": 0,
+      "behavior_change_count": 0,
+      "task_primary_scores": {
+        "visual_qa": 0.3
+      },
+      "forget_rate": 0.0,
+      "answer_f1_diagnostic": 0.35077777777777774
+    },
+    "DT": {
+      "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+      "total": 200,
+      "correct": 78,
+      "format_compliant_count": 200,
+      "format_compliance_rate": 1.0,
+      "missing_count": 0,
+      "primary_metric_name": "normalized_exact_match",
+      "primary_score": 0.39,
+      "mean_example_score": 0.39,
+      "has_reference": false,
+      "reference_correct": 0,
+      "forget_count": 0,
+      "recovered_count": 0,
+      "behavior_comparable_count": 0,
+      "behavior_change_count": 0,
+      "task_primary_scores": {
+        "visual_qa": 0.39
+      },
+      "forget_rate": 0.0,
+      "answer_f1_diagnostic": 0.46365079365079365
+    }
+  },
+  "paired": {
+    "GN_vs_G0": {
+      "gain": 0,
+      "loss": 0,
+      "unchanged": 200,
+      "delta_pp": 0.0,
+      "paired95_pp": [
+        0.0,
+        0.0
+      ],
+      "mcnemar_two_sided_p": 1.0
+    },
+    "GN_vs_GF": {
+      "gain": 25,
+      "loss": 2,
+      "unchanged": 173,
+      "delta_pp": 11.5,
+      "paired95_pp": [
+        7.000000000000001,
+        16.5
+      ],
+      "mcnemar_two_sided_p": 5.647540092468262e-06
+    },
+    "GN_vs_GT": {
+      "gain": 6,
+      "loss": 49,
+      "unchanged": 145,
+      "delta_pp": -21.5,
+      "paired95_pp": [
+        -28.000000000000004,
+        -15.0
+      ],
+      "mcnemar_two_sided_p": 1.822834494458192e-09
+    },
+    "GT_vs_DT": {
+      "gain": 12,
+      "loss": 22,
+      "unchanged": 166,
+      "delta_pp": -5.0,
+      "paired95_pp": [
+        -10.5,
+        0.5
+      ],
+      "mcnemar_two_sided_p": 0.12144948495551944
+    },
+    "GN_vs_DT": {
+      "gain": 5,
+      "loss": 58,
+      "unchanged": 137,
+      "delta_pp": -26.5,
+      "paired95_pp": [
+        -33.5,
+        -19.5
+      ],
+      "mcnemar_two_sided_p": 1.6623508125590547e-12
+    },
+    "GN_vs_D0": {
+      "gain": 2,
+      "loss": 37,
+      "unchanged": 161,
+      "delta_pp": -17.5,
+      "paired95_pp": [
+        -23.5,
+        -12.0
+      ],
+      "mcnemar_two_sided_p": 2.841261448338628e-09
+    }
+  },
+  "learning": {
+    "memory_gate_accepts": 0,
+    "memory_gate_total": 2,
+    "historical_retention": {
+      "total": 72,
+      "initial_correct": 26,
+      "final_correct": 26,
+      "cumulative_losses": 0,
+      "recoveries": 0
+    },
+    "batches": [
+      {
+        "batch": 1,
+        "memory_changed": false,
+        "memory_summary": {
+          "raw": 0,
+          "abstract": 0,
+          "anchor": 72,
+          "skill": 0
+        },
+        "candidate_count": 4,
+        "graph_training": {
+          "episodes": 24,
+          "completed": 22,
+          "tool_counts": {
+            "answer_visual_question": 41,
+            "inspect_region": 2
+          }
+        }
+      },
+      {
+        "batch": 2,
+        "memory_changed": false,
+        "memory_summary": {
+          "raw": 0,
+          "abstract": 0,
+          "anchor": 72,
+          "skill": 0
+        },
+        "candidate_count": 4,
+        "graph_training": {
+          "episodes": 24,
+          "completed": 24,
+          "tool_counts": {
+            "answer_visual_question": 48
+          }
+        }
+      }
+    ]
+  },
+  "graph": {
+    "G0": {
+      "episodes": 200,
+      "completed": 125,
+      "failed": 75,
+      "tool_counts": {
+        "answer_visual_question": 237,
+        "inspect_region": 5
+      },
+      "validation_errors": 109,
+      "controller_calls": 551
+    },
+    "GF": {
+      "episodes": 200,
+      "completed": 54,
+      "failed": 146,
+      "tool_counts": {
+        "answer_visual_question": 105,
+        "inspect_region": 5
+      },
+      "validation_errors": 153,
+      "controller_calls": 463
+    },
+    "GT": {
+      "episodes": 200,
+      "completed": 182,
+      "failed": 18,
+      "tool_counts": {
+        "answer_visual_question": 342,
+        "inspect_region": 11
+      },
+      "validation_errors": 60,
+      "controller_calls": 613
+    },
+    "GN": {
+      "episodes": 200,
+      "completed": 125,
+      "failed": 75,
+      "tool_counts": {
+        "answer_visual_question": 237,
+        "inspect_region": 5
+      },
+      "validation_errors": 109,
+      "controller_calls": 551
+    },
+    "D0": {
+      "episodes": 0
+    },
+    "DT": {
+      "episodes": 0
+    }
+  },
+  "costs": {
+    "G0": {
+      "calls": 1192,
+      "model_seconds": 1257.5092115383595,
+      "seconds_per_case": 6.287546057691798
+    },
+    "GF": {
+      "calls": 972,
+      "model_seconds": 1144.196521434933,
+      "seconds_per_case": 5.720982607174665
+    },
+    "GT": {
+      "calls": 1565,
+      "model_seconds": 1861.0226997528225,
+      "seconds_per_case": 9.305113498764113
+    },
+    "GN": {
+      "calls": 1192,
+      "model_seconds": 1277.9371400997043,
+      "seconds_per_case": 6.3896857004985215
+    },
+    "D0": {
+      "calls": 600,
+      "model_seconds": 943.0038667763583,
+      "seconds_per_case": 4.715019333881791
+    },
+    "DT": {
+      "calls": 800,
+      "model_seconds": 1269.6136890803464,
+      "seconds_per_case": 6.348068445401732
+    }
+  },
+  "full_agent_learning_completed": true,
+  "positive_vs_initial_agent": false,
+  "paired95_lower_positive": false,
+  "beats_fixed_examples": true,
+  "limitations": [
+    "train48/selection48/development80 reused from prior direct experiment, not new independent discovery",
+    "confirmation newly allocated before outputs, not original test; patient isolation unverified",
+    "one seed, frozen model, same underlying VLM for controller and tools",
+    "old direct-trained state selected in previous experiment; no new control tuning",
+    "non-VQA historical anchors use unchanged direct interface",
+    "positive results not guaranteed; gate and failures retained"
+  ],
+  "additional_descriptive_comparisons": {
+    "GT_vs_G0": {
+      "gain": 49,
+      "loss": 6,
+      "unchanged": 145,
+      "delta_pp": 21.5,
+      "paired95_pp": [
+        15.0,
+        28.000000000000004
+      ],
+      "mcnemar_two_sided_p": 1.822834494458192e-09
+    },
+    "GT_vs_D0": {
+      "gain": 24,
+      "loss": 16,
+      "unchanged": 160,
+      "delta_pp": 4.0,
+      "paired95_pp": [
+        -2.0,
+        10.5
+      ],
+      "mcnemar_two_sided_p": 0.26818725105476915
+    },
+    "DT_vs_D0": {
+      "gain": 23,
+      "loss": 5,
+      "unchanged": 172,
+      "delta_pp": 9.0,
+      "paired95_pp": [
+        4.0,
+        14.000000000000002
+      ],
+      "mcnemar_two_sided_p": 0.0009122341871261597
+    }
+  },
+  "additional_comparison_disclosure": "Added after complete results to explain prior-learned-state transfer; not new Agent learning success or predeclared primary comparisons.",
+  "total_cost_including_interrupted_attempt": {
+    "issued_calls": 14317,
+    "finished_call_receipts": 14315,
+    "model_seconds_in_finished_receipts": 16280.22392505547,
+    "missing_receipts_due_to_terminated_inflight_calls": 2
+  },
+  "runtime": {
+    "ended": 1794536371.1284597,
+    "returncodes": {
+      "confirm_G0": 0,
+      "confirm_GF": 0,
+      "confirm_GT": 0,
+      "confirm_GN": 0,
+      "confirm_D0": 0,
+      "confirm_DT": 0
+    },
+    "elapsed_seconds": 43967.368337631226,
+    "bytes": 69013504,
+    "success": true
+  },
+  "repair": {
+    "cause": "crop width below pinned image processor minimum",
+    "action": "error observation for unsupported crop dimensions before inference",
+    "all_confirmation_arms_restarted": true,
+    "old_attempt_preserved": true,
+    "original_clock_preserved": true,
+    "learning_not_rerun": true
+  },
+  "checked_all_worker_exit_codes": true
+}

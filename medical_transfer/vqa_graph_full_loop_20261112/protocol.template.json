@@ -1,0 +1,122 @@
+{
+  "study": "vqa_graph_loop_20261112",
+  "seed": 20261112,
+  "anchors_per_task": 64,
+  "prepared_data": "<authorized local prepared_data>",
+  "old_state": "<authorized local old_state>",
+  "model_path": "<authorized local model_path>",
+  "python_paths": [
+    "<frozen VQA adapter support>",
+    "<medical_transfer/src>",
+    "<HCL package root>"
+  ],
+  "learning": {
+    "arms": [
+      "fresh"
+    ],
+    "batches": 2,
+    "batchsize": 24,
+    "gate": 48,
+    "historical_anchors": 72,
+    "components": [
+      "memory_selector",
+      "router_context"
+    ],
+    "candidates_per_component_per_batch": 2,
+    "candidate_gate": "current correct gain >=1/48, historical old-correct loss <=2/72 per decision, current format >=0.95, structural validity and rollback retained",
+    "weights": "frozen",
+    "memory": "full original feedback, raw/abstract/skill consolidation; gated commit",
+    "graph_scope": "All VQA train, selection, historical VQA anchors, development and confirmation use graph; other-task anchors preserve original direct coordinate-safe interface"
+  },
+  "development": {
+    "n": 80,
+    "use": "previous study development examples; diagnostic only, no arm or checkpoint selection"
+  },
+  "confirmation": {
+    "n": 200,
+    "source": "unused h_search groups/pixels reassigned as study-only confirmation before any model outputs; exclude all previous memberships before joining targets",
+    "quotas": {
+      "yes_no_or_presence": 60,
+      "other_each": 28
+    },
+    "arms": [
+      "G0",
+      "GF",
+      "GT",
+      "GN",
+      "D0",
+      "DT"
+    ],
+    "primary": "GN versus G0: same Agent execution and initial harness; only fresh feedback learning differs",
+    "secondary": [
+      "GN versus GF fixed-six control",
+      "GN versus GT direct-trained memory transfer",
+      "GT versus DT same prior state, Agent versus direct",
+      "GN versus DT practical comparison",
+      "GN versus D0 direct no-memory reference"
+    ],
+    "read_after": "FROZEN_SELECTION.json after both learning batches; all six arms mandatory",
+    "once_only": true,
+    "ci": "20000 paired source-group bootstrap draws, seed20261112",
+    "all_failure_denominators_retained": true,
+    "patient_isolation": "unverified",
+    "original_test": "never accessed",
+    "positive": "descriptive net exact-match gain GN-G0 >0; statistical evidence separately if paired95 lower>0; GF comparison always disclosed"
+  },
+  "shared_answer_interface": "same shortest answer / digits for count / semicolon for multiple items; no answer vocabulary; different from old experiments",
+  "budget": {
+    "max_calls_per_worker": 30000,
+    "watch_interval_seconds": 10,
+    "storage_stop_bytes": 4000000000,
+    "hard_storage_bytes": 50000000000,
+    "expected_peak_bytes": 1000000000,
+    "hard_seconds": 82800,
+    "soft_seconds": 81000.0,
+    "one_original_clock_for_all_phases": true,
+    "gpus": {
+      "learning": 1,
+      "confirmation_parallel_candidates": [
+        1,
+        0,
+        4
+      ],
+      "max_confirmation_workers": 3,
+      "minimum_free_mib": 35000
+    }
+  },
+  "limitations": [
+    "train48/selection48/development80 reused from prior direct experiment, not new independent discovery",
+    "confirmation newly allocated before outputs, not original test; patient isolation unverified",
+    "one seed, frozen model, same underlying VLM for controller and tools",
+    "old direct-trained state selected in previous experiment; no new control tuning",
+    "non-VQA historical anchors use unchanged direct interface",
+    "positive results not guaranteed; gate and failures retained"
+  ],
+  "version": 1,
+  "purpose": "Complete VQA feedback learning through a bounded LangGraph agent; no guaranteed positive result",
+  "gate": {
+    "min_current_correct_gain": 1,
+    "historical_loss_budget": 2,
+    "min_format_compliance_rate": 0.95,
+    "historical_scope": "per candidate relative to deployed predecessor; report cumulative losses separately"
+  },
+  "previous_run": "<authorized local previous_run>",
+  "learned_direct_state": "<authorized local learned_direct_state>",
+  "max_tools_per_episode": 2,
+  "max_action_retries": 1,
+  "coverage_plan": null,
+  "arm_definitions": {
+    "G0": "fresh empty HCL harness, original anchors, Agent, no new learning",
+    "GF": "static harness, same fixed six training examples appended to graph guidance",
+    "GT": "Agent with prior direct-trained committed state (previously selected fresh arm)",
+    "GN": "Agent trained from fresh memory through two full feedback/gate/candidate batches; final committed state, no best checkpoint selection",
+    "D0": "standard direct static no-memory control",
+    "DT": "standard direct VLM using same prior state as GT"
+  },
+  "pre_execution_data_adjustment": {
+    "reason": "unused train_replay only has presence questions; six-type quotas infeasible",
+    "model_calls_at_adjustment": 0,
+    "action": "reserve all 200 confirmation cases from unused h_search with original six-type quotas",
+    "no_original_test_access": true
+  }
+}
