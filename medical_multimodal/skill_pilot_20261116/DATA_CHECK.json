@@ -1,0 +1,12 @@
+{
+  "counts": {
+    "preflight": 2,
+    "train": 12,
+    "validation": 12,
+    "confirmation": 8
+  },
+  "source_groups_disjoint": true,
+  "original_test_untouched": true,
+  "confirmation_exclusion_sources": 47,
+  "tasks_share_roles": true
+}

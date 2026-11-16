@@ -1,0 +1,3 @@
+Read REPORT.zh-CN.txt first. This is a completed failed skill-generation pilot, not successful skill learning.
+The code snapshot retains the failed proposal contract for audit. protocol.json host paths are placeholders. DATA_ROOT is required by code/prepare.py; RUN_ROOT, WORKER_PYTHON and WORKER_ENTRY are required by the launcher. Provide the existing HCL backend via python_paths and prepare private manifests using the documented role sizes.
+Dependencies: Python, PyTorch, Transformers with Qwen2.5-VL and SAM support, Pillow, numpy, langgraph and the existing localmodel HCL backend. No model weights or private datasets are included.

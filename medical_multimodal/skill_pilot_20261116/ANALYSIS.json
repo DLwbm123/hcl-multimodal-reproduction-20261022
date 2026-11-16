@@ -1,0 +1,309 @@
+{
+  "study": "skill_pilot_20261116",
+  "counts": {
+    "counts": {
+      "preflight": 2,
+      "train": 12,
+      "validation": 12,
+      "confirmation": 8
+    },
+    "source_groups_disjoint": true,
+    "original_test_untouched": true,
+    "confirmation_exclusion_sources": 47,
+    "tasks_share_roles": true
+  },
+  "summary": {
+    "S0": {
+      "T1": {
+        "n": 8,
+        "mean_score": 0.5016578938616546,
+        "correct": 4,
+        "valid": 8,
+        "skill_episodes": 0,
+        "mean_primitive_calls": 6.0,
+        "mean_vlm_calls": 14.0,
+        "mean_sam_calls": 0.0,
+        "mean_seconds": 9.821175445395056
+      },
+      "T2": {
+        "n": 8,
+        "mean_score": 0.4956673684423682,
+        "correct": 3,
+        "valid": 8,
+        "skill_episodes": 0,
+        "mean_primitive_calls": 4.125,
+        "mean_vlm_calls": 6.875,
+        "mean_sam_calls": 1.5,
+        "mean_seconds": 4.63537806115346
+      }
+    },
+    "S1": {
+      "T1": {
+        "n": 8,
+        "mean_score": 0.5016578938616546,
+        "correct": 4,
+        "valid": 8,
+        "skill_episodes": 0,
+        "mean_primitive_calls": 6.0,
+        "mean_vlm_calls": 14.0,
+        "mean_sam_calls": 0.0,
+        "mean_seconds": 10.342490480281413
+      },
+      "T2": {
+        "n": 8,
+        "mean_score": 0.4956673684423682,
+        "correct": 3,
+        "valid": 8,
+        "skill_episodes": 0,
+        "mean_primitive_calls": 4.125,
+        "mean_vlm_calls": 6.875,
+        "mean_sam_calls": 1.5,
+        "mean_seconds": 4.635784786718432
+      }
+    },
+    "S2": {
+      "T1": {
+        "n": 8,
+        "mean_score": 0.5016578938616546,
+        "correct": 4,
+        "valid": 8,
+        "skill_episodes": 0,
+        "mean_primitive_calls": 6.0,
+        "mean_vlm_calls": 14.0,
+        "mean_sam_calls": 0.0,
+        "mean_seconds": 10.339649971574545
+      },
+      "T2": {
+        "n": 8,
+        "mean_score": 0.4956673684423682,
+        "correct": 3,
+        "valid": 8,
+        "skill_episodes": 0,
+        "mean_primitive_calls": 4.625,
+        "mean_vlm_calls": 7.375,
+        "mean_sam_calls": 1.75,
+        "mean_seconds": 5.818085770762991
+      }
+    },
+    "RAW": {
+      "T1": {
+        "n": 8,
+        "mean_score": 0.5016578938616546,
+        "correct": 4,
+        "valid": 8,
+        "skill_episodes": 0,
+        "mean_primitive_calls": 6.0,
+        "mean_vlm_calls": 14.0,
+        "mean_sam_calls": 0.0,
+        "mean_seconds": 10.340142016066238
+      },
+      "T2": {
+        "n": 8,
+        "mean_score": 0.4956673684423682,
+        "correct": 3,
+        "valid": 8,
+        "skill_episodes": 0,
+        "mean_primitive_calls": 4.625,
+        "mean_vlm_calls": 7.375,
+        "mean_sam_calls": 1.75,
+        "mean_seconds": 5.820287078735419
+      }
+    },
+    "FIXED": {
+      "T1": {
+        "n": 8,
+        "mean_score": 0.5266157150366322,
+        "correct": 5,
+        "valid": 8,
+        "skill_episodes": 0,
+        "mean_primitive_calls": 3.0,
+        "mean_vlm_calls": 2.0,
+        "mean_sam_calls": 0.0,
+        "mean_seconds": 1.7695830583688803
+      },
+      "T2": {
+        "n": 8,
+        "mean_score": 0.4956673684423682,
+        "correct": 3,
+        "valid": 8,
+        "skill_episodes": 0,
+        "mean_primitive_calls": 3.0,
+        "mean_vlm_calls": 1.0,
+        "mean_sam_calls": 1.0,
+        "mean_seconds": 1.1234930081409402
+      }
+    }
+  },
+  "comparisons": {
+    "S2_vs_RAW_macro": {
+      "source_groups": 8,
+      "mean_difference": 0.0,
+      "paired_group_bootstrap95": [
+        0.0,
+        0.0
+      ],
+      "positive_groups": 0,
+      "negative_groups": 0
+    },
+    "S2_vs_FIXED_macro": {
+      "source_groups": 8,
+      "mean_difference": -0.012478910587488786,
+      "paired_group_bootstrap95": [
+        -0.09783526623945901,
+        0.06366219149233554
+      ],
+      "positive_groups": 4,
+      "negative_groups": 4
+    },
+    "T1_S1_vs_S0": {
+      "source_groups": 8,
+      "mean_difference": 0.0,
+      "paired_group_bootstrap95": [
+        0.0,
+        0.0
+      ],
+      "positive_groups": 0,
+      "negative_groups": 0
+    },
+    "T1_S2_vs_S1": {
+      "source_groups": 8,
+      "mean_difference": 0.0,
+      "paired_group_bootstrap95": [
+        0.0,
+        0.0
+      ],
+      "positive_groups": 0,
+      "negative_groups": 0
+    },
+    "T2_S2_vs_S1": {
+      "source_groups": 8,
+      "mean_difference": 0.0,
+      "paired_group_bootstrap95": [
+        0.0,
+        0.0
+      ],
+      "positive_groups": 0,
+      "negative_groups": 0
+    }
+  },
+  "workflow": {
+    "T1": {
+      "skill_invocations": {},
+      "primitive_tool_counts": {
+        "localize": 48
+      },
+      "conditional_branches": {},
+      "different_tool_sequence_vs_RAW": 0,
+      "different_calls_or_arguments_vs_RAW": 0,
+      "old_correct_lost_T1": 0
+    },
+    "T2": {
+      "skill_invocations": {},
+      "primitive_tool_counts": {
+        "localize": 8,
+        "segment": 20,
+        "measure": 9
+      },
+      "conditional_branches": {},
+      "different_tool_sequence_vs_RAW": 0,
+      "different_calls_or_arguments_vs_RAW": 0,
+      "old_correct_lost_T1": null
+    }
+  },
+  "efficiency_diagnostic": {
+    "no_observed_task_score_or_success_loss": true,
+    "primitive_call_reduction": 0.0,
+    "vlm_call_reduction_fraction": 0.0,
+    "descriptive_signal": false
+  },
+  "learning": {
+    "gates": [
+      {
+        "task": "T1",
+        "candidate": 0,
+        "accepted": false,
+        "reasons": [
+          "invalid_skill_schema"
+        ],
+        "errors": [
+          "invalid description/condition",
+          "invalid description/condition"
+        ]
+      },
+      {
+        "task": "T1",
+        "candidate": 1,
+        "accepted": false,
+        "reasons": [
+          "invalid_skill_schema"
+        ],
+        "errors": [
+          "invalid description/condition",
+          "invalid description/condition"
+        ]
+      },
+      {
+        "task": "T2",
+        "candidate": 0,
+        "accepted": false,
+        "reasons": [
+          "invalid_skill_schema"
+        ],
+        "errors": [
+          "invalid description/condition",
+          "invalid description/condition"
+        ]
+      },
+      {
+        "task": "T2",
+        "candidate": 1,
+        "accepted": false,
+        "reasons": [
+          "invalid_skill_schema"
+        ],
+        "errors": [
+          "invalid description/condition",
+          "invalid description/condition"
+        ]
+      }
+    ],
+    "validation": {
+      "T1": {
+        "n": 12,
+        "mean_score": 0.4935803496429696,
+        "correct": 5,
+        "valid": 10,
+        "skill_episodes": 0,
+        "mean_primitive_calls": 6.0,
+        "mean_vlm_calls": 14.0,
+        "mean_sam_calls": 0.0,
+        "mean_seconds": 11.65871924732346
+      },
+      "T2": {
+        "n": 12,
+        "mean_score": 0.5797586817744659,
+        "correct": 6,
+        "valid": 9,
+        "skill_episodes": 0,
+        "mean_primitive_calls": 6.916666666666667,
+        "mean_vlm_calls": 10.666666666666666,
+        "mean_sam_calls": 2.0833333333333335,
+        "mean_seconds": 9.638245719640205
+      }
+    },
+    "final_skill_count": 0,
+    "vlm_calls": 1725,
+    "sam_calls": 113
+  },
+  "verdict": "No candidate skill passed the frozen validation gate.",
+  "limitations": [
+    "8 independent source groups, 16 task endpoints, highly uncertain effects",
+    "positive-only polyp localization, no specificity or instrument claims",
+    "source groups rather than verified patients",
+    "same sources across T1/T2 within each role, task transfer rather than unseen-patient curriculum",
+    "SAM general pretrained segmentation tool, not a validated medical specialist",
+    "historical raw/abstract training here replaced by explicit trajectory records and executable skill transactions; extension of HCL gated learning, not unchanged original pipeline"
+  ],
+  "primary_source_groups": 8,
+  "confirmation_read_after_state_freeze": true
+}

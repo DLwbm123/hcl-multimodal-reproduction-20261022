@@ -1,0 +1,119 @@
+{
+  "study": "skill_pilot_20261116",
+  "seed": 20261116,
+  "model_path": "<LOCAL_QWEN_MODEL>",
+  "sam_path": "<LOCAL_SAM_MODEL>",
+  "python_paths": [
+    "<HCL_BACKEND_DIRECTORY>"
+  ],
+  "tasks": [
+    "T1",
+    "T2"
+  ],
+  "scope": "User-approved polyp pilot: union-box localization and ROI verification; segmentation and image-area fraction. NOT instrument types/tips or clinical diagnosis.",
+  "data": {
+    "preflight": 2,
+    "train": 12,
+    "validation": 12,
+    "confirmation": "Entirely unused source groups under recursive 47-file historical audit",
+    "shared_roles_between_tasks": true,
+    "train_validation": "Previously used development sources; no previous confirmation groups",
+    "patient_independence": "unknown",
+    "original_test": "never touched",
+    "positives_only": true
+  },
+  "learning": {
+    "stages": [
+      "T1",
+      "T2"
+    ],
+    "candidates_per_stage": 2,
+    "proposal_format_repairs": 1,
+    "max_skills": 2,
+    "max_steps_per_skill": 6,
+    "initial_skills": [],
+    "update": "LLM-produced executable typed JSON skills from training rollouts and gold-derived feedback; no seeded candidate programs; frozen other prompts and weights",
+    "raw_examples_per_query": 2,
+    "raw_chars": 4000
+  },
+  "gate": {
+    "min_current_mean_gain": 0.03,
+    "min_current_success_gain": 1,
+    "require_both": "quality branch requires both score and success gain; alternative efficiency branch has zero observed accuracy loss",
+    "max_historical_success_losses": 1,
+    "max_historical_mean_drop": 0.02,
+    "require_no_more_invalid_than_incumbent": true,
+    "require_skill_use": true,
+    "tie": "reject",
+    "no_posthoc_relaxation": true,
+    "historical_reference": "fixed committed end-of-T1 state, not rolling per-candidate allowance",
+    "allow_efficiency_gain": true,
+    "min_primitive_reduction": 1,
+    "min_vlm_fraction_reduction": 0.2,
+    "efficiency_accuracy_constraint": "no mean score or success count decrease"
+  },
+  "evaluation": {
+    "T1_primary": "bbox IoU",
+    "T1_success_iou": 0.5,
+    "T2_primary": "mask Dice",
+    "T2_success_dice": 0.7,
+    "T2_success_area_abs_error": 0.03,
+    "confirmation_arms": [
+      "S0",
+      "S1",
+      "S2",
+      "RAW",
+      "FIXED"
+    ],
+    "primary": "S2 vs RAW, macro average of T1 bboxIoU and T2 Dice; paired by source group",
+    "secondary": [
+      "S2 vs S1 T1 retention",
+      "S1 vs S0 T1 acquisition",
+      "S2 vs FIXED",
+      "actual skill invocation and primitive trajectory differences",
+      "S2 vs RAW efficiency: no observed score/success decrease on either task, mean primitive calls -1 and VLM calls -20%; descriptive only"
+    ],
+    "bootstrap_samples": 10000,
+    "test_labels_released": "after all final states and controls frozen",
+    "post_confirmation_tuning": false,
+    "failures_in_denominator": true,
+    "claim": "mechanism pilot, not powered clinical or broad continual-learning evidence",
+    "T2_area_consistency_tolerance": 0.001
+  },
+  "runtime": {
+    "max_actions": 8,
+    "max_primitive_calls": 8,
+    "max_vlm_calls_per_episode": 14,
+    "max_sam_calls_per_episode": 3,
+    "controller_max_tokens": 512,
+    "tool_max_tokens": 256,
+    "proposal_max_tokens": 2048,
+    "weights": "frozen",
+    "decode": "greedy",
+    "fixed_control": "T1 global localize then one padded-ROI relocalization; T2 global localize then SAM then measure, standard untuned diagnostic",
+    "tool_preflight": "2 excluded cases: real localization and SAM/measure; target-box SAM is labeled oracle diagnostic only and never a runtime tool; require at least one oracle Dice>=0.70 before study",
+    "coordinate_contract": "Reused physical input pixel FrameContract/CoordinateBoundary; no inferred coordinate scale",
+    "graph_preflight": "Both tasks must produce valid answers with actual tools on excluded preflight images, no accuracy threshold"
+  },
+  "budget": {
+    "hard_seconds": 21600,
+    "soft_seconds": 21300,
+    "storage_stop_bytes": 4000000000,
+    "hard_storage_bytes": 50000000000,
+    "expected_bytes": 1500000000,
+    "max_total_model_calls": 8000,
+    "min_gpu_free_mib": 35000,
+    "gpu": 0,
+    "watch_seconds": 10
+  },
+  "limitations": [
+    "8 independent source groups, 16 task endpoints, highly uncertain effects",
+    "positive-only polyp localization, no specificity or instrument claims",
+    "source groups rather than verified patients",
+    "same sources across T1/T2 within each role, task transfer rather than unseen-patient curriculum",
+    "SAM general pretrained segmentation tool, not a validated medical specialist",
+    "historical raw/abstract training here replaced by explicit trajectory records and executable skill transactions; extension of HCL gated learning, not unchanged original pipeline"
+  ],
+  "version": 2,
+  "amendment": "Before validation/confirmation: role/catalog/coordinate adapter repairs after early training interface diagnostics; efficiency gate completes requested workflow objective; previous attempts retained, original clock and sources unchanged"
+}

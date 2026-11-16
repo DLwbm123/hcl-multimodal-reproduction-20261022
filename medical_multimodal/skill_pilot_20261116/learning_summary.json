@@ -1,0 +1,79 @@
+{
+  "gates": [
+    {
+      "task": "T1",
+      "candidate": 0,
+      "accepted": false,
+      "reasons": [
+        "invalid_skill_schema"
+      ],
+      "errors": [
+        "invalid description/condition",
+        "invalid description/condition"
+      ]
+    },
+    {
+      "task": "T1",
+      "candidate": 1,
+      "accepted": false,
+      "reasons": [
+        "invalid_skill_schema"
+      ],
+      "errors": [
+        "invalid description/condition",
+        "invalid description/condition"
+      ]
+    },
+    {
+      "task": "T2",
+      "candidate": 0,
+      "accepted": false,
+      "reasons": [
+        "invalid_skill_schema"
+      ],
+      "errors": [
+        "invalid description/condition",
+        "invalid description/condition"
+      ]
+    },
+    {
+      "task": "T2",
+      "candidate": 1,
+      "accepted": false,
+      "reasons": [
+        "invalid_skill_schema"
+      ],
+      "errors": [
+        "invalid description/condition",
+        "invalid description/condition"
+      ]
+    }
+  ],
+  "validation": {
+    "T1": {
+      "n": 12,
+      "mean_score": 0.4935803496429696,
+      "correct": 5,
+      "valid": 10,
+      "skill_episodes": 0,
+      "mean_primitive_calls": 6.0,
+      "mean_vlm_calls": 14.0,
+      "mean_sam_calls": 0.0,
+      "mean_seconds": 11.65871924732346
+    },
+    "T2": {
+      "n": 12,
+      "mean_score": 0.5797586817744659,
+      "correct": 6,
+      "valid": 9,
+      "skill_episodes": 0,
+      "mean_primitive_calls": 6.916666666666667,
+      "mean_vlm_calls": 10.666666666666666,
+      "mean_sam_calls": 2.0833333333333335,
+      "mean_seconds": 9.638245719640205
+    }
+  },
+  "final_skill_count": 0,
+  "vlm_calls": 1725,
+  "sam_calls": 113
+}
