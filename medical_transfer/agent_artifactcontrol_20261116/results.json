@@ -1,0 +1,156 @@
+{
+  "diagnostic_only": true,
+  "selection_n": 0,
+  "confirmation_n": 0,
+  "policy_fitted": false,
+  "roles": {
+    "fit_raw": {
+      "metrics": {
+        "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+        "total": 48,
+        "correct": 25,
+        "format_compliant_count": 47,
+        "format_compliance_rate": 0.9791666666666666,
+        "missing_count": 0,
+        "primary_metric_name": "normalized_exact_match",
+        "primary_score": 0.5208333333333334,
+        "mean_example_score": 0.5208333333333334,
+        "has_reference": false,
+        "reference_correct": 0,
+        "forget_count": 0,
+        "recovered_count": 0,
+        "behavior_comparable_count": 0,
+        "behavior_change_count": 0,
+        "task_primary_scores": {
+          "visual_qa": 0.5208333333333334
+        },
+        "forget_rate": 0.0,
+        "answer_f1_diagnostic": 0.6774801587301588
+      },
+      "training_n": 48,
+      "training_correct": 25,
+      "training_graph_failed": 1,
+      "model_node_artifact_identifier_occurrences": 7,
+      "model_node_calls_with_artifact_identifier": 6,
+      "raw_private_receipts_with_artifact": 4,
+      "generation_calls": 395,
+      "generation_failed": 0,
+      "generation_seconds": 441.36406098119915,
+      "feature_forwards": 64,
+      "feature_seconds": 3.6509517384693027,
+      "tool_calls": 98,
+      "controller_calls": 100,
+      "read_only_and_weights_frozen": true
+    },
+    "fit_clean_a": {
+      "metrics": {
+        "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+        "total": 48,
+        "correct": 25,
+        "format_compliant_count": 47,
+        "format_compliance_rate": 0.9791666666666666,
+        "missing_count": 0,
+        "primary_metric_name": "normalized_exact_match",
+        "primary_score": 0.5208333333333334,
+        "mean_example_score": 0.5208333333333334,
+        "has_reference": false,
+        "reference_correct": 0,
+        "forget_count": 0,
+        "recovered_count": 0,
+        "behavior_comparable_count": 0,
+        "behavior_change_count": 0,
+        "task_primary_scores": {
+          "visual_qa": 0.5208333333333334
+        },
+        "forget_rate": 0.0,
+        "answer_f1_diagnostic": 0.6774801587301588
+      },
+      "training_n": 48,
+      "training_correct": 25,
+      "training_graph_failed": 1,
+      "model_node_artifact_identifier_occurrences": 0,
+      "model_node_calls_with_artifact_identifier": 0,
+      "raw_private_receipts_with_artifact": 4,
+      "generation_calls": 395,
+      "generation_failed": 0,
+      "generation_seconds": 447.86701391870156,
+      "feature_forwards": 64,
+      "feature_seconds": 3.668374784756452,
+      "tool_calls": 98,
+      "controller_calls": 100,
+      "read_only_and_weights_frozen": true
+    },
+    "fit_clean_b": {
+      "metrics": {
+        "evaluation_schema_version": "medical_native_fixed_denominator_v1",
+        "total": 48,
+        "correct": 25,
+        "format_compliant_count": 47,
+        "format_compliance_rate": 0.9791666666666666,
+        "missing_count": 0,
+        "primary_metric_name": "normalized_exact_match",
+        "primary_score": 0.5208333333333334,
+        "mean_example_score": 0.5208333333333334,
+        "has_reference": false,
+        "reference_correct": 0,
+        "forget_count": 0,
+        "recovered_count": 0,
+        "behavior_comparable_count": 0,
+        "behavior_change_count": 0,
+        "task_primary_scores": {
+          "visual_qa": 0.5208333333333334
+        },
+        "forget_rate": 0.0,
+        "answer_f1_diagnostic": 0.6774801587301588
+      },
+      "training_n": 48,
+      "training_correct": 25,
+      "training_graph_failed": 1,
+      "model_node_artifact_identifier_occurrences": 0,
+      "model_node_calls_with_artifact_identifier": 0,
+      "raw_private_receipts_with_artifact": 4,
+      "generation_calls": 395,
+      "generation_failed": 0,
+      "generation_seconds": 442.78453123755753,
+      "feature_forwards": 64,
+      "feature_seconds": 3.7139686956070364,
+      "tool_calls": 98,
+      "controller_calls": 100,
+      "read_only_and_weights_frozen": true
+    }
+  },
+  "paired": {
+    "raw_to_clean": {
+      "n": 48,
+      "left_correct": 25,
+      "right_correct": 25,
+      "gains": 0,
+      "losses": 0,
+      "answer_changed": 1
+    },
+    "clean_repeat": {
+      "n": 48,
+      "left_correct": 25,
+      "right_correct": 25,
+      "gains": 0,
+      "losses": 0,
+      "answer_changed": 0
+    }
+  },
+  "cost_totals": {
+    "generation_calls": 1185,
+    "generation_failed": 0,
+    "generation_seconds": 1332.0156061374582,
+    "feature_forwards": 192,
+    "feature_seconds": 11.03329521883279,
+    "tool_calls": 294,
+    "controller_calls": 300
+  },
+  "limitations": [
+    "Training-only engineering correctness/reproducibility check; no generalization or CL novelty claim.",
+    "Original acceptance variation showed differing filenames but did not establish filename causality. No heldout reruns.",
+    "Shared GPU and fresh process/order factors remain; clean A/A agreement is not universal determinism.",
+    "No prompt wording, clinical observation, geometry, routing rule, reference selection or frozen model changed.",
+    "No HCL.train, policy fit, independent acceptance or confirmation."
+  ]
+}

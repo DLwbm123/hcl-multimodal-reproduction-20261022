@@ -1,0 +1,67 @@
+{
+  "scope": "Nine complete study lifetimes delivered in this campaign, including work started before the 12-hour authorization window. Not newly incurred window-only costs.",
+  "studies": [
+    {
+      "study": "stable_20261115",
+      "generation_calls_issued": 30137,
+      "full_run_seconds": 41920.90074968338,
+      "recorded_run_bytes": 177590272
+    },
+    {
+      "study": "adaptive_20261115",
+      "generation_calls_issued": 18917,
+      "full_run_seconds": 13753.220071315765,
+      "recorded_run_bytes": 138297344
+    },
+    {
+      "study": "action_20261116",
+      "generation_calls_issued": 2101,
+      "full_run_seconds": 3813.527539253235,
+      "recorded_run_bytes": 14389248
+    },
+    {
+      "study": "evidence_20261116",
+      "generation_calls_issued": 2208,
+      "full_run_seconds": 2222.500278234482,
+      "recorded_run_bytes": 17174528
+    },
+    {
+      "study": "routing_20261116",
+      "generation_calls_issued": 5395,
+      "full_run_seconds": 4916.317414283752,
+      "recorded_run_bytes": 29519872
+    },
+    {
+      "study": "arbitration_20261116",
+      "generation_calls_issued": 790,
+      "full_run_seconds": 861.3413445949554,
+      "recorded_run_bytes": 5906432
+    },
+    {
+      "study": "grounding_20261116",
+      "generation_calls_issued": 4111,
+      "full_run_seconds": 3966.3570256233215,
+      "recorded_run_bytes": 40243200
+    },
+    {
+      "study": "viewcontrol_20261116",
+      "generation_calls_issued": 1002,
+      "full_run_seconds": 1262.3251993656158,
+      "recorded_run_bytes": 9400320
+    },
+    {
+      "study": "artifactcontrol_20261116",
+      "generation_calls_issued": 1185,
+      "full_run_seconds": 1412.5551509857178,
+      "recorded_run_bytes": 8003584
+    }
+  ],
+  "generation_calls_issued_total": 65846,
+  "recorded_run_bytes_sum": 440524800,
+  "notes": [
+    "Per-study allocation snapshots, not a fresh server-wide physical occupancy measurement.",
+    "Runs overlap and shared-GPU latency varies; do not sum durations as campaign wall time.",
+    "Stable includes three interrupted issued calls without completed receipts.",
+    "Viewcontrol offline summary recovery was completed without new inference."
+  ]
+}

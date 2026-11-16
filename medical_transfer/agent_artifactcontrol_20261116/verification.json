@@ -1,0 +1,22 @@
+{
+  "roles": {
+    "fit_raw": {
+      "preflight_passed": true,
+      "private_artifact_files_exist": 4,
+      "failed_training_episodes_retained": 1
+    },
+    "fit_clean_a": {
+      "preflight_passed": true,
+      "private_artifact_files_exist": 4,
+      "failed_training_episodes_retained": 1
+    },
+    "fit_clean_b": {
+      "preflight_passed": true,
+      "private_artifact_files_exist": 4,
+      "failed_training_episodes_retained": 1
+    }
+  },
+  "original_deadline_respected": true,
+  "supervisor_success": true,
+  "all_workers_exit_zero": true
+}
