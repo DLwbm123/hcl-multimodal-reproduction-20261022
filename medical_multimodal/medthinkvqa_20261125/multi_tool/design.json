@@ -1,0 +1,37 @@
+{
+  "question": "Can feedback learned from earlier cases improve subsequent medical multi-image diagnosis under the same three-image budget?",
+  "arms": [
+    "base",
+    "hcl",
+    "skillopt",
+    "hybrid"
+  ],
+  "roles": {
+    "fit": 16,
+    "gate": 16,
+    "confirm": 64
+  },
+  "stages": [
+    "A: a CT view exists",
+    "B: no CT view"
+  ],
+  "sampling": "Skip the previous 96 pilot cases in the original deduplicated fixed-seed pool. Within each stratum take the next 96 with at most 27 usable views. Allocate fit/gate/confirm by this predeclared order. Official test never scored. Additionally skip the first 96 eligible cases of each stratum used by the one-tool learning study.",
+  "inference": "Each arm initially opens the same first image, then executes exactly two selected operations. Every operation returns one 560x560 view. At each decision use one forward for the operation and one for its argument, then one final answer (5 model forwards per case). Inputs contain 1,1,2,2,3 rendered observations across those forwards, at identical pixel and call budgets. Acquired original image count can vary (1-3); this is part of the policy. Matching original field of view across modalities is not anatomical registration.",
+  "learning": "Two sequential feedback batches. One candidate per arm per stage. Native HCL RawMemory diversity selection (4 records per stage), AbstractMemory LLM consolidation, one lexically matched raw example and two abstract guidelines per episode. Native SkillOpt patch engine, one bounded append or replace per candidate with one format repair. Hybrid jointly proposes memory and edit from its own incumbent trajectory, reverts both on gate failure. Invalid edit retains incumbent. This is a small-budget adaptation, without the upstream long-run optimizer schedule.",
+  "gate": "Strictly improve number correct on the 16 current gate cases. HCL and hybrid at stage B also require no aggregate accuracy loss relative to their incumbent on the 16 A gate cases. SkillOpt uses current validation only. A case cannot be used for both fitting and gating. Gate labels never enter candidate prompts.",
+  "confirm": "Freeze all states before evaluating 128 confirmation cases. Primary is hybrid vs base, net paired correct and exact two-sided McNemar p<0.05 plus positive net for preliminary support. HCL/SkillOpt comparisons exploratory. Report 95% Wilson interval on discordant win fraction when defined. Compare A-only frozen state vs final on fresh A cases for retention. Separately score last proposed candidate (including rejected ones, with unchanged state on invalid proposals) as predeclared diagnostic; never promote from confirmation.",
+  "min_pixels": 3136,
+  "max_pixels": 401408,
+  "budget": {
+    "max_total_model_calls": 11000,
+    "max_seconds": 10200,
+    "storage_stop_bytes": 2000000000,
+    "expected_peak_bytes": 500000000,
+    "baseline_new_directory_bytes": 0
+  },
+  "multi_tool": true,
+  "skip_per_stage": 96,
+  "seed_instruction": "Spend the available operations on evidence that distinguishes the candidate diagnoses; integrate visible findings with the history.",
+  "procedure": "choosing between opening another image, inspecting a region, and comparing regions; then integrating the observed evidence",
+  "fixed_diagnostic": "Secondary frozen nonlearned schedule opens the first two original images then compares their center regions. Both shadow decision forwards per step are charged. Primary reference remains unconstrained adaptive base with the same action space."
+}

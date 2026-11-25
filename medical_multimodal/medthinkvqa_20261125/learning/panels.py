@@ -18,7 +18,7 @@ def build(raw, root, design):
         for stage in ("A","B"):
             rows = [r for r in pool[96:] if len(r[-1]) <= 27 and
                     any(v["modality"] == "CT" for v in r[-1]) == (stage == "A")]
-            start = 0
+            start = design.get("skip_per_stage",0)
             for role, n in design["roles"].items():
                 directory = root / (stage + "_" + role)
                 directory.mkdir()

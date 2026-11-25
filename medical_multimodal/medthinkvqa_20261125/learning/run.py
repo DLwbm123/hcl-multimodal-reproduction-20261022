@@ -23,7 +23,7 @@ def save(name, value):
 
 
 def state():
-    return {"skill":SEED, "memories":[]}
+    return {"skill":DESIGN.get("seed_instruction",SEED), "memories":[]}
 
 
 def words(s):
@@ -62,7 +62,13 @@ def compare(first, second, gold):
         mid = (x + z*z/(2*d))/(1+z*z/d)
         radius = z*math.sqrt(x*(1-x)/d + z*z/(4*d*d))/(1+z*z/d)
         interval = [mid-radius,mid+radius]
-    return dict(n=n,reference=a,candidate=b,gain=gain,loss=loss,net=b-a,exact_p=p,
+    extra = {}
+    if first and "actions" in next(iter(first.values())):
+        extra["changed_tool_sequence"] = sum(first[k]["actions"] != second[k]["actions"] for k in gold)
+        extra["changed_action_or_argument"] = sum(first[k]["trace"] != second[k]["trace"] for k in gold)
+        from collections import Counter
+        extra["candidate_tool_counts"] = dict(Counter(a for x in second.values() for a in x["actions"]))
+    return dict(**extra,n=n,reference=a,candidate=b,gain=gain,loss=loss,net=b-a,exact_p=p,
                 discordant_win_fraction_95ci=interval,
                 changed_diagnoses=sum(first[k]["answer"]!=second[k]["answer"] for k in gold),
                 changed_image_sets=sum(set(first[k]["views"])!=set(second[k]["views"]) for k in gold))
@@ -76,6 +82,8 @@ def evidence(cases, outputs, gold):
         observed = [desc[v] for v in outputs[k]["views"]]
         question = ("History: " + c["history"][:350] + "\nOpened: " + ", ".join(observed) +
                     "\nDifferential: " + " | ".join(c["options"].values())[:380])
+        if "trace" in outputs[k]:
+            question = question[:500] + "\nActions: " + " -> ".join(outputs[k]["trace"])
         items.append(dict(task_id=k, question=question, response=c["options"][outputs[k]["answer"]],
                           answer=c["options"][gold[k]], split="fit", task_type="diagnosis"))
     return items
@@ -98,7 +106,7 @@ def update_memory(st, stage, examples, directory, generator):
 def edit_skill(current, examples, memories, gen):
     payload = [{"case_context":r["question"][:500],"model_diagnosis":r["response"],
                 "verified_diagnosis":r["answer"]} for r in examples]
-    prompt = ("Improve the reusable procedure for choosing 3 views and comparing diagnostic hypotheses. "
+    prompt = ("Improve the reusable procedure for " + DESIGN.get("procedure", "choosing 3 views and comparing diagnostic hypotheses") + ". "
               "Reflect on recurring successes and errors in training and propose one short transferable "
               "instruction. Do not name training diagnoses, labels or cases. Return only JSON of the form "
               '{"edits":[{"op":"append","content":"one actionable instruction"}]}. '
@@ -125,6 +133,9 @@ def edit_skill(current, examples, memories, gen):
 def main():
     panels = build(Path(os.environ["RAW_ROOT"]),ROOT,DESIGN)
     choose, generate = load_vlm(with_text_generator=True)
+    use_multiple_tools = DESIGN.get("multi_tool",False)
+    if use_multiple_tools:
+        from visual_ops import multi_episode
     saved = {}
     counts = {"decisions":0,"generations":0}
     def count(kind):
@@ -134,16 +145,20 @@ def main():
     def gen(prompt,tokens):
         count("generations")
         return generate(prompt,tokens)
-    def predict(st,stage,role):
+    def predict(st,stage,role,fixed=False):
         directory,cases = panels[stage,role]
         results = {}
         for case in cases:
             hint = guidance(st,case)
-            key = (case["case"],hint)
+            key = (case["case"],hint,fixed)
             if key not in saved:
                 def guided(context,opened,instruction,labels):
                     count("decisions")
                     return choose(context,opened,"Procedure:\n"+hint+"\nCurrent action:\n"+instruction,labels)
+                if use_multiple_tools:
+                    saved[key] = multi_episode(guided,directory,case,fixed)
+                    results[case["case"]] = saved[key]
+                    continue
                 output = episode(guided,directory,case,True)
                 opened = [r["returned"] for r in output["receipts"]]
                 if len(set(opened)) != 3 or output["answer"] not in case["options"]:
@@ -197,7 +212,12 @@ def main():
                 if stage=="A":
                     previous[arm] = predict(after_a[arm],stage,"confirm")
             print("confirmation",stage,arm,flush=True)
-    save("private_confirmation",dict(deployed=preds,last_proposed=candidate_preds,after_A=previous))
+    fixed_outputs = {}
+    if use_multiple_tools:
+        for stage in ("A","B"):
+            fixed_outputs.update(predict(state(),stage,"confirm",fixed=True))
+    save("private_confirmation",dict(deployed=preds,last_proposed=candidate_preds,after_A=previous,
+                                     fixed_schedule=fixed_outputs))
     truths = {s:gold(s,"confirm") for s in ("A","B")}
     all_gold = {**truths["A"],**truths["B"]}
     def pooled(table,arm):
@@ -207,7 +227,8 @@ def main():
     diagnostic = {arm:compare(ref,pooled(candidate_preds,arm),all_gold) for arm in ARMS[1:]}
     retention = {arm:compare(previous[arm],preds["A"][arm],truths["A"]) for arm in ARMS[1:]}
     by_stage = {s:{arm:compare(preds[s]["base"],preds[s][arm],truths[s]) for arm in ARMS} for s in truths}
-    save("result",dict(deployed=final,stage_results=by_stage,last_proposed=diagnostic,
+    extra = {"fixed_schedule":compare(ref,fixed_outputs,all_gold)} if use_multiple_tools else {}
+    save("result",dict(**extra,deployed=final,stage_results=by_stage,last_proposed=diagnostic,
                        fresh_A_retention=retention,gate_decisions=events,physical_calls=counts))
 
 
