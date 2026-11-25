@@ -1,0 +1,91 @@
+{
+  "result": {
+    "training": {
+      "n": 12,
+      "policies": {
+        "stop": {
+          "mean_iou": 0.5674935187389981,
+          "success": 7,
+          "reviews": 0,
+          "mean_vlm_calls": 1,
+          "valid": 12
+        },
+        "review": {
+          "mean_iou": 0.3871273185650979,
+          "success": 5,
+          "reviews": 12,
+          "mean_vlm_calls": 2,
+          "valid": 10
+        },
+        "small_box": {
+          "mean_iou": 0.4049756487957738,
+          "success": 5,
+          "reviews": 6,
+          "mean_vlm_calls": 1.5,
+          "valid": 11
+        },
+        "large_box": {
+          "mean_iou": 0.5640914075911073,
+          "success": 7,
+          "reviews": 1,
+          "mean_vlm_calls": 1.0833333333333333,
+          "valid": 11
+        },
+        "near_edge": {
+          "mean_iou": 0.5606496153727117,
+          "success": 7,
+          "reviews": 4,
+          "mean_vlm_calls": 1.3333333333333333,
+          "valid": 11
+        },
+        "visual": {
+          "mean_iou": 0.5674935187389981,
+          "success": 7,
+          "reviews": 0,
+          "mean_vlm_calls": 2,
+          "valid": 12
+        }
+      },
+      "gain_at_least_005": 1,
+      "loss_at_least_005": 8,
+      "within_005": 3,
+      "success_gains": 0,
+      "success_losses": 2,
+      "oracle_iou": 0.5736805998145283,
+      "headroom": 0.006187081075530232,
+      "visual_labels": {
+        "TIGHT": 12
+      },
+      "frozen_policy": "stop",
+      "loo_choices": {
+        "stop": 11,
+        "near_edge": 1
+      },
+      "loo_metrics": {
+        "mean_iou": 0.5597837398221178,
+        "success": 7,
+        "reviews": 1,
+        "mean_vlm_calls": 1.0833333333333333,
+        "valid": 12
+      },
+      "open_development": false
+    },
+    "development": null,
+    "vlm_calls": 36,
+    "sam_calls": 0
+  },
+  "runtime": {
+    "success": true,
+    "returncode": 0,
+    "ended": 1795575152.2153704,
+    "elapsed_seconds": 66.2330687046051,
+    "bytes": 4894409
+  },
+  "secondary_valid_pairs": {
+    "n": 10,
+    "stop_iou": 0.6118356747461455,
+    "review_iou": 0.4645527822781175,
+    "meaningful_gains": 1,
+    "meaningful_losses": 7
+  }
+}

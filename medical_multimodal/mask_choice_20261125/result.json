@@ -1,0 +1,85 @@
+{
+  "result": {
+    "training": {
+      "n": 12,
+      "policies": {
+        "default": {
+          "dice": 0.7011539876470221,
+          "success": 7,
+          "reviews": 0,
+          "valid": 12,
+          "mean_vlm_calls": 1,
+          "mean_sam_calls": 1
+        },
+        "review": {
+          "dice": 0.7014954198923028,
+          "success": 7,
+          "reviews": 12,
+          "valid": 12,
+          "mean_vlm_calls": 2,
+          "mean_sam_calls": 1
+        },
+        "low_margin": {
+          "dice": 0.7014954198923028,
+          "success": 7,
+          "reviews": 12,
+          "valid": 12,
+          "mean_vlm_calls": 2,
+          "mean_sam_calls": 1
+        },
+        "disagree": {
+          "dice": 0.7016297055279807,
+          "success": 7,
+          "reviews": 1,
+          "valid": 12,
+          "mean_vlm_calls": 1.0833333333333333,
+          "mean_sam_calls": 1
+        },
+        "both": {
+          "dice": 0.7016297055279807,
+          "success": 7,
+          "reviews": 1,
+          "valid": 12,
+          "mean_vlm_calls": 1.0833333333333333,
+          "mean_sam_calls": 1
+        }
+      },
+      "two_action_oracle": 0.7031951438113101,
+      "headroom": 0.001699723919007301,
+      "three_mask_oracle": 0.7130545000702495,
+      "material_gain": 0,
+      "material_loss": 0,
+      "within_band": 12,
+      "success_gain": 0,
+      "success_loss": 0,
+      "switches": 7,
+      "review_parse": {
+        "choice": 12
+      },
+      "frozen_policy": "disagree",
+      "loo_metrics": {
+        "dice": 0.699505397405616,
+        "success": 7,
+        "reviews": 1,
+        "valid": 12,
+        "mean_vlm_calls": 1.0833333333333333,
+        "mean_sam_calls": 1
+      },
+      "open_development": false
+    },
+    "development": null,
+    "vlm_calls": 24,
+    "sam_calls": 12
+  },
+  "runtime": {
+    "success": true,
+    "returncode": 0,
+    "ended": 1795575278.529316,
+    "elapsed_seconds": 54.18892526626587,
+    "bytes": 3984078
+  },
+  "candidate_diagnostics": {
+    "oracle_at_least_005_over_default": 1,
+    "top_two_mutual_iou_above_075": 11
+  }
+}
