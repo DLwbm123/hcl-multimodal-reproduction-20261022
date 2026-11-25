@@ -1,0 +1,74 @@
+{
+  "gate": {
+    "n": 16,
+    "baseline": {
+      "correct": 0.0,
+      "f1": 0.5,
+      "exact": 0.0,
+      "steps": 1.8125,
+      "invalid": 0.8125
+    },
+    "candidate": {
+      "correct": 0.0,
+      "f1": 0.5,
+      "exact": 0.0,
+      "steps": 1.0,
+      "invalid": 0.0
+    },
+    "deployed": {
+      "correct": 0.0,
+      "f1": 0.5,
+      "exact": 0.0,
+      "steps": 1.8125,
+      "invalid": 0.8125
+    },
+    "gain": 0,
+    "loss": 0,
+    "transitions": {
+      "ImageDescription": 14,
+      "OCR": 2
+    }
+  },
+  "accepted": false,
+  "tool_executions": {
+    "OCR": 52,
+    "ImageDescription": 85,
+    "Calculator": 1,
+    "RegionAttributeDescription": 3
+  },
+  "model_calls": {
+    "decisions": 531,
+    "generations": 196
+  },
+  "test": {
+    "n": 45,
+    "baseline": {
+      "correct": 0.06666666666666667,
+      "f1": 0.5348148148148149,
+      "exact": 0.0,
+      "steps": 1.6444444444444444,
+      "invalid": 0.5111111111111111
+    },
+    "candidate": {
+      "correct": 0.1111111111111111,
+      "f1": 0.5503703703703704,
+      "exact": 0.0,
+      "steps": 1.1777777777777778,
+      "invalid": 0.022222222222222223
+    },
+    "deployed": {
+      "correct": 0.06666666666666667,
+      "f1": 0.5348148148148149,
+      "exact": 0.0,
+      "steps": 1.6444444444444444,
+      "invalid": 0.5111111111111111
+    },
+    "gain": 2,
+    "loss": 0,
+    "transitions": {
+      "OCR": 12,
+      "ImageDescription": 40,
+      "RegionAttributeDescription": 1
+    }
+  }
+}

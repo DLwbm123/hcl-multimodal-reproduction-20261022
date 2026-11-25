@@ -1,0 +1,17 @@
+{
+  "fit_decisions": 118,
+  "next_action_counts": {
+    "OCR": 29,
+    "ImageDescription": 30,
+    "RegionAttributeDescription": 31,
+    "finish": 27,
+    "Calculator": 1
+  },
+  "fit_states_directly_after_local_attempt": 28,
+  "those_with_invalid_box_as_last_result": 28,
+  "reference_tool_case_counts_test": {
+    "RegionAttributeDescription": 44,
+    "OCR": 45,
+    "ImageDescription": 45
+  }
+}

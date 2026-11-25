@@ -1,0 +1,31 @@
+{
+  "baseline": {
+    "attempts": {
+      "OCR": 19,
+      "ImageDescription": 29,
+      "RegionAttributeDescription": 26
+    },
+    "tool_ok": {
+      "OCR": 19,
+      "ImageDescription": 29,
+      "RegionAttributeDescription": 3
+    },
+    "empty_success_text": {
+      "OCR": 1
+    }
+  },
+  "candidate": {
+    "attempts": {
+      "OCR": 12,
+      "ImageDescription": 40,
+      "RegionAttributeDescription": 1
+    },
+    "tool_ok": {
+      "OCR": 12,
+      "ImageDescription": 40
+    },
+    "empty_success_text": {
+      "OCR": 2
+    }
+  }
+}
