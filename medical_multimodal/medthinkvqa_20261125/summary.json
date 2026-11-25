@@ -1,0 +1,25 @@
+{
+  "revision": "3a0b076f5116c6237ca94bb71fc14066cddf7cdc",
+  "seed": 20261125,
+  "train": 7347,
+  "test": 720,
+  "eligible_after_deduplication": 4215,
+  "excluded": {
+    "no_described_choice_after_first_view": 1307,
+    "insufficient_distinct_usable_views": 1733,
+    "option_text_in_history": 88,
+    "incomplete_question": 2,
+    "matches_other_eligible_case_image_or_history": 2
+  },
+  "official_referenced_images": 53416,
+  "panels": {
+    "development": {
+      "cases": 32,
+      "decoded_images": 288
+    },
+    "heldout": {
+      "cases": 64,
+      "decoded_images": 502
+    }
+  }
+}

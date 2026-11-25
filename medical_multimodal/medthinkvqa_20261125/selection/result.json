@@ -1,0 +1,48 @@
+{
+  "development": {
+    "n": 32,
+    "fixed_correct": 12,
+    "adaptive_correct": 12,
+    "gained": 0,
+    "lost": 0,
+    "net": 0,
+    "both_correct": 12,
+    "both_wrong": 20,
+    "different_sets": 17,
+    "different_answers": 4,
+    "mcnemar_exact_p": 1.0,
+    "usage": {
+      "fixed": {
+        "tool_calls": 96,
+        "model_forwards": 96
+      },
+      "adaptive": {
+        "tool_calls": 96,
+        "model_forwards": 96
+      }
+    }
+  },
+  "heldout": {
+    "n": 64,
+    "fixed_correct": 28,
+    "adaptive_correct": 28,
+    "gained": 0,
+    "lost": 0,
+    "net": 0,
+    "both_correct": 28,
+    "both_wrong": 36,
+    "different_sets": 37,
+    "different_answers": 4,
+    "mcnemar_exact_p": 1.0,
+    "usage": {
+      "fixed": {
+        "tool_calls": 192,
+        "model_forwards": 192
+      },
+      "adaptive": {
+        "tool_calls": 192,
+        "model_forwards": 192
+      }
+    }
+  }
+}

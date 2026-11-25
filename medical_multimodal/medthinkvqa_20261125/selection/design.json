@@ -1,0 +1,13 @@
+{
+  "purpose": "Measure the value of within-case adaptive image acquisition on the frozen MedThinkVQA pilot.",
+  "split": "All 32 development cases for protocol and tool-path verification, then all 64 held-out cases once. Never load gold during inference. Primary endpoint is heldout.",
+  "actions": "Exactly three open_view calls per arm. Both open the first eligible catalog view. At steps 2 and 3 the frozen selector scores allowable single-letter aliases for unopened views from history, options, complete view catalog, and previously opened pixels. Adaptive executes the selected argument. Fixed executes the first unopened argument regardless of the same selector's recommendation. Neither arm can access unseen pixels. No early stopping or fallbacks.",
+  "diagnosis": "Show acquired pixels to the same deterministic answer model in original catalog order, with the same history, options, and catalog. Select the option with highest next-token logit among allowed single-letter labels. No selector rationale in the diagnosis.",
+  "model": "Project's unmodified Qwen2.5-VL-7B-Instruct, BF16, SDPA, batch size one, the same image processor and image-token limits in both arms. No training, skill edits or feedback.",
+  "min_pixels": 3136,
+  "max_pixels": 401408,
+  "calls": "Three actual model forwards per arm and case, including two selection calls and one diagnosis. The two selection forwards in the fixed arm are shadow calls for budget matching. Three tool invocations per arm.",
+  "metrics": "Report paired gains, losses, net additional correct cases, both correct, both wrong, exact two-sided McNemar p, changed image sets, changed diagnoses and actual per-arm call counts.",
+  "stopping": "Halt before heldout for invalid tool receipts, missing cases, mismatched budgets, different diagnosis with identical canonical inputs or incomplete development. No tuning based on development or heldout labels.",
+  "budget": {"max_total_model_calls":576,"max_seconds":7200,"storage_stop_bytes":500000000,"expected_peak_bytes":100000000,"baseline_new_directory_bytes":0}
+}
