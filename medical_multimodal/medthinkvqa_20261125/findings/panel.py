@@ -4,7 +4,7 @@ from pathlib import Path
 from prep import read_rows, select
 
 
-def build(raw, prior_dirs):
+def build(raw, prior_dirs, exclude=()):
     pool, _, _ = select(raw)
     used = set()
     for split in ("development","heldout"):
@@ -15,6 +15,7 @@ def build(raw, prior_dirs):
                 used.update(p.name for p in (folder/(stage+"_"+role)/"images").iterdir() if p.is_dir())
     if len(used)!=480:
         raise ValueError(f"Expected 480 distinct historical cases, found {len(used)}")
+    used.update(exclude)
     picked = []
     for has_ct in (True,False):
         eligible = (r for r in pool if r[0] not in used and len(r[-1])<=27 and

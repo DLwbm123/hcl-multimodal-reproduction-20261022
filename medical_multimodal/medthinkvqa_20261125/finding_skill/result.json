@@ -1,0 +1,162 @@
+{
+  "n": 64,
+  "accepted": true,
+  "valid_patch": true,
+  "gate": {
+    "CT": {
+      "n": 16,
+      "reference": 6,
+      "candidate": 8,
+      "gain": 2,
+      "loss": 0,
+      "net": 2,
+      "changed": 3,
+      "exact_p": 0.5,
+      "coverage": {
+        "seed": {
+          "omitted_or_insufficient": 32,
+          "covered": 3,
+          "unavailable": 12,
+          "contradicted": 1
+        },
+        "candidate": {
+          "omitted_or_insufficient": 29,
+          "contradicted": 2,
+          "unavailable": 12,
+          "covered": 5
+        }
+      },
+      "covered_net": 2
+    },
+    "nonCT": {
+      "n": 16,
+      "reference": 4,
+      "candidate": 5,
+      "gain": 1,
+      "loss": 0,
+      "net": 1,
+      "changed": 1,
+      "exact_p": 1.0,
+      "coverage": {
+        "seed": {
+          "omitted_or_insufficient": 34,
+          "unavailable": 10,
+          "covered": 4
+        },
+        "candidate": {
+          "omitted_or_insufficient": 34,
+          "unavailable": 10,
+          "covered": 4
+        }
+      },
+      "covered_net": 0
+    }
+  },
+  "deployed": {
+    "n": 64,
+    "reference": 36,
+    "candidate": 32,
+    "gain": 2,
+    "loss": 6,
+    "net": -4,
+    "changed": 12,
+    "exact_p": 0.2890625,
+    "coverage": {
+      "seed": {
+        "omitted_or_insufficient": 108,
+        "unavailable": 70,
+        "covered": 12,
+        "contradicted": 2
+      },
+      "candidate": {
+        "omitted_or_insufficient": 111,
+        "unavailable": 70,
+        "covered": 8,
+        "contradicted": 3
+      }
+    },
+    "covered_net": -4
+  },
+  "candidate": {
+    "n": 64,
+    "reference": 36,
+    "candidate": 32,
+    "gain": 2,
+    "loss": 6,
+    "net": -4,
+    "changed": 12,
+    "exact_p": 0.2890625,
+    "coverage": {
+      "seed": {
+        "omitted_or_insufficient": 108,
+        "unavailable": 70,
+        "covered": 12,
+        "contradicted": 2
+      },
+      "candidate": {
+        "omitted_or_insufficient": 111,
+        "unavailable": 70,
+        "covered": 8,
+        "contradicted": 3
+      }
+    },
+    "covered_net": -4
+  },
+  "by_stage": {
+    "CT": {
+      "n": 32,
+      "reference": 18,
+      "candidate": 17,
+      "gain": 0,
+      "loss": 1,
+      "net": -1,
+      "changed": 4,
+      "exact_p": 1.0,
+      "coverage": {
+        "seed": {
+          "omitted_or_insufficient": 59,
+          "unavailable": 33,
+          "covered": 4
+        },
+        "candidate": {
+          "omitted_or_insufficient": 60,
+          "unavailable": 33,
+          "covered": 2,
+          "contradicted": 1
+        }
+      },
+      "covered_net": -2
+    },
+    "nonCT": {
+      "n": 32,
+      "reference": 18,
+      "candidate": 15,
+      "gain": 2,
+      "loss": 5,
+      "net": -3,
+      "changed": 8,
+      "exact_p": 0.453125,
+      "coverage": {
+        "seed": {
+          "omitted_or_insufficient": 49,
+          "unavailable": 37,
+          "covered": 8,
+          "contradicted": 2
+        },
+        "candidate": {
+          "omitted_or_insufficient": 51,
+          "unavailable": 37,
+          "covered": 6,
+          "contradicted": 2
+        }
+      },
+      "covered_net": -2
+    }
+  },
+  "calls": {
+    "text_generations": 98,
+    "image_notes": 480,
+    "image_decisions": 160,
+    "text_reviews": 732
+  }
+}
