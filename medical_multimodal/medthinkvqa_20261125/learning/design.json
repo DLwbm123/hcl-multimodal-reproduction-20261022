@@ -1,0 +1,13 @@
+{
+ "question":"Can feedback learned from earlier cases improve subsequent medical multi-image diagnosis under the same three-image budget?",
+ "arms":["base","hcl","skillopt","hybrid"],
+ "roles":{"fit":16,"gate":16,"confirm":64},
+ "stages":["A: a CT view exists","B: no CT view"],
+ "sampling":"Skip the previous 96 pilot cases in the original deduplicated fixed-seed pool. Within each stratum take the next 96 with at most 27 usable views. Allocate fit/gate/confirm by this predeclared order. Official test never scored.",
+ "inference":"Identical Qwen2.5-VL-7B-Instruct BF16, adaptive episode and permitted view types, image processing, three distinct images and three model decisions per case. First image shared. Current instruction and retrieved experience can influence both subsequent view choices and answer. No extra VQA call. Exact duplicate case and guidance are evaluated once and reused. Report physical versus logical work.",
+ "learning":"Two sequential feedback batches. One candidate per arm per stage. Native HCL RawMemory diversity selection (4 records per stage), AbstractMemory LLM consolidation, one lexically matched raw example and two abstract guidelines per episode. Native SkillOpt patch engine, one bounded append or replace per candidate with one format repair. Hybrid jointly proposes memory and edit from its own incumbent trajectory, reverts both on gate failure. Invalid edit retains incumbent. This is a small-budget adaptation, without the upstream long-run optimizer schedule.",
+ "gate":"Strictly improve number correct on the 16 current gate cases. HCL and hybrid at stage B also require no aggregate accuracy loss relative to their incumbent on the 16 A gate cases. SkillOpt uses current validation only. A case cannot be used for both fitting and gating. Gate labels never enter candidate prompts.",
+ "confirm":"Freeze all states before evaluating 128 confirmation cases. Primary is hybrid vs base, net paired correct and exact two-sided McNemar p<0.05 plus positive net for preliminary support. HCL/SkillOpt comparisons exploratory. Report 95% Wilson interval on discordant win fraction when defined. Compare A-only frozen state vs final on fresh A cases for retention. Separately score last proposed candidate (including rejected ones, with unchanged state on invalid proposals) as predeclared diagnostic; never promote from confirmation.",
+ "min_pixels":3136,"max_pixels":401408,
+ "budget":{"max_total_model_calls":6000,"max_seconds":7000,"storage_stop_bytes":2000000000,"expected_peak_bytes":500000000,"baseline_new_directory_bytes":0}
+}

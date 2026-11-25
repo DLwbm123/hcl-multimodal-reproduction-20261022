@@ -1,0 +1,14 @@
+{
+  "base": {
+    "same_actions": 128
+  },
+  "hcl": {
+    "same_actions": 128
+  },
+  "skillopt": {
+    "same_actions": 128
+  },
+  "hybrid": {
+    "same_actions": 128
+  }
+}

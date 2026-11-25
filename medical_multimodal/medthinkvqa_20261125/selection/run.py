@@ -34,7 +34,7 @@ def open_action(view):
     return {"name": "open_view", "arguments": {"view_id": view}}
 
 
-def load_vlm():
+def load_vlm(*, with_text_generator=False):
     import torch
     from transformers import AutoProcessor, Qwen2_5_VLForConditionalGeneration
     path = os.environ["MODEL_ROOT"]
@@ -63,6 +63,15 @@ def load_vlm():
         if not torch.isfinite(scores).all():
             raise RuntimeError("nonfinite decision score")
         return labels[int(scores.argmax())]
+    if with_text_generator:
+        @torch.inference_mode()
+        def generate(prompt, max_tokens):
+            chat = [{"role": "user", "content": prompt}]
+            text = processor.apply_chat_template(chat, tokenize=False, add_generation_prompt=True)
+            inputs = processor(text=[text], return_tensors="pt").to(model.device)
+            tokens = model.generate(**inputs, max_new_tokens=max_tokens, do_sample=False)
+            return processor.tokenizer.decode(tokens[0, inputs.input_ids.shape[1]:], skip_special_tokens=True)
+        return choose, generate
     return choose
 
 

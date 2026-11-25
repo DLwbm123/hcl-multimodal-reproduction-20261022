@@ -1,0 +1,387 @@
+{
+  "deployed": {
+    "base": {
+      "n": 128,
+      "reference": 52,
+      "candidate": 52,
+      "gain": 0,
+      "loss": 0,
+      "net": 0,
+      "exact_p": 1.0,
+      "discordant_win_fraction_95ci": null,
+      "changed_diagnoses": 0,
+      "changed_image_sets": 0
+    },
+    "hcl": {
+      "n": 128,
+      "reference": 52,
+      "candidate": 52,
+      "gain": 0,
+      "loss": 0,
+      "net": 0,
+      "exact_p": 1.0,
+      "discordant_win_fraction_95ci": null,
+      "changed_diagnoses": 0,
+      "changed_image_sets": 0
+    },
+    "skillopt": {
+      "n": 128,
+      "reference": 52,
+      "candidate": 52,
+      "gain": 0,
+      "loss": 0,
+      "net": 0,
+      "exact_p": 1.0,
+      "discordant_win_fraction_95ci": null,
+      "changed_diagnoses": 0,
+      "changed_image_sets": 0
+    },
+    "hybrid": {
+      "n": 128,
+      "reference": 52,
+      "candidate": 52,
+      "gain": 0,
+      "loss": 0,
+      "net": 0,
+      "exact_p": 1.0,
+      "discordant_win_fraction_95ci": null,
+      "changed_diagnoses": 0,
+      "changed_image_sets": 0
+    }
+  },
+  "stage_results": {
+    "A": {
+      "base": {
+        "n": 64,
+        "reference": 31,
+        "candidate": 31,
+        "gain": 0,
+        "loss": 0,
+        "net": 0,
+        "exact_p": 1.0,
+        "discordant_win_fraction_95ci": null,
+        "changed_diagnoses": 0,
+        "changed_image_sets": 0
+      },
+      "hcl": {
+        "n": 64,
+        "reference": 31,
+        "candidate": 31,
+        "gain": 0,
+        "loss": 0,
+        "net": 0,
+        "exact_p": 1.0,
+        "discordant_win_fraction_95ci": null,
+        "changed_diagnoses": 0,
+        "changed_image_sets": 0
+      },
+      "skillopt": {
+        "n": 64,
+        "reference": 31,
+        "candidate": 31,
+        "gain": 0,
+        "loss": 0,
+        "net": 0,
+        "exact_p": 1.0,
+        "discordant_win_fraction_95ci": null,
+        "changed_diagnoses": 0,
+        "changed_image_sets": 0
+      },
+      "hybrid": {
+        "n": 64,
+        "reference": 31,
+        "candidate": 31,
+        "gain": 0,
+        "loss": 0,
+        "net": 0,
+        "exact_p": 1.0,
+        "discordant_win_fraction_95ci": null,
+        "changed_diagnoses": 0,
+        "changed_image_sets": 0
+      }
+    },
+    "B": {
+      "base": {
+        "n": 64,
+        "reference": 21,
+        "candidate": 21,
+        "gain": 0,
+        "loss": 0,
+        "net": 0,
+        "exact_p": 1.0,
+        "discordant_win_fraction_95ci": null,
+        "changed_diagnoses": 0,
+        "changed_image_sets": 0
+      },
+      "hcl": {
+        "n": 64,
+        "reference": 21,
+        "candidate": 21,
+        "gain": 0,
+        "loss": 0,
+        "net": 0,
+        "exact_p": 1.0,
+        "discordant_win_fraction_95ci": null,
+        "changed_diagnoses": 0,
+        "changed_image_sets": 0
+      },
+      "skillopt": {
+        "n": 64,
+        "reference": 21,
+        "candidate": 21,
+        "gain": 0,
+        "loss": 0,
+        "net": 0,
+        "exact_p": 1.0,
+        "discordant_win_fraction_95ci": null,
+        "changed_diagnoses": 0,
+        "changed_image_sets": 0
+      },
+      "hybrid": {
+        "n": 64,
+        "reference": 21,
+        "candidate": 21,
+        "gain": 0,
+        "loss": 0,
+        "net": 0,
+        "exact_p": 1.0,
+        "discordant_win_fraction_95ci": null,
+        "changed_diagnoses": 0,
+        "changed_image_sets": 0
+      }
+    }
+  },
+  "last_proposed": {
+    "hcl": {
+      "n": 128,
+      "reference": 52,
+      "candidate": 52,
+      "gain": 3,
+      "loss": 3,
+      "net": 0,
+      "exact_p": 1.0,
+      "discordant_win_fraction_95ci": [
+        0.18761630498040816,
+        0.8123836950195918
+      ],
+      "changed_diagnoses": 13,
+      "changed_image_sets": 37
+    },
+    "skillopt": {
+      "n": 128,
+      "reference": 52,
+      "candidate": 52,
+      "gain": 2,
+      "loss": 2,
+      "net": 0,
+      "exact_p": 1.0,
+      "discordant_win_fraction_95ci": [
+        0.15003898774401986,
+        0.8499610122559802
+      ],
+      "changed_diagnoses": 8,
+      "changed_image_sets": 29
+    },
+    "hybrid": {
+      "n": 128,
+      "reference": 52,
+      "candidate": 50,
+      "gain": 1,
+      "loss": 3,
+      "net": -2,
+      "exact_p": 0.625,
+      "discordant_win_fraction_95ci": [
+        0.04558726029536886,
+        0.6993581599030918
+      ],
+      "changed_diagnoses": 12,
+      "changed_image_sets": 40
+    }
+  },
+  "fresh_A_retention": {
+    "hcl": {
+      "n": 64,
+      "reference": 31,
+      "candidate": 31,
+      "gain": 0,
+      "loss": 0,
+      "net": 0,
+      "exact_p": 1.0,
+      "discordant_win_fraction_95ci": null,
+      "changed_diagnoses": 0,
+      "changed_image_sets": 0
+    },
+    "skillopt": {
+      "n": 64,
+      "reference": 31,
+      "candidate": 31,
+      "gain": 0,
+      "loss": 0,
+      "net": 0,
+      "exact_p": 1.0,
+      "discordant_win_fraction_95ci": null,
+      "changed_diagnoses": 0,
+      "changed_image_sets": 0
+    },
+    "hybrid": {
+      "n": 64,
+      "reference": 31,
+      "candidate": 31,
+      "gain": 0,
+      "loss": 0,
+      "net": 0,
+      "exact_p": 1.0,
+      "discordant_win_fraction_95ci": null,
+      "changed_diagnoses": 0,
+      "changed_image_sets": 0
+    }
+  },
+  "gate_decisions": [
+    {
+      "stage": "A",
+      "arm": "hcl",
+      "valid": true,
+      "accepted": false,
+      "current": {
+        "n": 16,
+        "reference": 7,
+        "candidate": 7,
+        "gain": 0,
+        "loss": 0,
+        "net": 0,
+        "exact_p": 1.0,
+        "discordant_win_fraction_95ci": null,
+        "changed_diagnoses": 1,
+        "changed_image_sets": 4
+      },
+      "old": null
+    },
+    {
+      "stage": "A",
+      "arm": "skillopt",
+      "valid": true,
+      "accepted": false,
+      "current": {
+        "n": 16,
+        "reference": 7,
+        "candidate": 7,
+        "gain": 0,
+        "loss": 0,
+        "net": 0,
+        "exact_p": 1.0,
+        "discordant_win_fraction_95ci": null,
+        "changed_diagnoses": 1,
+        "changed_image_sets": 0
+      },
+      "old": null
+    },
+    {
+      "stage": "A",
+      "arm": "hybrid",
+      "valid": true,
+      "accepted": false,
+      "current": {
+        "n": 16,
+        "reference": 7,
+        "candidate": 7,
+        "gain": 0,
+        "loss": 0,
+        "net": 0,
+        "exact_p": 1.0,
+        "discordant_win_fraction_95ci": null,
+        "changed_diagnoses": 1,
+        "changed_image_sets": 2
+      },
+      "old": null
+    },
+    {
+      "stage": "B",
+      "arm": "hcl",
+      "valid": true,
+      "accepted": false,
+      "current": {
+        "n": 16,
+        "reference": 7,
+        "candidate": 6,
+        "gain": 0,
+        "loss": 1,
+        "net": -1,
+        "exact_p": 1.0,
+        "discordant_win_fraction_95ci": [
+          0.0,
+          0.7934506882081973
+        ],
+        "changed_diagnoses": 1,
+        "changed_image_sets": 6
+      },
+      "old": {
+        "n": 16,
+        "reference": 7,
+        "candidate": 7,
+        "gain": 0,
+        "loss": 0,
+        "net": 0,
+        "exact_p": 1.0,
+        "discordant_win_fraction_95ci": null,
+        "changed_diagnoses": 1,
+        "changed_image_sets": 2
+      }
+    },
+    {
+      "stage": "B",
+      "arm": "skillopt",
+      "valid": true,
+      "accepted": false,
+      "current": {
+        "n": 16,
+        "reference": 7,
+        "candidate": 7,
+        "gain": 0,
+        "loss": 0,
+        "net": 0,
+        "exact_p": 1.0,
+        "discordant_win_fraction_95ci": null,
+        "changed_diagnoses": 0,
+        "changed_image_sets": 3
+      },
+      "old": null
+    },
+    {
+      "stage": "B",
+      "arm": "hybrid",
+      "valid": true,
+      "accepted": false,
+      "current": {
+        "n": 16,
+        "reference": 7,
+        "candidate": 6,
+        "gain": 0,
+        "loss": 1,
+        "net": -1,
+        "exact_p": 1.0,
+        "discordant_win_fraction_95ci": [
+          0.0,
+          0.7934506882081973
+        ],
+        "changed_diagnoses": 1,
+        "changed_image_sets": 6
+      },
+      "old": {
+        "n": 16,
+        "reference": 7,
+        "candidate": 7,
+        "gain": 0,
+        "loss": 0,
+        "net": 0,
+        "exact_p": 1.0,
+        "discordant_win_fraction_95ci": null,
+        "changed_diagnoses": 1,
+        "changed_image_sets": 3
+      }
+    }
+  ],
+  "physical_calls": {
+    "decisions": 2112,
+    "generations": 12
+  }
+}
