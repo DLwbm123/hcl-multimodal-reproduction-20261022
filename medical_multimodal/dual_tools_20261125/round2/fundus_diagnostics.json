@@ -1,0 +1,10 @@
+{
+  "reviewed": 17,
+  "review_beneficial_all": 164,
+  "review_harmful_all": 191,
+  "review_beneficial_selected": 12,
+  "review_harmful_selected": 2,
+  "learned_reduction_from_first": 0.000589962156254548,
+  "expected_reduction_uniform_same_count": -9.380467402010465e-05,
+  "hindsight_lowest_mae": 0.08087713689446772
+}

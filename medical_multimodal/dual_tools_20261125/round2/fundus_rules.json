@@ -1,0 +1,29 @@
+{
+  "selected": "B",
+  "rules": [
+    {
+      "tree": "|--- cup_confidence <= 0.8250\n|   |--- value: [-0.0106]\n|--- cup_confidence >  0.8250\n|   |--- value: [0.0010]\n",
+      "cut": 0.002,
+      "oof_error_reduction": -0.0005781196911147424,
+      "oof_reviews": 20
+    },
+    {
+      "tree": "|--- cup_confidence <= 0.8250\n|   |--- value: [-0.0106]\n|--- cup_confidence >  0.8250\n|   |--- disc_solidity <= 0.9433\n|   |   |--- value: [0.0070]\n|   |--- disc_solidity >  0.9433\n|   |   |--- value: [-0.0045]\n",
+      "cut": 0.002,
+      "oof_error_reduction": 0.00010944247543681687,
+      "oof_reviews": 26
+    },
+    {
+      "tree": "|--- cup_confidence <= 0.8250\n|   |--- value: [-0.0106]\n|--- cup_confidence >  0.8250\n|   |--- disc_solidity <= 0.9433\n|   |   |--- value: [0.0070]\n|   |--- disc_solidity >  0.9433\n|   |   |--- value: [-0.0045]\n",
+      "cut": 0.002,
+      "oof_error_reduction": 0.00035898399989067395,
+      "oof_reviews": 36
+    },
+    {
+      "tree": "|--- cup_confidence <= 0.8250\n|   |--- value: [-0.0106]\n|--- cup_confidence >  0.8250\n|   |--- disc_solidity <= 0.9433\n|   |   |--- value: [0.0070]\n|   |--- disc_solidity >  0.9433\n|   |   |--- value: [-0.0045]\n",
+      "cut": 0.006,
+      "oof_error_reduction": -0.0006731767564531136,
+      "oof_reviews": 17
+    }
+  ]
+}
