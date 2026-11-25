@@ -4,7 +4,7 @@ from pathlib import Path
 from prep import read_rows, select
 
 
-def build(raw, prior_dirs, exclude=()):
+def build(raw, prior_dirs, exclude=(), *, per_stratum=32):
     pool, _, _ = select(raw)
     used = set()
     for split in ("development","heldout"):
@@ -20,7 +20,7 @@ def build(raw, prior_dirs, exclude=()):
     for has_ct in (True,False):
         eligible = (r for r in pool if r[0] not in used and len(r[-1])<=27 and
                     any(v["modality"]=="CT" for v in r[-1])==has_ct)
-        picked.extend((next(eligible),has_ct) for _ in range(32))
+        picked.extend((next(eligible),has_ct) for _ in range(per_stratum))
     captions = {}
     paths = {v["path"] for r,_ in picked for v in r[-1][:3]}
     for r in read_rows(raw/"train.jsonl"):
