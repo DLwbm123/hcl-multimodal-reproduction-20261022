@@ -1,0 +1,23 @@
+{
+  "n": 80,
+  "contrast_by_condition": [
+    80,
+    80,
+    80,
+    80
+  ],
+  "order_changed_actions": [
+    0,
+    0
+  ],
+  "mae_by_condition": [
+    0.07022655635474452,
+    0.07022655635474452,
+    0.07022655635474452,
+    0.07022655635474452
+  ],
+  "cv_brightness_mae": 0.07312569611732188,
+  "cv_constant_mae": 0.07022655635474452,
+  "cv_brightness_color": 14,
+  "oracle_mae": 0.06450613681182252
+}
