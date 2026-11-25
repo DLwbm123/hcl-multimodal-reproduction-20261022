@@ -1,0 +1,53 @@
+{
+  "unique_reference_cases": 50,
+  "unique_references": {
+    "checked_vs_direct": {
+      "n": 50,
+      "reference": 17,
+      "candidate": 22,
+      "gain": 7,
+      "loss": 2,
+      "net": 5,
+      "changed": 14,
+      "exact_p": 0.1796875
+    },
+    "self_vs_direct": {
+      "n": 50,
+      "reference": 17,
+      "candidate": 17,
+      "gain": 3,
+      "loss": 3,
+      "net": 0,
+      "changed": 12,
+      "exact_p": 1.0
+    },
+    "checked_vs_self": {
+      "n": 50,
+      "reference": 17,
+      "candidate": 22,
+      "gain": 8,
+      "loss": 3,
+      "net": 5,
+      "changed": 20,
+      "exact_p": 0.2265625
+    }
+  },
+  "self_to_checked": {
+    "lost": {
+      "cases": 3,
+      "with_omission_or_contradiction": 3
+    },
+    "both_correct": {
+      "cases": 19,
+      "with_omission_or_contradiction": 15
+    },
+    "both_wrong": {
+      "cases": 31,
+      "with_omission_or_contradiction": 27
+    },
+    "rescued": {
+      "cases": 11,
+      "with_omission_or_contradiction": 10
+    }
+  }
+}

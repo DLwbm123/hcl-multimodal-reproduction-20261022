@@ -52,7 +52,7 @@ def load_vlm(*, with_text_generator=False):
         content.append({"type": "text", "text": instruction})
         prompt = processor.apply_chat_template([{"role": "user", "content": content}],
                                                tokenize=False, add_generation_prompt=True)
-        batch = processor(text=[prompt], images=[opened[k] for k in sorted(opened)],
+        batch = processor(text=[prompt], images=[opened[k] for k in sorted(opened)] or None,
                           return_tensors="pt").to(model.device)
         token_ids = []
         for label in labels:
@@ -65,10 +65,11 @@ def load_vlm(*, with_text_generator=False):
         return labels[int(scores.argmax())]
     if with_text_generator:
         @torch.inference_mode()
-        def generate(prompt, max_tokens):
-            chat = [{"role": "user", "content": prompt}]
+        def generate(prompt, max_tokens, image=None):
+            content = prompt if image is None else [{"type": "image"}, {"type": "text", "text": prompt}]
+            chat = [{"role": "user", "content": content}]
             text = processor.apply_chat_template(chat, tokenize=False, add_generation_prompt=True)
-            inputs = processor(text=[text], return_tensors="pt").to(model.device)
+            inputs = processor(text=[text], images=None if image is None else [image], return_tensors="pt").to(model.device)
             tokens = model.generate(**inputs, max_new_tokens=max_tokens, do_sample=False)
             return processor.tokenizer.decode(tokens[0, inputs.input_ids.shape[1]:], skip_special_tokens=True)
         return choose, generate

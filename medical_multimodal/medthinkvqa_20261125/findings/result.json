@@ -1,0 +1,169 @@
+{
+  "all_cases": {
+    "checked_vs_direct": {
+      "n": 64,
+      "reference": 22,
+      "candidate": 30,
+      "gain": 10,
+      "loss": 2,
+      "net": 8,
+      "changed": 19,
+      "exact_p": 0.03857421875
+    },
+    "self_vs_direct": {
+      "n": 64,
+      "reference": 22,
+      "candidate": 22,
+      "gain": 3,
+      "loss": 3,
+      "net": 0,
+      "changed": 14,
+      "exact_p": 1.0
+    },
+    "checked_vs_self": {
+      "n": 64,
+      "reference": 22,
+      "candidate": 30,
+      "gain": 11,
+      "loss": 3,
+      "net": 8,
+      "changed": 24,
+      "exact_p": 0.057373046875
+    }
+  },
+  "by_stage": {
+    "CT": {
+      "checked_vs_direct": {
+        "n": 32,
+        "reference": 14,
+        "candidate": 19,
+        "gain": 6,
+        "loss": 1,
+        "net": 5,
+        "changed": 11,
+        "exact_p": 0.125
+      },
+      "self_vs_direct": {
+        "n": 32,
+        "reference": 14,
+        "candidate": 13,
+        "gain": 1,
+        "loss": 2,
+        "net": -1,
+        "changed": 7,
+        "exact_p": 1.0
+      },
+      "checked_vs_self": {
+        "n": 32,
+        "reference": 13,
+        "candidate": 19,
+        "gain": 8,
+        "loss": 2,
+        "net": 6,
+        "changed": 16,
+        "exact_p": 0.109375
+      }
+    },
+    "nonCT": {
+      "checked_vs_direct": {
+        "n": 32,
+        "reference": 8,
+        "candidate": 11,
+        "gain": 4,
+        "loss": 1,
+        "net": 3,
+        "changed": 8,
+        "exact_p": 0.375
+      },
+      "self_vs_direct": {
+        "n": 32,
+        "reference": 8,
+        "candidate": 9,
+        "gain": 2,
+        "loss": 1,
+        "net": 1,
+        "changed": 7,
+        "exact_p": 1.0
+      },
+      "checked_vs_self": {
+        "n": 32,
+        "reference": 9,
+        "candidate": 11,
+        "gain": 3,
+        "loss": 1,
+        "net": 2,
+        "changed": 8,
+        "exact_p": 0.625
+      }
+    }
+  },
+  "available_cases": {
+    "checked_vs_direct": {
+      "n": 56,
+      "reference": 18,
+      "candidate": 26,
+      "gain": 10,
+      "loss": 2,
+      "net": 8,
+      "changed": 19,
+      "exact_p": 0.03857421875
+    },
+    "self_vs_direct": {
+      "n": 56,
+      "reference": 18,
+      "candidate": 18,
+      "gain": 3,
+      "loss": 3,
+      "net": 0,
+      "changed": 13,
+      "exact_p": 1.0
+    },
+    "checked_vs_self": {
+      "n": 56,
+      "reference": 18,
+      "candidate": 26,
+      "gain": 11,
+      "loss": 3,
+      "net": 8,
+      "changed": 23,
+      "exact_p": 0.057373046875
+    }
+  },
+  "cases_with_note": 56,
+  "notes_per_case": {
+    "2": 13,
+    "1": 10,
+    "3": 33,
+    "0": 8
+  },
+  "per_image_coverage": {
+    "omitted_or_insufficient": 121,
+    "unavailable": 57,
+    "covered": 13,
+    "contradicted": 1
+  },
+  "direct_to_checked": {
+    "lost": {
+      "cases": 2,
+      "cases_with_reported_omission_or_contradiction": 2
+    },
+    "both_correct": {
+      "cases": 20,
+      "cases_with_reported_omission_or_contradiction": 16
+    },
+    "both_wrong": {
+      "cases": 32,
+      "cases_with_reported_omission_or_contradiction": 28
+    },
+    "rescued": {
+      "cases": 10,
+      "cases_with_reported_omission_or_contradiction": 9
+    }
+  },
+  "physical_calls": {
+    "text_reviews": 539,
+    "text_extractions": 82,
+    "image_descriptions": 192,
+    "image_decisions": 192
+  }
+}
