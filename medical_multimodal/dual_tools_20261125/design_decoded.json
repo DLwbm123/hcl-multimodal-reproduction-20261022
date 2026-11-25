@@ -1,0 +1,18 @@
+{
+  "arms": [
+    "fixed_fit_best",
+    "no_learning",
+    "gated_hcl_skillopt"
+  ],
+  "procedure": "selecting the color or local-contrast optic disc/cup segmentation expert from a localized retinal patch with the lowest expected vertical cup-to-disc ratio error",
+  "min_pixels": 3136,
+  "max_pixels": 401408,
+  "split": "400 training photographs, deterministic class-stratified shuffle, 120 specialist training / 80 agent feedback plus threshold / 40 gate / 160 final photographs. Filenames and masks hidden from router. No patient ID linkage available.",
+  "primary": "Paired vCDR absolute error with the same localizer, measurement and threshold. Secondary disc/cup Dice and balanced accuracy on disease labels. Fixed specialist selected by fit error; one joint native HCL memory consolidation and SkillOpt edit. Accept on strictly lower gate vCDR error and no lower gate balanced accuracy; otherwise fallback and report gate candidate.",
+  "budget": {
+    "max_total_model_calls": 2000,
+    "max_seconds": 14400,
+    "storage_stop_bytes": 1500000000
+  },
+  "purpose": "Technical sensitivity analysis of frozen corrected-protocol proposal: bind missing replace.target to the sole editable current instruction. No content change or second proposal. Same gate and deployment rule, cached identical baseline; not an independent replication."
+}

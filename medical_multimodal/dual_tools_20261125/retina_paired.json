@@ -1,0 +1,12 @@
+{
+  "changed_better": 30,
+  "changed_worse": 41,
+  "changed_tied": 7,
+  "mae_difference": 0.0015560470125745983,
+  "ci95": [
+    -0.0026979287837370627,
+    0.0060878188088027765
+  ],
+  "corrected": 4,
+  "harmed": 2
+}

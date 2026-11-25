@@ -1,0 +1,52 @@
+{
+  "gate": {
+    "n": 16,
+    "baseline": {
+      "f1": 0.5,
+      "exact": 0.0,
+      "correct": 0.25,
+      "invalid": 0.0,
+      "steps": 1.3125
+    },
+    "learned": {
+      "f1": 0.5,
+      "exact": 0.0,
+      "correct": 0.0625,
+      "invalid": 0.0,
+      "steps": 2.0625
+    },
+    "gain": 0,
+    "loss": 3
+  },
+  "accepted": false,
+  "valid_edit": true,
+  "model_calls": {
+    "decisions": 322,
+    "generations": 155
+  },
+  "tool_executions": {
+    "ImageDescription": 66,
+    "OCR": 9,
+    "RegionAttributeDescription": 22,
+    "Calculator": 5
+  },
+  "test": {
+    "n": 45,
+    "baseline": {
+      "f1": 0.49259259259259264,
+      "exact": 0.0,
+      "correct": 0.1111111111111111,
+      "invalid": 0.022222222222222223,
+      "steps": 1.0888888888888888
+    },
+    "learned": {
+      "f1": 0.49259259259259264,
+      "exact": 0.0,
+      "correct": 0.1111111111111111,
+      "invalid": 0.022222222222222223,
+      "steps": 1.0888888888888888
+    },
+    "gain": 0,
+    "loss": 0
+  }
+}

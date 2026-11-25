@@ -1,4 +1,9 @@
 import json, os
+import inspect
+from previous_learning import DESIGN, edit_skill
+assert 'DESIGN["procedure"]' in inspect.getsource(edit_skill)
+assert 'choosing 3 views' not in inspect.getsource(edit_skill)
+assert DESIGN["procedure"]
 if os.environ["STUDY"] == "retina":
     import retina
     from PIL import Image
