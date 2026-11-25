@@ -1,0 +1,9 @@
+{
+  "n": 80,
+  "color_better": 25,
+  "contrast_better": 46,
+  "ties": 9,
+  "color_MAE": 0.07700856080672021,
+  "contrast_MAE": 0.07022655635474452,
+  "oracle_MAE": 0.06450613681182252
+}
