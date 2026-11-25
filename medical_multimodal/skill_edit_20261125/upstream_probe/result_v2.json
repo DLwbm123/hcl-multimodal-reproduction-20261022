@@ -1,0 +1,38 @@
+{
+  "result": {
+    "upstream_commit": "dc0b5e654cafa1073a2819086151c1e0d13012f0",
+    "patched": true,
+    "attempts": 1,
+    "case_role": "fifth previously assigned training image",
+    "official_function": "skillopt.optimizer.skill.apply_patch_with_report",
+    "seed_direct": {
+      "valid": true,
+      "primitive_calls": 1,
+      "skill_called": true,
+      "instruction_reached_tool": true
+    },
+    "patched_direct": {
+      "valid": true,
+      "primitive_calls": 1,
+      "skill_called": true,
+      "instruction_reached_tool": true
+    },
+    "patched_graph": {
+      "valid": true,
+      "primitive_calls": 6,
+      "skill_called": false,
+      "instruction_reached_tool": false
+    },
+    "representation": "json_patch",
+    "edit_status": "applied_replace",
+    "vlm_calls": 17,
+    "sam_calls": 0
+  },
+  "runtime": {
+    "success": true,
+    "returncode": 0,
+    "ended": 1795573205.8166807,
+    "elapsed_seconds": 39.15681290626526,
+    "bytes": 291762
+  }
+}

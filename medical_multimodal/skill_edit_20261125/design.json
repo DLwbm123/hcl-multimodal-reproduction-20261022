@@ -1,0 +1,12 @@
+{
+  "purpose": "Engineering and development comparison only. No independent confirmation, no clinical claim.",
+  "source": "Read only the completed 20261116 pilot. Qwen2.5-VL-7B, SAM and original evaluator frozen.",
+  "roles": "First 4 original training trajectories per task for proposals; 5th training image for direct executor preflight. First 4 original validation groups in fixed manifest order for development gates, both tasks. Never open original test or confirmation.",
+  "initial_state": "Empty committed library. One model-generated shared draft per task. A draft is an editing starting point only, never deployed or selected on the gate.",
+  "arms": ["full", "edit"],
+  "comparison": "Same task-local shared draft, training evidence and prompt schema, one candidate per arm with one format repair, same 2048 output token cap. Full rewrites one full skill; edit applies up to two localized edits, or one create if the shared draft failed. Raw context omitted in both arms to isolate skill behavior. Prior-task skills are preserved; they can still be selected by the unmodified graph controller.",
+  "selection": "Require direct execution and scorable output on the training probe first, then actual use of the new skill by GraphAgent on development data plus unchanged original HCL quality/efficiency and old-task gates. Record failed candidates. Historical reference is the end-of-T1 incumbent for each arm. No candidate after observing per-case validation feedback.",
+  "metrics": ["schema success before/after repair", "direct runtime validity", "voluntary candidate calls", "mean IoU or Dice", "success count", "primitive and VLM calls", "T1 retention"],
+  "budget": {"max_total_model_calls": 900, "max_seconds": 3600, "storage_stop_bytes": 500000000, "expected_peak_bytes": 150000000, "baseline_new_directory_bytes": 0},
+  "stop": "One attempt with shared deadline including any retries. No more candidates after development evaluation, no replacement of cases, no reuse of 8 old confirmation groups."
+}

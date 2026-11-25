@@ -1,0 +1,48 @@
+{
+  "result": {
+    "arms": {
+      "seed": {
+        "n": 4,
+        "mean_score": 0.6227263487781408,
+        "correct": 2,
+        "valid": 4,
+        "skill_episodes": 0,
+        "mean_primitive_calls": 6.0,
+        "mean_vlm_calls": 14.0,
+        "mean_sam_calls": 0.0,
+        "mean_seconds": 15.222059776773676,
+        "successful_guided_calls": 22,
+        "exposed_episodes": 4
+      },
+      "edited": {
+        "n": 4,
+        "mean_score": 0.5732635295113883,
+        "correct": 2,
+        "valid": 3,
+        "skill_episodes": 0,
+        "mean_primitive_calls": 6.0,
+        "mean_vlm_calls": 14.0,
+        "mean_sam_calls": 0.0,
+        "mean_seconds": 16.23535611515399,
+        "successful_guided_calls": 22,
+        "exposed_episodes": 4
+      }
+    },
+    "gains": 0,
+    "losses": 0,
+    "vlm_calls": 112,
+    "sam_calls": 0,
+    "candidate_committed": false
+  },
+  "runtime": {
+    "success": true,
+    "returncode": 0,
+    "ended": 1795573387.7865121,
+    "elapsed_seconds": 144.20386457443237,
+    "bytes": 864716
+  },
+  "localization_model_prompts_containing_arm_instruction": {
+    "seed": 22,
+    "edited": 22
+  }
+}

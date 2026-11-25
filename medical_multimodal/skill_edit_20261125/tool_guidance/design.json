@@ -1,0 +1,7 @@
+{
+ "purpose": "Evaluate normal-entry interoperability and the incremental effect of the already frozen upstream text patch at the HCL localization node. T1 development only; no further optimization, deployment, confirmation or retention claim.",
+ "roles": "Reuse the exact Qwen-generated patch from the preceding train-only repair. Same first four prior validation groups in manifest order for both arms. Zero raw memory and no callable skills. No case-level development evidence sent to proposer. Historical confirmation and original test excluded.",
+ "arms": "Same controller, base model, SAM, tools, scoring and episode budget. Attach either the initial instruction or frozen edited instruction to localize calls chosen voluntarily by the controller. Preserve an explicit controller cue and all ROI arguments, skip injection if combined length exceeds the existing 600-character limit.",
+ "measures": "Count successful ordinary tool calls carrying the assigned instruction and exposed episodes; paired success gains/losses, mean bbox IoU, valid outputs and call counts. Forced tool invocation is prohibited. Stop after 2 x 4 episodes including any failures; no threshold or method selected on this panel.",
+ "budget": {"max_total_model_calls": 120, "max_seconds": 1200, "storage_stop_bytes": 180000000, "expected_peak_bytes": 50000000, "baseline_new_directory_bytes": 0}
+}

@@ -1,0 +1,80 @@
+{
+  "result": {
+    "design": "Engineering and development comparison only. No independent confirmation, no clinical claim.",
+    "proposals": {
+      "T1_seed": {
+        "valid": false,
+        "attempts": 2,
+        "failed_attempts": 2
+      },
+      "T1_full": {
+        "valid": false,
+        "attempts": 2,
+        "failed_attempts": 2
+      },
+      "T1_edit": {
+        "valid": false,
+        "attempts": 2,
+        "failed_attempts": 2
+      },
+      "T2_seed": {
+        "valid": false,
+        "attempts": 2,
+        "failed_attempts": 2
+      },
+      "T2_full": {
+        "valid": false,
+        "attempts": 2,
+        "failed_attempts": 2
+      },
+      "T2_edit": {
+        "valid": false,
+        "attempts": 2,
+        "failed_attempts": 2
+      }
+    },
+    "events": [
+      {
+        "task": "T1",
+        "arm": "full",
+        "accepted": false,
+        "schema_valid": false,
+        "reason": "invalid_proposal"
+      },
+      {
+        "task": "T1",
+        "arm": "edit",
+        "accepted": false,
+        "schema_valid": false,
+        "reason": "invalid_proposal"
+      },
+      {
+        "task": "T2",
+        "arm": "full",
+        "accepted": false,
+        "schema_valid": false,
+        "reason": "invalid_proposal"
+      },
+      {
+        "task": "T2",
+        "arm": "edit",
+        "accepted": false,
+        "schema_valid": false,
+        "reason": "invalid_proposal"
+      }
+    ],
+    "committed_skill_counts": {
+      "full": 0,
+      "edit": 0
+    },
+    "vlm_calls": 12,
+    "sam_calls": 0
+  },
+  "runtime": {
+    "success": true,
+    "returncode": 0,
+    "ended": 1795573102.8969557,
+    "elapsed_seconds": 358.11023116111755,
+    "bytes": 244075
+  }
+}

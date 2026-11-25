@@ -1,0 +1,6 @@
+{
+ "purpose": "Train-only upstream interoperability check. Apply one real Qwen-proposed text edit with the exact upstream implementation to the localization instruction of an explicitly seeded single-tool skill. Check direct runtime argument propagation and voluntary GraphAgent selection. No method or performance gate, held-out or deployment decision.",
+ "inputs": "Use only the tool names and feedback scores of the first 4 original T1 training trajectories; use the 5th training image for direct seed, direct edited skill and edited GraphAgent. Maximum one repair. No validation or confirmation data.",
+ "upstream": "microsoft/SkillOpt dc0b5e654cafa1073a2819086151c1e0d13012f0 skillopt/optimizer/skill.py, MIT. Place original module and LICENSE under upstream/ before launching.",
+ "budget": {"max_total_model_calls": 24, "max_seconds": 1200, "storage_stop_bytes": 150000000, "expected_peak_bytes": 30000000, "baseline_new_directory_bytes": 0}
+}

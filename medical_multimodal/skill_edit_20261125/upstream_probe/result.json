@@ -1,0 +1,18 @@
+{
+  "result": {
+    "upstream_commit": "dc0b5e654cafa1073a2819086151c1e0d13012f0",
+    "patched": false,
+    "attempts": 2,
+    "case_role": "fifth previously assigned training image",
+    "official_function": "skillopt.optimizer.skill.apply_patch_with_report",
+    "vlm_calls": 2,
+    "sam_calls": 0
+  },
+  "runtime": {
+    "success": true,
+    "returncode": 0,
+    "ended": 1795573132.5159056,
+    "elapsed_seconds": 54.18746209144592,
+    "bytes": 37719
+  }
+}
