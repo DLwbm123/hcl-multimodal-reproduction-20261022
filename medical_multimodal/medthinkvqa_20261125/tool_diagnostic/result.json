@@ -1,0 +1,35 @@
+{
+  "n_fit": 32,
+  "first_menu": {
+    "swap0_reverse0": {
+      "open_view": 32
+    },
+    "swap0_reverse1": {
+      "open_view": 32
+    },
+    "swap1_reverse0": {
+      "open_view": 32
+    },
+    "swap1_reverse1": {
+      "open_view": 32
+    }
+  },
+  "third_observation": {
+    "open_view": {
+      "correct": 18,
+      "gain": 0,
+      "loss": 0
+    },
+    "inspect_region": {
+      "correct": 18,
+      "gain": 0,
+      "loss": 0
+    },
+    "compare_regions": {
+      "correct": 18,
+      "gain": 0,
+      "loss": 0
+    }
+  },
+  "oracle_correct": 18
+}
