@@ -1,0 +1,329 @@
+{
+  "patients": {
+    "train": 28,
+    "valid": 28,
+    "history": 27
+  },
+  "teacher_source_counts": {
+    "1": 1,
+    "2": 1,
+    "3": 1,
+    "4": 1,
+    "5": 1,
+    "6": 1,
+    "7": 1,
+    "8": 1,
+    "9": 1,
+    "10": 2
+  },
+  "rows": {
+    "plain": {
+      "by_family": {
+        "task1": {
+          "n": 4,
+          "correct": 0,
+          "gain": 0,
+          "loss": 0,
+          "kept": 0
+        },
+        "task2": {
+          "n": 4,
+          "correct": 0,
+          "gain": 0,
+          "loss": 0,
+          "kept": 0
+        },
+        "task3": {
+          "n": 4,
+          "correct": 4,
+          "gain": 0,
+          "loss": 0,
+          "kept": 4
+        },
+        "task4": {
+          "n": 4,
+          "correct": 0,
+          "gain": 0,
+          "loss": 0,
+          "kept": 0
+        },
+        "task5": {
+          "n": 4,
+          "correct": 0,
+          "gain": 0,
+          "loss": 0,
+          "kept": 0
+        },
+        "task6": {
+          "n": 4,
+          "correct": 0,
+          "gain": 0,
+          "loss": 0,
+          "kept": 0
+        },
+        "task7": {
+          "n": 4,
+          "correct": 0,
+          "gain": 0,
+          "loss": 0,
+          "kept": 0
+        },
+        "task8": {
+          "n": 4,
+          "correct": 0,
+          "gain": 0,
+          "loss": 0,
+          "kept": 0
+        },
+        "task9": {
+          "n": 4,
+          "correct": 0,
+          "gain": 0,
+          "loss": 0,
+          "kept": 0
+        },
+        "task10": {
+          "n": 4,
+          "correct": 0,
+          "gain": 0,
+          "loss": 0,
+          "kept": 0
+        }
+      },
+      "correct_with_canonical_read_or_write": 4,
+      "historical_retained": 4
+    },
+    "demo": {
+      "by_family": {
+        "task1": {
+          "n": 4,
+          "correct": 4,
+          "gain": 4,
+          "loss": 0,
+          "kept": 0
+        },
+        "task2": {
+          "n": 4,
+          "correct": 3,
+          "gain": 3,
+          "loss": 0,
+          "kept": 0
+        },
+        "task3": {
+          "n": 4,
+          "correct": 0,
+          "gain": 0,
+          "loss": 4,
+          "kept": 0
+        },
+        "task4": {
+          "n": 4,
+          "correct": 2,
+          "gain": 2,
+          "loss": 0,
+          "kept": 0
+        },
+        "task5": {
+          "n": 4,
+          "correct": 0,
+          "gain": 0,
+          "loss": 0,
+          "kept": 0
+        },
+        "task6": {
+          "n": 4,
+          "correct": 0,
+          "gain": 0,
+          "loss": 0,
+          "kept": 0
+        },
+        "task7": {
+          "n": 4,
+          "correct": 3,
+          "gain": 3,
+          "loss": 0,
+          "kept": 0
+        },
+        "task8": {
+          "n": 4,
+          "correct": 0,
+          "gain": 0,
+          "loss": 0,
+          "kept": 0
+        },
+        "task9": {
+          "n": 4,
+          "correct": 0,
+          "gain": 0,
+          "loss": 0,
+          "kept": 0
+        },
+        "task10": {
+          "n": 4,
+          "correct": 0,
+          "gain": 0,
+          "loss": 0,
+          "kept": 0
+        }
+      },
+      "correct_with_canonical_read_or_write": 12,
+      "historical_retained": 0
+    },
+    "card": {
+      "by_family": {
+        "task1": {
+          "n": 4,
+          "correct": 4,
+          "gain": 4,
+          "loss": 0,
+          "kept": 0
+        },
+        "task2": {
+          "n": 4,
+          "correct": 1,
+          "gain": 1,
+          "loss": 0,
+          "kept": 0
+        },
+        "task3": {
+          "n": 4,
+          "correct": 1,
+          "gain": 0,
+          "loss": 3,
+          "kept": 1
+        },
+        "task4": {
+          "n": 4,
+          "correct": 0,
+          "gain": 0,
+          "loss": 0,
+          "kept": 0
+        },
+        "task5": {
+          "n": 4,
+          "correct": 3,
+          "gain": 3,
+          "loss": 0,
+          "kept": 0
+        },
+        "task6": {
+          "n": 4,
+          "correct": 0,
+          "gain": 0,
+          "loss": 0,
+          "kept": 0
+        },
+        "task7": {
+          "n": 4,
+          "correct": 3,
+          "gain": 3,
+          "loss": 0,
+          "kept": 0
+        },
+        "task8": {
+          "n": 4,
+          "correct": 4,
+          "gain": 4,
+          "loss": 0,
+          "kept": 0
+        },
+        "task9": {
+          "n": 4,
+          "correct": 0,
+          "gain": 0,
+          "loss": 0,
+          "kept": 0
+        },
+        "task10": {
+          "n": 4,
+          "correct": 1,
+          "gain": 1,
+          "loss": 0,
+          "kept": 0
+        }
+      },
+      "correct_with_canonical_read_or_write": 13,
+      "historical_retained": 1
+    },
+    "selected": {
+      "by_family": {
+        "task1": {
+          "n": 4,
+          "correct": 4,
+          "gain": 4,
+          "loss": 0,
+          "kept": 0
+        },
+        "task2": {
+          "n": 4,
+          "correct": 1,
+          "gain": 1,
+          "loss": 0,
+          "kept": 0
+        },
+        "task3": {
+          "n": 4,
+          "correct": 4,
+          "gain": 0,
+          "loss": 0,
+          "kept": 4
+        },
+        "task4": {
+          "n": 4,
+          "correct": 0,
+          "gain": 0,
+          "loss": 0,
+          "kept": 0
+        },
+        "task5": {
+          "n": 4,
+          "correct": 3,
+          "gain": 3,
+          "loss": 0,
+          "kept": 0
+        },
+        "task6": {
+          "n": 4,
+          "correct": 0,
+          "gain": 0,
+          "loss": 0,
+          "kept": 0
+        },
+        "task7": {
+          "n": 4,
+          "correct": 3,
+          "gain": 3,
+          "loss": 0,
+          "kept": 0
+        },
+        "task8": {
+          "n": 4,
+          "correct": 4,
+          "gain": 4,
+          "loss": 0,
+          "kept": 0
+        },
+        "task9": {
+          "n": 4,
+          "correct": 0,
+          "gain": 0,
+          "loss": 0,
+          "kept": 0
+        },
+        "task10": {
+          "n": 4,
+          "correct": 1,
+          "gain": 1,
+          "loss": 0,
+          "kept": 0
+        }
+      },
+      "correct_with_canonical_read_or_write": 16,
+      "historical_retained": 4
+    }
+  },
+  "selected_minus_demo_patient_bootstrap_95": [
+    0.023255813953488372,
+    0.3902439024390244
+  ]
+}

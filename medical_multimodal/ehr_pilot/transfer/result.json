@@ -1,0 +1,98 @@
+{
+ "n": 40,
+ "historical_correct": 4,
+ "enabled": [
+  1,
+  2,
+  5,
+  7,
+  8,
+  10
+ ],
+ "active": 24,
+ "arms": {
+  "plain": {
+   "correct": 4,
+   "gains": 0,
+   "losses": 0,
+   "retained": 4,
+   "official": 4,
+   "historical_retained": 4,
+   "by_family": {
+    "task3": 4
+   },
+   "model_steps": 131,
+   "tools": 95,
+   "memory_tokens": 0
+  },
+  "demo": {
+   "correct": 12,
+   "gains": 12,
+   "losses": 4,
+   "retained": 0,
+   "official": 12,
+   "historical_retained": 0,
+   "by_family": {
+    "task1": 4,
+    "task2": 3,
+    "task4": 2,
+    "task7": 3
+   },
+   "model_steps": 134,
+   "tools": 100,
+   "memory_tokens": 5732
+  },
+  "card": {
+   "correct": 17,
+   "gains": 16,
+   "losses": 3,
+   "retained": 1,
+   "official": 17,
+   "historical_retained": 1,
+   "by_family": {
+    "task1": 4,
+    "task2": 1,
+    "task3": 1,
+    "task5": 3,
+    "task7": 3,
+    "task8": 4,
+    "task10": 1
+   },
+   "model_steps": 112,
+   "tools": 77,
+   "memory_tokens": 6560
+  },
+  "selected": {
+   "correct": 20,
+   "gains": 16,
+   "losses": 0,
+   "retained": 4,
+   "official": 20,
+   "historical_retained": 4,
+   "by_family": {
+    "task1": 4,
+    "task2": 1,
+    "task3": 4,
+    "task5": 3,
+    "task7": 3,
+    "task8": 4,
+    "task10": 1
+   },
+   "model_steps": 100,
+   "tools": 60,
+   "memory_tokens": 2956
+  }
+ },
+ "selected_vs_demo": {
+  "correct": 20,
+  "gains": 12,
+  "losses": 4,
+  "retained": 8
+ },
+ "teacher_examples": 11,
+ "partition": {
+  "train": 83,
+  "valid": 77,
+  "history": 40
+ }
+}
