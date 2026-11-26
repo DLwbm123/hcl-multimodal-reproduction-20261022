@@ -1,0 +1,10 @@
+{
+ "valid": true,
+ "empty": false,
+ "wrong_patient": false,
+ "missing": false,
+ "duplicate": false,
+ "conditional_n": 6,
+ "conditional_empty_official": 5,
+ "conditional_empty_qualified": 0
+}
