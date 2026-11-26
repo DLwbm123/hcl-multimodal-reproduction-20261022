@@ -18,7 +18,7 @@ GROUPS={'B':[0],'C':[1,2,3],'D':[0,1,2,3]}
 CUT=.002
 
 
-def observe(key,partition,forest,*,paired):
+def observe(key,partition,forest,*,paired,return_scores=False):
     with Image.open(BASE/partition/'images'/(key+'.jpg')) as src:
         image=np.array(src.convert('RGB').resize((SIZE,SIZE),Image.Resampling.LANCZOS))
     (color,contrast),_=features(image)
@@ -29,9 +29,11 @@ def observe(key,partition,forest,*,paired):
     if not paired:
         return x
     truth=gold(key,partition)
-    label=int(key.startswith('g'))
+    label=int(key.startswith('g')) if partition=='train' else None
     first=score((disc,cup),truth,label)
     second=score(outputs((p+probability(forest[0],color))*.5),truth,label)
+    if return_scores:
+        return x,first,second
     return x,first['error']-second['error']
 
 

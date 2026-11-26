@@ -1,0 +1,101 @@
+{
+  "fit": {
+    "local46": {
+      "eligible": 46,
+      "quoted": 8,
+      "specific": 1,
+      "effects": {
+        "stayed_wrong": 31,
+        "stayed_correct": 14,
+        "corrected": 1
+      },
+      "candidates": {
+        "specific_gap": {
+          "gain": 0,
+          "loss": 0,
+          "requests": 1
+        },
+        "verify_identity": {
+          "gain": 0,
+          "loss": 0,
+          "requests": 0
+        }
+      },
+      "selected": "verify_identity",
+      "available": 46,
+      "at_limit": 0
+    },
+    "max62": {
+      "eligible": 62,
+      "quoted": 9,
+      "specific": 1,
+      "effects": {
+        "stayed_wrong": 41,
+        "stayed_correct": 20,
+        "corrected": 1
+      },
+      "candidates": {
+        "specific_gap": {
+          "gain": 0,
+          "loss": 0,
+          "requests": 0
+        },
+        "verify_identity": {
+          "gain": 0,
+          "loss": 0,
+          "requests": 0
+        }
+      },
+      "selected": "specific_gap",
+      "available": 62,
+      "at_limit": 0
+    }
+  },
+  "test": {
+    "local46": {
+      "paired": {
+        "n": 45,
+        "before": 9,
+        "after": 9,
+        "gain": 0,
+        "loss": 0
+      },
+      "retained": 9,
+      "requested": 0,
+      "adopted": 0,
+      "calls": 53,
+      "context": {
+        "n": 45,
+        "before": 15,
+        "after": 15,
+        "gain": 0,
+        "loss": 0
+      }
+    },
+    "max62": {
+      "paired": {
+        "n": 45,
+        "before": 9,
+        "after": 9,
+        "gain": 0,
+        "loss": 0
+      },
+      "retained": 9,
+      "requested": 0,
+      "adopted": 0,
+      "calls": 53,
+      "context": {
+        "n": 45,
+        "before": 15,
+        "after": 15,
+        "gain": 0,
+        "loss": 0
+      }
+    }
+  },
+  "small30": {
+    "n": 30,
+    "correct": 9,
+    "calls": 53
+  }
+}
