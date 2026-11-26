@@ -1,0 +1,106 @@
+{
+ "all": {
+  "original": {
+   "n": 72,
+   "correct": 0,
+   "first_read": 0,
+   "gain": 0,
+   "loss": 0,
+   "retained": 0
+  },
+  "lookup": {
+   "n": 72,
+   "correct": 0,
+   "first_read": 72,
+   "gain": 0,
+   "loss": 0,
+   "retained": 0
+  },
+  "edit": {
+   "n": 72,
+   "correct": 0,
+   "first_read": 72,
+   "gain": 0,
+   "loss": 0,
+   "retained": 0
+  }
+ },
+ "write": {
+  "original": {
+   "n": 24,
+   "correct": 0,
+   "first_read": 0,
+   "gain": 0,
+   "loss": 0,
+   "retained": 0
+  },
+  "lookup": {
+   "n": 24,
+   "correct": 0,
+   "first_read": 24,
+   "gain": 0,
+   "loss": 0,
+   "retained": 0
+  },
+  "edit": {
+   "n": 24,
+   "correct": 0,
+   "first_read": 24,
+   "gain": 0,
+   "loss": 0,
+   "retained": 0
+  }
+ },
+ "no_write": {
+  "original": {
+   "n": 24,
+   "correct": 0,
+   "first_read": 0,
+   "gain": 0,
+   "loss": 0,
+   "retained": 0
+  },
+  "lookup": {
+   "n": 24,
+   "correct": 0,
+   "first_read": 24,
+   "gain": 0,
+   "loss": 0,
+   "retained": 0
+  },
+  "edit": {
+   "n": 24,
+   "correct": 0,
+   "first_read": 24,
+   "gain": 0,
+   "loss": 0,
+   "retained": 0
+  }
+ },
+ "missing": {
+  "original": {
+   "n": 24,
+   "correct": 0,
+   "first_read": 0,
+   "gain": 0,
+   "loss": 0,
+   "retained": 0
+  },
+  "lookup": {
+   "n": 24,
+   "correct": 0,
+   "first_read": 24,
+   "gain": 0,
+   "loss": 0,
+   "retained": 0
+  },
+  "edit": {
+   "n": 24,
+   "correct": 0,
+   "first_read": 24,
+   "gain": 0,
+   "loss": 0,
+   "retained": 0
+  }
+ }
+}

@@ -1,0 +1,63 @@
+{
+  "original": {
+    "write": {
+      "receipt_matches_source": 0,
+      "POST MedicationRequest": 16,
+      "official_success": 0,
+      "POST Observation": 8
+    },
+    "missing": {
+      "receipt_matches_source": 24,
+      "POST Observation": 7,
+      "official_success": 0,
+      "POST MedicationRequest": 17
+    },
+    "no_write": {
+      "receipt_matches_source": 0,
+      "POST Observation": 6,
+      "official_success": 0,
+      "POST MedicationRequest": 18
+    }
+  },
+  "lookup": {
+    "write": {
+      "receipt_matches_source": 24,
+      "POST Observation": 16,
+      "official_success": 0,
+      "other": 4,
+      "POST MedicationRequest": 4
+    },
+    "missing": {
+      "receipt_matches_source": 24,
+      "POST Observation": 23,
+      "official_success": 0,
+      "POST MedicationRequest": 1
+    },
+    "no_write": {
+      "receipt_matches_source": 24,
+      "other": 5,
+      "official_success": 0,
+      "POST Observation": 14,
+      "POST MedicationRequest": 5
+    }
+  },
+  "edit": {
+    "write": {
+      "receipt_matches_source": 24,
+      "IF": 24,
+      "official_success": 0
+    },
+    "missing": {
+      "receipt_matches_source": 24,
+      "LOG": 14,
+      "official_success": 0,
+      "POST MedicationRequest": 6,
+      "POST Observation": 4
+    },
+    "no_write": {
+      "receipt_matches_source": 24,
+      "IF": 24,
+      "official_success": 0
+    }
+  }
+}
