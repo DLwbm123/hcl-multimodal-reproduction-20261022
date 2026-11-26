@@ -11,7 +11,7 @@ from med import SEED,main
 from shared import save
 
 
-def run(cases,refs,split,context,call,policy,available,visible,answer_from,correct,choose,gen):
+def run(cases,refs,split,context,call,policy,available,visible,answer_from,correct,choose,gen,*,capture=False):
     _,gate,test=split
     prior=Path(os.environ['BOUNDED_RUN'])
     baseline=Path(os.environ['PAIRED_RUN'])
@@ -56,7 +56,7 @@ def run(cases,refs,split,context,call,policy,available,visible,answer_from,corre
                 if snapshot is not None:continue
                 planned=NAMES[ord(proposed)-65]
                 state,rule=prompt(q,notes,trusted,answer,accepted,planned,skills['stop'],hint)
-                if n==0 and phase=='test':
+                if n==0 and phase=='test' and not capture:
                     e['replay']=ablate(choose,state,rule,answer,planned)
                 stop,reason=decide(choose,gen,q,answer,trusted,planned,skills['stop'])
                 e['decision']=reason
@@ -69,6 +69,8 @@ def run(cases,refs,split,context,call,policy,available,visible,answer_from,corre
                      revised=correct(k,new_answer),control=correct(k,answer) if answer!=new_answer else None,
                      steps=steps,base_steps=len(base[k]['baseline']['notes']),events=events)
             if row['control'] is None:row['control']=row['revised']
+            if capture:
+                row.update(observations=notes[:steps],answer=new_answer)
             rows[k]=row
             if i%5==0:print(phase,i,flush=True)
         save('private_'+phase,rows)

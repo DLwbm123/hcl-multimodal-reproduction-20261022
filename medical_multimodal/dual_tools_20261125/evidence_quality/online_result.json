@@ -1,0 +1,239 @@
+{
+  "gate": {
+    "all": {
+      "n": 16,
+      "old": 0,
+      "baseline": 1,
+      "new": 6,
+      "router_trust": 5,
+      "first_matches": 2,
+      "baseline_calls": 33,
+      "new_calls": 18,
+      "control_calls": 25,
+      "continued": 2,
+      "vs_old": {
+        "n": 16,
+        "before": 0,
+        "after": 6,
+        "gain": 6,
+        "loss": 0
+      },
+      "vs_base": {
+        "n": 16,
+        "before": 1,
+        "after": 6,
+        "gain": 6,
+        "loss": 1
+      },
+      "vs_control": {
+        "n": 16,
+        "before": 5,
+        "after": 6,
+        "gain": 1,
+        "loss": 0
+      },
+      "stop_reasons": {
+        "router_stop": 11,
+        "continue_no_matching_quote": 2,
+        "stop_verified_quote": 5
+      }
+    },
+    "disputed": {
+      "n": 9,
+      "old": 0,
+      "baseline": 1,
+      "new": 5,
+      "router_trust": 4,
+      "first_matches": 0,
+      "baseline_calls": 26,
+      "new_calls": 10,
+      "control_calls": 17,
+      "continued": 1,
+      "vs_old": {
+        "n": 9,
+        "before": 0,
+        "after": 5,
+        "gain": 5,
+        "loss": 0
+      },
+      "vs_base": {
+        "n": 9,
+        "before": 1,
+        "after": 5,
+        "gain": 5,
+        "loss": 1
+      },
+      "vs_control": {
+        "n": 9,
+        "before": 4,
+        "after": 5,
+        "gain": 1,
+        "loss": 0
+      },
+      "stop_reasons": {
+        "continue_no_matching_quote": 1,
+        "router_stop": 4,
+        "stop_verified_quote": 5
+      }
+    },
+    "other": {
+      "n": 7,
+      "old": 0,
+      "baseline": 0,
+      "new": 1,
+      "router_trust": 1,
+      "first_matches": 2,
+      "baseline_calls": 7,
+      "new_calls": 8,
+      "control_calls": 8,
+      "continued": 1,
+      "vs_old": {
+        "n": 7,
+        "before": 0,
+        "after": 1,
+        "gain": 1,
+        "loss": 0
+      },
+      "vs_base": {
+        "n": 7,
+        "before": 0,
+        "after": 1,
+        "gain": 1,
+        "loss": 0
+      },
+      "vs_control": {
+        "n": 7,
+        "before": 1,
+        "after": 1,
+        "gain": 0,
+        "loss": 0
+      },
+      "stop_reasons": {
+        "router_stop": 7,
+        "continue_no_matching_quote": 1
+      }
+    }
+  },
+  "accepted": true,
+  "test": {
+    "all": {
+      "n": 45,
+      "old": 6,
+      "baseline": 8,
+      "new": 9,
+      "router_trust": 10,
+      "first_matches": 17,
+      "baseline_calls": 81,
+      "new_calls": 53,
+      "control_calls": 65,
+      "continued": 6,
+      "vs_old": {
+        "n": 45,
+        "before": 6,
+        "after": 9,
+        "gain": 5,
+        "loss": 2
+      },
+      "vs_base": {
+        "n": 45,
+        "before": 8,
+        "after": 9,
+        "gain": 4,
+        "loss": 3
+      },
+      "vs_control": {
+        "n": 45,
+        "before": 10,
+        "after": 9,
+        "gain": 0,
+        "loss": 1
+      },
+      "stop_reasons": {
+        "router_stop": 37,
+        "continue_no_accepted_evidence": 2,
+        "stop_verified_quote": 7,
+        "continue_no_matching_quote": 5,
+        "budget": 1,
+        "continue_quote_not_verified": 1
+      }
+    },
+    "disputed": {
+      "n": 23,
+      "old": 0,
+      "baseline": 2,
+      "new": 5,
+      "router_trust": 5,
+      "first_matches": 2,
+      "baseline_calls": 59,
+      "new_calls": 31,
+      "control_calls": 41,
+      "continued": 6,
+      "vs_old": {
+        "n": 23,
+        "before": 0,
+        "after": 5,
+        "gain": 5,
+        "loss": 0
+      },
+      "vs_base": {
+        "n": 23,
+        "before": 2,
+        "after": 5,
+        "gain": 4,
+        "loss": 1
+      },
+      "vs_control": {
+        "n": 23,
+        "before": 5,
+        "after": 5,
+        "gain": 0,
+        "loss": 0
+      },
+      "stop_reasons": {
+        "continue_no_accepted_evidence": 2,
+        "router_stop": 16,
+        "stop_verified_quote": 6,
+        "continue_no_matching_quote": 5,
+        "budget": 1,
+        "continue_quote_not_verified": 1
+      }
+    },
+    "other": {
+      "n": 22,
+      "old": 6,
+      "baseline": 6,
+      "new": 4,
+      "router_trust": 5,
+      "first_matches": 15,
+      "baseline_calls": 22,
+      "new_calls": 22,
+      "control_calls": 24,
+      "continued": 0,
+      "vs_old": {
+        "n": 22,
+        "before": 6,
+        "after": 4,
+        "gain": 0,
+        "loss": 2
+      },
+      "vs_base": {
+        "n": 22,
+        "before": 6,
+        "after": 4,
+        "gain": 0,
+        "loss": 2
+      },
+      "vs_control": {
+        "n": 22,
+        "before": 5,
+        "after": 4,
+        "gain": 0,
+        "loss": 1
+      },
+      "stop_reasons": {
+        "router_stop": 21,
+        "stop_verified_quote": 1
+      }
+    }
+  }
+}

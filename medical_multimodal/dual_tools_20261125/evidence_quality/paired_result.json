@@ -1,0 +1,113 @@
+{
+  "gate": {
+    "all": {
+      "n": 16,
+      "vs_previous": {
+        "before": 0,
+        "after": 6,
+        "gain": 6,
+        "loss": 0,
+        "exact_p": 0.03125
+      },
+      "vs_base": {
+        "before": 1,
+        "after": 6,
+        "gain": 6,
+        "loss": 1,
+        "exact_p": 0.125
+      },
+      "old_calls": 29,
+      "new_calls": 18,
+      "previous_correct_retained": 0
+    }
+  },
+  "test": {
+    "all": {
+      "n": 45,
+      "vs_previous": {
+        "before": 9,
+        "after": 9,
+        "gain": 4,
+        "loss": 4,
+        "exact_p": 1
+      },
+      "vs_base": {
+        "before": 8,
+        "after": 9,
+        "gain": 4,
+        "loss": 3,
+        "exact_p": 1
+      },
+      "old_calls": 75,
+      "new_calls": 53,
+      "previous_correct_retained": 5
+    },
+    "disputed": {
+      "n": 23,
+      "vs_previous": {
+        "before": 3,
+        "after": 5,
+        "gain": 4,
+        "loss": 2,
+        "exact_p": 0.6875
+      },
+      "vs_base": {
+        "before": 2,
+        "after": 5,
+        "gain": 4,
+        "loss": 1,
+        "exact_p": 0.375
+      },
+      "old_calls": 53,
+      "new_calls": 31,
+      "previous_correct_retained": 1
+    },
+    "continued_errors": {
+      "n": 19,
+      "vs_previous": {
+        "before": 0,
+        "after": 4,
+        "gain": 4,
+        "loss": 0,
+        "exact_p": 0.125
+      },
+      "vs_base": {
+        "before": 0,
+        "after": 4,
+        "gain": 4,
+        "loss": 0,
+        "exact_p": 0.125
+      },
+      "old_calls": 44,
+      "new_calls": 27,
+      "previous_correct_retained": 0
+    },
+    "other": {
+      "n": 22,
+      "vs_previous": {
+        "before": 6,
+        "after": 4,
+        "gain": 0,
+        "loss": 2,
+        "exact_p": 0.5
+      },
+      "vs_base": {
+        "before": 6,
+        "after": 4,
+        "gain": 0,
+        "loss": 2,
+        "exact_p": 0.5
+      },
+      "old_calls": 22,
+      "new_calls": 22,
+      "previous_correct_retained": 4
+    }
+  },
+  "fixed_vs_closed": {
+    "before": 4,
+    "after": 4,
+    "gain": 2,
+    "loss": 2,
+    "exact_p": 1
+  }
+}

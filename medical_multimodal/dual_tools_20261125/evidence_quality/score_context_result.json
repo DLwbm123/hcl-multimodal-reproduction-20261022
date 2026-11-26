@@ -1,0 +1,48 @@
+{
+  "gate": {
+    "all": {
+      "n": 16,
+      "base": 1,
+      "old": 1,
+      "new": 5,
+      "reference_pass": 0,
+      "revisions": {
+        "n": 16,
+        "before": 1,
+        "after": 5,
+        "gain": 5,
+        "loss": 1
+      }
+    }
+  },
+  "test": {
+    "all": {
+      "n": 45,
+      "base": 14,
+      "old": 15,
+      "new": 15,
+      "reference_pass": 14,
+      "revisions": {
+        "n": 45,
+        "before": 15,
+        "after": 15,
+        "gain": 5,
+        "loss": 5
+      }
+    },
+    "old_errors": {
+      "n": 19,
+      "base": 3,
+      "old": 3,
+      "new": 6,
+      "reference_pass": 14,
+      "revisions": {
+        "n": 19,
+        "before": 3,
+        "after": 6,
+        "gain": 3,
+        "loss": 0
+      }
+    }
+  }
+}
