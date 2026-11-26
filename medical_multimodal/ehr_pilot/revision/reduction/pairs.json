@@ -1,0 +1,20 @@
+{
+  "all": {
+    "n": 384,
+    "gain": 141,
+    "loss": 1,
+    "retained": 2
+  },
+  "task6": {
+    "n": 192,
+    "gain": 113,
+    "loss": 0,
+    "retained": 0
+  },
+  "task7": {
+    "n": 192,
+    "gain": 28,
+    "loss": 1,
+    "retained": 2
+  }
+}
