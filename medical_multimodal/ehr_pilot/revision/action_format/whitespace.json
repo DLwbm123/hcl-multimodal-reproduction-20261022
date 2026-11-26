@@ -1,0 +1,14 @@
+{
+  "write": {
+    "observed": 0,
+    "normalized": 0
+  },
+  "missing": {
+    "observed": 0,
+    "normalized": 0
+  },
+  "no_write": {
+    "observed": 0,
+    "normalized": 0
+  }
+}

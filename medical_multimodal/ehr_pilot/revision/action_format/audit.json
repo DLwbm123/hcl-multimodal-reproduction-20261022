@@ -1,0 +1,44 @@
+{
+  "plain": {
+    "write": {
+      "source_agreement": 24,
+      "other": 23,
+      "nonempty_answer": 1
+    },
+    "missing": {
+      "source_agreement": 24,
+      "local_endpoint_prefix": 4,
+      "parseable_post": 3,
+      "malformed_post": 1,
+      "other": 20
+    },
+    "no_write": {
+      "source_agreement": 24,
+      "other": 22,
+      "local_endpoint_prefix": 1,
+      "malformed_post": 1,
+      "nonempty_answer": 1
+    }
+  },
+  "constrained": {
+    "write": {
+      "source_agreement": 24,
+      "leading_whitespace": 18,
+      "malformed_post": 17,
+      "nonempty_answer": 6,
+      "parseable_post": 1
+    },
+    "missing": {
+      "source_agreement": 24,
+      "leading_whitespace": 24,
+      "parseable_post": 24
+    },
+    "no_write": {
+      "source_agreement": 24,
+      "nonempty_answer": 5,
+      "leading_whitespace": 19,
+      "parseable_post": 8,
+      "malformed_post": 11
+    }
+  }
+}
