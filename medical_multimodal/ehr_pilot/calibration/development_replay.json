@@ -1,0 +1,53 @@
+{
+  "total": {
+    "n": 160,
+    "used": 83,
+    "base": 16,
+    "correct": 46,
+    "gains": 30,
+    "losses": 0
+  },
+  "patient_count": 56,
+  "folds": [
+    {
+      "n": 38,
+      "used": 24,
+      "base": 3,
+      "correct": 8,
+      "gains": 5,
+      "losses": 0
+    },
+    {
+      "n": 29,
+      "used": 16,
+      "base": 2,
+      "correct": 9,
+      "gains": 7,
+      "losses": 0
+    },
+    {
+      "n": 25,
+      "used": 13,
+      "base": 4,
+      "correct": 8,
+      "gains": 4,
+      "losses": 0
+    },
+    {
+      "n": 36,
+      "used": 15,
+      "base": 4,
+      "correct": 9,
+      "gains": 5,
+      "losses": 0
+    },
+    {
+      "n": 32,
+      "used": 15,
+      "base": 3,
+      "correct": 12,
+      "gains": 9,
+      "losses": 0
+    }
+  ]
+}

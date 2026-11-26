@@ -153,21 +153,34 @@ def fetch(url):
     return json.dumps(dict(total=total,returned=len(rows[:24]),truncated=len(rows)>24 or total>len(rows),rows=rows[:24]),separators=(',',':')), (route,parse_qs(p.query))
 
 
-def run(cases,mode,hints=None,sample=False):
+def run(cases,mode,hints=None,sample=False,initial_query=None,batch_size=4,hint_budget=192):
     file=Path(mode+'.json')
     done=json.loads(file.read_text()) if file.exists() else []
     assert [r['id'] for r in done] == [c['id'] for c in cases[:len(done)]]
-    for start in range(len(done),len(cases),4):
+    for start in range(len(done),len(cases),batch_size):
         torch.manual_seed(SEED + start + sum(map(ord, mode)))
-        chunk=cases[start:start+4]
+        chunk=cases[start:start+batch_size]
         batch=[]
         for c in chunk:
-            hint=clip(hints(c),192) if hints else ''
+            hint=hints(c) if hints else ''
+            if hint and len(tok.encode(hint,add_special_tokens=False))>hint_budget:
+                if hint_budget!=192:
+                    raise ValueError('Complete memory exceeds frozen budget')
+                hint=clip(hint,hint_budget)
             prompt=template.format(api_base=BASE.rstrip('/'),functions=docs,context=c['context'],question=c['instruction'])
             if hint:
                 prompt+='\nPrior workflow memory (use only if relevant): '+hint
             batch.append(dict(chat=[dict(role='user',content=prompt)],hist=[],reads=[],answer=None,active=True,status='limit'))
-        for _ in range(8):
+            if initial_query:
+                url = initial_query(c)
+                result, read = fetch(url)
+                if read is None:
+                    raise RuntimeError('Reference GET failed')
+                b = batch[-1]
+                b['reads'].append(read)
+                b['hist'].extend([('agent','GET '+url),('user',result)])
+                b['chat'].extend([dict(role='assistant',content='GET '+url),dict(role='user',content=result)])
+        for _ in range(8-int(initial_query is not None)):
             live=[b for b in batch if b['active']]
             if not live:
                 break

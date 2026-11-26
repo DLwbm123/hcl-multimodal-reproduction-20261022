@@ -1,0 +1,52 @@
+{
+ "real": {
+  "task1": {
+   "n": 15,
+   "pass": 15
+  },
+  "task2": {
+   "n": 14,
+   "pass": 14
+  },
+  "task3": {
+   "n": 16,
+   "pass": 16
+  },
+  "task4": {
+   "n": 15,
+   "pass": 15
+  },
+  "task5": {
+   "n": 16,
+   "pass": 16,
+   "no_write": 14,
+   "write": 2
+  },
+  "task6": {
+   "n": 17,
+   "pass": 17
+  },
+  "task7": {
+   "n": 16,
+   "pass": 16
+  },
+  "task8": {
+   "n": 16,
+   "pass": 16
+  },
+  "task9": {
+   "n": 19,
+   "pass": 19,
+   "no_write": 19
+  },
+  "task10": {
+   "n": 16,
+   "pass": 16,
+   "write": 10,
+   "no_write": 6
+  }
+ },
+ "synthetic": {
+  "9_write": true
+ }
+}
