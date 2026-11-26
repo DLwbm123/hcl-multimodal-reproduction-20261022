@@ -12,7 +12,7 @@ MENU='A whole-image description; B localized visual attributes; C OCR for visibl
 CODES=dict(zip(NAMES,'ABCD'))
 
 
-def main():
+def main(*, locator=None, fit_observer=None, extra_panels=None):
     cases,refs=data()
     fit,gate,test=split()
     choose,gen=models()
@@ -33,7 +33,13 @@ def main():
     def call(q,img,path,notes,name):
         ctx=visible(q,notes)
         req={'name':name,'path':str(path)}
-        if name=='RegionAttributeDescription':
+        if name=='RegionAttributeDescription' and locator is not None:
+            seen={tuple(json.loads(n['arg'])['box']) for n in notes if n['name']==name and n['ok']}
+            box=locator(choose,ctx,img,seen)
+            if box is None:
+                return dict(name=name,ok=False,text='No valid unused region.',arg='')
+            req.update(box=box,attribute='Visible features relevant to: '+q)
+        elif name=='RegionAttributeDescription':
             raw=gen(ctx+'\nSelect a relevant box to resolve the remaining visual question. Exactly four integer coordinates from 0 to 1000, x1 y1 x2 y2.',40,img)
             nums=re.findall(r'(?<![\w.])-?\d+(?![\w.])',raw)
             if len(nums)==4:
@@ -65,15 +71,21 @@ def main():
             c=policy(q,img,notes,skill,bank)
             if c=='E':break
             notes.append(call(q,img,path,notes,NAMES[ord(c)-65]))
-        answer=gen(visible(q,notes)+'\nGive the concise clinical answer supported by this evidence.',96)
+        answer=answer_from(q,notes)
         return dict(notes=notes,answer=answer)
+
+    def answer_from(q,notes):
+        return gen(visible(q,notes)+'\nGive the concise clinical answer supported by this evidence.',96)
+
+    def correct(k,answer):
+        judged=choose('Reference acceptance criteria: '+json.dumps(refs[k]['gt_answer'])+'\nAnswer: '+answer,{},
+                  'A = answer satisfies the reference clinically including key details, B = incorrect or incomplete. Return A or B.',list('AB'))
+        return int(judged=='A')
 
     def outcome(k,row):
         exp=actions(refs[k])
         seq=[n['name'] for n in row['notes'] if n['ok']]
-        judged=choose('Reference acceptance criteria: '+json.dumps(refs[k]['gt_answer'])+'\nAnswer: '+row['answer'],{},
-                  'A = answer satisfies the reference clinically including key details, B = incorrect or incomplete. Return A or B.',list('AB'))
-        return dict(correct=int(judged=='A'),f1=evaluate(seq,exp),exact=int(seq==exp),
+        return dict(correct=correct(k,row['answer']),f1=evaluate(seq,exp),exact=int(seq==exp),
                     steps=len(row['notes']),invalid=sum(not n['ok'] for n in row['notes']))
 
     try:
@@ -92,6 +104,8 @@ def main():
                 row=dict(visible=state,stage=stage,next=name)
                 # Fit-only teacher explanations and actual returned evidence never enter evaluation input.
                 response=call(q,img,path,notes,name) if name!='finish' else None
+                if fit_observer is not None and name=='RegionAttributeDescription' and not any(n['name']==name for n in notes):
+                    fit_observer(k,img,ref,notes,response,lambda evidence: correct(k,answer_from(q,evidence)))
                 detail=state+'\nReference rationale for this transition: '+rationale[:250]
                 if response:detail+='\nWhat the executed next tool returned: '+response['text'][:220]
                 examples.append(example(k+'.'+str(step),detail,predicted,name))
@@ -101,6 +115,8 @@ def main():
                 bank.append(row)
                 if response:notes.append(response)
             if i%5==0:print('fit',i,flush=True)
+        if fit_observer is not None:
+            fit_observer.finish()
         memory=consolidate(examples,gen)
         # Cover transition types and mistakes before drawing a second example per type.
         groups={}
@@ -114,7 +130,10 @@ def main():
         skill=append(SEED,instruction)
         save('private_learning',dict(skill=skill,memory=memory,bank=bank))
         result={}; accepted=False
-        for phase,ids in [('gate',gate),('test',test)]:
+        phases=[('gate',gate),('test',test)]
+        if extra_panels:
+            phases.extend(extra_panels(cases,refs,fit+gate+test))
+        for phase,ids in phases:
             rows={};scores=[]
             for i,k in enumerate(ids,1):
                 base=episode(k,SEED,None); cand=episode(k,skill,bank)

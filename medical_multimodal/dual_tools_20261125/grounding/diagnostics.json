@@ -1,0 +1,184 @@
+{
+  "fit_all": {
+    "n": 27,
+    "iou": 0.26149252593898903,
+    "reference_center_iou": 0.3683308796358731,
+    "candidate_set_best_iou": 0.5480578639301772
+  },
+  "fit_unclipped": {
+    "n": 23,
+    "iou": 0.28076642368088994,
+    "reference_center_iou": 0.38490285364746896,
+    "candidate_set_best_iou": 0.540431340327382
+  },
+  "gate": {
+    "baseline": {
+      "cases_with_multiple_successful_tool_types": 9,
+      "success_calls": {
+        "ImageDescription": 14,
+        "RegionAttributeDescription": 16,
+        "OCR": 3
+      },
+      "local": {
+        "attempts": 16,
+        "successes": 16,
+        "nonempty": 16,
+        "cases_success": 9
+      },
+      "successful_routes": {
+        "ImageDescription": 5,
+        "ImageDescription + RegionAttributeDescription + RegionAttributeDescription + RegionAttributeDescription": 3,
+        "ImageDescription + RegionAttributeDescription": 4,
+        "OCR": 2,
+        "ImageDescription + RegionAttributeDescription + RegionAttributeDescription": 1,
+        "ImageDescription + RegionAttributeDescription + OCR": 1
+      }
+    },
+    "candidate": {
+      "cases_with_multiple_successful_tool_types": 1,
+      "success_calls": {
+        "ImageDescription": 16,
+        "OCR": 1
+      },
+      "local": {
+        "attempts": 0,
+        "successes": 0,
+        "nonempty": 0,
+        "cases_success": 0
+      },
+      "successful_routes": {
+        "ImageDescription": 15,
+        "OCR + ImageDescription": 1
+      }
+    },
+    "gains": 0,
+    "losses": 1,
+    "exact_p": 1,
+    "retrieval_use": {
+      "decisions": 33,
+      "agrees_with_retrieval": 4,
+      "retrieved_local": 13,
+      "followed_local": 0,
+      "stopped_instead_of_local": 13
+    }
+  },
+  "test": {
+    "baseline": {
+      "cases_with_multiple_successful_tool_types": 23,
+      "success_calls": {
+        "OCR": 19,
+        "ImageDescription": 28,
+        "RegionAttributeDescription": 34
+      },
+      "local": {
+        "attempts": 34,
+        "successes": 34,
+        "nonempty": 34,
+        "cases_success": 22
+      },
+      "successful_routes": {
+        "OCR": 14,
+        "OCR + ImageDescription": 2,
+        "ImageDescription + OCR": 2,
+        "ImageDescription + RegionAttributeDescription + RegionAttributeDescription + RegionAttributeDescription": 6,
+        "ImageDescription + RegionAttributeDescription": 12,
+        "RegionAttributeDescription": 3,
+        "ImageDescription": 5,
+        "ImageDescription + OCR + RegionAttributeDescription": 1
+      }
+    },
+    "candidate": {
+      "cases_with_multiple_successful_tool_types": 5,
+      "success_calls": {
+        "ImageDescription": 43,
+        "OCR": 7
+      },
+      "local": {
+        "attempts": 0,
+        "successes": 0,
+        "nonempty": 0,
+        "cases_success": 0
+      },
+      "successful_routes": {
+        "ImageDescription": 38,
+        "OCR + ImageDescription": 5,
+        "OCR": 2
+      }
+    },
+    "gains": 1,
+    "losses": 4,
+    "exact_p": 0.375,
+    "retrieval_use": {
+      "decisions": 95,
+      "agrees_with_retrieval": 19,
+      "retrieved_local": 35,
+      "followed_local": 0,
+      "stopped_instead_of_local": 35
+    }
+  },
+  "change_from_previous_test": {
+    "base_score": {
+      "before": 3,
+      "after": 8,
+      "gains": 5,
+      "losses": 0
+    },
+    "candidate_score": {
+      "before": 5,
+      "after": 5,
+      "gains": 0,
+      "losses": 0
+    }
+  },
+  "search_stress": {
+    "baseline": {
+      "cases_with_multiple_successful_tool_types": 4,
+      "success_calls": {
+        "OCR": 10,
+        "ImageDescription": 7,
+        "RegionAttributeDescription": 4
+      },
+      "local": {
+        "attempts": 4,
+        "successes": 4,
+        "nonempty": 4,
+        "cases_success": 3
+      },
+      "successful_routes": {
+        "OCR": 9,
+        "ImageDescription + RegionAttributeDescription + RegionAttributeDescription": 1,
+        "ImageDescription + OCR": 1,
+        "ImageDescription": 3,
+        "ImageDescription + RegionAttributeDescription": 2
+      }
+    },
+    "candidate": {
+      "cases_with_multiple_successful_tool_types": 4,
+      "success_calls": {
+        "OCR": 5,
+        "ImageDescription": 15
+      },
+      "local": {
+        "attempts": 0,
+        "successes": 0,
+        "nonempty": 0,
+        "cases_success": 0
+      },
+      "successful_routes": {
+        "OCR": 1,
+        "ImageDescription": 11,
+        "OCR + ImageDescription": 4
+      }
+    },
+    "gains": 0,
+    "losses": 1,
+    "exact_p": 1,
+    "retrieval_use": {
+      "decisions": 36,
+      "agrees_with_retrieval": 12,
+      "retrieved_local": 10,
+      "followed_local": 0,
+      "stopped_instead_of_local": 10
+    }
+  }
+}

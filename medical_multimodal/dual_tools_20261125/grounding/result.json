@@ -1,0 +1,103 @@
+{
+  "gate": {
+    "n": 16,
+    "baseline": {
+      "correct": 0.0625,
+      "f1": 0.68125,
+      "exact": 0.0,
+      "steps": 2.0625,
+      "invalid": 0.0
+    },
+    "candidate": {
+      "correct": 0.0,
+      "f1": 0.51875,
+      "exact": 0.0,
+      "steps": 1.0625,
+      "invalid": 0.0
+    },
+    "deployed": {
+      "correct": 0.0625,
+      "f1": 0.68125,
+      "exact": 0.0,
+      "steps": 2.0625,
+      "invalid": 0.0
+    },
+    "gain": 0,
+    "loss": 1,
+    "transitions": {
+      "ImageDescription": 16,
+      "OCR": 1
+    }
+  },
+  "accepted": false,
+  "tool_executions": {
+    "OCR": 61,
+    "ImageDescription": 104,
+    "RegionAttributeDescription": 85,
+    "Calculator": 1
+  },
+  "model_calls": {
+    "decisions": 780,
+    "generations": 213
+  },
+  "test": {
+    "n": 45,
+    "baseline": {
+      "correct": 0.17777777777777778,
+      "f1": 0.6614814814814816,
+      "exact": 0.0,
+      "steps": 1.8,
+      "invalid": 0.0
+    },
+    "candidate": {
+      "correct": 0.1111111111111111,
+      "f1": 0.5370370370370371,
+      "exact": 0.0,
+      "steps": 1.1111111111111112,
+      "invalid": 0.0
+    },
+    "deployed": {
+      "correct": 0.17777777777777778,
+      "f1": 0.6614814814814816,
+      "exact": 0.0,
+      "steps": 1.8,
+      "invalid": 0.0
+    },
+    "gain": 1,
+    "loss": 4,
+    "transitions": {
+      "ImageDescription": 43,
+      "OCR": 7
+    }
+  },
+  "search_stress": {
+    "n": 16,
+    "baseline": {
+      "correct": 0.1875,
+      "f1": 0.4875,
+      "exact": 0.0,
+      "steps": 1.3125,
+      "invalid": 0.0
+    },
+    "candidate": {
+      "correct": 0.125,
+      "f1": 0.5104166666666666,
+      "exact": 0.0,
+      "steps": 1.25,
+      "invalid": 0.0
+    },
+    "deployed": {
+      "correct": 0.1875,
+      "f1": 0.4875,
+      "exact": 0.0,
+      "steps": 1.3125,
+      "invalid": 0.0
+    },
+    "gain": 0,
+    "loss": 1,
+    "transitions": {
+      "OCR": 5,
+      "ImageDescription": 15
+    }
+  }
+}

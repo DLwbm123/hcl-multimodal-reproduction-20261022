@@ -1,0 +1,14 @@
+{
+  "n": 28,
+  "nonempty": 28,
+  "geometry_n": 27,
+  "clipped": 4,
+  "mean_iou": 0.26149252593898903,
+  "mean_center_iou": 0.3683308796358731,
+  "mean_menu_best_iou": 0.5480578639301772,
+  "iou_at_50": 5,
+  "before": 7,
+  "after": 5,
+  "gains": 2,
+  "losses": 4
+}

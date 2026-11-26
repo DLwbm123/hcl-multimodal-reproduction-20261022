@@ -1,0 +1,23 @@
+{
+  "n": 27,
+  "correct": {
+    "before": 7,
+    "predicted_box": 5,
+    "reference_box": 5,
+    "reference_box_and_attribute": 7
+  },
+  "paired": {
+    "predicted_box": {
+      "gain": 2,
+      "loss": 4
+    },
+    "reference_box": {
+      "gain": 1,
+      "loss": 1
+    },
+    "reference_box_and_attribute": {
+      "gain": 5,
+      "loss": 3
+    }
+  }
+}
