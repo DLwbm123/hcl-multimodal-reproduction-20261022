@@ -1,0 +1,243 @@
+{
+  "gate": {
+    "all": {
+      "n": 16,
+      "old": 0,
+      "baseline": 1,
+      "new": 0,
+      "router_trust": 0,
+      "first_matches": 16,
+      "baseline_calls": 33,
+      "new_calls": 29,
+      "control_calls": 33,
+      "continued": 8,
+      "vs_old": {
+        "n": 16,
+        "before": 0,
+        "after": 0,
+        "gain": 0,
+        "loss": 0
+      },
+      "vs_base": {
+        "n": 16,
+        "before": 1,
+        "after": 0,
+        "gain": 0,
+        "loss": 1
+      },
+      "vs_control": {
+        "n": 16,
+        "before": 0,
+        "after": 0,
+        "gain": 0,
+        "loss": 0
+      },
+      "stop_reasons": {
+        "router_stop": 12,
+        "continue_no_accepted_evidence": 3,
+        "continue_no_matching_quote": 7,
+        "budget": 2,
+        "continue_quote_not_verified": 3,
+        "stop_verified_quote": 2
+      }
+    },
+    "disputed": {
+      "n": 9,
+      "old": 0,
+      "baseline": 1,
+      "new": 0,
+      "router_trust": 0,
+      "first_matches": 9,
+      "baseline_calls": 26,
+      "new_calls": 22,
+      "control_calls": 26,
+      "continued": 8,
+      "vs_old": {
+        "n": 9,
+        "before": 0,
+        "after": 0,
+        "gain": 0,
+        "loss": 0
+      },
+      "vs_base": {
+        "n": 9,
+        "before": 1,
+        "after": 0,
+        "gain": 0,
+        "loss": 1
+      },
+      "vs_control": {
+        "n": 9,
+        "before": 0,
+        "after": 0,
+        "gain": 0,
+        "loss": 0
+      },
+      "stop_reasons": {
+        "continue_no_accepted_evidence": 3,
+        "continue_no_matching_quote": 7,
+        "budget": 2,
+        "continue_quote_not_verified": 3,
+        "router_stop": 5,
+        "stop_verified_quote": 2
+      }
+    },
+    "other": {
+      "n": 7,
+      "old": 0,
+      "baseline": 0,
+      "new": 0,
+      "router_trust": 0,
+      "first_matches": 7,
+      "baseline_calls": 7,
+      "new_calls": 7,
+      "control_calls": 7,
+      "continued": 0,
+      "vs_old": {
+        "n": 7,
+        "before": 0,
+        "after": 0,
+        "gain": 0,
+        "loss": 0
+      },
+      "vs_base": {
+        "n": 7,
+        "before": 0,
+        "after": 0,
+        "gain": 0,
+        "loss": 0
+      },
+      "vs_control": {
+        "n": 7,
+        "before": 0,
+        "after": 0,
+        "gain": 0,
+        "loss": 0
+      },
+      "stop_reasons": {
+        "router_stop": 7
+      }
+    }
+  },
+  "accepted": false,
+  "test": {
+    "all": {
+      "n": 45,
+      "old": 6,
+      "baseline": 8,
+      "new": 9,
+      "router_trust": 8,
+      "first_matches": 45,
+      "baseline_calls": 81,
+      "new_calls": 75,
+      "control_calls": 81,
+      "continued": 22,
+      "vs_old": {
+        "n": 45,
+        "before": 6,
+        "after": 9,
+        "gain": 3,
+        "loss": 0
+      },
+      "vs_base": {
+        "n": 45,
+        "before": 8,
+        "after": 9,
+        "gain": 2,
+        "loss": 1
+      },
+      "vs_control": {
+        "n": 45,
+        "before": 8,
+        "after": 9,
+        "gain": 1,
+        "loss": 0
+      },
+      "stop_reasons": {
+        "router_stop": 38,
+        "continue_no_accepted_evidence": 12,
+        "continue_no_matching_quote": 16,
+        "stop_verified_quote": 4,
+        "budget": 3,
+        "continue_quote_not_verified": 2
+      }
+    },
+    "disputed": {
+      "n": 23,
+      "old": 0,
+      "baseline": 2,
+      "new": 3,
+      "router_trust": 2,
+      "first_matches": 23,
+      "baseline_calls": 59,
+      "new_calls": 53,
+      "control_calls": 59,
+      "continued": 22,
+      "vs_old": {
+        "n": 23,
+        "before": 0,
+        "after": 3,
+        "gain": 3,
+        "loss": 0
+      },
+      "vs_base": {
+        "n": 23,
+        "before": 2,
+        "after": 3,
+        "gain": 1,
+        "loss": 0
+      },
+      "vs_control": {
+        "n": 23,
+        "before": 2,
+        "after": 3,
+        "gain": 1,
+        "loss": 0
+      },
+      "stop_reasons": {
+        "continue_no_accepted_evidence": 12,
+        "router_stop": 16,
+        "continue_no_matching_quote": 16,
+        "stop_verified_quote": 4,
+        "budget": 3,
+        "continue_quote_not_verified": 2
+      }
+    },
+    "other": {
+      "n": 22,
+      "old": 6,
+      "baseline": 6,
+      "new": 6,
+      "router_trust": 6,
+      "first_matches": 22,
+      "baseline_calls": 22,
+      "new_calls": 22,
+      "control_calls": 22,
+      "continued": 0,
+      "vs_old": {
+        "n": 22,
+        "before": 6,
+        "after": 6,
+        "gain": 0,
+        "loss": 0
+      },
+      "vs_base": {
+        "n": 22,
+        "before": 6,
+        "after": 6,
+        "gain": 1,
+        "loss": 1
+      },
+      "vs_control": {
+        "n": 22,
+        "before": 6,
+        "after": 6,
+        "gain": 0,
+        "loss": 0
+      },
+      "stop_reasons": {
+        "router_stop": 22
+      }
+    }
+  }
+}

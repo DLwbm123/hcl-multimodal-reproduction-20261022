@@ -1,0 +1,19 @@
+{
+  "text_stop_state_skill_binary": 23,
+  "text_stop_state_skill_menu": 23,
+  "text_stop_state_seed_binary": 15,
+  "text_stop_state_seed_menu": 20,
+  "text_observed_only_skill_binary": 22,
+  "text_observed_only_skill_menu": 18,
+  "text_observed_only_seed_binary": 5,
+  "text_observed_only_seed_menu": 16,
+  "image_stop_state_skill_binary": 22,
+  "image_stop_state_skill_menu": 15,
+  "image_stop_state_seed_binary": 15,
+  "image_stop_state_seed_menu": 4,
+  "image_observed_only_skill_binary": 20,
+  "image_observed_only_skill_menu": 13,
+  "image_observed_only_seed_binary": 21,
+  "image_observed_only_seed_menu": 0,
+  "base_action_reproduced": 23
+}

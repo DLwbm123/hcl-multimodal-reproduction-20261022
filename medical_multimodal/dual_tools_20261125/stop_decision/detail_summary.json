@@ -1,0 +1,85 @@
+{
+  "old_prompt_stop_counts": {
+    "draft_generic": 23,
+    "draft_named": 23,
+    "masked_generic": 7,
+    "masked_named": 20
+  },
+  "first_reasons": {
+    "continue_no_accepted_evidence": 11,
+    "continue_no_matching_quote": 9,
+    "stop_verified_quote": 1,
+    "continue_quote_not_verified": 2
+  },
+  "next_tool": {
+    "RegionAttributeDescription": {
+      "n": 18,
+      "continued": 18,
+      "all_evidence_first_to_second": {
+        "n": 18,
+        "before": 0,
+        "after": 2,
+        "gain": 2,
+        "loss": 0
+      },
+      "revised_correct": 3
+    },
+    "OCR": {
+      "n": 3,
+      "continued": 2,
+      "all_evidence_first_to_second": {
+        "n": 3,
+        "before": 0,
+        "after": 0,
+        "gain": 0,
+        "loss": 0
+      },
+      "revised_correct": 0
+    },
+    "ImageDescription": {
+      "n": 2,
+      "continued": 2,
+      "all_evidence_first_to_second": {
+        "n": 2,
+        "before": 0,
+        "after": 0,
+        "gain": 0,
+        "loss": 0
+      },
+      "revised_correct": 0
+    }
+  },
+  "accepted_first": {
+    "False": {
+      "n": 11,
+      "continued": 11,
+      "all_evidence_first_to_second": {
+        "n": 11,
+        "before": 0,
+        "after": 1,
+        "gain": 1,
+        "loss": 0
+      },
+      "revised_correct": 2
+    },
+    "True": {
+      "n": 12,
+      "continued": 11,
+      "all_evidence_first_to_second": {
+        "n": 12,
+        "before": 0,
+        "after": 1,
+        "gain": 1,
+        "loss": 0
+      },
+      "revised_correct": 1
+    }
+  },
+  "baseline_final_rescues": {
+    "n": 2,
+    "continued": 2,
+    "accepted_second": 2,
+    "revised_correct": 2,
+    "control_correct": 2
+  }
+}

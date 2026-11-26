@@ -1,0 +1,100 @@
+{
+  "all": {
+    "n": 45,
+    "bounded": {
+      "accepted": 25,
+      "correct": 6,
+      "original": 45,
+      "swap": 45,
+      "reverse_lines": 45,
+      "swap_reverse": 45,
+      "with_image": 44,
+      "no_memory": 45
+    },
+    "free": {
+      "accepted": 26,
+      "correct": 8,
+      "original": 45,
+      "swap": 45,
+      "reverse_lines": 45,
+      "swap_reverse": 45
+    },
+    "next": {
+      "finish": 22,
+      "ImageDescription": 2,
+      "OCR": 3,
+      "RegionAttributeDescription": 18
+    }
+  },
+  "disagreed": {
+    "n": 23,
+    "bounded": {
+      "accepted": 12,
+      "correct": 0,
+      "original": 23,
+      "swap": 23,
+      "reverse_lines": 23,
+      "swap_reverse": 23,
+      "with_image": 22,
+      "no_memory": 23
+    },
+    "free": {
+      "accepted": 11,
+      "correct": 1,
+      "original": 23,
+      "swap": 23,
+      "reverse_lines": 23,
+      "swap_reverse": 23
+    },
+    "next": {
+      "ImageDescription": 2,
+      "OCR": 3,
+      "RegionAttributeDescription": 18
+    }
+  },
+  "already_stop": {
+    "n": 22,
+    "bounded": {
+      "accepted": 13,
+      "correct": 6,
+      "original": 22,
+      "swap": 22,
+      "reverse_lines": 22,
+      "swap_reverse": 22,
+      "with_image": 22,
+      "no_memory": 22
+    },
+    "free": {
+      "accepted": 15,
+      "correct": 7,
+      "original": 22,
+      "swap": 22,
+      "reverse_lines": 22,
+      "swap_reverse": 22
+    },
+    "next": {
+      "finish": 22
+    }
+  },
+  "baseline_prefix_first_second": {
+    "n": 23,
+    "before": 0,
+    "after": 2,
+    "gain": 2,
+    "loss": 0
+  },
+  "baseline_prefix_first_final": {
+    "n": 23,
+    "before": 0,
+    "after": 2,
+    "gain": 2,
+    "loss": 0
+  },
+  "old_bounded_to_baseline": {
+    "n": 23,
+    "before": 0,
+    "after": 2,
+    "gain": 2,
+    "loss": 0
+  }
+}
