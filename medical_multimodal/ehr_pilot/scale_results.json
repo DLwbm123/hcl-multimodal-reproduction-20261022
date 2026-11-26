@@ -1,0 +1,154 @@
+{
+ "selection": {
+  "base": {
+   "n": 20,
+   "official": 2,
+   "qualified": 2,
+   "gains": 0,
+   "losses": 0,
+   "mean_steps": 2.75,
+   "by_family": {
+    "task1": 0,
+    "task2": 0,
+    "task3": 2,
+    "task4": 0,
+    "task5": 0,
+    "task6": 0,
+    "task7": 0,
+    "task8": 0,
+    "task9": 0,
+    "task10": 0
+   },
+   "status": {
+    "invalid": 4,
+    "finish": 16
+   }
+  },
+  "candidate": {
+   "n": 20,
+   "official": 0,
+   "qualified": 0,
+   "gains": 0,
+   "losses": 2,
+   "mean_steps": 2.15,
+   "by_family": {
+    "task1": 0,
+    "task2": 0,
+    "task3": 0,
+    "task4": 0,
+    "task5": 0,
+    "task6": 0,
+    "task7": 0,
+    "task8": 0,
+    "task9": 0,
+    "task10": 0
+   },
+   "status": {
+    "invalid": 6,
+    "finish": 14
+   }
+  }
+ },
+ "accept": false,
+ "later": {
+  "base": {
+   "n": 40,
+   "official": 4,
+   "qualified": 4,
+   "gains": 0,
+   "losses": 0,
+   "mean_steps": 2.75,
+   "by_family": {
+    "task1": 0,
+    "task2": 0,
+    "task3": 4,
+    "task4": 0,
+    "task5": 0,
+    "task6": 0,
+    "task7": 0,
+    "task8": 0,
+    "task9": 0,
+    "task10": 0
+   },
+   "status": {
+    "invalid": 8,
+    "finish": 32
+   }
+  },
+  "retry": {
+   "n": 40,
+   "official": 3,
+   "qualified": 3,
+   "gains": 1,
+   "losses": 2,
+   "mean_steps": 3.175,
+   "by_family": {
+    "task1": 0,
+    "task2": 0,
+    "task3": 2,
+    "task4": 0,
+    "task5": 1,
+    "task6": 0,
+    "task7": 0,
+    "task8": 0,
+    "task9": 0,
+    "task10": 0
+   },
+   "status": {
+    "invalid": 9,
+    "limit": 3,
+    "finish": 28
+   }
+  },
+  "retrieval": {
+   "n": 40,
+   "official": 6,
+   "qualified": 6,
+   "gains": 6,
+   "losses": 4,
+   "mean_steps": 1.675,
+   "by_family": {
+    "task1": 0,
+    "task2": 0,
+    "task3": 0,
+    "task4": 2,
+    "task5": 0,
+    "task6": 0,
+    "task7": 0,
+    "task8": 4,
+    "task9": 0,
+    "task10": 0
+   },
+   "status": {
+    "limit": 1,
+    "invalid": 11,
+    "finish": 28
+   }
+  },
+  "selected": {
+   "n": 40,
+   "official": 4,
+   "qualified": 4,
+   "gains": 0,
+   "losses": 0,
+   "mean_steps": 2.75,
+   "by_family": {
+    "task1": 0,
+    "task2": 0,
+    "task3": 4,
+    "task4": 0,
+    "task5": 0,
+    "task6": 0,
+    "task7": 0,
+    "task8": 0,
+    "task9": 0,
+    "task10": 0
+   },
+   "status": {
+    "invalid": 8,
+    "finish": 32
+   }
+  }
+ },
+ "oracle_pass_at_2": 5
+}
