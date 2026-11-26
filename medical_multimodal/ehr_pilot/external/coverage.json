@@ -1,0 +1,46 @@
+{
+  "n": 1000,
+  "patients": 100,
+  "strata": {
+    "task1": {
+      "standard": 100
+    },
+    "task2": {
+      "standard": 100
+    },
+    "task3": {
+      "standard": 100
+    },
+    "task4": {
+      "measured": 93,
+      "missing": 7
+    },
+    "task5": {
+      "no_write": 53,
+      "write": 40,
+      "missing": 7
+    },
+    "task6": {
+      "missing": 23,
+      "measured": 77
+    },
+    "task7": {
+      "missing": 23,
+      "measured": 77
+    },
+    "task8": {
+      "standard": 100
+    },
+    "task9": {
+      "no_write": 86,
+      "write": 12,
+      "missing": 2
+    },
+    "task10": {
+      "missing": 64,
+      "recent_no_write": 33,
+      "old_write": 3
+    }
+  },
+  "observations": 2154
+}

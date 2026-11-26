@@ -1,0 +1,397 @@
+{
+  "overall": {
+    "n": 1000,
+    "plain": 101,
+    "demo": 343,
+    "card": 454,
+    "gain": 127,
+    "loss": 16,
+    "both": 327,
+    "neither": 530,
+    "demo_retained": 101,
+    "card_retained": 101
+  },
+  "patients": 100,
+  "rate_diff_ci95": [
+    0.1,
+    0.12300000000000001
+  ],
+  "lab": {
+    "n": 600,
+    "plain": 0,
+    "demo": 60,
+    "card": 74,
+    "gain": 23,
+    "loss": 9,
+    "both": 51,
+    "neither": 517,
+    "demo_retained": 0,
+    "card_retained": 0
+  },
+  "by_workflow": {
+    "1": {
+      "n": 100,
+      "plain": 1,
+      "demo": 98,
+      "card": 98,
+      "gain": 0,
+      "loss": 0,
+      "both": 98,
+      "neither": 2,
+      "demo_retained": 1,
+      "card_retained": 1
+    },
+    "2": {
+      "n": 100,
+      "plain": 0,
+      "demo": 85,
+      "card": 82,
+      "gain": 4,
+      "loss": 7,
+      "both": 78,
+      "neither": 11,
+      "demo_retained": 0,
+      "card_retained": 0
+    },
+    "3": {
+      "n": 100,
+      "plain": 100,
+      "demo": 100,
+      "card": 100,
+      "gain": 0,
+      "loss": 0,
+      "both": 100,
+      "neither": 0,
+      "demo_retained": 100,
+      "card_retained": 100
+    },
+    "4": {
+      "n": 100,
+      "plain": 0,
+      "demo": 7,
+      "card": 0,
+      "gain": 0,
+      "loss": 7,
+      "both": 0,
+      "neither": 93,
+      "demo_retained": 0,
+      "card_retained": 0
+    },
+    "5": {
+      "n": 100,
+      "plain": 0,
+      "demo": 0,
+      "card": 5,
+      "gain": 5,
+      "loss": 0,
+      "both": 0,
+      "neither": 95,
+      "demo_retained": 0,
+      "card_retained": 0
+    },
+    "6": {
+      "n": 100,
+      "plain": 0,
+      "demo": 0,
+      "card": 0,
+      "gain": 0,
+      "loss": 0,
+      "both": 0,
+      "neither": 100,
+      "demo_retained": 0,
+      "card_retained": 0
+    },
+    "7": {
+      "n": 100,
+      "plain": 0,
+      "demo": 53,
+      "card": 59,
+      "gain": 8,
+      "loss": 2,
+      "both": 51,
+      "neither": 39,
+      "demo_retained": 0,
+      "card_retained": 0
+    },
+    "8": {
+      "n": 100,
+      "plain": 0,
+      "demo": 0,
+      "card": 100,
+      "gain": 100,
+      "loss": 0,
+      "both": 0,
+      "neither": 0,
+      "demo_retained": 0,
+      "card_retained": 0
+    },
+    "9": {
+      "n": 100,
+      "plain": 0,
+      "demo": 0,
+      "card": 0,
+      "gain": 0,
+      "loss": 0,
+      "both": 0,
+      "neither": 100,
+      "demo_retained": 0,
+      "card_retained": 0
+    },
+    "10": {
+      "n": 100,
+      "plain": 0,
+      "demo": 0,
+      "card": 10,
+      "gain": 10,
+      "loss": 0,
+      "both": 0,
+      "neither": 90,
+      "demo_retained": 0,
+      "card_retained": 0
+    }
+  },
+  "by_branch": {
+    "1_standard": {
+      "n": 100,
+      "plain": 1,
+      "demo": 98,
+      "card": 98,
+      "gain": 0,
+      "loss": 0,
+      "both": 98,
+      "neither": 2,
+      "demo_retained": 1,
+      "card_retained": 1
+    },
+    "2_standard": {
+      "n": 100,
+      "plain": 0,
+      "demo": 85,
+      "card": 82,
+      "gain": 4,
+      "loss": 7,
+      "both": 78,
+      "neither": 11,
+      "demo_retained": 0,
+      "card_retained": 0
+    },
+    "3_standard": {
+      "n": 100,
+      "plain": 100,
+      "demo": 100,
+      "card": 100,
+      "gain": 0,
+      "loss": 0,
+      "both": 100,
+      "neither": 0,
+      "demo_retained": 100,
+      "card_retained": 100
+    },
+    "4_measured": {
+      "n": 93,
+      "plain": 0,
+      "demo": 0,
+      "card": 0,
+      "gain": 0,
+      "loss": 0,
+      "both": 0,
+      "neither": 93,
+      "demo_retained": 0,
+      "card_retained": 0
+    },
+    "4_missing": {
+      "n": 7,
+      "plain": 0,
+      "demo": 7,
+      "card": 0,
+      "gain": 0,
+      "loss": 7,
+      "both": 0,
+      "neither": 0,
+      "demo_retained": 0,
+      "card_retained": 0
+    },
+    "5_missing": {
+      "n": 7,
+      "plain": 0,
+      "demo": 0,
+      "card": 4,
+      "gain": 4,
+      "loss": 0,
+      "both": 0,
+      "neither": 3,
+      "demo_retained": 0,
+      "card_retained": 0
+    },
+    "5_no_write": {
+      "n": 53,
+      "plain": 0,
+      "demo": 0,
+      "card": 1,
+      "gain": 1,
+      "loss": 0,
+      "both": 0,
+      "neither": 52,
+      "demo_retained": 0,
+      "card_retained": 0
+    },
+    "5_write": {
+      "n": 40,
+      "plain": 0,
+      "demo": 0,
+      "card": 0,
+      "gain": 0,
+      "loss": 0,
+      "both": 0,
+      "neither": 40,
+      "demo_retained": 0,
+      "card_retained": 0
+    },
+    "6_measured": {
+      "n": 77,
+      "plain": 0,
+      "demo": 0,
+      "card": 0,
+      "gain": 0,
+      "loss": 0,
+      "both": 0,
+      "neither": 77,
+      "demo_retained": 0,
+      "card_retained": 0
+    },
+    "6_missing": {
+      "n": 23,
+      "plain": 0,
+      "demo": 0,
+      "card": 0,
+      "gain": 0,
+      "loss": 0,
+      "both": 0,
+      "neither": 23,
+      "demo_retained": 0,
+      "card_retained": 0
+    },
+    "7_measured": {
+      "n": 77,
+      "plain": 0,
+      "demo": 53,
+      "card": 59,
+      "gain": 8,
+      "loss": 2,
+      "both": 51,
+      "neither": 16,
+      "demo_retained": 0,
+      "card_retained": 0
+    },
+    "7_missing": {
+      "n": 23,
+      "plain": 0,
+      "demo": 0,
+      "card": 0,
+      "gain": 0,
+      "loss": 0,
+      "both": 0,
+      "neither": 23,
+      "demo_retained": 0,
+      "card_retained": 0
+    },
+    "8_standard": {
+      "n": 100,
+      "plain": 0,
+      "demo": 0,
+      "card": 100,
+      "gain": 100,
+      "loss": 0,
+      "both": 0,
+      "neither": 0,
+      "demo_retained": 0,
+      "card_retained": 0
+    },
+    "9_missing": {
+      "n": 2,
+      "plain": 0,
+      "demo": 0,
+      "card": 0,
+      "gain": 0,
+      "loss": 0,
+      "both": 0,
+      "neither": 2,
+      "demo_retained": 0,
+      "card_retained": 0
+    },
+    "9_no_write": {
+      "n": 86,
+      "plain": 0,
+      "demo": 0,
+      "card": 0,
+      "gain": 0,
+      "loss": 0,
+      "both": 0,
+      "neither": 86,
+      "demo_retained": 0,
+      "card_retained": 0
+    },
+    "9_write": {
+      "n": 12,
+      "plain": 0,
+      "demo": 0,
+      "card": 0,
+      "gain": 0,
+      "loss": 0,
+      "both": 0,
+      "neither": 12,
+      "demo_retained": 0,
+      "card_retained": 0
+    },
+    "10_missing": {
+      "n": 64,
+      "plain": 0,
+      "demo": 0,
+      "card": 0,
+      "gain": 0,
+      "loss": 0,
+      "both": 0,
+      "neither": 64,
+      "demo_retained": 0,
+      "card_retained": 0
+    },
+    "10_old_write": {
+      "n": 3,
+      "plain": 0,
+      "demo": 0,
+      "card": 0,
+      "gain": 0,
+      "loss": 0,
+      "both": 0,
+      "neither": 3,
+      "demo_retained": 0,
+      "card_retained": 0
+    },
+    "10_recent_no_write": {
+      "n": 33,
+      "plain": 0,
+      "demo": 0,
+      "card": 10,
+      "gain": 10,
+      "loss": 0,
+      "both": 0,
+      "neither": 23,
+      "demo_retained": 0,
+      "card_retained": 0
+    }
+  },
+  "costs": {
+    "plain": {
+      "steps": 3270,
+      "tools": 2370
+    },
+    "demo": {
+      "steps": 2570,
+      "tools": 1570
+    },
+    "card": {
+      "steps": 2497,
+      "tools": 1497
+    }
+  }
+}
