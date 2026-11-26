@@ -1,0 +1,151 @@
+{
+ "n": 40,
+ "patients": 27,
+ "arms": {
+  "demo": {
+   "enabled": [
+    1,
+    2,
+    4,
+    7
+   ],
+   "active": 16,
+   "correct": 16,
+   "vs_plain": {
+    "gains": 12,
+    "losses": 0,
+    "kept": 4,
+    "net": 12
+   },
+   "historical_kept": 4,
+   "official": 16,
+   "steps": 103,
+   "tool_calls": 63
+  },
+  "card": {
+   "enabled": [
+    1,
+    2,
+    5,
+    7,
+    8,
+    10
+   ],
+   "active": 24,
+   "correct": 20,
+   "vs_plain": {
+    "gains": 16,
+    "losses": 0,
+    "kept": 4,
+    "net": 16
+   },
+   "historical_kept": 4,
+   "official": 20,
+   "steps": 100,
+   "tool_calls": 60
+  }
+ },
+ "card_vs_demo": {
+  "gains": 8,
+  "losses": 4,
+  "kept": 12,
+  "net": 4,
+  "both_failed": 16
+ },
+ "by_workflow": {
+  "1": {
+   "n": 4,
+   "demo": 4,
+   "card": 4,
+   "gains": 0,
+   "losses": 0,
+   "kept": 4,
+   "net": 0
+  },
+  "2": {
+   "n": 4,
+   "demo": 3,
+   "card": 1,
+   "gains": 0,
+   "losses": 2,
+   "kept": 1,
+   "net": -2
+  },
+  "3": {
+   "n": 4,
+   "demo": 4,
+   "card": 4,
+   "gains": 0,
+   "losses": 0,
+   "kept": 4,
+   "net": 0
+  },
+  "4": {
+   "n": 4,
+   "demo": 2,
+   "card": 0,
+   "gains": 0,
+   "losses": 2,
+   "kept": 0,
+   "net": -2
+  },
+  "5": {
+   "n": 4,
+   "demo": 0,
+   "card": 3,
+   "gains": 3,
+   "losses": 0,
+   "kept": 0,
+   "net": 3
+  },
+  "6": {
+   "n": 4,
+   "demo": 0,
+   "card": 0,
+   "gains": 0,
+   "losses": 0,
+   "kept": 0,
+   "net": 0
+  },
+  "7": {
+   "n": 4,
+   "demo": 3,
+   "card": 3,
+   "gains": 0,
+   "losses": 0,
+   "kept": 3,
+   "net": 0
+  },
+  "8": {
+   "n": 4,
+   "demo": 0,
+   "card": 4,
+   "gains": 4,
+   "losses": 0,
+   "kept": 0,
+   "net": 4
+  },
+  "9": {
+   "n": 4,
+   "demo": 0,
+   "card": 0,
+   "gains": 0,
+   "losses": 0,
+   "kept": 0,
+   "net": 0
+  },
+  "10": {
+   "n": 4,
+   "demo": 0,
+   "card": 1,
+   "gains": 1,
+   "losses": 0,
+   "kept": 0,
+   "net": 1
+  }
+ },
+ "rate_diff_patient_bootstrap_95": [
+  -0.05128205128205128,
+  0.2619047619047619
+ ]
+}
