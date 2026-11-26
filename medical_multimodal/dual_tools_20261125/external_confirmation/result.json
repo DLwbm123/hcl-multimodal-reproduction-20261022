@@ -1,0 +1,670 @@
+{
+  "n": 200,
+  "trigger": 36,
+  "scores": {
+    "all": {
+      "primary": {
+        "absolute": {
+          "S": {
+            "0": 77,
+            "1": 114,
+            "U": 9
+          },
+          "K": {
+            "0": 79,
+            "1": 111,
+            "U": 10
+          },
+          "G": {
+            "0": 70,
+            "1": 128,
+            "U": 2
+          },
+          "V": {
+            "0": 70,
+            "1": 128,
+            "U": 2
+          },
+          "D": {
+            "0": 70,
+            "1": 129,
+            "U": 1
+          }
+        },
+        "paired": {
+          "VS": {
+            "gain": 10,
+            "loss": 0,
+            "unresolved": 7,
+            "net_low": 7,
+            "net_high": 14
+          },
+          "KS": {
+            "gain": 1,
+            "loss": 4,
+            "unresolved": 13,
+            "net_low": -10,
+            "net_high": 5
+          },
+          "GS": {
+            "gain": 12,
+            "loss": 2,
+            "unresolved": 7,
+            "net_low": 7,
+            "net_high": 14
+          },
+          "DS": {
+            "gain": 16,
+            "loss": 5,
+            "unresolved": 8,
+            "net_low": 7,
+            "net_high": 15
+          },
+          "VD": {
+            "gain": 7,
+            "loss": 8,
+            "unresolved": 1,
+            "net_low": -1,
+            "net_high": 0
+          },
+          "VG": {
+            "gain": 4,
+            "loss": 4,
+            "unresolved": 0,
+            "net_low": 0,
+            "net_high": 0
+          },
+          "GD": {
+            "gain": 3,
+            "loss": 4,
+            "unresolved": 1,
+            "net_low": -1,
+            "net_high": 0
+          },
+          "KV": {
+            "gain": 0,
+            "loss": 12,
+            "unresolved": 8,
+            "net_low": -17,
+            "net_high": -9
+          }
+        }
+      },
+      "second": {
+        "absolute": {
+          "S": {
+            "1": 145,
+            "0": 51,
+            "U": 4
+          },
+          "K": {
+            "1": 138,
+            "0": 58,
+            "U": 4
+          },
+          "G": {
+            "1": 159,
+            "0": 41
+          },
+          "V": {
+            "1": 158,
+            "0": 42
+          },
+          "D": {
+            "1": 165,
+            "0": 35
+          }
+        },
+        "paired": {
+          "VS": {
+            "gain": 11,
+            "loss": 1,
+            "unresolved": 4,
+            "net_low": 9,
+            "net_high": 13
+          },
+          "KS": {
+            "gain": 2,
+            "loss": 8,
+            "unresolved": 7,
+            "net_low": -11,
+            "net_high": -3
+          },
+          "GS": {
+            "gain": 13,
+            "loss": 2,
+            "unresolved": 4,
+            "net_low": 10,
+            "net_high": 14
+          },
+          "DS": {
+            "gain": 20,
+            "loss": 3,
+            "unresolved": 4,
+            "net_low": 16,
+            "net_high": 20
+          },
+          "VD": {
+            "gain": 5,
+            "loss": 12,
+            "unresolved": 0,
+            "net_low": -7,
+            "net_high": -7
+          },
+          "VG": {
+            "gain": 4,
+            "loss": 5,
+            "unresolved": 0,
+            "net_low": -1,
+            "net_high": -1
+          },
+          "GD": {
+            "gain": 1,
+            "loss": 7,
+            "unresolved": 0,
+            "net_low": -6,
+            "net_high": -6
+          },
+          "KV": {
+            "gain": 1,
+            "loss": 18,
+            "unresolved": 4,
+            "net_low": -20,
+            "net_high": -16
+          }
+        }
+      },
+      "agreement": {
+        "absolute": {
+          "S": {
+            "U": 42,
+            "1": 113,
+            "0": 45
+          },
+          "K": {
+            "U": 40,
+            "1": 110,
+            "0": 50
+          },
+          "G": {
+            "U": 37,
+            "1": 126,
+            "0": 37
+          },
+          "V": {
+            "U": 34,
+            "1": 127,
+            "0": 39
+          },
+          "D": {
+            "U": 41,
+            "1": 127,
+            "0": 32
+          }
+        },
+        "paired": {
+          "VS": {
+            "gain": 7,
+            "loss": 0,
+            "unresolved": 16,
+            "net_low": 1,
+            "net_high": 19
+          },
+          "KS": {
+            "gain": 1,
+            "loss": 3,
+            "unresolved": 19,
+            "net_low": -16,
+            "net_high": 8
+          },
+          "GS": {
+            "gain": 8,
+            "loss": 1,
+            "unresolved": 18,
+            "net_low": 0,
+            "net_high": 21
+          },
+          "DS": {
+            "gain": 10,
+            "loss": 2,
+            "unresolved": 29,
+            "net_low": -4,
+            "net_high": 31
+          },
+          "VD": {
+            "gain": 3,
+            "loss": 4,
+            "unresolved": 22,
+            "net_low": -17,
+            "net_high": 10
+          },
+          "VG": {
+            "gain": 2,
+            "loss": 2,
+            "unresolved": 11,
+            "net_low": -7,
+            "net_high": 6
+          },
+          "GD": {
+            "gain": 1,
+            "loss": 2,
+            "unresolved": 11,
+            "net_low": -10,
+            "net_high": 4
+          },
+          "KV": {
+            "gain": 0,
+            "loss": 10,
+            "unresolved": 15,
+            "net_low": -22,
+            "net_high": -6
+          }
+        }
+      }
+    },
+    "trigger": {
+      "primary": {
+        "absolute": {
+          "S": {
+            "0": 23,
+            "U": 7,
+            "1": 6
+          },
+          "K": {
+            "U": 8,
+            "0": 25,
+            "1": 3
+          },
+          "G": {
+            "0": 16,
+            "1": 20
+          },
+          "V": {
+            "0": 16,
+            "1": 20
+          },
+          "D": {
+            "0": 16,
+            "1": 20
+          }
+        },
+        "paired": {
+          "VS": {
+            "gain": 10,
+            "loss": 0,
+            "unresolved": 7,
+            "net_low": 7,
+            "net_high": 14
+          },
+          "KS": {
+            "gain": 1,
+            "loss": 4,
+            "unresolved": 13,
+            "net_low": -10,
+            "net_high": 5
+          },
+          "GS": {
+            "gain": 12,
+            "loss": 2,
+            "unresolved": 7,
+            "net_low": 7,
+            "net_high": 14
+          },
+          "DS": {
+            "gain": 12,
+            "loss": 2,
+            "unresolved": 7,
+            "net_low": 7,
+            "net_high": 14
+          },
+          "VD": {
+            "gain": 4,
+            "loss": 4,
+            "unresolved": 0,
+            "net_low": 0,
+            "net_high": 0
+          },
+          "VG": {
+            "gain": 4,
+            "loss": 4,
+            "unresolved": 0,
+            "net_low": 0,
+            "net_high": 0
+          },
+          "GD": {
+            "gain": 0,
+            "loss": 0,
+            "unresolved": 0,
+            "net_low": 0,
+            "net_high": 0
+          },
+          "KV": {
+            "gain": 0,
+            "loss": 12,
+            "unresolved": 8,
+            "net_low": -17,
+            "net_high": -9
+          }
+        }
+      },
+      "second": {
+        "absolute": {
+          "S": {
+            "0": 20,
+            "1": 12,
+            "U": 4
+          },
+          "K": {
+            "U": 4,
+            "0": 27,
+            "1": 5
+          },
+          "G": {
+            "1": 26,
+            "0": 10
+          },
+          "V": {
+            "0": 11,
+            "1": 25
+          },
+          "D": {
+            "1": 26,
+            "0": 10
+          }
+        },
+        "paired": {
+          "VS": {
+            "gain": 11,
+            "loss": 1,
+            "unresolved": 4,
+            "net_low": 9,
+            "net_high": 13
+          },
+          "KS": {
+            "gain": 2,
+            "loss": 8,
+            "unresolved": 7,
+            "net_low": -11,
+            "net_high": -3
+          },
+          "GS": {
+            "gain": 13,
+            "loss": 2,
+            "unresolved": 4,
+            "net_low": 10,
+            "net_high": 14
+          },
+          "DS": {
+            "gain": 13,
+            "loss": 2,
+            "unresolved": 4,
+            "net_low": 10,
+            "net_high": 14
+          },
+          "VD": {
+            "gain": 4,
+            "loss": 5,
+            "unresolved": 0,
+            "net_low": -1,
+            "net_high": -1
+          },
+          "VG": {
+            "gain": 4,
+            "loss": 5,
+            "unresolved": 0,
+            "net_low": -1,
+            "net_high": -1
+          },
+          "GD": {
+            "gain": 0,
+            "loss": 0,
+            "unresolved": 0,
+            "net_low": 0,
+            "net_high": 0
+          },
+          "KV": {
+            "gain": 1,
+            "loss": 18,
+            "unresolved": 4,
+            "net_low": -20,
+            "net_high": -16
+          }
+        }
+      },
+      "agreement": {
+        "absolute": {
+          "S": {
+            "0": 17,
+            "U": 13,
+            "1": 6
+          },
+          "K": {
+            "U": 11,
+            "0": 22,
+            "1": 3
+          },
+          "G": {
+            "U": 8,
+            "1": 19,
+            "0": 9
+          },
+          "V": {
+            "0": 11,
+            "1": 20,
+            "U": 5
+          },
+          "D": {
+            "U": 8,
+            "1": 19,
+            "0": 9
+          }
+        },
+        "paired": {
+          "VS": {
+            "gain": 7,
+            "loss": 0,
+            "unresolved": 16,
+            "net_low": 1,
+            "net_high": 19
+          },
+          "KS": {
+            "gain": 1,
+            "loss": 3,
+            "unresolved": 19,
+            "net_low": -16,
+            "net_high": 8
+          },
+          "GS": {
+            "gain": 8,
+            "loss": 1,
+            "unresolved": 18,
+            "net_low": 0,
+            "net_high": 21
+          },
+          "DS": {
+            "gain": 8,
+            "loss": 1,
+            "unresolved": 18,
+            "net_low": 0,
+            "net_high": 21
+          },
+          "VD": {
+            "gain": 2,
+            "loss": 2,
+            "unresolved": 11,
+            "net_low": -7,
+            "net_high": 6
+          },
+          "VG": {
+            "gain": 2,
+            "loss": 2,
+            "unresolved": 11,
+            "net_low": -7,
+            "net_high": 6
+          },
+          "GD": {
+            "gain": 0,
+            "loss": 0,
+            "unresolved": 0,
+            "net_low": 0,
+            "net_high": 0
+          },
+          "KV": {
+            "gain": 0,
+            "loss": 10,
+            "unresolved": 15,
+            "net_low": -22,
+            "net_high": -6
+          }
+        }
+      }
+    }
+  },
+  "costs": {
+    "S": {
+      "tools": 206,
+      "requests": 1276,
+      "input_tokens": 444958,
+      "output_tokens": 31397,
+      "seconds": 1650.05
+    },
+    "K": {
+      "tools": 206,
+      "requests": 1312,
+      "input_tokens": 451076,
+      "output_tokens": 34290,
+      "seconds": 1733.68
+    },
+    "G": {
+      "tools": 242,
+      "requests": 1348,
+      "input_tokens": 465124,
+      "output_tokens": 34338,
+      "seconds": 1762.54
+    },
+    "V": {
+      "tools": 242,
+      "requests": 1420,
+      "input_tokens": 513051,
+      "output_tokens": 36790,
+      "seconds": 1875.36
+    },
+    "D": {
+      "tools": 200,
+      "requests": 400,
+      "input_tokens": 122436,
+      "output_tokens": 15428,
+      "seconds": 703.33
+    }
+  },
+  "evidence_review": {
+    "reviewed_cases": 79,
+    "S_support": {
+      "A": 29,
+      "B": 49,
+      "C": 1
+    },
+    "S_extra": {
+      "B": 63,
+      "C": 16
+    },
+    "K_support": {
+      "A": 31,
+      "B": 47,
+      "C": 1
+    },
+    "K_extra": {
+      "B": 58,
+      "C": 21
+    },
+    "G_support": {
+      "A": 54,
+      "B": 24,
+      "C": 1
+    },
+    "G_extra": {
+      "B": 73,
+      "C": 6
+    },
+    "V_support": {
+      "A": 54,
+      "B": 24,
+      "C": 1
+    },
+    "V_extra": {
+      "B": 72,
+      "C": 7
+    },
+    "D_support": {
+      "A": 63,
+      "B": 16
+    },
+    "D_extra": {
+      "B": 76,
+      "C": 3
+    }
+  },
+  "reviewer_disagreement_answers": 66,
+  "unique_scored_answers": 343,
+  "trigger_prefix": {
+    "1": 36
+  },
+  "target_none": 0,
+  "first_tool_all": {
+    "ImageDescription": 131,
+    "OCR": 56,
+    "RegionAttributeDescription": 13
+  },
+  "trigger_by_first_tool": {
+    "OCR": {
+      "n": 33,
+      "success_with_text": 33,
+      "correct_S": 5,
+      "correct_K": 2,
+      "correct_G": 19,
+      "correct_V": 18,
+      "correct_D": 19
+    },
+    "ImageDescription": {
+      "n": 3,
+      "success_with_text": 3,
+      "correct_S": 1,
+      "correct_K": 1,
+      "correct_G": 1,
+      "correct_V": 2,
+      "correct_D": 1
+    }
+  },
+  "trigger_strata": {
+    "empty": {
+      "n": 36,
+      "at_limit": 0
+    },
+    "nonempty": {
+      "n": 164,
+      "at_limit": 0
+    }
+  },
+  "trigger_joint_KGV": {
+    "U00": 2,
+    "010": 3,
+    "011": 8,
+    "000": 10,
+    "U11": 5,
+    "001": 4,
+    "U10": 1,
+    "111": 3
+  },
+  "primary_flip_visual_support": {
+    "0_1_A": 10,
+    "U_0_A": 1,
+    "U_1_A": 4,
+    "U_0_B": 2
+  },
+  "actual_including_review": {
+    "choice": 1746,
+    "input_tokens": 1002978,
+    "output_tokens": 55111,
+    "generate": 1133
+  }
+}
