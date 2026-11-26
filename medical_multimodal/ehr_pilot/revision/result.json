@@ -1,0 +1,80 @@
+{
+ "5": {
+  "groups": {
+   "real/no_write": {
+    "n": 6,
+    "old": 6,
+    "new": 6,
+    "gain": 0,
+    "loss": 0,
+    "retained": 6
+   },
+   "simulation/no_write": {
+    "n": 8,
+    "old": 0,
+    "new": 0,
+    "gain": 0,
+    "loss": 0,
+    "retained": 0
+   },
+   "simulation/write": {
+    "n": 8,
+    "old": 0,
+    "new": 0,
+    "gain": 0,
+    "loss": 0,
+    "retained": 0
+   },
+   "real/write": {
+    "n": 2,
+    "old": 0,
+    "new": 0,
+    "gain": 0,
+    "loss": 0,
+    "retained": 0
+   }
+  },
+  "adopt": false,
+  "training": {
+   "real/no_write/completion or other scorer mismatch": 4,
+   "simulation/no_write/completion or other scorer mismatch": 8,
+   "simulation/write/finish before required write 1": 8,
+   "real/no_write/success": 3,
+   "real/no_write/unexpected write for observed branch": 1
+  }
+ },
+ "9": {
+  "groups": {
+   "real/no_write": {
+    "n": 9,
+    "old": 0,
+    "new": 0,
+    "gain": 0,
+    "loss": 0,
+    "retained": 0
+   },
+   "simulation/no_write": {
+    "n": 9,
+    "old": 0,
+    "new": 0,
+    "gain": 0,
+    "loss": 0,
+    "retained": 0
+   },
+   "simulation/write": {
+    "n": 9,
+    "old": 0,
+    "new": 0,
+    "gain": 0,
+    "loss": 0,
+    "retained": 0
+   }
+  },
+  "adopt": false,
+  "training": {
+   "real/no_write/initial GET does not retrieve required scoped evidence": 10,
+   "simulation/no_write/initial GET does not retrieve required scoped evidence": 10,
+   "simulation/write/initial GET does not retrieve required scoped evidence": 10
+  }
+ }
+}

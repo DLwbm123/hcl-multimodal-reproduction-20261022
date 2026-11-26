@@ -1,0 +1,16 @@
+{
+  "patients": 1841,
+  "counts": {
+    "magnesium": {
+      "missing": 979,
+      "write": 443,
+      "no_write": 419
+    },
+    "potassium": {
+      "missing": 148,
+      "no_write": 1488,
+      "write": 203,
+      "ambiguous": 2
+    }
+  }
+}

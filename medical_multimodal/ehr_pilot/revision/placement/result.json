@@ -1,0 +1,66 @@
+{
+ "real/no_write": {
+  "available": 6,
+  "measured": 6,
+  "correct": {
+   "original": 5,
+   "early": 6,
+   "late": 3
+  },
+  "type_correct": {
+   "original": 5,
+   "early": 6,
+   "late": 4
+  },
+  "gains": 0,
+  "losses": 3
+ },
+ "simulation/no_write": {
+  "available": 8,
+  "measured": 8,
+  "correct": {
+   "original": 0,
+   "early": 1,
+   "late": 0
+  },
+  "type_correct": {
+   "original": 8,
+   "early": 1,
+   "late": 6
+  },
+  "gains": 0,
+  "losses": 1
+ },
+ "simulation/write": {
+  "available": 8,
+  "measured": 8,
+  "correct": {
+   "original": 0,
+   "early": 0,
+   "late": 0
+  },
+  "type_correct": {
+   "original": 0,
+   "early": 0,
+   "late": 7
+  },
+  "gains": 0,
+  "losses": 0
+ },
+ "real/write": {
+  "available": 2,
+  "measured": 2,
+  "correct": {
+   "original": 0,
+   "early": 0,
+   "late": 0
+  },
+  "type_correct": {
+   "original": 2,
+   "early": 2,
+   "late": 2
+  },
+  "gains": 0,
+  "losses": 0
+ }
+}
