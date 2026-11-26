@@ -1,0 +1,25 @@
+{
+  "n": 7,
+  "arms": [
+    "reuse_old",
+    "whole",
+    "visual"
+  ],
+  "scores": [
+    1,
+    3,
+    4
+  ],
+  "global_only_vs_local": 2,
+  "local_only_vs_global": 3,
+  "both": 1,
+  "runtime": {
+    "n": 7,
+    "fresh_global": 6,
+    "model_calls": {
+      "generations": 19
+    }
+  },
+  "tokens_in": 4623,
+  "tokens_out": 1179
+}

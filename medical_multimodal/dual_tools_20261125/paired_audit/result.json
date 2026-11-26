@@ -1,0 +1,43 @@
+{
+  "scores": {
+    "S": {
+      "0": 32,
+      "U": 2,
+      "1": 11
+    },
+    "R": {
+      "0": 32,
+      "U": 2,
+      "1": 11
+    },
+    "V": {
+      "0": 26,
+      "U": 2,
+      "1": 17
+    }
+  },
+  "pairs": {
+    "VS": {
+      "low": 4,
+      "high": 8,
+      "gain": 6,
+      "loss": 0,
+      "unresolved": 2
+    },
+    "VR": {
+      "low": 4,
+      "high": 8,
+      "gain": 6,
+      "loss": 0,
+      "unresolved": 2
+    },
+    "RS": {
+      "low": 0,
+      "high": 0,
+      "gain": 0,
+      "loss": 0,
+      "unresolved": 0
+    }
+  },
+  "visual_only_score_gains": 6
+}
