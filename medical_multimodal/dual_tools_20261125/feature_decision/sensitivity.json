@@ -1,0 +1,24 @@
+{
+  "gate": {
+    "with_question": {
+      "n": 16,
+      "before": 5,
+      "after": 5,
+      "gain": 0,
+      "loss": 0
+    },
+    "gains_checked": 0,
+    "score_depends_on_feature": 0
+  },
+  "test": {
+    "with_question": {
+      "n": 45,
+      "before": 15,
+      "after": 15,
+      "gain": 0,
+      "loss": 0
+    },
+    "gains_checked": 0,
+    "score_depends_on_feature": 0
+  }
+}

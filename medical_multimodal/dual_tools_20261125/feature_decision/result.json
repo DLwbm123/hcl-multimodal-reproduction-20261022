@@ -1,0 +1,94 @@
+{
+  "fit": {
+    "n": 30,
+    "eligible": 30,
+    "verified_quotes": 5,
+    "effects": {
+      "stayed_correct": 8,
+      "stayed_wrong": 22
+    },
+    "feature_supported": 0,
+    "candidates": {
+      "specific_gap": {
+        "gain": 0,
+        "loss": 0,
+        "requests": 1
+      },
+      "verify_identity": {
+        "gain": 0,
+        "loss": 0,
+        "requests": 0
+      }
+    },
+    "selected": "verify_identity"
+  },
+  "gate": {
+    "comparisons": {
+      "previous": {
+        "n": 16,
+        "before": 6,
+        "after": 6,
+        "gain": 0,
+        "loss": 0,
+        "retained": 6
+      },
+      "earlier": {
+        "n": 16,
+        "before": 0,
+        "after": 6,
+        "gain": 6,
+        "loss": 0,
+        "retained": 0
+      },
+      "repaired": {
+        "n": 16,
+        "before": 1,
+        "after": 6,
+        "gain": 6,
+        "loss": 1,
+        "retained": 0
+      }
+    },
+    "requested": 0,
+    "adopted": 0,
+    "tool_calls": 18,
+    "incumbent_calls": 18
+  },
+  "gate_passed": true,
+  "model_calls": {
+    "generations": 269,
+    "decisions": 379
+  },
+  "test": {
+    "comparisons": {
+      "previous": {
+        "n": 45,
+        "before": 9,
+        "after": 9,
+        "gain": 0,
+        "loss": 0,
+        "retained": 9
+      },
+      "earlier": {
+        "n": 45,
+        "before": 9,
+        "after": 9,
+        "gain": 4,
+        "loss": 4,
+        "retained": 5
+      },
+      "repaired": {
+        "n": 45,
+        "before": 8,
+        "after": 9,
+        "gain": 4,
+        "loss": 3,
+        "retained": 5
+      }
+    },
+    "requested": 0,
+    "adopted": 0,
+    "tool_calls": 53,
+    "incumbent_calls": 53
+  }
+}

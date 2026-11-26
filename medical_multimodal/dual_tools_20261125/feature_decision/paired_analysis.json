@@ -1,0 +1,83 @@
+{
+  "training": {
+    "quoted_and_corrected": 0,
+    "lost_on_deletion": 0,
+    "correct_with_phrase_only": 0
+  },
+  "gate": {
+    "all": {
+      "n": 16,
+      "asked": 0,
+      "adopted": 0,
+      "verified_quote": 0,
+      "changed_answer": 0,
+      "gain": 0,
+      "loss": 0,
+      "retained": 6,
+      "failed_request": 0,
+      "exact_p": 1
+    },
+    "previous_correct": {
+      "n": 6,
+      "asked": 0,
+      "adopted": 0,
+      "verified_quote": 0,
+      "changed_answer": 0,
+      "gain": 0,
+      "loss": 0,
+      "retained": 6,
+      "failed_request": 0,
+      "exact_p": 1
+    },
+    "disputed": {
+      "n": 9,
+      "asked": 0,
+      "adopted": 0,
+      "verified_quote": 0,
+      "changed_answer": 0,
+      "gain": 0,
+      "loss": 0,
+      "retained": 5,
+      "failed_request": 0,
+      "exact_p": 1
+    }
+  },
+  "test": {
+    "all": {
+      "n": 45,
+      "asked": 0,
+      "adopted": 0,
+      "verified_quote": 0,
+      "changed_answer": 0,
+      "gain": 0,
+      "loss": 0,
+      "retained": 9,
+      "failed_request": 0,
+      "exact_p": 1
+    },
+    "previous_correct": {
+      "n": 9,
+      "asked": 0,
+      "adopted": 0,
+      "verified_quote": 0,
+      "changed_answer": 0,
+      "gain": 0,
+      "loss": 0,
+      "retained": 9,
+      "failed_request": 0,
+      "exact_p": 1
+    },
+    "disputed": {
+      "n": 23,
+      "asked": 0,
+      "adopted": 0,
+      "verified_quote": 0,
+      "changed_answer": 0,
+      "gain": 0,
+      "loss": 0,
+      "retained": 5,
+      "failed_request": 0,
+      "exact_p": 1
+    }
+  }
+}
