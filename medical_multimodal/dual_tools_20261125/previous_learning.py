@@ -15,8 +15,8 @@ def words(s):
     return set(re.findall(r"[a-z0-9]+", s.lower()))
 
 
-def update_memory(st, stage, examples, directory, generator):
-    raw = RawMemory(directory / "raw.jsonl", capacity_per_task=4)
+def update_memory(st, stage, examples, directory, generator, *, capacity=4):
+    raw = RawMemory(directory / "raw.jsonl", capacity_per_task=capacity)
     raw.add(stage,examples,[dict(task_id=x["task_id"],answer=x["response"]) for x in examples])
     class Adapter:
         def generate(self,prompt,*,state):

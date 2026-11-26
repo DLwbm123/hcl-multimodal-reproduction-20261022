@@ -1,0 +1,136 @@
+{
+  "fit_cases": 30,
+  "raw_records": 91,
+  "fit_by_tool": {
+    "ImageDescription": {
+      "stayed_wrong": 22,
+      "corrected": 5,
+      "stayed_correct": 2,
+      "spoiled": 1
+    },
+    "RegionAttributeDescription": {
+      "stayed_wrong": 22,
+      "stayed_correct": 3,
+      "spoiled": 4,
+      "corrected": 2
+    },
+    "OCR": {
+      "stayed_wrong": 25,
+      "spoiled": 1,
+      "corrected": 2,
+      "stayed_correct": 1
+    },
+    "Calculator": {
+      "stayed_wrong": 1
+    }
+  },
+  "future": {
+    "no_observed_rescue": 42,
+    "unobserved": 30,
+    "later_corrected": 9,
+    "already_correct": 10
+  },
+  "deploy_candidate": false,
+  "gate": {
+    "n": 16,
+    "baseline": {
+      "correct": 1,
+      "tool_calls": 33
+    },
+    "seed": {
+      "correct": 0,
+      "tool_calls": 16,
+      "accepted": 15,
+      "accepted_by_tool": {
+        "ImageDescription": 14,
+        "OCR": 1
+      },
+      "attempted_by_tool": {
+        "ImageDescription": 14,
+        "OCR": 2
+      },
+      "stopped_before_base": 9,
+      "continued_past_base": 0
+    },
+    "learned": {
+      "correct": 0,
+      "tool_calls": 16,
+      "accepted": 11,
+      "accepted_by_tool": {
+        "ImageDescription": 10,
+        "OCR": 1
+      },
+      "attempted_by_tool": {
+        "ImageDescription": 14,
+        "OCR": 2
+      },
+      "stopped_before_base": 9,
+      "continued_past_base": 0
+    },
+    "vs_baseline": {
+      "gain": 0,
+      "loss": 1,
+      "exact_p": 1
+    },
+    "vs_seed": {
+      "gain": 0,
+      "loss": 0,
+      "exact_p": 1
+    }
+  },
+  "model_calls": {
+    "generations": 247,
+    "decisions": 643
+  },
+  "test": {
+    "n": 45,
+    "baseline": {
+      "correct": 8,
+      "tool_calls": 81
+    },
+    "seed": {
+      "correct": 6,
+      "tool_calls": 45,
+      "accepted": 42,
+      "accepted_by_tool": {
+        "OCR": 15,
+        "ImageDescription": 24,
+        "RegionAttributeDescription": 3
+      },
+      "attempted_by_tool": {
+        "OCR": 16,
+        "ImageDescription": 26,
+        "RegionAttributeDescription": 3
+      },
+      "stopped_before_base": 23,
+      "continued_past_base": 0
+    },
+    "learned": {
+      "correct": 8,
+      "tool_calls": 45,
+      "accepted": 26,
+      "accepted_by_tool": {
+        "OCR": 9,
+        "ImageDescription": 14,
+        "RegionAttributeDescription": 3
+      },
+      "attempted_by_tool": {
+        "OCR": 16,
+        "ImageDescription": 26,
+        "RegionAttributeDescription": 3
+      },
+      "stopped_before_base": 23,
+      "continued_past_base": 0
+    },
+    "vs_baseline": {
+      "gain": 2,
+      "loss": 2,
+      "exact_p": 1
+    },
+    "vs_seed": {
+      "gain": 2,
+      "loss": 0,
+      "exact_p": 0.5
+    }
+  }
+}

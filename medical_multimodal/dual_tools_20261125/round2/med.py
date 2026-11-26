@@ -12,7 +12,7 @@ MENU='A whole-image description; B localized visual attributes; C OCR for visibl
 CODES=dict(zip(NAMES,'ABCD'))
 
 
-def main(*, locator=None, fit_observer=None, extra_panels=None):
+def main(*, locator=None, fit_observer=None, extra_panels=None, experiment=None):
     cases,refs=data()
     fit,gate,test=split()
     choose,gen=models()
@@ -89,6 +89,8 @@ def main(*, locator=None, fit_observer=None, extra_panels=None):
                     steps=len(row['notes']),invalid=sum(not n['ok'] for n in row['notes']))
 
     try:
+        if experiment is not None:
+            return experiment(cases,refs,(fit,gate,test),context,call,policy,available,visible,answer_from,correct,choose,gen)
         bank=[]; examples=[]; edit_examples=[]
         for i,k in enumerate(fit,1):
             q,img,path=context(k); notes=[]

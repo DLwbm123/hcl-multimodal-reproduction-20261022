@@ -1,0 +1,53 @@
+{
+  "fit_effect_totals": {
+    "stayed_wrong": 70,
+    "corrected": 9,
+    "stayed_correct": 6,
+    "spoiled": 6
+  },
+  "gate": {
+    "seed": {
+      "cases_without_accepted_evidence": 1,
+      "correct_without_accepted_evidence": 0,
+      "cases_at_cap": 0,
+      "declined_changed_drafts": 1,
+      "adopted_changed_drafts": 15
+    },
+    "learned": {
+      "cases_without_accepted_evidence": 5,
+      "correct_without_accepted_evidence": 0,
+      "cases_at_cap": 0,
+      "declined_changed_drafts": 5,
+      "adopted_changed_drafts": 11
+    },
+    "same_final_answer_as_seed": 12,
+    "gain_vs_base_final_accepted_tools": {},
+    "loss_vs_base_final_accepted_tools": {
+      "(none)": 1
+    }
+  },
+  "test": {
+    "seed": {
+      "cases_without_accepted_evidence": 3,
+      "correct_without_accepted_evidence": 0,
+      "cases_at_cap": 0,
+      "declined_changed_drafts": 3,
+      "adopted_changed_drafts": 42
+    },
+    "learned": {
+      "cases_without_accepted_evidence": 19,
+      "correct_without_accepted_evidence": 2,
+      "cases_at_cap": 0,
+      "declined_changed_drafts": 19,
+      "adopted_changed_drafts": 26
+    },
+    "same_final_answer_as_seed": 29,
+    "gain_vs_base_final_accepted_tools": {
+      "(none)": 2
+    },
+    "loss_vs_base_final_accepted_tools": {
+      "(none)": 1,
+      "ImageDescription": 1
+    }
+  }
+}
