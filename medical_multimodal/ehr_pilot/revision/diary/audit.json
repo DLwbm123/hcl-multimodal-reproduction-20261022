@@ -1,0 +1,64 @@
+{
+  "build_plain": {
+    "first_read": 197,
+    "numeric_success": 75,
+    "evidence_terminal value or format": 102,
+    "first_invalid": 13,
+    "evidence_missing required READ": 13,
+    "evidence_success": 92,
+    "missing_success": 17,
+    "evidence_missing mean STAT": 3,
+    "patients": 35,
+    "patients_any_success": 32
+  },
+  "build_demo": {
+    "first_invalid": 146,
+    "numeric_success": 0,
+    "evidence_missing required READ": 210,
+    "first_finish": 64,
+    "missing_success": 0,
+    "patients": 35,
+    "patients_any_success": 0
+  },
+  "test_plain": {
+    "first_read": 117,
+    "numeric_success": 44,
+    "evidence_terminal value or format": 62,
+    "evidence_success": 52,
+    "missing_success": 8,
+    "evidence_missing mean STAT": 3,
+    "first_invalid": 9,
+    "evidence_missing required READ": 9,
+    "patients": 21,
+    "patients_any_success": 20
+  },
+  "test_demo": {
+    "first_invalid": 82,
+    "numeric_success": 0,
+    "evidence_missing required READ": 126,
+    "first_finish": 44,
+    "missing_success": 0,
+    "patients": 21,
+    "patients_any_success": 0
+  },
+  "test_score": {
+    "first_invalid": 83,
+    "numeric_success": 1,
+    "evidence_missing required READ": 125,
+    "first_finish": 42,
+    "missing_success": 0,
+    "first_read": 1,
+    "evidence_success": 1,
+    "patients": 21,
+    "patients_any_success": 1
+  },
+  "test_credit": {
+    "first_invalid": 42,
+    "numeric_success": 0,
+    "evidence_missing required READ": 126,
+    "first_finish": 84,
+    "missing_success": 0,
+    "patients": 21,
+    "patients_any_success": 0
+  }
+}
