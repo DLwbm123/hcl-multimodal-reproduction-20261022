@@ -1,0 +1,232 @@
+{
+ "selection": {
+  "normal": "induced",
+  "protected": "induced",
+  "new": [
+   12,
+   9,
+   7,
+   16
+  ],
+  "old": [
+   29,
+   26,
+   7,
+   43
+  ],
+  "eligible": [
+   "unchanged",
+   "induced"
+  ],
+  "gain_n": 1
+ },
+ "candidates": {
+  "unchanged": {
+   "words": 1,
+   "same_as_old": true
+  },
+  "aggregate": {
+   "words": 110,
+   "same_as_old": false
+  },
+  "trajectory": {
+   "words": 92,
+   "same_as_old": false
+  },
+  "induced": {
+   "words": 32,
+   "same_as_old": false
+  }
+ },
+ "A": {
+  "fixed": {
+   "hit": 99,
+   "correct_write": 9,
+   "write": 60,
+   "extra": 16,
+   "calls": 417,
+   "prior": {
+    "gain": 1,
+    "loss": 5,
+    "retained": 98
+   },
+   "fixed": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 99
+   },
+   "retained_new": 0
+  },
+  "unchanged": {
+   "hit": 103,
+   "correct_write": 6,
+   "write": 60,
+   "extra": 11,
+   "calls": 411,
+   "prior": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 103
+   },
+   "fixed": {
+    "gain": 5,
+    "loss": 1,
+    "retained": 98
+   },
+   "retained_new": 5
+  },
+  "aggregate": {
+   "hit": 92,
+   "correct_write": 38,
+   "write": 60,
+   "extra": 10,
+   "calls": 391,
+   "prior": {
+    "gain": 1,
+    "loss": 12,
+    "retained": 91
+   },
+   "fixed": {
+    "gain": 6,
+    "loss": 13,
+    "retained": 86
+   },
+   "retained_new": 5
+  },
+  "trajectory": {
+   "hit": 30,
+   "correct_write": 0,
+   "write": 60,
+   "extra": 17,
+   "calls": 464,
+   "prior": {
+    "gain": 0,
+    "loss": 73,
+    "retained": 30
+   },
+   "fixed": {
+    "gain": 1,
+    "loss": 70,
+    "retained": 29
+   },
+   "retained_new": 1
+  },
+  "induced": {
+   "hit": 142,
+   "correct_write": 37,
+   "write": 60,
+   "extra": 9,
+   "calls": 420,
+   "prior": {
+    "gain": 39,
+    "loss": 0,
+    "retained": 103
+   },
+   "fixed": {
+    "gain": 43,
+    "loss": 0,
+    "retained": 99
+   },
+   "retained_new": 5
+  }
+ },
+ "K": {
+  "fixed": {
+   "hit": 33,
+   "correct_write": 5,
+   "write": 24,
+   "extra": 3,
+   "calls": 155,
+   "prior": {
+    "gain": 1,
+    "loss": 3,
+    "retained": 32
+   },
+   "fixed": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 33
+   },
+   "retained_new": 0
+  },
+  "unchanged": {
+   "hit": 35,
+   "correct_write": 6,
+   "write": 24,
+   "extra": 3,
+   "calls": 163,
+   "prior": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 35
+   },
+   "fixed": {
+    "gain": 3,
+    "loss": 1,
+    "retained": 32
+   },
+   "retained_new": 3
+  },
+  "aggregate": {
+   "hit": 24,
+   "correct_write": 0,
+   "write": 24,
+   "extra": 2,
+   "calls": 242,
+   "prior": {
+    "gain": 0,
+    "loss": 11,
+    "retained": 24
+   },
+   "fixed": {
+    "gain": 0,
+    "loss": 9,
+    "retained": 24
+   },
+   "retained_new": 0
+  },
+  "trajectory": {
+   "hit": 21,
+   "correct_write": 16,
+   "write": 24,
+   "extra": 1,
+   "calls": 154,
+   "prior": {
+    "gain": 10,
+    "loss": 24,
+    "retained": 11
+   },
+   "fixed": {
+    "gain": 12,
+    "loss": 24,
+    "retained": 9
+   },
+   "retained_new": 3
+  },
+  "induced": {
+   "hit": 53,
+   "correct_write": 23,
+   "write": 24,
+   "extra": 3,
+   "calls": 207,
+   "prior": {
+    "gain": 18,
+    "loss": 0,
+    "retained": 35
+   },
+   "fixed": {
+    "gain": 21,
+    "loss": 1,
+    "retained": 32
+   },
+   "retained_new": 3
+  }
+ },
+ "rule_K": {
+  "hit": 72,
+  "correct_write": 24,
+  "write": 24,
+  "extra": 0,
+  "calls": 216
+ }
+}

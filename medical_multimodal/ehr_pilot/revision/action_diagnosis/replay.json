@@ -1,0 +1,36 @@
+{
+ "task6": {
+  "n": 9,
+  "reproduced": 9,
+  "plan_correct": 9,
+  "write": 0,
+  "form_list_1": 9,
+  "matches_missing": 9
+ },
+ "task5": {
+  "n": 2,
+  "reproduced": 2,
+  "plan_correct": 0,
+  "write": 2,
+  "form_list_0": 2,
+  "matches_none": 2
+ },
+ "task10": {
+  "n": 6,
+  "reproduced": 6,
+  "plan_correct": 5,
+  "write": 5,
+  "form_list_2": 2,
+  "matches_none": 2,
+  "form_list_1": 4,
+  "matches_missing": 4
+ },
+ "task7": {
+  "n": 4,
+  "reproduced": 4,
+  "plan_correct": 4,
+  "write": 0,
+  "form_list_1": 4,
+  "matches_none": 4
+ }
+}

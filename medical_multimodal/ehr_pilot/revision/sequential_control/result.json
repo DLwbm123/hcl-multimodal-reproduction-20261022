@@ -1,0 +1,227 @@
+{
+ "A": {
+  "n": 180,
+  "arms": {
+   "fixed": {
+    "hit": 99,
+    "write": 60,
+    "correct_write": 9,
+    "extra": 16,
+    "calls": 417
+   },
+   "after_A": {
+    "hit": 103,
+    "write": 60,
+    "correct_write": 6,
+    "extra": 11,
+    "calls": 411
+   },
+   "after_B": {
+    "hit": 103,
+    "write": 60,
+    "correct_write": 6,
+    "extra": 11,
+    "calls": 411
+   },
+   "protected": {
+    "hit": 103,
+    "write": 60,
+    "correct_write": 6,
+    "extra": 11,
+    "calls": 411
+   },
+   "rule": {
+    "hit": 180,
+    "write": 60,
+    "correct_write": 60,
+    "extra": 0,
+    "calls": 420
+   }
+  },
+  "a_vs_fixed": {
+   "gain": 5,
+   "loss": 1,
+   "retained": 98
+  },
+  "b_vs_a": {
+   "gain": 0,
+   "loss": 0,
+   "retained": 103
+  },
+  "protected_vs_a": {
+   "gain": 0,
+   "loss": 0,
+   "retained": 103
+  },
+  "protected_vs_b": {
+   "gain": 0,
+   "loss": 0,
+   "retained": 103
+  },
+  "protected_vs_fixed": {
+   "gain": 5,
+   "loss": 1,
+   "retained": 98
+  },
+  "newly_acquired": 5,
+  "retained_after_B": 5,
+  "retained_protected": 5
+ },
+ "B": {
+  "n": 180,
+  "arms": {
+   "fixed": {
+    "hit": 180,
+    "write": 0,
+    "correct_write": 0,
+    "extra": 0,
+    "calls": 360
+   },
+   "after_A": {
+    "hit": 180,
+    "write": 0,
+    "correct_write": 0,
+    "extra": 0,
+    "calls": 360
+   },
+   "after_B": {
+    "hit": 180,
+    "write": 0,
+    "correct_write": 0,
+    "extra": 0,
+    "calls": 360
+   },
+   "protected": {
+    "hit": 180,
+    "write": 0,
+    "correct_write": 0,
+    "extra": 0,
+    "calls": 360
+   },
+   "rule": {
+    "hit": 180,
+    "write": 0,
+    "correct_write": 0,
+    "extra": 0,
+    "calls": 360
+   }
+  },
+  "a_vs_fixed": {
+   "gain": 0,
+   "loss": 0,
+   "retained": 180
+  },
+  "b_vs_a": {
+   "gain": 0,
+   "loss": 0,
+   "retained": 180
+  },
+  "protected_vs_a": {
+   "gain": 0,
+   "loss": 0,
+   "retained": 180
+  },
+  "protected_vs_b": {
+   "gain": 0,
+   "loss": 0,
+   "retained": 180
+  },
+  "protected_vs_fixed": {
+   "gain": 0,
+   "loss": 0,
+   "retained": 180
+  },
+  "newly_acquired": 0,
+  "retained_after_B": 0,
+  "retained_protected": 0
+ },
+ "C": {
+  "n": 180,
+  "arms": {
+   "fixed": {
+    "hit": 141,
+    "write": 60,
+    "correct_write": 42,
+    "extra": 20,
+    "calls": 609
+   },
+   "after_A": {
+    "hit": 140,
+    "write": 60,
+    "correct_write": 42,
+    "extra": 19,
+    "calls": 606
+   },
+   "after_B": {
+    "hit": 140,
+    "write": 60,
+    "correct_write": 42,
+    "extra": 19,
+    "calls": 606
+   },
+   "protected": {
+    "hit": 140,
+    "write": 60,
+    "correct_write": 42,
+    "extra": 19,
+    "calls": 606
+   },
+   "rule": {
+    "hit": 180,
+    "write": 60,
+    "correct_write": 60,
+    "extra": 0,
+    "calls": 600
+   }
+  },
+  "a_vs_fixed": {
+   "gain": 0,
+   "loss": 1,
+   "retained": 140
+  },
+  "b_vs_a": {
+   "gain": 0,
+   "loss": 0,
+   "retained": 140
+  },
+  "protected_vs_a": {
+   "gain": 0,
+   "loss": 0,
+   "retained": 140
+  },
+  "protected_vs_b": {
+   "gain": 0,
+   "loss": 0,
+   "retained": 140
+  },
+  "protected_vs_fixed": {
+   "gain": 0,
+   "loss": 1,
+   "retained": 140
+  },
+  "newly_acquired": 0,
+  "retained_after_B": 0,
+  "retained_protected": 0
+ },
+ "selection": {
+  "a_scores": [
+   28,
+   29
+  ],
+  "a_index": 1,
+  "b": {
+   "normal": 0,
+   "protected": 0,
+   "new_scores": [
+    60
+   ],
+   "old_scores": [
+    29
+   ],
+   "gain_n": 1,
+   "eligible": [
+    0
+   ]
+  }
+ }
+}

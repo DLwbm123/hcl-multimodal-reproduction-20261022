@@ -1,0 +1,40 @@
+{
+ "free": {
+  "hit": 0,
+  "official": 0,
+  "terminal": 1,
+  "attempted": 1,
+  "accepted": 1,
+  "resource_sequence": 1,
+  "fields": {
+   ".dosageInstruction[0].doseAndRate[0].rateQuantity.unit": 1,
+   ".dosageInstruction[0].doseAndRate[0].rateQuantity.value": 1,
+   ".dosageInstruction[0].route": 1
+  },
+  "first": {
+   "MedicationRequest": 1,
+   "FINISH": 6
+  }
+ },
+ "forced": {
+  "hit": 1,
+  "official": 1,
+  "terminal": 1,
+  "attempted": 7,
+  "accepted": 7,
+  "resource_sequence": 7,
+  "fields": {
+   ".dosageInstruction[0].doseAndRate[0].rateQuantity.unit": 2,
+   ".dosageInstruction[0].doseAndRate[0].rateQuantity.value": 2,
+   ".dosageInstruction[0].route": 2
+  },
+  "first": {
+   "MedicationRequest": 2,
+   "ServiceRequest": 5
+  }
+ },
+ "pair": {
+  "gain": 1,
+  "loss": 0
+ }
+}

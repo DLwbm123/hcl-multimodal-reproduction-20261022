@@ -1,0 +1,38 @@
+{
+ "n": 7,
+ "oracle_plan_gain": 1,
+ "free": {
+  "attempted": 6,
+  "accepted": 2,
+  "resource_sequence": 2,
+  "terminal": 0,
+  "hit": 0,
+  "official": 0,
+  "first": {
+   "MedicationRequest": 1,
+   "FINISH": 6
+  },
+  "field_mismatch_cases": {
+   ".dosageInstruction[0].doseAndRate[0].rateQuantity.unit": 2,
+   ".dosageInstruction[0].doseAndRate[0].rateQuantity.value": 2,
+   ".dosageInstruction[0].route": 2
+  }
+ },
+ "forced": {
+  "attempted": 7,
+  "accepted": 0,
+  "resource_sequence": 0,
+  "terminal": 0,
+  "hit": 0,
+  "official": 0,
+  "first": {
+   "MedicationRequest": 2,
+   "ServiceRequest": 5
+  },
+  "field_mismatch_cases": {}
+ },
+ "forced_vs_free": {
+  "gain": 0,
+  "loss": 0
+ }
+}
