@@ -1,0 +1,2758 @@
+{
+ "card_all": {
+  "n": 77,
+  "people": 28,
+  "triggered": 1,
+  "field_types": {
+   "code": 1
+  },
+  "query_tasks": 62,
+  "base": {
+   "hit": 33,
+   "strict": 26,
+   "official": 33,
+   "read": 30,
+   "calls": 118
+  },
+  "generic": {
+   "hit": 33,
+   "strict": 26,
+   "official": 33,
+   "read": 30,
+   "calls": 118
+  },
+  "specific": {
+   "hit": 33,
+   "strict": 26,
+   "official": 33,
+   "read": 31,
+   "calls": 118
+  },
+  "specific_vs_base": {
+   "hit": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 33,
+    "patients": {
+     "tie": 28
+    }
+   },
+   "strict": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 26,
+    "patients": {
+     "tie": 28
+    }
+   },
+   "read": {
+    "gain": 1,
+    "loss": 0,
+    "retained": 30,
+    "patients": {
+     "tie": 26,
+     "gain": 1
+    }
+   }
+  },
+  "generic_vs_base": {
+   "hit": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 33,
+    "patients": {
+     "tie": 28
+    }
+   },
+   "strict": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 26,
+    "patients": {
+     "tie": 28
+    }
+   },
+   "read": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 30,
+    "patients": {
+     "tie": 27
+    }
+   }
+  },
+  "specific_vs_generic": {
+   "hit": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 33,
+    "patients": {
+     "tie": 28
+    }
+   },
+   "strict": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 26,
+    "patients": {
+     "tie": 28
+    }
+   },
+   "read": {
+    "gain": 1,
+    "loss": 0,
+    "retained": 30,
+    "patients": {
+     "tie": 26,
+     "gain": 1
+    }
+   }
+  }
+ },
+ "card_untriggered": {
+  "n": 76,
+  "people": 28,
+  "triggered": 0,
+  "field_types": {},
+  "query_tasks": 61,
+  "base": {
+   "hit": 33,
+   "strict": 26,
+   "official": 33,
+   "read": 30,
+   "calls": 116
+  },
+  "generic": {
+   "hit": 33,
+   "strict": 26,
+   "official": 33,
+   "read": 30,
+   "calls": 116
+  },
+  "specific": {
+   "hit": 33,
+   "strict": 26,
+   "official": 33,
+   "read": 30,
+   "calls": 116
+  },
+  "specific_vs_base": {
+   "hit": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 33,
+    "patients": {
+     "tie": 28
+    }
+   },
+   "strict": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 26,
+    "patients": {
+     "tie": 28
+    }
+   },
+   "read": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 30,
+    "patients": {
+     "tie": 27
+    }
+   }
+  },
+  "generic_vs_base": {
+   "hit": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 33,
+    "patients": {
+     "tie": 28
+    }
+   },
+   "strict": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 26,
+    "patients": {
+     "tie": 28
+    }
+   },
+   "read": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 30,
+    "patients": {
+     "tie": 27
+    }
+   }
+  },
+  "specific_vs_generic": {
+   "hit": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 33,
+    "patients": {
+     "tie": 28
+    }
+   },
+   "strict": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 26,
+    "patients": {
+     "tie": 28
+    }
+   },
+   "read": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 30,
+    "patients": {
+     "tie": 27
+    }
+   }
+  }
+ },
+ "card_task1": {
+  "n": 7,
+  "people": 7,
+  "triggered": 0,
+  "field_types": {},
+  "query_tasks": 7,
+  "base": {
+   "hit": 7,
+   "strict": 0,
+   "official": 7,
+   "read": 0,
+   "calls": 7
+  },
+  "generic": {
+   "hit": 7,
+   "strict": 0,
+   "official": 7,
+   "read": 0,
+   "calls": 7
+  },
+  "specific": {
+   "hit": 7,
+   "strict": 0,
+   "official": 7,
+   "read": 0,
+   "calls": 7
+  },
+  "specific_vs_base": {
+   "hit": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 7,
+    "patients": {
+     "tie": 7
+    }
+   },
+   "strict": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 7
+    }
+   },
+   "read": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 7
+    }
+   }
+  },
+  "generic_vs_base": {
+   "hit": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 7,
+    "patients": {
+     "tie": 7
+    }
+   },
+   "strict": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 7
+    }
+   },
+   "read": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 7
+    }
+   }
+  },
+  "specific_vs_generic": {
+   "hit": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 7,
+    "patients": {
+     "tie": 7
+    }
+   },
+   "strict": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 7
+    }
+   },
+   "read": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 7
+    }
+   }
+  }
+ },
+ "card_task4": {
+  "n": 6,
+  "people": 6,
+  "triggered": 0,
+  "field_types": {},
+  "query_tasks": 6,
+  "base": {
+   "hit": 0,
+   "strict": 0,
+   "official": 0,
+   "read": 0,
+   "calls": 36
+  },
+  "generic": {
+   "hit": 0,
+   "strict": 0,
+   "official": 0,
+   "read": 0,
+   "calls": 36
+  },
+  "specific": {
+   "hit": 0,
+   "strict": 0,
+   "official": 0,
+   "read": 0,
+   "calls": 36
+  },
+  "specific_vs_base": {
+   "hit": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 6
+    }
+   },
+   "strict": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 6
+    }
+   },
+   "read": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 6
+    }
+   }
+  },
+  "generic_vs_base": {
+   "hit": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 6
+    }
+   },
+   "strict": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 6
+    }
+   },
+   "read": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 6
+    }
+   }
+  },
+  "specific_vs_generic": {
+   "hit": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 6
+    }
+   },
+   "strict": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 6
+    }
+   },
+   "read": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 6
+    }
+   }
+  }
+ },
+ "card_task8": {
+  "n": 9,
+  "people": 9,
+  "triggered": 0,
+  "field_types": {},
+  "query_tasks": 0,
+  "base": {
+   "hit": 9,
+   "strict": 9,
+   "official": 9,
+   "read": 0,
+   "calls": 9
+  },
+  "generic": {
+   "hit": 9,
+   "strict": 9,
+   "official": 9,
+   "read": 0,
+   "calls": 9
+  },
+  "specific": {
+   "hit": 9,
+   "strict": 9,
+   "official": 9,
+   "read": 0,
+   "calls": 9
+  },
+  "specific_vs_base": {
+   "hit": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 9,
+    "patients": {
+     "tie": 9
+    }
+   },
+   "strict": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 9,
+    "patients": {
+     "tie": 9
+    }
+   },
+   "read": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {}
+   }
+  },
+  "generic_vs_base": {
+   "hit": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 9,
+    "patients": {
+     "tie": 9
+    }
+   },
+   "strict": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 9,
+    "patients": {
+     "tie": 9
+    }
+   },
+   "read": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {}
+   }
+  },
+  "specific_vs_generic": {
+   "hit": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 9,
+    "patients": {
+     "tie": 9
+    }
+   },
+   "strict": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 9,
+    "patients": {
+     "tie": 9
+    }
+   },
+   "read": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {}
+   }
+  }
+ },
+ "card_task2": {
+  "n": 6,
+  "people": 6,
+  "triggered": 0,
+  "field_types": {},
+  "query_tasks": 6,
+  "base": {
+   "hit": 2,
+   "strict": 2,
+   "official": 2,
+   "read": 6,
+   "calls": 9
+  },
+  "generic": {
+   "hit": 2,
+   "strict": 2,
+   "official": 2,
+   "read": 6,
+   "calls": 9
+  },
+  "specific": {
+   "hit": 2,
+   "strict": 2,
+   "official": 2,
+   "read": 6,
+   "calls": 9
+  },
+  "specific_vs_base": {
+   "hit": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 2,
+    "patients": {
+     "tie": 6
+    }
+   },
+   "strict": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 2,
+    "patients": {
+     "tie": 6
+    }
+   },
+   "read": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 6,
+    "patients": {
+     "tie": 6
+    }
+   }
+  },
+  "generic_vs_base": {
+   "hit": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 2,
+    "patients": {
+     "tie": 6
+    }
+   },
+   "strict": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 2,
+    "patients": {
+     "tie": 6
+    }
+   },
+   "read": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 6,
+    "patients": {
+     "tie": 6
+    }
+   }
+  },
+  "specific_vs_generic": {
+   "hit": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 2,
+    "patients": {
+     "tie": 6
+    }
+   },
+   "strict": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 2,
+    "patients": {
+     "tie": 6
+    }
+   },
+   "read": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 6,
+    "patients": {
+     "tie": 6
+    }
+   }
+  }
+ },
+ "card_task3": {
+  "n": 6,
+  "people": 6,
+  "triggered": 0,
+  "field_types": {},
+  "query_tasks": 0,
+  "base": {
+   "hit": 2,
+   "strict": 2,
+   "official": 2,
+   "read": 0,
+   "calls": 6
+  },
+  "generic": {
+   "hit": 2,
+   "strict": 2,
+   "official": 2,
+   "read": 0,
+   "calls": 6
+  },
+  "specific": {
+   "hit": 2,
+   "strict": 2,
+   "official": 2,
+   "read": 0,
+   "calls": 6
+  },
+  "specific_vs_base": {
+   "hit": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 2,
+    "patients": {
+     "tie": 6
+    }
+   },
+   "strict": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 2,
+    "patients": {
+     "tie": 6
+    }
+   },
+   "read": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {}
+   }
+  },
+  "generic_vs_base": {
+   "hit": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 2,
+    "patients": {
+     "tie": 6
+    }
+   },
+   "strict": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 2,
+    "patients": {
+     "tie": 6
+    }
+   },
+   "read": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {}
+   }
+  },
+  "specific_vs_generic": {
+   "hit": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 2,
+    "patients": {
+     "tie": 6
+    }
+   },
+   "strict": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 2,
+    "patients": {
+     "tie": 6
+    }
+   },
+   "read": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {}
+   }
+  }
+ },
+ "card_task5": {
+  "n": 8,
+  "people": 8,
+  "triggered": 0,
+  "field_types": {},
+  "query_tasks": 8,
+  "base": {
+   "hit": 5,
+   "strict": 5,
+   "official": 5,
+   "read": 8,
+   "calls": 11
+  },
+  "generic": {
+   "hit": 5,
+   "strict": 5,
+   "official": 5,
+   "read": 8,
+   "calls": 11
+  },
+  "specific": {
+   "hit": 5,
+   "strict": 5,
+   "official": 5,
+   "read": 8,
+   "calls": 11
+  },
+  "specific_vs_base": {
+   "hit": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 5,
+    "patients": {
+     "tie": 8
+    }
+   },
+   "strict": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 5,
+    "patients": {
+     "tie": 8
+    }
+   },
+   "read": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 8,
+    "patients": {
+     "tie": 8
+    }
+   }
+  },
+  "generic_vs_base": {
+   "hit": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 5,
+    "patients": {
+     "tie": 8
+    }
+   },
+   "strict": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 5,
+    "patients": {
+     "tie": 8
+    }
+   },
+   "read": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 8,
+    "patients": {
+     "tie": 8
+    }
+   }
+  },
+  "specific_vs_generic": {
+   "hit": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 5,
+    "patients": {
+     "tie": 8
+    }
+   },
+   "strict": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 5,
+    "patients": {
+     "tie": 8
+    }
+   },
+   "read": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 8,
+    "patients": {
+     "tie": 8
+    }
+   }
+  }
+ },
+ "card_task6": {
+  "n": 9,
+  "people": 9,
+  "triggered": 0,
+  "field_types": {},
+  "query_tasks": 9,
+  "base": {
+   "hit": 0,
+   "strict": 0,
+   "official": 0,
+   "read": 0,
+   "calls": 18
+  },
+  "generic": {
+   "hit": 0,
+   "strict": 0,
+   "official": 0,
+   "read": 0,
+   "calls": 18
+  },
+  "specific": {
+   "hit": 0,
+   "strict": 0,
+   "official": 0,
+   "read": 0,
+   "calls": 18
+  },
+  "specific_vs_base": {
+   "hit": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 9
+    }
+   },
+   "strict": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 9
+    }
+   },
+   "read": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 9
+    }
+   }
+  },
+  "generic_vs_base": {
+   "hit": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 9
+    }
+   },
+   "strict": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 9
+    }
+   },
+   "read": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 9
+    }
+   }
+  },
+  "specific_vs_generic": {
+   "hit": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 9
+    }
+   },
+   "strict": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 9
+    }
+   },
+   "read": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 9
+    }
+   }
+  }
+ },
+ "card_task7": {
+  "n": 10,
+  "people": 10,
+  "triggered": 0,
+  "field_types": {},
+  "query_tasks": 10,
+  "base": {
+   "hit": 7,
+   "strict": 7,
+   "official": 7,
+   "read": 10,
+   "calls": 10
+  },
+  "generic": {
+   "hit": 7,
+   "strict": 7,
+   "official": 7,
+   "read": 10,
+   "calls": 10
+  },
+  "specific": {
+   "hit": 7,
+   "strict": 7,
+   "official": 7,
+   "read": 10,
+   "calls": 10
+  },
+  "specific_vs_base": {
+   "hit": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 7,
+    "patients": {
+     "tie": 10
+    }
+   },
+   "strict": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 7,
+    "patients": {
+     "tie": 10
+    }
+   },
+   "read": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 10,
+    "patients": {
+     "tie": 10
+    }
+   }
+  },
+  "generic_vs_base": {
+   "hit": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 7,
+    "patients": {
+     "tie": 10
+    }
+   },
+   "strict": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 7,
+    "patients": {
+     "tie": 10
+    }
+   },
+   "read": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 10,
+    "patients": {
+     "tie": 10
+    }
+   }
+  },
+  "specific_vs_generic": {
+   "hit": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 7,
+    "patients": {
+     "tie": 10
+    }
+   },
+   "strict": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 7,
+    "patients": {
+     "tie": 10
+    }
+   },
+   "read": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 10,
+    "patients": {
+     "tie": 10
+    }
+   }
+  }
+ },
+ "card_task9": {
+  "n": 9,
+  "people": 9,
+  "triggered": 0,
+  "field_types": {},
+  "query_tasks": 9,
+  "base": {
+   "hit": 0,
+   "strict": 0,
+   "official": 0,
+   "read": 0,
+   "calls": 0
+  },
+  "generic": {
+   "hit": 0,
+   "strict": 0,
+   "official": 0,
+   "read": 0,
+   "calls": 0
+  },
+  "specific": {
+   "hit": 0,
+   "strict": 0,
+   "official": 0,
+   "read": 0,
+   "calls": 0
+  },
+  "specific_vs_base": {
+   "hit": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 9
+    }
+   },
+   "strict": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 9
+    }
+   },
+   "read": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 9
+    }
+   }
+  },
+  "generic_vs_base": {
+   "hit": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 9
+    }
+   },
+   "strict": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 9
+    }
+   },
+   "read": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 9
+    }
+   }
+  },
+  "specific_vs_generic": {
+   "hit": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 9
+    }
+   },
+   "strict": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 9
+    }
+   },
+   "read": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 9
+    }
+   }
+  }
+ },
+ "card_task10": {
+  "n": 7,
+  "people": 7,
+  "triggered": 1,
+  "field_types": {
+   "code": 1
+  },
+  "query_tasks": 7,
+  "base": {
+   "hit": 1,
+   "strict": 1,
+   "official": 1,
+   "read": 6,
+   "calls": 12
+  },
+  "generic": {
+   "hit": 1,
+   "strict": 1,
+   "official": 1,
+   "read": 6,
+   "calls": 12
+  },
+  "specific": {
+   "hit": 1,
+   "strict": 1,
+   "official": 1,
+   "read": 7,
+   "calls": 12
+  },
+  "specific_vs_base": {
+   "hit": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 1,
+    "patients": {
+     "tie": 7
+    }
+   },
+   "strict": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 1,
+    "patients": {
+     "tie": 7
+    }
+   },
+   "read": {
+    "gain": 1,
+    "loss": 0,
+    "retained": 6,
+    "patients": {
+     "tie": 6,
+     "gain": 1
+    }
+   }
+  },
+  "generic_vs_base": {
+   "hit": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 1,
+    "patients": {
+     "tie": 7
+    }
+   },
+   "strict": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 1,
+    "patients": {
+     "tie": 7
+    }
+   },
+   "read": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 6,
+    "patients": {
+     "tie": 7
+    }
+   }
+  },
+  "specific_vs_generic": {
+   "hit": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 1,
+    "patients": {
+     "tie": 7
+    }
+   },
+   "strict": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 1,
+    "patients": {
+     "tie": 7
+    }
+   },
+   "read": {
+    "gain": 1,
+    "loss": 0,
+    "retained": 6,
+    "patients": {
+     "tie": 6,
+     "gain": 1
+    }
+   }
+  }
+ },
+ "plain_all": {
+  "n": 77,
+  "people": 28,
+  "triggered": 22,
+  "field_types": {
+   "code": 22
+  },
+  "query_tasks": 62,
+  "base": {
+   "hit": 6,
+   "strict": 6,
+   "official": 6,
+   "read": 17,
+   "calls": 175
+  },
+  "generic": {
+   "hit": 6,
+   "strict": 6,
+   "official": 6,
+   "read": 17,
+   "calls": 182
+  },
+  "specific": {
+   "hit": 6,
+   "strict": 6,
+   "official": 6,
+   "read": 33,
+   "calls": 192
+  },
+  "specific_vs_base": {
+   "hit": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 6,
+    "patients": {
+     "tie": 28
+    }
+   },
+   "strict": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 6,
+    "patients": {
+     "tie": 28
+    }
+   },
+   "read": {
+    "gain": 16,
+    "loss": 0,
+    "retained": 17,
+    "patients": {
+     "tie": 14,
+     "gain": 13
+    }
+   }
+  },
+  "generic_vs_base": {
+   "hit": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 6,
+    "patients": {
+     "tie": 28
+    }
+   },
+   "strict": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 6,
+    "patients": {
+     "tie": 28
+    }
+   },
+   "read": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 17,
+    "patients": {
+     "tie": 27
+    }
+   }
+  },
+  "specific_vs_generic": {
+   "hit": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 6,
+    "patients": {
+     "tie": 28
+    }
+   },
+   "strict": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 6,
+    "patients": {
+     "tie": 28
+    }
+   },
+   "read": {
+    "gain": 16,
+    "loss": 0,
+    "retained": 17,
+    "patients": {
+     "tie": 14,
+     "gain": 13
+    }
+   }
+  }
+ },
+ "plain_untriggered": {
+  "n": 55,
+  "people": 25,
+  "triggered": 0,
+  "field_types": {},
+  "query_tasks": 40,
+  "base": {
+   "hit": 6,
+   "strict": 6,
+   "official": 6,
+   "read": 17,
+   "calls": 119
+  },
+  "generic": {
+   "hit": 6,
+   "strict": 6,
+   "official": 6,
+   "read": 17,
+   "calls": 119
+  },
+  "specific": {
+   "hit": 6,
+   "strict": 6,
+   "official": 6,
+   "read": 17,
+   "calls": 119
+  },
+  "specific_vs_base": {
+   "hit": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 6,
+    "patients": {
+     "tie": 25
+    }
+   },
+   "strict": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 6,
+    "patients": {
+     "tie": 25
+    }
+   },
+   "read": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 17,
+    "patients": {
+     "tie": 23
+    }
+   }
+  },
+  "generic_vs_base": {
+   "hit": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 6,
+    "patients": {
+     "tie": 25
+    }
+   },
+   "strict": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 6,
+    "patients": {
+     "tie": 25
+    }
+   },
+   "read": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 17,
+    "patients": {
+     "tie": 23
+    }
+   }
+  },
+  "specific_vs_generic": {
+   "hit": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 6,
+    "patients": {
+     "tie": 25
+    }
+   },
+   "strict": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 6,
+    "patients": {
+     "tie": 25
+    }
+   },
+   "read": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 17,
+    "patients": {
+     "tie": 23
+    }
+   }
+  }
+ },
+ "plain_task1": {
+  "n": 7,
+  "people": 7,
+  "triggered": 0,
+  "field_types": {},
+  "query_tasks": 7,
+  "base": {
+   "hit": 0,
+   "strict": 0,
+   "official": 0,
+   "read": 5,
+   "calls": 7
+  },
+  "generic": {
+   "hit": 0,
+   "strict": 0,
+   "official": 0,
+   "read": 5,
+   "calls": 7
+  },
+  "specific": {
+   "hit": 0,
+   "strict": 0,
+   "official": 0,
+   "read": 5,
+   "calls": 7
+  },
+  "specific_vs_base": {
+   "hit": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 7
+    }
+   },
+   "strict": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 7
+    }
+   },
+   "read": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 5,
+    "patients": {
+     "tie": 7
+    }
+   }
+  },
+  "generic_vs_base": {
+   "hit": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 7
+    }
+   },
+   "strict": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 7
+    }
+   },
+   "read": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 5,
+    "patients": {
+     "tie": 7
+    }
+   }
+  },
+  "specific_vs_generic": {
+   "hit": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 7
+    }
+   },
+   "strict": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 7
+    }
+   },
+   "read": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 5,
+    "patients": {
+     "tie": 7
+    }
+   }
+  }
+ },
+ "plain_triggered": {
+  "n": 22,
+  "people": 18,
+  "triggered": 22,
+  "field_types": {
+   "code": 22
+  },
+  "query_tasks": 22,
+  "base": {
+   "hit": 0,
+   "strict": 0,
+   "official": 0,
+   "read": 0,
+   "calls": 56
+  },
+  "generic": {
+   "hit": 0,
+   "strict": 0,
+   "official": 0,
+   "read": 0,
+   "calls": 63
+  },
+  "specific": {
+   "hit": 0,
+   "strict": 0,
+   "official": 0,
+   "read": 16,
+   "calls": 73
+  },
+  "specific_vs_base": {
+   "hit": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 18
+    }
+   },
+   "strict": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 18
+    }
+   },
+   "read": {
+    "gain": 16,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 5,
+     "gain": 13
+    }
+   }
+  },
+  "generic_vs_base": {
+   "hit": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 18
+    }
+   },
+   "strict": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 18
+    }
+   },
+   "read": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 18
+    }
+   }
+  },
+  "specific_vs_generic": {
+   "hit": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 18
+    }
+   },
+   "strict": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 18
+    }
+   },
+   "read": {
+    "gain": 16,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 5,
+     "gain": 13
+    }
+   }
+  }
+ },
+ "plain_task4": {
+  "n": 6,
+  "people": 6,
+  "triggered": 6,
+  "field_types": {
+   "code": 6
+  },
+  "query_tasks": 6,
+  "base": {
+   "hit": 0,
+   "strict": 0,
+   "official": 0,
+   "read": 0,
+   "calls": 12
+  },
+  "generic": {
+   "hit": 0,
+   "strict": 0,
+   "official": 0,
+   "read": 0,
+   "calls": 14
+  },
+  "specific": {
+   "hit": 0,
+   "strict": 0,
+   "official": 0,
+   "read": 0,
+   "calls": 16
+  },
+  "specific_vs_base": {
+   "hit": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 6
+    }
+   },
+   "strict": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 6
+    }
+   },
+   "read": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 6
+    }
+   }
+  },
+  "generic_vs_base": {
+   "hit": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 6
+    }
+   },
+   "strict": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 6
+    }
+   },
+   "read": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 6
+    }
+   }
+  },
+  "specific_vs_generic": {
+   "hit": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 6
+    }
+   },
+   "strict": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 6
+    }
+   },
+   "read": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 6
+    }
+   }
+  }
+ },
+ "plain_task8": {
+  "n": 9,
+  "people": 9,
+  "triggered": 0,
+  "field_types": {},
+  "query_tasks": 0,
+  "base": {
+   "hit": 0,
+   "strict": 0,
+   "official": 0,
+   "read": 0,
+   "calls": 9
+  },
+  "generic": {
+   "hit": 0,
+   "strict": 0,
+   "official": 0,
+   "read": 0,
+   "calls": 9
+  },
+  "specific": {
+   "hit": 0,
+   "strict": 0,
+   "official": 0,
+   "read": 0,
+   "calls": 9
+  },
+  "specific_vs_base": {
+   "hit": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 9
+    }
+   },
+   "strict": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 9
+    }
+   },
+   "read": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {}
+   }
+  },
+  "generic_vs_base": {
+   "hit": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 9
+    }
+   },
+   "strict": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 9
+    }
+   },
+   "read": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {}
+   }
+  },
+  "specific_vs_generic": {
+   "hit": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 9
+    }
+   },
+   "strict": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 9
+    }
+   },
+   "read": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {}
+   }
+  }
+ },
+ "plain_task2": {
+  "n": 6,
+  "people": 6,
+  "triggered": 0,
+  "field_types": {},
+  "query_tasks": 6,
+  "base": {
+   "hit": 0,
+   "strict": 0,
+   "official": 0,
+   "read": 0,
+   "calls": 48
+  },
+  "generic": {
+   "hit": 0,
+   "strict": 0,
+   "official": 0,
+   "read": 0,
+   "calls": 48
+  },
+  "specific": {
+   "hit": 0,
+   "strict": 0,
+   "official": 0,
+   "read": 0,
+   "calls": 48
+  },
+  "specific_vs_base": {
+   "hit": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 6
+    }
+   },
+   "strict": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 6
+    }
+   },
+   "read": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 6
+    }
+   }
+  },
+  "generic_vs_base": {
+   "hit": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 6
+    }
+   },
+   "strict": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 6
+    }
+   },
+   "read": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 6
+    }
+   }
+  },
+  "specific_vs_generic": {
+   "hit": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 6
+    }
+   },
+   "strict": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 6
+    }
+   },
+   "read": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 6
+    }
+   }
+  }
+ },
+ "plain_task3": {
+  "n": 6,
+  "people": 6,
+  "triggered": 0,
+  "field_types": {},
+  "query_tasks": 0,
+  "base": {
+   "hit": 6,
+   "strict": 6,
+   "official": 6,
+   "read": 0,
+   "calls": 6
+  },
+  "generic": {
+   "hit": 6,
+   "strict": 6,
+   "official": 6,
+   "read": 0,
+   "calls": 6
+  },
+  "specific": {
+   "hit": 6,
+   "strict": 6,
+   "official": 6,
+   "read": 0,
+   "calls": 6
+  },
+  "specific_vs_base": {
+   "hit": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 6,
+    "patients": {
+     "tie": 6
+    }
+   },
+   "strict": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 6,
+    "patients": {
+     "tie": 6
+    }
+   },
+   "read": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {}
+   }
+  },
+  "generic_vs_base": {
+   "hit": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 6,
+    "patients": {
+     "tie": 6
+    }
+   },
+   "strict": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 6,
+    "patients": {
+     "tie": 6
+    }
+   },
+   "read": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {}
+   }
+  },
+  "specific_vs_generic": {
+   "hit": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 6,
+    "patients": {
+     "tie": 6
+    }
+   },
+   "strict": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 6,
+    "patients": {
+     "tie": 6
+    }
+   },
+   "read": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {}
+   }
+  }
+ },
+ "plain_task5": {
+  "n": 8,
+  "people": 8,
+  "triggered": 0,
+  "field_types": {},
+  "query_tasks": 8,
+  "base": {
+   "hit": 0,
+   "strict": 0,
+   "official": 0,
+   "read": 2,
+   "calls": 21
+  },
+  "generic": {
+   "hit": 0,
+   "strict": 0,
+   "official": 0,
+   "read": 2,
+   "calls": 21
+  },
+  "specific": {
+   "hit": 0,
+   "strict": 0,
+   "official": 0,
+   "read": 2,
+   "calls": 21
+  },
+  "specific_vs_base": {
+   "hit": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 8
+    }
+   },
+   "strict": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 8
+    }
+   },
+   "read": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 2,
+    "patients": {
+     "tie": 8
+    }
+   }
+  },
+  "generic_vs_base": {
+   "hit": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 8
+    }
+   },
+   "strict": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 8
+    }
+   },
+   "read": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 2,
+    "patients": {
+     "tie": 8
+    }
+   }
+  },
+  "specific_vs_generic": {
+   "hit": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 8
+    }
+   },
+   "strict": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 8
+    }
+   },
+   "read": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 2,
+    "patients": {
+     "tie": 8
+    }
+   }
+  }
+ },
+ "plain_task6": {
+  "n": 9,
+  "people": 9,
+  "triggered": 0,
+  "field_types": {},
+  "query_tasks": 9,
+  "base": {
+   "hit": 0,
+   "strict": 0,
+   "official": 0,
+   "read": 0,
+   "calls": 18
+  },
+  "generic": {
+   "hit": 0,
+   "strict": 0,
+   "official": 0,
+   "read": 0,
+   "calls": 18
+  },
+  "specific": {
+   "hit": 0,
+   "strict": 0,
+   "official": 0,
+   "read": 0,
+   "calls": 18
+  },
+  "specific_vs_base": {
+   "hit": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 9
+    }
+   },
+   "strict": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 9
+    }
+   },
+   "read": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 9
+    }
+   }
+  },
+  "generic_vs_base": {
+   "hit": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 9
+    }
+   },
+   "strict": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 9
+    }
+   },
+   "read": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 9
+    }
+   }
+  },
+  "specific_vs_generic": {
+   "hit": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 9
+    }
+   },
+   "strict": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 9
+    }
+   },
+   "read": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 9
+    }
+   }
+  }
+ },
+ "plain_task7": {
+  "n": 10,
+  "people": 10,
+  "triggered": 0,
+  "field_types": {},
+  "query_tasks": 10,
+  "base": {
+   "hit": 0,
+   "strict": 0,
+   "official": 0,
+   "read": 10,
+   "calls": 10
+  },
+  "generic": {
+   "hit": 0,
+   "strict": 0,
+   "official": 0,
+   "read": 10,
+   "calls": 10
+  },
+  "specific": {
+   "hit": 0,
+   "strict": 0,
+   "official": 0,
+   "read": 10,
+   "calls": 10
+  },
+  "specific_vs_base": {
+   "hit": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 10
+    }
+   },
+   "strict": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 10
+    }
+   },
+   "read": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 10,
+    "patients": {
+     "tie": 10
+    }
+   }
+  },
+  "generic_vs_base": {
+   "hit": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 10
+    }
+   },
+   "strict": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 10
+    }
+   },
+   "read": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 10,
+    "patients": {
+     "tie": 10
+    }
+   }
+  },
+  "specific_vs_generic": {
+   "hit": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 10
+    }
+   },
+   "strict": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 10
+    }
+   },
+   "read": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 10,
+    "patients": {
+     "tie": 10
+    }
+   }
+  }
+ },
+ "plain_task9": {
+  "n": 9,
+  "people": 9,
+  "triggered": 9,
+  "field_types": {
+   "code": 9
+  },
+  "query_tasks": 9,
+  "base": {
+   "hit": 0,
+   "strict": 0,
+   "official": 0,
+   "read": 0,
+   "calls": 30
+  },
+  "generic": {
+   "hit": 0,
+   "strict": 0,
+   "official": 0,
+   "read": 0,
+   "calls": 35
+  },
+  "specific": {
+   "hit": 0,
+   "strict": 0,
+   "official": 0,
+   "read": 9,
+   "calls": 36
+  },
+  "specific_vs_base": {
+   "hit": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 9
+    }
+   },
+   "strict": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 9
+    }
+   },
+   "read": {
+    "gain": 9,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "gain": 9
+    }
+   }
+  },
+  "generic_vs_base": {
+   "hit": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 9
+    }
+   },
+   "strict": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 9
+    }
+   },
+   "read": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 9
+    }
+   }
+  },
+  "specific_vs_generic": {
+   "hit": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 9
+    }
+   },
+   "strict": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 9
+    }
+   },
+   "read": {
+    "gain": 9,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "gain": 9
+    }
+   }
+  }
+ },
+ "plain_task10": {
+  "n": 7,
+  "people": 7,
+  "triggered": 7,
+  "field_types": {
+   "code": 7
+  },
+  "query_tasks": 7,
+  "base": {
+   "hit": 0,
+   "strict": 0,
+   "official": 0,
+   "read": 0,
+   "calls": 14
+  },
+  "generic": {
+   "hit": 0,
+   "strict": 0,
+   "official": 0,
+   "read": 0,
+   "calls": 14
+  },
+  "specific": {
+   "hit": 0,
+   "strict": 0,
+   "official": 0,
+   "read": 7,
+   "calls": 21
+  },
+  "specific_vs_base": {
+   "hit": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 7
+    }
+   },
+   "strict": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 7
+    }
+   },
+   "read": {
+    "gain": 7,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "gain": 7
+    }
+   }
+  },
+  "generic_vs_base": {
+   "hit": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 7
+    }
+   },
+   "strict": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 7
+    }
+   },
+   "read": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 7
+    }
+   }
+  },
+  "specific_vs_generic": {
+   "hit": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 7
+    }
+   },
+   "strict": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 7
+    }
+   },
+   "read": {
+    "gain": 7,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "gain": 7
+    }
+   }
+  }
+ },
+ "card_triggered": {
+  "n": 1,
+  "people": 1,
+  "triggered": 1,
+  "field_types": {
+   "code": 1
+  },
+  "query_tasks": 1,
+  "base": {
+   "hit": 0,
+   "strict": 0,
+   "official": 0,
+   "read": 0,
+   "calls": 2
+  },
+  "generic": {
+   "hit": 0,
+   "strict": 0,
+   "official": 0,
+   "read": 0,
+   "calls": 2
+  },
+  "specific": {
+   "hit": 0,
+   "strict": 0,
+   "official": 0,
+   "read": 1,
+   "calls": 2
+  },
+  "specific_vs_base": {
+   "hit": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 1
+    }
+   },
+   "strict": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 1
+    }
+   },
+   "read": {
+    "gain": 1,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "gain": 1
+    }
+   }
+  },
+  "generic_vs_base": {
+   "hit": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 1
+    }
+   },
+   "strict": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 1
+    }
+   },
+   "read": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 1
+    }
+   }
+  },
+  "specific_vs_generic": {
+   "hit": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 1
+    }
+   },
+   "strict": {
+    "gain": 0,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "tie": 1
+    }
+   },
+   "read": {
+    "gain": 1,
+    "loss": 0,
+    "retained": 0,
+    "patients": {
+     "gain": 1
+    }
+   }
+  }
+ }
+}
