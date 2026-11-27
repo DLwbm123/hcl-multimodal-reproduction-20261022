@@ -1,0 +1,174 @@
+{
+  "mode": "text",
+  "splits": {
+    "source": "VitalDB",
+    "distinct_subjects": 44,
+    "excluded_prior_panel": 120
+  },
+  "training": {
+    "total": 12,
+    "correct": 11,
+    "failed": 1
+  },
+  "valid_patches": 2,
+  "selected": null,
+  "shadow": 0,
+  "gate": [
+    {
+      "candidate": 0,
+      "current": {
+        "n": 8,
+        "before": 8,
+        "after": 8,
+        "gain": 0,
+        "loss": 0,
+        "retained": 8,
+        "behavior_changed": 0,
+        "tools_before": 21,
+        "tools_after": 21
+      },
+      "anchors": {
+        "n": 8,
+        "before": 8,
+        "after": 8,
+        "gain": 0,
+        "loss": 0,
+        "retained": 8,
+        "behavior_changed": 0,
+        "tools_before": 15,
+        "tools_after": 15
+      },
+      "anchor_vs_frozen": {
+        "n": 8,
+        "before": 7,
+        "after": 8,
+        "gain": 1,
+        "loss": 0,
+        "retained": 7,
+        "behavior_changed": 1,
+        "tools_before": 14,
+        "tools_after": 15
+      },
+      "accepted": false
+    },
+    {
+      "candidate": 1,
+      "current": {
+        "n": 8,
+        "before": 8,
+        "after": 8,
+        "gain": 0,
+        "loss": 0,
+        "retained": 8,
+        "behavior_changed": 0,
+        "tools_before": 21,
+        "tools_after": 21
+      },
+      "anchors": {
+        "n": 8,
+        "before": 8,
+        "after": 8,
+        "gain": 0,
+        "loss": 0,
+        "retained": 8,
+        "behavior_changed": 0,
+        "tools_before": 15,
+        "tools_after": 15
+      },
+      "anchor_vs_frozen": {
+        "n": 8,
+        "before": 7,
+        "after": 8,
+        "gain": 1,
+        "loss": 0,
+        "retained": 7,
+        "behavior_changed": 1,
+        "tools_before": 14,
+        "tools_after": 15
+      },
+      "accepted": false
+    }
+  ],
+  "fallback": "memory",
+  "memory_gate": {
+    "n": 8,
+    "before": 8,
+    "after": 8,
+    "gain": 0,
+    "loss": 0,
+    "retained": 8,
+    "behavior_changed": 2,
+    "tools_before": 17,
+    "tools_after": 21
+  },
+  "memory_anchor": {
+    "n": 8,
+    "before": 7,
+    "after": 8,
+    "gain": 1,
+    "loss": 0,
+    "retained": 7,
+    "behavior_changed": 1,
+    "tools_before": 14,
+    "tools_after": 15
+  },
+  "test": {
+    "frozen": {
+      "n": 16,
+      "before": 16,
+      "after": 16,
+      "gain": 0,
+      "loss": 0,
+      "retained": 16,
+      "behavior_changed": 0,
+      "tools_before": 34,
+      "tools_after": 34
+    },
+    "memory": {
+      "n": 16,
+      "before": 16,
+      "after": 16,
+      "gain": 0,
+      "loss": 0,
+      "retained": 16,
+      "behavior_changed": 4,
+      "tools_before": 34,
+      "tools_after": 41
+    },
+    "edited": {
+      "n": 16,
+      "before": 16,
+      "after": 16,
+      "gain": 0,
+      "loss": 0,
+      "retained": 16,
+      "behavior_changed": 4,
+      "tools_before": 34,
+      "tools_after": 41
+    },
+    "deployed": {
+      "n": 16,
+      "before": 16,
+      "after": 16,
+      "gain": 0,
+      "loss": 0,
+      "retained": 16,
+      "behavior_changed": 4,
+      "tools_before": 34,
+      "tools_after": 41
+    }
+  },
+  "edit_vs_memory": {
+    "n": 16,
+    "before": 16,
+    "after": 16,
+    "gain": 0,
+    "loss": 0,
+    "retained": 16,
+    "behavior_changed": 0,
+    "tools_before": 41,
+    "tools_after": 41
+  },
+  "cuda_allocated_mib": 16074.0,
+  "cuda_reserved_mib": 17692.0
+}
