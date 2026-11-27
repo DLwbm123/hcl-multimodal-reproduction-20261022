@@ -1,0 +1,199 @@
+{
+ "native": {
+  "all": {
+   "n": 27,
+   "retrieval": 22,
+   "induction": 23,
+   "gain": 1,
+   "loss": 0,
+   "retained": 22
+  },
+  "write": {
+   "n": 2,
+   "retrieval": 1,
+   "induction": 1,
+   "gain": 0,
+   "loss": 0,
+   "retained": 1
+  },
+  "clusters": 14,
+  "ci_95": [
+   0,
+   0.12
+  ]
+ },
+ "development": {
+  "all": {
+   "n": 72,
+   "retrieval": 66,
+   "induction": 72,
+   "gain": 6,
+   "loss": 0,
+   "retained": 66
+  },
+  "write": {
+   "n": 24,
+   "retrieval": 18,
+   "induction": 24,
+   "gain": 6,
+   "loss": 0,
+   "retained": 18
+  },
+  "clusters": 72,
+  "ci_95": [
+   0.027777777777777776,
+   0.1527777777777778
+  ]
+ },
+ "composition": {
+  "all": {
+   "n": 72,
+   "retrieval": 55,
+   "induction": 72,
+   "gain": 17,
+   "loss": 0,
+   "retained": 55,
+   "numeric_retrieval": 59,
+   "numeric_induction": 72
+  },
+  "write": {
+   "n": 24,
+   "retrieval": 13,
+   "induction": 24,
+   "gain": 11,
+   "loss": 0,
+   "retained": 13,
+   "numeric_retrieval": 17,
+   "numeric_induction": 24
+  },
+  "no_write": {
+   "n": 48,
+   "retrieval": 42,
+   "induction": 48,
+   "gain": 6,
+   "loss": 0,
+   "retained": 42,
+   "numeric_retrieval": 42,
+   "numeric_induction": 48
+  }
+ },
+ "composition_role_matched": {
+  "all": {
+   "n": 72,
+   "retrieval": 66,
+   "induction": 72,
+   "gain": 6,
+   "loss": 0,
+   "retained": 66,
+   "numeric_retrieval": 72,
+   "numeric_induction": 72
+  },
+  "write": {
+   "n": 24,
+   "retrieval": 18,
+   "induction": 24,
+   "gain": 6,
+   "loss": 0,
+   "retained": 18,
+   "numeric_retrieval": 24,
+   "numeric_induction": 24
+  },
+  "no_write": {
+   "n": 48,
+   "retrieval": 48,
+   "induction": 48,
+   "gain": 0,
+   "loss": 0,
+   "retained": 48,
+   "numeric_retrieval": 48,
+   "numeric_induction": 48
+  }
+ },
+ "dispatch_replay": {
+  "native": {
+   "n": 27,
+   "scope": 16,
+   "strict": 9,
+   "unwrapped": 9,
+   "both_after_unwrap": 7,
+   "induction_with_verified_query": 20
+  },
+  "compose": {
+   "n": 72,
+   "scope": 0,
+   "strict": 0,
+   "unwrapped": 69,
+   "both_after_unwrap": 0
+  }
+ },
+ "native_new_questions_on_seen_patients": {
+  "all": {
+   "n": 15,
+   "retrieval": 12,
+   "induction": 13,
+   "gain": 1,
+   "loss": 0,
+   "retained": 12
+  },
+  "write": {
+   "n": 1,
+   "retrieval": false,
+   "induction": false,
+   "gain": false,
+   "loss": false,
+   "retained": false
+  },
+  "clusters": 11,
+  "ci_95": [
+   0,
+   0.23076923076923078
+  ]
+ },
+ "native_new_questions_original_distance": {
+  "n": 15,
+  "observed": 15,
+  "stump_retrieval_plan": 11,
+  "stump_retrieval_full": 11,
+  "stump_retrieval_official": 11,
+  "stump_retrieval_outcome": 15,
+  "stump_retrieval_any_write": 3,
+  "stump_retrieval_write_attempt": 3,
+  "stump_retrieval_wrong_write": 3,
+  "stump_retrieval_rejected": 0,
+  "stump_retrieval_terminal": 15,
+  "stump_retrieval_state": 11,
+  "stump_induction_plan": 11,
+  "stump_induction_full": 11,
+  "stump_induction_official": 11,
+  "stump_induction_outcome": 15,
+  "stump_induction_any_write": 3,
+  "stump_induction_write_attempt": 3,
+  "stump_induction_wrong_write": 3,
+  "stump_induction_rejected": 0,
+  "stump_induction_terminal": 15,
+  "stump_induction_state": 11,
+  "conditioned_retrieval_plan": 13,
+  "conditioned_retrieval_full": 13,
+  "conditioned_retrieval_official": 13,
+  "conditioned_retrieval_outcome": 15,
+  "conditioned_retrieval_any_write": 1,
+  "conditioned_retrieval_write_attempt": 1,
+  "conditioned_retrieval_wrong_write": 1,
+  "conditioned_retrieval_rejected": 0,
+  "conditioned_retrieval_terminal": 15,
+  "conditioned_retrieval_state": 13,
+  "conditioned_induction_plan": 13,
+  "conditioned_induction_full": 13,
+  "conditioned_induction_official": 13,
+  "conditioned_induction_outcome": 15,
+  "conditioned_induction_any_write": 1,
+  "conditioned_induction_write_attempt": 1,
+  "conditioned_induction_wrong_write": 1,
+  "conditioned_induction_rejected": 0,
+  "conditioned_induction_terminal": 15,
+  "conditioned_induction_state": 13,
+  "gain": 0,
+  "loss": 0,
+  "retained": 13
+ }
+}

@@ -1,0 +1,37 @@
+{
+ "a_n": 72,
+ "b_n": 144,
+ "a_retrieval": 54,
+ "a_after_a": 72,
+ "acquired_a": 18,
+ "b_before": 0,
+ "b_retrieval": 140,
+ "anchor": {
+  "shared": {
+   "old": 16,
+   "new": 70,
+   "lost": 8
+  },
+  "scoped": {
+   "old": 24,
+   "new": 70,
+   "lost": 0
+  }
+ },
+ "selected": {
+  "unguarded": "shared",
+  "guarded": "scoped"
+ },
+ "unguarded": {
+  "a": 48,
+  "b": 140,
+  "old_lost": 24,
+  "acquired_retained": 0
+ },
+ "guarded": {
+  "a": 72,
+  "b": 140,
+  "old_lost": 0,
+  "acquired_retained": 18
+ }
+}

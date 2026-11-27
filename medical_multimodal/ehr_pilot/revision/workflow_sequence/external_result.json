@@ -1,0 +1,272 @@
+{
+ "data": {
+  "n_subjects": 120,
+  "source_subjects": 6090,
+  "eligible": {
+   "write": 889,
+   "no_write": 3992,
+   "missing": 1209
+  },
+  "ambiguous_excluded": 0
+ },
+ "totals": {
+  "given_all": {
+   "n": 240,
+   "observed": 240,
+   "plan": 240,
+   "retrieval": 238,
+   "induction": 240,
+   "gain": 2,
+   "loss": 0,
+   "retained": 238,
+   "retrieval_wrong_write": 2,
+   "induction_wrong_write": 0
+  },
+  "given_task9": {
+   "n": 120,
+   "observed": 120,
+   "plan": 120,
+   "retrieval": 118,
+   "induction": 120,
+   "gain": 2,
+   "loss": 0,
+   "retained": 118,
+   "retrieval_wrong_write": 2,
+   "induction_wrong_write": 0
+  },
+  "given_no_write": {
+   "n": 200,
+   "observed": 200,
+   "plan": 200,
+   "retrieval": 200,
+   "induction": 200,
+   "gain": 0,
+   "loss": 0,
+   "retained": 200,
+   "retrieval_wrong_write": 0,
+   "induction_wrong_write": 0
+  },
+  "query_all": {
+   "n": 240,
+   "observed": 240,
+   "plan": 240,
+   "retrieval": 238,
+   "induction": 240,
+   "gain": 2,
+   "loss": 0,
+   "retained": 238,
+   "retrieval_wrong_write": 2,
+   "induction_wrong_write": 0
+  },
+  "query_task9": {
+   "n": 120,
+   "observed": 120,
+   "plan": 120,
+   "retrieval": 118,
+   "induction": 120,
+   "gain": 2,
+   "loss": 0,
+   "retained": 118,
+   "retrieval_wrong_write": 2,
+   "induction_wrong_write": 0
+  },
+  "query_no_write": {
+   "n": 200,
+   "observed": 200,
+   "plan": 200,
+   "retrieval": 200,
+   "induction": 200,
+   "gain": 0,
+   "loss": 0,
+   "retained": 200,
+   "retrieval_wrong_write": 0,
+   "induction_wrong_write": 0
+  },
+  "given_task6": {
+   "n": 120,
+   "observed": 120,
+   "plan": 120,
+   "retrieval": 120,
+   "induction": 120,
+   "gain": 0,
+   "loss": 0,
+   "retained": 120,
+   "retrieval_wrong_write": 0,
+   "induction_wrong_write": 0
+  },
+  "query_task6": {
+   "n": 120,
+   "observed": 120,
+   "plan": 120,
+   "retrieval": 120,
+   "induction": 120,
+   "gain": 0,
+   "loss": 0,
+   "retained": 120,
+   "retrieval_wrong_write": 0,
+   "induction_wrong_write": 0
+  },
+  "given_write": {
+   "n": 40,
+   "observed": 40,
+   "plan": 40,
+   "retrieval": 38,
+   "induction": 40,
+   "gain": 2,
+   "loss": 0,
+   "retained": 38,
+   "retrieval_wrong_write": 2,
+   "induction_wrong_write": 0
+  },
+  "query_write": {
+   "n": 40,
+   "observed": 40,
+   "plan": 40,
+   "retrieval": 38,
+   "induction": 40,
+   "gain": 2,
+   "loss": 0,
+   "retained": 38,
+   "retrieval_wrong_write": 2,
+   "induction_wrong_write": 0
+  }
+ },
+ "clusters": {
+  "given_all": {
+   "n": 120,
+   "ci_95": [
+    0,
+    0.020833333333333332
+   ]
+  },
+  "given_task9": {
+   "n": 120,
+   "ci_95": [
+    0,
+    0.041666666666666664
+   ]
+  },
+  "given_no_write": {
+   "n": 120,
+   "ci_95": [
+    0,
+    0
+   ]
+  },
+  "query_all": {
+   "n": 120,
+   "ci_95": [
+    0,
+    0.020833333333333332
+   ]
+  },
+  "query_task9": {
+   "n": 120,
+   "ci_95": [
+    0,
+    0.041666666666666664
+   ]
+  },
+  "query_no_write": {
+   "n": 120,
+   "ci_95": [
+    0,
+    0
+   ]
+  },
+  "given_task6": {
+   "n": 120,
+   "ci_95": [
+    0,
+    0
+   ]
+  },
+  "query_task6": {
+   "n": 120,
+   "ci_95": [
+    0,
+    0
+   ]
+  },
+  "given_write": {
+   "n": 40,
+   "ci_95": [
+    0,
+    0.125
+   ]
+  },
+  "query_write": {
+   "n": 40,
+   "ci_95": [
+    0,
+    0.125
+   ]
+  }
+ },
+ "query_attempts": 240,
+ "first_query_correct": 240,
+ "composition_given": {
+  "all": {
+   "n": 120,
+   "retrieval": 118,
+   "induction": 120,
+   "gain": 2,
+   "loss": 0,
+   "retained": 118,
+   "numeric_retrieval": 120,
+   "numeric_induction": 120
+  },
+  "no_write": {
+   "n": 80,
+   "retrieval": 80,
+   "induction": 80,
+   "gain": 0,
+   "loss": 0,
+   "retained": 80,
+   "numeric_retrieval": 80,
+   "numeric_induction": 80
+  },
+  "write": {
+   "n": 40,
+   "retrieval": 38,
+   "induction": 40,
+   "gain": 2,
+   "loss": 0,
+   "retained": 38,
+   "numeric_retrieval": 40,
+   "numeric_induction": 40
+  }
+ },
+ "composition_query": {
+  "all": {
+   "n": 120,
+   "retrieval": 118,
+   "induction": 120,
+   "gain": 2,
+   "loss": 0,
+   "retained": 118,
+   "numeric_retrieval": 120,
+   "numeric_induction": 120
+  },
+  "no_write": {
+   "n": 80,
+   "retrieval": 80,
+   "induction": 80,
+   "gain": 0,
+   "loss": 0,
+   "retained": 80,
+   "numeric_retrieval": 80,
+   "numeric_induction": 80
+  },
+  "write": {
+   "n": 40,
+   "retrieval": 38,
+   "induction": 40,
+   "gain": 2,
+   "loss": 0,
+   "retained": 38,
+   "numeric_retrieval": 40,
+   "numeric_induction": 40
+  }
+ }
+}

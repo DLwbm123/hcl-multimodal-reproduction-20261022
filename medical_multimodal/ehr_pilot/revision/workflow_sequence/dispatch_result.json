@@ -1,0 +1,19 @@
+{
+ "native": {
+  "retrieval": 7,
+  "induction": 7,
+  "n": 27,
+  "scope_correct": 16,
+  "query_correct": 9,
+  "both_correct": 7,
+  "retrieval_wrong_write": 2,
+  "induction_wrong_write": 2
+ },
+ "compose": {
+  "n": 72,
+  "scope_correct": 0,
+  "query_correct": 0,
+  "both_correct": 0
+ },
+ "compose_completed_among_dispatched": {}
+}
