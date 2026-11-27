@@ -1,0 +1,1470 @@
+{
+ "gate": {
+  "4": {
+   "n": 9,
+   "loo_gain": 9,
+   "loo_loss": 0,
+   "enabled": true
+  },
+  "5": {
+   "n": 8,
+   "loo_gain": 0,
+   "loo_loss": 0,
+   "enabled": false
+  },
+  "6": {
+   "n": 8,
+   "loo_gain": 0,
+   "loo_loss": 0,
+   "enabled": false
+  },
+  "7": {
+   "n": 6,
+   "loo_gain": 0,
+   "loo_loss": 0,
+   "enabled": false
+  },
+  "9": {
+   "n": 10,
+   "loo_gain": 0,
+   "loo_loss": 0,
+   "enabled": false
+  },
+  "10": {
+   "n": 9,
+   "loo_gain": 8,
+   "loo_loss": 0,
+   "enabled": true
+  }
+ },
+ "stats": {
+  "all": {
+   "n": 49,
+   "people": 26,
+   "changed": 9,
+   "card": {
+    "hit": 14,
+    "official": 14,
+    "full": 12,
+    "terminal": 14,
+    "post_seq": 32,
+    "unexpected_write": 12,
+    "misses": 0,
+    "calls": 76,
+    "steps": 125
+   },
+   "static": {
+    "hit": 24,
+    "official": 24,
+    "full": 24,
+    "terminal": 30,
+    "post_seq": 42,
+    "unexpected_write": 1,
+    "misses": 0,
+    "calls": 51,
+    "steps": 100,
+    "plan_hits": 38
+   },
+   "routed": {
+    "hit": 28,
+    "official": 28,
+    "full": 28,
+    "terminal": 35,
+    "post_seq": 42,
+    "unexpected_write": 0,
+    "misses": 0,
+    "calls": 49,
+    "steps": 98,
+    "plan_hits": 46
+   },
+   "selected": {
+    "hit": 28,
+    "official": 28,
+    "full": 28,
+    "terminal": 35,
+    "post_seq": 42,
+    "unexpected_write": 0,
+    "misses": 0,
+    "calls": 49,
+    "steps": 98,
+    "plan_hits": 46
+   },
+   "static_vs_card": {
+    "hit": {
+     "gain": 12,
+     "loss": 2,
+     "retained": 12,
+     "patients": {
+      "tie": 12,
+      "gain": 12,
+      "loss": 2
+     }
+    },
+    "full": {
+     "gain": 14,
+     "loss": 2,
+     "retained": 10,
+     "patients": {
+      "tie": 11,
+      "gain": 13,
+      "loss": 2
+     }
+    }
+   },
+   "routed_vs_static": {
+    "hit": {
+     "gain": 4,
+     "loss": 0,
+     "retained": 24,
+     "patients": {
+      "gain": 4,
+      "tie": 22
+     }
+    },
+    "full": {
+     "gain": 4,
+     "loss": 0,
+     "retained": 24,
+     "patients": {
+      "gain": 4,
+      "tie": 22
+     }
+    }
+   },
+   "selected_vs_static": {
+    "hit": {
+     "gain": 4,
+     "loss": 0,
+     "retained": 24,
+     "patients": {
+      "gain": 4,
+      "tie": 22
+     }
+    },
+    "full": {
+     "gain": 4,
+     "loss": 0,
+     "retained": 24,
+     "patients": {
+      "gain": 4,
+      "tie": 22
+     }
+    }
+   },
+   "selected_vs_card": {
+    "hit": {
+     "gain": 15,
+     "loss": 1,
+     "retained": 13,
+     "patients": {
+      "gain": 14,
+      "tie": 11,
+      "loss": 1
+     }
+    },
+    "full": {
+     "gain": 17,
+     "loss": 1,
+     "retained": 11,
+     "patients": {
+      "gain": 15,
+      "tie": 10,
+      "loss": 1
+     }
+    }
+   }
+  },
+  "task4": {
+   "n": 6,
+   "people": 6,
+   "changed": 6,
+   "card": {
+    "hit": 1,
+    "official": 1,
+    "full": 1,
+    "terminal": 2,
+    "post_seq": 4,
+    "unexpected_write": 2,
+    "misses": 0,
+    "calls": 8,
+    "steps": 14
+   },
+   "static": {
+    "hit": 3,
+    "official": 3,
+    "full": 3,
+    "terminal": 3,
+    "post_seq": 6,
+    "unexpected_write": 0,
+    "misses": 0,
+    "calls": 6,
+    "steps": 12,
+    "plan_hits": 0
+   },
+   "routed": {
+    "hit": 6,
+    "official": 6,
+    "full": 6,
+    "terminal": 6,
+    "post_seq": 6,
+    "unexpected_write": 0,
+    "misses": 0,
+    "calls": 6,
+    "steps": 12,
+    "plan_hits": 6
+   },
+   "selected": {
+    "hit": 6,
+    "official": 6,
+    "full": 6,
+    "terminal": 6,
+    "post_seq": 6,
+    "unexpected_write": 0,
+    "misses": 0,
+    "calls": 6,
+    "steps": 12,
+    "plan_hits": 6
+   },
+   "static_vs_card": {
+    "hit": {
+     "gain": 2,
+     "loss": 0,
+     "retained": 1,
+     "patients": {
+      "tie": 4,
+      "gain": 2
+     }
+    },
+    "full": {
+     "gain": 2,
+     "loss": 0,
+     "retained": 1,
+     "patients": {
+      "tie": 4,
+      "gain": 2
+     }
+    }
+   },
+   "routed_vs_static": {
+    "hit": {
+     "gain": 3,
+     "loss": 0,
+     "retained": 3,
+     "patients": {
+      "gain": 3,
+      "tie": 3
+     }
+    },
+    "full": {
+     "gain": 3,
+     "loss": 0,
+     "retained": 3,
+     "patients": {
+      "gain": 3,
+      "tie": 3
+     }
+    }
+   },
+   "selected_vs_static": {
+    "hit": {
+     "gain": 3,
+     "loss": 0,
+     "retained": 3,
+     "patients": {
+      "gain": 3,
+      "tie": 3
+     }
+    },
+    "full": {
+     "gain": 3,
+     "loss": 0,
+     "retained": 3,
+     "patients": {
+      "gain": 3,
+      "tie": 3
+     }
+    }
+   },
+   "selected_vs_card": {
+    "hit": {
+     "gain": 5,
+     "loss": 0,
+     "retained": 1,
+     "patients": {
+      "gain": 5,
+      "tie": 1
+     }
+    },
+    "full": {
+     "gain": 5,
+     "loss": 0,
+     "retained": 1,
+     "patients": {
+      "gain": 5,
+      "tie": 1
+     }
+    }
+   }
+  },
+  "no_write": {
+   "n": 42,
+   "people": 26,
+   "changed": 8,
+   "card": {
+    "hit": 14,
+    "official": 14,
+    "full": 12,
+    "terminal": 13,
+    "post_seq": 30,
+    "unexpected_write": 12,
+    "misses": 0,
+    "calls": 63,
+    "steps": 105
+   },
+   "static": {
+    "hit": 24,
+    "official": 24,
+    "full": 24,
+    "terminal": 24,
+    "post_seq": 41,
+    "unexpected_write": 1,
+    "misses": 0,
+    "calls": 43,
+    "steps": 85,
+    "plan_hits": 34
+   },
+   "routed": {
+    "hit": 28,
+    "official": 28,
+    "full": 28,
+    "terminal": 28,
+    "post_seq": 42,
+    "unexpected_write": 0,
+    "misses": 0,
+    "calls": 42,
+    "steps": 84,
+    "plan_hits": 42
+   },
+   "selected": {
+    "hit": 28,
+    "official": 28,
+    "full": 28,
+    "terminal": 28,
+    "post_seq": 42,
+    "unexpected_write": 0,
+    "misses": 0,
+    "calls": 42,
+    "steps": 84,
+    "plan_hits": 42
+   },
+   "static_vs_card": {
+    "hit": {
+     "gain": 12,
+     "loss": 2,
+     "retained": 12,
+     "patients": {
+      "tie": 12,
+      "gain": 12,
+      "loss": 2
+     }
+    },
+    "full": {
+     "gain": 14,
+     "loss": 2,
+     "retained": 10,
+     "patients": {
+      "tie": 11,
+      "gain": 13,
+      "loss": 2
+     }
+    }
+   },
+   "routed_vs_static": {
+    "hit": {
+     "gain": 4,
+     "loss": 0,
+     "retained": 24,
+     "patients": {
+      "gain": 4,
+      "tie": 22
+     }
+    },
+    "full": {
+     "gain": 4,
+     "loss": 0,
+     "retained": 24,
+     "patients": {
+      "gain": 4,
+      "tie": 22
+     }
+    }
+   },
+   "selected_vs_static": {
+    "hit": {
+     "gain": 4,
+     "loss": 0,
+     "retained": 24,
+     "patients": {
+      "gain": 4,
+      "tie": 22
+     }
+    },
+    "full": {
+     "gain": 4,
+     "loss": 0,
+     "retained": 24,
+     "patients": {
+      "gain": 4,
+      "tie": 22
+     }
+    }
+   },
+   "selected_vs_card": {
+    "hit": {
+     "gain": 15,
+     "loss": 1,
+     "retained": 13,
+     "patients": {
+      "gain": 14,
+      "tie": 11,
+      "loss": 1
+     }
+    },
+    "full": {
+     "gain": 17,
+     "loss": 1,
+     "retained": 11,
+     "patients": {
+      "gain": 15,
+      "tie": 10,
+      "loss": 1
+     }
+    }
+   }
+  },
+  "changed": {
+   "n": 9,
+   "people": 9,
+   "changed": 9,
+   "card": {
+    "hit": 2,
+    "official": 2,
+    "full": 2,
+    "terminal": 4,
+    "post_seq": 6,
+    "unexpected_write": 2,
+    "misses": 0,
+    "calls": 11,
+    "steps": 20
+   },
+   "static": {
+    "hit": 3,
+    "official": 3,
+    "full": 3,
+    "terminal": 3,
+    "post_seq": 8,
+    "unexpected_write": 1,
+    "misses": 0,
+    "calls": 11,
+    "steps": 20,
+    "plan_hits": 0
+   },
+   "routed": {
+    "hit": 7,
+    "official": 7,
+    "full": 7,
+    "terminal": 8,
+    "post_seq": 8,
+    "unexpected_write": 0,
+    "misses": 0,
+    "calls": 9,
+    "steps": 18,
+    "plan_hits": 8
+   },
+   "selected": {
+    "hit": 7,
+    "official": 7,
+    "full": 7,
+    "terminal": 8,
+    "post_seq": 8,
+    "unexpected_write": 0,
+    "misses": 0,
+    "calls": 9,
+    "steps": 18,
+    "plan_hits": 8
+   },
+   "static_vs_card": {
+    "hit": {
+     "gain": 2,
+     "loss": 1,
+     "retained": 1,
+     "patients": {
+      "tie": 6,
+      "gain": 2,
+      "loss": 1
+     }
+    },
+    "full": {
+     "gain": 2,
+     "loss": 1,
+     "retained": 1,
+     "patients": {
+      "tie": 6,
+      "gain": 2,
+      "loss": 1
+     }
+    }
+   },
+   "routed_vs_static": {
+    "hit": {
+     "gain": 4,
+     "loss": 0,
+     "retained": 3,
+     "patients": {
+      "gain": 4,
+      "tie": 5
+     }
+    },
+    "full": {
+     "gain": 4,
+     "loss": 0,
+     "retained": 3,
+     "patients": {
+      "gain": 4,
+      "tie": 5
+     }
+    }
+   },
+   "selected_vs_static": {
+    "hit": {
+     "gain": 4,
+     "loss": 0,
+     "retained": 3,
+     "patients": {
+      "gain": 4,
+      "tie": 5
+     }
+    },
+    "full": {
+     "gain": 4,
+     "loss": 0,
+     "retained": 3,
+     "patients": {
+      "gain": 4,
+      "tie": 5
+     }
+    }
+   },
+   "selected_vs_card": {
+    "hit": {
+     "gain": 5,
+     "loss": 0,
+     "retained": 2,
+     "patients": {
+      "gain": 5,
+      "tie": 4
+     }
+    },
+    "full": {
+     "gain": 5,
+     "loss": 0,
+     "retained": 2,
+     "patients": {
+      "gain": 5,
+      "tie": 4
+     }
+    }
+   }
+  },
+  "task10": {
+   "n": 7,
+   "people": 7,
+   "changed": 3,
+   "card": {
+    "hit": 1,
+    "official": 1,
+    "full": 1,
+    "terminal": 2,
+    "post_seq": 2,
+    "unexpected_write": 0,
+    "misses": 0,
+    "calls": 11,
+    "steps": 18
+   },
+   "static": {
+    "hit": 0,
+    "official": 0,
+    "full": 0,
+    "terminal": 4,
+    "post_seq": 2,
+    "unexpected_write": 1,
+    "misses": 0,
+    "calls": 9,
+    "steps": 16,
+    "plan_hits": 4
+   },
+   "routed": {
+    "hit": 1,
+    "official": 1,
+    "full": 1,
+    "terminal": 6,
+    "post_seq": 2,
+    "unexpected_write": 0,
+    "misses": 0,
+    "calls": 7,
+    "steps": 14,
+    "plan_hits": 6
+   },
+   "selected": {
+    "hit": 1,
+    "official": 1,
+    "full": 1,
+    "terminal": 6,
+    "post_seq": 2,
+    "unexpected_write": 0,
+    "misses": 0,
+    "calls": 7,
+    "steps": 14,
+    "plan_hits": 6
+   },
+   "static_vs_card": {
+    "hit": {
+     "gain": 0,
+     "loss": 1,
+     "retained": 0,
+     "patients": {
+      "tie": 6,
+      "loss": 1
+     }
+    },
+    "full": {
+     "gain": 0,
+     "loss": 1,
+     "retained": 0,
+     "patients": {
+      "tie": 6,
+      "loss": 1
+     }
+    }
+   },
+   "routed_vs_static": {
+    "hit": {
+     "gain": 1,
+     "loss": 0,
+     "retained": 0,
+     "patients": {
+      "tie": 6,
+      "gain": 1
+     }
+    },
+    "full": {
+     "gain": 1,
+     "loss": 0,
+     "retained": 0,
+     "patients": {
+      "tie": 6,
+      "gain": 1
+     }
+    }
+   },
+   "selected_vs_static": {
+    "hit": {
+     "gain": 1,
+     "loss": 0,
+     "retained": 0,
+     "patients": {
+      "tie": 6,
+      "gain": 1
+     }
+    },
+    "full": {
+     "gain": 1,
+     "loss": 0,
+     "retained": 0,
+     "patients": {
+      "tie": 6,
+      "gain": 1
+     }
+    }
+   },
+   "selected_vs_card": {
+    "hit": {
+     "gain": 0,
+     "loss": 0,
+     "retained": 1,
+     "patients": {
+      "tie": 7
+     }
+    },
+    "full": {
+     "gain": 0,
+     "loss": 0,
+     "retained": 1,
+     "patients": {
+      "tie": 7
+     }
+    }
+   }
+  },
+  "write": {
+   "n": 7,
+   "people": 7,
+   "changed": 1,
+   "card": {
+    "hit": 0,
+    "official": 0,
+    "full": 0,
+    "terminal": 1,
+    "post_seq": 2,
+    "unexpected_write": 0,
+    "misses": 0,
+    "calls": 13,
+    "steps": 20
+   },
+   "static": {
+    "hit": 0,
+    "official": 0,
+    "full": 0,
+    "terminal": 6,
+    "post_seq": 1,
+    "unexpected_write": 0,
+    "misses": 0,
+    "calls": 8,
+    "steps": 15,
+    "plan_hits": 4
+   },
+   "routed": {
+    "hit": 0,
+    "official": 0,
+    "full": 0,
+    "terminal": 7,
+    "post_seq": 0,
+    "unexpected_write": 0,
+    "misses": 0,
+    "calls": 7,
+    "steps": 14,
+    "plan_hits": 4
+   },
+   "selected": {
+    "hit": 0,
+    "official": 0,
+    "full": 0,
+    "terminal": 7,
+    "post_seq": 0,
+    "unexpected_write": 0,
+    "misses": 0,
+    "calls": 7,
+    "steps": 14,
+    "plan_hits": 4
+   },
+   "static_vs_card": {
+    "hit": {
+     "gain": 0,
+     "loss": 0,
+     "retained": 0,
+     "patients": {
+      "tie": 7
+     }
+    },
+    "full": {
+     "gain": 0,
+     "loss": 0,
+     "retained": 0,
+     "patients": {
+      "tie": 7
+     }
+    }
+   },
+   "routed_vs_static": {
+    "hit": {
+     "gain": 0,
+     "loss": 0,
+     "retained": 0,
+     "patients": {
+      "tie": 7
+     }
+    },
+    "full": {
+     "gain": 0,
+     "loss": 0,
+     "retained": 0,
+     "patients": {
+      "tie": 7
+     }
+    }
+   },
+   "selected_vs_static": {
+    "hit": {
+     "gain": 0,
+     "loss": 0,
+     "retained": 0,
+     "patients": {
+      "tie": 7
+     }
+    },
+    "full": {
+     "gain": 0,
+     "loss": 0,
+     "retained": 0,
+     "patients": {
+      "tie": 7
+     }
+    }
+   },
+   "selected_vs_card": {
+    "hit": {
+     "gain": 0,
+     "loss": 0,
+     "retained": 0,
+     "patients": {
+      "tie": 7
+     }
+    },
+    "full": {
+     "gain": 0,
+     "loss": 0,
+     "retained": 0,
+     "patients": {
+      "tie": 7
+     }
+    }
+   }
+  },
+  "task5": {
+   "n": 8,
+   "people": 8,
+   "changed": 0,
+   "card": {
+    "hit": 5,
+    "official": 5,
+    "full": 3,
+    "terminal": 3,
+    "post_seq": 7,
+    "unexpected_write": 1,
+    "misses": 0,
+    "calls": 11,
+    "steps": 19
+   },
+   "static": {
+    "hit": 6,
+    "official": 6,
+    "full": 6,
+    "terminal": 8,
+    "post_seq": 6,
+    "unexpected_write": 0,
+    "misses": 0,
+    "calls": 8,
+    "steps": 16,
+    "plan_hits": 6
+   },
+   "routed": {
+    "hit": 6,
+    "official": 6,
+    "full": 6,
+    "terminal": 8,
+    "post_seq": 6,
+    "unexpected_write": 0,
+    "misses": 0,
+    "calls": 8,
+    "steps": 16,
+    "plan_hits": 6
+   },
+   "selected": {
+    "hit": 6,
+    "official": 6,
+    "full": 6,
+    "terminal": 8,
+    "post_seq": 6,
+    "unexpected_write": 0,
+    "misses": 0,
+    "calls": 8,
+    "steps": 16,
+    "plan_hits": 6
+   },
+   "static_vs_card": {
+    "hit": {
+     "gain": 1,
+     "loss": 0,
+     "retained": 5,
+     "patients": {
+      "tie": 7,
+      "gain": 1
+     }
+    },
+    "full": {
+     "gain": 3,
+     "loss": 0,
+     "retained": 3,
+     "patients": {
+      "tie": 5,
+      "gain": 3
+     }
+    }
+   },
+   "routed_vs_static": {
+    "hit": {
+     "gain": 0,
+     "loss": 0,
+     "retained": 6,
+     "patients": {
+      "tie": 8
+     }
+    },
+    "full": {
+     "gain": 0,
+     "loss": 0,
+     "retained": 6,
+     "patients": {
+      "tie": 8
+     }
+    }
+   },
+   "selected_vs_static": {
+    "hit": {
+     "gain": 0,
+     "loss": 0,
+     "retained": 6,
+     "patients": {
+      "tie": 8
+     }
+    },
+    "full": {
+     "gain": 0,
+     "loss": 0,
+     "retained": 6,
+     "patients": {
+      "tie": 8
+     }
+    }
+   },
+   "selected_vs_card": {
+    "hit": {
+     "gain": 1,
+     "loss": 0,
+     "retained": 5,
+     "patients": {
+      "tie": 7,
+      "gain": 1
+     }
+    },
+    "full": {
+     "gain": 3,
+     "loss": 0,
+     "retained": 3,
+     "patients": {
+      "tie": 5,
+      "gain": 3
+     }
+    }
+   }
+  },
+  "unchanged": {
+   "n": 40,
+   "people": 24,
+   "changed": 0,
+   "card": {
+    "hit": 12,
+    "official": 12,
+    "full": 10,
+    "terminal": 10,
+    "post_seq": 26,
+    "unexpected_write": 10,
+    "misses": 0,
+    "calls": 65,
+    "steps": 105
+   },
+   "static": {
+    "hit": 21,
+    "official": 21,
+    "full": 21,
+    "terminal": 27,
+    "post_seq": 34,
+    "unexpected_write": 0,
+    "misses": 0,
+    "calls": 40,
+    "steps": 80,
+    "plan_hits": 38
+   },
+   "routed": {
+    "hit": 21,
+    "official": 21,
+    "full": 21,
+    "terminal": 27,
+    "post_seq": 34,
+    "unexpected_write": 0,
+    "misses": 0,
+    "calls": 40,
+    "steps": 80,
+    "plan_hits": 38
+   },
+   "selected": {
+    "hit": 21,
+    "official": 21,
+    "full": 21,
+    "terminal": 27,
+    "post_seq": 34,
+    "unexpected_write": 0,
+    "misses": 0,
+    "calls": 40,
+    "steps": 80,
+    "plan_hits": 38
+   },
+   "static_vs_card": {
+    "hit": {
+     "gain": 10,
+     "loss": 1,
+     "retained": 11,
+     "patients": {
+      "tie": 13,
+      "gain": 10,
+      "loss": 1
+     }
+    },
+    "full": {
+     "gain": 12,
+     "loss": 1,
+     "retained": 9,
+     "patients": {
+      "tie": 11,
+      "gain": 12,
+      "loss": 1
+     }
+    }
+   },
+   "routed_vs_static": {
+    "hit": {
+     "gain": 0,
+     "loss": 0,
+     "retained": 21,
+     "patients": {
+      "tie": 24
+     }
+    },
+    "full": {
+     "gain": 0,
+     "loss": 0,
+     "retained": 21,
+     "patients": {
+      "tie": 24
+     }
+    }
+   },
+   "selected_vs_static": {
+    "hit": {
+     "gain": 0,
+     "loss": 0,
+     "retained": 21,
+     "patients": {
+      "tie": 24
+     }
+    },
+    "full": {
+     "gain": 0,
+     "loss": 0,
+     "retained": 21,
+     "patients": {
+      "tie": 24
+     }
+    }
+   },
+   "selected_vs_card": {
+    "hit": {
+     "gain": 10,
+     "loss": 1,
+     "retained": 11,
+     "patients": {
+      "tie": 13,
+      "gain": 10,
+      "loss": 1
+     }
+    },
+    "full": {
+     "gain": 12,
+     "loss": 1,
+     "retained": 9,
+     "patients": {
+      "tie": 11,
+      "gain": 12,
+      "loss": 1
+     }
+    }
+   }
+  },
+  "task6": {
+   "n": 9,
+   "people": 9,
+   "changed": 0,
+   "card": {
+    "hit": 0,
+    "official": 0,
+    "full": 0,
+    "terminal": 0,
+    "post_seq": 9,
+    "unexpected_write": 0,
+    "misses": 0,
+    "calls": 9,
+    "steps": 18
+   },
+   "static": {
+    "hit": 0,
+    "official": 0,
+    "full": 0,
+    "terminal": 0,
+    "post_seq": 9,
+    "unexpected_write": 0,
+    "misses": 0,
+    "calls": 9,
+    "steps": 18,
+    "plan_hits": 9
+   },
+   "routed": {
+    "hit": 0,
+    "official": 0,
+    "full": 0,
+    "terminal": 0,
+    "post_seq": 9,
+    "unexpected_write": 0,
+    "misses": 0,
+    "calls": 9,
+    "steps": 18,
+    "plan_hits": 9
+   },
+   "selected": {
+    "hit": 0,
+    "official": 0,
+    "full": 0,
+    "terminal": 0,
+    "post_seq": 9,
+    "unexpected_write": 0,
+    "misses": 0,
+    "calls": 9,
+    "steps": 18,
+    "plan_hits": 9
+   },
+   "static_vs_card": {
+    "hit": {
+     "gain": 0,
+     "loss": 0,
+     "retained": 0,
+     "patients": {
+      "tie": 9
+     }
+    },
+    "full": {
+     "gain": 0,
+     "loss": 0,
+     "retained": 0,
+     "patients": {
+      "tie": 9
+     }
+    }
+   },
+   "routed_vs_static": {
+    "hit": {
+     "gain": 0,
+     "loss": 0,
+     "retained": 0,
+     "patients": {
+      "tie": 9
+     }
+    },
+    "full": {
+     "gain": 0,
+     "loss": 0,
+     "retained": 0,
+     "patients": {
+      "tie": 9
+     }
+    }
+   },
+   "selected_vs_static": {
+    "hit": {
+     "gain": 0,
+     "loss": 0,
+     "retained": 0,
+     "patients": {
+      "tie": 9
+     }
+    },
+    "full": {
+     "gain": 0,
+     "loss": 0,
+     "retained": 0,
+     "patients": {
+      "tie": 9
+     }
+    }
+   },
+   "selected_vs_card": {
+    "hit": {
+     "gain": 0,
+     "loss": 0,
+     "retained": 0,
+     "patients": {
+      "tie": 9
+     }
+    },
+    "full": {
+     "gain": 0,
+     "loss": 0,
+     "retained": 0,
+     "patients": {
+      "tie": 9
+     }
+    }
+   }
+  },
+  "task7": {
+   "n": 10,
+   "people": 10,
+   "changed": 0,
+   "card": {
+    "hit": 7,
+    "official": 7,
+    "full": 7,
+    "terminal": 7,
+    "post_seq": 10,
+    "unexpected_write": 0,
+    "misses": 0,
+    "calls": 10,
+    "steps": 20
+   },
+   "static": {
+    "hit": 6,
+    "official": 6,
+    "full": 6,
+    "terminal": 6,
+    "post_seq": 10,
+    "unexpected_write": 0,
+    "misses": 0,
+    "calls": 10,
+    "steps": 20,
+    "plan_hits": 10
+   },
+   "routed": {
+    "hit": 6,
+    "official": 6,
+    "full": 6,
+    "terminal": 6,
+    "post_seq": 10,
+    "unexpected_write": 0,
+    "misses": 0,
+    "calls": 10,
+    "steps": 20,
+    "plan_hits": 10
+   },
+   "selected": {
+    "hit": 6,
+    "official": 6,
+    "full": 6,
+    "terminal": 6,
+    "post_seq": 10,
+    "unexpected_write": 0,
+    "misses": 0,
+    "calls": 10,
+    "steps": 20,
+    "plan_hits": 10
+   },
+   "static_vs_card": {
+    "hit": {
+     "gain": 0,
+     "loss": 1,
+     "retained": 6,
+     "patients": {
+      "tie": 9,
+      "loss": 1
+     }
+    },
+    "full": {
+     "gain": 0,
+     "loss": 1,
+     "retained": 6,
+     "patients": {
+      "tie": 9,
+      "loss": 1
+     }
+    }
+   },
+   "routed_vs_static": {
+    "hit": {
+     "gain": 0,
+     "loss": 0,
+     "retained": 6,
+     "patients": {
+      "tie": 10
+     }
+    },
+    "full": {
+     "gain": 0,
+     "loss": 0,
+     "retained": 6,
+     "patients": {
+      "tie": 10
+     }
+    }
+   },
+   "selected_vs_static": {
+    "hit": {
+     "gain": 0,
+     "loss": 0,
+     "retained": 6,
+     "patients": {
+      "tie": 10
+     }
+    },
+    "full": {
+     "gain": 0,
+     "loss": 0,
+     "retained": 6,
+     "patients": {
+      "tie": 10
+     }
+    }
+   },
+   "selected_vs_card": {
+    "hit": {
+     "gain": 0,
+     "loss": 1,
+     "retained": 6,
+     "patients": {
+      "tie": 9,
+      "loss": 1
+     }
+    },
+    "full": {
+     "gain": 0,
+     "loss": 1,
+     "retained": 6,
+     "patients": {
+      "tie": 9,
+      "loss": 1
+     }
+    }
+   }
+  },
+  "task9": {
+   "n": 9,
+   "people": 9,
+   "changed": 0,
+   "card": {
+    "hit": 0,
+    "official": 0,
+    "full": 0,
+    "terminal": 0,
+    "post_seq": 0,
+    "unexpected_write": 9,
+    "misses": 0,
+    "calls": 27,
+    "steps": 36
+   },
+   "static": {
+    "hit": 9,
+    "official": 9,
+    "full": 9,
+    "terminal": 9,
+    "post_seq": 9,
+    "unexpected_write": 0,
+    "misses": 0,
+    "calls": 9,
+    "steps": 18,
+    "plan_hits": 9
+   },
+   "routed": {
+    "hit": 9,
+    "official": 9,
+    "full": 9,
+    "terminal": 9,
+    "post_seq": 9,
+    "unexpected_write": 0,
+    "misses": 0,
+    "calls": 9,
+    "steps": 18,
+    "plan_hits": 9
+   },
+   "selected": {
+    "hit": 9,
+    "official": 9,
+    "full": 9,
+    "terminal": 9,
+    "post_seq": 9,
+    "unexpected_write": 0,
+    "misses": 0,
+    "calls": 9,
+    "steps": 18,
+    "plan_hits": 9
+   },
+   "static_vs_card": {
+    "hit": {
+     "gain": 9,
+     "loss": 0,
+     "retained": 0,
+     "patients": {
+      "gain": 9
+     }
+    },
+    "full": {
+     "gain": 9,
+     "loss": 0,
+     "retained": 0,
+     "patients": {
+      "gain": 9
+     }
+    }
+   },
+   "routed_vs_static": {
+    "hit": {
+     "gain": 0,
+     "loss": 0,
+     "retained": 9,
+     "patients": {
+      "tie": 9
+     }
+    },
+    "full": {
+     "gain": 0,
+     "loss": 0,
+     "retained": 9,
+     "patients": {
+      "tie": 9
+     }
+    }
+   },
+   "selected_vs_static": {
+    "hit": {
+     "gain": 0,
+     "loss": 0,
+     "retained": 9,
+     "patients": {
+      "tie": 9
+     }
+    },
+    "full": {
+     "gain": 0,
+     "loss": 0,
+     "retained": 9,
+     "patients": {
+      "tie": 9
+     }
+    }
+   },
+   "selected_vs_card": {
+    "hit": {
+     "gain": 9,
+     "loss": 0,
+     "retained": 0,
+     "patients": {
+      "gain": 9
+     }
+    },
+    "full": {
+     "gain": 9,
+     "loss": 0,
+     "retained": 0,
+     "patients": {
+      "gain": 9
+     }
+    }
+   }
+  }
+ }
+}
