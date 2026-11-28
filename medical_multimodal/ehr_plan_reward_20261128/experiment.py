@@ -68,20 +68,22 @@ def checkpoint_key(metrics):
     return counts["success"], -counts["unnecessary"]
 
 
-def optimize(policy, patients, dev, penalty, out):
+def optimize(policy, patients, dev, penalty, out, *, seed=SEED, rank=checkpoint_key, capture=None):
     count = len(patients)
     assert count == 64 and STEPS % count == 0
     order = list(range(count))
-    rng = random.Random(SEED)
+    rng = random.Random(seed)
     forms = FORMS["train"]
-    generator = torch.Generator(device="cuda").manual_seed(SEED+1)
+    generator = torch.Generator(device="cuda").manual_seed(seed+1)
     optimizer = torch.optim.AdamW(policy.trainable.values(), lr=LEARNING_RATE, weight_decay=0.0)
     metrics, _ = evaluate(policy, dev, "dev")
     initial = policy.snapshot()
     best = initial
-    best_key = checkpoint_key(metrics)
+    best_key = rank(metrics)
     best_step = updates = mixed_groups = 0
     track = [dict(step=0, **metrics)]
+    if capture is not None:
+        capture(0)
     curve = []
     block_reward, block_common = [], []
     for step in range(1,STEPS+1):
@@ -108,8 +110,8 @@ def optimize(policy, patients, dev, penalty, out):
             print(dict(step=step, updates=updates, mixed_groups=mixed_groups),flush=True)
         if step%EVAL_INTERVAL==0:
             metrics, _ = evaluate(policy, dev, "dev")
-            if checkpoint_key(metrics)>best_key:
-                best_key = checkpoint_key(metrics)
+            if rank(metrics)>best_key:
+                best_key = rank(metrics)
                 best = policy.snapshot()
                 best_step = step
             curve.append(dict(step=step, mean_reward=mean(block_reward),
@@ -117,6 +119,8 @@ def optimize(policy, patients, dev, penalty, out):
             block_reward.clear()
             block_common.clear()
             track.append(dict(step=step,**metrics))
+            if capture is not None:
+                capture(step)
             save(out/"progress.json",dict(step=step,best_step=best_step,dev=track,curve=curve))
     assert all(not value.requires_grad and value._version == version for value,version in policy.frozen)
     endpoint = policy.snapshot()

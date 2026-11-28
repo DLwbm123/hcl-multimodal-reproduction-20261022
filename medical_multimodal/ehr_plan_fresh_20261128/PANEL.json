@@ -1,0 +1,13 @@
+{
+  "seed": 26112892,
+  "patients": 64,
+  "archived_subject_id_union": 608,
+  "additionally_reconstructed": 164,
+  "total_excluded": 772,
+  "required_inputs": 384,
+  "sufficient_with_next_inputs": 192,
+  "sufficient_last_inputs": 192,
+  "old_forms": 4,
+  "new_forms": 2,
+  "verified_disjoint": true
+}

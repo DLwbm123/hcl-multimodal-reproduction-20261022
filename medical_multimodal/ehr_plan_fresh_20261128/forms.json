@@ -1,0 +1,4 @@
+[
+  "Using all documented glucose readings between now and exactly 24 hours ago, what value do you get if you average them? Give mg/dL.",
+  "Pull together the glucose readings from the last day ending now and report their arithmetic average in mg/dL."
+]

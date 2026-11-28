@@ -114,7 +114,7 @@ def evaluate(policy, cases, tokenized, variants_per_patient, mode="trained"):
     else:
         choices = predict(policy,tokenized,base=mode=="frozen").argmax(dim=1).tolist()
     cells={n:Counter({k:0 for k in ("n","success","unnecessary","premature","tool_calls","guarded_success",
-                                     "extra_reads","efficient")}) for n in STRATA}
+                                     "guarded_premature","guarded_calls","extra_reads","efficient")}) for n in STRATA}
     successes, efficient, errors = [], [], []
     checks={}
     for i,(c,a) in enumerate(zip(cases,choices,strict=True)):
@@ -125,7 +125,9 @@ def evaluate(policy, cases, tokenized, variants_per_patient, mode="trained"):
             checks[i//variants_per_patient] = guard_mean(c)
         extra = checks[i//variants_per_patient].pages_read if a==0 else 0
         cells[state].update(n=1,success=int(s.success),unnecessary=int(s.unnecessary),premature=int(s.premature),
-                            tool_calls=s.calls,guarded_success=int(s.success or a==0),extra_reads=extra,efficient=int(ok))
+                            tool_calls=s.calls,guarded_success=int(s.success or a==0),
+                            guarded_premature=int(s.premature and not extra),guarded_calls=s.calls+extra,
+                            extra_reads=extra,efficient=int(ok))
         successes.append(s.success)
         efficient.append(ok)
         errors.append(a not in (0,2))
@@ -200,7 +202,7 @@ def key(stats):
     return stats["counts"]["success"], -stats["counts"]["unnecessary"]
 
 
-def train(policy, train_cases, dev, out):
+def train(policy, train_cases, dev, out, *, seed=SEED, rank=key, capture=None):
     tokens=rows_for(policy,train_cases)
     dev_tokens=rows_for(policy,dev)
     maximum_error=policy.validate(tokens[::63][:8])
@@ -212,16 +214,18 @@ def train(policy, train_cases, dev, out):
         verified_rewards.append([reward(execute(c,plan)) for plan in PLANS])
     assert all(len(p)>CANDIDATE_CAP for p in pool.values())
     rewards=torch.tensor(verified_rewards,device=policy.model.device)
-    rng=random.Random(SEED)
-    sampler=torch.Generator(device="cuda").manual_seed(SEED+1)
+    rng=random.Random(seed)
+    sampler=torch.Generator(device="cuda").manual_seed(seed+1)
     optim=torch.optim.AdamW(policy.trainable.values(),lr=LEARNING_RATE,weight_decay=0)
     initial=policy.snapshot()
     chooser=initial
     best_step=0
     metrics,_=evaluate(policy,dev,dev_tokens,len(FORMS["dev"]))
-    best=key(metrics)
+    best=rank(metrics)
     attempts=steps=nonzero=0
     track=[dict(step=0,attempts=0,**metrics)]
+    if capture is not None:
+        capture(0)
     groups={kind:Counter({"proposed":0,"mixed":0,"used":0}) for kind in STRATA}
     blocks=[]
     while steps<STEPS and attempts<ATTEMPT_CAP:
@@ -238,11 +242,13 @@ def train(policy, train_cases, dev, out):
         due = batch and steps%INTERVAL==0
         if due or (attempts==ATTEMPT_CAP and steps!=track[-1]["step"]):
             metrics,_=evaluate(policy,dev,dev_tokens,len(FORMS["dev"]))
-            if key(metrics)>best:
-                best=key(metrics)
+            if rank(metrics)>best:
+                best=rank(metrics)
                 best_step=steps
                 chooser=policy.snapshot()
             track.append(dict(step=steps,attempts=attempts,**metrics))
+            if capture is not None:
+                capture(steps)
             blocks.append(dict(step=steps,attempts=attempts,by_state={k:dict(v) for k,v in groups.items()}))
             save(out/"progress.json",dict(step=steps,attempts=attempts,best_step=best_step,dev=track,blocks=blocks))
     assert all(not p.requires_grad and p._version==n for p,n in policy.frozen)
