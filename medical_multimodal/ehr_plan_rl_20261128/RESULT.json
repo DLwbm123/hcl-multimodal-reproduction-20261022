@@ -1,0 +1,789 @@
+{
+  "composition": {
+    "excluded_prior": 164,
+    "groups": {
+      "train": {
+        "mean_more": 26,
+        "mean_enough": 26,
+        "mean_missing": 26,
+        "latest_present": 25,
+        "latest_missing": 25
+      },
+      "dev": {
+        "mean_more": 7,
+        "mean_enough": 7,
+        "mean_missing": 6,
+        "latest_present": 6,
+        "latest_missing": 6
+      },
+      "test": {
+        "mean_more": 13,
+        "mean_enough": 13,
+        "mean_missing": 13,
+        "latest_present": 13,
+        "latest_missing": 12
+      }
+    }
+  },
+  "free_json": {
+    "rl": {
+      "initial_preflight": {
+        "cases": 32,
+        "enumerated_reward_signal": 32,
+        "enumerated_success_signal": 32,
+        "best_fixed_success": 20,
+        "rule_success": 32,
+        "oracle_success": 32,
+        "legal": 19,
+        "successes": 16,
+        "draws": 128,
+        "mixed_success": 12,
+        "mixed_reward": 12,
+        "mean_group_reward_variance": 0.304434375
+      },
+      "warmup": {
+        "dev": [
+          {
+            "step": 0,
+            "n": 32,
+            "success": 0,
+            "legal": 0,
+            "calls": 0,
+            "unnecessary": 0,
+            "premature": 0,
+            "reward": -1.0,
+            "strata": {
+              "latest_missing": [
+                0,
+                6
+              ],
+              "latest_present": [
+                0,
+                6
+              ],
+              "mean_enough": [
+                0,
+                7
+              ],
+              "mean_missing": [
+                0,
+                6
+              ],
+              "mean_more": [
+                0,
+                7
+              ]
+            }
+          },
+          {
+            "step": 16,
+            "n": 32,
+            "success": 0,
+            "legal": 0,
+            "calls": 0,
+            "unnecessary": 0,
+            "premature": 0,
+            "reward": -1.0,
+            "strata": {
+              "latest_missing": [
+                0,
+                6
+              ],
+              "latest_present": [
+                0,
+                6
+              ],
+              "mean_enough": [
+                0,
+                7
+              ],
+              "mean_missing": [
+                0,
+                6
+              ],
+              "mean_more": [
+                0,
+                7
+              ]
+            }
+          }
+        ],
+        "best_step": 0,
+        "updates": 16,
+        "adapter_changed": true,
+        "sampled_groups": 0,
+        "nonzero_groups": 0,
+        "sampled_completions": 0,
+        "generated_tokens": 414,
+        "legal_rollouts": 0,
+        "successful_rollouts": 0,
+        "environment_executions": 0
+      },
+      "warm_preflight": {
+        "cases": 32,
+        "enumerated_reward_signal": 32,
+        "enumerated_success_signal": 32,
+        "best_fixed_success": 20,
+        "rule_success": 32,
+        "oracle_success": 32,
+        "legal": 17,
+        "successes": 14,
+        "draws": 128,
+        "mixed_success": 12,
+        "mixed_reward": 12,
+        "mean_group_reward_variance": 0.2747296875
+      },
+      "status": "preflight_did_not_support_training"
+    },
+    "sft": {
+      "training": {
+        "dev": [
+          {
+            "step": 0,
+            "n": 32,
+            "success": 0,
+            "legal": 0,
+            "calls": 0,
+            "unnecessary": 0,
+            "premature": 0,
+            "reward": -1.0,
+            "strata": {
+              "latest_missing": [
+                0,
+                6
+              ],
+              "latest_present": [
+                0,
+                6
+              ],
+              "mean_enough": [
+                0,
+                7
+              ],
+              "mean_missing": [
+                0,
+                6
+              ],
+              "mean_more": [
+                0,
+                7
+              ]
+            }
+          },
+          {
+            "step": 16,
+            "n": 32,
+            "success": 0,
+            "legal": 0,
+            "calls": 0,
+            "unnecessary": 0,
+            "premature": 0,
+            "reward": -1.0,
+            "strata": {
+              "latest_missing": [
+                0,
+                6
+              ],
+              "latest_present": [
+                0,
+                6
+              ],
+              "mean_enough": [
+                0,
+                7
+              ],
+              "mean_missing": [
+                0,
+                6
+              ],
+              "mean_more": [
+                0,
+                7
+              ]
+            }
+          },
+          {
+            "step": 32,
+            "n": 32,
+            "success": 0,
+            "legal": 0,
+            "calls": 0,
+            "unnecessary": 0,
+            "premature": 0,
+            "reward": -1.0,
+            "strata": {
+              "latest_missing": [
+                0,
+                6
+              ],
+              "latest_present": [
+                0,
+                6
+              ],
+              "mean_enough": [
+                0,
+                7
+              ],
+              "mean_missing": [
+                0,
+                6
+              ],
+              "mean_more": [
+                0,
+                7
+              ]
+            }
+          },
+          {
+            "step": 64,
+            "n": 32,
+            "success": 27,
+            "legal": 31,
+            "calls": 34,
+            "unnecessary": 0,
+            "premature": 4,
+            "reward": 0.66875,
+            "strata": {
+              "latest_missing": [
+                6,
+                6
+              ],
+              "latest_present": [
+                6,
+                6
+              ],
+              "mean_enough": [
+                7,
+                7
+              ],
+              "mean_missing": [
+                5,
+                6
+              ],
+              "mean_more": [
+                3,
+                7
+              ]
+            }
+          }
+        ],
+        "best_step": 64,
+        "updates": 64,
+        "adapter_changed": true,
+        "sampled_groups": 0,
+        "nonzero_groups": 0,
+        "sampled_completions": 0,
+        "generated_tokens": 1640,
+        "legal_rollouts": 0,
+        "successful_rollouts": 0,
+        "environment_executions": 0
+      },
+      "checks": {
+        "frozen_parameter_versions_unchanged": true,
+        "disabled_adapter_matches": true,
+        "saved_adapter_matches": true,
+        "reloaded_dev_predictions_match": true
+      },
+      "status": "control_finished_no_rl_confirmation"
+    }
+  },
+  "constrained_json": {
+    "rl": {
+      "initial_preflight": {
+        "cases": 32,
+        "enumerated_reward_signal": 32,
+        "enumerated_success_signal": 32,
+        "best_fixed_success": 20,
+        "rule_success": 32,
+        "oracle_success": 32,
+        "legal": 128,
+        "successes": 107,
+        "draws": 128,
+        "mixed_success": 9,
+        "mixed_reward": 12,
+        "mean_group_reward_variance": 0.21898359374999998
+      },
+      "optimization_objective": "success_and_efficiency",
+      "training": {
+        "dev": [
+          {
+            "step": 0,
+            "n": 32,
+            "success": 25,
+            "legal": 32,
+            "calls": 32,
+            "unnecessary": 0,
+            "premature": 7,
+            "reward": 0.546875,
+            "strata": {
+              "latest_missing": [
+                6,
+                6
+              ],
+              "latest_present": [
+                6,
+                6
+              ],
+              "mean_enough": [
+                7,
+                7
+              ],
+              "mean_missing": [
+                6,
+                6
+              ],
+              "mean_more": [
+                0,
+                7
+              ]
+            }
+          },
+          {
+            "step": 16,
+            "n": 32,
+            "success": 25,
+            "legal": 32,
+            "calls": 32,
+            "unnecessary": 0,
+            "premature": 7,
+            "reward": 0.546875,
+            "strata": {
+              "latest_missing": [
+                6,
+                6
+              ],
+              "latest_present": [
+                6,
+                6
+              ],
+              "mean_enough": [
+                7,
+                7
+              ],
+              "mean_missing": [
+                6,
+                6
+              ],
+              "mean_more": [
+                0,
+                7
+              ]
+            }
+          },
+          {
+            "step": 32,
+            "n": 32,
+            "success": 28,
+            "legal": 32,
+            "calls": 35,
+            "unnecessary": 0,
+            "premature": 4,
+            "reward": 0.730625,
+            "strata": {
+              "latest_missing": [
+                6,
+                6
+              ],
+              "latest_present": [
+                6,
+                6
+              ],
+              "mean_enough": [
+                7,
+                7
+              ],
+              "mean_missing": [
+                6,
+                6
+              ],
+              "mean_more": [
+                3,
+                7
+              ]
+            }
+          },
+          {
+            "step": 64,
+            "n": 32,
+            "success": 31,
+            "legal": 32,
+            "calls": 39,
+            "unnecessary": 1,
+            "premature": 1,
+            "reward": 0.91375,
+            "strata": {
+              "latest_missing": [
+                6,
+                6
+              ],
+              "latest_present": [
+                6,
+                6
+              ],
+              "mean_enough": [
+                7,
+                7
+              ],
+              "mean_missing": [
+                6,
+                6
+              ],
+              "mean_more": [
+                6,
+                7
+              ]
+            }
+          }
+        ],
+        "best_step": 64,
+        "updates": 64,
+        "adapter_changed": true,
+        "sampled_groups": 256,
+        "nonzero_groups": 111,
+        "sampled_completions": 1024,
+        "generated_tokens": 6400,
+        "legal_rollouts": 1024,
+        "successful_rollouts": 855,
+        "environment_executions": 1024
+      },
+      "checks": {
+        "frozen_parameter_versions_unchanged": true,
+        "disabled_adapter_matches": true,
+        "saved_adapter_matches": true,
+        "reloaded_dev_predictions_match": true
+      },
+      "test": {
+        "rl": {
+          "n": 64,
+          "success": 56,
+          "legal": 64,
+          "calls": 69,
+          "unnecessary": 0,
+          "premature": 8,
+          "reward": 0.7309375,
+          "strata": {
+            "latest_missing": [
+              12,
+              12
+            ],
+            "latest_present": [
+              13,
+              13
+            ],
+            "mean_enough": [
+              13,
+              13
+            ],
+            "mean_missing": [
+              13,
+              13
+            ],
+            "mean_more": [
+              5,
+              13
+            ]
+          }
+        },
+        "frozen": {
+          "n": 64,
+          "success": 56,
+          "legal": 64,
+          "calls": 69,
+          "unnecessary": 0,
+          "premature": 8,
+          "reward": 0.7309375,
+          "strata": {
+            "latest_missing": [
+              12,
+              12
+            ],
+            "latest_present": [
+              13,
+              13
+            ],
+            "mean_enough": [
+              13,
+              13
+            ],
+            "mean_missing": [
+              13,
+              13
+            ],
+            "mean_more": [
+              5,
+              13
+            ]
+          }
+        },
+        "rule": {
+          "n": 64,
+          "success": 64,
+          "legal": 64,
+          "calls": 77,
+          "unnecessary": 0,
+          "premature": 0,
+          "reward": 0.9759375,
+          "strata": {
+            "latest_missing": [
+              12,
+              12
+            ],
+            "latest_present": [
+              13,
+              13
+            ],
+            "mean_enough": [
+              13,
+              13
+            ],
+            "mean_missing": [
+              13,
+              13
+            ],
+            "mean_more": [
+              13,
+              13
+            ]
+          }
+        }
+      },
+      "paired": {
+        "rl_vs_frozen": {
+          "gain": 0,
+          "loss": 0,
+          "kept": 56,
+          "delta": 0,
+          "ci95": [
+            0,
+            0
+          ]
+        },
+        "rl_vs_rule": {
+          "gain": 0,
+          "loss": 8,
+          "kept": 56,
+          "delta": -0.125,
+          "ci95": [
+            -0.21875,
+            -0.046875
+          ]
+        }
+      },
+      "gpu": {
+        "allocated_mib": 16620.6,
+        "reserved_mib": 17608.0
+      },
+      "status": "complete"
+    },
+    "sft": {
+      "training": {
+        "dev": [
+          {
+            "step": 0,
+            "n": 32,
+            "success": 25,
+            "legal": 32,
+            "calls": 32,
+            "unnecessary": 0,
+            "premature": 7,
+            "reward": 0.546875,
+            "strata": {
+              "latest_missing": [
+                6,
+                6
+              ],
+              "latest_present": [
+                6,
+                6
+              ],
+              "mean_enough": [
+                7,
+                7
+              ],
+              "mean_missing": [
+                6,
+                6
+              ],
+              "mean_more": [
+                0,
+                7
+              ]
+            }
+          },
+          {
+            "step": 16,
+            "n": 32,
+            "success": 25,
+            "legal": 32,
+            "calls": 32,
+            "unnecessary": 0,
+            "premature": 7,
+            "reward": 0.546875,
+            "strata": {
+              "latest_missing": [
+                6,
+                6
+              ],
+              "latest_present": [
+                6,
+                6
+              ],
+              "mean_enough": [
+                7,
+                7
+              ],
+              "mean_missing": [
+                6,
+                6
+              ],
+              "mean_more": [
+                0,
+                7
+              ]
+            }
+          },
+          {
+            "step": 32,
+            "n": 32,
+            "success": 28,
+            "legal": 32,
+            "calls": 35,
+            "unnecessary": 0,
+            "premature": 4,
+            "reward": 0.730625,
+            "strata": {
+              "latest_missing": [
+                6,
+                6
+              ],
+              "latest_present": [
+                6,
+                6
+              ],
+              "mean_enough": [
+                7,
+                7
+              ],
+              "mean_missing": [
+                6,
+                6
+              ],
+              "mean_more": [
+                3,
+                7
+              ]
+            }
+          },
+          {
+            "step": 64,
+            "n": 32,
+            "success": 30,
+            "legal": 32,
+            "calls": 37,
+            "unnecessary": 0,
+            "premature": 2,
+            "reward": 0.853125,
+            "strata": {
+              "latest_missing": [
+                6,
+                6
+              ],
+              "latest_present": [
+                6,
+                6
+              ],
+              "mean_enough": [
+                7,
+                7
+              ],
+              "mean_missing": [
+                6,
+                6
+              ],
+              "mean_more": [
+                5,
+                7
+              ]
+            }
+          }
+        ],
+        "best_step": 64,
+        "updates": 64,
+        "adapter_changed": true,
+        "sampled_groups": 0,
+        "nonzero_groups": 0,
+        "sampled_completions": 0,
+        "generated_tokens": 1640,
+        "legal_rollouts": 0,
+        "successful_rollouts": 0,
+        "environment_executions": 0
+      },
+      "checks": {
+        "frozen_parameter_versions_unchanged": true,
+        "disabled_adapter_matches": true,
+        "saved_adapter_matches": true,
+        "reloaded_dev_predictions_match": true
+      },
+      "test": {
+        "sft": {
+          "n": 64,
+          "success": 56,
+          "legal": 64,
+          "calls": 69,
+          "unnecessary": 0,
+          "premature": 8,
+          "reward": 0.7309375,
+          "strata": {
+            "latest_missing": [
+              12,
+              12
+            ],
+            "latest_present": [
+              13,
+              13
+            ],
+            "mean_enough": [
+              13,
+              13
+            ],
+            "mean_missing": [
+              13,
+              13
+            ],
+            "mean_more": [
+              5,
+              13
+            ]
+          }
+        }
+      },
+      "gpu": {
+        "allocated_mib": 16620.6,
+        "reserved_mib": 17608.0
+      },
+      "status": "complete"
+    },
+    "paired": {
+      "rl_vs_sft": {
+        "gain": 0,
+        "loss": 0,
+        "kept": 56,
+        "delta": 0,
+        "ci95": [
+          0,
+          0
+        ]
+      },
+      "sft_vs_frozen": {
+        "gain": 0,
+        "loss": 0,
+        "kept": 56,
+        "delta": 0,
+        "ci95": [
+          0,
+          0
+        ]
+      }
+    }
+  }
+}
