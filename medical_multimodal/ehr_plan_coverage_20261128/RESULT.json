@@ -1,0 +1,1410 @@
+{
+  "old_audit": {
+    "frozen": {
+      "dev": {
+        "n": 7,
+        "page_hist": {
+          "2": 4,
+          "1": 2,
+          "4": 1
+        },
+        "original_pass": 0,
+        "per_wording_pass": [
+          1,
+          0,
+          1
+        ],
+        "per_wording_p_more": [
+          0.42545,
+          0.39647,
+          0.38162
+        ],
+        "original_p_more": 0.42257
+      },
+      "test": {
+        "n": 13,
+        "page_hist": {
+          "1": 6,
+          "2": 6,
+          "4": 1
+        },
+        "original_pass": 5,
+        "per_wording_pass": [
+          4,
+          4,
+          5
+        ],
+        "per_wording_p_more": [
+          0.42539,
+          0.39557,
+          0.38401
+        ],
+        "original_p_more": 0.38401
+      }
+    },
+    "sft": {
+      "dev": {
+        "n": 7,
+        "page_hist": {
+          "2": 4,
+          "1": 2,
+          "4": 1
+        },
+        "original_pass": 5,
+        "per_wording_pass": [
+          5,
+          5,
+          4
+        ],
+        "per_wording_p_more": [
+          0.5313,
+          0.47834,
+          0.47026
+        ],
+        "original_p_more": 0.51659
+      },
+      "test": {
+        "n": 13,
+        "page_hist": {
+          "1": 6,
+          "2": 6,
+          "4": 1
+        },
+        "original_pass": 5,
+        "per_wording_pass": [
+          9,
+          6,
+          5
+        ],
+        "per_wording_p_more": [
+          0.54556,
+          0.46736,
+          0.46943
+        ],
+        "original_p_more": 0.46943
+      },
+      "frozen_failed_test": {
+        "n": 8,
+        "original_p_more_before": 0.28541,
+        "original_p_more_after": 0.37361,
+        "larger_margin": 8,
+        "success_by_wording": [
+          4,
+          1,
+          0
+        ]
+      }
+    },
+    "rl": {
+      "dev": {
+        "n": 7,
+        "page_hist": {
+          "2": 4,
+          "1": 2,
+          "4": 1
+        },
+        "original_pass": 6,
+        "per_wording_pass": [
+          6,
+          5,
+          4
+        ],
+        "per_wording_p_more": [
+          0.58216,
+          0.49494,
+          0.47502
+        ],
+        "original_p_more": 0.5465
+      },
+      "test": {
+        "n": 13,
+        "page_hist": {
+          "1": 6,
+          "2": 6,
+          "4": 1
+        },
+        "original_pass": 5,
+        "per_wording_pass": [
+          10,
+          6,
+          5
+        ],
+        "per_wording_p_more": [
+          0.57237,
+          0.49019,
+          0.4653
+        ],
+        "original_p_more": 0.4653
+      },
+      "frozen_failed_test": {
+        "n": 8,
+        "original_p_more_before": 0.28541,
+        "original_p_more_after": 0.36386,
+        "larger_margin": 8,
+        "success_by_wording": [
+          5,
+          1,
+          0
+        ]
+      }
+    }
+  },
+  "composition": {
+    "excluded_history": 388,
+    "splits": {
+      "train": {
+        "n": 128,
+        "strata": {
+          "mean_more": 26,
+          "mean_enough": 26,
+          "mean_missing": 26,
+          "latest_present": 25,
+          "latest_missing": 25
+        },
+        "potential_page_flips": {
+          "removes_need": 23,
+          "adds_need": 20
+        }
+      },
+      "dev": {
+        "n": 32,
+        "strata": {
+          "mean_more": 7,
+          "mean_enough": 7,
+          "mean_missing": 6,
+          "latest_present": 6,
+          "latest_missing": 6
+        },
+        "potential_page_flips": {
+          "removes_need": 6,
+          "adds_need": 3
+        }
+      },
+      "test": {
+        "n": 64,
+        "strata": {
+          "mean_more": 13,
+          "mean_enough": 13,
+          "mean_missing": 13,
+          "latest_present": 13,
+          "latest_missing": 12
+        },
+        "potential_page_flips": {
+          "removes_need": 13,
+          "adds_need": 7
+        }
+      }
+    }
+  },
+  "control": {
+    "mode": "control",
+    "training": {
+      "dev": [
+        {
+          "step": 0,
+          "n": 32,
+          "success": 30,
+          "legal": 32,
+          "calls": 37,
+          "unnecessary": 0,
+          "premature": 2,
+          "reward": 0.853125,
+          "strata": {
+            "latest_missing": [
+              6,
+              6
+            ],
+            "latest_present": [
+              6,
+              6
+            ],
+            "mean_enough": [
+              7,
+              7
+            ],
+            "mean_missing": [
+              6,
+              6
+            ],
+            "mean_more": [
+              5,
+              7
+            ]
+          }
+        },
+        {
+          "step": 16,
+          "n": 32,
+          "success": 30,
+          "legal": 32,
+          "calls": 37,
+          "unnecessary": 0,
+          "premature": 2,
+          "reward": 0.853125,
+          "strata": {
+            "latest_missing": [
+              6,
+              6
+            ],
+            "latest_present": [
+              6,
+              6
+            ],
+            "mean_enough": [
+              7,
+              7
+            ],
+            "mean_missing": [
+              6,
+              6
+            ],
+            "mean_more": [
+              5,
+              7
+            ]
+          }
+        },
+        {
+          "step": 32,
+          "n": 32,
+          "success": 30,
+          "legal": 32,
+          "calls": 37,
+          "unnecessary": 0,
+          "premature": 2,
+          "reward": 0.853125,
+          "strata": {
+            "latest_missing": [
+              6,
+              6
+            ],
+            "latest_present": [
+              6,
+              6
+            ],
+            "mean_enough": [
+              7,
+              7
+            ],
+            "mean_missing": [
+              6,
+              6
+            ],
+            "mean_more": [
+              5,
+              7
+            ]
+          }
+        },
+        {
+          "step": 64,
+          "n": 32,
+          "success": 31,
+          "legal": 32,
+          "calls": 38,
+          "unnecessary": 0,
+          "premature": 1,
+          "reward": 0.9143749999999999,
+          "strata": {
+            "latest_missing": [
+              6,
+              6
+            ],
+            "latest_present": [
+              6,
+              6
+            ],
+            "mean_enough": [
+              7,
+              7
+            ],
+            "mean_missing": [
+              6,
+              6
+            ],
+            "mean_more": [
+              6,
+              7
+            ]
+          }
+        }
+      ],
+      "best_step": 64,
+      "updates": 64,
+      "adapter_changed": true,
+      "sampled_groups": 256,
+      "nonzero_groups": 123,
+      "sampled_completions": 1024,
+      "generated_tokens": 6414,
+      "legal_rollouts": 1024,
+      "successful_rollouts": 844,
+      "environment_executions": 1024
+    },
+    "test": {
+      "trained": {
+        "n": 64,
+        "success": 64,
+        "legal": 64,
+        "calls": 77,
+        "unnecessary": 0,
+        "premature": 0,
+        "reward": 0.9759375,
+        "strata": {
+          "latest_missing": [
+            12,
+            12
+          ],
+          "latest_present": [
+            13,
+            13
+          ],
+          "mean_enough": [
+            13,
+            13
+          ],
+          "mean_missing": [
+            13,
+            13
+          ],
+          "mean_more": [
+            13,
+            13
+          ]
+        },
+        "must_read": [
+          13,
+          13
+        ],
+        "extra": {
+          "n": 64,
+          "wording_conflicts": 13,
+          "new_wordings": [
+            64,
+            51
+          ],
+          "page_pair": {
+            "n": 20,
+            "incomplete": 20,
+            "complete": 20,
+            "both": 20,
+            "mean_p_more_shift": 0.682010006904602
+          }
+        }
+      },
+      "frozen": {
+        "n": 64,
+        "success": 61,
+        "legal": 64,
+        "calls": 77,
+        "unnecessary": 0,
+        "premature": 0,
+        "reward": 0.8831249999999999,
+        "strata": {
+          "latest_missing": [
+            12,
+            12
+          ],
+          "latest_present": [
+            13,
+            13
+          ],
+          "mean_enough": [
+            10,
+            13
+          ],
+          "mean_missing": [
+            13,
+            13
+          ],
+          "mean_more": [
+            13,
+            13
+          ]
+        },
+        "must_read": [
+          13,
+          13
+        ],
+        "extra": {
+          "n": 64,
+          "wording_conflicts": 16,
+          "new_wordings": [
+            61,
+            51
+          ],
+          "page_pair": {
+            "n": 20,
+            "incomplete": 20,
+            "complete": 20,
+            "both": 20,
+            "mean_p_more_shift": 0.5957919076085091
+          }
+        }
+      },
+      "rule": {
+        "n": 64,
+        "success": 64,
+        "legal": 64,
+        "calls": 77,
+        "unnecessary": 0,
+        "premature": 0,
+        "reward": 0.9759375,
+        "strata": {
+          "latest_missing": [
+            12,
+            12
+          ],
+          "latest_present": [
+            13,
+            13
+          ],
+          "mean_enough": [
+            13,
+            13
+          ],
+          "mean_missing": [
+            13,
+            13
+          ],
+          "mean_more": [
+            13,
+            13
+          ]
+        },
+        "must_read": [
+          13,
+          13
+        ],
+        "extra": null
+      },
+      "prior_rl": {
+        "n": 64,
+        "success": 64,
+        "legal": 64,
+        "calls": 77,
+        "unnecessary": 0,
+        "premature": 0,
+        "reward": 0.9759375,
+        "strata": {
+          "latest_missing": [
+            12,
+            12
+          ],
+          "latest_present": [
+            13,
+            13
+          ],
+          "mean_enough": [
+            13,
+            13
+          ],
+          "mean_missing": [
+            13,
+            13
+          ],
+          "mean_more": [
+            13,
+            13
+          ]
+        },
+        "must_read": [
+          13,
+          13
+        ],
+        "extra": {
+          "n": 64,
+          "wording_conflicts": 13,
+          "new_wordings": [
+            64,
+            51
+          ],
+          "page_pair": {
+            "n": 20,
+            "incomplete": 20,
+            "complete": 20,
+            "both": 20,
+            "mean_p_more_shift": 0.6909081995487213
+          }
+        }
+      }
+    },
+    "saved_weights_checked": true,
+    "visible_needs_in_training": 52,
+    "reserved_mib": 18816.0
+  },
+  "paired_page": {
+    "mode": "paired",
+    "training": {
+      "dev": [
+        {
+          "step": 0,
+          "n": 32,
+          "success": 30,
+          "legal": 32,
+          "calls": 37,
+          "unnecessary": 0,
+          "premature": 2,
+          "reward": 0.853125,
+          "strata": {
+            "latest_missing": [
+              6,
+              6
+            ],
+            "latest_present": [
+              6,
+              6
+            ],
+            "mean_enough": [
+              7,
+              7
+            ],
+            "mean_missing": [
+              6,
+              6
+            ],
+            "mean_more": [
+              5,
+              7
+            ]
+          }
+        },
+        {
+          "step": 16,
+          "n": 32,
+          "success": 30,
+          "legal": 32,
+          "calls": 37,
+          "unnecessary": 0,
+          "premature": 2,
+          "reward": 0.853125,
+          "strata": {
+            "latest_missing": [
+              6,
+              6
+            ],
+            "latest_present": [
+              6,
+              6
+            ],
+            "mean_enough": [
+              7,
+              7
+            ],
+            "mean_missing": [
+              6,
+              6
+            ],
+            "mean_more": [
+              5,
+              7
+            ]
+          }
+        },
+        {
+          "step": 32,
+          "n": 32,
+          "success": 30,
+          "legal": 32,
+          "calls": 37,
+          "unnecessary": 0,
+          "premature": 2,
+          "reward": 0.853125,
+          "strata": {
+            "latest_missing": [
+              6,
+              6
+            ],
+            "latest_present": [
+              6,
+              6
+            ],
+            "mean_enough": [
+              7,
+              7
+            ],
+            "mean_missing": [
+              6,
+              6
+            ],
+            "mean_more": [
+              5,
+              7
+            ]
+          }
+        },
+        {
+          "step": 64,
+          "n": 32,
+          "success": 30,
+          "legal": 32,
+          "calls": 37,
+          "unnecessary": 0,
+          "premature": 2,
+          "reward": 0.853125,
+          "strata": {
+            "latest_missing": [
+              6,
+              6
+            ],
+            "latest_present": [
+              6,
+              6
+            ],
+            "mean_enough": [
+              7,
+              7
+            ],
+            "mean_missing": [
+              6,
+              6
+            ],
+            "mean_more": [
+              5,
+              7
+            ]
+          }
+        }
+      ],
+      "best_step": 0,
+      "updates": 64,
+      "adapter_changed": true,
+      "sampled_groups": 256,
+      "nonzero_groups": 127,
+      "sampled_completions": 1024,
+      "generated_tokens": 6436,
+      "legal_rollouts": 1024,
+      "successful_rollouts": 856,
+      "environment_executions": 1024
+    },
+    "test": {
+      "trained": {
+        "n": 64,
+        "success": 61,
+        "legal": 64,
+        "calls": 77,
+        "unnecessary": 0,
+        "premature": 0,
+        "reward": 0.8831249999999999,
+        "strata": {
+          "latest_missing": [
+            12,
+            12
+          ],
+          "latest_present": [
+            13,
+            13
+          ],
+          "mean_enough": [
+            10,
+            13
+          ],
+          "mean_missing": [
+            13,
+            13
+          ],
+          "mean_more": [
+            13,
+            13
+          ]
+        },
+        "must_read": [
+          13,
+          13
+        ],
+        "extra": {
+          "n": 64,
+          "wording_conflicts": 16,
+          "new_wordings": [
+            61,
+            51
+          ],
+          "page_pair": {
+            "n": 20,
+            "incomplete": 20,
+            "complete": 20,
+            "both": 20,
+            "mean_p_more_shift": 0.5957919076085091
+          }
+        }
+      }
+    },
+    "saved_weights_checked": true,
+    "visible_needs_in_training": 49,
+    "reserved_mib": 18354.0
+  },
+  "guard": {
+    "frozen": {
+      "n": 64,
+      "ordinary": 61,
+      "guarded": 61,
+      "rescued": 0,
+      "degraded": 0,
+      "guard_invoked": 0,
+      "unnecessary_before": 0,
+      "unnecessary_after": 0,
+      "must_read_after": [
+        13,
+        13
+      ]
+    },
+    "prior_rl": {
+      "n": 64,
+      "ordinary": 64,
+      "guarded": 64,
+      "rescued": 0,
+      "degraded": 0,
+      "guard_invoked": 0,
+      "unnecessary_before": 0,
+      "unnecessary_after": 0,
+      "must_read_after": [
+        13,
+        13
+      ]
+    },
+    "control": {
+      "n": 64,
+      "ordinary": 64,
+      "guarded": 64,
+      "rescued": 0,
+      "degraded": 0,
+      "guard_invoked": 0,
+      "unnecessary_before": 0,
+      "unnecessary_after": 0,
+      "must_read_after": [
+        13,
+        13
+      ]
+    },
+    "paired": {
+      "n": 64,
+      "ordinary": 61,
+      "guarded": 61,
+      "rescued": 0,
+      "degraded": 0,
+      "guard_invoked": 0,
+      "unnecessary_before": 0,
+      "unnecessary_after": 0,
+      "must_read_after": [
+        13,
+        13
+      ]
+    }
+  },
+  "old_guard_replay": {
+    "prior_rl": {
+      "n": 64,
+      "ordinary": 56,
+      "guarded": 64,
+      "rescued": 8,
+      "degraded": 0,
+      "guard_invoked": 8,
+      "wrong_operator": 0,
+      "early_stops": 8,
+      "unnecessary_before": 0,
+      "unnecessary_after": 0,
+      "must_read_after": [
+        13,
+        13
+      ]
+    }
+  },
+  "guard_other_wording": {
+    "frozen": {
+      "n": 64,
+      "ordinary": 51,
+      "guarded": 64,
+      "rescued": 13,
+      "degraded": 0,
+      "guard_invoked": 13,
+      "wrong_operator": 0,
+      "early_stops": 13,
+      "unnecessary_before": 0,
+      "unnecessary_after": 0,
+      "must_read_after": [
+        13,
+        13
+      ]
+    },
+    "prior_rl": {
+      "n": 64,
+      "ordinary": 51,
+      "guarded": 64,
+      "rescued": 13,
+      "degraded": 0,
+      "guard_invoked": 13,
+      "wrong_operator": 0,
+      "early_stops": 13,
+      "unnecessary_before": 0,
+      "unnecessary_after": 0,
+      "must_read_after": [
+        13,
+        13
+      ]
+    },
+    "control": {
+      "n": 64,
+      "ordinary": 51,
+      "guarded": 64,
+      "rescued": 13,
+      "degraded": 0,
+      "guard_invoked": 13,
+      "wrong_operator": 0,
+      "early_stops": 13,
+      "unnecessary_before": 0,
+      "unnecessary_after": 0,
+      "must_read_after": [
+        13,
+        13
+      ]
+    },
+    "paired": {
+      "n": 64,
+      "ordinary": 51,
+      "guarded": 64,
+      "rescued": 13,
+      "degraded": 0,
+      "guard_invoked": 13,
+      "wrong_operator": 0,
+      "early_stops": 13,
+      "unnecessary_before": 0,
+      "unnecessary_after": 0,
+      "must_read_after": [
+        13,
+        13
+      ]
+    },
+    "paired_fixed": {
+      "n": 64,
+      "ordinary": 51,
+      "guarded": 64,
+      "rescued": 13,
+      "degraded": 0,
+      "guard_invoked": 13,
+      "wrong_operator": 0,
+      "early_stops": 13,
+      "unnecessary_before": 0,
+      "unnecessary_after": 0,
+      "must_read_after": [
+        13,
+        13
+      ]
+    }
+  },
+  "elapsed_seconds": 585,
+  "comparisons": {
+    "paired_page_vs_control": {
+      "overall": {
+        "n": 64,
+        "gains": 0,
+        "losses": 3,
+        "delta": -0.046875,
+        "ci95": [
+          -0.109375,
+          0
+        ]
+      },
+      "must_read": {
+        "n": 13,
+        "gains": 0,
+        "losses": 0,
+        "delta": 0,
+        "ci95": [
+          0,
+          0
+        ]
+      }
+    },
+    "paired_page_vs_frozen": {
+      "overall": {
+        "n": 64,
+        "gains": 0,
+        "losses": 0,
+        "delta": 0,
+        "ci95": [
+          0,
+          0
+        ]
+      },
+      "must_read": {
+        "n": 13,
+        "gains": 0,
+        "losses": 0,
+        "delta": 0,
+        "ci95": [
+          0,
+          0
+        ]
+      }
+    },
+    "paired_page_vs_prior_rl": {
+      "overall": {
+        "n": 64,
+        "gains": 0,
+        "losses": 3,
+        "delta": -0.046875,
+        "ci95": [
+          -0.109375,
+          0
+        ]
+      },
+      "must_read": {
+        "n": 13,
+        "gains": 0,
+        "losses": 0,
+        "delta": 0,
+        "ci95": [
+          0,
+          0
+        ]
+      }
+    },
+    "control_vs_frozen": {
+      "overall": {
+        "n": 64,
+        "gains": 3,
+        "losses": 0,
+        "delta": 0.046875,
+        "ci95": [
+          0,
+          0.109375
+        ]
+      }
+    }
+  },
+  "fixed_step": {
+    "control": {
+      "mode": "control",
+      "training": {
+        "dev": [
+          {
+            "step": 0,
+            "n": 32,
+            "success": 30,
+            "legal": 32,
+            "calls": 37,
+            "unnecessary": 0,
+            "premature": 2,
+            "reward": 0.853125,
+            "strata": {
+              "latest_missing": [
+                6,
+                6
+              ],
+              "latest_present": [
+                6,
+                6
+              ],
+              "mean_enough": [
+                7,
+                7
+              ],
+              "mean_missing": [
+                6,
+                6
+              ],
+              "mean_more": [
+                5,
+                7
+              ]
+            }
+          },
+          {
+            "step": 16,
+            "n": 32,
+            "success": 30,
+            "legal": 32,
+            "calls": 37,
+            "unnecessary": 0,
+            "premature": 2,
+            "reward": 0.853125,
+            "strata": {
+              "latest_missing": [
+                6,
+                6
+              ],
+              "latest_present": [
+                6,
+                6
+              ],
+              "mean_enough": [
+                7,
+                7
+              ],
+              "mean_missing": [
+                6,
+                6
+              ],
+              "mean_more": [
+                5,
+                7
+              ]
+            }
+          },
+          {
+            "step": 32,
+            "n": 32,
+            "success": 30,
+            "legal": 32,
+            "calls": 37,
+            "unnecessary": 0,
+            "premature": 2,
+            "reward": 0.853125,
+            "strata": {
+              "latest_missing": [
+                6,
+                6
+              ],
+              "latest_present": [
+                6,
+                6
+              ],
+              "mean_enough": [
+                7,
+                7
+              ],
+              "mean_missing": [
+                6,
+                6
+              ],
+              "mean_more": [
+                5,
+                7
+              ]
+            }
+          },
+          {
+            "step": 64,
+            "n": 32,
+            "success": 31,
+            "legal": 32,
+            "calls": 38,
+            "unnecessary": 0,
+            "premature": 1,
+            "reward": 0.9143749999999999,
+            "strata": {
+              "latest_missing": [
+                6,
+                6
+              ],
+              "latest_present": [
+                6,
+                6
+              ],
+              "mean_enough": [
+                7,
+                7
+              ],
+              "mean_missing": [
+                6,
+                6
+              ],
+              "mean_more": [
+                6,
+                7
+              ]
+            }
+          }
+        ],
+        "best_step": 64,
+        "updates": 64,
+        "adapter_changed": true,
+        "sampled_groups": 256,
+        "nonzero_groups": 123,
+        "sampled_completions": 1024,
+        "generated_tokens": 6414,
+        "legal_rollouts": 1024,
+        "successful_rollouts": 844,
+        "environment_executions": 1024
+      },
+      "test": {
+        "trained": {
+          "n": 64,
+          "success": 64,
+          "legal": 64,
+          "calls": 77,
+          "unnecessary": 0,
+          "premature": 0,
+          "reward": 0.9759375,
+          "strata": {
+            "latest_missing": [
+              12,
+              12
+            ],
+            "latest_present": [
+              13,
+              13
+            ],
+            "mean_enough": [
+              13,
+              13
+            ],
+            "mean_missing": [
+              13,
+              13
+            ],
+            "mean_more": [
+              13,
+              13
+            ]
+          },
+          "must_read": [
+            13,
+            13
+          ],
+          "extra": {
+            "n": 64,
+            "wording_conflicts": 13,
+            "new_wordings": [
+              64,
+              51
+            ],
+            "page_pair": {
+              "n": 20,
+              "incomplete": 20,
+              "complete": 20,
+              "both": 20,
+              "mean_p_more_shift": 0.682010006904602
+            }
+          }
+        }
+      },
+      "saved_weights_checked": true,
+      "evaluated_step": 64,
+      "visible_needs_in_training": 52,
+      "reserved_mib": 18816.0
+    },
+    "paired_page": {
+      "mode": "paired",
+      "training": {
+        "dev": [
+          {
+            "step": 0,
+            "n": 32,
+            "success": 30,
+            "legal": 32,
+            "calls": 37,
+            "unnecessary": 0,
+            "premature": 2,
+            "reward": 0.853125,
+            "strata": {
+              "latest_missing": [
+                6,
+                6
+              ],
+              "latest_present": [
+                6,
+                6
+              ],
+              "mean_enough": [
+                7,
+                7
+              ],
+              "mean_missing": [
+                6,
+                6
+              ],
+              "mean_more": [
+                5,
+                7
+              ]
+            }
+          },
+          {
+            "step": 16,
+            "n": 32,
+            "success": 30,
+            "legal": 32,
+            "calls": 37,
+            "unnecessary": 0,
+            "premature": 2,
+            "reward": 0.853125,
+            "strata": {
+              "latest_missing": [
+                6,
+                6
+              ],
+              "latest_present": [
+                6,
+                6
+              ],
+              "mean_enough": [
+                7,
+                7
+              ],
+              "mean_missing": [
+                6,
+                6
+              ],
+              "mean_more": [
+                5,
+                7
+              ]
+            }
+          },
+          {
+            "step": 32,
+            "n": 32,
+            "success": 30,
+            "legal": 32,
+            "calls": 37,
+            "unnecessary": 0,
+            "premature": 2,
+            "reward": 0.853125,
+            "strata": {
+              "latest_missing": [
+                6,
+                6
+              ],
+              "latest_present": [
+                6,
+                6
+              ],
+              "mean_enough": [
+                7,
+                7
+              ],
+              "mean_missing": [
+                6,
+                6
+              ],
+              "mean_more": [
+                5,
+                7
+              ]
+            }
+          },
+          {
+            "step": 64,
+            "n": 32,
+            "success": 30,
+            "legal": 32,
+            "calls": 37,
+            "unnecessary": 0,
+            "premature": 2,
+            "reward": 0.853125,
+            "strata": {
+              "latest_missing": [
+                6,
+                6
+              ],
+              "latest_present": [
+                6,
+                6
+              ],
+              "mean_enough": [
+                7,
+                7
+              ],
+              "mean_missing": [
+                6,
+                6
+              ],
+              "mean_more": [
+                5,
+                7
+              ]
+            }
+          }
+        ],
+        "best_step": 0,
+        "updates": 64,
+        "adapter_changed": true,
+        "sampled_groups": 256,
+        "nonzero_groups": 127,
+        "sampled_completions": 1024,
+        "generated_tokens": 6436,
+        "legal_rollouts": 1024,
+        "successful_rollouts": 856,
+        "environment_executions": 1024
+      },
+      "test": {
+        "trained": {
+          "n": 64,
+          "success": 64,
+          "legal": 64,
+          "calls": 77,
+          "unnecessary": 0,
+          "premature": 0,
+          "reward": 0.9759375,
+          "strata": {
+            "latest_missing": [
+              12,
+              12
+            ],
+            "latest_present": [
+              13,
+              13
+            ],
+            "mean_enough": [
+              13,
+              13
+            ],
+            "mean_missing": [
+              13,
+              13
+            ],
+            "mean_more": [
+              13,
+              13
+            ]
+          },
+          "must_read": [
+            13,
+            13
+          ],
+          "extra": {
+            "n": 64,
+            "wording_conflicts": 13,
+            "new_wordings": [
+              64,
+              51
+            ],
+            "page_pair": {
+              "n": 20,
+              "incomplete": 20,
+              "complete": 20,
+              "both": 20,
+              "mean_p_more_shift": 0.6897020787000656
+            }
+          }
+        }
+      },
+      "saved_weights_checked": true,
+      "evaluated_step": 64,
+      "visible_needs_in_training": 49,
+      "reserved_mib": 18354.0
+    },
+    "paired": {
+      "overall": {
+        "n": 64,
+        "gains": 0,
+        "losses": 0,
+        "delta": 0,
+        "ci95": [
+          0,
+          0
+        ]
+      },
+      "must_read": {
+        "n": 13,
+        "gains": 0,
+        "losses": 0,
+        "delta": 0,
+        "ci95": [
+          0,
+          0
+        ]
+      },
+      "paired_vs_frozen": {
+        "n": 64,
+        "gains": 3,
+        "losses": 0,
+        "delta": 0.046875,
+        "ci95": [
+          0,
+          0.109375
+        ]
+      }
+    }
+  }
+}

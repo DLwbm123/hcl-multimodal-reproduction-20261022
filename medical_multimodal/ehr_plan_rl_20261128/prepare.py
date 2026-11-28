@@ -27,7 +27,7 @@ def table(path):
         yield from csv.DictReader(stream)
 
 
-def freeze(data, previous_panel):
+def freeze(data, previous_panel, *, additional_subjects=(), seed=SEED):
     subjects = {}
     for row in table(data / "cases.csv.gz"):
         if not all(row.get(key) for key in ("caseid", "subjectid", "caseend")):
@@ -87,8 +87,9 @@ def freeze(data, previous_panel):
         excluded.add(case)
     assert len(excluded) == 164
 
-    rng = random.Random(SEED)
-    eligible = list(set(rows_by_case) - excluded)
+    rng = random.Random(seed)
+    extra = set(additional_subjects)
+    eligible = [case for case in rows_by_case if case not in excluded and metadata[case][0] not in extra]
     eligible.sort()
     rng.shuffle(eligible)
     pools = defaultdict(list)
