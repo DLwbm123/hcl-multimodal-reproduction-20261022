@@ -1,0 +1,2406 @@
+{
+  "historical_revision": "914942b",
+  "historical_cost_020": {
+    "test": {
+      "endpoint": {
+        "cells": {
+          "required": {
+            "n": 256,
+            "success": 256,
+            "unnecessary": 0,
+            "premature": 0,
+            "tool_calls": 512,
+            "guarded_success": 256,
+            "extra_reads": 0,
+            "efficient": 256
+          },
+          "sufficient_with_next": {
+            "n": 128,
+            "success": 128,
+            "unnecessary": 128,
+            "premature": 0,
+            "tool_calls": 256,
+            "guarded_success": 128,
+            "extra_reads": 0,
+            "efficient": 0
+          },
+          "sufficient_last": {
+            "n": 128,
+            "success": 128,
+            "unnecessary": 0,
+            "premature": 0,
+            "tool_calls": 128,
+            "guarded_success": 128,
+            "extra_reads": 0,
+            "efficient": 128
+          }
+        },
+        "counts": {
+          "n": 512,
+          "success": 512,
+          "unnecessary": 128,
+          "premature": 0,
+          "tool_calls": 896,
+          "guarded_success": 512,
+          "extra_reads": 0,
+          "efficient": 384
+        },
+        "all_success": 64,
+        "all_efficient": 32,
+        "wrong_operator": 0
+      },
+      "selected": {
+        "cells": {
+          "required": {
+            "n": 256,
+            "success": 256,
+            "unnecessary": 0,
+            "premature": 0,
+            "tool_calls": 512,
+            "guarded_success": 256,
+            "extra_reads": 0,
+            "efficient": 256
+          },
+          "sufficient_with_next": {
+            "n": 128,
+            "success": 128,
+            "unnecessary": 128,
+            "premature": 0,
+            "tool_calls": 256,
+            "guarded_success": 128,
+            "extra_reads": 0,
+            "efficient": 0
+          },
+          "sufficient_last": {
+            "n": 128,
+            "success": 128,
+            "unnecessary": 0,
+            "premature": 0,
+            "tool_calls": 128,
+            "guarded_success": 128,
+            "extra_reads": 0,
+            "efficient": 128
+          }
+        },
+        "counts": {
+          "n": 512,
+          "success": 512,
+          "unnecessary": 128,
+          "premature": 0,
+          "tool_calls": 896,
+          "guarded_success": 512,
+          "extra_reads": 0,
+          "efficient": 384
+        },
+        "all_success": 64,
+        "all_efficient": 32,
+        "wrong_operator": 0
+      }
+    },
+    "training": {
+      "best_step": 256,
+      "steps": 384,
+      "nonzero_gradient_steps": 383,
+      "mixed_groups": 170,
+      "proposed_groups": 1536,
+      "group_size": 4,
+      "sampled_actions": 6144
+    }
+  },
+  "dynamic": {
+    "explicit_age": false,
+    "training": {
+      "best_step": 160,
+      "steps": 351,
+      "attempts": 512,
+      "nonzero": 351,
+      "adapter_changed": true,
+      "batch_audit": {
+        "max_abs_probability": 0.03191816806793213,
+        "argmax_changes": 0,
+        "n": 8
+      },
+      "dev": [
+        {
+          "step": 0,
+          "attempts": 0,
+          "cells": {
+            "required": {
+              "n": 96,
+              "success": 6,
+              "unnecessary": 0,
+              "premature": 90,
+              "tool_calls": 102,
+              "guarded_success": 96,
+              "extra_reads": 90,
+              "efficient": 6
+            },
+            "sufficient_with_next": {
+              "n": 48,
+              "success": 48,
+              "unnecessary": 8,
+              "premature": 0,
+              "tool_calls": 56,
+              "guarded_success": 48,
+              "extra_reads": 0,
+              "efficient": 40
+            },
+            "sufficient_last": {
+              "n": 48,
+              "success": 48,
+              "unnecessary": 0,
+              "premature": 0,
+              "tool_calls": 48,
+              "guarded_success": 48,
+              "extra_reads": 0,
+              "efficient": 48
+            }
+          },
+          "counts": {
+            "n": 192,
+            "success": 102,
+            "unnecessary": 8,
+            "premature": 90,
+            "tool_calls": 206,
+            "guarded_success": 192,
+            "extra_reads": 90,
+            "efficient": 94
+          },
+          "all_success": 0,
+          "all_efficient": 0,
+          "wrong_operator": 0
+        },
+        {
+          "step": 32,
+          "attempts": 32,
+          "cells": {
+            "required": {
+              "n": 96,
+              "success": 96,
+              "unnecessary": 0,
+              "premature": 0,
+              "tool_calls": 192,
+              "guarded_success": 96,
+              "extra_reads": 0,
+              "efficient": 96
+            },
+            "sufficient_with_next": {
+              "n": 48,
+              "success": 48,
+              "unnecessary": 48,
+              "premature": 0,
+              "tool_calls": 96,
+              "guarded_success": 48,
+              "extra_reads": 0,
+              "efficient": 0
+            },
+            "sufficient_last": {
+              "n": 48,
+              "success": 48,
+              "unnecessary": 0,
+              "premature": 0,
+              "tool_calls": 48,
+              "guarded_success": 48,
+              "extra_reads": 0,
+              "efficient": 48
+            }
+          },
+          "counts": {
+            "n": 192,
+            "success": 192,
+            "unnecessary": 48,
+            "premature": 0,
+            "tool_calls": 336,
+            "guarded_success": 192,
+            "extra_reads": 0,
+            "efficient": 144
+          },
+          "all_success": 32,
+          "all_efficient": 16,
+          "wrong_operator": 0
+        },
+        {
+          "step": 64,
+          "attempts": 68,
+          "cells": {
+            "required": {
+              "n": 96,
+              "success": 96,
+              "unnecessary": 0,
+              "premature": 0,
+              "tool_calls": 192,
+              "guarded_success": 96,
+              "extra_reads": 0,
+              "efficient": 96
+            },
+            "sufficient_with_next": {
+              "n": 48,
+              "success": 48,
+              "unnecessary": 47,
+              "premature": 0,
+              "tool_calls": 95,
+              "guarded_success": 48,
+              "extra_reads": 0,
+              "efficient": 1
+            },
+            "sufficient_last": {
+              "n": 48,
+              "success": 48,
+              "unnecessary": 0,
+              "premature": 0,
+              "tool_calls": 48,
+              "guarded_success": 48,
+              "extra_reads": 0,
+              "efficient": 48
+            }
+          },
+          "counts": {
+            "n": 192,
+            "success": 192,
+            "unnecessary": 47,
+            "premature": 0,
+            "tool_calls": 335,
+            "guarded_success": 192,
+            "extra_reads": 0,
+            "efficient": 145
+          },
+          "all_success": 32,
+          "all_efficient": 16,
+          "wrong_operator": 0
+        },
+        {
+          "step": 96,
+          "attempts": 104,
+          "cells": {
+            "required": {
+              "n": 96,
+              "success": 96,
+              "unnecessary": 0,
+              "premature": 0,
+              "tool_calls": 192,
+              "guarded_success": 96,
+              "extra_reads": 0,
+              "efficient": 96
+            },
+            "sufficient_with_next": {
+              "n": 48,
+              "success": 48,
+              "unnecessary": 42,
+              "premature": 0,
+              "tool_calls": 90,
+              "guarded_success": 48,
+              "extra_reads": 0,
+              "efficient": 6
+            },
+            "sufficient_last": {
+              "n": 48,
+              "success": 48,
+              "unnecessary": 0,
+              "premature": 0,
+              "tool_calls": 48,
+              "guarded_success": 48,
+              "extra_reads": 0,
+              "efficient": 48
+            }
+          },
+          "counts": {
+            "n": 192,
+            "success": 192,
+            "unnecessary": 42,
+            "premature": 0,
+            "tool_calls": 330,
+            "guarded_success": 192,
+            "extra_reads": 0,
+            "efficient": 150
+          },
+          "all_success": 32,
+          "all_efficient": 16,
+          "wrong_operator": 0
+        },
+        {
+          "step": 128,
+          "attempts": 146,
+          "cells": {
+            "required": {
+              "n": 96,
+              "success": 95,
+              "unnecessary": 0,
+              "premature": 1,
+              "tool_calls": 191,
+              "guarded_success": 96,
+              "extra_reads": 1,
+              "efficient": 95
+            },
+            "sufficient_with_next": {
+              "n": 48,
+              "success": 48,
+              "unnecessary": 29,
+              "premature": 0,
+              "tool_calls": 77,
+              "guarded_success": 48,
+              "extra_reads": 0,
+              "efficient": 19
+            },
+            "sufficient_last": {
+              "n": 48,
+              "success": 48,
+              "unnecessary": 0,
+              "premature": 0,
+              "tool_calls": 48,
+              "guarded_success": 48,
+              "extra_reads": 0,
+              "efficient": 48
+            }
+          },
+          "counts": {
+            "n": 192,
+            "success": 191,
+            "unnecessary": 29,
+            "premature": 1,
+            "tool_calls": 316,
+            "guarded_success": 192,
+            "extra_reads": 1,
+            "efficient": 162
+          },
+          "all_success": 31,
+          "all_efficient": 16,
+          "wrong_operator": 0
+        },
+        {
+          "step": 160,
+          "attempts": 192,
+          "cells": {
+            "required": {
+              "n": 96,
+              "success": 96,
+              "unnecessary": 0,
+              "premature": 0,
+              "tool_calls": 192,
+              "guarded_success": 96,
+              "extra_reads": 0,
+              "efficient": 96
+            },
+            "sufficient_with_next": {
+              "n": 48,
+              "success": 48,
+              "unnecessary": 30,
+              "premature": 0,
+              "tool_calls": 78,
+              "guarded_success": 48,
+              "extra_reads": 0,
+              "efficient": 18
+            },
+            "sufficient_last": {
+              "n": 48,
+              "success": 48,
+              "unnecessary": 0,
+              "premature": 0,
+              "tool_calls": 48,
+              "guarded_success": 48,
+              "extra_reads": 0,
+              "efficient": 48
+            }
+          },
+          "counts": {
+            "n": 192,
+            "success": 192,
+            "unnecessary": 30,
+            "premature": 0,
+            "tool_calls": 318,
+            "guarded_success": 192,
+            "extra_reads": 0,
+            "efficient": 162
+          },
+          "all_success": 32,
+          "all_efficient": 16,
+          "wrong_operator": 0
+        },
+        {
+          "step": 192,
+          "attempts": 246,
+          "cells": {
+            "required": {
+              "n": 96,
+              "success": 95,
+              "unnecessary": 0,
+              "premature": 1,
+              "tool_calls": 191,
+              "guarded_success": 96,
+              "extra_reads": 1,
+              "efficient": 95
+            },
+            "sufficient_with_next": {
+              "n": 48,
+              "success": 48,
+              "unnecessary": 27,
+              "premature": 0,
+              "tool_calls": 75,
+              "guarded_success": 48,
+              "extra_reads": 0,
+              "efficient": 21
+            },
+            "sufficient_last": {
+              "n": 48,
+              "success": 48,
+              "unnecessary": 0,
+              "premature": 0,
+              "tool_calls": 48,
+              "guarded_success": 48,
+              "extra_reads": 0,
+              "efficient": 48
+            }
+          },
+          "counts": {
+            "n": 192,
+            "success": 191,
+            "unnecessary": 27,
+            "premature": 1,
+            "tool_calls": 314,
+            "guarded_success": 192,
+            "extra_reads": 1,
+            "efficient": 164
+          },
+          "all_success": 31,
+          "all_efficient": 16,
+          "wrong_operator": 0
+        },
+        {
+          "step": 224,
+          "attempts": 289,
+          "cells": {
+            "required": {
+              "n": 96,
+              "success": 87,
+              "unnecessary": 0,
+              "premature": 9,
+              "tool_calls": 183,
+              "guarded_success": 96,
+              "extra_reads": 9,
+              "efficient": 87
+            },
+            "sufficient_with_next": {
+              "n": 48,
+              "success": 48,
+              "unnecessary": 15,
+              "premature": 0,
+              "tool_calls": 63,
+              "guarded_success": 48,
+              "extra_reads": 0,
+              "efficient": 33
+            },
+            "sufficient_last": {
+              "n": 48,
+              "success": 48,
+              "unnecessary": 0,
+              "premature": 0,
+              "tool_calls": 48,
+              "guarded_success": 48,
+              "extra_reads": 0,
+              "efficient": 48
+            }
+          },
+          "counts": {
+            "n": 192,
+            "success": 183,
+            "unnecessary": 15,
+            "premature": 9,
+            "tool_calls": 294,
+            "guarded_success": 192,
+            "extra_reads": 9,
+            "efficient": 168
+          },
+          "all_success": 27,
+          "all_efficient": 17,
+          "wrong_operator": 0
+        },
+        {
+          "step": 256,
+          "attempts": 353,
+          "cells": {
+            "required": {
+              "n": 96,
+              "success": 84,
+              "unnecessary": 0,
+              "premature": 12,
+              "tool_calls": 180,
+              "guarded_success": 96,
+              "extra_reads": 12,
+              "efficient": 84
+            },
+            "sufficient_with_next": {
+              "n": 48,
+              "success": 48,
+              "unnecessary": 6,
+              "premature": 0,
+              "tool_calls": 54,
+              "guarded_success": 48,
+              "extra_reads": 0,
+              "efficient": 42
+            },
+            "sufficient_last": {
+              "n": 48,
+              "success": 48,
+              "unnecessary": 0,
+              "premature": 0,
+              "tool_calls": 48,
+              "guarded_success": 48,
+              "extra_reads": 0,
+              "efficient": 48
+            }
+          },
+          "counts": {
+            "n": 192,
+            "success": 180,
+            "unnecessary": 6,
+            "premature": 12,
+            "tool_calls": 282,
+            "guarded_success": 192,
+            "extra_reads": 12,
+            "efficient": 174
+          },
+          "all_success": 26,
+          "all_efficient": 20,
+          "wrong_operator": 0
+        },
+        {
+          "step": 288,
+          "attempts": 397,
+          "cells": {
+            "required": {
+              "n": 96,
+              "success": 76,
+              "unnecessary": 0,
+              "premature": 20,
+              "tool_calls": 172,
+              "guarded_success": 96,
+              "extra_reads": 20,
+              "efficient": 76
+            },
+            "sufficient_with_next": {
+              "n": 48,
+              "success": 48,
+              "unnecessary": 6,
+              "premature": 0,
+              "tool_calls": 54,
+              "guarded_success": 48,
+              "extra_reads": 0,
+              "efficient": 42
+            },
+            "sufficient_last": {
+              "n": 48,
+              "success": 48,
+              "unnecessary": 0,
+              "premature": 0,
+              "tool_calls": 48,
+              "guarded_success": 48,
+              "extra_reads": 0,
+              "efficient": 48
+            }
+          },
+          "counts": {
+            "n": 192,
+            "success": 172,
+            "unnecessary": 6,
+            "premature": 20,
+            "tool_calls": 274,
+            "guarded_success": 192,
+            "extra_reads": 20,
+            "efficient": 166
+          },
+          "all_success": 18,
+          "all_efficient": 15,
+          "wrong_operator": 0
+        },
+        {
+          "step": 320,
+          "attempts": 477,
+          "cells": {
+            "required": {
+              "n": 96,
+              "success": 67,
+              "unnecessary": 0,
+              "premature": 29,
+              "tool_calls": 163,
+              "guarded_success": 96,
+              "extra_reads": 29,
+              "efficient": 67
+            },
+            "sufficient_with_next": {
+              "n": 48,
+              "success": 48,
+              "unnecessary": 6,
+              "premature": 0,
+              "tool_calls": 54,
+              "guarded_success": 48,
+              "extra_reads": 0,
+              "efficient": 42
+            },
+            "sufficient_last": {
+              "n": 48,
+              "success": 48,
+              "unnecessary": 0,
+              "premature": 0,
+              "tool_calls": 48,
+              "guarded_success": 48,
+              "extra_reads": 0,
+              "efficient": 48
+            }
+          },
+          "counts": {
+            "n": 192,
+            "success": 163,
+            "unnecessary": 6,
+            "premature": 29,
+            "tool_calls": 265,
+            "guarded_success": 192,
+            "extra_reads": 29,
+            "efficient": 157
+          },
+          "all_success": 14,
+          "all_efficient": 13,
+          "wrong_operator": 0
+        },
+        {
+          "step": 351,
+          "attempts": 512,
+          "cells": {
+            "required": {
+              "n": 96,
+              "success": 73,
+              "unnecessary": 0,
+              "premature": 23,
+              "tool_calls": 169,
+              "guarded_success": 96,
+              "extra_reads": 23,
+              "efficient": 73
+            },
+            "sufficient_with_next": {
+              "n": 48,
+              "success": 48,
+              "unnecessary": 6,
+              "premature": 0,
+              "tool_calls": 54,
+              "guarded_success": 48,
+              "extra_reads": 0,
+              "efficient": 42
+            },
+            "sufficient_last": {
+              "n": 48,
+              "success": 48,
+              "unnecessary": 0,
+              "premature": 0,
+              "tool_calls": 48,
+              "guarded_success": 48,
+              "extra_reads": 0,
+              "efficient": 48
+            }
+          },
+          "counts": {
+            "n": 192,
+            "success": 169,
+            "unnecessary": 6,
+            "premature": 23,
+            "tool_calls": 271,
+            "guarded_success": 192,
+            "extra_reads": 23,
+            "efficient": 163
+          },
+          "all_success": 18,
+          "all_efficient": 15,
+          "wrong_operator": 0
+        }
+      ],
+      "blocks": [
+        {
+          "step": 32,
+          "attempts": 32,
+          "by_state": {
+            "required": {
+              "proposed": 96,
+              "mixed": 56,
+              "used": 32
+            },
+            "sufficient_with_next": {
+              "proposed": 136,
+              "mixed": 102,
+              "used": 64
+            },
+            "sufficient_last": {
+              "proposed": 88,
+              "mixed": 55,
+              "used": 32
+            }
+          }
+        },
+        {
+          "step": 64,
+          "attempts": 68,
+          "by_state": {
+            "required": {
+              "proposed": 440,
+              "mixed": 40,
+              "used": 32
+            },
+            "sufficient_with_next": {
+              "proposed": 468,
+              "mixed": 82,
+              "used": 64
+            },
+            "sufficient_last": {
+              "proposed": 116,
+              "mixed": 51,
+              "used": 32
+            }
+          }
+        },
+        {
+          "step": 96,
+          "attempts": 104,
+          "by_state": {
+            "required": {
+              "proposed": 487,
+              "mixed": 41,
+              "used": 32
+            },
+            "sufficient_with_next": {
+              "proposed": 369,
+              "mixed": 89,
+              "used": 64
+            },
+            "sufficient_last": {
+              "proposed": 272,
+              "mixed": 50,
+              "used": 32
+            }
+          }
+        },
+        {
+          "step": 128,
+          "attempts": 146,
+          "by_state": {
+            "required": {
+              "proposed": 608,
+              "mixed": 44,
+              "used": 32
+            },
+            "sufficient_with_next": {
+              "proposed": 328,
+              "mixed": 96,
+              "used": 64
+            },
+            "sufficient_last": {
+              "proposed": 512,
+              "mixed": 42,
+              "used": 32
+            }
+          }
+        },
+        {
+          "step": 160,
+          "attempts": 192,
+          "by_state": {
+            "required": {
+              "proposed": 738,
+              "mixed": 50,
+              "used": 32
+            },
+            "sufficient_with_next": {
+              "proposed": 288,
+              "mixed": 113,
+              "used": 64
+            },
+            "sufficient_last": {
+              "proposed": 750,
+              "mixed": 40,
+              "used": 32
+            }
+          }
+        },
+        {
+          "step": 192,
+          "attempts": 246,
+          "by_state": {
+            "required": {
+              "proposed": 898,
+              "mixed": 49,
+              "used": 32
+            },
+            "sufficient_with_next": {
+              "proposed": 294,
+              "mixed": 131,
+              "used": 64
+            },
+            "sufficient_last": {
+              "proposed": 984,
+              "mixed": 41,
+              "used": 32
+            }
+          }
+        },
+        {
+          "step": 224,
+          "attempts": 289,
+          "by_state": {
+            "required": {
+              "proposed": 629,
+              "mixed": 42,
+              "used": 32
+            },
+            "sufficient_with_next": {
+              "proposed": 221,
+              "mixed": 117,
+              "used": 64
+            },
+            "sufficient_last": {
+              "proposed": 646,
+              "mixed": 43,
+              "used": 32
+            }
+          }
+        },
+        {
+          "step": 256,
+          "attempts": 353,
+          "by_state": {
+            "required": {
+              "proposed": 1155,
+              "mixed": 44,
+              "used": 32
+            },
+            "sufficient_with_next": {
+              "proposed": 307,
+              "mixed": 166,
+              "used": 64
+            },
+            "sufficient_last": {
+              "proposed": 1058,
+              "mixed": 48,
+              "used": 32
+            }
+          }
+        },
+        {
+          "step": 288,
+          "attempts": 397,
+          "by_state": {
+            "required": {
+              "proposed": 611,
+              "mixed": 40,
+              "used": 32
+            },
+            "sufficient_with_next": {
+              "proposed": 213,
+              "mixed": 120,
+              "used": 64
+            },
+            "sufficient_last": {
+              "proposed": 760,
+              "mixed": 38,
+              "used": 32
+            }
+          }
+        },
+        {
+          "step": 320,
+          "attempts": 477,
+          "by_state": {
+            "required": {
+              "proposed": 1497,
+              "mixed": 52,
+              "used": 32
+            },
+            "sufficient_with_next": {
+              "proposed": 469,
+              "mixed": 203,
+              "used": 64
+            },
+            "sufficient_last": {
+              "proposed": 1434,
+              "mixed": 51,
+              "used": 32
+            }
+          }
+        },
+        {
+          "step": 351,
+          "attempts": 512,
+          "by_state": {
+            "required": {
+              "proposed": 358,
+              "mixed": 40,
+              "used": 31
+            },
+            "sufficient_with_next": {
+              "proposed": 178,
+              "mixed": 98,
+              "used": 62
+            },
+            "sufficient_last": {
+              "proposed": 600,
+              "mixed": 41,
+              "used": 31
+            }
+          }
+        }
+      ],
+      "group_totals": {
+        "required": {
+          "proposed": 7517,
+          "mixed": 498,
+          "used": 351
+        },
+        "sufficient_with_next": {
+          "proposed": 3271,
+          "mixed": 1317,
+          "used": 702
+        },
+        "sufficient_last": {
+          "proposed": 7220,
+          "mixed": 500,
+          "used": 351
+        }
+      },
+      "sampled_actions": 144064,
+      "blocks_are_per_interval": true,
+      "unreported_final_proposals": {
+        "required": {
+          "proposed": 0,
+          "mixed": 0,
+          "used": 0
+        },
+        "sufficient_with_next": {
+          "proposed": 0,
+          "mixed": 0,
+          "used": 0
+        },
+        "sufficient_last": {
+          "proposed": 0,
+          "mixed": 0,
+          "used": 0
+        }
+      },
+      "group_size": 8
+    },
+    "test": {
+      "endpoint": {
+        "cells": {
+          "required": {
+            "n": 256,
+            "success": 206,
+            "unnecessary": 0,
+            "premature": 50,
+            "tool_calls": 462,
+            "guarded_success": 256,
+            "extra_reads": 50,
+            "efficient": 206
+          },
+          "sufficient_with_next": {
+            "n": 128,
+            "success": 128,
+            "unnecessary": 3,
+            "premature": 0,
+            "tool_calls": 131,
+            "guarded_success": 128,
+            "extra_reads": 0,
+            "efficient": 125
+          },
+          "sufficient_last": {
+            "n": 128,
+            "success": 128,
+            "unnecessary": 0,
+            "premature": 0,
+            "tool_calls": 128,
+            "guarded_success": 128,
+            "extra_reads": 0,
+            "efficient": 128
+          }
+        },
+        "counts": {
+          "n": 512,
+          "success": 462,
+          "unnecessary": 3,
+          "premature": 50,
+          "tool_calls": 721,
+          "guarded_success": 512,
+          "extra_reads": 50,
+          "efficient": 459
+        },
+        "all_success": 51,
+        "all_efficient": 48,
+        "wrong_operator": 0
+      },
+      "selected": {
+        "cells": {
+          "required": {
+            "n": 256,
+            "success": 256,
+            "unnecessary": 0,
+            "premature": 0,
+            "tool_calls": 512,
+            "guarded_success": 256,
+            "extra_reads": 0,
+            "efficient": 256
+          },
+          "sufficient_with_next": {
+            "n": 128,
+            "success": 128,
+            "unnecessary": 110,
+            "premature": 0,
+            "tool_calls": 238,
+            "guarded_success": 128,
+            "extra_reads": 0,
+            "efficient": 18
+          },
+          "sufficient_last": {
+            "n": 128,
+            "success": 128,
+            "unnecessary": 0,
+            "premature": 0,
+            "tool_calls": 128,
+            "guarded_success": 128,
+            "extra_reads": 0,
+            "efficient": 128
+          }
+        },
+        "counts": {
+          "n": 512,
+          "success": 512,
+          "unnecessary": 110,
+          "premature": 0,
+          "tool_calls": 878,
+          "guarded_success": 512,
+          "extra_reads": 0,
+          "efficient": 402
+        },
+        "all_success": 64,
+        "all_efficient": 32,
+        "wrong_operator": 0
+      },
+      "frozen": {
+        "cells": {
+          "required": {
+            "n": 256,
+            "success": 16,
+            "unnecessary": 0,
+            "premature": 240,
+            "tool_calls": 272,
+            "guarded_success": 256,
+            "extra_reads": 240,
+            "efficient": 16
+          },
+          "sufficient_with_next": {
+            "n": 128,
+            "success": 128,
+            "unnecessary": 37,
+            "premature": 0,
+            "tool_calls": 165,
+            "guarded_success": 128,
+            "extra_reads": 0,
+            "efficient": 91
+          },
+          "sufficient_last": {
+            "n": 128,
+            "success": 128,
+            "unnecessary": 0,
+            "premature": 0,
+            "tool_calls": 128,
+            "guarded_success": 128,
+            "extra_reads": 0,
+            "efficient": 128
+          }
+        },
+        "counts": {
+          "n": 512,
+          "success": 272,
+          "unnecessary": 37,
+          "premature": 240,
+          "tool_calls": 565,
+          "guarded_success": 512,
+          "extra_reads": 240,
+          "efficient": 235
+        },
+        "all_success": 0,
+        "all_efficient": 0,
+        "wrong_operator": 0
+      },
+      "rule": {
+        "cells": {
+          "required": {
+            "n": 256,
+            "success": 256,
+            "unnecessary": 0,
+            "premature": 0,
+            "tool_calls": 512,
+            "guarded_success": 256,
+            "extra_reads": 0,
+            "efficient": 256
+          },
+          "sufficient_with_next": {
+            "n": 128,
+            "success": 128,
+            "unnecessary": 0,
+            "premature": 0,
+            "tool_calls": 128,
+            "guarded_success": 128,
+            "extra_reads": 0,
+            "efficient": 128
+          },
+          "sufficient_last": {
+            "n": 128,
+            "success": 128,
+            "unnecessary": 0,
+            "premature": 0,
+            "tool_calls": 128,
+            "guarded_success": 128,
+            "extra_reads": 0,
+            "efficient": 128
+          }
+        },
+        "counts": {
+          "n": 512,
+          "success": 512,
+          "unnecessary": 0,
+          "premature": 0,
+          "tool_calls": 768,
+          "guarded_success": 512,
+          "extra_reads": 0,
+          "efficient": 512
+        },
+        "all_success": 64,
+        "all_efficient": 64,
+        "wrong_operator": 0
+      }
+    },
+    "max_reserved_mib": 30666.0
+  },
+  "dynamic_with_age": {
+    "explicit_age": true,
+    "training": {
+      "best_step": 96,
+      "steps": 384,
+      "attempts": 509,
+      "nonzero": 384,
+      "adapter_changed": true,
+      "batch_audit": {
+        "max_abs_probability": 0.027279645204544067,
+        "argmax_changes": 0,
+        "n": 8
+      },
+      "dev": [
+        {
+          "step": 0,
+          "attempts": 0,
+          "cells": {
+            "required": {
+              "n": 96,
+              "success": 0,
+              "unnecessary": 0,
+              "premature": 96,
+              "tool_calls": 96,
+              "guarded_success": 96,
+              "extra_reads": 96,
+              "efficient": 0
+            },
+            "sufficient_with_next": {
+              "n": 48,
+              "success": 42,
+              "unnecessary": 1,
+              "premature": 0,
+              "tool_calls": 49,
+              "guarded_success": 42,
+              "extra_reads": 0,
+              "efficient": 41
+            },
+            "sufficient_last": {
+              "n": 48,
+              "success": 44,
+              "unnecessary": 0,
+              "premature": 0,
+              "tool_calls": 48,
+              "guarded_success": 44,
+              "extra_reads": 0,
+              "efficient": 44
+            }
+          },
+          "counts": {
+            "n": 192,
+            "success": 86,
+            "unnecessary": 1,
+            "premature": 96,
+            "tool_calls": 193,
+            "guarded_success": 182,
+            "extra_reads": 96,
+            "efficient": 85
+          },
+          "all_success": 0,
+          "all_efficient": 0,
+          "wrong_operator": 10
+        },
+        {
+          "step": 32,
+          "attempts": 32,
+          "cells": {
+            "required": {
+              "n": 96,
+              "success": 44,
+              "unnecessary": 0,
+              "premature": 52,
+              "tool_calls": 140,
+              "guarded_success": 96,
+              "extra_reads": 52,
+              "efficient": 44
+            },
+            "sufficient_with_next": {
+              "n": 48,
+              "success": 48,
+              "unnecessary": 36,
+              "premature": 0,
+              "tool_calls": 84,
+              "guarded_success": 48,
+              "extra_reads": 0,
+              "efficient": 12
+            },
+            "sufficient_last": {
+              "n": 48,
+              "success": 48,
+              "unnecessary": 0,
+              "premature": 0,
+              "tool_calls": 48,
+              "guarded_success": 48,
+              "extra_reads": 0,
+              "efficient": 48
+            }
+          },
+          "counts": {
+            "n": 192,
+            "success": 140,
+            "unnecessary": 36,
+            "premature": 52,
+            "tool_calls": 272,
+            "guarded_success": 192,
+            "extra_reads": 52,
+            "efficient": 104
+          },
+          "all_success": 1,
+          "all_efficient": 0,
+          "wrong_operator": 0
+        },
+        {
+          "step": 64,
+          "attempts": 64,
+          "cells": {
+            "required": {
+              "n": 96,
+              "success": 96,
+              "unnecessary": 0,
+              "premature": 0,
+              "tool_calls": 192,
+              "guarded_success": 96,
+              "extra_reads": 0,
+              "efficient": 96
+            },
+            "sufficient_with_next": {
+              "n": 48,
+              "success": 48,
+              "unnecessary": 48,
+              "premature": 0,
+              "tool_calls": 96,
+              "guarded_success": 48,
+              "extra_reads": 0,
+              "efficient": 0
+            },
+            "sufficient_last": {
+              "n": 48,
+              "success": 48,
+              "unnecessary": 0,
+              "premature": 0,
+              "tool_calls": 48,
+              "guarded_success": 48,
+              "extra_reads": 0,
+              "efficient": 48
+            }
+          },
+          "counts": {
+            "n": 192,
+            "success": 192,
+            "unnecessary": 48,
+            "premature": 0,
+            "tool_calls": 336,
+            "guarded_success": 192,
+            "extra_reads": 0,
+            "efficient": 144
+          },
+          "all_success": 32,
+          "all_efficient": 16,
+          "wrong_operator": 0
+        },
+        {
+          "step": 96,
+          "attempts": 97,
+          "cells": {
+            "required": {
+              "n": 96,
+              "success": 96,
+              "unnecessary": 0,
+              "premature": 0,
+              "tool_calls": 192,
+              "guarded_success": 96,
+              "extra_reads": 0,
+              "efficient": 96
+            },
+            "sufficient_with_next": {
+              "n": 48,
+              "success": 48,
+              "unnecessary": 45,
+              "premature": 0,
+              "tool_calls": 93,
+              "guarded_success": 48,
+              "extra_reads": 0,
+              "efficient": 3
+            },
+            "sufficient_last": {
+              "n": 48,
+              "success": 48,
+              "unnecessary": 0,
+              "premature": 0,
+              "tool_calls": 48,
+              "guarded_success": 48,
+              "extra_reads": 0,
+              "efficient": 48
+            }
+          },
+          "counts": {
+            "n": 192,
+            "success": 192,
+            "unnecessary": 45,
+            "premature": 0,
+            "tool_calls": 333,
+            "guarded_success": 192,
+            "extra_reads": 0,
+            "efficient": 147
+          },
+          "all_success": 32,
+          "all_efficient": 16,
+          "wrong_operator": 0
+        },
+        {
+          "step": 128,
+          "attempts": 133,
+          "cells": {
+            "required": {
+              "n": 96,
+              "success": 88,
+              "unnecessary": 0,
+              "premature": 8,
+              "tool_calls": 184,
+              "guarded_success": 96,
+              "extra_reads": 8,
+              "efficient": 88
+            },
+            "sufficient_with_next": {
+              "n": 48,
+              "success": 48,
+              "unnecessary": 17,
+              "premature": 0,
+              "tool_calls": 65,
+              "guarded_success": 48,
+              "extra_reads": 0,
+              "efficient": 31
+            },
+            "sufficient_last": {
+              "n": 48,
+              "success": 48,
+              "unnecessary": 0,
+              "premature": 0,
+              "tool_calls": 48,
+              "guarded_success": 48,
+              "extra_reads": 0,
+              "efficient": 48
+            }
+          },
+          "counts": {
+            "n": 192,
+            "success": 184,
+            "unnecessary": 17,
+            "premature": 8,
+            "tool_calls": 297,
+            "guarded_success": 192,
+            "extra_reads": 8,
+            "efficient": 167
+          },
+          "all_success": 24,
+          "all_efficient": 15,
+          "wrong_operator": 0
+        },
+        {
+          "step": 160,
+          "attempts": 171,
+          "cells": {
+            "required": {
+              "n": 96,
+              "success": 85,
+              "unnecessary": 0,
+              "premature": 11,
+              "tool_calls": 181,
+              "guarded_success": 96,
+              "extra_reads": 11,
+              "efficient": 85
+            },
+            "sufficient_with_next": {
+              "n": 48,
+              "success": 48,
+              "unnecessary": 6,
+              "premature": 0,
+              "tool_calls": 54,
+              "guarded_success": 48,
+              "extra_reads": 0,
+              "efficient": 42
+            },
+            "sufficient_last": {
+              "n": 48,
+              "success": 48,
+              "unnecessary": 0,
+              "premature": 0,
+              "tool_calls": 48,
+              "guarded_success": 48,
+              "extra_reads": 0,
+              "efficient": 48
+            }
+          },
+          "counts": {
+            "n": 192,
+            "success": 181,
+            "unnecessary": 6,
+            "premature": 11,
+            "tool_calls": 283,
+            "guarded_success": 192,
+            "extra_reads": 11,
+            "efficient": 175
+          },
+          "all_success": 21,
+          "all_efficient": 18,
+          "wrong_operator": 0
+        },
+        {
+          "step": 192,
+          "attempts": 233,
+          "cells": {
+            "required": {
+              "n": 96,
+              "success": 63,
+              "unnecessary": 0,
+              "premature": 33,
+              "tool_calls": 159,
+              "guarded_success": 96,
+              "extra_reads": 33,
+              "efficient": 63
+            },
+            "sufficient_with_next": {
+              "n": 48,
+              "success": 48,
+              "unnecessary": 0,
+              "premature": 0,
+              "tool_calls": 48,
+              "guarded_success": 48,
+              "extra_reads": 0,
+              "efficient": 48
+            },
+            "sufficient_last": {
+              "n": 48,
+              "success": 48,
+              "unnecessary": 0,
+              "premature": 0,
+              "tool_calls": 48,
+              "guarded_success": 48,
+              "extra_reads": 0,
+              "efficient": 48
+            }
+          },
+          "counts": {
+            "n": 192,
+            "success": 159,
+            "unnecessary": 0,
+            "premature": 33,
+            "tool_calls": 255,
+            "guarded_success": 192,
+            "extra_reads": 33,
+            "efficient": 159
+          },
+          "all_success": 0,
+          "all_efficient": 0,
+          "wrong_operator": 0
+        },
+        {
+          "step": 224,
+          "attempts": 288,
+          "cells": {
+            "required": {
+              "n": 96,
+              "success": 74,
+              "unnecessary": 0,
+              "premature": 22,
+              "tool_calls": 170,
+              "guarded_success": 96,
+              "extra_reads": 22,
+              "efficient": 74
+            },
+            "sufficient_with_next": {
+              "n": 48,
+              "success": 48,
+              "unnecessary": 0,
+              "premature": 0,
+              "tool_calls": 48,
+              "guarded_success": 48,
+              "extra_reads": 0,
+              "efficient": 48
+            },
+            "sufficient_last": {
+              "n": 48,
+              "success": 48,
+              "unnecessary": 0,
+              "premature": 0,
+              "tool_calls": 48,
+              "guarded_success": 48,
+              "extra_reads": 0,
+              "efficient": 48
+            }
+          },
+          "counts": {
+            "n": 192,
+            "success": 170,
+            "unnecessary": 0,
+            "premature": 22,
+            "tool_calls": 266,
+            "guarded_success": 192,
+            "extra_reads": 22,
+            "efficient": 170
+          },
+          "all_success": 10,
+          "all_efficient": 10,
+          "wrong_operator": 0
+        },
+        {
+          "step": 256,
+          "attempts": 332,
+          "cells": {
+            "required": {
+              "n": 96,
+              "success": 66,
+              "unnecessary": 0,
+              "premature": 30,
+              "tool_calls": 162,
+              "guarded_success": 96,
+              "extra_reads": 30,
+              "efficient": 66
+            },
+            "sufficient_with_next": {
+              "n": 48,
+              "success": 48,
+              "unnecessary": 0,
+              "premature": 0,
+              "tool_calls": 48,
+              "guarded_success": 48,
+              "extra_reads": 0,
+              "efficient": 48
+            },
+            "sufficient_last": {
+              "n": 48,
+              "success": 48,
+              "unnecessary": 0,
+              "premature": 0,
+              "tool_calls": 48,
+              "guarded_success": 48,
+              "extra_reads": 0,
+              "efficient": 48
+            }
+          },
+          "counts": {
+            "n": 192,
+            "success": 162,
+            "unnecessary": 0,
+            "premature": 30,
+            "tool_calls": 258,
+            "guarded_success": 192,
+            "extra_reads": 30,
+            "efficient": 162
+          },
+          "all_success": 2,
+          "all_efficient": 2,
+          "wrong_operator": 0
+        },
+        {
+          "step": 288,
+          "attempts": 373,
+          "cells": {
+            "required": {
+              "n": 96,
+              "success": 64,
+              "unnecessary": 0,
+              "premature": 32,
+              "tool_calls": 160,
+              "guarded_success": 96,
+              "extra_reads": 32,
+              "efficient": 64
+            },
+            "sufficient_with_next": {
+              "n": 48,
+              "success": 48,
+              "unnecessary": 0,
+              "premature": 0,
+              "tool_calls": 48,
+              "guarded_success": 48,
+              "extra_reads": 0,
+              "efficient": 48
+            },
+            "sufficient_last": {
+              "n": 48,
+              "success": 48,
+              "unnecessary": 0,
+              "premature": 0,
+              "tool_calls": 48,
+              "guarded_success": 48,
+              "extra_reads": 0,
+              "efficient": 48
+            }
+          },
+          "counts": {
+            "n": 192,
+            "success": 160,
+            "unnecessary": 0,
+            "premature": 32,
+            "tool_calls": 256,
+            "guarded_success": 192,
+            "extra_reads": 32,
+            "efficient": 160
+          },
+          "all_success": 0,
+          "all_efficient": 0,
+          "wrong_operator": 0
+        },
+        {
+          "step": 320,
+          "attempts": 416,
+          "cells": {
+            "required": {
+              "n": 96,
+              "success": 77,
+              "unnecessary": 0,
+              "premature": 19,
+              "tool_calls": 173,
+              "guarded_success": 96,
+              "extra_reads": 19,
+              "efficient": 77
+            },
+            "sufficient_with_next": {
+              "n": 48,
+              "success": 48,
+              "unnecessary": 0,
+              "premature": 0,
+              "tool_calls": 48,
+              "guarded_success": 48,
+              "extra_reads": 0,
+              "efficient": 48
+            },
+            "sufficient_last": {
+              "n": 48,
+              "success": 48,
+              "unnecessary": 0,
+              "premature": 0,
+              "tool_calls": 48,
+              "guarded_success": 48,
+              "extra_reads": 0,
+              "efficient": 48
+            }
+          },
+          "counts": {
+            "n": 192,
+            "success": 173,
+            "unnecessary": 0,
+            "premature": 19,
+            "tool_calls": 269,
+            "guarded_success": 192,
+            "extra_reads": 19,
+            "efficient": 173
+          },
+          "all_success": 13,
+          "all_efficient": 13,
+          "wrong_operator": 0
+        },
+        {
+          "step": 352,
+          "attempts": 463,
+          "cells": {
+            "required": {
+              "n": 96,
+              "success": 82,
+              "unnecessary": 0,
+              "premature": 14,
+              "tool_calls": 178,
+              "guarded_success": 96,
+              "extra_reads": 14,
+              "efficient": 82
+            },
+            "sufficient_with_next": {
+              "n": 48,
+              "success": 48,
+              "unnecessary": 0,
+              "premature": 0,
+              "tool_calls": 48,
+              "guarded_success": 48,
+              "extra_reads": 0,
+              "efficient": 48
+            },
+            "sufficient_last": {
+              "n": 48,
+              "success": 48,
+              "unnecessary": 0,
+              "premature": 0,
+              "tool_calls": 48,
+              "guarded_success": 48,
+              "extra_reads": 0,
+              "efficient": 48
+            }
+          },
+          "counts": {
+            "n": 192,
+            "success": 178,
+            "unnecessary": 0,
+            "premature": 14,
+            "tool_calls": 274,
+            "guarded_success": 192,
+            "extra_reads": 14,
+            "efficient": 178
+          },
+          "all_success": 18,
+          "all_efficient": 18,
+          "wrong_operator": 0
+        },
+        {
+          "step": 384,
+          "attempts": 509,
+          "cells": {
+            "required": {
+              "n": 96,
+              "success": 69,
+              "unnecessary": 0,
+              "premature": 27,
+              "tool_calls": 165,
+              "guarded_success": 96,
+              "extra_reads": 27,
+              "efficient": 69
+            },
+            "sufficient_with_next": {
+              "n": 48,
+              "success": 48,
+              "unnecessary": 0,
+              "premature": 0,
+              "tool_calls": 48,
+              "guarded_success": 48,
+              "extra_reads": 0,
+              "efficient": 48
+            },
+            "sufficient_last": {
+              "n": 48,
+              "success": 48,
+              "unnecessary": 0,
+              "premature": 0,
+              "tool_calls": 48,
+              "guarded_success": 48,
+              "extra_reads": 0,
+              "efficient": 48
+            }
+          },
+          "counts": {
+            "n": 192,
+            "success": 165,
+            "unnecessary": 0,
+            "premature": 27,
+            "tool_calls": 261,
+            "guarded_success": 192,
+            "extra_reads": 27,
+            "efficient": 165
+          },
+          "all_success": 5,
+          "all_efficient": 5,
+          "wrong_operator": 0
+        }
+      ],
+      "blocks": [
+        {
+          "step": 32,
+          "attempts": 32,
+          "by_state": {
+            "required": {
+              "proposed": 64,
+              "mixed": 56,
+              "used": 32
+            },
+            "sufficient_with_next": {
+              "proposed": 128,
+              "mixed": 121,
+              "used": 64
+            },
+            "sufficient_last": {
+              "proposed": 72,
+              "mixed": 53,
+              "used": 32
+            }
+          }
+        },
+        {
+          "step": 64,
+          "attempts": 64,
+          "by_state": {
+            "required": {
+              "proposed": 161,
+              "mixed": 43,
+              "used": 32
+            },
+            "sufficient_with_next": {
+              "proposed": 359,
+              "mixed": 90,
+              "used": 64
+            },
+            "sufficient_last": {
+              "proposed": 72,
+              "mixed": 64,
+              "used": 32
+            }
+          }
+        },
+        {
+          "step": 96,
+          "attempts": 97,
+          "by_state": {
+            "required": {
+              "proposed": 422,
+              "mixed": 41,
+              "used": 32
+            },
+            "sufficient_with_next": {
+              "proposed": 260,
+              "mixed": 98,
+              "used": 64
+            },
+            "sufficient_last": {
+              "proposed": 94,
+              "mixed": 58,
+              "used": 32
+            }
+          }
+        },
+        {
+          "step": 128,
+          "attempts": 133,
+          "by_state": {
+            "required": {
+              "proposed": 623,
+              "mixed": 39,
+              "used": 32
+            },
+            "sufficient_with_next": {
+              "proposed": 183,
+              "mixed": 100,
+              "used": 64
+            },
+            "sufficient_last": {
+              "proposed": 242,
+              "mixed": 48,
+              "used": 32
+            }
+          }
+        },
+        {
+          "step": 160,
+          "attempts": 171,
+          "by_state": {
+            "required": {
+              "proposed": 479,
+              "mixed": 42,
+              "used": 32
+            },
+            "sufficient_with_next": {
+              "proposed": 155,
+              "mixed": 136,
+              "used": 64
+            },
+            "sufficient_last": {
+              "proposed": 518,
+              "mixed": 41,
+              "used": 32
+            }
+          }
+        },
+        {
+          "step": 192,
+          "attempts": 233,
+          "by_state": {
+            "required": {
+              "proposed": 1259,
+              "mixed": 39,
+              "used": 32
+            },
+            "sufficient_with_next": {
+              "proposed": 289,
+              "mixed": 183,
+              "used": 64
+            },
+            "sufficient_last": {
+              "proposed": 1028,
+              "mixed": 53,
+              "used": 32
+            }
+          }
+        },
+        {
+          "step": 224,
+          "attempts": 288,
+          "by_state": {
+            "required": {
+              "proposed": 733,
+              "mixed": 51,
+              "used": 32
+            },
+            "sufficient_with_next": {
+              "proposed": 453,
+              "mixed": 131,
+              "used": 64
+            },
+            "sufficient_last": {
+              "proposed": 1022,
+              "mixed": 46,
+              "used": 32
+            }
+          }
+        },
+        {
+          "step": 256,
+          "attempts": 332,
+          "by_state": {
+            "required": {
+              "proposed": 738,
+              "mixed": 38,
+              "used": 32
+            },
+            "sufficient_with_next": {
+              "proposed": 326,
+              "mixed": 108,
+              "used": 64
+            },
+            "sufficient_last": {
+              "proposed": 488,
+              "mixed": 48,
+              "used": 32
+            }
+          }
+        },
+        {
+          "step": 288,
+          "attempts": 373,
+          "by_state": {
+            "required": {
+              "proposed": 640,
+              "mixed": 43,
+              "used": 32
+            },
+            "sufficient_with_next": {
+              "proposed": 310,
+              "mixed": 94,
+              "used": 64
+            },
+            "sufficient_last": {
+              "proposed": 626,
+              "mixed": 42,
+              "used": 32
+            }
+          }
+        },
+        {
+          "step": 320,
+          "attempts": 416,
+          "by_state": {
+            "required": {
+              "proposed": 598,
+              "mixed": 43,
+              "used": 32
+            },
+            "sufficient_with_next": {
+              "proposed": 396,
+              "mixed": 105,
+              "used": 64
+            },
+            "sufficient_last": {
+              "proposed": 630,
+              "mixed": 42,
+              "used": 32
+            }
+          }
+        },
+        {
+          "step": 352,
+          "attempts": 463,
+          "by_state": {
+            "required": {
+              "proposed": 641,
+              "mixed": 42,
+              "used": 32
+            },
+            "sufficient_with_next": {
+              "proposed": 383,
+              "mixed": 117,
+              "used": 64
+            },
+            "sufficient_last": {
+              "proposed": 816,
+              "mixed": 46,
+              "used": 32
+            }
+          }
+        },
+        {
+          "step": 384,
+          "attempts": 509,
+          "by_state": {
+            "required": {
+              "proposed": 650,
+              "mixed": 45,
+              "used": 32
+            },
+            "sufficient_with_next": {
+              "proposed": 440,
+              "mixed": 107,
+              "used": 64
+            },
+            "sufficient_last": {
+              "proposed": 710,
+              "mixed": 42,
+              "used": 32
+            }
+          }
+        }
+      ],
+      "group_totals": {
+        "required": {
+          "proposed": 7008,
+          "mixed": 522,
+          "used": 384
+        },
+        "sufficient_with_next": {
+          "proposed": 3682,
+          "mixed": 1390,
+          "used": 768
+        },
+        "sufficient_last": {
+          "proposed": 6318,
+          "mixed": 583,
+          "used": 384
+        }
+      },
+      "sampled_actions": 136064,
+      "blocks_are_per_interval": true,
+      "unreported_final_proposals": {
+        "required": {
+          "proposed": 0,
+          "mixed": 0,
+          "used": 0
+        },
+        "sufficient_with_next": {
+          "proposed": 0,
+          "mixed": 0,
+          "used": 0
+        },
+        "sufficient_last": {
+          "proposed": 0,
+          "mixed": 0,
+          "used": 0
+        }
+      },
+      "group_size": 8
+    },
+    "test": {
+      "endpoint": {
+        "cells": {
+          "required": {
+            "n": 256,
+            "success": 227,
+            "unnecessary": 0,
+            "premature": 29,
+            "tool_calls": 483,
+            "guarded_success": 256,
+            "extra_reads": 29,
+            "efficient": 227
+          },
+          "sufficient_with_next": {
+            "n": 128,
+            "success": 128,
+            "unnecessary": 0,
+            "premature": 0,
+            "tool_calls": 128,
+            "guarded_success": 128,
+            "extra_reads": 0,
+            "efficient": 128
+          },
+          "sufficient_last": {
+            "n": 128,
+            "success": 128,
+            "unnecessary": 0,
+            "premature": 0,
+            "tool_calls": 128,
+            "guarded_success": 128,
+            "extra_reads": 0,
+            "efficient": 128
+          }
+        },
+        "counts": {
+          "n": 512,
+          "success": 483,
+          "unnecessary": 0,
+          "premature": 29,
+          "tool_calls": 739,
+          "guarded_success": 512,
+          "extra_reads": 29,
+          "efficient": 483
+        },
+        "all_success": 50,
+        "all_efficient": 50,
+        "wrong_operator": 0
+      },
+      "selected": {
+        "cells": {
+          "required": {
+            "n": 256,
+            "success": 256,
+            "unnecessary": 0,
+            "premature": 0,
+            "tool_calls": 512,
+            "guarded_success": 256,
+            "extra_reads": 0,
+            "efficient": 256
+          },
+          "sufficient_with_next": {
+            "n": 128,
+            "success": 128,
+            "unnecessary": 125,
+            "premature": 0,
+            "tool_calls": 253,
+            "guarded_success": 128,
+            "extra_reads": 0,
+            "efficient": 3
+          },
+          "sufficient_last": {
+            "n": 128,
+            "success": 128,
+            "unnecessary": 0,
+            "premature": 0,
+            "tool_calls": 128,
+            "guarded_success": 128,
+            "extra_reads": 0,
+            "efficient": 128
+          }
+        },
+        "counts": {
+          "n": 512,
+          "success": 512,
+          "unnecessary": 125,
+          "premature": 0,
+          "tool_calls": 893,
+          "guarded_success": 512,
+          "extra_reads": 0,
+          "efficient": 387
+        },
+        "all_success": 64,
+        "all_efficient": 32,
+        "wrong_operator": 0
+      },
+      "frozen_with_age": {
+        "cells": {
+          "required": {
+            "n": 256,
+            "success": 0,
+            "unnecessary": 0,
+            "premature": 256,
+            "tool_calls": 256,
+            "guarded_success": 256,
+            "extra_reads": 256,
+            "efficient": 0
+          },
+          "sufficient_with_next": {
+            "n": 128,
+            "success": 128,
+            "unnecessary": 0,
+            "premature": 0,
+            "tool_calls": 128,
+            "guarded_success": 128,
+            "extra_reads": 0,
+            "efficient": 128
+          },
+          "sufficient_last": {
+            "n": 128,
+            "success": 121,
+            "unnecessary": 0,
+            "premature": 0,
+            "tool_calls": 128,
+            "guarded_success": 121,
+            "extra_reads": 0,
+            "efficient": 121
+          }
+        },
+        "counts": {
+          "n": 512,
+          "success": 249,
+          "unnecessary": 0,
+          "premature": 256,
+          "tool_calls": 512,
+          "guarded_success": 505,
+          "extra_reads": 256,
+          "efficient": 249
+        },
+        "all_success": 0,
+        "all_efficient": 0,
+        "wrong_operator": 7
+      }
+    },
+    "max_reserved_mib": 31560.0
+  },
+  "paired": {
+    "dynamic_vs_historical": {
+      "all_success": {
+        "selected": {
+          "improved": 0,
+          "regressed": 0,
+          "paired_delta_pp": 0.0,
+          "paired_bootstrap_95_pp": [
+            0.0,
+            0.0
+          ],
+          "exact_p": 1
+        },
+        "endpoint": {
+          "improved": 0,
+          "regressed": 13,
+          "paired_delta_pp": -20.3125,
+          "paired_bootstrap_95_pp": [
+            -29.6875,
+            -10.9375
+          ],
+          "exact_p": 0.000244140625
+        }
+      },
+      "all_efficient": {
+        "selected": {
+          "improved": 0,
+          "regressed": 0,
+          "paired_delta_pp": 0.0,
+          "paired_bootstrap_95_pp": [
+            0.0,
+            0.0
+          ],
+          "exact_p": 1
+        },
+        "endpoint": {
+          "improved": 20,
+          "regressed": 4,
+          "paired_delta_pp": 25.0,
+          "paired_bootstrap_95_pp": [
+            10.9375,
+            39.0625
+          ],
+          "exact_p": 0.001543879508972168
+        }
+      }
+    },
+    "age_vs_historical": {
+      "all_success": {
+        "selected": {
+          "improved": 0,
+          "regressed": 0,
+          "paired_delta_pp": 0.0,
+          "paired_bootstrap_95_pp": [
+            0.0,
+            0.0
+          ],
+          "exact_p": 1
+        },
+        "endpoint": {
+          "improved": 0,
+          "regressed": 14,
+          "paired_delta_pp": -21.875,
+          "paired_bootstrap_95_pp": [
+            -32.8125,
+            -12.5
+          ],
+          "exact_p": 0.0001220703125
+        }
+      },
+      "all_efficient": {
+        "selected": {
+          "improved": 0,
+          "regressed": 0,
+          "paired_delta_pp": 0.0,
+          "paired_bootstrap_95_pp": [
+            0.0,
+            0.0
+          ],
+          "exact_p": 1
+        },
+        "endpoint": {
+          "improved": 23,
+          "regressed": 5,
+          "paired_delta_pp": 28.125,
+          "paired_bootstrap_95_pp": [
+            12.5,
+            42.1875
+          ],
+          "exact_p": 0.0009122341871261597
+        }
+      }
+    },
+    "age_vs_same_receipt": {
+      "all_success": {
+        "selected": {
+          "improved": 0,
+          "regressed": 0,
+          "paired_delta_pp": 0.0,
+          "paired_bootstrap_95_pp": [
+            0.0,
+            0.0
+          ],
+          "exact_p": 1
+        },
+        "endpoint": {
+          "improved": 3,
+          "regressed": 4,
+          "paired_delta_pp": -1.5625,
+          "paired_bootstrap_95_pp": [
+            -9.375,
+            6.25
+          ],
+          "exact_p": 1
+        }
+      },
+      "all_efficient": {
+        "selected": {
+          "improved": 0,
+          "regressed": 0,
+          "paired_delta_pp": 0.0,
+          "paired_bootstrap_95_pp": [
+            0.0,
+            0.0
+          ],
+          "exact_p": 1
+        },
+        "endpoint": {
+          "improved": 6,
+          "regressed": 4,
+          "paired_delta_pp": 3.125,
+          "paired_bootstrap_95_pp": [
+            -6.25,
+            12.5
+          ],
+          "exact_p": 0.75390625
+        }
+      }
+    }
+  },
+  "elapsed_seconds": 6243
+}
