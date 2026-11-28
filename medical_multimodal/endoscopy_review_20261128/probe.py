@@ -125,16 +125,22 @@ class Reader:
                        for w,t in zip(('No','Yes'),self.answer_ids,strict=True))
         self.answer_ids=[v[0] for v in self.answer_ids]
 
-    def score(self,batch):
+    def encode(self,batch):
         texts=[self.prompts[len(images)] for _,images in batch]
         flat=[image for _,images in batch for image in images]
-        inputs=self.processor(text=texts,images=flat,padding=True,return_tensors='pt').to('cuda')
+        return self.processor(text=texts,images=flat,padding=True,return_tensors='pt')
+
+    def probabilities(self,inputs):
+        inputs=inputs.to('cuda')
         assert inputs.attention_mask[:,-1].all()
         with self.torch.inference_mode():
             logits=self.model(**inputs,use_cache=False).logits[:,-1,self.answer_ids].float()
             probability=logits.softmax(-1)[:,1]
         assert probability.isfinite().all()
-        return {name:float(p) for (name,_),p in zip(batch,probability.cpu(),strict=True)}
+        return probability.cpu().tolist()
+
+    def score(self,batch):
+        return {name:p for (name,_),p in zip(batch,self.probabilities(self.encode(batch)),strict=True)}
 
 
 def predicted(row, key):
