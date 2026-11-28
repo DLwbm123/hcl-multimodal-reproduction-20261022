@@ -1,0 +1,145 @@
+{
+  "diagnostics": {
+    "refcoco_grounding": {
+      "raw": {
+        "n": 100,
+        "fenced": 42,
+        "multiline": 42,
+        "over_5_words": 42,
+        "json_object": 100,
+        "json_list": 0,
+        "parseable_bbox": 100,
+        "parseable_below_iou50": 8,
+        "mechanically_changed": 0,
+        "mean_chars": 42.13,
+        "primary": 0.92,
+        "after_mechanical_cleanup": 0.92
+      },
+      "static": {
+        "n": 100,
+        "fenced": 99,
+        "multiline": 99,
+        "over_5_words": 99,
+        "json_object": 99,
+        "json_list": 0,
+        "parseable_bbox": 98,
+        "parseable_below_iou50": 14,
+        "mechanically_changed": 0,
+        "mean_chars": 51.99,
+        "primary": 0.84,
+        "after_mechanical_cleanup": 0.84
+      }
+    },
+    "vqav2": {
+      "raw": {
+        "n": 100,
+        "fenced": 0,
+        "multiline": 0,
+        "over_5_words": 7,
+        "json_object": 0,
+        "json_list": 0,
+        "mechanically_changed": 0,
+        "mean_chars": 8.47,
+        "primary": 0.68,
+        "after_mechanical_cleanup": 0.68
+      },
+      "static": {
+        "n": 100,
+        "fenced": 0,
+        "multiline": 0,
+        "over_5_words": 38,
+        "json_object": 0,
+        "json_list": 0,
+        "mechanically_changed": 0,
+        "mean_chars": 19.4,
+        "primary": 0.37666666666666665,
+        "after_mechanical_cleanup": 0.37666666666666665
+      }
+    }
+  },
+  "validation": {
+    "coco_detection": {
+      "raw": 0.6666666666666666,
+      "hcl": 0.8444444444444444,
+      "choice": "hcl",
+      "n": 10
+    },
+    "coco_caption": {
+      "raw": 0.40842188210222535,
+      "hcl": 0.4709367869114499,
+      "choice": "hcl",
+      "n": 10
+    },
+    "refcoco_grounding": {
+      "raw": 0.8,
+      "hcl": 0.7,
+      "choice": "raw",
+      "n": 10
+    },
+    "vqav2": {
+      "raw": 0.6,
+      "hcl": 0.6,
+      "choice": "raw",
+      "n": 10
+    }
+  },
+  "test": {
+    "coco_detection": {
+      "raw": 0.4566929133858268,
+      "hcl": 0.6016260162601625,
+      "selected": 0.6016260162601625,
+      "n": 100
+    },
+    "coco_caption": {
+      "raw": 0.3483926467614271,
+      "hcl": 0.38006826159923157,
+      "selected": 0.38006826159923157,
+      "n": 100
+    },
+    "refcoco_grounding": {
+      "raw": 0.92,
+      "hcl": 0.84,
+      "selected": 0.92,
+      "n": 100
+    },
+    "vqav2": {
+      "raw": 0.68,
+      "hcl": 0.35666666666666663,
+      "selected": 0.68,
+      "n": 100
+    }
+  },
+  "matrix": [
+    [
+      0.5964343598055105,
+      null,
+      null,
+      null
+    ],
+    [
+      0.6016260162601625,
+      0.38006826159923157,
+      null,
+      null
+    ],
+    [
+      0.6016260162601625,
+      0.38006826159923157,
+      0.92,
+      null
+    ],
+    [
+      0.6016260162601625,
+      0.38006826159923157,
+      0.92,
+      0.68
+    ]
+  ],
+  "average": 0.6454235694648486,
+  "average_forgetting": 0.0,
+  "calls": {
+    "raw": 40,
+    "final_validation": 152
+  },
+  "max_allocated_mib": 17475.1171875
+}

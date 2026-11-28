@@ -387,6 +387,9 @@ class Optimizer:
                 reasons.append("no_behavior_change")
             if primary_score_delta + 1e-12 < self.min_primary_score_delta:
                 reasons.append("primary_score_delta_below_minimum")
+            zero_shot_floor = current_val_result.get("zero_shot_floor")
+            if zero_shot_floor is not None and candidate_primary_score + 1e-12 < float(zero_shot_floor):
+                reasons.append("zero_shot_floor_not_met")
             if correct_gain < self.min_correct_gain:
                 reasons.append("correct_gain_below_minimum")
             if self.historical_loss_budget is not None:

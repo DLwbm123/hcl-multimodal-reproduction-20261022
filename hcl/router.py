@@ -5,7 +5,7 @@ import hashlib
 from dataclasses import asdict, dataclass
 from pathlib import Path
 from threading import local
-from typing import Any, Protocol, TYPE_CHECKING
+from typing import Any, Callable, Protocol, TYPE_CHECKING
 
 from .cache_store import JsonObjectCache as _BaseJsonObjectCache
 from .cache_store import TextValueCache as _BaseTextValueCache
@@ -238,10 +238,17 @@ class Router:
         task_interface_config: TaskInterfaceConfig,
         *,
         allow_final_generation_cache: bool = True,
+        raw_answer: Callable[[], dict[str, Any]] | None = None,
     ) -> dict[str, Any]:
         selected_skills = self.select_skills(taskinterfacechunk)
-        workflow_decision = self.plan_workflow(taskinterfacechunk, selected_skills=selected_skills)
+        workflow_options = {"allow_raw_direct": True} if raw_answer is not None else {}
+        workflow_decision = self.plan_workflow(taskinterfacechunk, selected_skills=selected_skills, **workflow_options)
         workflow_selection_trace = self._workflow_selection_trace()
+        if raw_answer is not None and workflow_decision["workflow_name"] == "raw_direct":
+            result = raw_answer()
+            result["trace"].update(workflow_decision=workflow_decision,
+                                   workflow_selection=workflow_selection_trace, route="raw_direct")
+            return result
         selected_memory, memory_selection = self.select_memory(taskinterfacechunk, workflow_decision)
         selected_tools = self.select_tools(taskinterfacechunk, workflow_decision, selected_skills=selected_skills)
         capability_execution_context = self._capability_execution_context(taskinterfacechunk)
@@ -388,6 +395,7 @@ class Router:
         taskinterfacechunk: dict[str, Any],
         *,
         selected_skills: list[dict[str, object]],
+        allow_raw_direct: bool = False,
     ) -> dict[str, object]:
         workflow_name, steps = _default_workflow(taskinterfacechunk)
         default = {
@@ -411,6 +419,7 @@ class Router:
         cache_key = self._workflow_selector_cache_key(
             model_visible=model_visible,
             selected_skills=selected_skills,
+            allow_raw_direct=allow_raw_direct,
         )
         cached = self._workflow_selector_cache.get(cache_key)
         if cached is not None:
@@ -436,6 +445,9 @@ class Router:
                 self.tools.capability_summaries(), ensure_ascii=False, indent=2
             )
         prompt = workflow_template.render(prompt_values)
+        if allow_raw_direct:
+            prompt += ('\nThe workflow_name may be "raw_direct". Choose it when the original visible '
+                       'question and image suffice to answer without a harness, memory, or tools.')
         assert_no_label_leakage(prompt, phase="workflow_decision")
         raw_output = self.selection_model.generate(
             prompt,
@@ -466,6 +478,7 @@ class Router:
         *,
         model_visible: dict[str, Any],
         selected_skills: list[dict[str, object]],
+        allow_raw_direct: bool = False,
     ) -> str:
         workflow_template = (
             self.capability_workflow_template
@@ -482,6 +495,8 @@ class Router:
         }
         if self.config.capability_enabled:
             payload["available_capabilities"] = self.tools.capability_summaries()
+        if allow_raw_direct:
+            payload["raw_direct_option"] = True
         return _stable_json_hash(payload)
 
     def select_memory(

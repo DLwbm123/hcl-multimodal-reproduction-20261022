@@ -2439,6 +2439,9 @@ class HCLPipeline:
             for stream_position, example in enumerate(examples)
         ]
 
+    def _raw_router_option(self, example: dict[str, Any]):
+        return None
+
     def _predict_one(
         self,
         stream_position: int,
@@ -2480,10 +2483,13 @@ class HCLPipeline:
                     f"task_id={taskinterfacechunk.get('task_id', '')} key={cache_key[:12]}"
                 )
             else:
+                raw_option = self._raw_router_option(example)
+                route_options = {"raw_answer": raw_option} if raw_option is not None else {}
                 prediction = router.run(
                     taskinterfacechunk,
                     self.task_interface_config,
                     allow_final_generation_cache=not update_memory,
+                    **route_options,
                 )
                 if cache_key:
                     self.prediction_cache.put(cache_key, prediction, phase=progress_label)
