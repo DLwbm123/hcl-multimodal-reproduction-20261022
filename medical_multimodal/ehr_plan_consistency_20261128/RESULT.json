@@ -1,0 +1,1357 @@
+{
+  "composition": {
+    "excluded_history": 612,
+    "available": {
+      "True": 467,
+      "False": 1815
+    },
+    "splits": {
+      "train": {
+        "patients": 64,
+        "populated_views": 512,
+        "sufficient_has_more": 32,
+        "insufficient_page_sizes": {
+          "1": 41,
+          "4": 6,
+          "2": 15,
+          "3": 2
+        }
+      },
+      "dev": {
+        "patients": 32,
+        "populated_views": 192,
+        "sufficient_has_more": 16,
+        "insufficient_page_sizes": {
+          "2": 5,
+          "1": 22,
+          "4": 4,
+          "3": 1
+        }
+      },
+      "test": {
+        "patients": 64,
+        "populated_views": 512,
+        "sufficient_has_more": 32,
+        "insufficient_page_sizes": {
+          "1": 33,
+          "3": 10,
+          "2": 18,
+          "4": 3
+        }
+      }
+    }
+  },
+  "grpo": {
+    "test": {
+      "step64": {
+        "patients": 64,
+        "prompts": 512,
+        "all_success": 29,
+        "all_efficient": 14,
+        "worst_required_form": 29,
+        "counts": {
+          "success": 436,
+          "efficient": 326,
+          "unnecessary": 110,
+          "premature": 76,
+          "tool_calls": 802,
+          "guarded_success": 512
+        },
+        "cells": {
+          "insufficient": [
+            {
+              "success": 29,
+              "efficient": 29,
+              "unnecessary": 0,
+              "premature": 35,
+              "tool_calls": 93,
+              "guarded_success": 64
+            },
+            {
+              "success": 56,
+              "efficient": 56,
+              "unnecessary": 0,
+              "premature": 8,
+              "tool_calls": 120,
+              "guarded_success": 64
+            },
+            {
+              "success": 44,
+              "efficient": 44,
+              "unnecessary": 0,
+              "premature": 20,
+              "tool_calls": 108,
+              "guarded_success": 64
+            },
+            {
+              "success": 51,
+              "efficient": 51,
+              "unnecessary": 0,
+              "premature": 13,
+              "tool_calls": 115,
+              "guarded_success": 64
+            }
+          ],
+          "sufficient": [
+            {
+              "success": 64,
+              "efficient": 49,
+              "unnecessary": 15,
+              "premature": 0,
+              "tool_calls": 79,
+              "guarded_success": 64
+            },
+            {
+              "success": 64,
+              "efficient": 32,
+              "unnecessary": 32,
+              "premature": 0,
+              "tool_calls": 96,
+              "guarded_success": 64
+            },
+            {
+              "success": 64,
+              "efficient": 33,
+              "unnecessary": 31,
+              "premature": 0,
+              "tool_calls": 95,
+              "guarded_success": 64
+            },
+            {
+              "success": 64,
+              "efficient": 32,
+              "unnecessary": 32,
+              "premature": 0,
+              "tool_calls": 96,
+              "guarded_success": 64
+            }
+          ]
+        },
+        "mean_js": 0.014952728942025336,
+        "mean_min_required_margin": -0.030113264452666044,
+        "guard": {
+          "extra_reads": 76,
+          "added_rows": 170,
+          "confirmation_only": 0
+        }
+      },
+      "selected": {
+        "patients": 64,
+        "prompts": 512,
+        "all_success": 0,
+        "all_efficient": 0,
+        "worst_required_form": 0,
+        "counts": {
+          "success": 279,
+          "efficient": 231,
+          "unnecessary": 48,
+          "premature": 233,
+          "tool_calls": 583,
+          "guarded_success": 512
+        },
+        "cells": {
+          "insufficient": [
+            {
+              "success": 0,
+              "efficient": 0,
+              "unnecessary": 0,
+              "premature": 64,
+              "tool_calls": 64,
+              "guarded_success": 64
+            },
+            {
+              "success": 11,
+              "efficient": 11,
+              "unnecessary": 0,
+              "premature": 53,
+              "tool_calls": 75,
+              "guarded_success": 64
+            },
+            {
+              "success": 1,
+              "efficient": 1,
+              "unnecessary": 0,
+              "premature": 63,
+              "tool_calls": 65,
+              "guarded_success": 64
+            },
+            {
+              "success": 11,
+              "efficient": 11,
+              "unnecessary": 0,
+              "premature": 53,
+              "tool_calls": 75,
+              "guarded_success": 64
+            }
+          ],
+          "sufficient": [
+            {
+              "success": 64,
+              "efficient": 64,
+              "unnecessary": 0,
+              "premature": 0,
+              "tool_calls": 64,
+              "guarded_success": 64
+            },
+            {
+              "success": 64,
+              "efficient": 37,
+              "unnecessary": 27,
+              "premature": 0,
+              "tool_calls": 91,
+              "guarded_success": 64
+            },
+            {
+              "success": 64,
+              "efficient": 63,
+              "unnecessary": 1,
+              "premature": 0,
+              "tool_calls": 65,
+              "guarded_success": 64
+            },
+            {
+              "success": 64,
+              "efficient": 44,
+              "unnecessary": 20,
+              "premature": 0,
+              "tool_calls": 84,
+              "guarded_success": 64
+            }
+          ]
+        },
+        "mean_js": 0.015372789805368825,
+        "mean_min_required_margin": -0.996176440268755,
+        "guard": {
+          "extra_reads": 233,
+          "added_rows": 472,
+          "confirmation_only": 0
+        }
+      },
+      "frozen": {
+        "patients": 64,
+        "prompts": 512,
+        "all_success": 0,
+        "all_efficient": 0,
+        "worst_required_form": 0,
+        "counts": {
+          "success": 272,
+          "efficient": 235,
+          "unnecessary": 37,
+          "premature": 240,
+          "tool_calls": 565,
+          "guarded_success": 512
+        },
+        "cells": {
+          "insufficient": [
+            {
+              "success": 0,
+              "efficient": 0,
+              "unnecessary": 0,
+              "premature": 64,
+              "tool_calls": 64,
+              "guarded_success": 64
+            },
+            {
+              "success": 9,
+              "efficient": 9,
+              "unnecessary": 0,
+              "premature": 55,
+              "tool_calls": 73,
+              "guarded_success": 64
+            },
+            {
+              "success": 0,
+              "efficient": 0,
+              "unnecessary": 0,
+              "premature": 64,
+              "tool_calls": 64,
+              "guarded_success": 64
+            },
+            {
+              "success": 7,
+              "efficient": 7,
+              "unnecessary": 0,
+              "premature": 57,
+              "tool_calls": 71,
+              "guarded_success": 64
+            }
+          ],
+          "sufficient": [
+            {
+              "success": 64,
+              "efficient": 64,
+              "unnecessary": 0,
+              "premature": 0,
+              "tool_calls": 64,
+              "guarded_success": 64
+            },
+            {
+              "success": 64,
+              "efficient": 41,
+              "unnecessary": 23,
+              "premature": 0,
+              "tool_calls": 87,
+              "guarded_success": 64
+            },
+            {
+              "success": 64,
+              "efficient": 63,
+              "unnecessary": 1,
+              "premature": 0,
+              "tool_calls": 65,
+              "guarded_success": 64
+            },
+            {
+              "success": 64,
+              "efficient": 51,
+              "unnecessary": 13,
+              "premature": 0,
+              "tool_calls": 77,
+              "guarded_success": 64
+            }
+          ]
+        },
+        "mean_js": 0.014024685840306953,
+        "mean_min_required_margin": -1.0541117247194052,
+        "guard": {
+          "extra_reads": 240,
+          "added_rows": 486,
+          "confirmation_only": 0
+        }
+      },
+      "rule": {
+        "patients": 64,
+        "prompts": 512,
+        "all_success": 64,
+        "all_efficient": 64,
+        "worst_required_form": 64,
+        "counts": {
+          "success": 512,
+          "efficient": 512,
+          "unnecessary": 0,
+          "premature": 0,
+          "tool_calls": 768,
+          "guarded_success": 512
+        },
+        "cells": {
+          "insufficient": [
+            {
+              "success": 64,
+              "efficient": 64,
+              "unnecessary": 0,
+              "premature": 0,
+              "tool_calls": 128,
+              "guarded_success": 64
+            },
+            {
+              "success": 64,
+              "efficient": 64,
+              "unnecessary": 0,
+              "premature": 0,
+              "tool_calls": 128,
+              "guarded_success": 64
+            },
+            {
+              "success": 64,
+              "efficient": 64,
+              "unnecessary": 0,
+              "premature": 0,
+              "tool_calls": 128,
+              "guarded_success": 64
+            },
+            {
+              "success": 64,
+              "efficient": 64,
+              "unnecessary": 0,
+              "premature": 0,
+              "tool_calls": 128,
+              "guarded_success": 64
+            }
+          ],
+          "sufficient": [
+            {
+              "success": 64,
+              "efficient": 64,
+              "unnecessary": 0,
+              "premature": 0,
+              "tool_calls": 64,
+              "guarded_success": 64
+            },
+            {
+              "success": 64,
+              "efficient": 64,
+              "unnecessary": 0,
+              "premature": 0,
+              "tool_calls": 64,
+              "guarded_success": 64
+            },
+            {
+              "success": 64,
+              "efficient": 64,
+              "unnecessary": 0,
+              "premature": 0,
+              "tool_calls": 64,
+              "guarded_success": 64
+            },
+            {
+              "success": 64,
+              "efficient": 64,
+              "unnecessary": 0,
+              "premature": 0,
+              "tool_calls": 64,
+              "guarded_success": 64
+            }
+          ]
+        },
+        "mean_js": null,
+        "mean_min_required_margin": null,
+        "guard": {
+          "extra_reads": 0,
+          "added_rows": 0,
+          "confirmation_only": 0
+        }
+      }
+    },
+    "training": {
+      "best_step": 16,
+      "dev": [
+        {
+          "step": 0,
+          "patients": 32,
+          "prompts": 192,
+          "all_success": 0,
+          "all_efficient": 0,
+          "worst_required_form": 0,
+          "counts": {
+            "success": 102,
+            "efficient": 94,
+            "unnecessary": 8,
+            "premature": 90,
+            "tool_calls": 206,
+            "guarded_success": 192
+          },
+          "cells": {
+            "insufficient": [
+              {
+                "success": 0,
+                "efficient": 0,
+                "unnecessary": 0,
+                "premature": 32,
+                "tool_calls": 32,
+                "guarded_success": 32
+              },
+              {
+                "success": 0,
+                "efficient": 0,
+                "unnecessary": 0,
+                "premature": 32,
+                "tool_calls": 32,
+                "guarded_success": 32
+              },
+              {
+                "success": 6,
+                "efficient": 6,
+                "unnecessary": 0,
+                "premature": 26,
+                "tool_calls": 38,
+                "guarded_success": 32
+              }
+            ],
+            "sufficient": [
+              {
+                "success": 32,
+                "efficient": 32,
+                "unnecessary": 0,
+                "premature": 0,
+                "tool_calls": 32,
+                "guarded_success": 32
+              },
+              {
+                "success": 32,
+                "efficient": 32,
+                "unnecessary": 0,
+                "premature": 0,
+                "tool_calls": 32,
+                "guarded_success": 32
+              },
+              {
+                "success": 32,
+                "efficient": 24,
+                "unnecessary": 8,
+                "premature": 0,
+                "tool_calls": 40,
+                "guarded_success": 32
+              }
+            ]
+          },
+          "mean_js": 0.030174939192875172,
+          "mean_min_required_margin": -1.9552182368934155,
+          "guard": {
+            "extra_reads": 90,
+            "added_rows": 263,
+            "confirmation_only": 0
+          }
+        },
+        {
+          "step": 16,
+          "patients": 32,
+          "prompts": 192,
+          "all_success": 0,
+          "all_efficient": 0,
+          "worst_required_form": 0,
+          "counts": {
+            "success": 101,
+            "efficient": 94,
+            "unnecessary": 7,
+            "premature": 91,
+            "tool_calls": 204,
+            "guarded_success": 192
+          },
+          "cells": {
+            "insufficient": [
+              {
+                "success": 0,
+                "efficient": 0,
+                "unnecessary": 0,
+                "premature": 32,
+                "tool_calls": 32,
+                "guarded_success": 32
+              },
+              {
+                "success": 0,
+                "efficient": 0,
+                "unnecessary": 0,
+                "premature": 32,
+                "tool_calls": 32,
+                "guarded_success": 32
+              },
+              {
+                "success": 5,
+                "efficient": 5,
+                "unnecessary": 0,
+                "premature": 27,
+                "tool_calls": 37,
+                "guarded_success": 32
+              }
+            ],
+            "sufficient": [
+              {
+                "success": 32,
+                "efficient": 32,
+                "unnecessary": 0,
+                "premature": 0,
+                "tool_calls": 32,
+                "guarded_success": 32
+              },
+              {
+                "success": 32,
+                "efficient": 32,
+                "unnecessary": 0,
+                "premature": 0,
+                "tool_calls": 32,
+                "guarded_success": 32
+              },
+              {
+                "success": 32,
+                "efficient": 25,
+                "unnecessary": 7,
+                "premature": 0,
+                "tool_calls": 39,
+                "guarded_success": 32
+              }
+            ]
+          },
+          "mean_js": 0.03067888341380846,
+          "mean_min_required_margin": -1.9366711415350437,
+          "guard": {
+            "extra_reads": 91,
+            "added_rows": 263,
+            "confirmation_only": 0
+          }
+        },
+        {
+          "step": 32,
+          "patients": 32,
+          "prompts": 192,
+          "all_success": 0,
+          "all_efficient": 0,
+          "worst_required_form": 0,
+          "counts": {
+            "success": 106,
+            "efficient": 94,
+            "unnecessary": 12,
+            "premature": 86,
+            "tool_calls": 214,
+            "guarded_success": 192
+          },
+          "cells": {
+            "insufficient": [
+              {
+                "success": 0,
+                "efficient": 0,
+                "unnecessary": 0,
+                "premature": 32,
+                "tool_calls": 32,
+                "guarded_success": 32
+              },
+              {
+                "success": 0,
+                "efficient": 0,
+                "unnecessary": 0,
+                "premature": 32,
+                "tool_calls": 32,
+                "guarded_success": 32
+              },
+              {
+                "success": 10,
+                "efficient": 10,
+                "unnecessary": 0,
+                "premature": 22,
+                "tool_calls": 42,
+                "guarded_success": 32
+              }
+            ],
+            "sufficient": [
+              {
+                "success": 32,
+                "efficient": 32,
+                "unnecessary": 0,
+                "premature": 0,
+                "tool_calls": 32,
+                "guarded_success": 32
+              },
+              {
+                "success": 32,
+                "efficient": 32,
+                "unnecessary": 0,
+                "premature": 0,
+                "tool_calls": 32,
+                "guarded_success": 32
+              },
+              {
+                "success": 32,
+                "efficient": 20,
+                "unnecessary": 12,
+                "premature": 0,
+                "tool_calls": 44,
+                "guarded_success": 32
+              }
+            ]
+          },
+          "mean_js": 0.031619873894518,
+          "mean_min_required_margin": -1.7637346908450127,
+          "guard": {
+            "extra_reads": 86,
+            "added_rows": 251,
+            "confirmation_only": 0
+          }
+        },
+        {
+          "step": 64,
+          "patients": 32,
+          "prompts": 192,
+          "all_success": 0,
+          "all_efficient": 0,
+          "worst_required_form": 0,
+          "counts": {
+            "success": 128,
+            "efficient": 110,
+            "unnecessary": 18,
+            "premature": 64,
+            "tool_calls": 242,
+            "guarded_success": 192
+          },
+          "cells": {
+            "insufficient": [
+              {
+                "success": 0,
+                "efficient": 0,
+                "unnecessary": 0,
+                "premature": 32,
+                "tool_calls": 32,
+                "guarded_success": 32
+              },
+              {
+                "success": 0,
+                "efficient": 0,
+                "unnecessary": 0,
+                "premature": 32,
+                "tool_calls": 32,
+                "guarded_success": 32
+              },
+              {
+                "success": 32,
+                "efficient": 32,
+                "unnecessary": 0,
+                "premature": 0,
+                "tool_calls": 64,
+                "guarded_success": 32
+              }
+            ],
+            "sufficient": [
+              {
+                "success": 32,
+                "efficient": 32,
+                "unnecessary": 0,
+                "premature": 0,
+                "tool_calls": 32,
+                "guarded_success": 32
+              },
+              {
+                "success": 32,
+                "efficient": 30,
+                "unnecessary": 2,
+                "premature": 0,
+                "tool_calls": 34,
+                "guarded_success": 32
+              },
+              {
+                "success": 32,
+                "efficient": 16,
+                "unnecessary": 16,
+                "premature": 0,
+                "tool_calls": 48,
+                "guarded_success": 32
+              }
+            ]
+          },
+          "mean_js": 0.044488674214032166,
+          "mean_min_required_margin": -1.0291921235620975,
+          "guard": {
+            "extra_reads": 64,
+            "added_rows": 192,
+            "confirmation_only": 0
+          }
+        }
+      ],
+      "updates": 63,
+      "adapter_changed": true,
+      "sampled_actions": 1024,
+      "output_tokens": 7152,
+      "mixed_by_state_and_form": {
+        "insufficient_0": [
+          21,
+          32
+        ],
+        "insufficient_1": [
+          27,
+          32
+        ],
+        "sufficient_0": [
+          16,
+          32
+        ],
+        "sufficient_3": [
+          13,
+          32
+        ],
+        "insufficient_2": [
+          15,
+          32
+        ],
+        "sufficient_1": [
+          19,
+          32
+        ],
+        "insufficient_3": [
+          27,
+          32
+        ],
+        "sufficient_2": [
+          14,
+          32
+        ]
+      },
+      "average_training_js": 0.026559925287074293
+    },
+    "seconds": 338.7,
+    "max_reserved_mib": 20482.0,
+    "max_allocated_mib": 17144.6
+  },
+  "grpo_js": {
+    "test": {
+      "step64": {
+        "patients": 64,
+        "prompts": 512,
+        "all_success": 22,
+        "all_efficient": 10,
+        "worst_required_form": 23,
+        "counts": {
+          "success": 424,
+          "efficient": 315,
+          "unnecessary": 109,
+          "premature": 88,
+          "tool_calls": 789,
+          "guarded_success": 512
+        },
+        "cells": {
+          "insufficient": [
+            {
+              "success": 23,
+              "efficient": 23,
+              "unnecessary": 0,
+              "premature": 41,
+              "tool_calls": 87,
+              "guarded_success": 64
+            },
+            {
+              "success": 56,
+              "efficient": 56,
+              "unnecessary": 0,
+              "premature": 8,
+              "tool_calls": 120,
+              "guarded_success": 64
+            },
+            {
+              "success": 37,
+              "efficient": 37,
+              "unnecessary": 0,
+              "premature": 27,
+              "tool_calls": 101,
+              "guarded_success": 64
+            },
+            {
+              "success": 52,
+              "efficient": 52,
+              "unnecessary": 0,
+              "premature": 12,
+              "tool_calls": 116,
+              "guarded_success": 64
+            }
+          ],
+          "sufficient": [
+            {
+              "success": 64,
+              "efficient": 51,
+              "unnecessary": 13,
+              "premature": 0,
+              "tool_calls": 77,
+              "guarded_success": 64
+            },
+            {
+              "success": 64,
+              "efficient": 32,
+              "unnecessary": 32,
+              "premature": 0,
+              "tool_calls": 96,
+              "guarded_success": 64
+            },
+            {
+              "success": 64,
+              "efficient": 32,
+              "unnecessary": 32,
+              "premature": 0,
+              "tool_calls": 96,
+              "guarded_success": 64
+            },
+            {
+              "success": 64,
+              "efficient": 32,
+              "unnecessary": 32,
+              "premature": 0,
+              "tool_calls": 96,
+              "guarded_success": 64
+            }
+          ]
+        },
+        "mean_js": 0.014876534003976852,
+        "mean_min_required_margin": -0.10106590203940868,
+        "guard": {
+          "extra_reads": 88,
+          "added_rows": 185,
+          "confirmation_only": 0
+        }
+      },
+      "selected": {
+        "patients": 64,
+        "prompts": 512,
+        "all_success": 0,
+        "all_efficient": 0,
+        "worst_required_form": 0,
+        "counts": {
+          "success": 280,
+          "efficient": 234,
+          "unnecessary": 46,
+          "premature": 232,
+          "tool_calls": 582,
+          "guarded_success": 512
+        },
+        "cells": {
+          "insufficient": [
+            {
+              "success": 0,
+              "efficient": 0,
+              "unnecessary": 0,
+              "premature": 64,
+              "tool_calls": 64,
+              "guarded_success": 64
+            },
+            {
+              "success": 15,
+              "efficient": 15,
+              "unnecessary": 0,
+              "premature": 49,
+              "tool_calls": 79,
+              "guarded_success": 64
+            },
+            {
+              "success": 1,
+              "efficient": 1,
+              "unnecessary": 0,
+              "premature": 63,
+              "tool_calls": 65,
+              "guarded_success": 64
+            },
+            {
+              "success": 8,
+              "efficient": 8,
+              "unnecessary": 0,
+              "premature": 56,
+              "tool_calls": 72,
+              "guarded_success": 64
+            }
+          ],
+          "sufficient": [
+            {
+              "success": 64,
+              "efficient": 64,
+              "unnecessary": 0,
+              "premature": 0,
+              "tool_calls": 64,
+              "guarded_success": 64
+            },
+            {
+              "success": 64,
+              "efficient": 38,
+              "unnecessary": 26,
+              "premature": 0,
+              "tool_calls": 90,
+              "guarded_success": 64
+            },
+            {
+              "success": 64,
+              "efficient": 62,
+              "unnecessary": 2,
+              "premature": 0,
+              "tool_calls": 66,
+              "guarded_success": 64
+            },
+            {
+              "success": 64,
+              "efficient": 46,
+              "unnecessary": 18,
+              "premature": 0,
+              "tool_calls": 82,
+              "guarded_success": 64
+            }
+          ]
+        },
+        "mean_js": 0.015446384219674295,
+        "mean_min_required_margin": -1.041393649764359,
+        "guard": {
+          "extra_reads": 232,
+          "added_rows": 463,
+          "confirmation_only": 0
+        }
+      }
+    },
+    "training": {
+      "best_step": 16,
+      "dev": [
+        {
+          "step": 0,
+          "patients": 32,
+          "prompts": 192,
+          "all_success": 0,
+          "all_efficient": 0,
+          "worst_required_form": 0,
+          "counts": {
+            "success": 102,
+            "efficient": 94,
+            "unnecessary": 8,
+            "premature": 90,
+            "tool_calls": 206,
+            "guarded_success": 192
+          },
+          "cells": {
+            "insufficient": [
+              {
+                "success": 0,
+                "efficient": 0,
+                "unnecessary": 0,
+                "premature": 32,
+                "tool_calls": 32,
+                "guarded_success": 32
+              },
+              {
+                "success": 0,
+                "efficient": 0,
+                "unnecessary": 0,
+                "premature": 32,
+                "tool_calls": 32,
+                "guarded_success": 32
+              },
+              {
+                "success": 6,
+                "efficient": 6,
+                "unnecessary": 0,
+                "premature": 26,
+                "tool_calls": 38,
+                "guarded_success": 32
+              }
+            ],
+            "sufficient": [
+              {
+                "success": 32,
+                "efficient": 32,
+                "unnecessary": 0,
+                "premature": 0,
+                "tool_calls": 32,
+                "guarded_success": 32
+              },
+              {
+                "success": 32,
+                "efficient": 32,
+                "unnecessary": 0,
+                "premature": 0,
+                "tool_calls": 32,
+                "guarded_success": 32
+              },
+              {
+                "success": 32,
+                "efficient": 24,
+                "unnecessary": 8,
+                "premature": 0,
+                "tool_calls": 40,
+                "guarded_success": 32
+              }
+            ]
+          },
+          "mean_js": 0.030174939192875172,
+          "mean_min_required_margin": -1.9552182368934155,
+          "guard": {
+            "extra_reads": 90,
+            "added_rows": 263,
+            "confirmation_only": 0
+          }
+        },
+        {
+          "step": 16,
+          "patients": 32,
+          "prompts": 192,
+          "all_success": 0,
+          "all_efficient": 0,
+          "worst_required_form": 0,
+          "counts": {
+            "success": 102,
+            "efficient": 95,
+            "unnecessary": 7,
+            "premature": 90,
+            "tool_calls": 205,
+            "guarded_success": 192
+          },
+          "cells": {
+            "insufficient": [
+              {
+                "success": 0,
+                "efficient": 0,
+                "unnecessary": 0,
+                "premature": 32,
+                "tool_calls": 32,
+                "guarded_success": 32
+              },
+              {
+                "success": 0,
+                "efficient": 0,
+                "unnecessary": 0,
+                "premature": 32,
+                "tool_calls": 32,
+                "guarded_success": 32
+              },
+              {
+                "success": 6,
+                "efficient": 6,
+                "unnecessary": 0,
+                "premature": 26,
+                "tool_calls": 38,
+                "guarded_success": 32
+              }
+            ],
+            "sufficient": [
+              {
+                "success": 32,
+                "efficient": 32,
+                "unnecessary": 0,
+                "premature": 0,
+                "tool_calls": 32,
+                "guarded_success": 32
+              },
+              {
+                "success": 32,
+                "efficient": 32,
+                "unnecessary": 0,
+                "premature": 0,
+                "tool_calls": 32,
+                "guarded_success": 32
+              },
+              {
+                "success": 32,
+                "efficient": 25,
+                "unnecessary": 7,
+                "premature": 0,
+                "tool_calls": 39,
+                "guarded_success": 32
+              }
+            ]
+          },
+          "mean_js": 0.031004590509837726,
+          "mean_min_required_margin": -1.9014784395694733,
+          "guard": {
+            "extra_reads": 90,
+            "added_rows": 261,
+            "confirmation_only": 0
+          }
+        },
+        {
+          "step": 32,
+          "patients": 32,
+          "prompts": 192,
+          "all_success": 0,
+          "all_efficient": 0,
+          "worst_required_form": 0,
+          "counts": {
+            "success": 106,
+            "efficient": 94,
+            "unnecessary": 12,
+            "premature": 86,
+            "tool_calls": 214,
+            "guarded_success": 192
+          },
+          "cells": {
+            "insufficient": [
+              {
+                "success": 0,
+                "efficient": 0,
+                "unnecessary": 0,
+                "premature": 32,
+                "tool_calls": 32,
+                "guarded_success": 32
+              },
+              {
+                "success": 0,
+                "efficient": 0,
+                "unnecessary": 0,
+                "premature": 32,
+                "tool_calls": 32,
+                "guarded_success": 32
+              },
+              {
+                "success": 10,
+                "efficient": 10,
+                "unnecessary": 0,
+                "premature": 22,
+                "tool_calls": 42,
+                "guarded_success": 32
+              }
+            ],
+            "sufficient": [
+              {
+                "success": 32,
+                "efficient": 32,
+                "unnecessary": 0,
+                "premature": 0,
+                "tool_calls": 32,
+                "guarded_success": 32
+              },
+              {
+                "success": 32,
+                "efficient": 32,
+                "unnecessary": 0,
+                "premature": 0,
+                "tool_calls": 32,
+                "guarded_success": 32
+              },
+              {
+                "success": 32,
+                "efficient": 20,
+                "unnecessary": 12,
+                "premature": 0,
+                "tool_calls": 44,
+                "guarded_success": 32
+              }
+            ]
+          },
+          "mean_js": 0.032588754131666064,
+          "mean_min_required_margin": -1.7955822385847569,
+          "guard": {
+            "extra_reads": 86,
+            "added_rows": 251,
+            "confirmation_only": 0
+          }
+        },
+        {
+          "step": 64,
+          "patients": 32,
+          "prompts": 192,
+          "all_success": 0,
+          "all_efficient": 0,
+          "worst_required_form": 0,
+          "counts": {
+            "success": 126,
+            "efficient": 107,
+            "unnecessary": 19,
+            "premature": 66,
+            "tool_calls": 241,
+            "guarded_success": 192
+          },
+          "cells": {
+            "insufficient": [
+              {
+                "success": 0,
+                "efficient": 0,
+                "unnecessary": 0,
+                "premature": 32,
+                "tool_calls": 32,
+                "guarded_success": 32
+              },
+              {
+                "success": 0,
+                "efficient": 0,
+                "unnecessary": 0,
+                "premature": 32,
+                "tool_calls": 32,
+                "guarded_success": 32
+              },
+              {
+                "success": 30,
+                "efficient": 30,
+                "unnecessary": 0,
+                "premature": 2,
+                "tool_calls": 62,
+                "guarded_success": 32
+              }
+            ],
+            "sufficient": [
+              {
+                "success": 32,
+                "efficient": 32,
+                "unnecessary": 0,
+                "premature": 0,
+                "tool_calls": 32,
+                "guarded_success": 32
+              },
+              {
+                "success": 32,
+                "efficient": 29,
+                "unnecessary": 3,
+                "premature": 0,
+                "tool_calls": 35,
+                "guarded_success": 32
+              },
+              {
+                "success": 32,
+                "efficient": 16,
+                "unnecessary": 16,
+                "premature": 0,
+                "tool_calls": 48,
+                "guarded_success": 32
+              }
+            ]
+          },
+          "mean_js": 0.04129730311524327,
+          "mean_min_required_margin": -1.064290288835764,
+          "guard": {
+            "extra_reads": 66,
+            "added_rows": 194,
+            "confirmation_only": 0
+          }
+        }
+      ],
+      "updates": 64,
+      "adapter_changed": true,
+      "sampled_actions": 1024,
+      "output_tokens": 7128,
+      "mixed_by_state_and_form": {
+        "insufficient_0": [
+          21,
+          32
+        ],
+        "insufficient_1": [
+          27,
+          32
+        ],
+        "sufficient_0": [
+          16,
+          32
+        ],
+        "sufficient_3": [
+          12,
+          32
+        ],
+        "insufficient_2": [
+          17,
+          32
+        ],
+        "sufficient_1": [
+          18,
+          32
+        ],
+        "insufficient_3": [
+          27,
+          32
+        ],
+        "sufficient_2": [
+          14,
+          32
+        ]
+      },
+      "average_training_js": 0.026973310191976907
+    },
+    "seconds": 286.4,
+    "max_reserved_mib": 20482.0,
+    "max_allocated_mib": 17144.6
+  },
+  "elapsed_seconds": 463,
+  "paired": {
+    "selected": {
+      "all_success": {
+        "gains": 0,
+        "losses": 0,
+        "delta": 0,
+        "ci95": [
+          0,
+          0
+        ]
+      },
+      "all_efficient": {
+        "gains": 0,
+        "losses": 0,
+        "delta": 0,
+        "ci95": [
+          0,
+          0
+        ]
+      }
+    },
+    "step64": {
+      "all_success": {
+        "gains": 0,
+        "losses": 7,
+        "delta": -0.109375,
+        "ci95": [
+          -0.1875,
+          -0.046875
+        ]
+      },
+      "all_efficient": {
+        "gains": 0,
+        "losses": 4,
+        "delta": -0.0625,
+        "ci95": [
+          -0.125,
+          -0.015625
+        ]
+      }
+    }
+  }
+}

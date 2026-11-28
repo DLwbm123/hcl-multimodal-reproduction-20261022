@@ -27,7 +27,7 @@ def table(path):
         yield from csv.DictReader(stream)
 
 
-def freeze(data, previous_panel, *, additional_subjects=(), seed=SEED):
+def eligible_cases(data, previous_panel, additional_subjects=()):
     subjects = {}
     for row in table(data / "cases.csv.gz"):
         if not all(row.get(key) for key in ("caseid", "subjectid", "caseend")):
@@ -87,14 +87,19 @@ def freeze(data, previous_panel, *, additional_subjects=(), seed=SEED):
         excluded.add(case)
     assert len(excluded) == 164
 
-    rng = random.Random(seed)
     extra = set(additional_subjects)
-    eligible = [case for case in rows_by_case if case not in excluded and metadata[case][0] not in extra]
-    eligible.sort()
+    return {case: (metadata[case][0], rows) for case, rows in rows_by_case.items()
+            if case not in excluded and metadata[case][0] not in extra}
+
+
+def freeze(data, previous_panel, *, additional_subjects=(), seed=SEED):
+    rng = random.Random(seed)
+    data_by_case = eligible_cases(data, previous_panel, additional_subjects)
+    eligible = sorted(data_by_case)
     rng.shuffle(eligible)
     pools = defaultdict(list)
     for case in eligible:
-        rows = rows_by_case[case]
+        _, rows = data_by_case[case]
         if len({age for age, _ in rows}) != len(rows):
             continue
         page = rng.choice((1, 2, 4))
@@ -122,9 +127,10 @@ def freeze(data, previous_panel, *, additional_subjects=(), seed=SEED):
             operation = stratum.split("_")[0]
             questions = QUESTIONS[operation]
             variant = 2 if split == "test" else rng.randrange(2)
-            panel.append(dict(subject_id=metadata[case][0], case_id=case, source="VitalDB",
+            subject, rows = data_by_case[case]
+            panel.append(dict(subject_id=subject, case_id=case, source="VitalDB",
                               split=split, stratum=stratum, operation=operation, page=page,
-                              rows=rows_by_case[case], question=questions[variant]))
+                              rows=rows, question=questions[variant]))
     assert len({c["subject_id"] for c in panel}) == sum(SPLITS.values())
     return panel
 
