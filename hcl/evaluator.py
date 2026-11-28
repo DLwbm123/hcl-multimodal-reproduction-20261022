@@ -643,8 +643,9 @@ def _ptb_tokenize(
         for values in captions_for_image.values()
         for item in values
     )
-    jar_path = Path(ptb.__file__).resolve().parent / ptb.STANFORD_CORENLP_3_4_1_JAR
-    with tempfile.NamedTemporaryFile(delete=False, dir="/tmp") as tmp:
+    local_jar = os.environ.get("HCL_PTB_LOCAL_JAR")
+    jar_path = local_jar or str(Path(ptb.__file__).resolve().parent / ptb.STANFORD_CORENLP_3_4_1_JAR)
+    with tempfile.NamedTemporaryFile(delete=False, dir="tmp" if local_jar else "/tmp") as tmp:
         tmp.write(sentences.encode("utf-8"))
         tmp_path = tmp.name
     try:
@@ -652,11 +653,11 @@ def _ptb_tokenize(
             [
                 "java",
                 "-cp",
-                str(jar_path),
+                jar_path,
                 "edu.stanford.nlp.process.PTBTokenizer",
                 "-preserveLines",
                 "-lowerCase",
-                tmp_path,
+                os.path.relpath(tmp_path) if local_jar else tmp_path,
             ],
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,

@@ -89,7 +89,7 @@ def build(*, counts=None, profile="local_image_disjoint", native_pixels=False, e
         splits={}; manifest['records'][t]={}
         for s,n in counts.items():
             rows=[]; used=set()
-            for row in pool:
+            for row in pool if n else ():
                 i=row['metadata']['image_id']
                 if splitby[i]==s and i not in used and not (s=='test' and i in excluded_test_images):
                     rows.append(row);used.add(i)
