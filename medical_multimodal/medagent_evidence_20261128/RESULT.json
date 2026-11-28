@@ -1,0 +1,182 @@
+{
+  "gate": {
+    "train": {
+      "cells": {
+        "both": 152,
+        "neither": 52,
+        "vital_only": 10,
+        "lab_only": 2
+      },
+      "patients": 54,
+      "episodes": 216
+    },
+    "dev": {
+      "cells": {
+        "both": 55,
+        "neither": 20,
+        "lab_only": 2,
+        "vital_only": 3
+      },
+      "patients": 20,
+      "episodes": 80,
+      "policies": {
+        "lab": {
+          "success": 57,
+          "episodes": 80,
+          "picks": {
+            "lab": 80
+          }
+        },
+        "vital": {
+          "success": 58,
+          "episodes": 80,
+          "picks": {
+            "vital": 80
+          }
+        },
+        "fixed": {
+          "success": 58,
+          "episodes": 80,
+          "picks": {
+            "vital": 80
+          }
+        },
+        "fixed_by_offset": {
+          "success": 58,
+          "episodes": 80,
+          "picks": {
+            "vital": 60,
+            "lab": 20
+          }
+        },
+        "prior_index_rule": {
+          "success": 58,
+          "episodes": 80,
+          "picks": {
+            "vital": 73,
+            "lab": 7
+          }
+        },
+        "oracle": {
+          "success": 60,
+          "episodes": 80
+        },
+        "best_fixed_hindsight_by_offset": {
+          "success": 59,
+          "episodes": 80,
+          "picks": {
+            "vital": 20,
+            "lab": 60
+          }
+        }
+      },
+      "oracle_minus_best_fixed": 1,
+      "patients_with_oracle_gain": 1
+    },
+    "fixed": "vital",
+    "fixed_by_offset": {
+      "0": "vital",
+      "24": "vital",
+      "48": "lab",
+      "72": "vital"
+    },
+    "passes_training_gate": false
+  },
+  "test": {
+    "cells": {
+      "both": 62,
+      "neither": 31,
+      "vital_only": 3
+    },
+    "patients": 24,
+    "episodes": 96,
+    "policies": {
+      "lab": {
+        "success": 62,
+        "episodes": 96,
+        "picks": {
+          "lab": 96
+        }
+      },
+      "vital": {
+        "success": 65,
+        "episodes": 96,
+        "picks": {
+          "vital": 96
+        }
+      },
+      "fixed": {
+        "success": 65,
+        "episodes": 96,
+        "picks": {
+          "vital": 96
+        }
+      },
+      "fixed_by_offset": {
+        "success": 64,
+        "episodes": 96,
+        "picks": {
+          "vital": 72,
+          "lab": 24
+        }
+      },
+      "prior_index_rule": {
+        "success": 65,
+        "episodes": 96,
+        "picks": {
+          "vital": 96
+        }
+      },
+      "oracle": {
+        "success": 65,
+        "episodes": 96
+      },
+      "best_fixed_hindsight_by_offset": {
+        "success": 65,
+        "episodes": 96,
+        "picks": {
+          "lab": 48,
+          "vital": 48
+        }
+      }
+    },
+    "oracle_minus_best_fixed": 0,
+    "patients_with_oracle_gain": 0
+  },
+  "comparisons": {
+    "oracle_vs_locked_schedule": {
+      "gains": 1,
+      "losses": 0,
+      "positive_patients": 1,
+      "negative_patients": 0,
+      "delta": 0.010416666666666666,
+      "ci95": [
+        0,
+        0.03125
+      ]
+    },
+    "oracle_vs_locked_constant": {
+      "gains": 0,
+      "losses": 0,
+      "positive_patients": 0,
+      "negative_patients": 0,
+      "delta": 0,
+      "ci95": [
+        0,
+        0
+      ]
+    },
+    "oracle_vs_index_rule": {
+      "gains": 0,
+      "losses": 0,
+      "positive_patients": 0,
+      "negative_patients": 0,
+      "delta": 0,
+      "ci95": [
+        0,
+        0
+      ]
+    }
+  },
+  "elapsed_seconds": 542
+}

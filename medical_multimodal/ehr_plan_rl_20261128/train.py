@@ -40,9 +40,10 @@ def load_split(split):
 
 
 class Policy:
-    def __init__(self):
+    def __init__(self, plans=PLANS):
         path = os.environ["MODEL_ROOT"]
         self.constrained = os.environ.get("RUN_STYLE") == "1"
+        self.plans = plans
         self.tokenizer = AutoTokenizer.from_pretrained(path, local_files_only=True,
                                                        padding_side="left")
         self.base = Qwen2_5_VLForConditionalGeneration.from_pretrained(
@@ -75,7 +76,7 @@ class Policy:
         self.pad = config.pad_token_id if config.pad_token_id is not None else self.eos[0]
         if self.constrained:
             sequences = [self.tokenizer.encode(encode(plan), add_special_tokens=False) + [self.eos[0]]
-                         for plan in PLANS]
+                         for plan in self.plans]
             width = max(map(len, sequences))
             self.plan_ids = torch.tensor([seq + [self.pad] * (width - len(seq)) for seq in sequences],
                                          device="cuda")
@@ -103,7 +104,7 @@ class Policy:
         if self.constrained:
             logprobs = self.action_logprobs(prefix)
             indices = torch.multinomial(logprobs.exp(), group, replacement=True) if stochastic else logprobs.argmax()[None]
-            return self.plan_ids[indices], self.plan_mask[indices], [PLANS[i] for i in indices.tolist()]
+            return self.plan_ids[indices], self.plan_mask[indices], [self.plans[i] for i in indices.tolist()]
         inputs = prefix.repeat(group, 1)
         ids = self.model.generate(
             input_ids=inputs, attention_mask=torch.ones_like(inputs),
