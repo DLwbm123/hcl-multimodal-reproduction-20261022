@@ -1,0 +1,95 @@
+{
+  "n": 96,
+  "positive": 48,
+  "negative_proxy": 48,
+  "by_class": {
+    "polyps": 48,
+    "cecum": 24,
+    "retroflex-rectum": 24
+  },
+  "fixed": {
+    "direct": {
+      "tp": 11,
+      "fn": 37,
+      "tn": 48,
+      "fp": 0
+    },
+    "repeat": {
+      "tp": 15,
+      "fn": 33,
+      "tn": 47,
+      "fp": 1
+    },
+    "grid_tl": {
+      "tp": 11,
+      "fn": 37,
+      "tn": 48,
+      "fp": 0
+    },
+    "grid_tr": {
+      "tp": 12,
+      "fn": 36,
+      "tn": 47,
+      "fp": 1
+    },
+    "grid_bl": {
+      "tp": 10,
+      "fn": 38,
+      "tn": 48,
+      "fp": 0
+    },
+    "grid_br": {
+      "tp": 16,
+      "fn": 32,
+      "tn": 48,
+      "fp": 0
+    }
+  },
+  "best_fixed": "grid_br",
+  "best_fixed_reviews": 96,
+  "oracle": {
+    "tp": 18,
+    "fn": 30,
+    "tn": 48,
+    "fp": 0
+  },
+  "oracle_reviews": 7,
+  "oracle_delta_accuracy_pp": 2.0833333333333335,
+  "lesion_positive": {
+    "direct": {
+      "rescue": 9,
+      "harm": 0,
+      "correct": 20,
+      "n": 48
+    },
+    "repeat": {
+      "rescue": 5,
+      "harm": 0,
+      "correct": 20,
+      "n": 48
+    }
+  },
+  "lesion_joint_rescues": 5,
+  "mask_grid_positive": {
+    "direct": {
+      "rescue": 7,
+      "harm": 1,
+      "correct": 17,
+      "n": 48
+    },
+    "repeat": {
+      "rescue": 4,
+      "harm": 2,
+      "correct": 17,
+      "n": 48
+    }
+  },
+  "diagnostic_mask_coverage": {
+    "lesion_median": 1.0,
+    "best_grid_median": 0.9739889333567233
+  },
+  "gate_lesion_joint_rescues_ge_3": true,
+  "gate_oracle_at_least_5_pp": false,
+  "seconds": 115.378,
+  "max_reserved_mib": 17830.0
+}
